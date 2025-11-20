@@ -1,0 +1,7 @@
+{
+  "name": "Midnight Suomi - Live",
+  "description": "Real-time conversational Finnish language learning podcast experience using Gemini Live API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
