@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>ACADEMIC WRITING: EXAM PREP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;800;700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* ADA THEME COLORS: BLACK, NEON, GOLD */
+        :root {
+            --bg: #000;
+            --card: #0b0b1a;
+            --gold: #FFD700;
+            --neon: #00D4FF;
+            --purple: #9D00FF;
+            --text: #E8E8E8;
+            --error: #FF6B6B; /* Used for negative examples/warnings */
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Exo 2', system-ui, -apple-system, sans-serif;
+            font-size: 18px;
+            line-height: 1.55;
+            overscroll-behavior: none;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+            padding: 8vh 5vw 8vh;
+            display: flex;
+            flex-direction: column;
+            background: #000;
+            position: relative;
+        }
+        .slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top center, #111 0%, #000 70%);
+            opacity: 0.9;
+            z-index: -1;
+        }
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.8em;
+            font-weight: 900;
+            color: var(--gold);
+            text-align: center;
+            margin: 0.4em 0;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+        }
+        h2 { font-size: 2.1em; color: var(--neon); margin: 0.6em 0 0.4em; font-weight: 700; }
+        h3 { font-size: 1.6em; color: var(--error); margin: 0.8em 0 0.4em; font-weight: 600; }
+        .card {
+            background: rgba(20,20,40,0.7);
+            border: 1px solid #333;
+            border-left: 5px solid var(--neon); /* Neon accent line */
+            border-radius: 12px;
+            padding: 1.2em;
+            margin: 0.8em 0;
+            backdrop-filter: blur(8px);
+            overflow-y: auto;
+        }
+        .gold-box {
+            background: linear-gradient(135deg, var(--gold), #FFA500);
+            color: #000;
+            padding: 0.8em;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.05em;
+            margin: 1em 0;
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+        }
+        .trans {
+            font-size: 0.85em;
+            color: #ccc;
+            font-style: italic;
+        }
+        ul { padding-left: 1.4em; margin: 0.6em 0; list-style: none; }
+        li { margin: 0.5em 0; font-size: 0.95em; position: relative; padding-left: 1.2em; }
+        li::before { content: "»"; position: absolute; left: 0; color: var(--gold); font-size: 1.1em; }
+        
+        .code-block {
+            background: #111;
+            border: 1px solid var(--neon);
+            padding: 0.8em;
+            font-size: 0.8em;
+            overflow-x: auto;
+            border-radius: 6px;
+            margin-top: 0.6em;
+            color: var(--text);
+        }
+        .reference {
+            font-size: 0.8em;
+            color: #aaa;
+            margin-top: 1em;
+            border-top: 1px solid #333;
+            padding-top: 0.5em;
+        }
+        .footer { font-size: 0.8em; opacity: 0.7; text-align: center; margin-top: auto; padding-top: 1em; }
+    </style>
+</head>
+<body>
+    <div class="progress" id="progress"></div>
+    <div class="nav">Slide <span id="current">1</span> / <span id="total">12</span></div>
+
+    <div class="container" id="slides">
+        
+        <!-- SLIDE 1: TITLE -->
+        <div class="slide" style="text-align:center; justify-content:center;">
+            <h1 style="font-size: 4em;">ACADEMIC WRITING</h1>
+            <h2 style="font-size:2.4em; color:var(--neon);">EXAM PREP: CORE PRINCIPLES</h2>
+            <div class="gold-box" style="font-size:1.3em;">FINAL REVIEW: Disinformation & Argumentation</div>
+            <p style="margin:1.5em 0; font-size:1.1em;">12 Critical Slides for Mastery. Scroll <i class="fa-solid fa-arrow-down"></i> to begin.</p>
+            <div class="footer">Self-Study Module • University of Vaasa</div>
+        </div>
+
+        <!-- SLIDE 2: COURSE FUNDAMENTALS -->
+        <div class="slide">
+            <h2>Pillar 1: Paragraph & Structure</h2>
+            <div class="card">
+                <h3>The T-E-A Method <span class="trans">(The Simple Academic Rule)</span></h3>
+                <p>Every single paragraph in your exam should follow this formula to ensure clarity and coherence:</p>
+                <ul>
+                    <li><span style="color:var(--gold);">T - Topic Sentence:</span> The main idea of the paragraph. It must directly support your overall thesis.</li>
+                    <li><span style="color:var(--neon);">E - Evidence:</span> The **paraphrased data** or citation that proves your point (e.g., the 91.3% data point).</li>
+                    <li><span style="color:var(--error);">A - Analysis:</span> Your explanation. Why does this evidence matter? This is your *voice* and *critique*.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Paraphrasing vs. Quoting</h3>
+                <p>Always paraphrase and synthesize the ideas unless the exact words are critical. This shows the examiner you understand the source.</p>
+                <ul>
+                    <li><span style="color:var(--gold);">Paraphrase (Preferred):</span> Explain the idea in your own simple, clear words.</li>
+                    <li><span style="color:var(--error);">Direct Quote (Limited):</span> Use sparingly. Must be exact and require a page number.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: CITATION & REFERENCING RULES -->
+        <div class="slide">
+            <h2>Pillar 2: Citation Compliance</h2>
+            <div class="card">
+                <h3>APA In-Text Citation <span class="trans">(The Mandatory Format)</span></h3>
+                <p>Your citation must include the author, year, and **page number** if it is a direct quote or a very specific finding:</p>
+                <div class="code-block">
+                    [Paraphrased Idea] (Author, Year).<br>
+                    <span style="color:var(--neon);">The AI focus is too narrow (Alam et al., 2022).</span>
+                </div>
+                <div class="code-block">
+                    [Direct Quote] "..." (Author, Year, p. Page Number).<br>
+                    <span style="color:var(--error);">Visuals are "processed differently" (Weikmann & Lecheler, 2023, p. 2).</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Appendix Mandate (CRITICAL)</h3>
+                <p>The Appendix **must** contain the direct quote for every single in-text citation you use. Do not forget the author, year, and the exact quote.</p>
+                <p style="color:var(--gold); margin-top:0.6em;">Example Appendix Entry (Must be Exact):</p>
+                <div class="code-block">
+                    1. Alam, F., et al. (2022). A survey on multimodal disinformation detection.<br>
+                    &nbsp;&nbsp;&nbsp;> “...91.3% used text, 47.8% looked into social media network structure...” (p. 2)
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: ARGUMENTATION SYSTEMS -->
+        <div class="slide">
+            <h2>Pillar 3: Argumentation Models</h2>
+            <div class="card">
+                <h3><i class="fa-solid fa-chess"></i> Toulminian System (Logic & Directness)</h3>
+                <ul>
+                    <li><span style="color:var(--neon);">**Goal:**</span> To prove your point directly using evidence. Very useful for **technical critiques**.</li>
+                    <li><span style="color:var(--gold);">Structure:</span> Start with your **Claim**, then give **Data** to support it, and explain the **Warrant** (why the data proves the claim).</li>
+                    <li><span style="color:var(--error);">Example:</span> Claim: AI is unprepared. Data: 91.3% data point. Warrant: That gap means it's blind to the threat.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fa-solid fa-handshake"></i> Rogerian System (Empathy & Cooperation)</h3>
+                <ul>
+                    <li><span style="color:var(--neon);">**Goal:**</span> To reach common ground by acknowledging the opposition first. Ideal for **proposing evolution/solutions**.</li>
+                    <li><span style="color:var(--gold);">Structure:</span> Acknowledge **Opposing View/Validity** (TSE is good), state your **Position** (methods must evolve), and explain **Benefits** (this evolution keeps the science relevant).</li>
+                    <li><span style="color:var(--error);">Example:</span> Acknowledge TSE is the gold standard, THEN argue current methods fail that standard.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: SOURCE I - ALAM ET AL. (THE AI BLIND SPOT) -->
+        <div class="slide">
+            <h2>SOURCE I: ALAM ET AL. (The AI Blind Spot)</h2>
+            <div class="card">
+                <h3>The Central Claim: Multimodality vs. Text-Only Models</h3>
+                <ul>
+                    <li><span style="color:var(--gold);">The Threat:</span> **Multimodality** (Text, Images, Video, Speech) makes disinformation easier to consume and spread (p. 1).</li>
+                    <li><span style="color:var(--neon);">The Data:</span> **91.3%** of fake news detection models rely primarily on **Text**, ignoring images/video (p. 2). This is the key statistic to use as evidence.</li>
+                    <li><span style="color:var(--neon);">The Deficiency:</span> The two core parts of disinformation—**Factuality** (is it true?) and **Harmfulness** (is the intent to harm?)—are studied in isolation, which is a major mistake (p. 1).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Future Directions (Your Recommendations)</h3>
+                <p>To fix the flaw, AI research must devise a single **framework** that combines all signals and addresses both **factuality and harmfulness** simultaneously (p. 9). We need transparent models that can explain *why* something is fake, not just flag it.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: SOURCE II - WEIKMANN & LECHELER (THE PSYCHOLOGICAL THREAT) -->
+        <div class="slide">
+            <h2>SOURCE II: WEIKMANN & LECHELER (Visual Power)</h2>
+            <div class="card">
+                <h3>Psychological Mechanisms of Deception</h3>
+                <ul>
+                    <li><span style="color:var(--gold);">Core Power:</span> Visuals are **processed differently** than text, creating **"rich sensory responses"** that stick in memory and are perceived as more credible (p. 2).</li>
+                    <li><span style="color:var(--neon);">The Trick:</span> The **realism heuristic** is the belief that rich media (images/video) must be real, leading to **faulty processing** where users fail to question their authenticity (p. 7).</li>
+                    <li><span style="color:var(--neon);">The Range:</span> Disinformation ranges from **low sophistication** (e.g., decontextualization, using a real photo with a fake caption) to **high sophistication** (e.g., deepfakes) (p. 3).</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>The Final Systemic Consequence</h3>
+                <p>The **Liar's Dividend:** The existence of deepfakes confuses citizens so much that they **"mistake real for fake"** (p. 11), leading to a long-term **loss of trust** in all media and institutions.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 7: MINI-PAPER - ROGERIAN ARGUMENT (Part 1/2) -->
+        <div class="slide">
+            <h1>MODEL ESSAY: PART 1/2</h1>
+            <h2>Rogerian Argument: Traditional Survey Flaws</h2>
+            <div class="card">
+                <p style="font-size: 0.9em; line-height: 1.4;">
+                <span style="color:var(--neon); font-weight:bold;">[P1: Acknowledging Validity]</span>
+                Our core belief is that traditional survey and polling methods are valuable because they gave us the gold standard of research. This standard is the **Total Survey Error (TSE)** framework, which correctly defines the goal of all data collection: to capture the "true value" of public opinion. Researchers widely respect this framework because it systematically shows that data quality is threatened by errors at every stage, from design to execution (Groves & Lyberg, 2010, p. 850). Acknowledging this comprehensive approach is the starting point for all good research.
+                <br><br>
+                <span style="color:var(--neon); font-weight:bold;">[P2: Stating Position and Context]</span>
+                However, respecting the TSE framework means we must be honest about its practical failure in the modern world. The belief that traditional surveys can achieve this "true value" is no longer valid. In a complex society, their rigid, step-by-step methodology is simply too slow and clumsy to capture the fluid nature of human opinions. Since the TSE framework defines an error as *any deviation* from the truth (Groves & Lyberg, 2010), the inflexible design of traditional methods multiplies these small errors at every stage. They cannot control for complex factors like rapidly changing social influence, meaning they ultimately fail to meet their own highly respected standard of accuracy.
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: MINI-PAPER - ROGERIAN ARGUMENT (Part 2/2) -->
+        <div class="slide">
+            <h2>Model Essay: Conclusion & Rationale</h2>
+            <div class="card">
+                <p style="font-size: 0.9em; line-height: 1.4;">
+                <span style="color:var(--neon); font-weight:bold;">[P3: Statement of Benefits]</span>
+                The benefit of this critique is that it directs us toward a solution that actually fulfills the promise of the TSE framework. We should not throw away the science, but rather adopt new, multi-modal methods designed for the fluid, interconnected nature of truth today. The benefit of dynamic data collection systems (like those that use digital network data) is that they can minimize the error in both the **measurement process** and the **representation process**, creating data that is closer to the essential "true value** than any old telephone poll ever could. This shift is not an attack on the past; it is the necessary evolution to ensure the fundamental principles of survey science remain relevant and accurate in the 21st century.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Argumentation System Rationale (100 Words)</h3>
+                <p style="font-size: 0.9em;">
+                For this paper, I used the Rogerian system. I chose this because the goal was not to attack traditional methods, but to show that we understand and respect the foundation of their work—the Total Survey Error (TSE) concept. By first validating the TSE framework, the paper avoids confrontation and makes the final argument (that old methods fail the framework) much more cooperative and convincing. It's a great approach for making serious critiques in an academic setting.
+                </p>
+            </div>
+        </div>
+        
+        <!-- SLIDE 9: FINAL EXAM TACTICS -->
+        <div class="slide">
+            <h2>Final Exam Tactics: Execution</h2>
+            <div class="card">
+                <h3>How to Master the Synthesis Question:</h3>
+                <ul>
+                    <li><span style="color:var(--gold);">P1 (The Problem):</span> Use the **91.3% data** (Alam) to show AI's technical flaw.</li>
+                    <li><span style="color:var(--gold);">P2 (The Cause):</span> Use **Realism Heuristic** (Weikmann) to explain *why* the flaw is dangerous (psychological power).</li>
+                    <li><span style="color:var(--gold);">P3 (The Solution):</span> Use **Factuality/Harmfulness Framework** (Alam) and **Mistake Real for Fake** (Weikmann) as your necessary future steps.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>The Final Check (Must Do)</h3>
+                <p style="font-weight: bold; color: var(--neon);">Before clicking submit, confirm:</p>
+                <ul>
+                    <li><i class="fa-solid fa-check" style="color:var(--neon);"></i> One citation per source minimum?</li>
+                    <li><i class="fa-solid fa-check" style="color:var(--neon);"></i> Appendix matches in-text quotes exactly?</li>
+                    <li><i class="fa-solid fa-check" style="color:var(--neon);"></i> Rationale paragraph explaining the argument system is included?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: GOOD LUCK -->
+        <div class="slide" style="text-align:center; justify-content:center; background:linear-gradient(135deg,#000,#1a0033);">
+            <h1 style="font-size:4em;">MO'AFAQ BÂSHID!</h1>
+            <h2 style="color:var(--gold); font-size:2.5em;">YOUR DATA IS SECURE.</h2>
+            <div class="gold-box" style="font-size:1.6em; padding:1.5em; color: var(--card);">
+                OLET VALMIS. <span class="trans">(YOU ARE READY.)</span>
+            </div>
+            <p style="margin-top:2em; font-size:1.2em; color:var(--text);">
+                Trust your preparation. You know the material.
+            </p>
+            <div class="footer">Final Review • University of Vaasa</div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for progress bar and slide counter
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('total').textContent = totalSlides;
+        
+        const container = document.getElementById('slides');
+        
+        // Initial setup for current slide and total slides
+        if (slides.length > 0) {
+             document.getElementById('current').textContent = 1;
+             document.getElementById('total').textContent = totalSlides;
+        }
+
+        container.addEventListener('scroll', () => {
+            const scrollTop = container.scrollTop;
+            const clientHeight = container.clientHeight;
+            const scrollHeight = container.scrollHeight;
+            const docHeight = scrollHeight - clientHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById('progress').style.width = progress + '%';
+            
+            let currentSlide = 1;
+            for (let i = 0; i < totalSlides; i++) {
+                const slide = slides[i];
+                // Checks if the slide is more than halfway visible
+                if (slide.offsetTop <= scrollTop + clientHeight * 0.5) {
+                    currentSlide = i + 1;
+                } else {
+                    break; 
+                }
+            }
+            document.getElementById('current').textContent = currentSlide;
+        });
+
+    </script>
+</body>
+</html>
