@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>FINNISH ULTIMATE MASTER GUIDE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         /* THEME: DEEP SPACE & NEON */
@@ -22,21 +26,30 @@
             --rule-bg: rgba(0, 212, 255, 0.08);
         }
 
-        * { margin:0; padding:0; box-sizing:border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             background: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
+            background-attachment: fixed;
             color: var(--text);
             font-family: 'Exo 2', sans-serif;
             font-size: 18px;
             line-height: 1.6;
-            overflow: hidden; 
+            overflow: hidden;
+            min-height: 100dvh;
         }
 
         /* MAIN SCROLL CONTAINER */
         .container {
             width: 100vw;
             height: 100vh;
+            /* Fallback */
+            height: 100dvh;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
             scroll-behavior: smooth;
@@ -46,26 +59,19 @@
         .slide {
             width: 100vw;
             height: 100vh;
+            /* Fallback */
+            height: 100dvh;
             scroll-snap-align: start;
-            padding: 80px 20px 100px; 
+            padding: 80px 20px 100px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; 
-            background: var(--bg);
+            justify-content: flex-start;
+            background: transparent;
             position: relative;
-            overflow-y: auto; /* MAKES SLIDES SCROLLABLE */
-            border-bottom: 1px solid #222;
-        }
-
-        /* Background Gradient */
-        .slide::before {
-            content: '';
-            position: fixed;
-            top:0; left:0; width:100%; height:100%;
-            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
-            z-index: -1;
-            pointer-events: none;
+            overflow-y: auto;
+            /* MAKES SLIDES SCROLLABLE */
+            border-bottom: 1px solid rgba(34, 34, 34, 0.5);
         }
 
         /* TYPOGRAPHY */
@@ -77,6 +83,7 @@
             text-align: center;
             margin-bottom: 10px;
         }
+
         h2 {
             font-family: 'Exo 2', sans-serif;
             font-size: 2em;
@@ -90,6 +97,7 @@
             font-weight: 800;
             letter-spacing: 1px;
         }
+
         h3 {
             font-size: 1.3em;
             color: #fff;
@@ -108,11 +116,11 @@
             width: 100%;
             max-width: 900px;
             border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-left: 6px solid var(--neon);
             padding: 25px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             flex-shrink: 0;
         }
 
@@ -130,22 +138,37 @@
             font-size: 1.2em;
             box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
         }
-        
+
         /* TYPES OF SLIDES styling */
-        .slide-funfact h2 { color: var(--purple); border-color: var(--purple); }
-        .slide-funfact .card { border-left-color: var(--purple); background: rgba(40, 10, 50, 0.8); }
-        
-        .slide-example h2 { color: var(--example); border-color: var(--example); }
-        .slide-example .card { border-left-color: var(--example); background: rgba(50, 10, 30, 0.8); }
+        .slide-funfact h2 {
+            color: var(--purple);
+            border-color: var(--purple);
+        }
+
+        .slide-funfact .card {
+            border-left-color: var(--purple);
+            background: rgba(40, 10, 50, 0.8);
+        }
+
+        .slide-example h2 {
+            color: var(--example);
+            border-color: var(--example);
+        }
+
+        .slide-example .card {
+            border-left-color: var(--example);
+            background: rgba(50, 10, 30, 0.8);
+        }
 
         /* RULE BOXES (Why/When/How) */
         .rule-block {
             background: var(--rule-bg);
-            border: 1px solid rgba(0,212,255,0.2);
+            border: 1px solid rgba(0, 212, 255, 0.2);
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 15px;
         }
+
         .rule-title {
             color: var(--gold);
             font-weight: 900;
@@ -164,9 +187,10 @@
             width: 100%;
             margin-top: 15px;
         }
+
         .visual-item {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
@@ -176,35 +200,99 @@
             align-items: center;
             justify-content: center;
         }
-        .visual-item:hover { background: rgba(255,255,255,0.08); }
-        .emoji { font-size: 3em; display: block; margin-bottom: 10px; }
-        .word { font-weight: 700; color: var(--neon); font-size: 1.2em; display: block; margin-bottom: 4px;}
-        .trans { font-size: 0.9em; color: var(--subtext); font-style: italic; font-family: 'Roboto Mono', monospace;}
-        
-        .ex-text { 
-            font-size: 1.2em; 
-            margin-bottom: 15px; 
-            border-bottom: 1px dashed rgba(255,255,255,0.1); 
-            padding-bottom: 10px; 
+
+        .visual-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .word {
+            font-weight: 700;
+            color: var(--neon);
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .trans {
+            font-size: 0.9em;
+            color: var(--subtext);
+            font-style: italic;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .ex-text {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
             display: flex;
             flex-direction: column;
         }
-        .ex-finnish { color: #fff; font-weight: bold; }
-        .ex-english { color: var(--subtext); font-size: 0.85em; margin-top: 4px; }
+
+        .ex-finnish {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .ex-english {
+            color: var(--subtext);
+            font-size: 0.85em;
+            margin-top: 4px;
+        }
 
         /* DETAILED TABLES */
-        table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 15px 0; font-size: 1em; }
-        th { background: #222; color: var(--gold); padding: 12px; text-align: left; border-bottom: 2px solid var(--gold); font-family: 'Orbitron', sans-serif; font-size: 0.9em;}
-        td { padding: 12px; border-bottom: 1px solid #333; color: var(--text); }
-        tr:last-child td { border-bottom: none; }
-        tr:hover td { background: rgba(255,255,255,0.05); }
-        
-        .highlight { color: var(--gold); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon); text-decoration-thickness: 2px; }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 15px 0;
+            font-size: 1em;
+        }
+
+        th {
+            background: #222;
+            color: var(--gold);
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid var(--gold);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9em;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+            color: var(--text);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: var(--neon);
+            text-decoration-thickness: 2px;
+        }
 
         /* NAVIGATION */
         .nav-overlay {
-            position: fixed; bottom: 20px; right: 20px;
-            background: rgba(0,0,0,0.9);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.9);
             border: 1px solid var(--neon);
             padding: 10px 20px;
             border-radius: 30px;
@@ -214,6 +302,7 @@
             z-index: 1000;
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
         }
+
         .toc-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -221,6 +310,7 @@
             width: 100%;
             max-width: 900px;
         }
+
         .toc-btn {
             background: #151520;
             border: 1px solid #444;
@@ -233,14 +323,21 @@
             font-weight: 500;
             transition: all 0.2s;
         }
-        .toc-btn:hover { border-color: var(--neon); color: var(--neon); transform: translateY(-2px); background: #202030; }
 
+        .toc-btn:hover {
+            border-color: var(--neon);
+            color: var(--neon);
+            transform: translateY(-2px);
+            background: #202030;
+        }
     </style>
 </head>
+
 <body>
 
     <div class="nav-overlay">
-        <i class="fa-solid fa-layer-group"></i> Slide <span id="currentSlide">1</span> / <span id="totalSlides">--</span>
+        <i class="fa-solid fa-layer-group"></i> Slide <span id="currentSlide">1</span> / <span
+            id="totalSlides">--</span>
     </div>
 
     <div class="container" id="mainContainer">
@@ -260,15 +357,19 @@
         <div class="slide">
             <h2>SISÄLLYS (Contents)</h2>
             <div class="toc-grid">
-                <div style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:10px; font-family:'Orbitron'; letter-spacing:2px;">PART 1: FOUNDATIONS</div>
+                <div
+                    style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:10px; font-family:'Orbitron'; letter-spacing:2px;">
+                    PART 1: FOUNDATIONS</div>
                 <a href="#basics" class="toc-btn">1. Basics & Greetings</a>
                 <a href="#pronouns" class="toc-btn">2. Pronouns & To Be</a>
                 <a href="#numbers" class="toc-btn">3. Numbers & Time</a>
                 <a href="#verb1" class="toc-btn">4. Verb Type 1 (-Va)</a>
                 <a href="#verb2" class="toc-btn">5. Verb Type 2 (-da)</a>
                 <a href="#verb3" class="toc-btn">6. Verb Type 3 (-la)</a>
-                
-                <div style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:20px; font-family:'Orbitron'; letter-spacing:2px;">PART 2: STRUCTURES</div>
+
+                <div
+                    style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:20px; font-family:'Orbitron'; letter-spacing:2px;">
+                    PART 2: STRUCTURES</div>
                 <a href="#partitive" class="toc-btn">7. Partitive Case</a>
                 <a href="#kpt" class="toc-btn">8. Consonant Gradation</a>
                 <a href="#cases" class="toc-btn">9. Local Cases</a>
@@ -291,15 +392,43 @@
                 <h3>Common Phrases Table</h3>
                 <table>
                     <thead>
-                        <tr><th>Finnish</th><th>English</th><th>Context</th></tr>
+                        <tr>
+                            <th>Finnish</th>
+                            <th>English</th>
+                            <th>Context</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td><b>Hei / Moi</b></td><td>Hi / Hello</td><td>Casual, standard.</td></tr>
-                        <tr><td><b>Hyvää huomenta</b></td><td>Good morning</td><td>Until ~10 AM.</td></tr>
-                        <tr><td><b>Hyvää päivää</b></td><td>Good day</td><td>Formal hello.</td></tr>
-                        <tr><td><b>Mitä kuuluu?</b></td><td>How are you?</td><td>Expect a real answer!</td></tr>
-                        <tr><td><b>Kiitos</b></td><td>Thank you</td><td>Used constantly.</td></tr>
-                        <tr><td><b>Anteeksi</b></td><td>Sorry / Excuse me</td><td>Apology or getting attention.</td></tr>
+                        <tr>
+                            <td><b>Hei / Moi</b></td>
+                            <td>Hi / Hello</td>
+                            <td>Casual, standard.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Hyvää huomenta</b></td>
+                            <td>Good morning</td>
+                            <td>Until ~10 AM.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Hyvää päivää</b></td>
+                            <td>Good day</td>
+                            <td>Formal hello.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mitä kuuluu?</b></td>
+                            <td>How are you?</td>
+                            <td>Expect a real answer!</td>
+                        </tr>
+                        <tr>
+                            <td><b>Kiitos</b></td>
+                            <td>Thank you</td>
+                            <td>Used constantly.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Anteeksi</b></td>
+                            <td>Sorry / Excuse me</td>
+                            <td>Apology or getting attention.</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -344,7 +473,7 @@
                     <span class="ex-finnish">B: Päivää. Hauska tutustua.</span>
                     <span class="ex-english">B: Good day. Nice to meet you.</span>
                 </div>
-                 <div class="ex-text">
+                <div class="ex-text">
                     <span class="ex-finnish">A: Ole hyvä.</span>
                     <span class="ex-english">A: Here you go / You're welcome.</span>
                 </div>
@@ -355,7 +484,9 @@
             <h2><i class="fa-solid fa-lightbulb"></i> FUN FACT: SILENCE</h2>
             <div class="card">
                 <h3>Silence is Golden</h3>
-                <p>In Finland, silence is not awkward; it's part of communication. It shows respect. If you ask <i>"Mitä kuuluu?"</i>, a Finn might stop and think before giving you a real, honest answer instead of just saying "fine". Listening without interrupting is considered very polite.</p>
+                <p>In Finland, silence is not awkward; it's part of communication. It shows respect. If you ask <i>"Mitä
+                        kuuluu?"</i>, a Finn might stop and think before giving you a real, honest answer instead of
+                    just saying "fine". Listening without interrupting is considered very polite.</p>
             </div>
         </div>
 
@@ -366,15 +497,50 @@
                 <h3>Pronoun Table</h3>
                 <table>
                     <thead>
-                        <tr><th>Person</th><th>Finnish Subject</th><th>English</th><th>Possessive (My/Your)</th></tr>
+                        <tr>
+                            <th>Person</th>
+                            <th>Finnish Subject</th>
+                            <th>English</th>
+                            <th>Possessive (My/Your)</th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr><td>1st Sg</td><td><b>Minä</b></td><td>I</td><td>Minun</td></tr>
-                        <tr><td>2nd Sg</td><td><b>Sinä</b></td><td>You</td><td>Sinun</td></tr>
-                        <tr><td>3rd Sg</td><td><b>Hän</b></td><td>He / She</td><td>Hänen</td></tr>
-                        <tr><td>1st Pl</td><td><b>Me</b></td><td>We</td><td>Meidän</td></tr>
-                        <tr><td>2nd Pl</td><td><b>Te</b></td><td>You (plural)</td><td>Teidän</td></tr>
-                        <tr><td>3rd Pl</td><td><b>He</b></td><td>They</td><td>Heidän</td></tr>
+                        <tr>
+                            <td>1st Sg</td>
+                            <td><b>Minä</b></td>
+                            <td>I</td>
+                            <td>Minun</td>
+                        </tr>
+                        <tr>
+                            <td>2nd Sg</td>
+                            <td><b>Sinä</b></td>
+                            <td>You</td>
+                            <td>Sinun</td>
+                        </tr>
+                        <tr>
+                            <td>3rd Sg</td>
+                            <td><b>Hän</b></td>
+                            <td>He / She</td>
+                            <td>Hänen</td>
+                        </tr>
+                        <tr>
+                            <td>1st Pl</td>
+                            <td><b>Me</b></td>
+                            <td>We</td>
+                            <td>Meidän</td>
+                        </tr>
+                        <tr>
+                            <td>2nd Pl</td>
+                            <td><b>Te</b></td>
+                            <td>You (plural)</td>
+                            <td>Teidän</td>
+                        </tr>
+                        <tr>
+                            <td>3rd Pl</td>
+                            <td><b>He</b></td>
+                            <td>They</td>
+                            <td>Heidän</td>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="rule-block" style="margin-top:15px;">
@@ -396,7 +562,7 @@
                     <span class="ex-finnish">Sinä olet opettaja.</span>
                     <span class="ex-english">You are a teacher.</span>
                 </div>
-                 <div class="ex-text">
+                <div class="ex-text">
                     <span class="ex-finnish">Hän on ystävä.</span>
                     <span class="ex-english">He/She is a friend.</span>
                 </div>
@@ -430,7 +596,9 @@
             <h2><i class="fa-solid fa-venus-mars"></i> FUN FACT: NO GENDER</h2>
             <div class="card">
                 <h3>The Word "Hän"</h3>
-                <p>Finnish is famous for having <b>no grammatical gender</b>. The word <b>Hän</b> refers to both "He" and "She". You must figure it out from context! This reflects a deep sense of equality in the culture. Even objects don't have gender (no 'el' or 'la' like Spanish).</p>
+                <p>Finnish is famous for having <b>no grammatical gender</b>. The word <b>Hän</b> refers to both "He"
+                    and "She". You must figure it out from context! This reflects a deep sense of equality in the
+                    culture. Even objects don't have gender (no 'el' or 'la' like Spanish).</p>
             </div>
         </div>
 
@@ -444,18 +612,75 @@
                 </div>
                 <h3>Numbers Table</h3>
                 <table>
-                    <thead><tr><th>#</th><th>Finnish</th><th>#</th><th>Finnish</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Finnish</th>
+                            <th>#</th>
+                            <th>Finnish</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td>0</td><td><b>Nolla</b></td><td>10</td><td><b>Kymmenen</b></td></tr>
-                        <tr><td>1</td><td><b>Yksi</b></td><td>11</td><td><b>Yksitoista</b></td></tr>
-                        <tr><td>2</td><td><b>Kaksi</b></td><td>12</td><td><b>Kaksitoista</b></td></tr>
-                        <tr><td>3</td><td><b>Kolme</b></td><td>20</td><td><b>Kaksikymmentä</b></td></tr>
-                        <tr><td>4</td><td><b>Neljä</b></td><td>21</td><td><b>Kaksikymmentäyksi</b></td></tr>
-                        <tr><td>5</td><td><b>Viisi</b></td><td>30</td><td><b>Kolmekymmentä</b></td></tr>
-                        <tr><td>6</td><td><b>Kuusi</b></td><td>100</td><td><b>Sata</b></td></tr>
-                        <tr><td>7</td><td><b>Seitsemän</b></td><td>1000</td><td><b>Tuhat</b></td></tr>
-                        <tr><td>8</td><td><b>Kahdeksan</b></td><td></td><td></td></tr>
-                        <tr><td>9</td><td><b>Yhdeksän</b></td><td></td><td></td></tr>
+                        <tr>
+                            <td>0</td>
+                            <td><b>Nolla</b></td>
+                            <td>10</td>
+                            <td><b>Kymmenen</b></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><b>Yksi</b></td>
+                            <td>11</td>
+                            <td><b>Yksitoista</b></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><b>Kaksi</b></td>
+                            <td>12</td>
+                            <td><b>Kaksitoista</b></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><b>Kolme</b></td>
+                            <td>20</td>
+                            <td><b>Kaksikymmentä</b></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><b>Neljä</b></td>
+                            <td>21</td>
+                            <td><b>Kaksikymmentäyksi</b></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><b>Viisi</b></td>
+                            <td>30</td>
+                            <td><b>Kolmekymmentä</b></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><b>Kuusi</b></td>
+                            <td>100</td>
+                            <td><b>Sata</b></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><b>Seitsemän</b></td>
+                            <td>1000</td>
+                            <td><b>Tuhat</b></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><b>Kahdeksan</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><b>Yhdeksän</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -512,7 +737,9 @@
             <h2><i class="fa-solid fa-triangle-exclamation"></i> FUN FACT: PUOLI</h2>
             <div class="card">
                 <h3>Don't be late!</h3>
-                <p>This is the biggest trap for English speakers. In English, "Half five" often means 5:30. In Finnish, <b>Puoli viisi</b> means <b>4:30</b>. It means you are halfway <i>towards</i> five. Always think: "Halfway TO..."</p>
+                <p>This is the biggest trap for English speakers. In English, "Half five" often means 5:30. In Finnish,
+                    <b>Puoli viisi</b> means <b>4:30</b>. It means you are halfway <i>towards</i> five. Always think:
+                    "Halfway TO..."</p>
             </div>
         </div>
 
@@ -577,7 +804,9 @@
             <h2><i class="fa-solid fa-person"></i> FUN FACT: THE "MINÄ" DROP</h2>
             <div class="card">
                 <h3>Implied Subject</h3>
-                <p>In Finnish, the verb ending tells you who is doing the action. <br><b>-n</b> always means "I". <br><b>-t</b> always means "You".<br>Because of this, you can often drop the word "Minä" or "Sinä". Saying just <b>"Asun täällä"</b> (Live-I here) is perfectly correct and sounds very natural!</p>
+                <p>In Finnish, the verb ending tells you who is doing the action. <br><b>-n</b> always means "I".
+                    <br><b>-t</b> always means "You".<br>Because of this, you can often drop the word "Minä" or "Sinä".
+                    Saying just <b>"Asun täällä"</b> (Live-I here) is perfectly correct and sounds very natural!</p>
             </div>
         </div>
 
@@ -638,7 +867,9 @@
             <h2><i class="fa-solid fa-bolt"></i> FUN FACT: SHORT STEMS</h2>
             <div class="card">
                 <h3>Efficiency</h3>
-                <p>Type 2 verbs often become very short. <br><b>Uida</b> (to swim) -> Remove 'da' -> <b>Ui</b>.<br><i>Hän ui</i> means "He swims". It is just two letters and a space! Finnish can be very compact.</p>
+                <p>Type 2 verbs often become very short. <br><b>Uida</b> (to swim) -> Remove 'da' ->
+                    <b>Ui</b>.<br><i>Hän ui</i> means "He swims". It is just two letters and a space! Finnish can be
+                    very compact.</p>
             </div>
         </div>
 
@@ -700,7 +931,9 @@
             <h2><i class="fa-solid fa-bridge"></i> FUN FACT: THE 'E' BRIDGE</h2>
             <div class="card">
                 <h3>Why add 'e'?</h3>
-                <p>If we simply added 'n' to <i>Tul-</i>, we would get <i>Tuln</i>. That is very hard to pronounce! Finnish loves vowels and flow. The extra 'e' acts as a bridge to make the word smooth. <i>Tulen</i> flows like water.</p>
+                <p>If we simply added 'n' to <i>Tul-</i>, we would get <i>Tuln</i>. That is very hard to pronounce!
+                    Finnish loves vowels and flow. The extra 'e' acts as a bridge to make the word smooth. <i>Tulen</i>
+                    flows like water.</p>
             </div>
         </div>
 
@@ -770,7 +1003,9 @@
             <h2><i class="fa-solid fa-glass-water"></i> FUN FACT: "SOME"</h2>
             <div class="card">
                 <h3>Uncountable Liquids</h3>
-                <p><i>Juon kahvia</i> literally means "I drink (some) coffee". If you use the Genitive case <i>Juon kahvin</i>, it implies you drink the <b>whole</b> cup and finish it completely. The Partitive implies an indefinite amount or an ongoing process.</p>
+                <p><i>Juon kahvia</i> literally means "I drink (some) coffee". If you use the Genitive case <i>Juon
+                        kahvin</i>, it implies you drink the <b>whole</b> cup and finish it completely. The Partitive
+                    implies an indefinite amount or an ongoing process.</p>
             </div>
         </div>
 
@@ -785,13 +1020,41 @@
                 <div class="rule-block">
                     <span class="rule-title">🛠️ HOW IT CHANGES</span>
                     <table>
-                        <tr><th>Strong</th><th>Weak</th><th>Example</th></tr>
-                        <tr><td>KK</td><td>K</td><td>Pankki -> Pankissa</td></tr>
-                        <tr><td>PP</td><td>P</td><td>Kauppa -> Kaupassa</td></tr>
-                        <tr><td>TT</td><td>T</td><td>Tyttö -> Tytön</td></tr>
-                        <tr><td>K</td><td>-</td><td>Ruoka -> Ruoan</td></tr>
-                        <tr><td>P</td><td>V</td><td>Leipä -> Leivän</td></tr>
-                        <tr><td>T</td><td>D</td><td>Pöytä -> Pöydällä</td></tr>
+                        <tr>
+                            <th>Strong</th>
+                            <th>Weak</th>
+                            <th>Example</th>
+                        </tr>
+                        <tr>
+                            <td>KK</td>
+                            <td>K</td>
+                            <td>Pankki -> Pankissa</td>
+                        </tr>
+                        <tr>
+                            <td>PP</td>
+                            <td>P</td>
+                            <td>Kauppa -> Kaupassa</td>
+                        </tr>
+                        <tr>
+                            <td>TT</td>
+                            <td>T</td>
+                            <td>Tyttö -> Tytön</td>
+                        </tr>
+                        <tr>
+                            <td>K</td>
+                            <td>-</td>
+                            <td>Ruoka -> Ruoan</td>
+                        </tr>
+                        <tr>
+                            <td>P</td>
+                            <td>V</td>
+                            <td>Leipä -> Leivän</td>
+                        </tr>
+                        <tr>
+                            <td>T</td>
+                            <td>D</td>
+                            <td>Pöytä -> Pöydällä</td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -829,7 +1092,8 @@
             <h2><i class="fa-solid fa-music"></i> FUN FACT: RHYTHM</h2>
             <div class="card">
                 <h3>Why change?</h3>
-                <p>Try saying <i>"Pankkissa"</i> quickly. The double 'k' acts like a stop sign in your mouth. <i>"Pankissa"</i> flows smoothly. Finnish hates "bumpy" words and loves rhythm!</p>
+                <p>Try saying <i>"Pankkissa"</i> quickly. The double 'k' acts like a stop sign in your mouth.
+                    <i>"Pankissa"</i> flows smoothly. Finnish hates "bumpy" words and loves rhythm!</p>
             </div>
         </div>
 
@@ -843,11 +1107,29 @@
                 </div>
                 <h3>The Grid</h3>
                 <table>
-                    <thead><tr><th>Meaning</th><th>Internal (Box)</th><th>External (Surface)</th></tr></thead>
+                    <thead>
+                        <tr>
+                            <th>Meaning</th>
+                            <th>Internal (Box)</th>
+                            <th>External (Surface)</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr><td><b>Missä?</b> (Location)</td><td>-ssa (In)</td><td>-lla (On)</td></tr>
-                        <tr><td><b>Mistä?</b> (From)</td><td>-sta (From in)</td><td>-lta (From on)</td></tr>
-                        <tr><td><b>Mihin?</b> (To)</td><td>-Vn (Into)</td><td>-lle (Onto)</td></tr>
+                        <tr>
+                            <td><b>Missä?</b> (Location)</td>
+                            <td>-ssa (In)</td>
+                            <td>-lla (On)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mistä?</b> (From)</td>
+                            <td>-sta (From in)</td>
+                            <td>-lta (From on)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mihin?</b> (To)</td>
+                            <td>-Vn (Into)</td>
+                            <td>-lle (Onto)</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -857,9 +1139,12 @@
             <h2><i class="fa-solid fa-box-open"></i> EXAMPLE 1: INTERNAL (TALO)</h2>
             <div class="card">
                 <div class="visual-grid">
-                    <div class="visual-item"><span class="word">Talossa</span><span class="trans">In the house</span></div>
-                    <div class="visual-item"><span class="word">Talosta</span><span class="trans">From the house</span></div>
-                    <div class="visual-item"><span class="word">Taloon</span><span class="trans">Into the house</span></div>
+                    <div class="visual-item"><span class="word">Talossa</span><span class="trans">In the house</span>
+                    </div>
+                    <div class="visual-item"><span class="word">Talosta</span><span class="trans">From the house</span>
+                    </div>
+                    <div class="visual-item"><span class="word">Taloon</span><span class="trans">Into the house</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -868,9 +1153,12 @@
             <h2><i class="fa-solid fa-table"></i> EXAMPLE 2: EXTERNAL (PÖYTÄ)</h2>
             <div class="card">
                 <div class="visual-grid">
-                    <div class="visual-item"><span class="word">Pöydällä</span><span class="trans">On the table</span></div>
-                    <div class="visual-item"><span class="word">Pöydältä</span><span class="trans">From the table</span></div>
-                    <div class="visual-item"><span class="word">Pöydälle</span><span class="trans">Onto the table</span></div>
+                    <div class="visual-item"><span class="word">Pöydällä</span><span class="trans">On the table</span>
+                    </div>
+                    <div class="visual-item"><span class="word">Pöydältä</span><span class="trans">From the table</span>
+                    </div>
+                    <div class="visual-item"><span class="word">Pöydälle</span><span class="trans">Onto the table</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -879,7 +1167,8 @@
             <h2><i class="fa-solid fa-arrow-right-to-bracket"></i> FUN FACT: ILLATIVE</h2>
             <div class="card">
                 <h3>The "Into" Case</h3>
-                <p>The "Into" case is unique. You usually double the last vowel and add 'n'. <br>Koulu -> Kouluu -> <b>Kouluun</b>. <br>It mimics the sound of entering somewhere deeply.</p>
+                <p>The "Into" case is unique. You usually double the last vowel and add 'n'. <br>Koulu -> Kouluu ->
+                    <b>Kouluun</b>. <br>It mimics the sound of entering somewhere deeply.</p>
             </div>
         </div>
 
@@ -890,7 +1179,7 @@
                 <h3>1. Ownership (Minulla on)</h3>
                 <p>Finnish has no verb for "To Have". Use: <b>Owner + lla + on + Item</b>.</p>
                 <p><i>Literal: "At me is a dog."</i></p>
-                
+
                 <h3 style="margin-top:20px;">2. Existential (There is)</h3>
                 <p>Use: <b>Location + on + Item</b>.</p>
                 <p><i>Literal: "In house is sauna."</i></p>
@@ -929,7 +1218,8 @@
             <h2><i class="fa-solid fa-hand-holding-heart"></i> FUN FACT: POSSESSION</h2>
             <div class="card">
                 <h3>A State of Being</h3>
-                <p>The lack of a "Have" verb is shared with Celtic languages (like Welsh). It suggests that ownership isn't an action you do, but a state of being where things are near you.</p>
+                <p>The lack of a "Have" verb is shared with Celtic languages (like Welsh). It suggests that ownership
+                    isn't an action you do, but a state of being where things are near you.</p>
             </div>
         </div>
 
@@ -939,7 +1229,8 @@
             <div class="card">
                 <div class="rule-block">
                     <span class="rule-title">⏰ WHEN DO WE USE IT?</span>
-                    <p>Verbs ending in <b>-ata, -ota, -uta, -ytä</b>. <br><i>(Siiv<b>ota</b>, Hal<b>uta</b>, Os<b>ata</b>).</i></p>
+                    <p>Verbs ending in <b>-ata, -ota, -uta, -ytä</b>. <br><i>(Siiv<b>ota</b>, Hal<b>uta</b>,
+                            Os<b>ata</b>).</i></p>
                 </div>
                 <div class="rule-block">
                     <span class="rule-title">🛠️ HOW DO WE CONJUGATE?</span>
@@ -981,7 +1272,8 @@
             <h2><i class="fa-solid fa-comment-dots"></i> FUN FACT: SLANG</h2>
             <div class="card">
                 <h3>"Mä haluun"</h3>
-                <p>In written Finnish: <i>Minä haluan</i>. <br>In spoken Helsinki slang: <i>Mä haluun</i>. <br>The 't' drops, and vowels stretch. Spoken Finnish can sound very different!</p>
+                <p>In written Finnish: <i>Minä haluan</i>. <br>In spoken Helsinki slang: <i>Mä haluun</i>. <br>The 't'
+                    drops, and vowels stretch. Spoken Finnish can sound very different!</p>
             </div>
         </div>
 
@@ -1035,7 +1327,9 @@
             <h2><i class="fa-solid fa-history"></i> FUN FACT: OLD WORDS</h2>
             <div class="card">
                 <h3>The -i Mystery</h3>
-                <p>Why does <i>Pankki</i> stay <i>Pankissa</i> but <i>Järvi</i> becomes <i>Järvessä</i>? <br><b>New loan words</b> (Pankki, Bussi, Hotelli) keep the 'i'. <br><b>Ancient nature words</b> (Järvi, Kivi, Talvi) change 'i' to 'e'. History matters!</p>
+                <p>Why does <i>Pankki</i> stay <i>Pankissa</i> but <i>Järvi</i> becomes <i>Järvessä</i>? <br><b>New loan
+                        words</b> (Pankki, Bussi, Hotelli) keep the 'i'. <br><b>Ancient nature words</b> (Järvi, Kivi,
+                    Talvi) change 'i' to 'e'. History matters!</p>
             </div>
         </div>
 
@@ -1057,7 +1351,7 @@
         const totalSlides = slides.length;
         const totalSpan = document.getElementById('totalSlides');
         const currentSpan = document.getElementById('currentSlide');
-        
+
         // Set total count
         totalSpan.textContent = slides.length;
 
@@ -1073,11 +1367,12 @@
         }
 
         container.addEventListener('scroll', updateCounter);
-        
+
         // Initial check in case of refresh/scroll restoration
         updateCounter();
     </script>
 
 </body>
+
 </html>
 ```
