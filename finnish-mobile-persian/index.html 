@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای جامع تسلط بر زبان فنلاندی - خودآموز</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        .example {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-left: 5px solid #3498db;
+            margin: 10px 0;
+        }
+        .nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #3498db;
+        }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            table { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>راهنمای جامع تسلط بر زبان فنلاندی</h1>
+        <p>این منبع برای خودآموزی زبان فنلاندی طراحی شده است. تمرکز بر افعال نوع ۱.</p>
+        
+        <div class="nav">
+            <a href="#verb1">افعال نوع ۱</a>
+            <a href="#examples">نمونه‌ها</a>
+            <a href="#practice">تمرین</a>
+        </div>
+
+        <section id="verb1">
+            <h2>افعال نوع ۱ در زبان فنلاندی</h2>
+            <p>افعال نوع ۱ در فنلاندی بر اساس مصوت آخر ریشه صیغه می‌گیرند. ریشه فعل بدون پایان minä است.</p>
+            
+            <h3>صرف فعل puhua (به معنای "حرف زدن")</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th>حال ساده</th>
+                        <th>معنی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>minä</td>
+                        <td>puhun</td>
+                        <td>من حرف می‌زنم</td>
+                    </tr>
+                    <tr>
+                        <td>sinä</td>
+                        <td>puhut</td>
+                        <td>تو حرف می‌زنی</td>
+                    </tr>
+                    <tr>
+                        <td>hän</td>
+                        <td>puhuu</td>
+                        <td>او حرف می‌زند</td>
+                    </tr>
+                    <tr>
+                        <td>me</td>
+                        <td>puhumme</td>
+                        <td>ما حرف می‌زنیم</td>
+                    </tr>
+                    <tr>
+                        <td>te</td>
+                        <td>puhutte</td>
+                        <td>شما (جمع) حرف می‌زنید</td>
+                    </tr>
+                    <tr>
+                        <td>he</td>
+                        <td>puhuvat</td>
+                        <td>آن‌ها حرف می‌زنند</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>قوانین کلی برای نوع ۱</h3>
+            <ul>
+                <li>اگر ریشه با مصوت a, o, u تمام شود: اضافه کردن n/t/Ø در minä/sinä/hän، سپس mme/tte/vat.</li>
+                <li>مثال: puhua → puhu-n / puhu-t / puhu-u</li>
+                <li>توجه: در لهجه‌های مختلف ممکن است تغییرات جزئی وجود داشته باشد.</li>
+            </ul>
+        </section>
+
+        <section id="examples">
+            <h2>نمونه جملات</h2>
+            <div class="example">
+                <p>Minä puhun suomea. (من فنلاندی حرف می‌زنم.)</p>
+            </div>
+            <div class="example">
+                <p>Sinä puhut hyvin. (تو خوب حرف می‌زنی.)</p>
+            </div>
+            <div class="example">
+                <p>Hän puhuu englantia. (او انگلیسی حرف می‌زند.)</p>
+            </div>
+        </section>
+
+        <section id="practice">
+            <h2>تمرین</h2>
+            <p>فعل "opiskella" (مطالعه کردن) را صرف کنید:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th>صرف</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>minä</td>
+                        <td>opiskelen</td>
+                    </tr>
+                    <tr>
+                        <td>sinä</td>
+                        <td><input type="text" placeholder="بنویسید"></td>
+                    </tr>
+                    <tr>
+                        <td>hän</td>
+                        <td><input type="text" placeholder="بنویسید"></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+            <p>پاسخ‌ها: sinä: opiskelet, hän: opiskelee</p>
+        </section>
+
+        <div class="nav">
+            <a href="#verb1">بالا برو</a>
+        </div>
+    </div>
+
+    <script>
+        // Simple script for mobile responsiveness or interactions if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any JS for practice checks if desired
+            console.log('صفحه بارگذاری شد');
+        });
+    </script>
+</body>
+</html>
