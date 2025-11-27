@@ -2,1844 +2,803 @@
 <html lang="fa" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>راهنمای جامع فنلاندی</title>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
-        type="text/css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        /* THEME: DEEP SPACE & NEON */
-        :root {
-            --bg: #080810;
-            --card-bg: rgba(25, 25, 40, 0.95);
-            --gold: #FFD700;
-            --neon: #00D4FF;
-            --purple: #BC13FE;
-            --text: #F0F0F0;
-            --subtext: #B0B0B0;
-            --success: #00FF9D;
-            --error: #FF4B4B;
-            --example: #FF00D4;
-            --rule-bg: rgba(0, 212, 255, 0.08);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>راهنمای جامع فنلاندی - نسخه خودآموز</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* THEME: DEEP SPACE & NEON */
+        :root {
+            --bg: #080810;
+            --card-bg: rgba(25, 25, 40, 0.95);
+            --gold: #FFD700;
+            --neon: #00D4FF;
+            --purple: #BC13FE;
+            --text: #F0F0F0;
+            --subtext: #B0B0B0;
+            --success: #00FF9D;
+            --error: #FF4B4B;
+            --example: #FF00D4;
+            --exercise: #50fa7b; /* New color for exercises */
+            --rule-bg: rgba(0, 212, 255, 0.08);
+        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        body {
-            background: var(--bg);
-            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
-            background-attachment: fixed;
-            color: var(--text);
-            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
-            overflow: hidden;
-            min-height: 100dvh;
-        }
+        body {
+            background: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            overflow: hidden;
+            min-height: 100dvh;
+        }
 
-        /* MAIN SCROLL CONTAINER */
-        .container {
-            width: 100vw;
-            height: 100vh;
-            /* Fallback */
-            height: 100dvh;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-            scroll-behavior: smooth;
-        }
+        /* MAIN SCROLL CONTAINER */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            /* Fallback */
+            height: 100dvh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
 
-        /* SLIDE LAYOUT */
-        .slide {
-            width: 100vw;
-            height: 100vh;
-            /* Fallback */
-            height: 100dvh;
-            scroll-snap-align: start;
-            padding: 80px 20px 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            background: transparent;
-            position: relative;
-            overflow-y: auto;
-            /* MAKES SLIDES SCROLLABLE */
-            border-bottom: 1px solid rgba(34, 34, 34, 0.5);
-        }
+        /* SLIDE LAYOUT */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            /* Fallback */
+            height: 100dvh;
+            scroll-snap-align: start;
+            padding: 80px 20px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: transparent;
+            position: relative;
+            overflow-y: auto;
+            /* MAKES SLIDES SCROLLABLE */
+            border-bottom: 1px solid rgba(34, 34, 34, 0.5);
+        }
 
-        /* TYPOGRAPHY */
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5em;
-            color: var(--gold);
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-            text-align: center;
-            margin-bottom: 10px;
-        }
+        /* TYPOGRAPHY */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            text-align: center;
+            margin-bottom: 10px;
+        }
 
-        h2 {
-            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
-            font-size: 2em;
-            color: var(--neon);
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            width: 100%;
-            max-width: 900px;
-            text-align: center;
-            font-weight: 800;
-            letter-spacing: 0;
-        }
+        h2 {
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 2em;
+            color: var(--neon);
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
 
-        h3 {
-            font-size: 1.3em;
-            color: #fff;
-            margin: 20px 0 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        h3 {
+            font-size: 1.3em;
+            color: #fff;
+            margin: 20px 0 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        /* CARDS */
-        .card {
-            background: var(--card-bg);
-            width: 100%;
-            max-width: 900px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-right: 6px solid var(--neon);
-            border-left: none;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            flex-shrink: 0;
-        }
+        /* CARDS */
+        .card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 900px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 6px solid var(--neon);
+            border-left: none;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+        }
 
-        /* SPECIAL BOXES */
-        .gold-box {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-            color: #000;
-            font-weight: 800;
-            text-align: center;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-            width: 100%;
-            max-width: 900px;
-            font-size: 1.2em;
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
-        }
+        /* SPECIAL BOXES */
+        .gold-box {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            font-weight: 800;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 900px;
+            font-size: 1.2em;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+        }
 
-        /* TYPES OF SLIDES styling */
-        .slide-funfact h2 {
-            color: var(--purple);
-            border-color: var(--purple);
-        }
+        /* TYPES OF SLIDES styling */
+        .slide-funfact h2 {
+            color: var(--purple);
+            border-color: var(--purple);
+        }
 
-        .slide-funfact .card {
-            border-right-color: var(--purple);
-            background: rgba(40, 10, 50, 0.8);
-        }
+        .slide-funfact .card {
+            border-right-color: var(--purple);
+            background: rgba(40, 10, 50, 0.8);
+        }
 
-        .slide-example h2 {
-            color: var(--example);
-            border-color: var(--example);
-        }
+        .slide-example h2 {
+            color: var(--example);
+            border-color: var(--example);
+        }
 
-        .slide-example .card {
-            border-right-color: var(--example);
-            background: rgba(50, 10, 30, 0.8);
-        }
+        .slide-example .card {
+            border-right-color: var(--example);
+            background: rgba(50, 10, 30, 0.8);
+        }
 
-        /* RULE BOXES (Why/When/How) */
-        .rule-block {
-            background: var(--rule-bg);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
+        .slide-exercise h2 {
+            color: var(--exercise);
+            border-color: var(--exercise);
+        }
 
-        .rule-title {
-            color: var(--gold);
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 0.95em;
-            margin-bottom: 8px;
-            display: block;
-            letter-spacing: 0;
-        }
+        .slide-exercise .card {
+            border-right-color: var(--exercise);
+            background: rgba(10, 50, 30, 0.8);
+        }
 
-        /* VISUAL GRID (Pictures/Emojis) */
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            width: 100%;
-            margin-top: 15px;
-        }
+        /* RULE BOXES (Why/When/How) */
+        .rule-block {
+            background: var(--rule-bg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
 
-        .visual-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+        .rule-title {
+            color: var(--gold);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            display: block;
+            letter-spacing: 0;
+        }
 
-        .visual-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-        }
+        /* VISUAL GRID (Pictures/Emojis) */
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            width: 100%;
+            margin-top: 15px;
+        }
 
-        .emoji {
-            font-size: 3em;
-            display: block;
-            margin-bottom: 10px;
-        }
+        .visual-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
-        .word {
-            font-weight: 700;
-            color: var(--neon);
-            font-size: 1.2em;
-            display: block;
-            margin-bottom: 4px;
-        }
+        .visual-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
 
-        .trans {
-            font-size: 0.9em;
-            color: var(--subtext);
-            font-style: italic;
-            font-family: 'Vazirmatn', sans-serif;
-        }
+        .emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-        .ex-text {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-            padding-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-        }
+        .word {
+            font-weight: 700;
+            color: var(--neon);
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 4px;
+        }
 
-        .ex-finnish {
-            color: #fff;
-            font-weight: bold;
-            direction: ltr;
-            text-align: right;
-        }
+        .trans {
+            font-size: 0.9em;
+            color: var(--subtext);
+            font-style: italic;
+            font-family: 'Vazirmatn', sans-serif;
+        }
 
-        .ex-english {
-            color: var(--subtext);
-            font-size: 0.85em;
-            margin-top: 4px;
-        }
+        .ex-text {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
 
-        /* DETAILED TABLES */
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin: 15px 0;
-            font-size: 1em;
-        }
+        .ex-finnish {
+            color: #fff;
+            font-weight: bold;
+            direction: ltr;
+            text-align: right;
+        }
 
-        th {
-            background: #222;
-            color: var(--gold);
-            padding: 12px;
-            text-align: right;
-            border-bottom: 2px solid var(--gold);
-            font-family: 'Vazirmatn', sans-serif;
-            font-size: 0.9em;
-        }
+        .ex-english {
+            color: var(--subtext);
+            font-size: 0.85em;
+            margin-top: 4px;
+        }
 
-        td {
-            padding: 12px;
-            border-bottom: 1px solid #333;
-            color: var(--text);
-        }
+        /* DETAILED TABLES */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 15px 0;
+            font-size: 1em;
+        }
 
-        tr:last-child td {
-            border-bottom: none;
-        }
+        th {
+            background: #222;
+            color: var(--gold);
+            padding: 12px;
+            text-align: right;
+            border-bottom: 2px solid var(--gold);
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: 0.9em;
+        }
 
-        tr:hover td {
-            background: rgba(255, 255, 255, 0.05);
-        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+            color: var(--text);
+        }
 
-        .highlight {
-            color: var(--gold);
-            font-weight: bold;
-            text-decoration: underline;
-            text-decoration-color: var(--neon);
-            text-decoration-thickness: 2px;
-        }
+        tr:last-child td {
+            border-bottom: none;
+        }
 
-        /* NAVIGATION */
-        .nav-overlay {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            right: auto;
-            background: rgba(0, 0, 0, 0.9);
-            border: 1px solid var(--neon);
-            padding: 10px 20px;
-            border-radius: 30px;
-            color: var(--neon);
-            font-weight: bold;
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-        }
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+        }
 
-        .toc-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            width: 100%;
-            max-width: 900px;
-        }
+        .highlight {
+            color: var(--gold);
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: var(--neon);
+            text-decoration-thickness: 2px;
+        }
 
-        .toc-btn {
-            background: #151520;
-            border: 1px solid #444;
-            color: var(--text);
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 0.95em;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
+        /* NAVIGATION */
+        .nav-overlay {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: auto;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--neon);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: var(--neon);
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
 
-        .toc-btn:hover {
-            border-color: var(--neon);
-            color: var(--neon);
-            transform: translateY(-2px);
-            background: #202030;
-        }
-    </style>
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .toc-btn {
+            background: #151520;
+            border: 1px solid #444;
+            color: var(--text);
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .toc-btn:hover {
+            border-color: var(--neon);
+            color: var(--neon);
+            transform: translateY(-2px);
+            background: #202030;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="nav-overlay">
-        <i class="fa-solid fa-layer-group"></i> اسلاید <span id="currentSlide">1</span> / <span
-            id="totalSlides">--</span>
-    </div>
-
-    <div class="container" id="mainContainer">
-
-                <div class="slide" style="justify-content: center;">
-            <h1>🇫🇮 SUOMI</h1>
-            <h2 style="border:none; font-size: 2.5em; color: #fff;">راهنمای جامع خودآموز</h2>
-            <div class="gold-box">
-                <i class="fa-solid fa-star"></i> فنلاندی ۱ و ۲ کامل <i class="fa-solid fa-star"></i>
-            </div>
-            <p style="font-size: 1.2em; color: var(--subtext);">لغات • گرامر • مثال‌ها • فرهنگ</p>
-            <p style="margin-top:30px; font-size:3em; animation: bounce 2s infinite;">👇</p>
-        </div>
-
-                <div class="slide">
-            <h2>فهرست مطالب</h2>
-            <div class="toc-grid">
-                <div
-                    style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:10px; font-family:'Vazirmatn'; letter-spacing:0;">
-                    بخش ۱: پایه‌ها</div>
-                <a href="#basics" class="toc-btn">۱. مقدمات و احوالپرسی</a>
-                <a href="#pronouns" class="toc-btn">۲. ضمایر و فعل بودن</a>
-                <a href="#numbers" class="toc-btn">۳. اعداد و زمان</a>
-                <a href="#verb1" class="toc-btn">۴. فعل نوع ۱ (-Va)</a>
-                <a href="#verb2" class="toc-btn">۵. فعل نوع ۲ (-da)</a>
-                <a href="#verb3" class="toc-btn">۶. فعل نوع ۳ (-la)</a>
-
-                <div
-                    style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:20px; font-family:'Vazirmatn'; letter-spacing:0;">
-                    بخش ۲: ساختارها</div>
-                <a href="#partitive" class="toc-btn">۷. حالت پارتیتیو</a>
-                <a href="#kpt" class="toc-btn">۸. درجه‌بندی صامت‌ها (KPT)</a>
-                <a href="#cases" class="toc-btn">۹. حالت‌های مکانی</a>
-                <a href="#sentences" class="toc-btn">۱۰. انواع جملات</a>
-                <a href="#verb4" class="toc-btn">۱۱. فعل نوع ۴ (-ata)</a>
-                <a href="#nouns" class="toc-btn">۱۲. انواع اسم‌ها</a>
-                <a href="#describe" class="toc-btn">۱۳. توصیف (Appearance)</a>
-                <a href="#verb5" class="toc-btn">۱۴. فعل نوع ۵ (-ita)</a>
-                <a href="#conversation" class="toc-btn">۱۵. تمرین مکالمه</a>
-            </div>
-        </div>
-
-                        <div class="slide" id="basics">
-            <h2>۱. احوالپرسی (TERVEHDYKSET)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title"><i class="fa-solid fa-question-circle"></i> چرا استفاده می‌کنیم؟</span>
-                    <p>احوالپرسی پایه و اساس مکالمه مودبانه است. فنلاندی‌ها برای صداقت ارزش زیادی قائل هستند.</p>
-                </div>
-                <h3>جدول عبارات رایج</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>فنلاندی</th>
-                            <th>فارسی</th>
-                            <th>کاربرد</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td dir="ltr"><b>Hei / Moi</b></td>
-                            <td>سلام</td>
-                            <td>دوستانه، استاندارد.</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr"><b>Hyvää huomenta</b></td>
-                            <td>صبح بخیر</td>
-                            <td>تا حدود ۱۰ صبح.</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr"><b>Hyvää päivää</b></td>
-                            <td>روز بخیر</td>
-                            <td>سلام رسمی.</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr"><b>Mitä kuuluu?</b></td>
-                            <td>حالت چطوره؟</td>
-                            <td>انتظار یک جواب واقعی داشته باشید!</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr"><b>Kiitos</b></td>
-                            <td>ممنون</td>
-                            <td>مدام استفاده می‌شود.</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr"><b>Anteeksi</b></td>
-                            <td>ببخشید / عذر می‌خوام</td>
-                            <td>عذرخواهی یا جلب توجه.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-comments"></i> مثال ۱: گفتگوی دوستانه</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item">
-                        <span class="emoji">👋</span>
-                        <span class="word" dir="ltr">Moi!</span>
-                        <span class="trans">سلام!</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">😊</span>
-                        <span class="word" dir="ltr">Mitä kuuluu?</span>
-                        <span class="trans">حالت چطوره؟</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">👍</span>
-                        <span class="word" dir="ltr">Hyvää, kiitos.</span>
-                        <span class="trans">خوبم، ممنون.</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">👋👋</span>
-                        <span class="word" dir="ltr">Moi moi!</span>
-                        <span class="trans">خداحافظ!</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-user-tie"></i> مثال ۲: رسمی / مودبانه</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">A: Hyvää päivää.</span>
-                    <span class="ex-english">A: روز بخیر. (رسمی)</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">B: Päivää. Hauska tutustua.</span>
-                    <span class="ex-english">B: روز بخیر. از آشنایی با شما خوشبختم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">A: Ole hyvä.</span>
-                    <span class="ex-english">A: بفرمایید / خواهش می‌کنم.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-lightbulb"></i> دانستنی: سکوت</h2>
-            <div class="card">
-                <h3>سکوت طلاست</h3>
-                <p>در فنلاند، سکوت عجیب نیست؛ بخشی از ارتباط است و نشان‌دهنده احترام است. اگر بپرسید <i dir="ltr">"Mitä
-                        kuuluu?"</i>، یک فنلاندی ممکن است قبل از دادن یک جواب واقعی و صادقانه (به جای فقط گفتن "خوبم")
-                    مکث کند و فکر کند. گوش دادن بدون پریدن وسط حرف، بسیار مودبانه تلقی می‌شود.</p>
-            </div>
-        </div>
-
-                <div class="slide" id="pronouns">
-            <h2>۲. ضمایر و فعل بودن (PRONOMINIT & OLLA)</h2>
-            <div class="card">
-                <h3>جدول ضمایر</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>شخص</th>
-                            <th>فاعل فنلاندی</th>
-                            <th>فارسی</th>
-                            <th>مالکیت (من/تو)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>اول شخص مفرد</td>
-                            <td dir="ltr"><b>Minä</b></td>
-                            <td>من</td>
-                            <td dir="ltr">Minun</td>
-                        </tr>
-                        <tr>
-                            <td>دوم شخص مفرد</td>
-                            <td dir="ltr"><b>Sinä</b></td>
-                            <td>تو</td>
-                            <td dir="ltr">Sinun</td>
-                        </tr>
-                        <tr>
-                            <td>سوم شخص مفرد</td>
-                            <td dir="ltr"><b>Hän</b></td>
-                            <td>او (مذکر/مونث)</td>
-                            <td dir="ltr">Hänen</td>
-                        </tr>
-                        <tr>
-                            <td>اول شخص جمع</td>
-                            <td dir="ltr"><b>Me</b></td>
-                            <td>ما</td>
-                            <td dir="ltr">Meidän</td>
-                        </tr>
-                        <tr>
-                            <td>دوم شخص جمع</td>
-                            <td dir="ltr"><b>Te</b></td>
-                            <td>شما</td>
-                            <td dir="ltr">Teidän</td>
-                        </tr>
-                        <tr>
-                            <td>سوم شخص جمع</td>
-                            <td dir="ltr"><b>He</b></td>
-                            <td>آنها</td>
-                            <td dir="ltr">Heidän</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="rule-block" style="margin-top:15px;">
-                    <span class="rule-title">فعل: OLLA (بودن)</span>
-                    <p dir="ltr">Minä <b>olen</b>, Sinä <b>olet</b>, Hän <b>on</b>.</p>
-                    <p dir="ltr">Me <b>olemme</b>, Te <b>olette</b>, He <b>ovat</b>.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-id-card"></i> مثال ۱: هویت</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Minä olen opiskelija.</span>
-                    <span class="ex-english">من دانشجو هستم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Sinä olet opettaja.</span>
-                    <span class="ex-english">تو معلم هستی.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Hän on ystävä.</span>
-                    <span class="ex-english">او یک دوست است.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-globe"></i> مثال ۲: ملیت</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item">
-                        <span class="emoji">🇫🇮</span>
-                        <span class="word" dir="ltr">Olen suomalainen.</span>
-                        <span class="trans">من فنلاندی هستم.</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🇬🇧</span>
-                        <span class="word" dir="ltr">Hän on englantilainen.</span>
-                        <span class="trans">او انگلیسی است.</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🇸🇪</span>
-                        <span class="word" dir="ltr">Oletko ruotsalainen?</span>
-                        <span class="trans">آیا تو سوئدی هستی؟</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-venus-mars"></i> دانستنی: بدون جنسیت</h2>
-            <div class="card">
-                <h3>کلمه "Hän"</h3>
-                <p>فنلاندی به نداشتن <b>جنسیت دستوری</b> معروف است. کلمه <b>Hän</b> هم به "او" (مذکر) و هم به "او"
-                    (مونث) اشاره دارد. باید از روی متن متوجه شوید! این نشان‌دهنده حس عمیق برابری در فرهنگ است. حتی اشیاء
-                    هم جنسیت ندارند.</p>
-            </div>
-        </div>
-
-                <div class="slide" id="numbers">
-            <h2>۳. اعداد (NUMEROT)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">🛠️ سیستم</span>
-                    <p>۰-۱۰ منحصر به فرد هستند. ۱۱-۱۹ پسوند <b>-toista</b> می‌گیرند. ۲۰-۹۰ پسوند <b>-kymmentä</b>
-                        می‌گیرند.</p>
-                </div>
-                <h3>جدول اعداد</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>فنلاندی</th>
-                            <th>#</th>
-                            <th>فنلاندی</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>۰</td>
-                            <td dir="ltr"><b>Nolla</b></td>
-                            <td>۱۰</td>
-                            <td dir="ltr"><b>Kymmenen</b></td>
-                        </tr>
-                        <tr>
-                            <td>۱</td>
-                            <td dir="ltr"><b>Yksi</b></td>
-                            <td>۱۱</td>
-                            <td dir="ltr"><b>Yksitoista</b></td>
-                        </tr>
-                        <tr>
-                            <td>۲</td>
-                            <td dir="ltr"><b>Kaksi</b></td>
-                            <td>۱۲</td>
-                            <td dir="ltr"><b>Kaksitoista</b></td>
-                        </tr>
-                        <tr>
-                            <td>۳</td>
-                            <td dir="ltr"><b>Kolme</b></td>
-                            <td>۲۰</td>
-                            <td dir="ltr"><b>Kaksikymmentä</b></td>
-                        </tr>
-                        <tr>
-                            <td>۴</td>
-                            <td dir="ltr"><b>Neljä</b></td>
-                            <td>۲۱</td>
-                            <td dir="ltr"><b>Kaksikymmentäyksi</b></td>
-                        </tr>
-                        <tr>
-                            <td>۵</td>
-                            <td dir="ltr"><b>Viisi</b></td>
-                            <td>۳۰</td>
-                            <td dir="ltr"><b>Kolmekymmentä</b></td>
-                        </tr>
-                        <tr>
-                            <td>۶</td>
-                            <td dir="ltr"><b>Kuusi</b></td>
-                            <td>۱۰۰</td>
-                            <td dir="ltr"><b>Sata</b></td>
-                        </tr>
-                        <tr>
-                            <td>۷</td>
-                            <td dir="ltr"><b>Seitsemän</b></td>
-                            <td>۱۰۰۰</td>
-                            <td dir="ltr"><b>Tuhat</b></td>
-                        </tr>
-                        <tr>
-                            <td>۸</td>
-                            <td dir="ltr"><b>Kahdeksan</b></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>۹</td>
-                            <td dir="ltr"><b>Yhdeksän</b></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-coins"></i> مثال ۱: شمارش و قیمت‌ها</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item">
-                        <span class="emoji">💶</span>
-                        <span class="word" dir="ltr">Viisi euroa</span>
-                        <span class="trans">پنج یورو</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🔢</span>
-                        <span class="word" dir="ltr">Viisitoista</span>
-                        <span class="trans">پانزده</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🔢</span>
-                        <span class="word" dir="ltr">Viisikymmentä</span>
-                        <span class="trans">پنجاه</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-clock"></i> مثال ۲: گفتن زمان</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">قوانین</span>
-                    <ul style="list-style:none;">
-                        <li><b dir="ltr">Yli</b> = گذشته</li>
-                        <li><b dir="ltr">Vaille</b> = مانده به</li>
-                        <li><b dir="ltr">Puoli</b> = نیم (اشاره به ساعت بعدی دارد)</li>
-                    </ul>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Kello on kolme. (3:00)</span>
-                    <span class="ex-english">ساعت سه است.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Kello on puoli neljä. (3:30)</span>
-                    <span class="ex-english">تحت‌اللفظی: "نیم چهار" (نیمه راه به چهار)</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Kello on vartin yli kaksi. (2:15)</span>
-                    <span class="ex-english">ساعت یک ربع از دو گذشته است.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-triangle-exclamation"></i> دانستنی: PUOLI</h2>
-            <div class="card">
-                <h3>دیر نکنید!</h3>
-                <p>این بزرگترین دام برای خارجی‌هاست. در فارسی یا انگلیسی، "سه و نیم" یعنی 3:30. در فنلاندی،
-                    <b dir="ltr">Puoli neljä</b> یعنی <b>3:30</b>. یعنی شما در نیمه راه <i>به سمت</i> چهار هستید. همیشه
-                    فکر کنید:
-                    "نیمه راه به..."
-                </p>
-            </div>
-        </div>
-
-                <div class="slide" id="verb1">
-            <h2>۴. فعل نوع ۱ (-Va / -Vä)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
-                    <p>وقتی فعل به <b>۲ مصوت</b> ختم می‌شود (مثلاً -ua, -ea, -ia).</p>
-                </div>
-                <div class="rule-block">
-                    <span class="rule-title">🛠️ چطور صرف کنیم؟</span>
-                    <ol style="margin-right:20px;">
-                        <li>حالت پایه را بگیرید: <b dir="ltr">Puhua</b> (صحبت کردن)</li>
-                        <li>آخرین مصوت را حذف کنید: <b dir="ltr">Puhu-</b> (این ریشه است)</li>
-                        <li>شناسه شخصی را اضافه کنید: <b dir="ltr">Minä Puhu<span class="highlight">n</span></b></li>
-                    </ol>
-                </div>
-                <h3>افعال رایج</h3>
-                <p dir="ltr">Puhua (Speak), Asua (Live), Sanoa (Say), Ostaa (Buy).</p>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-comment"></i> مثال ۱: PUHUA (صحبت کردن)</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Minä puhun suomea.</span>
-                    <span class="ex-english">من فنلاندی صحبت می‌کنم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Sinä puhut englantia.</span>
-                    <span class="ex-english">تو انگلیسی صحبت می‌کنی.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Me puhumme vähän.</span>
-                    <span class="ex-english">ما کمی صحبت می‌کنیم.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-house"></i> مثال ۲: ASUA (زندگی کردن)</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item">
-                        <span class="emoji">🇫🇮</span>
-                        <span class="word" dir="ltr">Minä asun Suomessa.</span>
-                        <span class="trans">من در فنلاند زندگی می‌کنم.</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">❓</span>
-                        <span class="word" dir="ltr">Asutko sinä täällä?</span>
-                        <span class="trans">آیا تو اینجا زندگی می‌کنی؟</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-person"></i> دانستنی: حذف "MINÄ"</h2>
-            <div class="card">
-                <h3>فاعل ضمنی</h3>
-                <p>در فنلاندی، پایان فعل به شما می‌گوید چه کسی کار را انجام می‌دهد. <br><b dir="ltr">-n</b> همیشه یعنی
-                    "من".
-                    <br><b dir="ltr">-t</b> همیشه یعنی "تو".<br>به همین دلیل، اغلب می‌توانید کلمه "Minä" یا "Sinä" را
-                    حذف کنید.
-                    گفتن فقط <b dir="ltr">"Asun täällä"</b> (زندگی می‌کنم اینجا) کاملاً صحیح است و بسیار طبیعی به نظر
-                    می‌رسد!
-                </p>
-            </div>
-        </div>
-
-                <div class="slide" id="verb2">
-            <h2>۵. فعل نوع ۲ (-da / -dä)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
-                    <p>وقتی فعل به <b dir="ltr">-da</b> یا <b dir="ltr">-dä</b> ختم می‌شود.</p>
-                </div>
-                <div class="rule-block">
-                    <span class="rule-title">🛠️ چطور صرف کنیم؟</span>
-                    <ol style="margin-right:20px;">
-                        <li>حالت پایه را بگیرید: <b dir="ltr">Syödä</b> (خوردن)</li>
-                        <li>کل <span dir="ltr">-da/-dä</span> را حذف کنید: <b dir="ltr">Syö-</b> (این ریشه است)</li>
-                        <li>شناسه شخصی را اضافه کنید: <b dir="ltr">Minä syö<span class="highlight">n</span></b></li>
-                    </ol>
-                </div>
-                <h3>افعال رایج</h3>
-                <p dir="ltr">Syödä (Eat), Juoda (Drink), Uida (Swim), Tehdä (Do).</p>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-utensils"></i> مثال ۱: SYÖDÄ (خوردن)</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Minä syön omenan.</span>
-                    <span class="ex-english">من یک سیب می‌خورم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Hän syö pizzaa.</span>
-                    <span class="ex-english">او پیتزا می‌خورد.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-mug-hot"></i> مثال ۲: JUODA (نوشیدن)</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item">
-                        <span class="emoji">☕</span>
-                        <span class="word" dir="ltr">Juon kahvia.</span>
-                        <span class="trans">من قهوه می‌نوشم.</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🥛</span>
-                        <span class="word" dir="ltr">Juotko maitoa?</span>
-                        <span class="trans">آیا شیر می‌نوشی؟</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-bolt"></i> دانستنی: ریشه‌های کوتاه</h2>
-            <div class="card">
-                <h3>کارایی</h3>
-                <p>افعال نوع ۲ اغلب بسیار کوتاه می‌شوند. <br><b dir="ltr">Uida</b> (شنا کردن) -> حذف 'da' ->
-                    <b dir="ltr">Ui</b>.<br><i dir="ltr">Hän ui</i> یعنی "او شنا می‌کند". فقط دو حرف و یک فاصله! فنلاندی
-                    می‌تواند بسیار فشرده باشد.
-                </p>
-            </div>
-        </div>
-
-                <div class="slide" id="verb3">
-            <h2>۶. فعل نوع ۳ (-la / -na / -ra / -sta)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
-                    <p>وقتی فعل به <b>صامت + مصوت</b> ختم می‌شود.</p>
-                </div>
-                <div class="rule-block">
-                    <span class="rule-title">🛠️ چطور صرف کنیم؟</span>
-                    <ol style="margin-right:20px;">
-                        <li>کلمه را بگیرید: <b dir="ltr">Tulla</b> (آمدن)</li>
-                        <li>دو حرف آخر را حذف کنید: <b dir="ltr">Tul-</b></li>
-                        <li>یک <b dir="ltr">'e'</b> اضافه کنید: <b dir="ltr">Tule-</b> (ریشه)</li>
-                        <li>شناسه را اضافه کنید: <b dir="ltr">Minä tule<span class="highlight">n</span></b></li>
-                    </ol>
-                </div>
-                <h3>افعال رایج</h3>
-                <p dir="ltr">Tulla (Come), Mennä (Go), Opiskella (Study), Ajatella (Think).</p>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-walking"></i> مثال ۱: TULLA (آمدن)</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Minä tulen kotiin.</span>
-                    <span class="ex-english">من به خانه می‌آیم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Mistä sinä tulet?</span>
-                    <span class="ex-english">اهل کجا هستی؟ (از کجا می‌آیی؟)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-graduation-cap"></i> مثال ۲: OPISKELLA (درس خواندن)</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item">
-                        <span class="emoji">📚</span>
-                        <span class="word" dir="ltr">Opiskelen suomea.</span>
-                        <span class="trans">من فنلاندی می‌خوانم.</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🏫</span>
-                        <span class="word" dir="ltr">Me opiskelemme.</span>
-                        <span class="trans">ما در حال تحصیل هستیم.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-bridge"></i> دانستنی: پل 'E'</h2>
-            <div class="card">
-                <h3>چرا 'e' اضافه می‌کنیم؟</h3>
-                <p>اگر به سادگی 'n' را به <i dir="ltr">Tul-</i> اضافه کنیم، می‌شود <i dir="ltr">Tuln</i>. تلفظ آن خیلی
-                    سخت است!
-                    فنلاندی عاشق مصوت‌ها و روانی کلام است. 'e' اضافی مانند پلی عمل می‌کند تا کلمه را نرم کند. <i
-                        dir="ltr">Tulen</i>
-                    مانند آب روان است.</p>
-            </div>
-        </div>
-
-                        <div class="slide" id="partitive">
-            <h2>۷. پارتیتیو (PARTITIIVI)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">❓ چیست؟</span>
-                    <p>پارتیتیو یک حالت گرامری است که برای مقادیر نامشخص استفاده می‌شود.</p>
-                </div>
-                <div class="rule-block">
-                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
-                    <ul style="list-style:none;">
-                        <li>۱. <b>اعداد (۲+):</b> <span dir="ltr">Kaksi auto<b>a</b>.</span></li>
-                        <li>۲. <b>منفی کردن:</b> <span dir="ltr">En puhu suome<b>a</b>.</span></li>
-                        <li>۳. <b>غیرقابل شمارش:</b> <span dir="ltr">Juon kahvi<b>a</b>.</span></li>
-                        <li>۴. <b>عمل در حال انجام:</b> <span dir="ltr">Luen kirja<b>a</b>.</span></li>
-                    </ul>
-                </div>
-                <h3>پسوندها</h3>
-                <p dir="ltr"><b>-a / -ä</b> (1 vowel), <b>-ta / -tä</b> (2 vowels/consonant), <b>-tta / -ttä</b>
-                    (e-words).</p>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-list-ol"></i> مثال ۱: اعداد و کمیت</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item">
-                        <span class="emoji">🚗</span>
-                        <span class="word" dir="ltr">Yksi auto</span>
-                        <span class="trans">یک ماشین (Nom)</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🚗🚗</span>
-                        <span class="word" dir="ltr">Kaksi autoa</span>
-                        <span class="trans">دو ماشین (Partitive)</span>
-                    </div>
-                    <div class="visual-item">
-                        <span class="emoji">🐕🐕🐕</span>
-                        <span class="word" dir="ltr">Kolme koiraa</span>
-                        <span class="trans">سه سگ (Partitive)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-ban"></i> مثال ۲: منفی‌ها </h2>
-            <div class="card">
-                <div class="gold-box">جملات منفی = پارتیتیو!</div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Minulla on auto.</span>
-                    <span class="ex-english">من ماشین دارم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Minulla <b>ei ole</b> auto<b>a</b>.</span>
-                    <span class="ex-english">من ماشین ندارم.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-glass-water"></i> دانستنی: "مقداری"</h2>
-            <div class="card">
-                <h3>مایعات غیرقابل شمارش</h3>
-                <p><i dir="ltr">Juon kahvia</i> به معنای واقعی کلمه یعنی "من (مقداری) قهوه می‌نوشم". اگر از حالت
-                    Genitive استفاده کنید <i dir="ltr">Juon
-                        kahvin</i>، یعنی شما <b>کل</b> فنجان را می‌نوشید و تمام می‌کنید. پارتیتیو دلالت بر مقدار نامشخص
-                    یا یک فرآیند در حال انجام دارد.</p>
-            </div>
-        </div>
-
-                <div class="slide" id="kpt">
-            <h2>۸. درجه‌بندی صامت‌ها (ASTEVAIHTELU)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">❓ چرا؟</span>
-                    <p>برای اینکه وقتی پسوندهایی مثل -ssa یا -n اضافه می‌کنیم، تلفظ کلمات آسان‌تر شود.</p>
-                </div>
-                <div class="rule-block">
-                    <span class="rule-title">🛠️ چگونه تغییر می‌کند</span>
-                    <table>
-                        <tr>
-                            <th>قوی</th>
-                            <th>ضعیف</th>
-                            <th>مثال</th>
-                        </tr>
-                        <tr>
-                            <td dir="ltr">KK</td>
-                            <td dir="ltr">K</td>
-                            <td dir="ltr">Pankki -> Pankissa</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr">PP</td>
-                            <td dir="ltr">P</td>
-                            <td dir="ltr">Kauppa -> Kaupassa</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr">TT</td>
-                            <td dir="ltr">T</td>
-                            <td dir="ltr">Tyttö -> Tytön</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr">K</td>
-                            <td dir="ltr">-</td>
-                            <td dir="ltr">Ruoka -> Ruoan</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr">P</td>
-                            <td dir="ltr">V</td>
-                            <td dir="ltr">Leipä -> Leivän</td>
-                        </tr>
-                        <tr>
-                            <td dir="ltr">T</td>
-                            <td dir="ltr">D</td>
-                            <td dir="ltr">Pöytä -> Pöydällä</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-arrow-down-short-wide"></i> مثال ۱: دوتایی به تکی</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Pankki</b> (بانک)</span>
-                    <span class="ex-english">Olen pan<b>k</b>issa. (kk -> k)</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Kaappi</b> (کمد)</span>
-                    <span class="ex-english">Kaapissa. (pp -> p)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-feather"></i> مثال ۲: نرم شدن</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Helsinki</b></span>
-                    <span class="ex-english">Asun Helsi<b>ng</b>issä. (nk -> ng)</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Ranta</b> (ساحل)</span>
-                    <span class="ex-english">Ra<b>nn</b>alla. (nt -> nn)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-music"></i> دانستنی: ریتم</h2>
-            <div class="card">
-                <h3>چرا تغییر؟</h3>
-                <p>سعی کنید بگویید <i dir="ltr">"Pankkissa"</i>. 'k' دوبل مثل یک ترمز در دهان شما عمل می‌کند.
-                    <i dir="ltr">"Pankissa"</i> به نرمی جریان دارد. فنلاندی از کلمات "سکته‌دار" متنفر است و عاشق ریتم
-                    است!
-                </p>
-            </div>
-        </div>
-
-                <div class="slide" id="cases">
-            <h2>۹. حالت‌های مکانی (PAIKALLISSIJAT)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">❓ چیستند؟</span>
-                    <p>پسوندهایی که جایگزین "در"، "از"، "به"، "روی" می‌شوند.</p>
-                </div>
-                <h3>جدول</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>معنی</th>
-                            <th>داخلی (جعبه)</th>
-                            <th>خارجی (سطح)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><b>Missä?</b> (کجا؟)</td>
-                            <td dir="ltr">-ssa (In)</td>
-                            <td dir="ltr">-lla (On)</td>
-                        </tr>
-                        <tr>
-                            <td><b>Mistä?</b> (از کجا؟)</td>
-                            <td dir="ltr">-sta (From in)</td>
-                            <td dir="ltr">-lta (From on)</td>
-                        </tr>
-                        <tr>
-                            <td><b>Mihin?</b> (به کجا؟)</td>
-                            <td dir="ltr">-Vn (Into)</td>
-                            <td dir="ltr">-lle (Onto)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-box-open"></i> مثال ۱: داخلی (TALO)</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item"><span class="word" dir="ltr">Talossa</span><span class="trans">در
-                            خانه</span>
-                    </div>
-                    <div class="visual-item"><span class="word" dir="ltr">Talosta</span><span class="trans">از
-                            خانه</span>
-                    </div>
-                    <div class="visual-item"><span class="word" dir="ltr">Taloon</span><span class="trans">به درون
-                            خانه</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-table"></i> مثال ۲: خارجی (PÖYTÄ)</h2>
-            <div class="card">
-                <div class="visual-grid">
-                    <div class="visual-item"><span class="word" dir="ltr">Pöydällä</span><span class="trans">روی
-                            میز</span>
-                    </div>
-                    <div class="visual-item"><span class="word" dir="ltr">Pöydältä</span><span class="trans">از روی
-                            میز</span>
-                    </div>
-                    <div class="visual-item"><span class="word" dir="ltr">Pöydälle</span><span class="trans">به روی
-                            میز</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-arrow-right-to-bracket"></i> دانستنی: ایلاتیو</h2>
-            <div class="card">
-                <h3>حالت "به درون"</h3>
-                <p>حالت "به درون" منحصر به فرد است. معمولاً آخرین مصوت را دو برابر می‌کنید و 'n' اضافه می‌کنید.
-                    <br><span dir="ltr">Koulu -> Kouluu ->
-                        <b>Kouluun</b></span>. <br>این تقلیدی از صدای وارد شدن عمیق به جایی است.
-                </p>
-            </div>
-        </div>
-
-                <div class="slide" id="sentences">
-            <h2>۱۰. انواع جملات (LAUSETYYPIT)</h2>
-            <div class="card">
-                <h3>۱. مالکیت (Minulla on)</h3>
-                <p>فنلاندی فعلی برای "داشتن" ندارد. استفاده کنید از: <b dir="ltr">Owner + lla + on + Item</b>.</p>
-                <p><i>تحت‌اللفظی: "نزد من سگ است."</i></p>
-
-                <h3 style="margin-top:20px;">۲. وجودی (There is)</h3>
-                <p>استفاده کنید از: <b dir="ltr">Location + on + Item</b>.</p>
-                <p><i>تحت‌اللفظی: "در خانه سونا است."</i></p>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-key"></i> مثال ۱: مالکیت</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Minulla on pyörä.</span>
-                    <span class="ex-english">من دوچرخه دارم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Hänellä on silmälasit.</span>
-                    <span class="ex-english">او عینک دارد.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-location-dot"></i> مثال ۲: وجودی</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Pöydällä on avaimet.</span>
-                    <span class="ex-english">کلیدها روی میز هستند.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Suomessa on paljon järviä.</span>
-                    <span class="ex-english">در فنلاند دریاچه‌های زیادی وجود دارد.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-hand-holding-heart"></i> دانستنی: مالکیت</h2>
-            <div class="card">
-                <h3>یک حالت بودن</h3>
-                <p>نبود فعل "داشتن" با زبان‌های سلتی (مثل ولزی) مشترک است. این نشان می‌دهد که مالکیت
-                    یک عمل نیست که انجام می‌دهید، بلکه حالتی از بودن است که در آن چیزها نزدیک شما هستند.</p>
-            </div>
-        </div>
-
-                <div class="slide" id="verb4">
-            <h2>۱۱. فعل نوع ۴ (-ata)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
-                    <p>افعالی که به <b dir="ltr">-ata, -ota, -uta, -ytä</b> ختم می‌شوند. <br><i
-                            dir="ltr">(Siiv<b>ota</b>, Hal<b>uta</b>,
-                            Os<b>ata</b>).</i></p>
-                </div>
-                <div class="rule-block">
-                    <span class="rule-title">🛠️ چطور صرف کنیم؟</span>
-                    <p><b dir="ltr">'t'</b> را حذف کنید. شناسه را اضافه کنید.</p>
-                    <p dir="ltr">Siivota -> Siivoa- -> Minä siivoan.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-broom"></i> مثال ۱: SIIVOTA (تمیز کردن)</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Minä siivoan keittiön.</span>
-                    <span class="ex-english">من آشپزخانه را تمیز می‌کنم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Hän siivoaa tänään.</span>
-                    <span class="ex-english">او امروز تمیزکاری می‌کند.</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-heart"></i> مثال ۲: HALUTA (خواستن)</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish">Haluan jäätelöä.</span>
-                    <span class="ex-english">من بستنی می‌خواهم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish">Haluatko kahvia?</span>
-                    <span class="ex-english">آیا قهوه می‌خواهی؟</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-comment-dots"></i> دانستنی: عامیانه</h2>
-            <div class="card">
-                <h3>"Mä haluun"</h3>
-                <p>در فنلاندی نوشتاری: <i dir="ltr">Minä haluan</i>. <br>در عامیانه هلسینکی: <i dir="ltr">Mä haluun</i>.
-                    <br>'t'
-                    می‌افتد و مصوت‌ها کشیده می‌شوند. فنلاندی گفتاری می‌تواند خیلی متفاوت به نظر برسد!
-                </p>
-            </div>
-        </div>
-
-                <div class="slide" id="nouns">
-            <h2>۱۲. انواع کلمات (SANATYYPIT)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">❓ مشکل</span>
-                    <p>برخی کلمات قبل از اینکه بتوانید پسوند اضافه کنید، "ریشه" خود را به طور قابل توجهی تغییر می‌دهند.
-                    </p>
-                </div>
-                <h3>۴ نوع اصلی</h3>
-                <ul>
-                    <li><b dir="ltr">-e words:</b> <span dir="ltr">Huon<b>e</b> -> Huon<b>ee</b>ssa. (e -> ee)</span>
-                    </li>
-                    <li><b dir="ltr">-nen words:</b> <span dir="ltr">Nai<b>nen</b> -> Nai<b>se</b>lla. (nen ->
-                            se)</span></li>
-                    <li><b dir="ltr">-i (Old):</b> <span dir="ltr">Järv<b>i</b> -> Järv<b>e</b>ssä. (i -> e)</span></li>
-                    <li><b dir="ltr">-in words:</b> <span dir="ltr">Puhel<b>in</b> -> Puhel<b>ime</b>ssa. (in ->
-                            ime)</span></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-person-dress"></i> مثال ۱: -NEN & -E</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Nainen</b> (زن)</span>
-                    <span class="ex-english">Puhun naiselle. (به زن)</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Huone</b> (اتاق)</span>
-                    <span class="ex-english">Olen huoneessa. (در اتاق)</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-mobile-screen"></i> مثال ۲: -IN & -I</h2>
-            <div class="card">
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Puhelin</b> (تلفن)</span>
-                    <span class="ex-english">Puhun puhelimessa. (با تلفن)</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish"><b>Järvi</b> (دریاچه)</span>
-                    <span class="ex-english">Uin järvessä. (در دریاچه)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-history"></i> دانستنی: کلمات قدیمی</h2>
-            <div class="card">
-                <h3>راز -i</h3>
-                <p>چرا <i dir="ltr">Pankki</i> می‌شود <i dir="ltr">Pankissa</i> اما <i dir="ltr">Järvi</i> می‌شود <i
-                        dir="ltr">Järvessä</i>؟ <br><b>کلمات قرضی جدید</b> (Pankki, Bussi, Hotelli) 'i' را نگه می‌دارند.
-                    <br><b>کلمات باستانی طبیعت</b> (Järvi, Kivi,
-                    Talvi) 'i' را به 'e' تغییر می‌دهند. تاریخ مهم است!
-                </p>
-            </div>
-        </div>
-        
-                                <div class="slide" id="describe">
-    <h2>🎯 ۱۳. آماده‌سازی برای توصیف (DESCRIPTION PREP)</h2>
-    <div class="card">
-        <div class="rule-block">
-            <span class="rule-title"><i class="fa-solid fa-camera"></i> هدف اصلی</span>
-            <p>هدف از این بخش، توصیف **ظاهر افراد** (Ulkonäkö)، **لباس‌ها** (Vaatteet) و **آب و هوا** (Sää) با استفاده از صفت‌ها و حالت‌های دستوری است.</p>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">⚠️ کلمات مهم</span>
-            <p>برای توصیف، اغلب از ساختارهای <b>Omistuslause</b> (مالکیت) و <b>Eksistentiaalilause</b> (وجودی) استفاده می‌کنیم.</p>
-        </div>
-        <h3>جملات کلیدی برای توصیف</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>نقش</th>
-                    <th>فنلاندی</th>
-                    <th>معنی</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>پرسش (ظاهر)</b></td>
-                    <td dir="ltr">Miltä hän näyttää?</td>
-                    <td>ظاهر او چطور است؟</td>
-                </tr>
-                <tr>
-                    <td><b>پرسش (پوشش)</b></td>
-                    <td dir="ltr">Mitä hänellä on päällä?</td>
-                    <td>او چه چیزی پوشیده است؟</td>
-                </tr>
-                <tr>
-                    <td><b>پرسش (هوا)</b></td>
-                    <td dir="ltr">Millainen sää on?</td>
-                    <td>آب و هوا چطور است؟</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<div class="slide">
-    <h2>🎨 ۱۴. صفت‌ها و رنگ‌ها (ADJECTIVES & COLORS)</h2>
-    <div class="card">
-        <div class="rule-block">
-            <span class="rule-title"><i class="fa-solid fa-paintbrush"></i> قانون صفت‌ها (Adjectives)</span>
-            <p>صفت باید از نظر تعداد (مفرد/جمع) و حالت (Case) از اسم خود تبعیت کند. صفت‌های دو سیلابی (مثل <b>pieni</b>) تغییرات زیادی دارند.</p>
-        </div>
-        <h3>صفت‌های رایج (بر اساس فایل‌های ضمیمه)</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>فنلاندی</th>
-                    <th>فارسی</th>
-                    <th>فنلاندی</th>
-                    <th>فارسی</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>hyvä</b></td>
-                    <td>خوب</td>
-                    <td><b>huono</b></td>
-                    <td>بد</td>
-                </tr>
-                <tr>
-                    <td><b>pitkä</b></td>
-                    <td>بلند</td>
-                    <td><b>lyhyt</b></td>
-                    <td>کوتاه</td>
-                </tr>
-                <tr>
-                    <td><b>iso / suuri</b></td>
-                    <td>بزرگ</td>
-                    <td><b>pieni</b></td>
-                    <td>کوچک</td>
-                </tr>
-                <tr>
-                    <td><b>kuuma</b></td>
-                    <td>گرم/داغ</td>
-                    <td><b>kylmä</b></td>
-                    <td>سرد </td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>رنگ‌ها (Värit)</h3>
-        <p>رنگ‌ها هم صفت هستند و تغییر می‌کنند (مثلاً <b>punainen</b> → punai<b>set</b> در جمع).</p>
-        <div class="visual-grid" style="grid-template-columns: repeat(3, 1fr);">
-             <div class="visual-item"><span class="word" dir="ltr">punainen</span><span class="trans">قرمز </span></div>
-             <div class="visual-item"><span class="word" dir="ltr">sininen</span><span class="trans">آبی </span></div>
-             <div class="visual-item"><span class="word" dir="ltr">musta</span><span class="trans">سیاه </span></div>
-             <div class="visual-item"><span class="word" dir="ltr">valkoinen</span><span class="trans">سفید </span></div>
-             <div class="visual-item"><span class="word" dir="ltr">harmaa</span><span class="trans">خاکستری </span></div>
-             <div class="visual-item"><span class="word" dir="ltr">ruskea</span><span class="trans">قهوه‌ای </span></div>
-        </div>
-    </div>
-</div>
-
-<div class="slide">
-    <h2>👕 ۱۵. کلمات لباس و متعلقات (CLOTHES & ITEMS)</h2>
-    <div class="card">
-        <div class="rule-block">
-            <span class="rule-title"><i class="fa-solid fa-list"></i> موارد پوشیدنی</span>
-            <p>هنگام صحبت از پوشیدن چیزی، از ساختار مالکیت استفاده می‌شود: "بر روی او است...". (Hän **ellä** on...)</p>
-        </div>
-        <h3>لباس‌ها و متعلقات رایج</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>فنلاندی</th>
-                    <th>فارسی</th>
-                    <th>فنلاندی</th>
-                    <th>فارسی</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>takki</b></td>
-                    <td>کت، کاپشن </td>
-                    <td><b>housut</b></td>
-                    <td>شلوار </td>
-                </tr>
-                <tr>
-                    <td><b>paita</b></td>
-                    <td>پیراهن </td>
-                    <td><b>hame</b></td>
-                    <td>دامن </td>
-                </tr>
-                <tr>
-                    <td><b>mekko</b></td>
-                    <td>پیراهن زنانه </td>
-                    <td><b>huivi</b></td>
-                    <td>شال </td>
-                </tr>
-                <tr>
-                    <td><b>sateenvarjo</b></td>
-                    <td>چتر </td>
-                    <td><b>silmälasit</b></td>
-                    <td>عینک </td>
-                </tr>
-            </tbody>
-        </table>
-        <p><b>نکته (جمع):</b> کلماتی مانند <b>housut</b> (شلوار)، <b>kengät</b> (کفش) و <b>silmälasit</b> (عینک) همیشه به صورت جمع استفاده می‌شوند. </p>
-    </div>
-</div>
-
-<div class="slide">
-    <h2>🌦️ ۱۶. واژگان آب و هوا (WEATHER VOCABULARY)</h2>
-    <div class="card">
-        <div class="rule-block">
-            <span class="rule-title"><i class="fa-solid fa-cloud-sun"></i> ساختار آب و هوا</span>
-            <p>برای توصیف هوا، از ساختار **توصیفی** استفاده می‌شود، که در آن فاعل جمله حذف شده و صفت در حالت <b>پارتیتیو</b> می‌آید. </p>
-        </div>
-        <h3>واژگان هوا و افعال مرتبط</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>فنلاندی</th>
-                    <th>فارسی</th>
-                    <th>توضیحات</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>aurinko paistaa</b></td>
-                    <td>خورشید می‌درخشد</td>
-                    <td> (وقتی این اتفاق می‌افتد، هوا <b>aurinkoinen</b> است)</td>
-                </tr>
-                <tr>
-                    <td><b>sataa vettä</b></td>
-                    <td>باران می‌بارد</td>
-                    <td> (<b>vettä</b> در پارتیتیو آمده)</td>
-                </tr>
-                <tr>
-                    <td><b>sataa lunta</b></td>
-                    <td>برف می‌بارد</td>
-                    <td> (<b>lunta</b> در پارتیتیو آمده)</td>
-                </tr>
-                <tr>
-                    <td><b>tuulee kovaa</b></td>
-                    <td>باد شدیدی می‌وزد</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td><b>On kylmää/lämmintä</b></td>
-                    <td>هوا سرد/گرم است</td>
-                    <td> (صفت در پارتیتیو است)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<div class="slide slide-example">
-    <h2>💬 ۱۷. مثال: توصیف ظاهر و لباس (بخش ۱)</h2>
-    <div class="card">
-        <h3>توصیف ظاهری (استفاده از مالکیت)</h3>
-        <p>از ساختار <b>Hänellä on...</b> برای توصیف متعلقات/اندام‌ها استفاده می‌کنیم.</p>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Hänellä on siniset farkut.</span>
-            <span class="ex-english">او شلوار جین آبی پوشیده است. (بر روی او شلوار جین آبی هست.)</span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Hänellä on pienet silmälasit.</span>
-            <span class="ex-english">او عینک کوچکی دارد. (<b>silmälasit</b> در جمع است.) </span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Mies on pitkä ja hänellä on lyhyet ruskeat hiukset.</span>
-            <span class="ex-english">مرد بلند قد است و موهای کوتاه قهوه‌ای دارد. </span>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">قانون صفت</span>
-            <p>صفت (<b>lyhyet</b>) و رنگ (<b>ruskeat</b>) هر دو در حالت جمع (Nom. Plural) می‌آیند چون <b>hiukset</b> (مو) جمع است. </p>
-        </div>
-    </div>
-</div>
-
-<div class="slide slide-example">
-    <h2>💬 ۱۸. مثال: توصیف ظاهر و لباس (بخش ۲)</h2>
-    <div class="card">
-        <h3>توصیف با رنگ‌ها و حالت‌ها</h3>
-        <p>صفت باید در همان حالت دستوری اسم باشد. </p>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Hän pitää vaahteranlehd<b>istä</b>.</span>
-            <span class="ex-english">او برگ‌های افرا را دوست دارد. (صفت **kaunista** در Elative است.) </span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Me nousemme pois punai<b>sesta</b> bemarista.</span>
-            <span class="ex-english">ما از ماشین BMW قرمز پیاده می‌شویم. (<b>punaisesta</b> در Elative است.) </span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Anushi katselee värikkää<b>tä</b> lehtiä.</span>
-            <span class="ex-english">آنوشی به برگ‌های رنگی نگاه می‌کند. (<b>lehtiä</b> و <b>värikkäitä</b> در Partitive هستند.) </span>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">قانون KPT</span>
-            <p>در مثال آخر، صفت <b>värikäs</b> چون در پارتیتیو آمده، دچار تغییر <b>KPT</b> شده است (s → t) و به <b>värikkäitä</b> تبدیل شده است.
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="slide slide-example">
-    <h2>💬 ۱۹. مثال: توصیف آب و هوا (بخش ۱)</h2>
-    <div class="card">
-        <h3>ساختار توصیفی و پارتیتیو</h3>
-        <p>برای توصیف هوا، اغلب از پارتیتیو استفاده می‌کنیم.</p>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Ulkona on kylmää ja koste<b>aa</b>.</span>
-            <span class="ex-english">بیرون سرد و مرطوب است. (<b>kylmää</b> و <b>kosteaa</b> هر دو پارتیتیو هستند.) </span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">He ajavat aurinko<b>isessa</b> säässä.</span>
-            <span class="ex-english">آنها در آب و هوای آفتابی رانندگی می‌کنند. (<b>aurinkoisessa</b> در Inessive است.)</span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Sinä pidät kuuma<b>sta</b> vai kylmä<b>stä</b> säästä?</span>
-            <span class="ex-english">آب و هوای گرم را دوست داری یا سرد را؟ (صفت‌ها در Elative هستند.) </span>
-        </div>
-    </div>
-</div>
-
-<div class="slide slide-example">
-    <h2>💬 ۲۰. مثال: توصیف آب و هوا (بخش ۲)</h2>
-    <div class="card">
-        <h3>ساختار پرسشی و فصول</h3>
-        <p>فصول سال (Vuodenajat) نیز به طور معمول از پسوندهای مکانی برای بیان "در آن فصل" استفاده می‌کنند.</p>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Sataako sinun kotimaa<b>ssasi</b> talve<b>lla</b> lunta?</span>
-            <span class="ex-english">آیا در کشور شما در زمستان برف می‌بارد؟ (کشور: Inessive، زمستان: Adessive) </span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Millainen sää Suome<b>ssa</b> on kesä<b>llä</b>?</span>
-            <span class="ex-english">آب و هوا در فنلاند <b>در</b> تابستان چطور است؟ (فنلاند: Inessive، تابستان: Adessive) </span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Minulla on hyvä sade<b>takki</b> ja sateen<b>varjo</b>.</span>
-            <span class="ex-english">من یک بارانی و چتر خوب دارم. (استفاده از ساختار مالکیت) </span>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">قانون فصول</span>
-            <p>کلمات فصل (مثلاً <b>kesä</b>/تابستان، <b>talvi</b>/زمستان) هنگام پاسخ به سوال "کی؟" از حالت Adessive (<b>-lla/-llä</b>) استفاده می‌کنند.</p>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">KPT: تغییر Takki</span>
-            <p>توجه داشته باشید که <b>sade**takki**</b> یک اسم مرکب است که از قانون KPT (kk → k) پیروی می‌کند. <br> 
-                <span dir="ltr">takki -> tak**in** (Genitive)</span>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="slide slide-funfact">
-    <h2>💡 ۲۱. ترفند: تشخیص اسم یا صفت بودن رنگ</h2>
-    <div class="card">
-        <h3>چرا رنگ‌ها تغییر می‌کنند؟</h3>
-        <p>کلمات رنگ در فنلاندی می‌توانند اسم یا صفت باشند. توجه کنید که اگر رنگی به <b>-nen</b> ختم شود، تغییرات پیچیده‌تری دارد.</p>
-        <div class="rule-block">
-            <span class="rule-title">قانون -nen (نظیر punainen)</span>
-            <p>هنگام اضافه شدن پسوند، <b>-nen</b> تبدیل به <b>-se</b> می‌شود (ریشه <b>-se</b>). 
-            <br><b>punainen</b> (قرمز) → punai<b>se</b>lla autolla (با ماشین قرمز)
-            <br><b>keltainen</b> (زرد) → keltai<b>se</b>t (چندین چیز زرد)
-            </p>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">قانون -a/ä (نظیر ruskea)</span>
-            <p>کلماتی مثل <b>ruskea</b> (قهوه‌ای) ریشه ساده‌تری دارند. فقط پسوند به انتهای کلمه اضافه می‌شود (با در نظر گرفتن KPT).</p>
-        </div>
-    </div>
-</div>
-
-<div class="slide slide-funfact">
-    <h2>💡 ۲۲. ترفند: تفاوت "on" و "on kylmää"</h2>
-    <div class="card">
-        <h3>چگونه جمله را شروع کنیم؟</h3>
-        <p>این یک دام رایج است! اینکه جمله را با <b>Hän on</b> (او هست) یا <b>On</b> (هست) شروع کنید، نقش دستوری را تغییر می‌دهد:</p>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">1. Hän on uusi.</span>
-            <span class="ex-english">او جدید است. (<b>uusi</b> در Nominative)</span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">2. Ulkona on kylmä<b>ä</b>.</span>
-            <span class="ex-english">بیرون سرد است. (<b>kylmää</b> در Partitive)</span>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">قانون فاعل</span>
-            <p>اگر جمله **فاعل مشخصی** (مثل Hän) داشته باشد، صفت در Nominative می‌آید. اگر **فاقد فاعل** (مثل آب و هوا) یا با کلمات انتزاعی باشد، صفت در <b>پارتیتیو</b> می‌آید.</p>
-        </div>
-    </div>
-</div>
-
-                                <div class="slide" id="verb5">
-            <h2>۲۳. فعل نوع ۵ (-ita / -itä)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
-                    <p>برای افعالی که به <b>صامت + ita/itä</b> ختم می‌شوند (مانند <b>tarvita</b> یا <b>häiritä</b>).</p>
-                </div>
-                <div class="rule-block">
-                    <span class="rule-title">🛠️ چطور صرف کنیم؟</span>
-                    <ol style="margin-right:20px;">
-                        <li>حذف <b dir="ltr">-ta / -tä</b>: <b dir="ltr">tarvi-</b></li>
-                        <li>اضافه کردن <b dir="ltr">-tse-</b> (بله، این یک 's' است!)</li>
-                        <li>شناسه شخصی را اضافه کنید: <b dir="ltr">Minä tarvi<span class="highlight">tsen</span></b></li>
-                    </ol>
-                </div>
-                <h3>صرف فعل: TARVITA (نیاز داشتن)</h3>
-                <table>
-                    <thead>
-                        <tr><th>شخص</th><th>ریشه + tse + پایان</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Minä</td><td dir="ltr">tarvit<b>sen</b></td></tr>
-                        <tr><td>Sinä</td><td dir="ltr">tarvit<b>set</b></td></tr>
-                        <tr><td>Hän</td><td dir="ltr">tarvit<b>see</b></td></tr>
-                        <tr><td>Me</td><td dir="ltr">tarvit<b>semme</b></td></tr>
-                        <tr><td>Te</td><td dir="ltr">tarvit<b>sette</b></td></tr>
-                        <tr><td>He</td><td dir="ltr">tarvit<b>sevat</b></td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="slide slide-example">
-            <h2><i class="fa-solid fa-list-check"></i> مثال: افعال نوع ۵ (-ita)</h2>
-            <div class="card">
-                <h3>افعال رایج دیگر</h3>
-                <div class="visual-grid" style="grid-template-columns: repeat(2, 1fr);">
-                    <div class="visual-item"><span class="word" dir="ltr">HALLITA</span><span class="trans">قانون کردن، تسلط داشتن</span></div>
-                    <div class="visual-item"><span class="word" dir="ltr">HÄIRITÄ</span><span class="trans">مزاحم شدن، آزار دادن</span></div>
-                    <div class="visual-item"><span class="word" dir="ltr">MAINITA</span><span class="trans">ذکر کردن، نام بردن</span></div>
-                    <div class="visual-item"><span class="word" dir="ltr">PUNNITA</span><span class="trans">وزن کردن</span></div>
-                    <div class="visual-item"><span class="word" dir="ltr">VALITA</span><span class="trans">انتخاب کردن</span></div>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish" dir="ltr">Me valitsemme punaisen auton.</span>
-                    <span class="ex-english">ما ماشین قرمز را انتخاب می‌کنیم.</span>
-                </div>
-                <div class="ex-text">
-                    <span class="ex-finnish" dir="ltr">Sinä häiritset minua!</span>
-                    <span class="ex-english">تو داری مزاحم من می‌شوی!</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-square-root-variable"></i> دانستنی: ریشه نامنظم</h2>
-            <div class="card">
-                <h3>-tse- چیست؟</h3>
-                <p>فعل نوع ۵ یکی از نامنظم‌ترین‌هاست. آن <b>-tse-</b> یک ریشه اضافی است که به خاطر حفظ تلفظ تاریخی به ریشه اصلی اضافه می‌شود. متأسفانه، باید آن را حفظ کنید، اما حداقل این ریشه برای **همه** افعال نوع ۵ یکسان است!</p>
-                <div class="gold-box">ریشه: [حذف -ita/itä] + tse</div>
-            </div>
-        </div>
-
-                <div class="slide" id="conversation">
-            <h2>۲۶. تمرین مکالمه (KESKUSTELUHARJOITUS)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title"><i class="fa-solid fa-person-chalkboard"></i> هدف</span>
-                    <p>تمرین مکالمه با استفاده از قواعد مالکیت، فعل زمان حال و حالت‌های مکانی.</p>
-                </div>
-                <h3>متن: آواینت هوکاسا (کلیدها گم شده‌اند)</h3>
-                <blockquote dir="rtl" style="border-right-color: var(--gold); border-right-width: 4px; padding-right: 15px; margin-top: 15px;">
-                    <p>Anushi seisoo talon oven edessä. Hänellä on kiire, mutta avain on hukassa. Anushin takissa ei ole avainta. Hänen hameessa ei ole taskuja ollenkaan.</p>
-                    <p>Repun taskussa on vain purkkapaketti ja heijastin. Anushi ottaa repusta puhelimen. Jos avain ei löydy, hänen pitää soittaa isännöitsijälle.</p>
-                    <p>Samassa hän tajuaa, että avaimet roikkuvat hänen kaulassaan. Anushi nauraa ääneen. Onneksi kukaan ei nähnyt!</p>
-                </blockquote>
-                <h3>لغات کلیدی و قواعد دستوری</h3>
-                <ul>
-                    <li><b dir="ltr">seisoo</b>: فعل نوع ۱ (seisua) - او ایستاده است.</li>
-                    <li><b dir="ltr">oven edessä</b>: حالت **Essive** برای "در جلوی" (در واقع Postposition).</li>
-                    <li><b dir="ltr">Hänellä on</b>: ساختار مالکیت.</li>
-                    <li><b dir="ltr">takissa</b>: حالت Inessive (درون کت).</li>
-                    <li><b dir="ltr">kaulassaan</b>: حالت Inessive با پسوند مالکیت (در گردنش).</li>
-                </ul>
-            </div>
-        </div>
-
-<div class="slide slide-example">
-    <h2>💬 ۲۷. تجزیه و تحلیل متن (ANUSHI)</h2>
-    <div class="card">
-        <h3>نکته‌های گرامری از متن</h3>
-        <p>متن بالا قواعد گرامری مهمی را که تاکنون آموخته‌اید، در خود جای داده است:</p>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Hänellä on kiire.</span>
-            <span class="ex-english">او عجله دارد. (حالت مالکیت برای یک مفهوم انتزاعی).</span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Repun tasku<b>ssa</b> on...</span>
-            <span class="ex-english">در جیب کوله پشتی (Repu**ssa**) هست... (حالت Inessive).</span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">Hänen pitää soittaa isännöitsijä<b>lle</b>.</span>
-            <span class="ex-english">او باید با مدیر ساختمان تماس بگیرد (حالت Allative - به سمت کسی زنگ زدن).</span>
-        </div>
-        <div class="ex-text">
-            <span class="ex-finnish" dir="ltr">avaimet roikkuvat hänen kaula<b>ssaan</b>.</span>
-            <span class="ex-english">کلیدها به گردنش آویزان هستند (Inessive + پسوند مالکیت -s**sa**an).</span>
-        </div>
-        <div class="rule-block">
-            <span class="rule-title">تمرین</span>
-            <p>سعی کنید جملات این داستان را منفی کنید. یادتان باشد که مفعول در جملات منفی به حالت **پارتیتیو** می‌رود.</p>
-        </div>
-    </div>
-</div>
-        
-                <div class="slide">
-            <div style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center;">
-                <h1>VALMIS!</h1>
-                <h2 style="border:none; color: #fff;">دوره کامل شد</h2>
-                <div class="gold-box">موفق باشید!</div>
-                <p style="color:var(--subtext); margin-top:20px;">بروزرسانی نوامبر ۲۰۲۵</p>
-            </div>
-        </div>
-
-    </div>
-
-    <script>
-        const container = document.getElementById('mainContainer');
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-        const totalSpan = document.getElementById('totalSlides');
-        const currentSpan = document.getElementById('currentSlide');
-
-        // Set total count
-        totalSpan.textContent = slides.length;
-
-        function updateCounter() {
-            // Simple math: scroll position / slide height
-            const slideHeight = container.clientHeight;
-            if (slideHeight > 0) {
-                const index = Math.round(container.scrollTop / slideHeight);
-                // Ensure index is within bounds (1 to length)
-                const safeIndex = Math.max(0, Math.min(index, slides.length - 1));
-                currentSpan.textContent = safeIndex + 1;
-            }
-        }
-
-        container.addEventListener('scroll', updateCounter);
-
-        // Initial check in case of refresh/scroll restoration
-        updateCounter();
-    </script>
+    <div class="nav-overlay">
+        <i class="fa-solid fa-layer-group"></i> اسلاید <span id="currentSlide">1</span> / <span
+            id="totalSlides">--</span>
+    </div>
+
+    <div class="container" id="mainContainer">
+
+        <!-- 1. COVER -->
+        <div class="slide" style="justify-content: center;">
+            <h1>🇫🇮 SUOMI</h1>
+            <h2 style="border:none; font-size: 2.5em; color: #fff;">راهنمای جامع خودآموز</h2>
+            <div class="gold-box">
+                <i class="fa-solid fa-star"></i> فنلاندی ۱ و ۲ کامل <i class="fa-solid fa-star"></i>
+            </div>
+            <p style="font-size: 1.2em; color: var(--subtext);">لغات • گرامر • مثال‌ها • فرهنگ</p>
+            <p style="margin-top:30px; font-size:3em; animation: bounce 2s infinite;">👇</p>
+        </div>
+
+        <!-- 2. TABLE OF CONTENTS -->
+        <div class="slide">
+            <h2>فهرست مطالب</h2>
+            <div class="toc-grid">
+                <div
+                    style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:10px; font-family:'Vazirmatn'; letter-spacing:0;">
+                    بخش ۱: پایه‌ها</div>
+                <a href="#basics" class="toc-btn">۱. مقدمات و احوالپرسی</a>
+                <a href="#cases" class="toc-btn">۲. حالت‌های مکانی</a>
+                <a href="#sentences" class="toc-btn">۳. انواع جملات</a>
+                <a href="#describe" class="toc-btn">۴. توصیف (ظاهر و هوا)</a>
+                <a href="#verb5" class="toc-btn">۵. فعل نوع ۵ (-ita)</a>
+            </div>
+        </div>
+
+        <!-- ================= CONTENT LESSON 1: BASICS ================= -->
+        <div class="slide" id="basics">
+            <h2>۱. احوالپرسی (TERVEHDYKSET)</h2>
+            <div class="card">
+                <h3>جدول عبارات رایج</h3>
+                <table>
+                    <thead>
+                        <tr><th>فنلاندی</th><th>فارسی</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td dir="ltr"><b>Moi / Hei</b></td><td>سلام</td></tr>
+                        <tr><td dir="ltr"><b>Mitä kuuluu?</b></td><td>حالت چطوره؟</td></tr>
+                        <tr><td dir="ltr"><b>Kiitos</b></td><td>ممنون</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 5 EXAMPLES FOR BASICS -->
+        <div class="slide slide-exercise"><h2><i class="fa-solid fa-dumbbell"></i> تمرین ۱: الگو</h2><div class="card"><h3>مکالمه ساده</h3><p class="word" dir="ltr">A: Moi! Mitä kuuluu?</p><p class="trans">سلام! چطوری؟</p><p class="word" dir="ltr">B: Hyvää, kiitos. Entä sinulle?</p><p class="trans">خوبم، ممنون. تو چطور؟</p></div></div>
+        
+        <div class="slide slide-exercise"><h2><i class="fa-solid fa-clock"></i> تمرین ۲: زمان</h2><div class="card"><h3>صبح vs شب</h3><p>صبح:</p><p class="word" dir="ltr">Hyvää huomenta!</p><p>شب:</p><p class="word" dir="ltr">Hyvää yötä!</p></div></div>
+
+        <div class="slide slide-exercise"><h2><i class="fa-solid fa-xmark"></i> تمرین ۳: اشتباهات رایج</h2><div class="card"><h3>غلط vs درست</h3><p style="color:var(--error)">Mitä kuuluu sinulle? ❌</p><p style="color:var(--success)">Mitä sinulle kuuluu? ✅</p><p class="trans">(ساختار "به تو" معمولاً بعد از کلمه پرسشی می‌آید)</p></div></div>
+
+        <div class="slide slide-exercise"><h2><i class="fa-solid fa-user"></i> تمرین ۴: رسمی</h2><div class="card"><h3>موقعیت رسمی</h3><p class="word" dir="ltr">Päivää, hauska tutustua.</p><p class="trans">روز بخیر، از آشنایی با شما خوشبختم.</p></div></div>
+
+        <div class="slide slide-exercise"><h2><i class="fa-solid fa-graduation-cap"></i> تمرین ۵: خداحافظی</h2><div class="card"><div class="visual-grid"><div class="visual-item"><span class="emoji">👋</span><span class="word" dir="ltr">Nähdään!</span><span class="trans">می‌بینمت!</span></div><div class="visual-item"><span class="emoji">🚶</span><span class="word" dir="ltr">Hei hei!</span><span class="trans">خداحافظ!</span></div></div></div></div>
+
+
+        <!-- ================= CONTENT LESSON: LOCAL CASES (EXPANDED) ================= -->
+        <div class="slide" id="cases">
+            <h2>۲. حالت‌های مکانی (PAIKALLISSIJAT)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">کلید یادگیری</span>
+                    <p>داخلی (In/Out): <b>-ssa, -sta, -Vn</b> <br> خارجی (On/Off): <b>-lla, -lta, -lle</b></p>
+                </div>
+                <table>
+                    <thead>
+                        <tr><th>معنی</th><th>داخلی (جعبه)</th><th>خارجی (سطح)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>کجا؟</td><td dir="ltr">-ssa (In)</td><td dir="ltr">-lla (On)</td></tr>
+                        <tr><td>از کجا؟</td><td dir="ltr">-sta (From)</td><td dir="ltr">-lta (From)</td></tr>
+                        <tr><td>به کجا؟</td><td dir="ltr">-Vn (Into)</td><td dir="ltr">-lle (Onto)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 5 EXAMPLES FOR CASES -->
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-pencil"></i> تمرین ۱: کجا؟ (Missä)</h2>
+            <div class="card">
+                <h3>موقعیت ثابت</h3>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Kissa on laatiko<b>ssa</b>.</span>
+                    <span class="ex-english">گربه در جعبه است (Inside).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Kissa on pöydä<b>llä</b>.</span>
+                    <span class="ex-english">گربه روی میز است (On top).</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-plane"></i> تمرین ۲: از کجا؟ (Mistä)</h2>
+            <div class="card">
+                <h3>حرکت به بیرون</h3>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Olen kotoisin Iran<b>ista</b>.</span>
+                    <span class="ex-english">من اهل ایران هستم (از درون ایران).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Otan kirjan hylly<b>ltä</b>.</span>
+                    <span class="ex-english">کتاب را از (روی) قفسه برمی‌دارم.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-person-walking-arrow-right"></i> تمرین ۳: به کجا؟ (Mihin)</h2>
+            <div class="card">
+                <h3>حرکت به مقصد</h3>
+                <div class="gold-box">دقت کنید: Illative (به درون) واکه را دو برابر می‌کند!</div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Menen kauppa<b>an</b>.</span>
+                    <span class="ex-english">من به فروشگاه می‌روم (Kauppa + a + n).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Laitan avaimet pöydä<b>lle</b>.</span>
+                    <span class="ex-english">کلیدها را (به) روی میز می‌گذارم.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-arrows-spin"></i> تمرین ۴: تغییرات KPT</h2>
+            <div class="card">
+                <h3>حواستان به ریشه باشد!</h3>
+                <p>وقتی پسوند مکانی (-ssa/-lla) اضافه می‌کنید، کلمه ضعیف می‌شود.</p>
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="word" dir="ltr">Koulu</span>
+                        <span class="trans">Koulussa (بدون تغییر)</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="word" dir="ltr">Turku</span>
+                        <span class="trans">Turus<b>sa</b> (k حذف شد)</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="word" dir="ltr">Pankki</span>
+                        <span class="trans">Pankis<b>sa</b> (kk به k)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-comments"></i> تمرین ۵: مکالمه کوتاه</h2>
+            <div class="card">
+                <p class="word" dir="ltr">- Missä sinä olet?</p>
+                <p class="trans">- تو کجایی؟</p>
+                <p class="word" dir="ltr">- Olen bussissa. Menen keskustaan.</p>
+                <p class="trans">- من در اتوبوس هستم. دارم به مرکز شهر می‌روم.</p>
+            </div>
+        </div>
+
+
+        <!-- ================= CONTENT LESSON: SENTENCE TYPES ================= -->
+        <div class="slide" id="sentences">
+            <h2>۳. انواع جملات (LAUSETYYPIT)</h2>
+            <div class="card">
+                <h3>۱. مالکیت (Minulla on)</h3>
+                <p>استفاده کنید از: <b dir="ltr">Owner + lla + on + Item</b>.</p>
+                <h3 style="margin-top:20px;">۲. وجودی (There is)</h3>
+                <p>استفاده کنید از: <b dir="ltr">Location + on + Item</b>.</p>
+            </div>
+        </div>
+
+        <!-- 5 EXAMPLES FOR SENTENCES -->
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-key"></i> تمرین ۱: من دارم...</h2>
+            <div class="card">
+                <h3>ساختار مالکیت</h3>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Minu<b>lla</b> on kysymys.</span>
+                    <span class="ex-english">من یک سوال دارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Sinulla on kauniit silmät.</span>
+                    <span class="ex-english">تو چشمان زیبایی داری.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-ban"></i> تمرین ۲: من ندارم... (منفی)</h2>
+            <div class="card">
+                <div class="gold-box">فرمول: Ei ole + Partitive</div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Minulla <b>ei ole</b> auto<b>a</b>.</span>
+                    <span class="ex-english">من ماشین ندارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Meillä ei ole aikaa.</span>
+                    <span class="ex-english">ما وقت نداریم.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-tree"></i> تمرین ۳: وجود دارد (وجودی)</h2>
+            <div class="card">
+                <h3>مکان + فعل + فاعل</h3>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Metsä<b>ssä</b> on karhu.</span>
+                    <span class="ex-english">در جنگل یک خرس وجود دارد.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Täällä on hiljaista.</span>
+                    <span class="ex-english">اینجا ساکت است (سکوت وجود دارد).</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-circle-question"></i> تمرین ۴: سوالی کردن</h2>
+            <div class="card">
+                <h3>جابجایی فعل + ko</h3>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">On<b>ko</b> sinulla kynä?</span>
+                    <span class="ex-english">آیا خودکار داری؟</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Onko pöydällä ruokaa?</span>
+                    <span class="ex-english">آیا روی میز غذا هست؟</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-shuffle"></i> تمرین ۵: ترکیب جملات</h2>
+            <div class="card">
+                <h3>داستان کوتاه</h3>
+                <p dir="ltr">Minulla on koti. Kodissa on keittiö. Keittiössä on pöytä.</p>
+                <p class="trans">من خانه دارم. در خانه آشپزخانه است. در آشپزخانه میز است.</p>
+            </div>
+        </div>
+
+
+        <!-- ================= CONTENT LESSON: DESCRIPTION ================= -->
+        <div class="slide" id="describe">
+            <h2>۴. توصیف (KUVAILU)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">نکته</span>
+                    <p>صفت‌ها همیشه با اسم خود در حالت (Case) و تعداد (Number) هماهنگ می‌شوند.</p>
+                </div>
+                <h3>رنگ‌ها و صفت‌ها</h3>
+                <p dir="ltr">Punainen (Red), Sininen (Blue), Iso (Big), Pieni (Small).</p>
+            </div>
+        </div>
+
+        <!-- 5 EXAMPLES FOR DESCRIPTION -->
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-palette"></i> تمرین ۱: تطابق رنگ‌ها</h2>
+            <div class="card">
+                <h3>صفت هم تغییر می‌کند!</h3>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Minulla on punai<b>nen</b> auto.</span>
+                    <span class="ex-english">من ماشین قرمز دارم (Nominative).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Istun punai<b>sessa</b> autossa.</span>
+                    <span class="ex-english">من در ماشین قرمز نشسته‌ام (Inessive: nen -> sessa).</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-shirt"></i> تمرین ۲: لباس‌ها</h2>
+            <div class="card">
+                <h3>او چه پوشیده؟</h3>
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🧥</span>
+                        <span class="word" dir="ltr">Hänellä on takki.</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">👖</span>
+                        <span class="word" dir="ltr">Hänellä on siniset housut.</span>
+                        <span class="trans">(شلوار همیشه جمع است)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-cloud-rain"></i> تمرین ۳: آب و هوا</h2>
+            <div class="card">
+                <h3>استفاده از پارتیتیو</h3>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Ulkona on kylmä<b>ä</b>.</span>
+                    <span class="ex-english">بیرون سرد است (صفت در پارتیتیو).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Sataa vettä.</span>
+                    <span class="ex-english">باران می‌بارد.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-users-viewfinder"></i> تمرین ۴: توصیف ظاهر</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Mies on pitkä ja komea.</span>
+                    <span class="ex-english">مرد قد بلند و خوش‌تیپ است.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Nainen on lyhyt ja hänellä on vaaleat hiukset.</span>
+                    <span class="ex-english">زن قد کوتاه است و موهای روشن دارد.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-magnifying-glass"></i> تمرین ۵: سوال درباره ویژگی</h2>
+            <div class="card">
+                <p class="word" dir="ltr">- Minkälainen sää on?</p>
+                <p class="trans">- هوا چطور است؟</p>
+                <p class="word" dir="ltr">- On kaunis päivä.</p>
+                <p class="trans">- روز زیبایی است.</p>
+            </div>
+        </div>
+
+
+        <!-- ================= CONTENT LESSON: VERB 5 ================= -->
+        <div class="slide" id="verb5">
+            <h2>۵. فعل نوع ۵ (-ita / -itä)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">قانون</span>
+                    <p>ریشه را با اضافه کردن <b>-tse-</b> بسازید.</p>
+                    <p dir="ltr">Tarvita -> Tarvi- -> Tarvitse + n.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 EXAMPLES FOR VERB 5 -->
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-basket-shopping"></i> تمرین ۱: TARVITA (نیاز داشتن)</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Minä tarvitsen apua.</span>
+                    <span class="ex-english">من به کمک نیاز دارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Tarvitsetko sinä rahaa?</span>
+                    <span class="ex-english">آیا تو به پول نیاز داری؟</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-check-to-slot"></i> تمرین ۲: VALITA (انتخاب کردن)</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Me valitsemme tämän.</span>
+                    <span class="ex-english">ما این را انتخاب می‌کنیم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Hän valitsee oikean tien.</span>
+                    <span class="ex-english">او راه درست را انتخاب می‌کند.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-bell-slash"></i> تمرین ۳: HÄIRITÄ (مزاحم شدن)</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Älä häiritse!</span>
+                    <span class="ex-english">مزاحم نشو! (حالت دستوری)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Melu häiritsee minua.</span>
+                    <span class="ex-english">سر و صدا مرا اذیت می‌کند.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-list-check"></i> تمرین ۴: صرف کامل</h2>
+            <div class="card">
+                <h3>فعل: Tarvita</h3>
+                <div class="visual-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="visual-item">Tarvitsen (من)</div>
+                    <div class="visual-item">Tarvitset (تو)</div>
+                    <div class="visual-item">Tarvitsee (او)</div>
+                    <div class="visual-item">Tarvitsemme (ما)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-exercise">
+            <h2><i class="fa-solid fa-paragraph"></i> تمرین ۵: متن کوتاه</h2>
+            <div class="card">
+                <p dir="ltr">Menen kauppaan. Tarvitsen maitoa ja leipää. Valitsen ison leivän.</p>
+                <p class="trans">من به فروشگاه می‌روم. شیر و نان نیاز دارم. یک نان بزرگ انتخاب می‌کنم.</p>
+            </div>
+        </div>
+
+        <!-- FINAL SLIDE -->
+        <div class="slide">
+            <div style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                <h1>VALMIS!</h1>
+                <h2 style="border:none; color: #fff;">دوره کامل شد</h2>
+                <div class="gold-box">موفق باشید!</div>
+                <p style="color:var(--subtext); margin-top:20px;">بروزرسانی با مثال‌های خودآموز</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const container = document.getElementById('mainContainer');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const totalSpan = document.getElementById('totalSlides');
+        const currentSpan = document.getElementById('currentSlide');
+
+        // Set total count
+        totalSpan.textContent = slides.length;
+
+        function updateCounter() {
+            // Simple math: scroll position / slide height
+            const slideHeight = container.clientHeight;
+            if (slideHeight > 0) {
+                const index = Math.round(container.scrollTop / slideHeight);
+                // Ensure index is within bounds (1 to length)
+                const safeIndex = Math.max(0, Math.min(index, slides.length - 1));
+                currentSpan.textContent = safeIndex + 1;
+            }
+        }
+
+        container.addEventListener('scroll', updateCounter);
+
+        // Initial check in case of refresh/scroll restoration
+        updateCounter();
+    </script>
 
 </body>
 
