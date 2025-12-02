@@ -185,42 +185,55 @@
         /* DETAILED TABLES */
         table {
             width: 100%;
-            border-collapse: separate;
+            border-collapse: collapse;
             border-spacing: 0;
             margin: 15px 0;
             font-size: 1em;
+            background: #151520;
         }
 
         th {
             background: #222;
             color: var(--gold);
             padding: 12px;
-            text-align: right;
-            border-bottom: 2px solid var(--gold);
+            text-align: center;
+            border: 1px solid #333;
             font-family: 'Vazirmatn', sans-serif;
             font-size: 0.9em;
         }
 
         td {
             padding: 12px;
-            border-bottom: 1px solid #333;
+            border: 1px solid #333;
             color: var(--text);
+            text-align: center;
         }
 
-        tr:last-child td {
-            border-bottom: none;
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
         }
 
-        tr:hover td {
-            background: rgba(255, 255, 255, 0.05);
+        .ex-text {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .highlight {
-            color: var(--gold);
+        .ex-finnish {
+            color: #fff;
             font-weight: bold;
-            text-decoration: underline;
-            text-decoration-color: var(--neon);
-            text-decoration-thickness: 2px;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .ex-english {
+            color: var(--subtext);
+            font-size: 0.85em;
+            margin-top: 4px;
         }
 
         /* NAVIGATION */
@@ -271,7 +284,7 @@
         .image-placeholder {
             width: 100%;
             max-width: 500px;
-            height: 300px;
+            height: 250px;
             background: #333;
             color: var(--gold);
             border: 2px solid var(--gold);
@@ -298,9 +311,6 @@
         <div class="slide" style="justify-content: center;">
             <h1>🇫🇮 KERTÄUS</h1>
             <h2 style="border:none; font-size: 2.5em; color: #fff;">مرور جامع فنلاندی ۲</h2>
-            <div class="image-placeholder" style="height: 350px; border-color: var(--purple);">
-                [تصویر ۱: بابا نوئل و گوزن شمالی در یک منظره برفی. (اسلاید ۱ پاورپوینت)]
-            </div>
             <div class="gold-box">
                 <i class="fa-solid fa-star"></i> آمادگی برای آزمون (Exam Prep) <i class="fa-solid fa-star"></i>
             </div>
@@ -308,305 +318,504 @@
         </div>
 
         <div class="slide" id="list">
-            <h2>سرفصل‌های آزمون (Kertaus)</h2>
+            <h2>فهرست مطالب (مرور جامع)</h2>
             <div class="card">
                 <div class="rule-block" style="background: rgba(255, 215, 0, 0.1);">
                     <span class="rule-title" style="color:var(--error);"><i class="fa-solid fa-exclamation-triangle"></i> دستورالعمل‌های آزمون</span>
-                    <p>آزمون چند گزینه‌ای است و شامل ۶۷ سؤال و حداکثر ۱۰۰ امتیاز در ۷۵ دقیقه می‌باشد. آمادگی قبلی ضروری است. (اسلاید ۴، ۵، ۶، ۷)</p>
+                    <p>آزمون چند گزینه‌ای است و شامل ۶۷ سؤال، با حداکثر ۱۰۰ امتیاز در ۷۵ دقیقه می‌باشد. آماده‌سازی از قبل مهم است. سوالات به صورت تصادفی از بانک سوالات کشیده می‌شوند، اما تعداد سوالات از هر گروه یکسان است.</p>
+                    <p style="text-align: center; color: var(--gold); font-weight: bold; margin-top: 15px;">تمامی بخش‌های زیر شامل قواعد، جداول و ۵ مثال کاربردی هستند.</p>
                 </div>
-                <h3>موضوعات کلیدی برای مرور</h3>
                 <div class="toc-grid">
-                    <a href="all.html#verb3" class="toc-btn">۱. فعل نوع ۳ (Verb Type 3)</a>
-                    <a href="all.html#verb4" class="toc-btn">۲. فعل نوع ۴ (Verb Type 4)</a>
-                    <a href="all.html#verb5" class="toc-btn">۳. فعل نوع ۵ (Verb Type 5)</a>
-                    <a href="all.html#nouns" class="toc-btn">۴. انواع کلمات (-nen, -e, -in)</a>
-                    <a href="all.html#cases" class="toc-btn">۵. حالت‌های مکانی (Local Cases)</a>
-                    <a href="all.html#partitive" class="toc-btn">۶. حالت پارتیتیو (Partitive Case)</a>
-                    <a href="all.html#describe" class="toc-btn">۷. صفت‌ها و لغات (Adjectives/Vocab)</a>
-                    <a href="all.html#demonstrative-imperative-review" class="toc-btn">۸. وجه امری (Imperative)</a>
-                    <a href="all.html#kpt" class="toc-btn">۹. درجه‌بندی صامت‌ها (KPT-change)</a>
+                    <a href="#verb1" class="toc-btn">۱. فعل نوع ۱ (-Va)</a>
+                    <a href="#verb2" class="toc-btn">۲. فعل نوع ۲ (-da)</a>
+                    <a href="#verb3" class="toc-btn">۳. فعل نوع ۳ (-la)</a>
+                    <a href="#verb4" class="toc-btn">۴. فعل نوع ۴ (-ata)</a>
+                    <a href="#verb5" class="toc-btn">۵. فعل نوع ۵ (-ita)</a>
+                    <a href="#kpt" class="toc-btn">۶. درجه‌بندی صامت‌ها (KPT)</a>
+                    <a href="#partitive" class="toc-btn">۷. حالت پارتیتیو (Partitiivi)</a>
+                    <a href="#cases" class="toc-btn">۸. حالت‌های مکانی (Paikallissijat)</a>
+                    <a href="#onenoun" class="toc-btn">۹. انواع اسم (-e، -nen، -in)</a>
+                    <a href="#imperative" class="toc-btn">۱۰. وجه امری (Imperatiivi)</a>
+                    <a href="#vocab" class="toc-btn">۱۱. مرور جامع واژگان</a>
                 </div>
             </div>
         </div>
 
-        <div class="slide" id="partitive-review-2">
-            <h2>پارتیتیو: ضمایر و کاربرد (Partitiivi)</h2>
+        <div class="slide" id="verb1">
+            <h2>۱. فعل نوع ۱ (-Va)  <a href="f1-foundations.html#verb1" style="color:var(--neon); text-decoration:none;">/</a></h2>
             <div class="card">
-                <h3>ضمایر شخصی در حالت پارتیتیو (Personal pronouns)</h3>
+                <div class="rule-block">
+                    <span class="rule-title">قاعده:</span>
+                    <p>فعل به <b>دو مصوت</b> ختم می‌شود (مانند -ua, -ea, -ia). برای صرف، <b>مصوت آخر</b> را حذف و شناسه شخصی را اضافه کنید. <b dir="ltr">Puhua → Puhu- + n = Puhun</b>.</p>
+                </div>
+                <h3>صرف فعل: Puhua (صحبت کردن)، Asua (زندگی کردن)، Maksaa (پرداخت کردن)</h3>
                 <table>
                     <thead>
-                        <tr><th>فنلاندی</th><th>فارسی</th></tr>
+                        <tr><th>شخص</th><th dir="ltr">Puhua</th><th dir="ltr">Asua</th><th dir="ltr">Maksaa</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td dir="ltr">minua (mua)</td><td>من را</td></tr>
-                        <tr><td dir="ltr">sinua (sua)</td><td>تو را</td></tr>
-                        <tr><td dir="ltr">häntä (sitä)</td><td>او را (اشیا/حیوانات)</td></tr>
-                        <tr><td dir="ltr">meitä</td><td>ما را</td></tr>
-                        <tr><td dir="ltr">teitä</td><td>شما را</td></tr>
-                        <tr><td dir="ltr">heitä (niitä)</td><td>آنها را</td></tr>
+                        <tr><td>Minä</td><td class="ltr-text">puhun</td><td class="ltr-text">asun</td><td class="ltr-text">maksun</td></tr>
+                        <tr><td>Sinä</td><td class="ltr-text">puhut</td><td class="ltr-text">asut</td><td class="ltr-text">maksat</td></tr>
+                        <tr><td>Hän</td><td class="ltr-text">puhuu</td><td class="ltr-text">asuu</td><td class="ltr-text">maksaa</td></tr>
+                        <tr><td>Me</td><td class="ltr-text">puhumme</td><td class="ltr-text">asumme</td><td class="ltr-text">maksamme</td></tr>
+                        <tr><td>Te</td><td class="ltr-text">puhutte</td><td class="ltr-text">asutte</td><td class="ltr-text">maksatte</td></tr>
+                        <tr><td>He</td><td class="ltr-text">puhuvat</td><td class="ltr-text">asuvat</td><td class="ltr-text">maksavat</td></tr>
                     </tbody>
                 </table>
-                <div class="rule-block">
-                    <span class="rule-title">نحوه تشکیل (Partitiivin muodostaminen)</span>
-                    <p>پارتیتیو معادل دقیقی در فارسی یا انگلیسی ندارد. اغلب برای مفعول جمله به کار می‌رود. (اسلاید ۳)
-                    </p>
-                    <div class="image-placeholder" style="height: 150px; border-color: var(--neon);">
-                        [تصویر ۲: نمودار تشکیل پارتیتیو (Partitiivin muodostaminen). (اسلاید ۲ پاورپوینت)]
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-list-check"></i> کاربرد پارتیتیو (Milloin käytät partitiivia)</h2>
-            <div class="card">
-                <p>تمامی کلمات در یک عبارت (مثلاً عبارت اسمی) به حالت پارتیتیو تبدیل می‌شوند: <b dir="ltr">Rakastan tuota tyttöä. / Ajan sinistä autoa.</b></p>
-                <div class="rule-block">
-                    <span class="rule-title">موارد اصلی استفاده</span>
-                    <ul>
-                        <li><b dir="ltr">بعد از اعداد:</b> (۲+) <span dir="ltr">viisi kirjaa</span></li>
-                        <li><b dir="ltr">بعد از کمیت‌سنج‌ها:</b> <span dir="ltr">monta kirjaa</span></li>
-                        <li><b dir="ltr">کلمات مادی و غیرقابل شمارش:</b> <span dir="ltr">kahvia, mehua, leipää, rahaa</span></li>
-                        <li><b dir="ltr">جملات منفی:</b> <span dir="ltr">Minulla ei ole autoa.</span></li>
-                        <li><b dir="ltr">عبارات ناتمام/بی‌نتیجه (Irresultative):</b> <span dir="ltr">Luen kirjaa.</span> (مقابل <span dir="ltr">Luen kirjan.</span>)</li>
-                        <li><b dir="ltr">با افعال پارتیتیو (Partitive Verbs):</b> <span dir="ltr">rakastaa, odottaa, pelata, ajaa, opiskella, auttaa</span> (اسلاید ۴)</li>
-                    </ul>
+                <div class="image-placeholder" style="height: 300px; border-color: var(--neon);">
+                     
                 </div>
             </div>
         </div>
 
-        <div class="slide" id="verb-review">
-            <h2><i class="fa-solid fa-terminal"></i> مرور افعال (Verbityypit 1-5)</h2>
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-comment"></i> مثال‌ها: فعل نوع ۱ (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Puhun suomea ja englantia.</span><span class="ex-english">من فنلاندی و انگلیسی صحبت می‌کنم.</span></div>
+                <div class="ex-text"><span class="ex-finnish">He asuvat isossa talossa.</span><span class="ex-english">آنها در یک خانه بزرگ زندگی می‌کنند.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Kuinka paljon tämä maksaa?</span><span class="ex-english">قیمت این چقدر است؟ (چقدر می‌پردازد؟)</span></div>
+                <div class="ex-text"><span class="ex-finnish">Me maksamme ruoan kortilla.</span><span class="ex-english">ما هزینه غذا را با کارت پرداخت می‌کنیم.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Missä sinä asut nyt?</span><span class="ex-english">تو الآن کجا زندگی می‌کنی؟</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۱ (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Puhutko suomea kotona?</span><span class="ex-english">آیا در خانه فنلاندی صحبت می‌کنی؟</span></div><div class="ex-text"><span class="ex-finnish">Hän maksaa laskun käteisellä.</span><span class="ex-english">او صورتحساب را نقداً پرداخت می‌کند.</span></div><div class="ex-text"><span class="ex-finnish">He eivät asu Vaasassa.</span><span class="ex-english">آنها در واسا زندگی نمی‌کنند.</span></div><div class="ex-text"><span class="ex-finnish">Mitä sinä ostat kaupasta?</span><span class="ex-english">تو از فروشگاه چه چیزی می‌خری؟</span></div><div class="ex-text"><span class="ex-finnish">Me asumme lähellä yliopistoa.</span><span class="ex-english">ما نزدیک دانشگاه زندگی می‌کنیم.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۱ (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">En puhu saksaa.</span><span class="ex-english">من آلمانی صحبت نمی‌کنم.</span></div><div class="ex-text"><span class="ex-finnish">He asuvatko kerrostalossa?</span><span class="ex-english">آیا آنها در آپارتمان زندگی می‌کنند؟</span></div><div class="ex-text"><span class="ex-finnish">Maksatteko te verot?</span><span class="ex-english">آیا شما مالیات را پرداخت می‌کنید؟</span></div><div class="ex-text"><span class="ex-finnish">Ostan uuden puhelimen huomenna.</span><span class="ex-english">من فردا یک تلفن جدید می‌خرم.</span></div><div class="ex-text"><span class="ex-finnish">Sinä puhut aina totuuden.</span><span class="ex-english">تو همیشه حقیقت را می‌گویی.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۱ (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Maksanko minä liikaa?</span><span class="ex-english">آیا من خیلی زیاد پرداخت می‌کنم؟</span></div><div class="ex-text"><span class="ex-finnish">Hän asuu pienessä kaupungissa.</span><span class="ex-english">او در یک شهر کوچک زندگی می‌کند.</span></div><div class="ex-text"><span class="ex-finnish">Lapset leikkivät ulkona.</span><span class="ex-english">بچه‌ها بیرون بازی می‌کنند (Leikkiä).</span></div><div class="ex-text"><span class="ex-finnish">Kuljen töihin autolla.</span><span class="ex-english">من با ماشین سر کار می‌روم (Kulkea).</span></div><div class="ex-text"><span class="ex-finnish">Minä en osta mitään nyt.</span><span class="ex-english">من الآن هیچ چیزی نمی‌خرم.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۱ (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">He maksavat aina ajallaan.</span><span class="ex-english">آنها همیشه سر وقت پرداخت می‌کنند.</span></div><div class="ex-text"><span class="ex-finnish">Sinä et puhu venäjää.</span><span class="ex-english">تو روسی صحبت نمی‌کنی.</span></div><div class="ex-text"><span class="ex-finnish">Me asumme Suomessa.</span><span class="ex-english">ما در فنلاند زندگی می‌کنیم.</span></div><div class="ex-text"><span class="ex-finnish">Mitä sinä ostat Minulle?</span><span class="ex-english">تو برای من چه می‌خری؟</span></div><div class="ex-text"><span class="ex-finnish">Hän asuu täällä pysyvästi.</span><span class="ex-english">او به طور دائم در اینجا زندگی می‌کند.</span></div></div></div>
+
+        <div class="slide" id="verb2">
+            <h2>۲. فعل نوع ۲ (-da/dä)  <a href="f1-foundations.html#verb2" style="color:var(--neon); text-decoration:none;">/</a></h2>
             <div class="card">
                 <div class="rule-block">
-                    <span class="rule-title">طبقه بندی افعال (Muista astevaihtelu!)</span>
+                    <span class="rule-title">قاعده:</span>
+                    <p>فعل به <b>-da</b> یا <b>-dä</b> ختم می‌شود. برای صرف، <b>تمام -da/-dä</b> را حذف و شناسه شخصی را اضافه کنید. <b dir="ltr">Syödä → Syö- + n = Syön</b>.</p>
                 </div>
+                <h3>صرف فعل: Syödä (خوردن)، Juoda (نوشیدن)، Käydä (بازدید/رفتن)</h3>
                 <table>
                     <thead>
-                        <tr><th>نوع</th><th>پایانه (Esim.)</th><th>مثال</th></tr>
+                        <tr><th>شخص</th><th dir="ltr">Syödä</th><th dir="ltr">Juoda</th><th dir="ltr">Käydä</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>۱</td><td dir="ltr">vowel + -a/ä</td><td dir="ltr">asua, puhua, maksaa</td></tr>
-                        <tr><td>۲</td><td dir="ltr">-da/dä</td><td dir="ltr">käydä, voida, syödä</td></tr>
-                        <tr><td>۳</td><td dir="ltr">-lla/-nnä/-stä</td><td dir="ltr">tulla, mennä, nousta</td></tr>
-                        <tr><td>۴</td><td dir="ltr">-ata/-uta/-ytä</td><td dir="ltr">osata, avata, siivota</td></tr>
-                        <tr><td>۵</td><td dir="ltr">-ita/itä</td><td dir="ltr">tarvita, häiritä, valita</td></tr>
+                        <tr><td>Minä</td><td class="ltr-text">syön</td><td class="ltr-text">juon</td><td class="ltr-text">käyn</td></tr>
+                        <tr><td>Sinä</td><td class="ltr-text">syöt</td><td class="ltr-text">juot</td><td class="ltr-text">käyt</td></tr>
+                        <tr><td>Hän</td><td class="ltr-text">syö</td><td class="ltr-text">juo</td><td class="ltr-text">käy</td></tr>
+                        <tr><td>Me</td><td class="ltr-text">syömme</td><td class="ltr-text">juomme</td><td class="ltr-text">käymme</td></tr>
+                        <tr><td>Te</td><td class="ltr-text">syötte</td><td class="ltr-text">juotte</td><td class="ltr-text">käytte</td></tr>
+                        <tr><td>He</td><td class="ltr-text">syövät</td><td class="ltr-text">juovat</td><td class="ltr-text">käyvät</td></tr>
                     </tbody>
                 </table>
-                <div class="image-placeholder" style="height: 350px;">
-                    [تصویر ۶۰: جدول صرف فعل نوع ۱ (LEIKKIÄ, HYPPIÄ, KÄYTTÄÄ, KULKEA). (اسلاید ۵ پاورپوینت)]
-                </div>
             </div>
         </div>
 
-        <div class="slide" id="kpt-review-2">
-            <h2><i class="fa-solid fa-arrows-left-right"></i> درجه‌بندی صامت‌ها (KPT)</h2>
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-mug-hot"></i> مثال‌ها: فعل نوع ۲ (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Juon kahvia joka aamu.</span><span class="ex-english">من هر صبح قهوه می‌نوشم (پارتیتیو).</span></div>
+                <div class="ex-text"><span class="ex-finnish">He syövät lounaan koulussa.</span><span class="ex-english">آنها ناهار را در مدرسه می‌خورند.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Käytkö sinä usein kirjastossa?</span><span class="ex-english">آیا تو اغلب به کتابخانه می‌روی؟</span></div>
+                <div class="ex-text"><span class="ex-finnish">Me syömme paljon vihanneksia.</span><span class="ex-english">ما سبزیجات زیادی می‌خوریم.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Hän ei juo olutta.</span><span class="ex-english">او آبجو نمی‌نوشد (پارتیتیو/منفی).</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۲ (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Voidaan hyvin, kiitos.</span><span class="ex-english">حالم خوب است، ممنون (Voida).</span></div><div class="ex-text"><span class="ex-finnish">Syöttekö te pizzaa illalla?</span><span class="ex-english">آیا شما عصر پیتزا می‌خورید؟</span></div><div class="ex-text"><span class="ex-finnish">Minä en juo kylmää vettä.</span><span class="ex-english">من آب سرد نمی‌نوشم.</span></div><div class="ex-text"><span class="ex-finnish">Hän käy töissä joka päivä.</span><span class="ex-english">او هر روز سر کار می‌رود.</span></div><div class="ex-text"><span class="ex-finnish">Me käymme usein ulkona.</span><span class="ex-english">ما اغلب بیرون می‌رویم.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۲ (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Juotko sinä maitoa?</span><span class="ex-english">آیا تو شیر می‌نوشی؟</span></div><div class="ex-text"><span class="ex-finnish">Hän syö omenan joka päivä.</span><span class="ex-english">او هر روز یک سیب می‌خورد.</span></div><div class="ex-text"><span class="ex-finnish">He eivät käy elokuvissa.</span><span class="ex-english">آنها به سینما نمی‌روند.</span></div><div class="ex-text"><span class="ex-finnish">Mitä sinä syöt aamulla?</span><span class="ex-english">تو صبح چه می‌خوری؟</span></div><div class="ex-text"><span class="ex-finnish">Me juomme teetä yhdessä.</span><span class="ex-english">ما با هم چای می‌نوشیم.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۲ (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Minä en syö lihaa.</span><span class="ex-english">من گوشت نمی‌خورم.</span></div><div class="ex-text"><span class="ex-finnish">Hän ei voi hyvin tänään.</span><span class="ex-english">او امروز حالش خوب نیست.</span></div><div class="ex-text"><span class="ex-finnish">Käytkö nukkumaan nyt?</span><span class="ex-english">آیا الآن به خواب می‌روی؟</span></div><div class="ex-text"><span class="ex-finnish">Syökää hitaammin!</span><span class="ex-english">شما آرام‌تر غذا بخورید! (وجه امری جمع)</span></div><div class="ex-text"><span class="ex-finnish">He juovat paljon vettä.</span><span class="ex-english">آنها آب زیادی می‌نوشند.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۲ (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Juon vain kahvia tällä hetkellä.</span><span class="ex-english">من در حال حاضر فقط قهوه می‌نوشم.</span></div><div class="ex-text"><span class="ex-finnish">Me käymme puistossa.</span><span class="ex-english">ما به پارک می‌رویم.</span></div><div class="ex-text"><span class="ex-finnish">Etkö voi auttaa Minua?</span><span class="ex-english">آیا نمی‌توانی به من کمک کنی؟</span></div><div class="ex-text"><span class="ex-finnish">Syöttekö te ulkona usein?</span><span class="ex-english">آیا شما اغلب بیرون غذا می‌خورید؟</span></div><div class="ex-text"><span class="ex-finnish">Hän syö jäätelöä kesällä.</span><span class="ex-english">او تابستان بستنی می‌خورد.</span></div></div></div>
+
+        <div class="slide" id="verb3">
+            <h2>۳. فعل نوع ۳ (-la/-na/-ra/-sta)  <a href="f1-foundations.html#verb3" style="color:var(--neon); text-decoration:none;">/</a></h2>
             <div class="card">
                 <div class="rule-block">
-                    <span class="rule-title">قوی (Vahva) به ضعیف (Heikko)</span>
-                    <p>هنگام اضافه شدن پسوندها (مانند Genitive یا Inessive) این تغییر اتفاق می‌افتد.</p>
+                    <span class="rule-title">قاعده:</span>
+                    <p>فعل به <b>صامت + مصوت</b> ختم می‌شود (-lla/llä, -nna/nnä, -rra/rrä, -sta/stä). <b>دو حرف آخر</b> را حذف کنید، یک <b>'e'</b> اضافه کنید تا ریشه ایجاد شود و سپس شناسه شخصی را اضافه کنید. <b dir="ltr">Tulla → Tul- → Tule- + n = Tulen</b>.</p>
                 </div>
-                <div class="image-placeholder" style="height: 300px; border-color: var(--purple);">
-                    [تصویر ۶۲: جدول تغییرات صامت‌های KPT (kk->k, p->v, t->d, k->-, nk->ng, mp->mm, etc.). (اسلاید ۶ پاورپوینت)]
+                <h3>صرف فعل: Tulla (آمدن)، Mennä (رفتن)، Nousta (برخاستن)</h3>
+                <table>
+                    <thead>
+                        <tr><th>شخص</th><th dir="ltr">Tulla</th><th dir="ltr">Mennä</th><th dir="ltr">Nousta</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Minä</td><td class="ltr-text">tulen</td><td class="ltr-text">menen</td><td class="ltr-text">nousen</td></tr>
+                        <tr><td>Sinä</td><td class="ltr-text">tulet</td><td class="ltr-text">menet</td><td class="ltr-text">nouset</td></tr>
+                        <tr><td>Hän</td><td class="ltr-text">tulee</td><td class="ltr-text">menee</td><td class="ltr-text">nousee</td></tr>
+                        <tr><td>Me</td><td class="ltr-text">tulemme</td><td class="ltr-text">menemme</td><td class="ltr-text">nousemme</td></tr>
+                        <tr><td>Te</td><td class="ltr-text">tulette</td><td class="ltr-text">menette</td><td class="ltr-text">nousette</td></tr>
+                        <tr><td>He</td><td class="ltr-text">tulevat</td><td class="ltr-text">menevät</td><td class="ltr-text">nousevat</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-graduation-cap"></i> مثال‌ها: فعل نوع ۳ (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Menen huomenna kauppaan.</span><span class="ex-english">من فردا به فروشگاه می‌روم.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Hän nousee aamulla aikaisin.</span><span class="ex-english">او صبح زود برمی‌خیزد.</span></div>
+                <div class="ex-text"><span class="ex-finnish">He eivät tule tänne tänään.</span><span class="ex-english">آنها امروز به اینجا نمی‌آیند.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Mihin te menette illalla?</span><span class="ex-english">شما عصر به کجا می‌روید؟</span></div>
+                <div class="ex-text"><span class="ex-finnish">Sinä nousetko sängystä nyt?</span><span class="ex-english">آیا تو الآن از تخت بلند می‌شوی؟</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۳ (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Tuleeko hän Suomesta?</span><span class="ex-english">آیا او اهل فنلاند است؟</span></div><div class="ex-text"><span class="ex-finnish">Me menemme syömään ulos.</span><span class="ex-english">ما برای غذا خوردن بیرون می‌رویم.</span></div><div class="ex-text"><span class="ex-finnish">Hän nousee bussiin asemalla.</span><span class="ex-english">او در ایستگاه سوار اتوبوس می‌شود.</span></div><div class="ex-text"><span class="ex-finnish">Minä en mene kouluun tänään.</span><span class="ex-english">من امروز به مدرسه نمی‌روم.</span></div><div class="ex-text"><span class="ex-finnish">He tulevat kotiin myöhään.</span><span class="ex-english">آنها دیر به خانه می‌آیند.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۳ (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Nousenko minä tästä tuolista?</span><span class="ex-english">آیا من از این صندلی بلند می‌شوم؟</span></div><div class="ex-text"><span class="ex-finnish">Sinä menet sinne usein.</span><span class="ex-english">تو اغلب به آنجا می‌روی.</span></div><div class="ex-text"><span class="ex-finnish">Me tulemme aina ajoissa.</span><span class="ex-english">ما همیشه سر وقت می‌آییم.</span></div><div class="ex-text"><span class="ex-finnish">He eivät nouse aikaisin viikonloppuna.</span><span class="ex-english">آنها آخر هفته زود بلند نمی‌شوند.</span></div><div class="ex-text"><span class="ex-finnish">Mene pois!</span><span class="ex-english">برو بیرون! (وجه امری)</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۳ (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Tuleeko hän mukaan?</span><span class="ex-english">آیا او همراه می‌آید؟</span></div><div class="ex-text"><span class="ex-finnish">Me nousemme autosta.</span><span class="ex-english">ما از ماشین پیاده می‌شویم.</span></div><div class="ex-text"><span class="ex-finnish">Minne sinä menet lomalla?</span><span class="ex-english">تو در تعطیلات به کجا می‌روی؟</span></div><div class="ex-text"><span class="ex-finnish">Hän menee nukkumaan pian.</span><span class="ex-english">او به زودی به خواب می‌رود.</span></div><div class="ex-text"><span class="ex-finnish">Tulkaa sisään!</span><span class="ex-english">شما بیایید داخل! (وجه امری جمع)</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۳ (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Nousetteko te portaat ylös?</span><span class="ex-english">آیا شما از پله‌ها بالا می‌روید؟</span></div><div class="ex-text"><span class="ex-finnish">Mistä sinä tulet?</span><span class="ex-english">تو اهل کجا هستی؟</span></div><div class="ex-text"><span class="ex-finnish">Hän ei mene koskaan sinne.</span><span class="ex-english">او هرگز به آنجا نمی‌رود.</span></div><div class="ex-text"><span class="ex-finnish">Me tulemme perheen kanssa.</span><span class="ex-english">ما با خانواده می‌آییم.</span></div><div class="ex-text"><span class="ex-finnish">Miksi sinä nouset aina niin hitaasti?</span><span class="ex-english">چرا تو همیشه اینقدر آرام بلند می‌شوی؟</span></div></div></div>
+
+        <div class="slide" id="verb4">
+            <h2>۴. فعل نوع ۴ (-ata/-ota/-uta)  <a href="f2-grammar.html#verb4" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">قاعده:</span>
+                    <p>فعل به <b>-ata, -ota, -uta, -ytä</b> ختم می‌شود. برای صرف، حرف <b>'t'</b> را حذف و شناسه شخصی را اضافه کنید. <b dir="ltr">Siivota → Siivoa- + n = Siivoan</b>. (این نوع KPT را ندارد.)</p>
                 </div>
+                <h3>صرف فعل: Osata (بلد بودن)، Avata (باز کردن)، Siivota (تمیز کردن)</h3>
+                <table>
+                    <thead>
+                        <tr><th>شخص</th><th dir="ltr">Osata</th><th dir="ltr">Avata</th><th dir="ltr">Siivota</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Minä</td><td class="ltr-text">osaan</td><td class="ltr-text">avaan</td><td class="ltr-text">siivoan</td></tr>
+                        <tr><td>Sinä</td><td class="ltr-text">osaat</td><td class="ltr-text">avaat</td><td class="ltr-text">siivoat</td></tr>
+                        <tr><td>Hän</td><td class="ltr-text">osaa</td><td class="ltr-text">avaa</td><td class="ltr-text">siivoaa</td></tr>
+                        <tr><td>Me</td><td class="ltr-text">osaamme</td><td class="ltr-text">avaamme</td><td class="ltr-text">siivoamme</td></tr>
+                        <tr><td>Te</td><td class="ltr-text">osaatte</td><td class="ltr-text">avaatte</td><td class="ltr-text">siivoatte</td></tr>
+                        <tr><td>He</td><td class="ltr-text">osaavat</td><td class="ltr-text">avaavat</td><td class="ltr-text">siivoavat</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-broom"></i> مثال‌ها: فعل نوع ۴ (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Osaatko ajaa autoa?</span><span class="ex-english">آیا بلد هستی ماشین برانی؟</span></div>
+                <div class="ex-text"><span class="ex-finnish">Minä siivoan huoneen joka viikko.</span><span class="ex-english">من اتاق را هر هفته تمیز می‌کنم.</span></div>
+                <div class="ex-text"><span class="ex-finnish">He avaavat oven nyt.</span><span class="ex-english">آنها الآن در را باز می‌کنند.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Hän ei osaa puhua englantia.</span><span class="ex-english">او بلد نیست انگلیسی صحبت کند.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Me siivoamme koko talon.</span><span class="ex-english">ما کل خانه را تمیز می‌کنیم.</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۴ (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Avaatko ikkunan, on kuuma.</span><span class="ex-english">آیا پنجره را باز می‌کنی، هوا گرم است.</span></div><div class="ex-text"><span class="ex-finnish">Sinä osaat laskea hyvin.</span><span class="ex-english">تو بلد هستی خوب حساب کنی.</span></div><div class="ex-text"><span class="ex-finnish">He siivoavatko toimiston?</span><span class="ex-english">آیا آنها دفتر را تمیز می‌کنند؟</span></div><div class="ex-text"><span class="ex-finnish">Minä en avaa lahjaa vielä.</span><span class="ex-english">من هنوز هدیه را باز نمی‌کنم.</span></div><div class="ex-text"><span class="ex-finnish">Hän osaa valita oikein.</span><span class="ex-english">او بلد است درست انتخاب کند.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۴ (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Avatkaa kirjat!</span><span class="ex-english">کتاب‌ها را باز کنید! (وجه امری جمع)</span></div><div class="ex-text"><span class="ex-finnish">Me emme osaa tehdä tätä.</span><span class="ex-english">ما بلد نیستیم این کار را انجام دهیم.</span></div><div class="ex-text"><span class="ex-finnish">Siivoatko sinä tänään?</span><span class="ex-english">آیا تو امروز تمیزکاری می‌کنی؟</span></div><div class="ex-text"><span class="ex-finnish">Hän avaa oven avaimella.</span><span class="ex-english">او در را با کلید باز می‌کند.</span></div><div class="ex-text"><span class="ex-finnish">He osaavatko soittaa pianoa?</span><span class="ex-english">آیا آنها بلدند پیانو بنوازند؟</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۴ (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Minä en siivoa huonetta.</span><span class="ex-english">من اتاق را تمیز نمی‌کنم.</span></div><div class="ex-text"><span class="ex-finnish">Osaisitteko auttaa meitä?</span><span class="ex-english">آیا شما می‌توانستید به ما کمک کنید؟ (شرطی)</span></div><div class="ex-text"><span class="ex-finnish">Hän ei avaa suutaan.</span><span class="ex-english">او دهانش را باز نمی‌کند.</span></div><div class="ex-text"><span class="ex-finnish">Mitä te avaatte ensimmäiseksi?</span><span class="ex-english">شما اول از همه چه چیزی را باز می‌کنید؟</span></div><div class="ex-text"><span class="ex-finnish">Sinä siivoat liian harvoin.</span><span class="ex-english">تو خیلی کم تمیز می‌کنی.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۴ (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Osatkaa puhua hiljaa!</span><span class="ex-english">شما بلد باشید آرام صحبت کنید! (وجه امری)</span></div><div class="ex-text"><span class="ex-finnish">Me avaamme ikkunat kesällä.</span><span class="ex-english">ما پنجره‌ها را تابستان باز می‌کنیم.</span></div><div class="ex-text"><span class="ex-finnish">He siivoavat keittiön aina.</span><span class="ex-english">آنها همیشه آشپزخانه را تمیز می‌کنند.</span></div><div class="ex-text"><span class="ex-finnish">Sinä et osaa tehdä tätä yksin.</span><span class="ex-english">تو بلد نیستی این کار را تنها انجام دهی.</span></div><div class="ex-text"><span class="ex-finnish">Siivoa pöytä!</span><span class="ex-english">میز را تمیز کن! (وجه امری)</span></div></div></div>
+
+        <div class="slide" id="verb5">
+            <h2>۵. فعل نوع ۵ (-ita/-itä)  <a href="f2-grammar.html#verb5" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">قاعده:</span>
+                    <p>فعل به <b>صامت + ita/itä</b> ختم می‌شود. <b>-ta/-tä</b> را حذف کنید و یک ریشه اضافی <b>-tse-</b> اضافه کنید، سپس شناسه شخصی را بیاورید. <b dir="ltr">Tarvita → Tarvi- + tse- + n = Tarvitsen</b>.</p>
+                </div>
+                <h3>صرف فعل: Tarvita (نیاز داشتن)، Häiritä (مزاحم شدن)، Valita (انتخاب کردن)</h3>
+                <table>
+                    <thead>
+                        <tr><th>شخص</th><th dir="ltr">Tarvita</th><th dir="ltr">Häiritä</th><th dir="ltr">Valita</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Minä</td><td class="ltr-text">tarvitsen</td><td class="ltr-text">häiritsen</td><td class="ltr-text">valitsen</td></tr>
+                        <tr><td>Sinä</td><td class="ltr-text">tarvitset</td><td class="ltr-text">häiritset</td><td class="ltr-text">valitset</td></tr>
+                        <tr><td>Hän</td><td class="ltr-text">tarvitsee</td><td class="ltr-text">häiritsee</td><td class="ltr-text">valitsee</td></tr>
+                        <tr><td>Me</td><td class="ltr-text">tarvitsemme</td><td class="ltr-text">häiritsemme</td><td class="ltr-text">valitsemme</td></tr>
+                        <tr><td>Te</td><td class="ltr-text">tarvitsette</td><td class="ltr-text">häiritsette</td><td class="ltr-text">valitsette</td></tr>
+                        <tr><td>He</td><td class="ltr-text">tarvitsevat</td><td class="ltr-text">häiritsevät</td><td class="ltr-text">valitsevat</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-list-check"></i> مثال‌ها: فعل نوع ۵ (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Minä tarvitsen sinun apuasi.</span><span class="ex-english">من به کمک تو نیاز دارم.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Hän ei valitse aina oikein.</span><span class="ex-english">او همیشه درست انتخاب نمی‌کند.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Älä häiritse minua, kun opiskelen.</span><span class="ex-english">وقتی درس می‌خوانم، مزاحم من نشو (وجه امری).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Mitä te tarvitsette eniten?</span><span class="ex-english">شما بیشتر به چه چیزی نیاز دارید؟</span></div>
+                <div class="ex-text"><span class="ex-finnish">Valitsen usein vaikean tien.</span><span class="ex-english">من اغلب راه سخت را انتخاب می‌کنم.</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۵ (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Tarvitsetko sinä uuden takin?</span><span class="ex-english">آیا تو به یک کت جدید نیاز داری؟</span></div><div class="ex-text"><span class="ex-finnish">Häiritseekö tämä sinua?</span><span class="ex-english">آیا این مزاحم تو می‌شود؟</span></div><div class="ex-text"><span class="ex-finnish">Me valitsemme aina parhaan.</span><span class="ex-english">ما همیشه بهترین را انتخاب می‌کنیم.</span></div><div class="ex-text"><span class="ex-finnish">Hän ei tarvitse apua.</span><span class="ex-english">او به کمک نیاز ندارد.</span></div><div class="ex-text"><span class="ex-finnish">He häiritsevät toisiaan usein.</span><span class="ex-english">آنها اغلب مزاحم یکدیگر می‌شوند.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۵ (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Valitse väri!</span><span class="ex-english">رنگ را انتخاب کن! (وجه امری)</span></div><div class="ex-text"><span class="ex-finnish">Minä en tarvitse uutta puhelinta.</span><span class="ex-english">من به یک تلفن جدید نیاز ندارم.</span></div><div class="ex-text"><span class="ex-finnish">He valitsevatko johtajan?</span><span class="ex-english">آیا آنها رئیس را انتخاب می‌کنند؟</span></div><div class="ex-text"><span class="ex-finnish">Tarvitsetteko te kahvia?</span><span class="ex-english">آیا شما به قهوه نیاز دارید؟</span></div><div class="ex-text"><span class="ex-finnish">Hän häiritsee minua melulla.</span><span class="ex-english">او با سر و صدا مزاحم من می‌شود.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۵ (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Meidän täytyy valita toinen reitti.</span><span class="ex-english">ما باید یک مسیر دیگر را انتخاب کنیم.</span></div><div class="ex-text"><span class="ex-finnish">Sinä et häiritse minua.</span><span class="ex-english">تو مزاحم من نمی‌شوی.</span></div><div class="ex-text"><span class="ex-finnish">Valitkaa paras ehdokas!</span><span class="ex-english">شما بهترین نامزد را انتخاب کنید! (وجه امری جمع)</span></div><div class="ex-text"><span class="ex-finnish">He tarvitsevat aikaa.</span><span class="ex-english">آنها به زمان نیاز دارند.</span></div><div class="ex-text"><span class="ex-finnish">Minä en valitse helpointa.</span><span class="ex-english">من آسان‌ترین را انتخاب نمی‌کنم.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: فعل نوع ۵ (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Älä tarvitse minua!</span><span class="ex-english">به من نیاز نداشته باش! (وجه امری منفی)</span></div><div class="ex-text"><span class="ex-finnish">Hän valitsee ruokansa huolella.</span><span class="ex-english">او غذایش را با دقت انتخاب می‌کند.</span></div><div class="ex-text"><span class="ex-finnish">Mitä valitset?</span><span class="ex-english">چه چیزی را انتخاب می‌کنی؟</span></div><div class="ex-text"><span class="ex-finnish">He eivät häiritse enää.</span><span class="ex-english">آنها دیگر مزاحم نمی‌شوند.</span></div><div class="ex-text"><span class="ex-finnish">Tarvitsemme lomaa.</span><span class="ex-english">ما به تعطیلات نیاز داریم.</span></div></div></div>
+
+        <div class="slide" id="kpt">
+            <h2>۶. درجه‌بندی صامت‌ها (KPT)  <a href="f2-grammar.html#kpt" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">قاعده (ASTEVAIHTELU):</span>
+                    <p>درجه‌بندی صامت‌ها برای آسان‌تر کردن تلفظ هنگام افزودن پسوندها اتفاق می‌افتد.  کلمه معمولاً هنگام صرف <b>ضعیف (Heikko)</b> می‌شود، به جز در افعال نوع ۳ و ۴ که برعکس است.</p>
+                </div>
+                <h3>تغییرات رایج KPT</h3>
+                <table>
+                    <thead>
+                        <tr><th>قوی (Vahva)</th><th>ضعیف (Heikko)</th><th>قوی (Vahva)</th><th>ضعیف (Heikko)</th><th>مثال (ضعیف)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="ltr-text">KK</td><td class="ltr-text">K</td><td class="ltr-text">P</td><td class="ltr-text">V</td><td class="ltr-text">Leipä → Leivän </td></tr>
+                        <tr><td class="ltr-text">PP</td><td class="ltr-text">P</td><td class="ltr-text">T</td><td class="ltr-text">D</td><td class="ltr-text">Pöytä → Pöydällä </td></tr>
+                        <tr><td class="ltr-text">TT</td><td class="ltr-text">T</td><td class="ltr-text">K</td><td class="ltr-text">- (حذف)</td><td class="ltr-text">Ruoka → Ruoan </td></tr>
+                        <tr><td class="ltr-text">NK</td><td class="ltr-text">NG</td><td class="ltr-text">MP</td><td class="ltr-text">MM</td><td class="ltr-text">Helsinki → Helsingissä </td></tr>
+                    </tbody>
+                </table>
                 <div class="rule-block" style="background: rgba(255, 0, 212, 0.1);">
                     <span class="rule-title" style="color:var(--example);"><i class="fa-solid fa-sync-alt"></i> تغییر برعکس در افعال ۳ و ۴</span>
-                    <p>در افعال نوع ۳ و ۴، درجه‌بندی صامت‌ها **برعکس** اتفاق می‌افتد. (مصدر قوی است و Minä/Sinä ضعیف.)</p>
-                    <p dir="ltr">KUUNNELLA: Minä kuun<b>t</b>elen (ضعیف) - He kuun<b>tel</b>evat (قوی)</p>
-                    <p dir="ltr">MITATA: Minä mit<b>t</b>aan (ضعیف) - He mit<b>taav</b>at (قوی)</p>
+                    <p>ریشه فعل (Minä/Sinä) در این افعال ضعیف است، در حالی که Infinitive (مصدر) قوی است.</p>
+                    <p dir="ltr"><b>KUUNNELLA</b> (T3): Minä kuun<b style="color:var(--error);">t</b>elen (ضعیف) - He kuun<b style="color:var(--gold);">tel</b>evat (قوی) </p>
+                    <p dir="ltr"><b>MITATA</b> (T4): Minä mi<b style="color:var(--error);">tt</b>aan (ضعیف) - He mi<b style="color:var(--gold);">ttaav</b>at (قوی) </p>
                 </div>
             </div>
         </div>
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-arrows-left-right"></i> مثال‌ها: درجه‌بندی صامت‌ها (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Otan kirjan pöy<b style="color:var(--error);">d</b>ältä. (Pöytä: T → D)</span><span class="ex-english">کتاب را از روی میز برمی‌دارم.</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Asun pan<b style="color:var(--error);">k</b>issa. (Pankki: KK → K)</span><span class="ex-english">من در بانک هستم.</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Syömme lei<b style="color:var(--error);">v</b>än. (Leipä: P → V)</span><span class="ex-english">ما نان را می‌خوریم.</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Helsin<b style="color:var(--error);">g</b>issä sataa. (Helsinki: NK → NG)</span><span class="ex-english">در هلسینکی باران می‌بارد.</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Opiskelemme Ruo<b style="color:var(--error);">-</b>an historiaa. (Ruoka: K → -)</span><span class="ex-english">ما تاریخچه غذا را می‌خوانیم.</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: درجه‌بندی صامت‌ها (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Tytö<b style="color:var(--error);">n</b> nimi on Sanni. (Tyttö: TT → T)</span><span class="ex-english">اسم دختر سانی است.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Meillä on kaap<b style="color:var(--error);">i</b>ssa ruokaa. (Kaappi: PP → P)</span><span class="ex-english">ما در کمد غذا داریم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Mitä sinä kam<b style="color:var(--error);">p</b>aat? (Kammata: MP → MM)</span><span class="ex-english">تو چه چیزی را شانه می‌کنی؟</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Me emme puhu Englan<b style="color:var(--error);">n</b>issa. (Englanti: NT → NN)</span><span class="ex-english">ما در انگلستان صحبت نمی‌کنیم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Puhun lääk<b style="color:var(--error);">k</b>eestä. (Lääke: Reverse KPT)</span><span class="ex-english">من در مورد دارو صحبت می‌کنم.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: درجه‌بندی صامت‌ها (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Riite<b style="color:var(--error);">l</b>en veljeni kanssa. (Riidellä: RT → LL)</span><span class="ex-english">من با برادرم دعوا می‌کنم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Katson tä<b style="color:var(--error);">tä</b> kirjaa. (Tämä: M → T)</span><span class="ex-english">من به این کتاب نگاه می‌کنم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Olen koul<b style="color:var(--error);">un</b> lähellä. (Koulu: L → L)</span><span class="ex-english">من نزدیک مدرسه هستم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Minä kuun<b style="color:var(--error);">t</b>elen radiota. (Kuunnella: NN → NT در Minä)</span><span class="ex-english">من به رادیو گوش می‌دهم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Mitta<b style="color:var(--error);">at</b>ko matkaa? (Mitata: TT → T)</span><span class="ex-english">آیا مسافت را اندازه می‌گیری؟</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: درجه‌بندی صامت‌ها (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Kivi<b style="color:var(--error);">e</b>n kanssa. (Kivi: I → E)</span><span class="ex-english">با سنگ‌ها.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Hän asuu pien<b style="color:var(--error);">e</b>ssä talossa. (Pieni: N → S)</span><span class="ex-english">او در یک خانه کوچک زندگی می‌کند.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Menemme rann<b style="color:var(--error);">a</b>lle. (Ranta: NT → NN)</span><span class="ex-english">ما به ساحل می‌رویم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">He ajavat tuol<b style="color:var(--error);">la</b> bussilla. (Tuo: U → O)</span><span class="ex-english">آنها با آن اتوبوس می‌روند.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Tulin perh<b style="color:var(--error);">ee</b>stäni. (Perhe: E → EE)</span><span class="ex-english">من از خانواده‌ام آمدم.</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: درجه‌بندی صامت‌ها (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Pan<b style="color:var(--error);">k</b>kiin meneminen. (Pankki: KK → K)</span><span class="ex-english">رفتن به بانک.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Minä otan le<b style="color:var(--error);">v</b>yn. (Levy: V → V)</span><span class="ex-english">من دیسک را برمی‌دارم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Työskentelemme yh<b style="color:var(--error);">d</b>essä. (Yhtiö: T → D)</span><span class="ex-english">ما با هم کار می‌کنیم.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Sinä et tarvitse lääk<b style="color:var(--error);">e</b>ttä. (Lääke: Reverse KPT)</span><span class="ex-english">تو به دارو نیاز نداری.</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Me opiskelemme ruo<b style="color:var(--error);">-</b>an kanssa. (Ruoka: K → -)</span><span class="ex-english">ما با غذا مطالعه می‌کنیم.</span></div></div></div>
 
-        <div class="slide" id="cases-review-2">
-            <h2><i class="fa-solid fa-map-marker-alt"></i> حالت‌های مکانی (Paikallissijat)</h2>
+        <div class="slide" id="partitive">
+            <h2>۷. حالت پارتیتیو (PARTITIIVI)  <a href="f2-grammar.html#partitive" style="color:var(--neon); text-decoration:none;">/</a></h2>
             <div class="card">
                 <div class="rule-block">
-                    <span class="rule-title">گروه‌بندی حالت‌ها</span>
-                    <p>حالت‌های مکانی مکان، یا حرکت به/از یک مکان را بیان می‌کنند و به دو گروه تقسیم می‌شوند:</p>
-                    <ul>
-                        <li><b dir="ltr">S-Cases (داخلی):</b> <span dir="ltr">inessive, elative, illative</span> (داخلی یا لمس کردن چیزی)</li>
-                        <li><b dir="ltr">L-Cases (خارجی):</b> <span dir="ltr">adessive, ablative, allative</span> (روی یا نزدیک چیزی)</li>
-                    </ul>
-                    <div class="image-placeholder" style="height: 250px; border-color: var(--neon);">
-                        [تصویر ۷۲: نمودار داخلی/خارجی (خانه: taloSSA/taloSTA/taloON و سقف: katoLLA/katoLLE/katoLTA). (اسلاید ۶۴/۷۲ پاورپوینت)]
+                    <span class="rule-title">کاربرد (Milloin käytät partitiivia):</span>
+                    <p>معادل دقیقی در انگلیسی و بسیاری از زبان‌های دیگر ندارد. اغلب برای مفعول جملات استفاده می‌شود.</p>
+                    <h3>ضمایر شخصی در حالت پارتیتیو </h3>
+                    <table>
+                        <thead><tr><th>فنلاندی</th><th>فارسی</th></tr></thead>
+                        <tbody>
+                            <tr><td dir="ltr">minua (mua)</td><td>من را</td></tr>
+                            <tr><td dir="ltr">sinua (sua)</td><td>تو را</td></tr>
+                            <tr><td dir="ltr">häntä (sitä)</td><td>او را (اشیا/حیوانات)</td></tr>
+                            <tr><td dir="ltr">meitä</td><td>ما را</td></tr>
+                            <tr><td dir="ltr">teitä</td><td>شما را</td></tr>
+                            <tr><td dir="ltr">heitä (niitä)</td><td>آنها را</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>قوانین اصلی استفاده </h3>
+                <ul>
+                    <li>۱. <b>بعد از اعداد (۲+) و کمیت‌سنج‌ها:</b> `viisi kirjaa`، `monta kirjaa` </li>
+                    <li>۲. <b>کلمات مادی و غیرقابل شمارش:</b> `kahvia`, `mehua`, `rahaa` </li>
+                    <li>۳. <b>جملات منفی:</b> `Minulla ei ole autoa.` </li>
+                    <li>۴. <b>عبارات ناتمام/بی‌نتیجه (Irresultative):</b> `Luen kirjaa.` </li>
+                    <li>۵. <b>با افعال پارتیتیو:</b> `rakastaa`, `odottaa`, `pelata`, `opiskella`, `auttaa` </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-ban"></i> مثال‌ها: حالت پارتیتیو (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Minä rakastan sinu<b style="color:var(--error);">a</b>.</span><span class="ex-english">من تو را دوست دارم (فعل پارتیتیو).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Ajan sinis<b style="color:var(--error);">tä</b> auto<b style="color:var(--error);">a</b>.</span><span class="ex-english">من ماشین آبی را می‌رانم (صفت و اسم در پارتیتیو).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Meillä ei ole aika<b style="color:var(--error);">a</b> tähän.</span><span class="ex-english">ما برای این کار وقت نداریم (منفی).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Tarvitsen kolme kirja<b style="color:var(--error);">a</b>.</span><span class="ex-english">به سه کتاب نیاز دارم (عدد ۳).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Poika odottaa tyttö<b style="color:var(--error);">ä</b>.</span><span class="ex-english">پسر منتظر دختر است (فعل پارتیتیو).</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت پارتیتیو (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Juon kahvi<b style="color:var(--error);">a</b> joka aamu.</span><span class="ex-english">من هر صبح قهوه می‌نوشم (غیرقابل شمارش) .</span></div><div class="ex-text"><span class="ex-finnish">Heillä on paljon raha<b style="color:var(--error);">a</b>.</span><span class="ex-english">آنها پول زیادی دارند (غیرقابل شمارش).</span></div><div class="ex-text"><span class="ex-finnish">Minä en syö liha<b style="color:var(--error);">a</b>.</span><span class="ex-english">من گوشت نمی‌خورم (منفی).</span></div><div class="ex-text"><span class="ex-finnish">Mitä sinä opiskele<b style="color:var(--error);">t</b>?</span><span class="ex-english">تو چه چیزی را مطالعه می‌کنی؟ (فعل پارتیتیو) .</span></div><div class="ex-text"><span class="ex-finnish">Meillä on monta ystävä<b style="color:var(--error);">ä</b>.</span><span class="ex-english">ما دوستان زیادی داریم (کمیت‌سنج).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت پارتیتیو (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Hän ei puhu suome<b style="color:var(--error);">a</b>.</span><span class="ex-english">او فنلاندی صحبت نمی‌کند (منفی).</span></div><div class="ex-text"><span class="ex-finnish">Odotan bussi<b style="color:var(--error);">a</b> pysäkillä.</span><span class="ex-english">من در ایستگاه منتظر اتوبوس هستم (فعل پارتیتیو) .</span></div><div class="ex-text"><span class="ex-finnish">Pöydällä on monta kirja<b style="color:var(--error);">a</b>.</span><span class="ex-english">روی میز کتاب‌های زیادی هست (کمیت‌سنج) .</span></div><div class="ex-text"><span class="ex-finnish">Luen kirja<b style="color:var(--error);">a</b> (Irresultative).</span><span class="ex-english">من در حال خواندن کتاب هستم (عمل ناتمام) .</span></div><div class="ex-text"><span class="ex-finnish">He pelaavat jalkapallo<b style="color:var(--error);">a</b>.</span><span class="ex-english">آنها فوتبال بازی می‌کنند (فعل پارتیتیو).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت پارتیتیو (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">En näe sinu<b style="color:var(--error);">a</b>.</span><span class="ex-english">من تو را نمی‌بینم (منفی).</span></div><div class="ex-text"><span class="ex-finnish">Tarvitsemme viisi sänky<b style="color:var(--error);">ä</b>.</span><span class="ex-english">ما به پنج تخت نیاز داریم (عدد ۵).</span></div><div class="ex-text"><span class="ex-finnish">Meillä ei ole aika<b style="color:var(--error);">a</b> häiritä.</span><span class="ex-english">ما وقت نداریم مزاحم شویم (منفی).</span></div><div class="ex-text"><span class="ex-finnish">Hän juo meh<b style="color:var(--error);">ua</b>.</span><span class="ex-english">او آب میوه می‌نوشد (غیرقابل شمارش).</span></div><div class="ex-text"><span class="ex-finnish">Minä autan heitä.</span><span class="ex-english">من به آنها کمک می‌کنم (فعل پارتیتیو).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت پارتیتیو (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Teillä ei ole avain<b style="color:var(--error);">ta</b>.</span><span class="ex-english">شما کلید ندارید (منفی).</span></div><div class="ex-text"><span class="ex-finnish">Me syömme pizza<b style="color:var(--error);">a</b>.</span><span class="ex-english">ما پیتزا می‌خوریم (غیرقابل شمارش).</span></div><div class="ex-text"><span class="ex-finnish">Sinä odotatko juna<b style="color:var(--error);">a</b>?</span><span class="ex-english">آیا تو منتظر قطار هستی؟ (فعل پارتیتیو) .</span></div><div class="ex-text"><span class="ex-finnish">Hänellä on kolme lasta.</span><span class="ex-english">او سه بچه دارد (عدد ۳).</span></div><div class="ex-text"><span class="ex-finnish">Hän haluaa vettä.</span><span class="ex-english">او آب می‌خواهد (غیرقابل شمارش).</span></div></div></div>
+
+        <div class="slide" id="cases">
+            <h2>۸. حالت‌های مکانی (PAIKALLISSIJAT)  <a href="f2-grammar.html#cases" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">تعریف:</span>
+                    <p>حالت‌های مکانی، مکان، یا حرکت به/از یک مکان را بیان می‌کنند.</p>
+                    <p><b>S-Cases (داخلی):</b> برای مکان‌های <b>داخلی</b> یا <b>لمس کردن</b> چیزی (inessive, elative, illative).</p>
+                    <p><b>L-Cases (خارجی):</b> برای مکان‌های <b>روی</b> یا <b>نزدیک</b> چیزی (adessive, ablative, allative).</p>
+                    <div class="image-placeholder" style="height: 300px; border-color: var(--purple);">
+                         
                     </div>
                 </div>
-                <h3>حالت‌های داخلی (Sisäpaikallissijat)</h3>
-                <div class="image-placeholder" style="height: 200px;">
-                    [تصویر ۷۸: جدول حالت‌های داخلی (Inessiivi, Elatiivi, Illatiivi) با پایانه‌ها و مثال‌ها. (اسلاید ۷۸ پاورپوینت)]
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2><i class="fa-solid fa-table"></i> حالت‌های مکانی (ادامه)</h2>
-            <div class="card">
-                <h3>حالت‌های خارجی (Ulkopaikallissijat)</h3>
-                <div class="image-placeholder" style="height: 200px;">
-                    [تصویر ۸۱: جدول حالت‌های خارجی (Adessiivi, Ablatiivi, Allatiivi) با پایانه‌ها و مثال‌ها. (اسلاید ۸۱ پاورپوینت)]
-                </div>
-            </div>
-            <div class="card slide-example">
-                <h3><i class="fa-solid fa-car"></i> مثال‌های کاربردی</h3>
-                <p dir="ltr">Kirja on pöydä<b>llä</b>. (کتاب روی میز است.)</p>
-                <p dir="ltr">Tulen asema<b>lta</b>. (از ایستگاه می‌آیم.)</p>
-                <p dir="ltr">Menen kouluu<b>n</b>. (به مدرسه می‌روم.)</p>
-            </div>
-        </div>
-
-        <div class="slide" id="sentences-review-2">
-            <h2><i class="fa-solid fa-key"></i> ساختار جملات (Omistus- ja Eksistentiaali)</h2>
-            <div class="card">
-                <h3>۱. جمله مالکیتی (Omistuslause)</h3>
-                <p>برای بیان "کسی چیزی دارد یا ندارد" به کار می‌رود. (اسلاید ۸۲)</p>
-                <p dir="ltr">Owner (Adessive) + on/ei ole + Subject (Partitive/Nominative)</p>
-                <p dir="ltr"><b>Tytö<u>llä</u> <u>on</u> hevonen.</b> (دختر اسب دارد.)</p>
-                <p dir="ltr"><b>Häne<u>llä</u> <u>ei ole</u> koira<u>a</u>.</b> (او سگ ندارد - مفعول در پارتیتیو)</p>
-                <div class="image-placeholder" style="height: 250px; border-color: var(--example);">
-                    [تصویر ۹۱: دختربچه در حال بغل کردن سگ (مالکیت). (اسلاید ۹۱ پاورپوینت)]
-                </div>
-            </div>
-            <div class="card">
-                <h3>۲. جمله وجودی (Eksistentiaalilause)</h3>
-                <p>برای بیان "چیزی جایی هست" به کار می‌رود. (اسلاید ۹۴)</p>
-                <p dir="ltr">Location (Case) + on/ei ole + Subject</p>
-                <p dir="ltr"><b>Huonee<u>ssa</u> <u>on</u> sänky.</b> (در اتاق یک تخت هست.)</p>
-                <p dir="ltr"><b>Pöydä<u>llä</u> <u>on</u> kirja.</b> (یک کتاب روی میز هست.)</p>
-                <div class="image-placeholder" style="height: 250px; border-color: var(--example);">
-                    [تصویر ۱۰۱: گل روی کتاب (وجودی). (اسلاید ۱۰۱ پاورپوینت)]
-                </div>
-            </div>
-        </div>
-
-        <div class="slide" id="demo-imp-review-2">
-            <h2><i class="fa-solid fa-circle-right"></i> ضمایر اشاره و وجه امری</h2>
-            <div class="card">
-                <h3>ضمایر اشاره (Demonstratiivipronominit)</h3>
-                <p>برای ارجاع به شخص، شیء یا موقعیتی که در متن قابل تشخیص است، استفاده می‌شود. (اسلاید ۱۰۵)</p>
-                <div class="image-placeholder" style="height: 300px;">
-                    [تصویر ۱۰۸: جدول ضمایر اشاره (tämä, tuo, se) در حالت‌های مختلف. (اسلاید ۱۰۸ پاورپوینت)]
-                </div>
-            </div>
-            <div class="card">
-                <h3>وجه امری (Imperatiivi)</h3>
-                <p>برای بیان ضرورت، دستور، هشدار، درخواست و منع به کار می‌رود. (اسلاید ۱۹۵)</p>
-                <div class="rule-block">
-                    <span class="rule-title">ساختار</span>
-                    <p dir="ltr">**فرم مثبت:** حذف شناسه شخصی <b dir="ltr">-n</b> از فرم Minä. (Syödä → Syön → **Syö!**)</p>
-                    <p dir="ltr">**فرم منفی:** <b dir="ltr">Älä +</b> فعل امری (**Älä syö!**)</p>
-                </div>
-                <p dir="ltr">مثال‌ها: Tule!, Mene!, Varo autoa!, Sekoita ainekset hyvin.</p>
-            </div>
-        </div>
-
-        <div class="slide" id="nouns-review-2">
-            <h2><i class="fa-solid fa-puzzle-piece"></i> مرور انواع اسم (Sanatyypit)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">انواع اسم با پایانه‌های خاص قبل از افزودن پسوند ریشه را تغییر می‌دهند.</span>
-                </div>
-                <h3>کلمات با پایانه‌ <b dir="ltr">-e</b> (مثل lääke)</h3>
-                <p>در هنگام صرف، <b dir="ltr">-e</b> به <b dir="ltr">-ee</b> یا <b dir="ltr">-kke</b> (با تغییر KPT معکوس) تبدیل می‌شود. (اسلاید ۱۱۱، ۱۱۴)</p>
-                <div class="image-placeholder" style="height: 150px;">
-                    [تصویر ۱۱۱: جدول صرف اسم -e (lääke) با تغییر kk. (اسلاید ۱۱۱ پاورپوینت)]
-                </div>
-                <h3>کلمات با پایانه <b dir="ltr">-nen</b> (مثل nainen)</h3>
-                <p>پایانه <b dir="ltr">-nen</b> به ریشه <b dir="ltr">-se</b> تغییر می‌کند. (اسلاید ۱۳۵)</p>
-                <div class="image-placeholder" style="height: 250px;">
-                    [تصویر ۱۳۵: جدول صرف اسم -nen (nainen). (اسلاید ۱۳۵ پاورپوینت)]
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2><i class="fa-solid fa-mobile-alt"></i> انواع اسم (-in و -i)</h2>
-            <div class="card">
-                <h3>کلمات با پایانه <b dir="ltr">-in</b> (مثل puhelin)</h3>
-                <p>پایانه <b dir="ltr">-in</b> به ریشه <b dir="ltr">-ime</b> تغییر می‌کند. (اسلاید ۱۴۱)</p>
-                <div class="image-placeholder" style="height: 250px;">
-                    [تصویر ۱۴۱: جدول صرف اسم -in (puhelin). (اسلاید ۱۴۱ پاورپوینت)]
-                </div>
-                <h3>کلمات با پایانه <b dir="ltr">-i</b> (جدید و قدیمی)</h3>
-                <p><b>کلمات جدید/قرضی</b> (<b>kahvi</b>): به طور معمول صرف می‌شوند. <b dir="ltr">kahvi + ssa</b> = <b dir="ltr">kahvissa</b>. (اسلاید ۱۷۴)</p>
-                <p><b>کلمات قدیمی/طبیعت</b> (<b>järvi</b>): قبل از افزودن پسوند، <b dir="ltr">-i</b> به <b dir="ltr">-e</b> تغییر می‌کند. (اسلاید ۱۸۷)</p>
-                <div class="image-placeholder" style="height: 250px;">
-                    [تصویر ۱۸۷: جدول صرف کلمات i- قدیمی (joki, järvi, kieli, kivi, käsi, lehti, nimi, pieni, suomi, suuri). (اسلاید ۱۸۷ پاورپوینت)]
-                </div>
-                <div class="image-placeholder" style="height: 100px;">
-                    [تصویر ۱۹۲: جدول استثنائات i- (lapsi, yksi, kaksi, meri, vesi). (اسلاید ۱۹۲ پاورپوینت)]
-                </div>
-            </div>
-        </div>
-
-        <div class="slide" id="vocab-review-2">
-            <h2><i class="fa-solid fa-tshirt"></i> مرور لغات: لباس، صفت‌ها و آب و هوا</h2>
-            <div class="card">
-                <h3>لباس‌ها (Vaatteet) و متعلقات</h3>
-                <p dir="ltr">استفاده از ساختار مالکیت <b>Hänellä on...</b></p>
-                <div class="image-placeholder" style="height: 300px; border-color: var(--neon);">
-                    [تصویر ۲۰۳: تصاویر لباس‌ها و متعلقات (پیراهن، شلوار جین، دامن، کت، عینک، چتر، کلاه). (اسلاید ۲۰۳ پاورپوینت)]
-                </div>
-                <p dir="ltr">مثال: <b dir="ltr">Minulla on keltainen t-paita.</b> (من یک تی‌شرت زرد دارم.)</p>
-            </div>
-            <div class="card">
-                <h3>صفت‌ها (Adjektiivit)</h3>
-                <p>صفت‌ها باید از لحاظ حالت و تعداد با اسم خود مطابقت داشته باشند.</p>
-                <div class="image-placeholder" style="height: 200px; border-color: var(--gold);">
-                    [تصویر ۲۰۸: صفت‌ها و متضادهای رایج (hyvä/huono, pitkä/lyhyt, iso/pieni, kuuma/kylmä). (اسلاید ۲۰۸ پاورپوینت)]
-                </div>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2><i class="fa-solid fa-home"></i> مرور لغات: خانه و وسایل نقلیه</h2>
-            <div class="card">
-                <h3>واژگان خانه، اتاق‌ها و مبلمان (Huoneet, Huonekalut)</h3>
-                <div class="image-placeholder" style="height: 150px;">
-                    [تصویر ۲۱۷: تصویر مبلمان و لوازم (تخت، میز، کمد، لامپ، سینی، فنجان). (اسلاید ۲۱۷ پاورپوینت)]
-                </div>
-                <p dir="ltr">مثال: <b>Huonee<u>ssa</u> <u>on</u> sänky.</b> (در اتاق یک تخت هست.)</p>
-            </div>
-            <div class="card">
-                <h3>وسایل نقلیه (Kulkuvälineet)</h3>
-                <p>برای بیان وسیله نقلیه از حالت Adessive (<b>-lla/-llä</b>) استفاده می‌شود. (اسلاید ۲۱۸)</p>
-                <div class="image-placeholder" style="height: 250px; border-color: var(--example);">
-                    [تصویر ۲۲۴: تصاویر وسایل نقلیه (ماشین، قطار، دوچرخه، اتوبوس، هواپیما). (اسلاید ۲۲۴ پاورپوینت)]
-                </div>
-                <p dir="ltr">مثال: <b dir="ltr">Matkustan lentokone<u>ella</u> Suomeen.</b> (با هواپیما به فنلاند سفر می‌کنم.)</p>
-            </div>
-        </div>
-
-        <div class="slide slide-funfact">
-            <h2><i class="fa-solid fa-cloud-sun-rain"></i> مرور لغات: آب و هوا (Sää)</h2>
-            <div class="card">
-                <div class="rule-block">
-                    <span class="rule-title">ساختار آب و هوا (On + Partitive)</span>
-                    <p>هنگام توصیف شرایط آب و هوایی، از ساختار وجودی (Eksistentiaalilause) استفاده می‌شود و صفت در حالت **پارتیتیو** می‌آید.</p>
-                </div>
-                <table>
-                    <thead>
-                        <tr><th>فنلاندی</th><th>فارسی</th></tr>
-                    </thead>
+                <h3>حالت‌های داخلی (Sisäpaikallissijat) </h3>
+                <table style="font-size: 0.8em;">
+                    <thead><tr><th>حالت</th><th dir="ltr">پایانه (Pääte)</th><th>پرسش (Kysymys)</th><th>مثال</th><th>جمله نمونه (Esimerkkilause)</th></tr></thead>
                     <tbody>
-                        <tr><td dir="ltr">Millainen sää on?</td><td>آب و هوا چطور است؟</td></tr>
-                        <tr><td dir="ltr">On kylmää/lämmintä.</td><td>هوا سرد/گرم است.</td></tr>
-                        <tr><td dir="ltr">On sateista/aurinkoista.</td><td>هوا بارانی/آفتابی است.</td></tr>
-                        <tr><td dir="ltr">Sataa vettä/lunta.</td><td>باران/برف می‌بارد.</td></tr>
+                        <tr><td>Inessiivi</td><td dir="ltr">-ssa / -ssä</td><td>Missä؟ (Missä sinä olet?)</td><td dir="ltr">talossa, metsässä</td><td dir="ltr">Olen talossa. Lapset leikkivät metsässä. </td></tr>
+                        <tr><td>Elatiivi</td><td dir="ltr">-sta / -stä</td><td>Mistä؟ (Mistä sinä tulet?)</td><td dir="ltr">talosta, metsästä</td><td dir="ltr">Tulen talosta. Lintu lensi metsästä. </td></tr>
+                        <tr><td>Illatiivi</td><td dir="ltr">-Vn, -hVn, -seen</td><td>Mihin؟ (Mihin sinä menet?)</td><td dir="ltr">taloon, metsään, kouluun</td><td dir="ltr">Menen taloon. Lapset menevät kouluun. </td></tr>
                     </tbody>
                 </table>
-                <div class="image-placeholder" style="height: 250px; border-color: var(--purple);">
-                    [تصویر ۲۳۷: تصویر جاده برفی و ماشین‌ها (شرایط آب و هوا). (اسلاید ۲۳۷ پاورپوینت)]
+                <h3>حالت‌های خارجی (Ulkopaikallissijat) </h3>
+                <table style="font-size: 0.8em;">
+                    <thead><tr><th>حالت</th><th dir="ltr">پایانه (Pääte)</th><th>پرسش (Kysymys)</th><th>مثال</th><th>جمله نمونه (Esimerkkilause)</th></tr></thead>
+                    <tbody>
+                        <tr><td>Adessiivi</td><td dir="ltr">-lla / -llä</td><td>Missä؟ (Missä sinä olet?)</td><td dir="ltr">pöydällä, asemalla</td><td dir="ltr">Kirja on pöydällä. Odotan asemalla. </td></tr>
+                        <tr><td>Ablatiivi</td><td dir="ltr">-lta / -ltä</td><td>Mistä؟ (Mistä sinä tulet?)</td><td dir="ltr">pöydältä, asemalta</td><td dir="ltr">Otan kirjan pöydältä. Tulen asemalta. </td></tr>
+                        <tr><td>Allatiivi</td><td dir="ltr">-lle</td><td>Mihin؟ (Mihin sinä menet?)</td><td dir="ltr">pöydälle, asemalle</td><td dir="ltr">Laitan kirjan pöydälle. Menen asemalle. </td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-map-pin"></i> مثال‌ها: حالت‌های مکانی (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Minä olen koulu<b style="color:var(--error);">ssa</b>.</span><span class="ex-english">من در مدرسه هستم (Inessive).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Otan kirjan pöydä<b style="color:var(--error);">ltä</b>.</span><span class="ex-english">کتاب را از روی میز برمی‌دارم (Ablative).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Laitan kirjan pöydä<b style="color:var(--error);">lle</b>.</span><span class="ex-english">کتاب را به روی میز می‌گذارم (Allative).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Lapset leikkivät metsä<b style="color:var(--error);">ssä</b>.</span><span class="ex-english">بچه‌ها در جنگل بازی می‌کنند (Inessive).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Menen talo<b style="color:var(--error);">on</b>.</span><span class="ex-english">من به داخل خانه می‌روم (Illative).</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت‌های مکانی (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Kirja on pöydä<b style="color:var(--error);">llä</b>.</span><span class="ex-english">کتاب روی میز است (Adessive) .</span></div><div class="ex-text"><span class="ex-finnish">Tulen asem<b style="color:var(--error);">alta</b>.</span><span class="ex-english">من از ایستگاه می‌آیم (Ablative) .</span></div><div class="ex-text"><span class="ex-finnish">Menen koulu<b style="color:var(--error);">un</b>.</span><span class="ex-english">من به مدرسه می‌روم (Illative) .</span></div><div class="ex-text"><span class="ex-finnish">Lintu lensi metsä<b style="color:var(--error);">stä</b>.</span><span class="ex-english">پرنده از جنگل پرواز کرد (Elative) .</span></div><div class="ex-text"><span class="ex-finnish">Odotan asem<b style="color:var(--error);">alla</b>.</span><span class="ex-english">من در ایستگاه منتظر می‌مانم (Adessive).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت‌های مکانی (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Laitan kirjan pöydä<b style="color:var(--error);">lle</b>.</span><span class="ex-english">من کتاب را به روی میز می‌گذارم (Allative).</span></div><div class="ex-text"><span class="ex-finnish">Mistä sinä tulet?</span><span class="ex-english">تو از کجا می‌آیی؟ (پاسخ: Elative/Ablative) .</span></div><div class="ex-text"><span class="ex-finnish">Mihin sinä menet?</span><span class="ex-english">تو به کجا می‌روی؟ (پاسخ: Illative/Allative) .</span></div><div class="ex-text"><span class="ex-finnish">Missä sinä olet?</span><span class="ex-english">تو کجا هستی؟ (پاسخ: Inessive/Adessive) .</span></div><div class="ex-text"><span class="ex-finnish">Menen asema<b style="color:var(--error);">lle</b>.</span><span class="ex-english">من به سمت ایستگاه می‌روم (Allative).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت‌های مکانی (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Lapset menevät koulu<b style="color:var(--error);">un</b>.</span><span class="ex-english">بچه‌ها به مدرسه می‌روند (Illative) .</span></div><div class="ex-text"><span class="ex-finnish">Tulen talo<b style="color:var(--error);">sta</b>.</span><span class="ex-english">من از خانه می‌آیم (Elative).</span></div><div class="ex-text"><span class="ex-finnish">Hän istuu tuoli<b style="color:var(--error);">lla</b>.</span><span class="ex-english">او روی صندلی نشسته است (Adessive).</span></div><div class="ex-text"><span class="ex-finnish">Kissa hyppää pöydä<b style="color:var(--error);">ltä</b>.</span><span class="ex-english">گربه از روی میز می‌پرد (Ablative).</span></div><div class="ex-text"><span class="ex-finnish">He asuvat kerrostalo<b style="color:var(--error);">ssa</b>.</span><span class="ex-english">آنها در آپارتمان زندگی می‌کنند (Inessive).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: حالت‌های مکانی (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Kuka on kato<b style="color:var(--error);">lla</b>?</span><span class="ex-english">چه کسی روی سقف است؟ (Adessive) .</span></div><div class="ex-text"><span class="ex-finnish">Lintu lentää kato<b style="color:var(--error);">lle</b>.</span><span class="ex-english">پرنده به روی سقف پرواز می‌کند (Allative) .</span></div><div class="ex-text"><span class="ex-finnish">Juoksen talo<b style="color:var(--error);">sta</b>.</span><span class="ex-english">من از خانه می‌دوم (Elative) .</span></div><div class="ex-text"><span class="ex-finnish">He tulevat asem<b style="color:var(--error);">alta</b> myöhään.</span><span class="ex-english">آنها دیر از ایستگاه می‌آیند (Ablative).</span></div><div class="ex-text"><span class="ex-finnish">Laita puhelin pöydä<b style="color:var(--error);">lle</b>!</span><span class="ex-english">تلفن را روی میز بگذار! (Allative) .</span></div></div></div>
+
+        <div class="slide" id="onenoun">
+            <h2>۹. مرور انواع اسم (-e، -nen، -in، i- قدیمی)  <a href="f2-grammar.html#nouns" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">کلمات e- (E-sanat) </span>
+                    <p>در هنگام صرف، -e به <b>-ee</b> تبدیل می‌شود (یا -kke با KPT معکوس). مثال: Perhe → Perheessä  (خانواده). </p>
+                    <table style="font-size: 0.7em;">
+                        <thead><tr><th>حالت</th><th dir="ltr">Yksikkö (lääke)</th><th dir="ltr">Yksikkö (perhe)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Nominative</td><td dir="ltr">lääke</td><td dir="ltr">perhe </td></tr>
+                            <tr><td>Partitiivi</td><td dir="ltr">lääke<b style="color:var(--error);">ttä</b></td><td dir="ltr">perhe<b style="color:var(--error);">ttä</b> </td></tr>
+                            <tr><td>Genetiivi (n)</td><td dir="ltr">lääk<b style="color:var(--error);">k</b>een</td><td dir="ltr">perhe<b style="color:var(--error);">en</b> </td></tr>
+                            <tr><td>Inessiivi</td><td dir="ltr">lääk<b style="color:var(--error);">k</b>eessä</td><td dir="ltr">perhe<b style="color:var(--error);">e</b>ssä </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rule-block">
+                    <span class="rule-title">کلمات nen- (Nen-sanat) </span>
+                    <p>پایانه -nen به ریشه <b>-se</b> تغییر می‌کند. مثال: Nainen → Naisen (زن).</p>
+                    <table style="font-size: 0.7em;">
+                        <thead><tr><th>حالت</th><th dir="ltr">Form (nainen)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Nominative</td><td dir="ltr">nainen </td></tr>
+                            <tr><td>Partitiivi</td><td dir="ltr">nais<b style="color:var(--error);">ta</b> </td></tr>
+                            <tr><td>Genetiivi (n)</td><td dir="ltr">nai<b style="color:var(--error);">sen</b> </td></tr>
+                            <tr><td>Inessiivi</td><td dir="ltr">nai<b style="color:var(--error);">se</b>ssa </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rule-block">
+                    <span class="rule-title">کلمات in- (In-sanat) </span>
+                    <p>پایانه -in به ریشه <b>-ime</b> تغییر می‌کند. مثال: Puhelin → Puhelimen (تلفن).</p>
+                    <table style="font-size: 0.7em;">
+                        <thead><tr><th>حالت</th><th dir="ltr">Form (puhelin)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Nominative</td><td dir="ltr">puhelin </td></tr>
+                            <tr><td>Partitiivi</td><td dir="ltr">puhel<b style="color:var(--error);">inta</b> </td></tr>
+                            <tr><td>Genetiivi (n)</td><td dir="ltr">puhel<b style="color:var(--error);">imen</b> </td></tr>
+                            <tr><td>Inessiivi</td><td dir="ltr">puhel<b style="color:var(--error);">ime</b>ssa </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rule-block" style="background: rgba(40, 10, 50, 0.8);">
+                    <span class="rule-title" style="color:var(--purple);">کلمات i- قدیمی (Vanhat i-sanat) </span>
+                    <p>کلمات قدیمی (اغلب طبیعت) تغییر بیشتری می‌کنند: -i حذف شده و <b>-e</b> اضافه می‌شود. مثال: Järvi → Järveä/Järven/Järvessä.  کلمات جدید (مثل `kahvi`) به طور معمول صرف می‌شوند.</p>
                 </div>
             </div>
         </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-puzzle-piece"></i> مثال‌ها: اسم‌های تغییردهنده ریشه (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Perh<b style="color:var(--error);">ee</b>ni on Suomessa.</span><span class="ex-english">خانواده من در فنلاند است (-e word).</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Puhun nai<b style="color:var(--error);">se</b>lle.</span><span class="ex-english">من با آن زن صحبت می‌کنم (-nen word).</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Minun puhel<b style="color:var(--error);">ime</b>ni on vanha.</span><span class="ex-english">تلفن من قدیمی است (-in word).</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Uimme järv<b style="color:var(--error);">e</b>ssä.</span><span class="ex-english">ما در دریاچه شنا می‌کنیم (i- قدیمی).</span></div>
+                <div class="ex-text"><span class="ex-finnish" dir="ltr">Tarvitsen lääk<b style="color:var(--error);">että</b>.</span><span class="ex-english">من به دارو نیاز دارم (-e word، پارتیتیو).</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: اسم‌های تغییردهنده ریشه (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Menen asemalle junalla.</span><span class="ex-english">من با قطار به ایستگاه می‌روم (اسم معمولی).</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Minulla ei ole puhel<b style="color:var(--error);">inta</b>.</span><span class="ex-english">من تلفن ندارم (-in word، منفی) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">He ovat perh<b style="color:var(--error);">ee</b>ssä.</span><span class="ex-english">آنها در خانواده هستند (-e word) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Tulen nai<b style="color:var(--error);">se</b>lta.</span><span class="ex-english">من از آن زن می‌آیم (-nen word، Ablative) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Joki<b style="color:var(--error);">e</b>ssa on kylmää vettä.</span><span class="ex-english">در رودخانه آب سرد است (i- قدیمی).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: اسم‌های تغییردهنده ریشه (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Puhun puhel<b style="color:var(--error);">ime</b>sta.</span><span class="ex-english">من در مورد تلفن صحبت می‌کنم (-in word، Elative) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Perh<b style="color:var(--error);">ee</b>seen tulee uusi jäsen.</span><span class="ex-english">یک عضو جدید به خانواده می‌آید (-e word، Illative) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Suuri<b style="color:var(--error);">a</b> eläimiä.</span><span class="ex-english">حیوانات بزرگ (i- قدیمی در پارتیتیو) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Olen nai<b style="color:var(--error);">se</b>ssa kiinni.</span><span class="ex-english">من به زن چسبیده‌ام (-nen word، Inessive) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Laps<b style="color:var(--error);">e</b>n nimi on Pekka.</span><span class="ex-english">اسم بچه پکا است (i- استثنایی).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: اسم‌های تغییردهنده ریشه (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Lääk<b style="color:var(--error);">k</b>eellä saa apua.</span><span class="ex-english">با دارو می‌توان کمک گرفت (-e word، Adessive) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Kahv<b style="color:var(--error);">i</b>ssa on maitoa.</span><span class="ex-english">در قهوه شیر هست (i- جدید، بدون تغییر) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Enk<b style="color:var(--error);">e</b>li puhuu.</span><span class="ex-english">فرشته صحبت می‌کند (i- جدید، -li) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Puhel<b style="color:var(--error);">ime</b>ltä kuuluu ääni.</span><span class="ex-english">صدایی از تلفن شنیده می‌شود (-in word، Ablative) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Nainen<b style="color:var(--error);">ta</b> ei ole täällä.</span><span class="ex-english">زن در اینجا نیست (-nen word، پارتیتیو).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: اسم‌های تغییردهنده ریشه (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish" dir="ltr">Ves<b style="color:var(--error);">i</b> on tärkeää.</span><span class="ex-english">آب مهم است (i- استثنایی) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Lääk<b style="color:var(--error);">k</b>eeseen on uusi ohje.</span><span class="ex-english">یک دستورالعمل جدید برای دارو وجود دارد (-e word، Illative) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Kieli<b style="color:var(--error);">en</b> opiskelu.</span><span class="ex-english">یادگیری زبان‌ها (i- قدیمی، جمع Genitive) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Hän asuu nai<b style="color:var(--error);">se</b>n kanssa.</span><span class="ex-english">او با زن زندگی می‌کند (-nen word، Genitive) .</span></div><div class="ex-text"><span class="ex-finnish" dir="ltr">Emme tarvitse puhel<b style="color:var(--error);">ime</b>lle suojaa.</span><span class="ex-english">ما به محافظ برای تلفن نیاز نداریم (-in word، Allative).</span></div></div></div>
+
+        <div class="slide" id="imperative">
+            <h2>۱۰. وجه امری (IMPERATIIVI)  <a href="f2-vocabulary.html#demonstrative-imperative-review" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">تعریف و کاربرد:</span>
+                    <p>ضرورت را بیان می‌کند و در دستورات و درخواست‌ها استفاده می‌شود. اغلب با علامت تعجب همراه است. </p>
+                    <p>نمونه کاربرد: آرزو (Voi hyvin!)، هشدار (Varo autoa!)، دستور (Ole hiljaa!)، منع (Älä aja ylinopeutta!).</p>
+                </div>
+                <h3>ساختار (Sinä-muoto)</h3>
+                <ul>
+                    <li><span class="ltr-text"><b>فرم مثبت:</b> با حذف شناسه شخصی <b>-n</b> از فرم Minä ساخته می‌شود. (Syödä → Syön → <b>Syö!</b>) </span></li>
+                    <li><span class="ltr-text"><b>فرم منفی:</b> <b>Älä</b> + فعل امری (<b>Älä syö!</b>) </span></li>
+                    <li><span class="ltr-text"><b>فرم جمع (Te):</b> Minä-stem + <b>-kaa / -kää</b> (Puhua → Puhu → <b>Puhukaa!</b>)</span></li>
+                    <li><span class="ltr-text"><b>مثال‌های مستقیم:</b> Tule! Mene! Syö! Juo! </span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-bolt"></i> مثال‌ها: وجه امری (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">Ole hiljaa!</span><span class="ex-english">ساکت باش! (دستور) .</span></div>
+                <div class="ex-text"><span class="ex-finnish">Älä aja ylinopeutta!</span><span class="ex-english">تند رانندگی نکن! (منع) .</span></div>
+                <div class="ex-text"><span class="ex-finnish">Varo autoa!</span><span class="ex-english">مراقب ماشین باش! (هشدار) .</span></div>
+                <div class="ex-text"><span class="ex-finnish">Voi hyvin!</span><span class="ex-english">حال خوبی داشته باش! (آرزو) .</span></div>
+                <div class="ex-text"><span class="ex-finnish">Sekoita ainekset hyvin.</span><span class="ex-english">مواد را خوب مخلوط کن (Directive).</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: وجه امری (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Mene!</span><span class="ex-english">برو! (Mennä) .</span></div><div class="ex-text"><span class="ex-finnish">Tule!</span><span class="ex-english">بیا! (Tulla) .</span></div><div class="ex-text"><span class="ex-finnish">Älä häiritse!</span><span class="ex-english">مزاحم نشو! (Häiritä، منفی).</span></div><div class="ex-text"><span class="ex-finnish">Juokaa vettä!</span><span class="ex-english">شما آب بنوشید! (Juoda، جمع).</span></div><div class="ex-text"><span class="ex-finnish">Avaa ovi!</span><span class="ex-english">در را باز کن! (Avata).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: وجه امری (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Syökää hitaammin!</span><span class="ex-english">شما آرام‌تر غذا بخورید! (Syödä، جمع).</span></div><div class="ex-text"><span class="ex-finnish">Älä puhu minulle!</span><span class="ex-english">با من صحبت نکن! (Puhua، منفی).</span></div><div class="ex-text"><span class="ex-finnish">Nouse sängystä!</span><span class="ex-english">از تخت بلند شو! (Nousta).</span></div><div class="ex-text"><span class="ex-finnish">Valitse paras!</span><span class="ex-english">بهترین را انتخاب کن! (Valita).</span></div><div class="ex-text"><span class="ex-finnish">Tulkaa sisään!</span><span class="ex-english">شما بیایید داخل! (Tulla، جمع).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: وجه امری (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Osaatko tehdä tämän?</span><span class="ex-english">آیا بلد هستی این کار را انجام دهی؟ (سؤالی).</span></div><div class="ex-text"><span class="ex-finnish">Älä unohda minua!</span><span class="ex-english">من را فراموش نکن! (منفی).</span></div><div class="ex-text"><span class="ex-finnish">Pue takki päälle!</span><span class="ex-english">کت را بپوش! (Pukea).</span></div><div class="ex-text"><span class="ex-finnish">Maksa nyt!</span><span class="ex-english">الآن پرداخت کن! (Maksaa).</span></div><div class="ex-text"><span class="ex-finnish">Älkää menkö sinne!</span><span class="ex-english">شما به آنجا نروید! (Mennä، جمع منفی).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: وجه امری (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Tarvitkaa apua!</span><span class="ex-english">شما به کمک نیاز داشته باشید! (Tarvita، جمع).</span></div><div class="ex-text"><span class="ex-finnish">Syö omena!</span><span class="ex-english">سیب بخور! (Syödä) .</span></div><div class="ex-text"><span class="ex-finnish">Juo!</span><span class="ex-english">بنوش! (Juoda) .</span></div><div class="ex-text"><span class="ex-finnish">Ota kirja pöydältä!</span><span class="ex-english">کتاب را از روی میز بردار! (Ottaa).</span></div><div class="ex-text"><span class="ex-finnish">Älä tule myöhään!</span><span class="ex-english">دیر نیا! (منفی).</span></div></div></div>
+
+        <div class="slide" id="vocab">
+            <h2>۱۱. مرور جامع واژگان  <a href="f2-vocabulary.html#describe" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <h3>صفت‌ها و رنگ‌ها (Adjektiivit ja värit)</h3>
+                <p>صفت‌ها باید از لحاظ حالت و تعداد از اسمی که توصیف می‌کنند، پیروی کنند.</p>
+                <div class="image-placeholder" style="height: 350px; border-color: var(--gold);">
+                     
+                </div>
+            </div>
+            <div class="card">
+                <h3>لباس‌ها، خانه، مبلمان و حمل و نقل</h3>
+                <ul>
+                    <li><span style="color:var(--gold);">لباس‌ها:</span> `Vaatteet`. مثال: `Minulla on keltainen t-paita.` </li>
+                    <li><span style="color:var(--neon);">خانه/مبلمان:</span> `Huoneet/Huonekalut`. از جملات وجودی استفاده می‌شود: `Huoneessa on sänky.` </li>
+                    <li><span style="color:var(--error);">حمل و نقل:</span> `Kulkuvälineet`. با حالت <b>Adessive</b> (-lla/-llä) استفاده می‌شود: `Matkustan lentokoneella Suomeen.` </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>آب و هوا (Sää)</h3>
+                <p>سؤال: `Millainen sää on?` </p>
+                <p>پاسخ (با استفاده از پارتیتیو): `On kylmä<b style="color:var(--error);">ä</b>.` , `On lämmin<b style="color:var(--error);">tä</b>.` , `On sateis<b style="color:var(--error);">ta</b>.` </p>
+                <p>افعال: `Sataa vettä/lunta` (باران/برف می‌بارد). </p>
+            </div>
+        </div>
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-house"></i> مثال‌ها: واژگان و صفت‌ها (۵/۱) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2>
+            <div class="card">
+                <div class="ex-text"><span class="ex-finnish">On kylmää, minulla on takki päällä.</span><span class="ex-english">هوا سرد است، من کت پوشیده‌ام.</span></div>
+                <div class="ex-text"><span class="ex-finnish">Matkustan juna<b style="color:var(--error);">lla</b> joka viikko.</span><span class="ex-english">من هر هفته با قطار سفر می‌کنم (حمل و نقل).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Huoneessa on uusi sänky.</span><span class="ex-english">در اتاق یک تخت جدید هست (وجودی).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Hänellä on ruskeat aurinkolasit.</span><span class="ex-english">او عینک آفتابی قهوه‌ای دارد (لباس).</span></div>
+                <div class="ex-text"><span class="ex-finnish">Millainen sää on nyt? On aurinkoista.</span><span class="ex-english">الآن هوا چطور است؟ آفتابی است (آب و هوا).</span></div>
+            </div>
+        </div>
+        <div class="slide slide-example"><h2>مثال‌ها: واژگان و صفت‌ها (۵/۲) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Se on kallis auto.</span><span class="ex-english">آن یک ماشین گران است (صفت) .</span></div><div class="ex-text"><span class="ex-finnish">Menen kotiin kävellen.</span><span class="ex-english">من با پیاده‌روی به خانه می‌روم (حمل و نقل) .</span></div><div class="ex-text"><span class="ex-finnish">Keittiössä on mikroaaltouuni.</span><span class="ex-english">در آشپزخانه مایکروویو هست (مبلمان).</span></div><div class="ex-text"><span class="ex-finnish">Hän on pitkä, nuori nainen.</span><span class="ex-english">او یک زن بلند و جوان است (صفت) .</span></div><div class="ex-text"><span class="ex-finnish">Tänään on pilvistä ja sateista.</span><span class="ex-english">امروز ابری و بارانی است (آب و هوا).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: واژگان و صفت‌ها (۵/۳) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Hänellä on uusi paita.</span><span class="ex-english">او یک پیراهن جدید دارد (لباس).</span></div><div class="ex-text"><span class="ex-finnish">Missä on kylpyhuone?</span><span class="ex-english">حمام کجاست؟ (خانه) .</span></div><div class="ex-text"><span class="ex-finnish">Me matkustamme lentokoneella.</span><span class="ex-english">ما با هواپیما سفر می‌کنیم (حمل و نقل).</span></div><div class="ex-text"><span class="ex-finnish">Onko sinun kotisi iso vai pieni?</span><span class="ex-english">آیا خانه تو بزرگ است یا کوچک؟ (صفت) .</span></div><div class="ex-text"><span class="ex-finnish">Sataa lunta talvella.</span><span class="ex-english">زمستان برف می‌بارد (آب و هوا).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: واژگان و صفت‌ها (۵/۴) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Minulla on hyvä sade<b style="color:var(--error);">takki</b>.</span><span class="ex-english">من یک بارانی خوب دارم (لباس).</span></div><div class="ex-text"><span class="ex-finnish">He istuvat sohvalla.</span><span class="ex-english">آنها روی مبل نشسته‌اند (مبلمان).</span></div><div class="ex-text"><span class="ex-finnish">Menen bussilla yliopistolle.</span><span class="ex-english">من با اتوبوس به دانشگاه می‌روم (حمل و نقل).</span></div><div class="ex-text"><span class="ex-finnish">Tämä kirja on helppo.</span><span class="ex-english">این کتاب آسان است (صفت).</span></div><div class="ex-text"><span class="ex-finnish">Mitä sinä teet, kun on kuuma?</span><span class="ex-english">وقتی هوا گرم است چه کار می‌کنی؟ (آب و هوا).</span></div></div></div>
+        <div class="slide slide-example"><h2>مثال‌ها: واژگان و صفت‌ها (۵/۵) <a href="#list" style="color:var(--neon); text-decoration:none;">/</a></h2><div class="card"><div class="ex-text"><span class="ex-finnish">Mistä sinä tulet? Tulen kotoa.</span><span class="ex-english">تو از کجا می‌آیی؟ از خانه می‌آیم (خانه).</span></div><div class="ex-text"><span class="ex-finnish">Hänellä on pienet siniset housut.</span><span class="ex-english">او شلوار کوچک آبی دارد (لباس).</span></div><div class="ex-text"><span class="ex-finnish">Tämä oli huono idea.</span><span class="ex-english">این یک ایده بد بود (صفت).</span></div><div class="ex-text"><span class="ex-finnish">Onko sinulla vanha auto vai uusi?</span><span class="ex-english">آیا تو ماشین قدیمی داری یا جدید؟ (صفت) .</span></div><div class="ex-text"><span class="ex-finnish">Älä aja liian nopeasti!</span><span class="ex-english">خیلی سریع رانندگی نکن! (حمل و نقل).</span></div></div></div>
+
 
         <div class="slide">
             <div style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center;">
                 <h1>ONNEA TENTTIIN!</h1>
-                <h2 style="border:none; color: var(--success);">موفق باشید!</h2>
+                <h2 style="border:none; color: var(--success);">مرور کامل شد </h2>
                 <div class="gold-box">
-                    <i class="fa-solid fa-check"></i> مرور کامل شد <i class="fa-solid fa-check"></i>
+                    <i class="fa-solid fa-check"></i> موفق باشید! <i class="fa-solid fa-check"></i>
                 </div>
             </div>
         </div>
@@ -625,6 +834,7 @@
         function updateCounter() {
             const slideHeight = container.clientHeight;
             if (slideHeight > 0) {
+                // Use 0.5 offset to determine the slide when it's halfway in view
                 const index = Math.round(container.scrollTop / slideHeight);
                 const safeIndex = Math.max(0, Math.min(index, slides.length - 1));
                 currentSpan.textContent = safeIndex + 1;
