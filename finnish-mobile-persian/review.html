@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>مرور جامع فنلاندی ۲ (Kertaus)</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* THEME: DEEP SPACE & NEON (Copied from source files) */
+        :root {
+            --bg: #080810;
+            --card-bg: rgba(25, 25, 40, 0.95);
+            --gold: #FFD700;
+            --neon: #00D4FF;
+            --purple: #BC13FE;
+            --text: #F0F0F0;
+            --subtext: #B0B0B0;
+            --success: #00FF9D;
+            --error: #FF4B4B;
+            --example: #FF00D4;
+            --rule-bg: rgba(0, 212, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            overflow: hidden;
+            min-height: 100dvh;
+        }
+
+        /* MAIN SCROLL CONTAINER */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            /* Fallback */
+            height: 100dvh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* SLIDE LAYOUT */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            /* Fallback */
+            height: 100dvh;
+            scroll-snap-align: start;
+            padding: 80px 20px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: transparent;
+            position: relative;
+            overflow-y: auto;
+            /* MAKES SLIDES SCROLLABLE */
+            border-bottom: 1px solid rgba(34, 34, 34, 0.5);
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 2em;
+            color: var(--neon);
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #fff;
+            margin: 20px 0 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 900px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 6px solid var(--neon);
+            border-left: none;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+        }
+
+        /* SPECIAL BOXES */
+        .gold-box {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            font-weight: 800;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 900px;
+            font-size: 1.2em;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        /* TYPES OF SLIDES styling */
+        .slide-funfact h2 {
+            color: var(--purple);
+            border-color: var(--purple);
+        }
+
+        .slide-funfact .card {
+            border-right-color: var(--purple);
+            background: rgba(40, 10, 50, 0.8);
+        }
+
+        .slide-example h2 {
+            color: var(--example);
+            border-color: var(--example);
+        }
+
+        .slide-example .card {
+            border-right-color: var(--example);
+            background: rgba(50, 10, 30, 0.8);
+        }
+
+        /* RULE BOXES (Why/When/How) */
+        .rule-block {
+            background: var(--rule-bg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .rule-title {
+            color: var(--gold);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            display: block;
+            letter-spacing: 0;
+        }
+
+        /* DETAILED TABLES */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 15px 0;
+            font-size: 1em;
+        }
+
+        th {
+            background: #222;
+            color: var(--gold);
+            padding: 12px;
+            text-align: right;
+            border-bottom: 2px solid var(--gold);
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: 0.9em;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+            color: var(--text);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: var(--neon);
+            text-decoration-thickness: 2px;
+        }
+
+        /* NAVIGATION */
+        .nav-overlay {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: auto;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--neon);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: var(--neon);
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .toc-btn {
+            background: #151520;
+            border: 1px solid #444;
+            color: var(--text);
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .toc-btn:hover {
+            border-color: var(--neon);
+            color: var(--neon);
+            transform: translateY(-2px);
+            background: #202030;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            background: #333;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-overlay">
+        <i class="fa-solid fa-layer-group"></i> اسلاید <span id="currentSlide">1</span> <a href="#list">/</a> <span
+            id="totalSlides">--</span>
+    </div>
+
+    <div class="container" id="mainContainer">
+
+        <div class="slide" style="justify-content: center;">
+            <h1>🇫🇮 KERTÄUS</h1>
+            <h2 style="border:none; font-size: 2.5em; color: #fff;">مرور جامع فنلاندی ۲</h2>
+            <div class="image-placeholder" style="height: 350px; border-color: var(--purple);">
+                [تصویر ۱: بابا نوئل و گوزن شمالی در یک منظره برفی. (اسلاید ۱ پاورپوینت)]
+            </div>
+            <div class="gold-box">
+                <i class="fa-solid fa-star"></i> آمادگی برای آزمون (Exam Prep) <i class="fa-solid fa-star"></i>
+            </div>
+            <p style="margin-top:30px; font-size:3em; animation: bounce 2s infinite;">👇</p>
+        </div>
+
+        <div class="slide" id="list">
+            <h2>سرفصل‌های آزمون (Kertaus)</h2>
+            <div class="card">
+                <div class="rule-block" style="background: rgba(255, 215, 0, 0.1);">
+                    <span class="rule-title" style="color:var(--error);"><i class="fa-solid fa-exclamation-triangle"></i> دستورالعمل‌های آزمون</span>
+                    <p>آزمون چند گزینه‌ای است و شامل ۶۷ سؤال و حداکثر ۱۰۰ امتیاز در ۷۵ دقیقه می‌باشد. آمادگی قبلی ضروری است. (اسلاید ۴، ۵، ۶، ۷)</p>
+                </div>
+                <h3>موضوعات کلیدی برای مرور</h3>
+                <div class="toc-grid">
+                    <a href="all.html#verb3" class="toc-btn">۱. فعل نوع ۳ (Verb Type 3)</a>
+                    <a href="all.html#verb4" class="toc-btn">۲. فعل نوع ۴ (Verb Type 4)</a>
+                    <a href="all.html#verb5" class="toc-btn">۳. فعل نوع ۵ (Verb Type 5)</a>
+                    <a href="all.html#nouns" class="toc-btn">۴. انواع کلمات (-nen, -e, -in)</a>
+                    <a href="all.html#cases" class="toc-btn">۵. حالت‌های مکانی (Local Cases)</a>
+                    <a href="all.html#partitive" class="toc-btn">۶. حالت پارتیتیو (Partitive Case)</a>
+                    <a href="all.html#describe" class="toc-btn">۷. صفت‌ها و لغات (Adjectives/Vocab)</a>
+                    <a href="all.html#demonstrative-imperative-review" class="toc-btn">۸. وجه امری (Imperative)</a>
+                    <a href="all.html#kpt" class="toc-btn">۹. درجه‌بندی صامت‌ها (KPT-change)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="partitive-review-2">
+            <h2>پارتیتیو: ضمایر و کاربرد (Partitiivi)</h2>
+            <div class="card">
+                <h3>ضمایر شخصی در حالت پارتیتیو (Personal pronouns)</h3>
+                <table>
+                    <thead>
+                        <tr><th>فنلاندی</th><th>فارسی</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td dir="ltr">minua (mua)</td><td>من را</td></tr>
+                        <tr><td dir="ltr">sinua (sua)</td><td>تو را</td></tr>
+                        <tr><td dir="ltr">häntä (sitä)</td><td>او را (اشیا/حیوانات)</td></tr>
+                        <tr><td dir="ltr">meitä</td><td>ما را</td></tr>
+                        <tr><td dir="ltr">teitä</td><td>شما را</td></tr>
+                        <tr><td dir="ltr">heitä (niitä)</td><td>آنها را</td></tr>
+                    </tbody>
+                </table>
+                <div class="rule-block">
+                    <span class="rule-title">نحوه تشکیل (Partitiivin muodostaminen)</span>
+                    <p>پارتیتیو معادل دقیقی در فارسی یا انگلیسی ندارد. اغلب برای مفعول جمله به کار می‌رود. (اسلاید ۳)
+                    </p>
+                    <div class="image-placeholder" style="height: 150px; border-color: var(--neon);">
+                        [تصویر ۲: نمودار تشکیل پارتیتیو (Partitiivin muodostaminen). (اسلاید ۲ پاورپوینت)]
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-list-check"></i> کاربرد پارتیتیو (Milloin käytät partitiivia)</h2>
+            <div class="card">
+                <p>تمامی کلمات در یک عبارت (مثلاً عبارت اسمی) به حالت پارتیتیو تبدیل می‌شوند: <b dir="ltr">Rakastan tuota tyttöä. / Ajan sinistä autoa.</b></p>
+                <div class="rule-block">
+                    <span class="rule-title">موارد اصلی استفاده</span>
+                    <ul>
+                        <li><b dir="ltr">بعد از اعداد:</b> (۲+) <span dir="ltr">viisi kirjaa</span></li>
+                        <li><b dir="ltr">بعد از کمیت‌سنج‌ها:</b> <span dir="ltr">monta kirjaa</span></li>
+                        <li><b dir="ltr">کلمات مادی و غیرقابل شمارش:</b> <span dir="ltr">kahvia, mehua, leipää, rahaa</span></li>
+                        <li><b dir="ltr">جملات منفی:</b> <span dir="ltr">Minulla ei ole autoa.</span></li>
+                        <li><b dir="ltr">عبارات ناتمام/بی‌نتیجه (Irresultative):</b> <span dir="ltr">Luen kirjaa.</span> (مقابل <span dir="ltr">Luen kirjan.</span>)</li>
+                        <li><b dir="ltr">با افعال پارتیتیو (Partitive Verbs):</b> <span dir="ltr">rakastaa, odottaa, pelata, ajaa, opiskella, auttaa</span> (اسلاید ۴)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="verb-review">
+            <h2><i class="fa-solid fa-terminal"></i> مرور افعال (Verbityypit 1-5)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">طبقه بندی افعال (Muista astevaihtelu!)</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr><th>نوع</th><th>پایانه (Esim.)</th><th>مثال</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>۱</td><td dir="ltr">vowel + -a/ä</td><td dir="ltr">asua, puhua, maksaa</td></tr>
+                        <tr><td>۲</td><td dir="ltr">-da/dä</td><td dir="ltr">käydä, voida, syödä</td></tr>
+                        <tr><td>۳</td><td dir="ltr">-lla/-nnä/-stä</td><td dir="ltr">tulla, mennä, nousta</td></tr>
+                        <tr><td>۴</td><td dir="ltr">-ata/-uta/-ytä</td><td dir="ltr">osata, avata, siivota</td></tr>
+                        <tr><td>۵</td><td dir="ltr">-ita/itä</td><td dir="ltr">tarvita, häiritä, valita</td></tr>
+                    </tbody>
+                </table>
+                <div class="image-placeholder" style="height: 350px;">
+                    [تصویر ۶۰: جدول صرف فعل نوع ۱ (LEIKKIÄ, HYPPIÄ, KÄYTTÄÄ, KULKEA). (اسلاید ۵ پاورپوینت)]
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="kpt-review-2">
+            <h2><i class="fa-solid fa-arrows-left-right"></i> درجه‌بندی صامت‌ها (KPT)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">قوی (Vahva) به ضعیف (Heikko)</span>
+                    <p>هنگام اضافه شدن پسوندها (مانند Genitive یا Inessive) این تغییر اتفاق می‌افتد.</p>
+                </div>
+                <div class="image-placeholder" style="height: 300px; border-color: var(--purple);">
+                    [تصویر ۶۲: جدول تغییرات صامت‌های KPT (kk->k, p->v, t->d, k->-, nk->ng, mp->mm, etc.). (اسلاید ۶ پاورپوینت)]
+                </div>
+                <div class="rule-block" style="background: rgba(255, 0, 212, 0.1);">
+                    <span class="rule-title" style="color:var(--example);"><i class="fa-solid fa-sync-alt"></i> تغییر برعکس در افعال ۳ و ۴</span>
+                    <p>در افعال نوع ۳ و ۴، درجه‌بندی صامت‌ها **برعکس** اتفاق می‌افتد. (مصدر قوی است و Minä/Sinä ضعیف.)</p>
+                    <p dir="ltr">KUUNNELLA: Minä kuun<b>t</b>elen (ضعیف) - He kuun<b>tel</b>evat (قوی)</p>
+                    <p dir="ltr">MITATA: Minä mit<b>t</b>aan (ضعیف) - He mit<b>taav</b>at (قوی)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="cases-review-2">
+            <h2><i class="fa-solid fa-map-marker-alt"></i> حالت‌های مکانی (Paikallissijat)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">گروه‌بندی حالت‌ها</span>
+                    <p>حالت‌های مکانی مکان، یا حرکت به/از یک مکان را بیان می‌کنند و به دو گروه تقسیم می‌شوند:</p>
+                    <ul>
+                        <li><b dir="ltr">S-Cases (داخلی):</b> <span dir="ltr">inessive, elative, illative</span> (داخلی یا لمس کردن چیزی)</li>
+                        <li><b dir="ltr">L-Cases (خارجی):</b> <span dir="ltr">adessive, ablative, allative</span> (روی یا نزدیک چیزی)</li>
+                    </ul>
+                    <div class="image-placeholder" style="height: 250px; border-color: var(--neon);">
+                        [تصویر ۷۲: نمودار داخلی/خارجی (خانه: taloSSA/taloSTA/taloON و سقف: katoLLA/katoLLE/katoLTA). (اسلاید ۶۴/۷۲ پاورپوینت)]
+                    </div>
+                </div>
+                <h3>حالت‌های داخلی (Sisäpaikallissijat)</h3>
+                <div class="image-placeholder" style="height: 200px;">
+                    [تصویر ۷۸: جدول حالت‌های داخلی (Inessiivi, Elatiivi, Illatiivi) با پایانه‌ها و مثال‌ها. (اسلاید ۷۸ پاورپوینت)]
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2><i class="fa-solid fa-table"></i> حالت‌های مکانی (ادامه)</h2>
+            <div class="card">
+                <h3>حالت‌های خارجی (Ulkopaikallissijat)</h3>
+                <div class="image-placeholder" style="height: 200px;">
+                    [تصویر ۸۱: جدول حالت‌های خارجی (Adessiivi, Ablatiivi, Allatiivi) با پایانه‌ها و مثال‌ها. (اسلاید ۸۱ پاورپوینت)]
+                </div>
+            </div>
+            <div class="card slide-example">
+                <h3><i class="fa-solid fa-car"></i> مثال‌های کاربردی</h3>
+                <p dir="ltr">Kirja on pöydä<b>llä</b>. (کتاب روی میز است.)</p>
+                <p dir="ltr">Tulen asema<b>lta</b>. (از ایستگاه می‌آیم.)</p>
+                <p dir="ltr">Menen kouluu<b>n</b>. (به مدرسه می‌روم.)</p>
+            </div>
+        </div>
+
+        <div class="slide" id="sentences-review-2">
+            <h2><i class="fa-solid fa-key"></i> ساختار جملات (Omistus- ja Eksistentiaali)</h2>
+            <div class="card">
+                <h3>۱. جمله مالکیتی (Omistuslause)</h3>
+                <p>برای بیان "کسی چیزی دارد یا ندارد" به کار می‌رود. (اسلاید ۸۲)</p>
+                <p dir="ltr">Owner (Adessive) + on/ei ole + Subject (Partitive/Nominative)</p>
+                <p dir="ltr"><b>Tytö<u>llä</u> <u>on</u> hevonen.</b> (دختر اسب دارد.)</p>
+                <p dir="ltr"><b>Häne<u>llä</u> <u>ei ole</u> koira<u>a</u>.</b> (او سگ ندارد - مفعول در پارتیتیو)</p>
+                <div class="image-placeholder" style="height: 250px; border-color: var(--example);">
+                    [تصویر ۹۱: دختربچه در حال بغل کردن سگ (مالکیت). (اسلاید ۹۱ پاورپوینت)]
+                </div>
+            </div>
+            <div class="card">
+                <h3>۲. جمله وجودی (Eksistentiaalilause)</h3>
+                <p>برای بیان "چیزی جایی هست" به کار می‌رود. (اسلاید ۹۴)</p>
+                <p dir="ltr">Location (Case) + on/ei ole + Subject</p>
+                <p dir="ltr"><b>Huonee<u>ssa</u> <u>on</u> sänky.</b> (در اتاق یک تخت هست.)</p>
+                <p dir="ltr"><b>Pöydä<u>llä</u> <u>on</u> kirja.</b> (یک کتاب روی میز هست.)</p>
+                <div class="image-placeholder" style="height: 250px; border-color: var(--example);">
+                    [تصویر ۱۰۱: گل روی کتاب (وجودی). (اسلاید ۱۰۱ پاورپوینت)]
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="demo-imp-review-2">
+            <h2><i class="fa-solid fa-circle-right"></i> ضمایر اشاره و وجه امری</h2>
+            <div class="card">
+                <h3>ضمایر اشاره (Demonstratiivipronominit)</h3>
+                <p>برای ارجاع به شخص، شیء یا موقعیتی که در متن قابل تشخیص است، استفاده می‌شود. (اسلاید ۱۰۵)</p>
+                <div class="image-placeholder" style="height: 300px;">
+                    [تصویر ۱۰۸: جدول ضمایر اشاره (tämä, tuo, se) در حالت‌های مختلف. (اسلاید ۱۰۸ پاورپوینت)]
+                </div>
+            </div>
+            <div class="card">
+                <h3>وجه امری (Imperatiivi)</h3>
+                <p>برای بیان ضرورت، دستور، هشدار، درخواست و منع به کار می‌رود. (اسلاید ۱۹۵)</p>
+                <div class="rule-block">
+                    <span class="rule-title">ساختار</span>
+                    <p dir="ltr">**فرم مثبت:** حذف شناسه شخصی <b dir="ltr">-n</b> از فرم Minä. (Syödä → Syön → **Syö!**)</p>
+                    <p dir="ltr">**فرم منفی:** <b dir="ltr">Älä +</b> فعل امری (**Älä syö!**)</p>
+                </div>
+                <p dir="ltr">مثال‌ها: Tule!, Mene!, Varo autoa!, Sekoita ainekset hyvin.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="nouns-review-2">
+            <h2><i class="fa-solid fa-puzzle-piece"></i> مرور انواع اسم (Sanatyypit)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">انواع اسم با پایانه‌های خاص قبل از افزودن پسوند ریشه را تغییر می‌دهند.</span>
+                </div>
+                <h3>کلمات با پایانه‌ <b dir="ltr">-e</b> (مثل lääke)</h3>
+                <p>در هنگام صرف، <b dir="ltr">-e</b> به <b dir="ltr">-ee</b> یا <b dir="ltr">-kke</b> (با تغییر KPT معکوس) تبدیل می‌شود. (اسلاید ۱۱۱، ۱۱۴)</p>
+                <div class="image-placeholder" style="height: 150px;">
+                    [تصویر ۱۱۱: جدول صرف اسم -e (lääke) با تغییر kk. (اسلاید ۱۱۱ پاورپوینت)]
+                </div>
+                <h3>کلمات با پایانه <b dir="ltr">-nen</b> (مثل nainen)</h3>
+                <p>پایانه <b dir="ltr">-nen</b> به ریشه <b dir="ltr">-se</b> تغییر می‌کند. (اسلاید ۱۳۵)</p>
+                <div class="image-placeholder" style="height: 250px;">
+                    [تصویر ۱۳۵: جدول صرف اسم -nen (nainen). (اسلاید ۱۳۵ پاورپوینت)]
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2><i class="fa-solid fa-mobile-alt"></i> انواع اسم (-in و -i)</h2>
+            <div class="card">
+                <h3>کلمات با پایانه <b dir="ltr">-in</b> (مثل puhelin)</h3>
+                <p>پایانه <b dir="ltr">-in</b> به ریشه <b dir="ltr">-ime</b> تغییر می‌کند. (اسلاید ۱۴۱)</p>
+                <div class="image-placeholder" style="height: 250px;">
+                    [تصویر ۱۴۱: جدول صرف اسم -in (puhelin). (اسلاید ۱۴۱ پاورپوینت)]
+                </div>
+                <h3>کلمات با پایانه <b dir="ltr">-i</b> (جدید و قدیمی)</h3>
+                <p><b>کلمات جدید/قرضی</b> (<b>kahvi</b>): به طور معمول صرف می‌شوند. <b dir="ltr">kahvi + ssa</b> = <b dir="ltr">kahvissa</b>. (اسلاید ۱۷۴)</p>
+                <p><b>کلمات قدیمی/طبیعت</b> (<b>järvi</b>): قبل از افزودن پسوند، <b dir="ltr">-i</b> به <b dir="ltr">-e</b> تغییر می‌کند. (اسلاید ۱۸۷)</p>
+                <div class="image-placeholder" style="height: 250px;">
+                    [تصویر ۱۸۷: جدول صرف کلمات i- قدیمی (joki, järvi, kieli, kivi, käsi, lehti, nimi, pieni, suomi, suuri). (اسلاید ۱۸۷ پاورپوینت)]
+                </div>
+                <div class="image-placeholder" style="height: 100px;">
+                    [تصویر ۱۹۲: جدول استثنائات i- (lapsi, yksi, kaksi, meri, vesi). (اسلاید ۱۹۲ پاورپوینت)]
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" id="vocab-review-2">
+            <h2><i class="fa-solid fa-tshirt"></i> مرور لغات: لباس، صفت‌ها و آب و هوا</h2>
+            <div class="card">
+                <h3>لباس‌ها (Vaatteet) و متعلقات</h3>
+                <p dir="ltr">استفاده از ساختار مالکیت <b>Hänellä on...</b></p>
+                <div class="image-placeholder" style="height: 300px; border-color: var(--neon);">
+                    [تصویر ۲۰۳: تصاویر لباس‌ها و متعلقات (پیراهن، شلوار جین، دامن، کت، عینک، چتر، کلاه). (اسلاید ۲۰۳ پاورپوینت)]
+                </div>
+                <p dir="ltr">مثال: <b dir="ltr">Minulla on keltainen t-paita.</b> (من یک تی‌شرت زرد دارم.)</p>
+            </div>
+            <div class="card">
+                <h3>صفت‌ها (Adjektiivit)</h3>
+                <p>صفت‌ها باید از لحاظ حالت و تعداد با اسم خود مطابقت داشته باشند.</p>
+                <div class="image-placeholder" style="height: 200px; border-color: var(--gold);">
+                    [تصویر ۲۰۸: صفت‌ها و متضادهای رایج (hyvä/huono, pitkä/lyhyt, iso/pieni, kuuma/kylmä). (اسلاید ۲۰۸ پاورپوینت)]
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2><i class="fa-solid fa-home"></i> مرور لغات: خانه و وسایل نقلیه</h2>
+            <div class="card">
+                <h3>واژگان خانه، اتاق‌ها و مبلمان (Huoneet, Huonekalut)</h3>
+                <div class="image-placeholder" style="height: 150px;">
+                    [تصویر ۲۱۷: تصویر مبلمان و لوازم (تخت، میز، کمد، لامپ، سینی، فنجان). (اسلاید ۲۱۷ پاورپوینت)]
+                </div>
+                <p dir="ltr">مثال: <b>Huonee<u>ssa</u> <u>on</u> sänky.</b> (در اتاق یک تخت هست.)</p>
+            </div>
+            <div class="card">
+                <h3>وسایل نقلیه (Kulkuvälineet)</h3>
+                <p>برای بیان وسیله نقلیه از حالت Adessive (<b>-lla/-llä</b>) استفاده می‌شود. (اسلاید ۲۱۸)</p>
+                <div class="image-placeholder" style="height: 250px; border-color: var(--example);">
+                    [تصویر ۲۲۴: تصاویر وسایل نقلیه (ماشین، قطار، دوچرخه، اتوبوس، هواپیما). (اسلاید ۲۲۴ پاورپوینت)]
+                </div>
+                <p dir="ltr">مثال: <b dir="ltr">Matkustan lentokone<u>ella</u> Suomeen.</b> (با هواپیما به فنلاند سفر می‌کنم.)</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-cloud-sun-rain"></i> مرور لغات: آب و هوا (Sää)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">ساختار آب و هوا (On + Partitive)</span>
+                    <p>هنگام توصیف شرایط آب و هوایی، از ساختار وجودی (Eksistentiaalilause) استفاده می‌شود و صفت در حالت **پارتیتیو** می‌آید.</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr><th>فنلاندی</th><th>فارسی</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td dir="ltr">Millainen sää on?</td><td>آب و هوا چطور است؟</td></tr>
+                        <tr><td dir="ltr">On kylmää/lämmintä.</td><td>هوا سرد/گرم است.</td></tr>
+                        <tr><td dir="ltr">On sateista/aurinkoista.</td><td>هوا بارانی/آفتابی است.</td></tr>
+                        <tr><td dir="ltr">Sataa vettä/lunta.</td><td>باران/برف می‌بارد.</td></tr>
+                    </tbody>
+                </table>
+                <div class="image-placeholder" style="height: 250px; border-color: var(--purple);">
+                    [تصویر ۲۳۷: تصویر جاده برفی و ماشین‌ها (شرایط آب و هوا). (اسلاید ۲۳۷ پاورپوینت)]
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+                <h1>ONNEA TENTTIIN!</h1>
+                <h2 style="border:none; color: var(--success);">موفق باشید!</h2>
+                <div class="gold-box">
+                    <i class="fa-solid fa-check"></i> مرور کامل شد <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('mainContainer');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const totalSpan = document.getElementById('totalSlides');
+        const currentSpan = document.getElementById('currentSlide');
+
+        // Set total count
+        totalSpan.textContent = slides.length;
+
+        function updateCounter() {
+            const slideHeight = container.clientHeight;
+            if (slideHeight > 0) {
+                const index = Math.round(container.scrollTop / slideHeight);
+                const safeIndex = Math.max(0, Math.min(index, slides.length - 1));
+                currentSpan.textContent = safeIndex + 1;
+            }
+        }
+
+        container.addEventListener('scroll', updateCounter);
+        updateCounter(); // Initial check
+    </script>
+
+</body>
+
+</html>
