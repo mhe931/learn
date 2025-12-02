@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>راهنمای جامع فنلاندی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* THEME: DEEP SPACE & NEON */
+        :root {
+            --bg: #080810;
+            --card-bg: rgba(25, 25, 40, 0.95);
+            --gold: #FFD700;
+            --neon: #00D4FF;
+            --purple: #BC13FE;
+            --text: #F0F0F0;
+            --subtext: #B0B0B0;
+            --success: #00FF9D;
+            --error: #FF4B4B;
+            --example: #FF00D4;
+            --rule-bg: rgba(0, 212, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            overflow: hidden;
+            min-height: 100dvh;
+        }
+
+        /* MAIN SCROLL CONTAINER */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            /* Fallback */
+            height: 100dvh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        /* SLIDE LAYOUT */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            /* Fallback */
+            height: 100dvh;
+            scroll-snap-align: start;
+            padding: 80px 20px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: transparent;
+            position: relative;
+            overflow-y: auto;
+            /* MAKES SLIDES SCROLLABLE */
+            border-bottom: 1px solid rgba(34, 34, 34, 0.5);
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 2em;
+            color: var(--neon);
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: #fff;
+            margin: 20px 0 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 900px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 6px solid var(--neon);
+            border-left: none;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            flex-shrink: 0;
+        }
+
+        /* SPECIAL BOXES */
+        .gold-box {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+            font-weight: 800;
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 900px;
+            font-size: 1.2em;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        /* TYPES OF SLIDES styling */
+        .slide-funfact h2 {
+            color: var(--purple);
+            border-color: var(--purple);
+        }
+
+        .slide-funfact .card {
+            border-right-color: var(--purple);
+            background: rgba(40, 10, 50, 0.8);
+        }
+
+        .slide-example h2 {
+            color: var(--example);
+            border-color: var(--example);
+        }
+
+        .slide-example .card {
+            border-right-color: var(--example);
+            background: rgba(50, 10, 30, 0.8);
+        }
+
+        /* RULE BOXES (Why/When/How) */
+        .rule-block {
+            background: var(--rule-bg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .rule-title {
+            color: var(--gold);
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            display: block;
+            letter-spacing: 0;
+        }
+
+        /* VISUAL GRID (Pictures/Emojis) */
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .visual-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visual-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .word {
+            font-weight: 700;
+            color: var(--neon);
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .trans {
+            font-size: 0.9em;
+            color: var(--subtext);
+            font-style: italic;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        .ex-text {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ex-finnish {
+            color: #fff;
+            font-weight: bold;
+            direction: ltr;
+            text-align: right;
+        }
+
+        .ex-english {
+            color: var(--subtext);
+            font-size: 0.85em;
+            margin-top: 4px;
+        }
+
+        /* DETAILED TABLES */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 15px 0;
+            font-size: 1em;
+        }
+
+        th {
+            background: #222;
+            color: var(--gold);
+            padding: 12px;
+            text-align: right;
+            border-bottom: 2px solid var(--gold);
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: 0.9em;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #333;
+            color: var(--text);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .highlight {
+            color: var(--gold);
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: var(--neon);
+            text-decoration-thickness: 2px;
+        }
+
+        /* NAVIGATION */
+        .nav-overlay {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: auto;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid var(--neon);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: var(--neon);
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .toc-btn {
+            background: #151520;
+            border: 1px solid #444;
+            color: var(--text);
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .toc-btn:hover {
+            border-color: var(--neon);
+            color: var(--neon);
+            transform: translateY(-2px);
+            background: #202030;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav-overlay">
+        <i class="fa-solid fa-layer-group"></i> اسلاید <span id="currentSlide">1</span> <a href="index.html">/</a> <span
+            id="totalSlides">--</span>
+    </div>
+
+    <div class="container" id="mainContainer">
+        <div class="slide" id="list">
+            <h2>فهرست مطالب</h2>
+            <div class="toc-grid">
+                <div
+                    style="grid-column:span 2; text-align:center; color:var(--gold); margin-top:20px; font-family:'Vazirmatn'; letter-spacing:0;">
+                    بخش ۲: ساختارها</div>
+                <a href="#partitive" class="toc-btn">۷. حالت پارتیتیو</a>
+                <a href="#kpt" class="toc-btn">۸. درجه‌بندی صامت‌ها (KPT)</a>
+                <a href="#cases" class="toc-btn">۹. حالت‌های مکانی</a>
+                <a href="#sentences" class="toc-btn">۱۰. انواع جملات</a>
+                <a href="#verb4" class="toc-btn">۱۱. فعل نوع ۴ (-ata)</a>
+                <a href="#nouns" class="toc-btn">۱۲. انواع اسم‌ها</a>
+                <a href="#verb5" class="toc-btn">۱۴. فعل نوع ۵ (-ita)</a>
+            </div>
+        </div>
+        <div class="slide" id="partitive">
+            <h2>۷. پارتیتیو (PARTITIIVI)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">❓ چیست؟</span>
+                    <p>پارتیتیو یک حالت گرامری است که برای مقادیر نامشخص استفاده می‌شود.</p>
+                </div>
+                <div class="rule-block">
+                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
+                    <ul style="list-style:none;">
+                        <li>۱. <b>اعداد (۲+):</b> <span dir="ltr">Kaksi auto<b>a</b>.</span></li>
+                        <li>۲. <b>منفی کردن:</b> <span dir="ltr">En puhu suome<b>a</b>.</span></li>
+                        <li>۳. <b>غیرقابل شمارش:</b> <span dir="ltr">Juon kahvi<b>a</b>.</span></li>
+                        <li>۴. <b>عمل در حال انجام:</b> <span dir="ltr">Luen kirja<b>a</b>.</span></li>
+                    </ul>
+                </div>
+                <h3>پسوندها</h3>
+                <p dir="ltr"><b>-a / -ä</b> (1 vowel), <b>-ta / -tä</b> (2 vowels/consonant), <b>-tta / -ttä</b>
+                    (e-words).</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-list-ol"></i> مثال ۱: اعداد و کمیت</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🚗</span>
+                        <span class="word" dir="ltr">Yksi auto</span>
+                        <span class="trans">یک ماشین (Nom)</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">🚗🚗</span>
+                        <span class="word" dir="ltr">Kaksi autoa</span>
+                        <span class="trans">دو ماشین (Partitive)</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">🐕🐕🐕</span>
+                        <span class="word" dir="ltr">Kolme koiraa</span>
+                        <span class="trans">سه سگ (Partitive)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-ban"></i> مثال ۲: منفی‌ها </h2>
+            <div class="card">
+                <div class="gold-box">جملات منفی = پارتیتیو!</div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Minulla on auto.</span>
+                    <span class="ex-english">من ماشین دارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Minulla <b>ei ole</b> auto<b>a</b>.</span>
+                    <span class="ex-english">من ماشین ندارم.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-book"></i> مثال ۳: خواندن</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Luen kirjaa.</span>
+                    <span class="ex-english">کتاب می‌خوانم (در حال).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">En lue lehteä.</span>
+                    <span class="ex-english">روزنامه نمی‌خوانم.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: یک جمله منفی بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-water"></i> مثال ۴: مایعات</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">💧</span>
+                        <span class="word" dir="ltr">Juo vettä.</span>
+                        <span class="trans">آب بنوش.</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">🍺</span>
+                        <span class="word" dir="ltr">Oluen juominen.</span>
+                        <span class="trans">نوشیدن آبجو (نامشخص).</span>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "شیر" را در پارتیتیو بگذارید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-group-arrows-rotate"></i> مثال ۵: تمرین</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Kaksi kissaa juoksee.</span>
+                    <span class="ex-english">دو گربه می‌دوند.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Ei ole rahaa.</span>
+                    <span class="ex-english">پولی نیست.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "چهار دوست" را بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-glass-water"></i> دانستنی: "مقداری"</h2>
+            <div class="card">
+                <h3>مایعات غیرقابل شمارش</h3>
+                <p><i dir="ltr">Juon kahvia</i> به معنای واقعی کلمه یعنی "من (مقداری) قهوه می‌نوشم". اگر از حالت
+                    Genitive استفاده کنید <i dir="ltr">Juon kahvin</i>، یعنی شما <b>کل</b> فنجان را می‌نوشید و تمام
+                    می‌کنید. پارتیتیو دلالت بر مقدار نامشخص یا یک فرآیند در حال انجام دارد.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="kpt">
+            <h2>۸. درجه‌بندی صامت‌ها (ASTEVAIHTELU)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">❓ چرا؟</span>
+                    <p>برای اینکه وقتی پسوندهایی مثل -ssa یا -n اضافه می‌کنیم، تلفظ کلمات آسان‌تر شود.</p>
+                </div>
+                <div class="rule-block">
+                    <span class="rule-title">🛠️ چگونه تغییر می‌کند</span>
+                    <table>
+                        <tr>
+                            <th>قوی</th>
+                            <th>ضعیف</th>
+                            <th>مثال</th>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">KK</td>
+                            <td dir="ltr">K</td>
+                            <td dir="ltr">Pankki -> Pankissa</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">PP</td>
+                            <td dir="ltr">P</td>
+                            <td dir="ltr">Kauppa -> Kaupassa</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">TT</td>
+                            <td dir="ltr">T</td>
+                            <td dir="ltr">Tyttö -> Tytön</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">K</td>
+                            <td dir="ltr">-</td>
+                            <td dir="ltr">Ruoka -> Ruoan</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">P</td>
+                            <td dir="ltr">V</td>
+                            <td dir="ltr">Leipä -> Leivän</td>
+                        </tr>
+                        <tr>
+                            <td dir="ltr">T</td>
+                            <td dir="ltr">D</td>
+                            <td dir="ltr">Pöytä -> Pöydällä</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-arrow-down-short-wide"></i> مثال ۱: دوتایی به تکی</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Pankki</b> (بانک)</span>
+                    <span class="ex-english">Olen pan<b>k</b>issa. (kk -> k)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Kaappi</b> (کمد)</span>
+                    <span class="ex-english">Kaapissa. (pp -> p)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-feather"></i> مثال ۲: نرم شدن</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Helsinki</b></span>
+                    <span class="ex-english">Asun Helsi<b>ng</b>issä. (nk -> ng)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Ranta</b> (ساحل)</span>
+                    <span class="ex-english">Ra<b>nn</b>alla. (nt -> nn)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-bread-slice"></i> مثال ۳: غذا</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Ruoka</b></span>
+                    <span class="ex-english">Syön ruo<a>n</a>. (k -> حذف)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Leipä</b></span>
+                    <span class="ex-english">Leivä<n> (p -> v)</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "میز" را در حالت مکانی بگذارید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-girl"></i> مثال ۴: افراد</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Tyttö</b></span>
+                    <span class="ex-english">Tytö<n> (tt -> t)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Pöytä</b></span>
+                    <span class="ex-english">Pöy<d>ällä (t -> d)</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: یک کلمه با KK تغییر دهید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-city"></i> مثال ۵: مکان‌ها</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Kaupungissa kävelen.</span>
+                    <span class="ex-english">در شهر قدم می‌زنم (pp -> p).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Koulun lähellä.</span>
+                    <span class="ex-english">نزدیک مدرسه (k -> حذف).</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "دختر" را در genitive بگذارید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-music"></i> دانستنی: ریتم</h2>
+            <div class="card">
+                <h3>چرا تغییر؟</h3>
+                <p>سعی کنید بگویید <i dir="ltr">"Pankkissa"</i>. 'k' دوبل مثل یک ترمز در دهان شما عمل می‌کند. <i
+                        dir="ltr">"Pankissa"</i> به نرمی جریان دارد. فنلاندی از کلمات "سکته‌دار" متنفر است و عاشق ریتم
+                    است!</p>
+            </div>
+        </div>
+
+        <div class="slide" id="cases">
+            <h2>۹. حالت‌های مکانی (PAIKALLISSIJAT)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">❓ چیستند؟</span>
+                    <p>پسوندهایی که جایگزین "در"، "از"، "به"، "روی" می‌شوند.</p>
+                </div>
+                <h3>جدول</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>معنی</th>
+                            <th>داخلی (جعبه)</th>
+                            <th>خارجی (سطح)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Missä?</b> (کجا؟)</td>
+                            <td dir="ltr">-ssa (In)</td>
+                            <td dir="ltr">-lla (On)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mistä?</b> (از کجا؟)</td>
+                            <td dir="ltr">-sta (From in)</td>
+                            <td dir="ltr">-lta (From on)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mihin?</b> (به کجا؟)</td>
+                            <td dir="ltr">-Vn (Into)</td>
+                            <td dir="ltr">-lle (Onto)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-box-open"></i> مثال ۱: داخلی (TALO)</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item"><span class="word" dir="ltr">Talossa</span><span class="trans">در
+                            خانه</span>
+                    </div>
+                    <div class="visual-item"><span class="word" dir="ltr">Talosta</span><span class="trans">از
+                            خانه</span>
+                    </div>
+                    <div class="visual-item"><span class="word" dir="ltr">Taloon</span><span class="trans">به درون
+                            خانه</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-table"></i> مثال ۲: خارجی (PÖYTÄ)</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item"><span class="word" dir="ltr">Pöydällä</span><span class="trans">روی
+                            میز</span>
+                    </div>
+                    <div class="visual-item"><span class="word" dir="ltr">Pöydältä</span><span class="trans">از روی
+                            میز</span>
+                    </div>
+                    <div class="visual-item"><span class="word" dir="ltr">Pöydälle</span><span class="trans">به روی
+                            میز</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-school"></i> مثال ۳: مدرسه</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Koulussa opiskelen.</span>
+                    <span class="ex-english">در مدرسه درس می‌خوانم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Koulusta tulen.</span>
+                    <span class="ex-english">از مدرسه می‌آiam.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "به مدرسه" را بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-bed"></i> مثال ۴: اتاق</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🛏️</span>
+                        <span class="word" dir="ltr">Sängyssä nukun.</span>
+                        <span class="trans">در تخت می‌خوابم.</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">🚪</span>
+                        <span class="word" dir="ltr">Ovesta menen.</span>
+                        <span class="trans">از در می‌روم.</span>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: یک جمله با "روی" بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-car"></i> مثال ۵: حمل و نقل</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Autossa istun.</span>
+                    <span class="ex-english">در ماشین می‌نشینم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Autolle pysähdyn.</span>
+                    <span class="ex-english">کنار ماشین توقف می‌کنم.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "از پارک" را توصیف کنید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-arrow-right-to-bracket"></i> دانستنی: ایلاتیو</h2>
+            <div class="card">
+                <h3>حالت "به درون"</h3>
+                <p>حالت "به درون" منحصر به فرد است. معمولاً آخرین مصوت را دو برابر می‌کنید و 'n' اضافه می‌کنید.
+                    <br><span dir="ltr">Koulu -> Kouluu -> <b>Kouluun</b></span>. <br>این تقلیدی از صدای وارد شدن عمیق
+                    به جایی است.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" id="sentences">
+            <h2>۱۰. انواع جملات (LAUSETYYPIT)</h2>
+            <div class="card">
+                <h3>۱. مالکیت (Minulla on)</h3>
+                <p>فنلاندی فعلی برای "داشتن" ندارد. استفاده کنید از: <b dir="ltr">Owner + lla + on + Item</b>.</p>
+                <p><i>تحت‌اللفظی: "نزد من سگ است."</i></p>
+
+                <h3 style="margin-top:20px;">۲. وجودی (There is)</h3>
+                <p>استفاده کنید از: <b dir="ltr">Location + on + Item</b>.</p>
+                <p><i>تحت‌اللفظی: "در خانه سونا است."</i></p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-key"></i> مثال ۱: مالکیت</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Minulla on pyörä.</span>
+                    <span class="ex-english">من دوچرخه دارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Hänellä on silmälasit.</span>
+                    <span class="ex-english">او عینک دارد.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-location-dot"></i> مثال ۲: وجودی</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Pöydällä on avaimet.</span>
+                    <span class="ex-english">کلیدها روی میز هستند.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Suomessa on paljon järviä.</span>
+                    <span class="ex-english">در فنلاند دریاچه‌های زیادی وجود دارد.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-dog"></i> مثال ۳: حیوانات</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Minulla on koira.</span>
+                    <span class="ex-english">سگ دارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Puistossa on lintuja.</span>
+                    <span class="ex-english">در پارک پرندگان هستند.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "کتاب دارم" را بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-gift"></i> مثال ۴: هدیه</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🎁</span>
+                        <span class="word" dir="ltr">Teillä on lahja.</span>
+                        <span class="trans">شما هدیه دارید.</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">🏠</span>
+                        <span class="word" dir="ltr">Talossa on sauna.</span>
+                        <span class="trans">در خانه سونا است.</span>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: یک جمله وجودی بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-money-bill"></i> مثال ۵: پول</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Minulla on rahaa.</span>
+                    <span class="ex-english">پول دارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Lompakossa on kortti.</span>
+                    <span class="ex-english">در کیف پول کارت است.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "دوستان در پارک هستند" را بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-hand-holding-heart"></i> دانستنی: مالکیت</h2>
+            <div class="card">
+                <h3>یک حالت بودن</h3>
+                <p>نبود فعل "داشتن" با زبان‌های سلتی (مثل ولزی) مشترک است. این نشان می‌دهد که مالکیت یک عمل نیست که
+                    انجام می‌دهید، بلکه حالتی از بودن است که در آن چیزها نزدیک شما هستند.</p>
+            </div>
+        </div>
+
+        <div class="slide" id="verb4">
+            <h2>۱۱. فعل نوع ۴ (-ata)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
+                    <p>افعالی که به <b dir="ltr">-ata, -ota, -uta, -ytä</b> ختم می‌شوند. <br><i
+                            dir="ltr">(Siiv<b>ota</b>, Hal<b>uta</b>, Os<b>ata</b>).</i></p>
+                </div>
+                <div class="rule-block">
+                    <span class="rule-title">🛠️ چطور صرف کنیم؟</span>
+                    <p><b dir="ltr">'t'</b> را حذف کنید. شناسه را اضافه کنید.</p>
+                    <p dir="ltr">Siivota -> Siivoa- -> Minä siivoan.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-broom"></i> مثال ۱: SIIVOTA (تمیز کردن)</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Minä siivoan keittiön.</span>
+                    <span class="ex-english">من آشپزخانه را تمیز می‌کنم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Hän siivoaa tänään.</span>
+                    <span class="ex-english">او امروز تمیزکاری می‌کند.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-heart"></i> مثال ۲: HALUTA (خواستن)</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Haluan jäätelöä.</span>
+                    <span class="ex-english">من بستنی می‌خواهم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Haluatko kahvia?</span>
+                    <span class="ex-english">آیا قهوه می‌خواهی؟</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-share"></i> مثال ۳: OSAATA (دانستن)</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Osaa suomea.</span>
+                    <span class="ex-english">فنلاندی بلد است.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Me osaamme tanssia.</span>
+                    <span class="ex-english">ما رقص بلدیم.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "می‌خواهم" را در جمع بگویید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-dice"></i> مثال ۴: PELATA (بازی کردن)</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🎲</span>
+                        <span class="word" dir="ltr">Pelaan jalkapalloa.</span>
+                        <span class="trans">فوتبال بازی می‌کنم.</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">🃏</span>
+                        <span class="word" dir="ltr">Pelaatteko korttia?</span>
+                        <span class="trans">کارت بازی می‌کنید؟</span>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: یک فعل نوع ۴ انتخاب کنید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-wrench"></i> مثال ۵: korjata (تعمیر)</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Korjaan auton.</span>
+                    <span class="ex-english">ماشین را تعمیر می‌کنم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Hän korjaa huomenna.</span>
+                    <span class="ex-english">او فردا تعمیر می‌کند.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "تمیز می‌کنم" را در منفی بگویید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-comment-dots"></i> دانستنی: عامیانه</h2>
+            <div class="card">
+                <h3>"Mä haluun"</h3>
+                <p>در فنلاندی نوشتاری: <i dir="ltr">Minä haluan</i>. <br>در عامیانه هلسینکی: <i dir="ltr">Mä haluun</i>.
+                    <br>'t' می‌افتد و مصوت‌ها کشیده می‌شوند. فنلاندی گفتاری می‌تواند خیلی متفاوت به نظر برسد!
+                </p>
+            </div>
+        </div>
+
+        <div class="slide" id="nouns">
+            <h2>۱۲. انواع کلمات (SANATYYPIT)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">❓ مشکل</span>
+                    <p>برخی کلمات قبل از اینکه بتوانید پسوند اضافه کنید، "ریشه" خود را به طور قابل توجهی تغییر می‌دهند.
+                    </p>
+                </div>
+                <h3>۴ نوع اصلی</h3>
+                <ul>
+                    <li><b dir="ltr">-e words:</b> <span dir="ltr">Huon<b>e</b> -> Huon<b>ee</b>ssa. (e -> ee)</span>
+                    </li>
+                    <li><b dir="ltr">-nen words:</b> <span dir="ltr">Nai<b>nen</b> -> Nai<b>se</b>lla. (nen ->
+                            se)</span></li>
+                    <li><b dir="ltr">-i (Old):</b> <span dir="ltr">Järv<b>i</b> -> Järv<b>e</b>ssä. (i -> e)</span></li>
+                    <li><b dir="ltr">-in words:</b> <span dir="ltr">Puhel<b>in</b> -> Puhel<b>ime</b>ssa. (in ->
+                            ime)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-person-dress"></i> مثال ۱: -NEN & -E</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Nainen</b> (زن)</span>
+                    <span class="ex-english">Puhun naiselle. (به زن)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Huone</b> (اتاق)</span>
+                    <span class="ex-english">Olen huoneessa. (در اتاق)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-mobile-screen"></i> مثال ۲: -IN & -I</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Puhelin</b> (تلفن)</span>
+                    <span class="ex-english">Puhun puhelimessa. (با تلفن)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Järvi</b> (دریاچه)</span>
+                    <span class="ex-english">Uin järvessä. (در دریاچه)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-flower"></i> مثال ۳: طبیعت</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Kivi</b> (سنگ)</span>
+                    <span class="ex-english">Kivessä istun. (i -> e)</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish"><b>Talvi</b> (زمستان)</span>
+                    <span class="ex-english">Talvessa lunta. (i -> e)</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "زن" را در inessive بگذارید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-building"></i> مثال ۴: ساختمان</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🏢</span>
+                        <span class="word" dir="ltr">Rakennuksessa.</span>
+                        <span class="trans">در ساختمان (nen -> n).</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">📱</span>
+                        <span class="word" dir="ltr">Puhelimella.</span>
+                        <span class="trans">با تلفن (in -> im).</span>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "اتاق" را تغییر دهید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-tree"></i> مثال ۵: درخت</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish">Puussa on lintu.</span>
+                    <span class="ex-english">درخت (e -> ee در برخی موارد).</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish">Metsässä kävelen.</span>
+                    <span class="ex-english">در جنگل قدم می‌زنم.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: یک کلمه -i قدیمی انتخاب کنید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-history"></i> دانستنی: کلمات قدیمی</h2>
+            <div class="card">
+                <h3>راز -i</h3>
+                <p>چرا <i dir="ltr">Pankki</i> می‌شود <i dir="ltr">Pankissa</i> اما <i dir="ltr">Järvi</i> می‌شود <i
+                        dir="ltr">Järvessä</i>؟ <br><b>کلمات قرضی جدید</b> (Pankki, Bussi, Hotelli) 'i' را نگه می‌دارند.
+                    <br><b>کلمات باستانی طبیعت</b> (Järvi, Kivi, Talvi) 'i' را به 'e' تغییر می‌دهند. تاریخ مهم است!
+                </p>
+            </div>
+        </div>
+        <div class="slide" id="verb5">
+            <h2>۲۳. فعل نوع ۵ (-ita / -itä)</h2>
+            <div class="card">
+                <div class="rule-block">
+                    <span class="rule-title">⏰ چه زمانی استفاده می‌کنیم؟</span>
+                    <p>برای افعالی که به <b>صامت + ita/itä</b> ختم می‌شوند (مانند <b>tarvita</b> یا <b>häiritä</b>).</p>
+                </div>
+                <div class="rule-block">
+                    <span class="rule-title">🛠️ چطور صرف کنیم؟</span>
+                    <ol style="margin-right:20px;">
+                        <li>حذف <b dir="ltr">-ta / -tä</b>: <b dir="ltr">tarvi-</b></li>
+                        <li>اضافه کردن <b dir="ltr">-tse-</b> (بله، این یک 's' است!)</li>
+                        <li>شناسه شخصی را اضافه کنید: <b dir="ltr">Minä tarvi<span class="highlight">tsen</span></b>
+                        </li>
+                    </ol>
+                </div>
+                <h3>صرف فعل: TARVITA (نیاز داشتن)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>شخص</th>
+                            <th>ریشه + tse + پایان</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Minä</td>
+                            <td dir="ltr">tarvit<b>sen</b></td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td dir="ltr">tarvit<b>set</b></td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td dir="ltr">tarvit<b>see</b></td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td dir="ltr">tarvit<b>semme</b></td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td dir="ltr">tarvit<b>sette</b></td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td dir="ltr">tarvit<b>sevat</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-list-check"></i> مثال ۱: TARVITA</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Minä tarvitsee<n> apua.</span>
+                    <span class="ex-english">من به کمک نیاز دارم.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Tarvitsetko sinä vettä?</span>
+                    <span class="ex-english">آیا به آب نیاز داری؟</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: در جمع صرف کنید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-volume-up"></i> مثال ۲: HÄIRITÄ</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🔇</span>
+                        <span class="word" dir="ltr">Älä häiri<t>se!</span>
+                        <span class="trans">مزاحم نشو!</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">😡</span>
+                        <span class="word" dir="ltr">Häiritse<t>t minua.</span>
+                        <span class="trans">مزاحم من می‌شوی.</span>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: یک جمله با "häiritä" بسازید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-crown"></i> مثال ۳: HALLITA</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Hallitsee<n> maata.</span>
+                    <span class="ex-english">کشور را اداره می‌کند.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Me hallitsee<mme> taloutta.</span>
+                    <span class="ex-english">ما اقتصاد را اداره می‌کنیم.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "نام بردن" را صرف کنید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-tag"></i> مثال ۴: MENTIONA</h2>
+            <div class="card">
+                <div class="visual-grid">
+                    <div class="visual-item">
+                        <span class="emoji">🗣️</span>
+                        <span class="word" dir="ltr">Mainitsee<n> nimen.</span>
+                        <span class="trans">نام را ذکر می‌کند.</span>
+                    </div>
+                    <div class="visual-item">
+                        <span class="emoji">⚖️</span>
+                        <span class="word" dir="ltr">Punnitsee<n> painon.</span>
+                        <span class="trans">وزن را وزن می‌کند.</span>
+                    </div>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: "انتخاب" را استفاده کنید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-example">
+            <h2><i class="fa-solid fa-check-square"></i> مثال ۵: VALITA</h2>
+            <div class="card">
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Valitsee<n> ruoan.</span>
+                    <span class="ex-english">غذا را انتخاب می‌کند.</span>
+                </div>
+                <div class="ex-text">
+                    <span class="ex-finnish" dir="ltr">Hän valitsee<ee> lahjan.</span>
+                    <span class="ex-english">او هدیه را انتخاب می‌کند.</span>
+                </div>
+                <p style="text-align: center; color: var(--gold);">تمرین: نیازهایتان را توصیف کنید.</p>
+            </div>
+        </div>
+
+        <div class="slide slide-funfact">
+            <h2><i class="fa-solid fa-square-root-variable"></i> دانستنی: ریشه نامنظم</h2>
+            <div class="card">
+                <h3>-tse- چیست؟</h3>
+                <p>فعل نوع ۵ یکی از نامنظم‌ترین‌هاست. آن <b>-tse-</b> یک ریشه اضافی است که به خاطر حفظ تلفظ تاریخی به
+                    ریشه اصلی اضافه می‌شود. متأسفانه، باید آن را حفظ کنید، اما حداقل این ریشه برای **همه** افعال نوع ۵
+                    یکسان است!</p>
+                <div class="gold-box">ریشه: [حذف -ita/itä] + tse</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('mainContainer');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const totalSpan = document.getElementById('totalSlides');
+        const currentSpan = document.getElementById('currentSlide');
+
+        // Set total count
+        totalSpan.textContent = slides.length;
+
+        function updateCounter() {
+            // Simple math: scroll position / slide height
+            const slideHeight = container.clientHeight;
+            if (slideHeight > 0) {
+                const index = Math.round(container.scrollTop / slideHeight);
+                // Ensure index is within bounds (1 to length)
+                const safeIndex = Math.max(0, Math.min(index, slides.length - 1));
+                currentSpan.textContent = safeIndex + 1;
+            }
+        }
+
+        container.addEventListener('scroll', updateCounter);
+
+        // Initial check in case of refresh/scroll restoration
+        updateCounter();
+    </script>
+
+</body>
+
+</html>
