@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بخش ۲: گرامر اصلی - فنلاندی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        :root {
+            --primary: #00D4FF;
+            /* Blue for section 2 */
+            --bg-dark: #1a1a2e;
+            --bg-card: rgba(25, 25, 40, 0.95);
+            --text-main: #f0f0f0;
+            --text-muted: #B0B0B0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #000 80%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--primary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        .rule-box {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px dashed var(--primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            color: #fff;
+        }
+
+        .conjugation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index-persian.html" class="back-btn">← بازگشت به فهرست</a>
+
+        <h1>بخش ۲: گرامر اصلی (Kielioppi)</h1>
+
+        <!-- 7. Partitive -->
+        <section id="partitive">
+            <h2>۷. پارتیتیو (Partitiivi)</h2>
+            <p>پارتیتیو مهم‌ترین حالت دستوری فنلاندی است که برای بیان "مقداری از چیزی" یا "نامعین بودن" استفاده می‌شود.
+            </p>
+
+            <div class="card">
+                <h3>چه زمانی استفاده می‌کنیم؟</h3>
+                <table>
+                    <tr>
+                        <th>شرایط</th>
+                        <th>مثال</th>
+                        <th>معنی</th>
+                    </tr>
+                    <tr>
+                        <td><strong>اعدادی به جز ۱:</strong></td>
+                        <td>Kaksi auto<span class="highlight">a</span></td>
+                        <td>دو ماشین</td>
+                    </tr>
+                    <tr>
+                        <td><strong>جملات منفی:</strong></td>
+                        <td>Minulla ei ole auto<span class="highlight">a</span></td>
+                        <td>من ماشین ندارم</td>
+                    </tr>
+                    <tr>
+                        <td><strong>مواد غیرقابل شمارش:</strong></td>
+                        <td>Minä juon kahvi<span class="highlight">a</span></td>
+                        <td>من قهوه می‌نوشم</td>
+                    </tr>
+                    <tr>
+                        <td><strong>افعال فرآیند/احساس:</strong></td>
+                        <td>Minä rakastan sinu<span class="highlight">a</span></td>
+                        <td>من تو را دوست دارم</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>چگونه می‌سازیم؟ (پسوندها)</h3>
+                <table>
+                    <tr>
+                        <th>پایان کلمه</th>
+                        <th>پسوند</th>
+                        <th>مثال</th>
+                    </tr>
+                    <tr>
+                        <td>کلمه به یک واکه (u, o, a*, ä*) ختم شود</td>
+                        <td><span class="highlight">-a / -ä</span></td>
+                        <td>Talo → Taloa</td>
+                    </tr>
+                    <tr>
+                        <td>کلمه به دو واکه یا e ختم شود</td>
+                        <td><span class="highlight">-tta / -ttä</span></td>
+                        <td>Perhe → Perhettä<br>Maa → Maata</td>
+                    </tr>
+                    <tr>
+                        <td>کلمه به صامت ختم شود</td>
+                        <td><span class="highlight">-ta / -tä</span></td>
+                        <td>Puhelin → Puhelinta</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- 8. KPT -->
+        <section id="kpt">
+            <h2>۸. درجه‌بندی صامت‌ها (KPT - Astevaihtelu)</h2>
+            <div class="rule-box">
+                <p><strong>قانون:</strong> وقتی به کلمه پسوندی اضافه می‌کنیم که باعث بسته شدن هجا می‌شود (مثل -n
+                    genitive)، صامت‌های قوی (k, p, t) ضعیف می‌شوند.</p>
+                <p><strong>استثناء مهم:</strong> در فعل‌های نوع ۳ و ۴ قانون معکوس است! (ضعیف به قوی تبدیل می‌شود).</p>
+            </div>
+
+            <div class="card">
+                <h3>جدول تغییرات (قوی ← ضعیف)</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                    <table>
+                        <tr>
+                            <th>قوی</th>
+                            <th>ضعیف</th>
+                            <th>مثال (اسم)</th>
+                        </tr>
+                        <tr>
+                            <td>kk</td>
+                            <td>k</td>
+                            <td>Pankki → Pankin</td>
+                        </tr>
+                        <tr>
+                            <td>pp</td>
+                            <td>p</td>
+                            <td>Kauppa → Kaupan</td>
+                        </tr>
+                        <tr>
+                            <td>tt</td>
+                            <td>t</td>
+                            <td>Tyttö → Tytön</td>
+                        </tr>
+                        <tr>
+                            <td>k</td>
+                            <td>--</td>
+                            <td>Jalka → Jalan</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>قوی</th>
+                            <th>ضعیف</th>
+                            <th>مثال (اسم)</th>
+                        </tr>
+                        <tr>
+                            <td>p</td>
+                            <td>v</td>
+                            <td>Apua → Avun</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td>d</td>
+                            <td>Katu → Kadun</td>
+                        </tr>
+                        <tr>
+                            <td>nk</td>
+                            <td>ng</td>
+                            <td>Kaupunki → Kaupungin</td>
+                        </tr>
+                        <tr>
+                            <td>mp</td>
+                            <td>mm</td>
+                            <td>Lämmin → Lämpimän*</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Local Cases -->
+        <section id="cases">
+            <h2>۹. حالت‌های مکانی (Paikallissijat)</h2>
+            <p>در فنلاندی به جای حروف اضافه (در، روی، از، به) از پسوند استفاده می‌شود.</p>
+
+            <div class="card">
+                <table style="text-align: center;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>داخلی (In/From/To)</th>
+                            <th>خاری / سطحی (On/From/To)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>در / روی<br>(Missä?)</th>
+                            <td>
+                                <strong>Inessive (-ssa/-ssä)</strong><br>
+                                Talo<span class="highlight">ssa</span> (در خانه)<br>
+                                "در داخل"
+                            </td>
+                            <td>
+                                <strong>Adessive (-lla/-llä)</strong><br>
+                                Pöydä<span class="highlight">llä</span> (روی میز)<br>
+                                "روی سطح / نزد"
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>از<br>(Mistä?)</th>
+                            <td>
+                                <strong>Elative (-sta/-stä)</strong><br>
+                                Talo<span class="highlight">sta</span> (از خانه)<br>
+                                "از داخلِ"
+                            </td>
+                            <td>
+                                <strong>Ablative (-lta/-ltä)</strong><br>
+                                Pöydä<span class="highlight">ltä</span> (از روی میز)<br>
+                                "از رویِ"
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>به<br>(Mihin?)</th>
+                            <td>
+                                <strong>Illative (Vn / hVn / seen)</strong><br>
+                                Talo<span class="highlight">on</span> (به خانه)<br>
+                                "به داخلِ" (تشدید واکه)
+                            </td>
+                            <td>
+                                <strong>Allative (-lle)</strong><br>
+                                Pöydä<span class="highlight">lle</span> (به روی میز)<br>
+                                "به رویِ"
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="rule-box"><strong>نکته Illative:</strong> معمولاً واکه ماقبل آخر تکرار می‌شود + n (مثال: Talo
+                    -> Taloon). برای کلمات کوتاه h هم اضافه می‌شود (Työ -> Työhön).</p>
+            </div>
+        </section>
+
+        <!-- 10. Sentence Types -->
+        <section id="sentences">
+            <h2>۱۰. انواع جملات (Lausetyypit)</h2>
+
+            <div class="card">
+                <h3>جملات مالکیت (Minulla on...)</h3>
+                <p>فنلاندی فعل "داشتن" ندارد. از ساختار "نزدِ من هست" استفاده می‌کنند.</p>
+                <p><strong class="highlight">مالک + lla + فعل on + شیء</strong></p>
+                <ul>
+                    <li><span class="highlight">Minulla on</span> auto. (من ماشین دارم)</li>
+                    <li><span class="highlight">Sinulla on</span> koira. (تو سگ داری)</li>
+                    <li><span class="highlight">Meillä on</span> aikaa. (ما وقت داریم)</li>
+                </ul>
+                <p class="rule-box">توجه: فعل همیشه <strong>on</strong> (سوم شخص مفرد) است، حتی اگر مالک جمع باشد.</p>
+            </div>
+
+            <div class="card">
+                <h3>جملات وجودی (Eksistentiaalilause)</h3>
+                <p>برای گفتن اینکه چیزی در جایی وجود دارد.</p>
+                <p><strong class="highlight">مکان + ssa + فعل on + فاعل (چیز)</strong></p>
+                <ul>
+                    <li><span class="highlight">Pöydällä on</span> kirja. (روی میز کتاب هست)</li>
+                    <li><span class="highlight">Suomessa on</span> paljon järviä. (در فنلاند تعداد زیادی دریاچه هست)
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 11. Verb Type 4 -->
+        <section id="verb4">
+            <h3>۱۱. فعل نوع ۴ (-ata / -ota / -utua)</h3>
+            <p>این افعال معمولاً به ata/ätä یا ota/ötä ختم می‌شوند.</p>
+            <p><strong>قانون:</strong> حرف <strong>t</strong> را حذف کنید. (معمولاً باعث ایجاد دو واکه می‌شود).</p>
+
+            <div class="conjugation-grid">
+                <div class="card">
+                    <h4>Osata (توانستن/بلد بودن)</h4>
+                    <p>حذف t ← ریشه: <strong>Osaa-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Osaan</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Osaat</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Osaa</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Osaamme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Osaatte</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Osaavat</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h4>Siivota (تمیز کردن)</h4>
+                    <p>حذف t ← ریشه: <strong>Siivoa-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Siivoan</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Siivoat</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Siivoaa</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Siivoamme</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. Verb Type 5 (Using 13 as indicated in user prompt order, though usually it's adjacent) -->
+        <section id="verb5">
+            <h3>۱۳. فعل نوع ۵ (-ita / -itä)</h3>
+            <p><strong>قانون:</strong> پسوند -ita/-itä را حذف کنید و به جای آن <strong>-tse</strong> اضافه کنید.</p>
+
+            <div class="conjugation-grid">
+                <div class="card">
+                    <h4>Tarvita (نیاز داشتن)</h4>
+                    <p>حذف ita + tse ← ریشه: <strong>Tarvitse-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Tarvitsen</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Tarvitset</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Tarvitsee</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Tarvitsemme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Tarvitsette</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Tarvitsevat</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Noun Types -->
+        <section id="nouns">
+            <h2>۱۲. انواع اسم‌ها (Sanatyypit)</h2>
+            <p>اسم‌های فنلاندی بسته به پایانشان، ریشه‌های متفاوتی برای اضافه کردن پسوند دارند.</p>
+
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>نوع</th>
+                            <th>مثال (پایه)</th>
+                            <th>ریشه (Genitive)</th>
+                            <th>حالت (Inessive)</th>
+                            <th>پارتیتیو</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>کلمات -e</td>
+                            <td>Perhe (خانواده)</td>
+                            <td>Perhee- (+n)</td>
+                            <td>Perheessä</td>
+                            <td>Perhettä</td>
+                        </tr>
+                        <tr>
+                            <td>کلمات -nen</td>
+                            <td>Nainen (زن)</td>
+                            <td>Naise- (+n)</td>
+                            <td>Naisessa</td>
+                            <td>Naista</td>
+                        </tr>
+                        <tr>
+                            <td>کلمات -in</td>
+                            <td>Puhelin (تلفن)</td>
+                            <td>Puhelime- (+n)</td>
+                            <td>Puhelimessa</td>
+                            <td>Puhelinta</td>
+                        </tr>
+                        <tr>
+                            <td>کلمات -i (قدیمی)</td>
+                            <td>Järvi (دریاچه)</td>
+                            <td>Järve- (+n)</td>
+                            <td>Järvessä</td>
+                            <td>Järveä</td>
+                        </tr>
+                        <tr>
+                            <td>کلمات -i (جدید)</td>
+                            <td>Pankki (بانک)</td>
+                            <td>Panki- (+n)</td>
+                            <td>Pankissa</td>
+                            <td>Pankkia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <p style="text-align:center; margin-top: 50px;">
+            <a href="v-review.html"
+                style="background: var(--primary); color: #000; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold;">ادامه
+                به بخش ۳: لغات و تمرین →</a>
+        </p>
+    </div>
+</body>
+
+</html>

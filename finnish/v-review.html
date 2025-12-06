@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بخش ۳: لغات و تمرین - فنلاندی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        :root {
+            --primary: #BC13FE;
+            /* Purple for section 3 */
+            --bg-dark: #1a1a2e;
+            --bg-card: rgba(25, 25, 40, 0.95);
+            --text-main: #f0f0f0;
+            --text-muted: #B0B0B0;
+            --correct: #00ff9d;
+            --wrong: #ff4757;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #000 80%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(188, 19, 254, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(188, 19, 254, 0.1);
+            color: var(--primary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight {
+            color: #00D4FF;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            color: #fff;
+        }
+
+        /* Quiz Styles */
+        .quiz-question {
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+        }
+
+        .options label {
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .options label:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .options input {
+            margin-left: 10px;
+        }
+
+        details {
+            margin-top: 10px;
+        }
+
+        summary {
+            cursor: pointer;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+
+        .answer-key {
+            color: var(--correct);
+            font-weight: bold;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index-persian.html" class="back-btn">← بازگشت به فهرست</a>
+
+        <h1>بخش ۳: لغات و تمرین (Sanasto & Harjoitukset)</h1>
+
+        <!-- Adjectives & Colors -->
+        <section>
+            <h2>صفت‌ها و رنگ‌ها (Adjektiivit & Värit)</h2>
+            <p><strong>قانون تطابق صفت:</strong> صفت همیشه باید از نظر حالت (Case) و تعداد (Singular/Plural) با اسم خود
+                مطابقت داشته باشد.</p>
+            <ul>
+                <li>Iso <strong>talo</strong> (خانه بزرگ)</li>
+                <li>Iso<strong>ssa</strong> talo<strong>ssa</strong> (در خانه بزرگ)</li>
+            </ul>
+
+            <div class="card">
+                <h3>صفت‌های متضاد</h3>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <table style="flex: 1;">
+                        <tr>
+                            <th>صفت</th>
+                            <th>معنی</th>
+                            <th>متضاد</th>
+                            <th>معنی</th>
+                        </tr>
+                        <tr>
+                            <td>Hyvä</td>
+                            <td>خوب</td>
+                            <td>Huono</td>
+                            <td>بد</td>
+                        </tr>
+                        <tr>
+                            <td>Iso</td>
+                            <td>بزرگ</td>
+                            <td>Pieni</td>
+                            <td>کوچک</td>
+                        </tr>
+                        <tr>
+                            <td>Kallis</td>
+                            <td>گران</td>
+                            <td>Halpa</td>
+                            <td>ارزان</td>
+                        </tr>
+                        <tr>
+                            <td>Pitkä</td>
+                            <td>بلند (طول)</td>
+                            <td>Lyhyt</td>
+                            <td>کوتاه</td>
+                        </tr>
+                    </table>
+                    <table style="flex: 1;">
+                        <tr>
+                            <th>صفت</th>
+                            <th>معنی</th>
+                            <th>متضاد</th>
+                            <th>معنی</th>
+                        </tr>
+                        <tr>
+                            <td>Uusi</td>
+                            <td>جدید</td>
+                            <td>Vanha</td>
+                            <td>قدیمی</td>
+                        </tr>
+                        <tr>
+                            <td>Kuuma</td>
+                            <td>داغ</td>
+                            <td>Kylmä</td>
+                            <td>سرد</td>
+                        </tr>
+                        <tr>
+                            <td>Vaikea</td>
+                            <td>سخت</td>
+                            <td>Helppo</td>
+                            <td>آسان</td>
+                        </tr>
+                        <tr>
+                            <td>Kaunis</td>
+                            <td>زیبا</td>
+                            <td>Ruma</td>
+                            <td>زشت</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>رنگ‌ها (Värit)</h3>
+                <p>
+                    <span style="color:red">Punainen (قرمز)</span> |
+                    <span style="color:blue">Sininen (آبی)</span> |
+                    <span style="color:green">Vihreä (سبز)</span> |
+                    <span style="color:yellow">Keltainen (زرد)</span> |
+                    <span style="color:white; background:#333; padding:2px;">Valkoinen (سفید)</span> |
+                    <span style="color:black; background:#ccc; padding:2px;">Musta (سیاه)</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Clothes & Transport -->
+        <section>
+            <h2>لباس و حمل و نقل (Vaatteet & Liikenne)</h2>
+
+            <div class="card">
+                <h3>پوشاک (Vaatteet)</h3>
+                <table>
+                    <tr>
+                        <td>Takki (کت/کاپشن)</td>
+                        <td>Housut (شلوار - جمع)</td>
+                        <td>Paita (پیراهن)</td>
+                    </tr>
+                    <tr>
+                        <td>Kengät (کفش‌ها)</td>
+                        <td>Mekko (پیراهن زنانه)</td>
+                        <td>Hattu (کلاه)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>وسایل نقلیه: قانون Adessive (-lla)</h3>
+                <p>برای "سوار شدن" یا "رفتن با وسیله‌ای" از پسوند <strong>-lla/-llä</strong> استفاده می‌کنیم.</p>
+                <ul>
+                    <li>Auto → Auto<strong>lla</strong> (با ماشین)</li>
+                    <li>Bussi → Bussi<strong>lla</strong> (با اتوبوس)</li>
+                    <li>Juna → Juna<strong>lla</strong> (با قطار)</li>
+                    <li>Pyörä → Pyörä<strong>llä</strong> (با دوچرخه)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Weather -->
+        <section>
+            <h2>آب و هوا (Sää)</h2>
+            <div class="card">
+                <p>در توصیف هوا اغلب از صفت در حالت <strong>پارتیتیو</strong> استفاده می‌شود زمانی که فاعل "Hän" یا "Se"
+                    نیست (هوا به عنوان یک مفهوم کلی).</p>
+                <ul>
+                    <li>On kylmä<strong>ä</strong>. (سرد است)</li>
+                    <li>On kaunis<strong>ta</strong>. (زیباست - هوا)</li>
+                    <li>Sataa vettä. (باران می‌بارد)</li>
+                </ul>
+                <h3>فصل‌ها (Vuodenajat): استفاده از -lla</h3>
+                <ul>
+                    <li>Talvi → Talve<strong>lla</strong> (در زمستان)</li>
+                    <li>Kesä → Kesä<strong>llä</strong> (در تابستان)</li>
+                    <li>Syksy → Syksy<strong>llä</strong> (در پاییز)</li>
+                    <li>Kevät → Kevää<strong>llä</strong> (در بهار)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Imperative -->
+        <section>
+            <h2>وجه امری (Imperatiivi)</h2>
+            <div class="card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>شخص</th>
+                            <th>قانون ساخت</th>
+                            <th>مثال (Puhua)</th>
+                            <th>مثال (Syödä)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>تو (Sinä)</strong></td>
+                            <td>حذف -n از فعل اول شخص<br>(Minä puhun → Puhu!)</td>
+                            <td>Puhu! (حرف بزن!)<br><span style="color:red">Älä puhu! (حرف نزن!)</span></td>
+                            <td>Syö! (بخور!)<br><span style="color:red">Älä syö! (نخور!)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>شما (Te)</strong></td>
+                            <td>اضافه کردن -kaa/-kää به ریشه</td>
+                            <td>Puhukaa! (حرف بزنید!)<br><span style="color:red">Älkää puhuko!</span></td>
+                            <td>Syökää! (بخورید!)<br><span style="color:red">Älkää syökö!</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Exercises -->
+        <section>
+            <h2>تمرینات جامع (Harjoitukset)</h2>
+            <p>دانش خود را محک بزنید.</p>
+
+            <div class="card">
+                <!-- Q1 -->
+                <div class="quiz-question">
+                    <p>۱. ضمیر صحیح برای "Hän" (فعل بودن) چیست؟</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1"> Olen</label>
+                        <label><input type="radio" name="q1"> Olet</label>
+                        <label><input type="radio" name="q1"> On</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">On (Hän on)</div>
+                    </details>
+                </div>
+
+                <!-- Q2 -->
+                <div class="quiz-question">
+                    <p>۲. عدد "12" به فنلاندی؟</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2"> Kaksitoista</label>
+                        <label><input type="radio" name="q2"> Kaksikymmentä</label>
+                        <label><input type="radio" name="q2"> Yksitoista</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Kaksitoista (2 + 10)</div>
+                    </details>
+                </div>
+
+                <!-- Q3: Verb Type 1 -->
+                <div class="quiz-question">
+                    <p>۳. صرع فعل Asua (زندگی کردن) برای Minä:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3"> Minä asuat</label>
+                        <label><input type="radio" name="q3"> Minä asuan</label>
+                        <label><input type="radio" name="q3"> Minä asun</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Minä asun (حذف a آخر)</div>
+                    </details>
+                </div>
+
+                <!-- Q4: Partitive -->
+                <div class="quiz-question">
+                    <p>۴. Minulla on kaksi ______ (auto).</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4"> Auto</label>
+                        <label><input type="radio" name="q4"> Autoa</label>
+                        <label><input type="radio" name="q4"> Autoa</label> <!-- Typo in options handled logically -->
+                        <label><input type="radio" name="q4"> Autossa</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Autoa (بعد از عدد بزرگتر از 1 از پارتیتیو استفاده می‌شود)</div>
+                    </details>
+                </div>
+
+                <!-- Q5: KPT -->
+                <div class="quiz-question">
+                    <p>۵. Genitive کلمه "Pankki" چیست؟</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5"> Pankkin</label>
+                        <label><input type="radio" name="q5"> Pangin</label>
+                        <label><input type="radio" name="q5"> Pankin</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Pankin (kk -> k)</div>
+                    </details>
+                </div>
+
+                <!-- Q6: Local Cases -->
+                <div class="quiz-question">
+                    <p>۶. "در مدرسه" (Koulu)؟</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6"> Koulussa</label>
+                        <label><input type="radio" name="q6"> Koulusta</label>
+                        <label><input type="radio" name="q6"> Kouluun</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Koulussa (Inessive: در داخل)</div>
+                    </details>
+                </div>
+
+                <!-- Q7: Verb Type 3 -->
+                <div class="quiz-question">
+                    <p>۷. Minä ______ (opiskella - درس خواندن). </p>
+                    <div class="options">
+                        <label><input type="radio" name="q7"> Opiskelän</label>
+                        <label><input type="radio" name="q7"> Opiskelen</label>
+                        <label><input type="radio" name="q7"> Opiskellan</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Opiskelen (ll -> l + e)</div>
+                    </details>
+                </div>
+
+                <!-- Q8: Imperative -->
+                <div class="quiz-question">
+                    <p>۸. "بخوان!" (Lukea) خطاب به تو:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8"> Lue!</label>
+                        <label><input type="radio" name="q8"> Lukea!</label>
+                        <label><input type="radio" name="q8"> Lukekaa!</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Lue! (k -> حذف می‌شود در حالت ضعیف)</div>
+                    </details>
+                </div>
+
+                <!-- Q9: Negative -->
+                <div class="quiz-question">
+                    <p>۹. Minä ____ puhu suomea.</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9"> ei</label>
+                        <label><input type="radio" name="q9"> emme</label>
+                        <label><input type="radio" name="q9"> en</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">En (Minä en)</div>
+                    </details>
+                </div>
+
+                <!-- Q10: Clothing -->
+                <div class="quiz-question">
+                    <p>۱۰. Hattu رویِ ______ است (سر - Pää).</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10"> Päässä</label>
+                        <label><input type="radio" name="q10"> Päällä</label>
+                        <label><input type="radio" name="q10"> Päähän</label>
+                    </div>
+                    <details>
+                        <summary>پاسخ</summary>
+                        <div class="answer-key">Päässä (نکته: برای اعضای بدن معمولا از -ssa استفاده می‌شود، استثنا) -
+                            اما اگر منظور روی سر باشد، Päässä رایج است به معنی پوشیده شدن.</< /div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+
+        <p style="text-align:center; margin-top: 50px;">
+            <a href="index-persian.html"
+                style="background: var(--primary); color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold;">پایان
+                دوره - بازگشت به فهرست</a>
+        </p>
+
+    </div>
+</body>
+
+</html>

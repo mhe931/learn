@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بخش ۱: پایه‌ها - فنلاندی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        :root {
+            --primary: #FFD700;
+            --bg-dark: #1a1a2e;
+            --bg-card: rgba(25, 25, 40, 0.95);
+            --text-main: #f0f0f0;
+            --text-muted: #B0B0B0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #000 80%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th {
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--primary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight {
+            color: #00D4FF;
+            font-weight: bold;
+        }
+
+        .example {
+            color: #aaa;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            color: #fff;
+        }
+
+        .conjugation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index-persian.html" class="back-btn">← بازگشت به فهرست</a>
+
+        <h1>بخش ۱: پایه‌ها (Perusteet)</h1>
+
+        <!-- 2. Pronouns & Olla -->
+        <section id="pronouns">
+            <h2>۲. ضمایر و فعل بودن (Proninit & Olla)</h2>
+            <p>ضمایر شخصی در زبان فنلاندی و صرف مهم‌ترین فعل زبان: <strong>Olla</strong> (بودن).</p>
+
+            <div class="card">
+                <h3>جدول کامل ضمایر و فعل Olla</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>شخص (Person)</th>
+                            <th>ضمیر (Pronoun)</th>
+                            <th>معنی</th>
+                            <th>فعل Olla (هستم/هستی...)</th>
+                            <th>مثال</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>اول شخص مفرد</td>
+                            <td class="highlight">Minä</td>
+                            <td>من</td>
+                            <td>olen</td>
+                            <td><span class="example">Minä olen opiskelija. (من دانشجو هستم)</span></td>
+                        </tr>
+                        <tr>
+                            <td>دوم شخص مفرد</td>
+                            <td class="highlight">Sinä</td>
+                            <td>تو</td>
+                            <td>olet</td>
+                            <td><span class="example">Oletko sinä kotona? (آیا تو خانه هستی؟)</span></td>
+                        </tr>
+                        <tr>
+                            <td>سوم شخص مفرد</td>
+                            <td class="highlight">Hän</td>
+                            <td>او (زن/مرد)</td>
+                            <td>on</td>
+                            <td><span class="example">Hän on kaunis. (او زیباست)</span></td>
+                        </tr>
+                        <tr>
+                            <td>اول شخص جمع</td>
+                            <td class="highlight">Me</td>
+                            <td>ما</td>
+                            <td>olemme</td>
+                            <td><span class="example">Me olemme täällä. (ما اینجا هستیم)</span></td>
+                        </tr>
+                        <tr>
+                            <td>دوم شخص جمع</td>
+                            <td class="highlight">Te</td>
+                            <td>شما</td>
+                            <td>olette</td>
+                            <td><span class="example">Te olette myöhässä. (شما دیر کرده‌اید)</span></td>
+                        </tr>
+                        <tr>
+                            <td>سوم شخص جمع</td>
+                            <td class="highlight">He</td>
+                            <td>آنها (انسان)</td>
+                            <td>ovat</td>
+                            <td><span class="example">He ovat ystäviä. (آنها دوست هستند)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3. Numbers -->
+        <section id="numbers">
+            <h2>۳. اعداد (Numerot)</h2>
+            <div class="card">
+                <h3>اعداد ۰ تا ۲۰</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <table>
+                        <tr>
+                            <th>عدد</th>
+                            <th>فنلاندی</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>nolla</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>yksi</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>kaksi</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>kolme</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>neljä</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>viisi</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>عدد</th>
+                            <th>فنلاندی</th>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>kuusi</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>seitsemän</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>kahdeksan</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>yhdeksän</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>kymmenen</td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>قوانین ساخت اعداد بزرگتر</h3>
+                <ul>
+                    <li><strong>۱۱-۱۹:</strong> عدد یکان + <span class="highlight">-toista</span> (مثال: 17 =
+                        seitsemäntoista)</li>
+                    <li><strong>۲۰-۹۰ (دهگان):</strong> عدد یکان + <span class="highlight">-kymmentä</span> (مثال: 20 =
+                        kaksikymmentä, 50 = viisikymmentä)</li>
+                    <li><strong>ترکیبی:</strong> دهگان + یکان (مثال: 21 = kaksikymmentäyksi)</li>
+                    <li><strong>۱۰۰:</strong> sata (200 = kaksisataa - دقت کنید sataa در حالت پارتیتیو)</li>
+                    <li><strong>۱۰۰۰:</strong> tuhat (2000 = kaksituhatta)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>بیان زمان (Kellonajat)</h3>
+                <table>
+                    <tr>
+                        <th width="30%">حالت</th>
+                        <th width="30%">فرمول</th>
+                        <th>مثال</th>
+                    </tr>
+                    <tr>
+                        <td>تمام</td>
+                        <td>Kello on X</td>
+                        <td>Kello on kolme (3:00)</td>
+                    </tr>
+                    <tr>
+                        <td>نیم</td>
+                        <td>Kello on <strong>puoli</strong> X (نیم به X)</td>
+                        <td>Kello on puoli viisi (4:30 - نیم به پنج)</td>
+                    </tr>
+                    <tr>
+                        <td>گذشته از</td>
+                        <td>Kello on X <strong>yli</strong> Y</td>
+                        <td>Kello on viisi yli kaksi (2:05)</td>
+                    </tr>
+                    <tr>
+                        <td>مانده به</td>
+                        <td>Kello on X <strong>vaille</strong> Y</td>
+                        <td>Kello on kymmenen vaille kuusi (5:50)</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Verb Types Intro -->
+        <section>
+            <h2>صرف افعال (Verbityypit)</h2>
+            <p>در فنلاندی افعال به ۶ گروه تقسیم می‌شوند. در اینجا ۳ گروه اول را بررسی می‌کنیم. برای صرف فعل، ابتدا باید
+                <strong>ریشه</strong> را پیدا کنید و سپس شناسه‌های شخصی را اضافه کنید:</p>
+            <div
+                style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 8px; text-align: center; margin-bottom: 20px;">
+                <strong>شناسه‌های شخصی:</strong><br>
+                minä <strong>-n</strong> | sinä <strong>-t</strong> | hän <strong>--</strong> (واکه کشیده)<br>
+                me <strong>-mme</strong> | te <strong>-tte</strong> | he <strong>-vat/-vät</strong>
+            </div>
+        </section>
+
+        <!-- 4. Verb Type 1 -->
+        <section id="verb1">
+            <h3>۴. فعل نوع ۱ (-Va / -Vä)</h3>
+            <p>این افعال به 2 واکه ختم می‌شوند (آخرین حرف a/ä است).<br>
+                <strong>قانون:</strong> آخرین حرف (a/ä) را حذف کنید تا ریشه بدست آید.
+            </p>
+
+            <div class="conjugation-grid">
+                <div class="card">
+                    <h4>Puhua (صحبت کردن)</h4>
+                    <p>حذف a ← ریشه: <strong>Puhu-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Puhun</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Puhut</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Puhuu (تکرار واکه آخر)</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Puhumme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Puhutte</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Puhuvat</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h4>Maksaa (پرداختن / هزینه داشتن)</h4>
+                    <p>حذف a ← ریشه: <strong>Maksa-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Maksan</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Maksat</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Maksaa</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Maksamme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Maksatte</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Maksavat</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Verb Type 2 -->
+        <section id="verb2">
+            <h3>۵. فعل نوع ۲ (-da / -dä)</h3>
+            <p><strong>قانون:</strong> کلِ -da/-dä را حذف کنید. چیزی که باقی می‌ماند ریشه است.</p>
+
+            <div class="conjugation-grid">
+                <div class="card">
+                    <h4>Syödä (خوردن)</h4>
+                    <p>حذف dä ← ریشه: <strong>Syö-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Syön</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Syöt</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Syö (فاقد اضافه کردن واکه!)</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Syömme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Syötte</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Syövät</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h4>Tehdä (انجام دادن)</h4>
+                    <p>حذف dä ← ریشه: <strong>Tee-</strong> (بی‌قاعده: به ee تبدیل می‌شود)</p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Teen</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Teet</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Tekee (توجه: k اضافه می‌شود!)</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Teemme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Teette</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Tekevät</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Verb Type 3 -->
+        <section id="verb3">
+            <h3>۶. فعل نوع ۳ (-la / -na / -ra / -sta)</h3>
+            <p><strong>قانون:</strong> دو حرف آخر را حذف کنید و به جای آن <strong>e</strong> اضافه کنید (به این e پل
+                می‌گوییم).</p>
+
+            <div class="conjugation-grid">
+                <div class="card">
+                    <h4>Tulla (آمدن)</h4>
+                    <p>حذف la + e ← ریشه: <strong>Tule-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Tulen</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Tulet</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Tulee</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Tulemme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Tulette</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Tulevat</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <h4>Mennä (رفتن)</h4>
+                    <p>حذف nä + e ← ریشه: <strong>Mene-</strong></p>
+                    <table>
+                        <tr>
+                            <td>Minä</td>
+                            <td>Menen</td>
+                        </tr>
+                        <tr>
+                            <td>Sinä</td>
+                            <td>Menet</td>
+                        </tr>
+                        <tr>
+                            <td>Hän</td>
+                            <td>Menee</td>
+                        </tr>
+                        <tr>
+                            <td>Me</td>
+                            <td>Menemme</td>
+                        </tr>
+                        <tr>
+                            <td>Te</td>
+                            <td>Menette</td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td>Menevät</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <p style="text-align:center; margin-top: 50px;">
+            <a href="g2-cases-verbs.html"
+                style="background: var(--primary); color: #000; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold;">ادامه
+                به بخش ۲: گرامر اصلی →</a>
+        </p>
+    </div>
+</body>
+
+</html>

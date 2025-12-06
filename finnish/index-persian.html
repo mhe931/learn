@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finnish Self-Study (Persian)</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #000 80%);
+            color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 2em;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #FFD700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #B0B0B0;
+            margin-bottom: 2em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5em;
+        }
+
+        .card {
+            background: rgba(25, 25, 40, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2em;
+            text-decoration: none;
+            color: #f0f0f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+        }
+
+        .card p {
+            color: #B0B0B0;
+            font-size: 1em;
+            margin-bottom: 0;
+        }
+
+        /* Section 1 Styling */
+        .card.section-1 {
+            border-right: 4px solid #FFD700;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0.01) 100%);
+        }
+
+        .card.section-1:hover {
+            border-color: #ffe033;
+        }
+
+        .card.section-1 h2 {
+            color: #FFD700;
+        }
+
+        /* Section 2 Styling */
+        .card.section-2 {
+            border-right: 4px solid #00D4FF;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 212, 255, 0.01) 100%);
+        }
+
+        .card.section-2:hover {
+            border-color: #33ddff;
+        }
+
+        .card.section-2 h2 {
+            color: #00D4FF;
+        }
+
+        /* Section 3 Styling */
+        .card.section-3 {
+            border-right: 4px solid #BC13FE;
+            background: linear-gradient(135deg, rgba(188, 19, 254, 0.05) 0%, rgba(188, 19, 254, 0.01) 100%);
+        }
+
+        .card.section-3:hover {
+            border-color: #d15aff;
+        }
+
+        .card.section-3 h2 {
+            color: #BC13FE;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 2em;
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🇫🇮 راهنمای خودآموز فنلاندی</h1>
+        <p>مسیر یادگیری زبان فنلاندی به زبان فارسی - جامع و کاربردی</p>
+
+        <div class="grid">
+            <!-- Section 1 -->
+            <a href="g1-foundations.html" class="card section-1">
+                <h2>بخش ۱: پایه‌ها</h2>
+                <p>شامل ضمایر، فعل بودن، اعداد، و افعال نوع ۱ تا ۳</p>
+            </a>
+
+            <!-- Section 2 -->
+            <a href="g2-cases-verbs.html" class="card section-2">
+                <h2>بخش ۲: گرامر اصلی</h2>
+                <p>شامل پارتیتیو، KPT، حالت‌های مکانی، انواع جملات و افعال نوع ۴ و ۵</p>
+            </a>
+
+            <!-- Section 3 -->
+            <a href="v-review.html" class="card section-3">
+                <h2>بخش ۳: لغات و تمرین</h2>
+                <p>واژگان موضوعی، تمرینات جامع و مرور نهایی</p>
+            </a>
+        </div>
+
+        <a href="../index.html" class="back-link">← بازگشت به صفحه اصلی</a>
+    </div>
+</body>
+
+</html>
