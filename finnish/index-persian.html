@@ -18,23 +18,24 @@
             min-height: 100vh;
             margin: 0;
             text-align: center;
+            padding: 10px;
         }
 
         .container {
             max-width: 900px;
-            padding: 2em;
             width: 100%;
+            padding: 1em;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             color: #FFD700;
             text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
             margin-bottom: 0.5em;
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #B0B0B0;
             margin-bottom: 2em;
         }
@@ -49,16 +50,14 @@
             background: rgba(25, 25, 40, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
-            padding: 2em;
+            padding: 1.5em;
             text-decoration: none;
             color: #f0f0f0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
+            text-align: right;
         }
 
         .card:hover {
@@ -68,14 +67,27 @@
 
         .card h2 {
             margin-top: 0;
-            font-size: 1.8em;
+            font-size: 1.6em;
             margin-bottom: 0.5em;
+            text-align: center;
         }
 
-        .card p {
-            color: #B0B0B0;
-            font-size: 1em;
-            margin-bottom: 0;
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.95em;
+            color: #ccc;
+        }
+
+        .card ul li {
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 4px;
+        }
+
+        .card ul li:last-child {
+            border-bottom: none;
         }
 
         /* Section 1 Styling */
@@ -131,6 +143,16 @@
         .back-link:hover {
             color: #fff;
         }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -143,23 +165,43 @@
             <!-- Section 1 -->
             <a href="g1-foundations.html" class="card section-1">
                 <h2>بخش ۱: پایه‌ها</h2>
-                <p>شامل ضمایر، فعل بودن، اعداد، و افعال نوع ۱ تا ۳</p>
+                <ul>
+                    <li>۱. ضمایر و فعل بودن (OLLA)</li>
+                    <li>۲. اعداد و زمان</li>
+                    <li>۳. فعل نوع ۱ (-Va)</li>
+                    <li>۴. فعل نوع ۲ (-da/dä)</li>
+                    <li>۵. فعل نوع ۳ (-la/na/ra/sta)</li>
+                </ul>
             </a>
 
             <!-- Section 2 -->
             <a href="g2-cases-verbs.html" class="card section-2">
                 <h2>بخش ۲: گرامر اصلی</h2>
-                <p>شامل پارتیتیو، KPT، حالت‌های مکانی، انواع جملات و افعال نوع ۴ و ۵</p>
+                <ul>
+                    <li>۶. حالت پارتیتیو (Partitiivi)</li>
+                    <li>۷. درجه‌بندی صامت‌ها (KPT)</li>
+                    <li>۸. حالت‌های مکانی (Paikallissijat)</li>
+                    <li>۹. انواع جملات (مالکیت/وجودی)</li>
+                    <li>۱۰. انواع اسم‌ها (-e, -nen, -in, i-)</li>
+                    <li>۱۱. فعل نوع ۴ (-ata)</li>
+                    <li>۱۲. فعل نوع ۵ (-ita)</li>
+                </ul>
             </a>
 
             <!-- Section 3 -->
             <a href="v-review.html" class="card section-3">
-                <h2>بخش ۳: لغات و تمرین</h2>
-                <p>واژگان موضوعی، تمرینات جامع و مرور نهایی</p>
+                <h2>بخش ۳: مرور جامع</h2>
+                <ul>
+                    <li>۱۳. وجه امری (Imperatiivi)</li>
+                    <li>۱۴. صفت‌ها و رنگ‌ها</li>
+                    <li>۱۵. واژگان (لباس، خانه، آب و هوا)</li>
+                    <li>۱۶. ضمایر اشاره (Tämä, Tuo, Se)</li>
+                    <li>۱۷. تمرینات جامع و متن‌خوانی</li>
+                </ul>
             </a>
         </div>
 
-        <a href="../index.html" class="back-link">← بازگشت به صفحه اصلی</a>
+        <a href="../../index.html" class="back-link">← بازگشت به صفحه اصلی</a>
     </div>
 </body>
 
