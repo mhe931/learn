@@ -69,6 +69,14 @@
             direction: rtl;
             text-align: right;
         }
+        .kpt-change {
+            color: #cc0000;
+            font-weight: bold;
+        }
+        .person {
+            font-weight: bold;
+            color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -77,94 +85,204 @@
     <h1>مطالب خودآموز جامع فنلاندی ۲ (Kertaus Finnish 2)</h1>
 
     <div class="section">
-        <h2>۱. انواع فعل (Verbityypit) و تغییر درجه همخوان (Astevaihtelu)</h2>
+        <h2>۱. انواع فعل (Verbityypit) و صرف کامل (Täydellinen Konjugaatio)</h2>
         <p>در زبان فنلاندی، افعال به شش نوع (Type) اصلی تقسیم می‌شوند. در هنگام صرف، بسیاری از افعال از قانون تغییر درجه همخوان (KPT-change) تبعیت می‌کنند.</p>
 
         <h3>نوع ۱ (Type 1): ریشه فعل به واکه (vowel) + a/ä ختم می‌شود.</h3>
-        <p>در این نوع، هنگام صرف در شخص اول مفرد، یک واکه بین ریشه و پایانه قرار می‌گیرد. اگر فعل دارای تغییر درجه همخوان باشد، ریشه در حالت قوی (Strong Grade) و صرف شده در حالت ضعیف (Weak Grade) قرار می‌گیرد.</p>
+        <p>دارای تغییر درجه همخوان است (KPT-change: در حالت قوی $\leftrightarrow$ در حالت ضعیف).</p>
         <div class="verb-table">
             <table>
                 <thead>
                     <tr>
                         <th>شکل مصدری (Infinitiivi)</th>
                         <th>ترجمه فارسی</th>
-                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
-                        <th>تغییر درجه همخوان</th>
+                        <th>صرف کامل (Yksikkö: مفرد و Monikko: جمع)</th>
+                        <th>تغییر KPT</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>pu<strong>hu</strong>a</td><td>صحبت کردن</td><td>minä puhu**n**</td><td>بدون تغییر KPT</td></tr>
-                    <tr><td>ma<strong>ks</strong>aa</td><td>هزینه داشتن/پرداخت کردن</td><td>minä ma**ks**an</td><td>بدون تغییر KPT</td></tr>
-                    <tr><td>leik**k**iä</td><td>بازی کردن</td><td>minä leik**i**n</td><td>kk (قوی) → k (ضعیف) - این یک استثنای آوایی است.</td></tr>
-                    <tr><td>asua</td><td>زندگی کردن</td><td>minä asun</td><td>بدون تغییر KPT</td></tr>
+                    <tr>
+                        <td>Puhua</td>
+                        <td>صحبت کردن</td>
+                        <td>
+                            <span class="person">minä</span> puhun, <span class="person">sinä</span> puhut, <span class="person">hän</span> puhuu<br>
+                            <span class="person">me</span> puhumme, <span class="person">te</span> puhutte, <span class="person">he</span> puhuvat
+                        </td>
+                        <td>بدون KPT</td>
+                    </tr>
+                    <tr>
+                        <td>Leik**k**iä</td>
+                        <td>بازی کردن</td>
+                        <td>
+                            <span class="person">minä</span> leik<span class="kpt-change">i</span>n, <span class="person">sinä</span> leikit, <span class="person">hän</span> leik**k**ii<br>
+                            <span class="person">me</span> leikimme, <span class="person">te</span> leikitte, <span class="person">he</span> leik**k**ivät
+                        </td>
+                        <td>kk (قوی) $\rightarrow$ k (ضعیف)</td>
+                    </tr>
+                    <tr>
+                        <td>Käyt**t**ää</td>
+                        <td>استفاده کردن</td>
+                        <td>
+                            <span class="person">minä</span> käytän, <span class="person">sinä</span> käytät, <span class="person">hän</span> käyt**t**ää<br>
+                            <span class="person">me</span> käytämme, <span class="person">te</span> käytätte, <span class="person">he</span> käyt**t**ävät
+                        </td>
+                        <td>tt (قوی) $\rightarrow$ t (ضعیف)</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <h3>نوع ۲ (Type 2): ریشه فعل به da/dä ختم می‌شود.</h3>
-        <p>این افعال معمولاً دارای یک واکه (Vowel) بلند قبل از `dä/da` هستند. در هنگام صرف، `d/dä` حذف شده و پایانه شخصی مستقیماً به ریشه اضافه می‌شود. (همانند افعال نوع ۱ با ریشه بدون تغییر واکه)</p>
+        <p>قانون: `d/dä` حذف شده و پایانه‌های شخصی اضافه می‌شوند.</p>
         <div class="verb-table">
             <table>
                 <thead>
                     <tr>
                         <th>شکل مصدری (Infinitiivi)</th>
                         <th>ترجمه فارسی</th>
-                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
-                        <th>شکل سوم شخص مفرد (Hän-muoto)</th>
+                        <th>صرف کامل (Yksikkö و Monikko)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>syö**dä**</td><td>خوردن</td><td>minä syö**n**</td><td>hän syö</td></tr>
-                    <tr><td>käy**dä**</td><td>دیدار کردن/رفتن</td><td>minä käy**n**</td><td>hän käy</td></tr>
-                    <tr><td>voi**dä**</td><td>توانستن/حس کردن</td><td>minä voi**n**</td><td>hän voi</td></tr>
-                    <tr><td>tuo**da**</td><td>آوردن</td><td>minä tuo**n**</td><td>hän tuo</td></tr>
-                    <tr><td>myy**dä**</td><td>فروختن</td><td>minä myy**n**</td><td>hän myy</td></tr>
-                    <tr><td>saa**da**</td><td>گرفتن/اجازه داشتن</td><td>minä saa**n**</td><td>hän saa</td>
+                    <tr>
+                        <td>Syö**dä**</td>
+                        <td>خوردن</td>
+                        <td>
+                            <span class="person">minä</span> syön, <span class="person">sinä</span> syöt, <span class="person">hän</span> syö<br>
+                            <span class="person">me</span> syömme, <span class="person">te</span> syötte, <span class="person">he</span> syövät
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Käy**dä**</td>
+                        <td>دیدار کردن/رفتن</td>
+                        <td>
+                            <span class="person">minä</span> käyn, <span class="person">sinä</span> käyt, <span class="person">hän</span> käy<br>
+                            <span class="person">me</span> käymme, <span class="person">te</span> käytte, <span class="person">he</span> käyvät
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Saada</td>
+                        <td>گرفتن/اجازه داشتن</td>
+                        <td>
+                            <span class="person">minä</span> saan, <span class="person">sinä</span> saat, <span class="person">hän</span> saa<br>
+                            <span class="person">me</span> saamme, <span class="person">te</span> saatte, <span class="person">he</span> saavat
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <h3>نوع ۳ (Type 3): ریشه فعل به lla/llä، nna/nnä، rra/rrä، sta/stä ختم می‌شود.</h3>
-        <p>در هنگام صرف، دو حرف آخر حذف شده و یک واکه اضافی (e) قبل از پایانه‌های شخصی قرار می‌گیرد.</p>
+        <p>قانون: یک واکه اضافی (e) قبل از پایانه‌ها اضافه می‌شود. این افعال برعکس نوع ۱ عمل می‌کنند (در حالت صرف ضعیف $\rightarrow$ قوی).</p>
         <div class="verb-table">
             <table>
                 <thead>
                     <tr>
                         <th>شکل مصدری (Infinitiivi)</th>
                         <th>ترجمه فارسی</th>
-                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
+                        <th>صرف کامل (Yksikkö و Monikko)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>kuunne**lla**</td><td>گوش دادن</td><td>minä kuuntel**en**</td></tr>
-                    <tr><td>me**nnä**</td><td>رفتن</td><td>minä men**en**</td></tr>
-                    <tr><td>tu**lla**</td><td>آمدن</td><td>minä tul**en**</td></tr>
-                    <tr><td>nou**sta**</td><td>بلند شدن/بالا رفتن</td><td>minä nous**en**</td></tr>
+                    <tr>
+                        <td>Tu**lla**</td>
+                        <td>آمدن</td>
+                        <td>
+                            <span class="person">minä</span> tul**en**, <span class="person">sinä</span> tulet, <span class="person">hän</span> tulee<br>
+                            <span class="person">me</span> tulemme, <span class="person">te</span> tulette, <span class="person">he</span> tulevat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kuunne**lla**</td>
+                        <td>گوش دادن</td>
+                        <td>
+                            <span class="person">minä</span> kuuntel**en**, <span class="person">sinä</span> kuuntelet, <span class="person">hän</span> kuuntelee<br>
+                            <span class="person">me</span> kuuntelemme, <span class="person">te</span> kuuntelette, <span class="person">he</span> kuuntelevat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Riidellä</td>
+                        <td>دعوا کردن</td>
+                        <td>
+                            <span class="person">minä</span> riitel**en**, <span class="person">sinä</span> riitelet, <span class="person">hän</span> riitelee<br>
+                            <span class="person">me</span> riitelemme, <span class="person">te</span> riitelette, <span class="person">he</span> riitelevät
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <h3>نوع ۴ (Type 4): ریشه فعل به ata/ätä، ota/ötä، uta/ytä ختم می‌شود.</h3>
-        <p>در هنگام صرف، `ta/tä` حذف شده و یک همخوان تکراری (معمولاً t) قبل از پایانه‌های شخصی اضافه می‌شود.</p>
+        <p>قانون: واکه ماقبل آخر طولانی شده یا همخوان تکرار می‌شود (در حالت صرف ضعیف $\rightarrow$ قوی).</p>
         <div class="verb-table">
             <table>
                 <thead>
                     <tr>
                         <th>شکل مصدری (Infinitiivi)</th>
                         <th>ترجمه فارسی</th>
-                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
+                        <th>صرف کامل (Yksikkö و Monikko)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>mit**ata**</td><td>اندازه گرفتن</td><td>minä mi**tt**aan</td></tr>
-                    <tr><td>av**ata**</td><td>باز کردن</td><td>minä av**aa**n</td></tr>
-                    <tr><td>siiv**ota**</td><td>تمیز کردن</td><td>minä siiv**oo**n</td></tr>
+                    <tr>
+                        <td>Av**ata**</td>
+                        <td>باز کردن</td>
+                        <td>
+                            <span class="person">minä</span> av**aa**n, <span class="person">sinä</span> avaat, <span class="person">hän</span> avaa<br>
+                            <span class="person">me</span> avaamme, <span class="person">te</span> avaatte, <span class="person">he</span> avaavat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mit**ata**</td>
+                        <td>اندازه گرفتن</td>
+                        <td>
+                            <span class="person">minä</span> mi**tt**aan, <span class="person">sinä</span> mittaat, <span class="person">hän</span> mittaa<br>
+                            <span class="person">me</span> mittaamme, <span class="person">te</span> mittaatte, <span class="person">he</span> mittaavat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Siiv**ota**</td>
+                        <td>تمیز کردن</td>
+                        <td>
+                            <span class="person">minä</span> siiv**oo**n, <span class="person">sinä</span> siivoat, <span class="person">hän</span> siivoaa<br>
+                            <span class="person">me</span> siivoamme, <span class="person">te</span> siivoatte, <span class="person">he</span> siivoavat
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <h3>نوع ۵ (Type 5): ریشه فعل به ita/itä ختم می‌شود.</h3>
-        <div class="example">tarvita (نیاز داشتن), häiritä (مزاحم شدن), valita (انتخاب کردن)</div>
+        <p>قانون: `ta/tä` حذف و `se` قبل از پایانه‌ها اضافه می‌شود (مانند نوع ۳).</p>
+        <div class="verb-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>شکل مصدری (Infinitiivi)</th>
+                        <th>ترجمه فارسی</th>
+                        <th>صرف کامل (Yksikkö و Monikko)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tarvita</td>
+                        <td>نیاز داشتن</td>
+                        <td>
+                            <span class="person">minä</span> tarvit**se**n, <span class="person">sinä</span> tarvitset, <span class="person">hän</span> tarvitsee<br>
+                            <span class="person">me</span> tarvitsemme, <span class="person">te</span> tarvitsette, <span class="person">he</span> tarvitsevat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Valita</td>
+                        <td>انتخاب کردن</td>
+                        <td>
+                            <span class="person">minä</span> valit**se**n, <span class="person">sinä</span> valitset, <span class="person">hän</span> valitsee<br>
+                            <span class="person">me</span> valitsemme, <span class="person">te</span> valitsette, <span class="person">he</span> valitsevat
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <div class="section">
@@ -260,7 +378,7 @@
         </div>
 
         <h3>کلمات نوع -nen (Nen-sanat)</h3>
-        <p>در هنگام صرف، پسوند -nen به -s- تبدیل می‌شود (nainen → nais-).</p>
+        <p>در هنگام صرف، پسوند -nen به -s- تبدیل می‌شود (nainen $\rightarrow$ nais-).</p>
         <div class="verb-table">
             <table>
                 <thead>
@@ -278,7 +396,7 @@
         </div>
 
         <h3>کلمات نوع -in (In-sanat)</h3>
-        <p>در هنگام صرف، پسوند -in به -ime- تبدیل می‌شود (puhelin → puhelime-).</p>
+        <p>در هنگام صرف، پسوند -in به -ime- تبدیل می‌شود (puhelin $\rightarrow$ puhelime-).</p>
         <div class="verb-table">
             <table>
                 <thead>
@@ -349,6 +467,7 @@
             Matkustan **lentokoneella** Suomeen. (با **هواپیما** به فنلاند سفر می‌کنم.)
         </div>
     </div>
+
 </div>
 
 </body>
