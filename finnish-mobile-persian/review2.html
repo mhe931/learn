@@ -13,7 +13,7 @@
             color: #333;
         }
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
             background: #fff;
             padding: 30px;
@@ -50,9 +50,6 @@
             direction: ltr;
             text-align: left;
         }
-        .example strong {
-            color: #a00;
-        }
         .verb-table {
             width: 100%;
             border-collapse: collapse;
@@ -68,79 +65,100 @@
             background-color: #007bff;
             color: white;
         }
+        .verb-table td:nth-child(2) {
+            direction: rtl;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>مطالب خودآموز دوره فنلاندی ۲</h1>
+    <h1>مطالب خودآموز جامع فنلاندی ۲ (Kertaus Finnish 2)</h1>
 
     <div class="section">
-        <h2>۱. انواع فعل (Verbityypit)</h2>
-        <p>تغییرات درجه همخوان (Astevaihtelu) را به خاطر بسپارید.</p>
+        <h2>۱. انواع فعل (Verbityypit) و تغییر درجه همخوان (Astevaihtelu)</h2>
+        <p>در زبان فنلاندی، افعال به شش نوع (Type) اصلی تقسیم می‌شوند. در هنگام صرف، بسیاری از افعال از قانون تغییر درجه همخوان (KPT-change) تبعیت می‌کنند.</p>
 
         <h3>نوع ۱ (Type 1): ریشه فعل به واکه (vowel) + a/ä ختم می‌شود.</h3>
-        <div class="example">asua (زندگی کردن), puhua (صحبت کردن), maksaa (هزینه داشتن، پرداخت کردن)</div>
+        <p>در این نوع، هنگام صرف در شخص اول مفرد، یک واکه بین ریشه و پایانه قرار می‌گیرد. اگر فعل دارای تغییر درجه همخوان باشد، ریشه در حالت قوی (Strong Grade) و صرف شده در حالت ضعیف (Weak Grade) قرار می‌گیرد.</p>
         <div class="verb-table">
             <table>
                 <thead>
                     <tr>
-                        <th>شکل مصدری</th>
-                        <th>شکل اول شخص مفرد</th>
-                        <th>مثال صرف (leikkiä: بازی کردن)</th>
+                        <th>شکل مصدری (Infinitiivi)</th>
+                        <th>ترجمه فارسی</th>
+                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
+                        <th>تغییر درجه همخوان</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>leik<strong>ki</strong>ä</td>
-                        <td>minä leik<strong>i</strong>n</td>
-                        <td>minä leikin, sinä leikit, hän leikkii, me leikimme, te leikitte, he leikkivät</td>
-                    </tr>
+                    <tr><td>pu<strong>hu</strong>a</td><td>صحبت کردن</td><td>minä puhu**n**</td><td>بدون تغییر KPT</td></tr>
+                    <tr><td>ma<strong>ks</strong>aa</td><td>هزینه داشتن/پرداخت کردن</td><td>minä ma**ks**an</td><td>بدون تغییر KPT</td></tr>
+                    <tr><td>leik**k**iä</td><td>بازی کردن</td><td>minä leik**i**n</td><td>kk (قوی) → k (ضعیف) - این یک استثنای آوایی است.</td></tr>
+                    <tr><td>asua</td><td>زندگی کردن</td><td>minä asun</td><td>بدون تغییر KPT</td></tr>
                 </tbody>
             </table>
         </div>
 
         <h3>نوع ۲ (Type 2): ریشه فعل به da/dä ختم می‌شود.</h3>
-        <div class="example">käydä (دیدار کردن، رفتن), voida (توانستن، حس کردن), syödä (خوردن)</div>
-
-        <h3>نوع ۳ (Type 3): ریشه فعل به lla/llä، nna/nnä، rra/rrä، sta/stä ختم می‌شود.</h3>
-        <div class="example">tulla (آمدن), mennä (رفتن), nousta (بلند شدن، بالا رفتن)</div>
+        <p>این افعال معمولاً دارای یک واکه (Vowel) بلند قبل از `dä/da` هستند. در هنگام صرف، `d/dä` حذف شده و پایانه شخصی مستقیماً به ریشه اضافه می‌شود. (همانند افعال نوع ۱ با ریشه بدون تغییر واکه)</p>
         <div class="verb-table">
             <table>
                 <thead>
                     <tr>
-                        <th>شکل مصدری</th>
-                        <th>شکل اول شخص مفرد</th>
-                        <th>مثال صرف (kuunnella: گوش دادن)</th>
+                        <th>شکل مصدری (Infinitiivi)</th>
+                        <th>ترجمه فارسی</th>
+                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
+                        <th>شکل سوم شخص مفرد (Hän-muoto)</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr><td>syö**dä**</td><td>خوردن</td><td>minä syö**n**</td><td>hän syö</td></tr>
+                    <tr><td>käy**dä**</td><td>دیدار کردن/رفتن</td><td>minä käy**n**</td><td>hän käy</td></tr>
+                    <tr><td>voi**dä**</td><td>توانستن/حس کردن</td><td>minä voi**n**</td><td>hän voi</td></tr>
+                    <tr><td>tuo**da**</td><td>آوردن</td><td>minä tuo**n**</td><td>hän tuo</td></tr>
+                    <tr><td>myy**dä**</td><td>فروختن</td><td>minä myy**n**</td><td>hän myy</td></tr>
+                    <tr><td>saa**da**</td><td>گرفتن/اجازه داشتن</td><td>minä saa**n**</td><td>hän saa</td>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>نوع ۳ (Type 3): ریشه فعل به lla/llä، nna/nnä، rra/rrä، sta/stä ختم می‌شود.</h3>
+        <p>در هنگام صرف، دو حرف آخر حذف شده و یک واکه اضافی (e) قبل از پایانه‌های شخصی قرار می‌گیرد.</p>
+        <div class="verb-table">
+            <table>
+                <thead>
                     <tr>
-                        <td>kuunne<strong>ll</strong>a</td>
-                        <td>minä kuunte<strong>l</strong>en</td>
-                        <td>minä kuuntelen, sinä kuuntelet, hän kuuntelee, me kuuntelemme, te kuuntelette, he kuuntelevat</td>
+                        <th>شکل مصدری (Infinitiivi)</th>
+                        <th>ترجمه فارسی</th>
+                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
                     </tr>
+                </thead>
+                <tbody>
+                    <tr><td>kuunne**lla**</td><td>گوش دادن</td><td>minä kuuntel**en**</td></tr>
+                    <tr><td>me**nnä**</td><td>رفتن</td><td>minä men**en**</td></tr>
+                    <tr><td>tu**lla**</td><td>آمدن</td><td>minä tul**en**</td></tr>
+                    <tr><td>nou**sta**</td><td>بلند شدن/بالا رفتن</td><td>minä nous**en**</td></tr>
                 </tbody>
             </table>
         </div>
 
         <h3>نوع ۴ (Type 4): ریشه فعل به ata/ätä، ota/ötä، uta/ytä ختم می‌شود.</h3>
-        <div class="example">osata (توانستن، بلد بودن), avata (باز کردن), siivota (تمیز کردن)</div>
+        <p>در هنگام صرف، `ta/tä` حذف شده و یک همخوان تکراری (معمولاً t) قبل از پایانه‌های شخصی اضافه می‌شود.</p>
         <div class="verb-table">
             <table>
                 <thead>
                     <tr>
-                        <th>شکل مصدری</th>
-                        <th>شکل اول شخص مفرد</th>
-                        <th>مثال صرف (mitata: اندازه گرفتن)</th>
+                        <th>شکل مصدری (Infinitiivi)</th>
+                        <th>ترجمه فارسی</th>
+                        <th>شکل اول شخص مفرد (Minä-muoto)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>mita<strong>t</strong>a</td>
-                        <td>minä mi<strong>tt</strong>aan</td>
-                        <td>minä mittaan, sinä mittaat, hän mittaa, me mittaamme, te mittaatte, he mittaavat</td>
-                    </tr>
+                    <tr><td>mit**ata**</td><td>اندازه گرفتن</td><td>minä mi**tt**aan</td></tr>
+                    <tr><td>av**ata**</td><td>باز کردن</td><td>minä av**aa**n</td></tr>
+                    <tr><td>siiv**ota**</td><td>تمیز کردن</td><td>minä siiv**oo**n</td></tr>
                 </tbody>
             </table>
         </div>
@@ -150,37 +168,31 @@
     </div>
 
     <div class="section">
-        <h2>۲. حالت مفعولی (Partitiivi)</h2>
+        <h2>۲. حالات صرفی (Sijamuodot) در زبان فنلاندی</h2>
+        <p>حالات صرفی (Cases) نقش اسم یا ضمیر را در جمله مشخص می‌کنند. در این بخش، ۹ حالت اصلی مورد استفاده در این دوره مرور می‌شود.</p>
 
-        <h3>قواعد کلی استفاده از حالت مفعولی (Milloin käytät partitiivia)</h3>
-        <p>این حالت در انگلیسی و بسیاری زبان‌های دیگر معادل دقیقی ندارد. اغلب در مواردی استفاده می‌شود که زبان‌های دیگر از حالت جمع استفاده می‌کنند، اما با حالت جمع یکسان نیست.</p>
-        <ol style="direction: ltr; text-align: left;">
-            <li>بعد از اعداد: <div class="example">viisi kirjaa (پنج کتاب)</div></li>
-            <li>بعد از کلمات تعیین کننده کمیت: <div class="example">monta kirjaa (کتاب‌های زیاد)</div></li>
-            <li>با کلمات مربوط به مواد (که معمولاً غیر قابل شمارش هستند): <div class="example">kahvia (قهوه), mehua (آبمیوه), leipää (نان), pizzaa, ilmaa (هوا), rahaa (پول)</div></li>
-            <li>در جملات منفی: <div class="example">Minulla ei ole autoa. (من ماشین ندارم.)</div></li>
-            <li>با عبارات غیر نتیجه‌ای (Irresultative phrases) (عملی که هنوز کامل نشده): <div class="example">Luen kirjaa. (دارم کتاب می‌خوانم.)</div></li>
-            <li>با افعالی که نیاز به مفعول مفعولی دارند (Partitive verbs): <div class="example">Poika rakastaa tyttöä. (پسر، دختر را دوست دارد.)، rakastaa, odottaa (منتظر بودن), pelata (بازی کردن), ajaa (رانندگی کردن), opiskella (تحصیل کردن), auttaa (کمک کردن)</div></li>
-        </ol>
-        <p>تمام کلمات در یک عبارت (مانند یک عبارت اسمی) به حالت مفعولی در می‌آیند: <div class="example">Ajan sinistä autoa. (من در حال رانندگی با یک ماشین آبی هستم.)</div></p>
+        <h3>الف. حالات نحوی (Grammatical Cases)</h3>
+        <div class="verb-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>حالت (Sijamuoto)</th>
+                        <th>پایانه (Pääte)</th>
+                        <th>نقش</th>
+                        <th>مثال (Talo: خانه)</th>
+                        <th>ترجمه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nominatiivi (نهادی)</td><td>بدون پایانه (0)</td><td>فاعل، مفعول در جملات نتیجه‌ای کامل</td><td>Talo</td><td>خانه (به عنوان فاعل)</td></tr>
+                    <tr><td>Partitiivi (مفعولی جزئی)</td><td>-a/ä, -ta/tä, -tta/tt**ä**</td><td>مفعول ناقص/جزئی، مفعول جملات منفی، بعد از اعداد</td><td>Talo**a**</td><td>خانه (به صورت جزئی/ناقص)</td></tr>
+                    <tr><td>Genetiivi (اضافی)</td><td>-n</td><td>مالکیت ("ـِ"، "یِ")</td><td>Talo**n**</td><td>خانه‌یِ (مالکیت)</td></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <h3>تشکیل حالت مفعولی (Partitiivin muodostaminen)</h3>
-        <p>پایانه‌ها بسته به نوع پایان کلمه متفاوت هستند:</p>
-        <ul>
-            <li>واکه مفرد e: $-tta/tt\ddot{a}$ (مثال: osoite → kolme osoitetta)</li>
-            <li>یک واکه مفرد دیگر: $-a/\ddot{a}$ (مثال: talo → kaksi taloa)</li>
-            <li>دو واکه: $-a/\ddot{a}$ (مثال: kauppa → kaksi kauppaa)</li>
-            <li>یک همخوان: $-ta/t\ddot{a}$ (مثال: huone → kaksi huonetta، avain → kaksi avainta)</li>
-        </ul>
-        <p>ضمایر شخصی در حالت مفعولی:</p>
-        <div class="example">minua (mua), sinua (sua), häntä (sitä), meitä, teitä, heitä (niitä)</div>
-    </div>
-
-    <div class="section">
-        <h2>۳. حالات محلی (Paikallissijat)</h2>
-        <p>حالات محلی مکان یا حرکت به یک مکان یا دور شدن از آن را بیان می‌کنند. به دو گروه تقسیم می‌شوند:</p>
-
-        <h3>الف. حالات S (Sisäpaikallissijat - مکان‌های "درون") - مکان‌های مشخص و داخل یک شیء</h3>
+        <h3>ب. حالات مکانی داخلی (Sisäpaikallissijat - حالات S)</h3>
+        <p>برای اشاره به مکان‌های "درون" یا "داخل" یک شیء یا منطقه استفاده می‌شوند.</p>
         <div class="verb-table">
             <table>
                 <thead>
@@ -189,37 +201,20 @@
                         <th>پایانه (Pääte)</th>
                         <th>سؤال (Kysymys)</th>
                         <th>معنی</th>
-                        <th>مثال</th>
+                        <th>مثال (Talo: خانه)</th>
+                        <th>ترجمه</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Inessiivi</td>
-                        <td>-ssa/-ssä</td>
-                        <td>Missä? (کجا؟)</td>
-                        <td>در، داخل</td>
-                        <td>talossa (در خانه), Olen talossa. (من در خانه هستم.)</td>
-                    </tr>
-                    <tr>
-                        <td>Elatiivi</td>
-                        <td>-sta/-stä</td>
-                        <td>Mistä? (از کجا؟)</td>
-                        <td>از داخل</td>
-                        <td>talosta (از خانه), Tulen talosta. (من از خانه می‌آیم.)</td>
-                    </tr>
-                    <tr>
-                        <td>Illatiivi</td>
-                        <td>-Vn, -hVn, -seen</td>
-                        <td>Mihin? (به کجا؟)</td>
-                        <td>به داخل</td>
-                        <td>taloon (به خانه), Menen taloon. (من به خانه می‌روم.)</td>
-                    </tr>
+                    <tr><td>Inessiivi (درونی)</td><td>-ssa/-ssä</td><td>Missä? (کجا؟)</td><td>در، داخل</td><td>Talo**ssa**</td><td>در خانه</td></tr>
+                    <tr><td>Elatiivi (خروجی)</td><td>-sta/-stä</td><td>Mistä? (از کجا؟)</td><td>از داخل</td><td>Talo**sta**</td><td>از داخل خانه</td></tr>
+                    <tr><td>Illatiivi (ورودی)</td><td>-Vn, -hVn, -seen</td><td>Mihin? (به کجا؟)</td><td>به داخل</td><td>Talo**on**</td><td>به داخل خانه</td></tr>
                 </tbody>
             </table>
         </div>
-        <p><strong>Illatiivi</strong> سه شکل مختلف دارد: -Vn (taloon), -hVn (puuhun), -seen (Lontooseen). (V = واکه)</p>
 
-        <h3>ب. حالات L (Ulkopaikallissijat - مکان‌های "روی") - مکان‌های کمتر مشخص، روی یا نزدیک یک شیء</h3>
+        <h3>ج. حالات مکانی خارجی (Ulkopaikallissijat - حالات L)</h3>
+        <p>برای اشاره به مکان‌های "روی"، "بر روی"، یا نزدیکی یک شیء/سطح استفاده می‌شوند.</p>
         <div class="verb-table">
             <table>
                 <thead>
@@ -228,41 +223,25 @@
                         <th>پایانه (Pääte)</th>
                         <th>سؤال (Kysymys)</th>
                         <th>معنی</th>
-                        <th>مثال</th>
+                        <th>مثال (Pöytä: میز)</th>
+                        <th>ترجمه</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Adessiivi</td>
-                        <td>-lla/-llä</td>
-                        <td>Missä? (کجا؟)</td>
-                        <td>روی، بر روی، در نزدیکی</td>
-                        <td>pöydällä (روی میز), Kirja on pöydällä. (کتاب روی میز است.)</td>
-                    </tr>
-                    <tr>
-                        <td>Ablatiivi</td>
-                        <td>-lta/-ltä</td>
-                        <td>Mistä? (از کجا؟)</td>
-                        <td>از روی، از نزدیکی</td>
-                        <td>pöydältä (از روی میز), Otan kirjan pöydältä. (من کتاب را از روی میز برمی‌دارم.)</td>
-                    </tr>
-                    <tr>
-                        <td>Allatiivi</td>
-                        <td>-lle</td>
-                        <td>Mihin? (به کجا؟)</td>
-                        <td>به روی، به نزدیکی</td>
-                        <td>pöydälle (به روی میز), Laitan kirjan pöydälle. (من کتاب را روی میز می‌گذارم.)</td>
-                    </tr>
+                    <tr><td>Adessiivi (بیرونی)</td><td>-lla/-llä</td><td>Missä? (کجا؟)</td><td>روی، بر روی، در نزدیکی</td><td>Pöydä**llä**</td><td>روی میز</td></tr>
+                    <tr><td>Ablatiivi (دور شونده)</td><td>-lta/-ltä</td><td>Mistä? (از کجا؟)</td><td>از روی، از نزدیکی</td><td>Pöydä**ltä**</td><td>از روی میز</td></tr>
+                    <tr><td>Allatiivi (نزدیک شونده)</td><td>-lle</td><td>Mihin? (به کجا؟)</td><td>به روی، به نزدیکی</td><td>Pöydä**lle**</td><td>به روی میز</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 
     <div class="section">
-        <h2>۴. کلمات با پایانه‌های خاص (-e, -nen, -in)</h2>
+        <h2>۳. کلمات با پایانه‌های خاص (-e, -nen, -in, -i)</h2>
+        <p>این کلمات هنگام صرف، ریشه (Stemma) متفاوتی را در حالات متمایل (Obligue Cases) نسبت به حالت نهادی (Nominatiivi) نشان می‌دهند.</p>
 
         <h3>کلمات نوع -e (E-sanat)</h3>
-        <p>در برخی از کلمات نوع -e، یک k تبدیل به kk می‌شود که همان تغییر درجه همخوان معکوس است. (مثال: lääke → lääkkeen)</p>
+        <p>در حالات متمایل، حرف e در انتهای کلمه، قبل از افزودن پایانه، دو بار تکرار می‌شود (ee).</p>
         <div class="verb-table">
             <table>
                 <thead>
@@ -273,16 +252,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Nominative</td><td>perhe</td><td>lääke</td></tr>
-                    <tr><td>Genitive</td><td>perheen</td><td>lääkkeen</td></tr>
-                    <tr><td>Partitive</td><td>perhettä</td><td>lääkettä</td></tr>
-                    <tr><td>Inessive</td><td>perheessä</td><td>lääkkeessä</td></tr>
-                    <tr><td>Illative</td><td>perheeseen</td><td>lääkkeeseen</td></tr>
+                    <tr><td>Nominative (نهادی)</td><td>perhe</td><td>lääke</td></tr>
+                    <tr><td>Genitive (اضافی)</td><td>perh**ee**n</td><td>lääk**kee**n</td></tr>
+                    <tr><td>Partitive (مفعولی جزئی)</td><td>perhe**ttä**</td><td>lääke**ttä**</td></tr>
                 </tbody>
             </table>
         </div>
 
         <h3>کلمات نوع -nen (Nen-sanat)</h3>
+        <p>در هنگام صرف، پسوند -nen به -s- تبدیل می‌شود (nainen → nais-).</p>
         <div class="verb-table">
             <table>
                 <thead>
@@ -292,16 +270,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Nominative</td><td>nainen</td></tr>
-                    <tr><td>Genitive</td><td>naisen</td></tr>
-                    <tr><td>Partitive</td><td>naista</td></tr>
-                    <tr><td>Inessive</td><td>naisessa</td></tr>
-                    <tr><td>Illative</td><td>naiseen</td></tr>
+                    <tr><td>Nominative (نهادی)</td><td>naine**n**</td></tr>
+                    <tr><td>Genitive (اضافی)</td><td>nai**se**n</td></tr>
+                    <tr><td>Partitive (مفعولی جزئی)</td><td>nai**sta**</td></tr>
                 </tbody>
             </table>
         </div>
 
         <h3>کلمات نوع -in (In-sanat)</h3>
+        <p>در هنگام صرف، پسوند -in به -ime- تبدیل می‌شود (puhelin → puhelime-).</p>
         <div class="verb-table">
             <table>
                 <thead>
@@ -311,139 +288,67 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Nominative</td><td>puhelin</td></tr>
-                    <tr><td>Genitive</td><td>puhelimen</td></tr>
-                    <tr><td>Partitive</td><td>puhelinta</td></tr>
-                    <tr><td>Inessive</td><td>puhelimessa</td></tr>
-                    <tr><td>Illative</td><td>puhelimeen</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h3>کلمات نوع -i (I-sanat)</h3>
-        <h4>کلمات -i جدید (Uudet i-sanat)</h4>
-        <p>معمولاً کلمات قرضی هستند و مانند کلمات عادی صرف می‌شوند. (مثال: kahvi, teksti, enkeli, lääkäri)</p>
-        <p>پایانه‌ها: Partitive: شکل اصلی + a/ä، Genitive: شکل اصلی + n، Inessive: شکل اصلی + ssa/ssä</p>
-
-        <h4>کلمات -i قدیمی (Vanhat i-sanat)</h4>
-        <p>اغلب کلمات مربوط به طبیعت هستند و هنگام صرف شدن تغییرات بیشتری دارند. (مثال: kivi, saari)</p>
-        <p>پایانه‌های عمومی:</p>
-        <ul>
-            <li>Partitive: -i حذف می‌شود و -ea/eä یا -ta/tä اضافه می‌شود.</li>
-            <li>Genitive: -i حذف می‌شود و -en اضافه می‌شود.</li>
-            <li>Inessive: -i حذف می‌شود و -essa/essä اضافه می‌شود.</li>
-        </ul>
-        <p>نمونه‌هایی با تغییر بیشتر:</p>
-        <div class="verb-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nominatiivi</th>
-                        <th>In English</th>
-                        <th>Partitiivi</th>
-                        <th>Genetiivi</th>
-                        <th>Inessiivi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>joki</td><td>river</td><td>jokea</td><td>joen</td><td>joessa</td></tr>
-                    <tr><td>kieli</td><td>tongue</td><td>kieltä</td><td>kielen</td><td>kielessä</td></tr>
-                    <tr><td>käsi</td><td>hand</td><td>kättä</td><td>käden</td><td>kädessä</td></tr>
-                    <tr><td>lapsi</td><td>child</td><td>lasta</td><td>lapsen</td><td>lapsessa</td></tr>
-                    <tr><td>vesi</td><td>water</td><td>vettä</td><td>veden</td><td>vedessä</td></tr>
+                    <tr><td>Nominative (نهادی)</td><td>puhel**in**</td></tr>
+                    <tr><td>Genitive (اضافی)</td><td>puhel**ime**n</td></tr>
+                    <tr><td>Partitive (مفعولی جزئی)</td><td>puhel**int**a</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 
     <div class="section">
-        <h2>۵. جملات مالکیت (Omistuslause)</h2>
-        <p>بیان می‌کند که کسی چیزی دارد یا ندارد.</p>
-        <p>ساختار: [صفت قیدی (Adessive)] + [بودن (olla)] + [فاعل (Nominative/Partitive)]</p>
+        <h2>۴. جملات مالکیت (Omistuslause) و وجودی (Eksistentiaalilause)</h2>
+
+        <h3>جملات مالکیت (Possessive)</h3>
+        <p>بیان می‌کند که چه کسی مالک چه چیزی است. برای اشاره به مالک از حالت **Adessiivi (-lla/-llä)** استفاده می‌شود.</p>
+        <p>ساختار: [مالک در حالت Adessive] + [فعل olla (بودن)] + [شیء مالکیت در Nominative/Partitive]</p>
         <div class="example">
-            Tytöllä on hevonen. (دختر یک اسب دارد.)
-            Hänellä ei ole koiraa. (او یک سگ ندارد.)
+            Minu**lla** on auto. (من ماشین دارم.) (به صورت تحت‌اللفظی: ماشین بر روی من است.)
+            Häne**llä** ei ole koir**aa**. (او سگ ندارد.)
         </div>
-        <p>توجه: در جملات منفی، مفعول در حالت مفعولی (Partitive) قرار می‌گیرد.</p>
-    </div>
+        <p>توجه: در جملات منفی، شیء مالکیت باید در حالت **Partitiivi (مفعولی جزئی)** قرار گیرد.</p>
 
-    <div class="section">
-        <h2>۶. جملات وجودی (Eksistentiaalilause)</h2>
-        <p>بیان می‌کند که چیزی در مکانی وجود دارد. در انگلیسی اغلب با "there is" یا "there are" شروع می‌شود. در فنلاندی با یک حالت مکانی (local case) شروع می‌شود.</p>
-        <p>ساختار: [مکان (Local case)] + [بودن (olla)] + [فاعل (Nominative/Partitive)]</p>
+        <h3>جملات وجودی (Existential)</h3>
+        <p>بیان می‌کند که چیزی در مکانی وجود دارد یا نه. جمله با یک حالت مکانی آغاز می‌شود.</p>
+        <p>ساختار: [مکان در حالت محلی (Local Case)] + [فعل olla (بودن)] + [فاعل (Nominative/Partitive)]</p>
         <div class="example">
-            Huoneessa on sänky. (در اتاق یک تخت وجود دارد.)
-            Pöydällä on kirja. (روی میز یک کتاب وجود دارد.)
+            Pöyde**llä** on kirja. (روی میز یک کتاب است.)
+            Huonee**ssa** ei ole sänky**ä**. (در اتاق تختی وجود ندارد.)
         </div>
     </div>
 
     <div class="section">
-        <h2>۷. ضمایر اشاره (Demonstratiivipronominit)</h2>
-        <p>ضمایر اشاره می‌توانند به تنهایی یا همراه با اسم استفاده شوند و به شخص، شیء یا موقعیتی اشاره دارند که از متن یا بافت قابل تشخیص است.</p>
-        <div class="verb-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>حالت (Sija)</th>
-                        <th>tämä (این)</th>
-                        <th>tuo (آن)</th>
-                        <th>se (آن/آن)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Nominatiivi</td><td>tämä</td><td>tuo</td><td>se</td></tr>
-                    <tr><td>Partitiivi</td><td>tätä</td><td>tuota</td><td>sitä</td></tr>
-                    <tr><td>Genetiivi</td><td>tämän</td><td>tuon</td><td>sen</td></tr>
-                    <tr><td>Inessiivi</td><td>tässä</td><td>tuossa</td><td>siinä</td></tr>
-                    <tr><td>Elatiivi</td><td>tästä</td><td>tuosta</td><td>siitä</td></tr>
-                    <tr><td>Illatiivi</td><td>tähän</td><td>tuohon</td><td>siihen</td></tr>
-                    <tr><td>Adessiivi</td><td>tällä</td><td>tuolla</td><td>sillä</td></tr>
-                    <tr><td>Ablatiivi</td><td>tältä</td><td>tuolta</td><td>siltä</td></tr>
-                    <tr><td>Allatiivi</td><td>tälle</td><td>tuolle</td><td>sille</td></tr>
-                </tbody>
-            </table>
-        </div>
+        <h2>۵. وجه امری (Imperatiivi)</h2>
+        <p>برای دستور دادن یا درخواست‌های محکم استفاده می‌شود.</p>
+        <p>شکل‌گیری: با حذف پایانه شخصی -n از فرم اول شخص مفرد (Minä-muoto) ساخته می‌شود.</p>
         <div class="example">
-            Mikä se on? (آن چیست؟)
-            tämä auto (این ماشین), tuolla bussilla (با آن اتوبوس), siinä osoitteessa (در آن آدرس)
+            Tule! (بیا!)
+            Mene! (برو!)
+            Syö! (بخور!)
+            Älä syö! (نخور!) - (شکل منفی: Älä + امر)
         </div>
     </div>
 
     <div class="section">
-        <h2>۸. امر (Imperatiivi)</h2>
-        <p>ضرورت را بیان می‌کند و در دستورات و درخواست‌ها استفاده می‌شود، معمولاً با علامت تعجب.</p>
-        <p>شکل‌گیری: با حذف پایانه شخصی -n از شخص اول مفرد (Syödä → Syön → Syö!) <div class="example">Tule! (بیا!) Mene! (برو!) Syö! (بخور!) Juo! (بنوش!)</div></p>
-        <p>شکل منفی: Älä + امر <div class="example">Älä syö! (نخور!) Älä aja ylinopeutta! (با سرعت زیاد رانندگی نکن!)</div></p>
-    </div>
-
-    <div class="section">
-        <h2>۹. واژگان</h2>
+        <h2>۶. واژگان ضروری (Sanasto)</h2>
 
         <h3>صفات (Adjektiivit)</h3>
-        <p>خوب (hyvä)، بد (huono)، سالم (terve)، بیمار (sairas)، گران (kallis)، ارزان (halpa)، بلند (pitkä)، کوتاه (lyhyt)، بزرگ (iso / suuri)، کوچک (pieni)، داغ/گرم (kuuma)، سرد (kylmä)، جدید (uusi)، قدیمی (vanha)، جوان (nuori)، پیر (vanha)، آسان (helppo)، سخت (vaikea)، زیبا (kaunis)</p>
+        <div class="example">
+            hyvä (خوب)، huono (بد)، terve (سالم)، sairas (بیمار)، kallis (گران)، halpa (ارزان)، pitkä (بلند)، lyhyt (کوتاه)، iso / suuri (بزرگ)، pieni (کوچک)، kuuma (داغ/گرم)، kylmä (سرد)، uusi (جدید)، vanha (قدیمی)، nuori (جوان)، kaunis (زیبا)
+        </div>
 
         <h3>رنگ‌ها (Värit)</h3>
-        <p>سفید (valkea / valkoinen)، آبی (sininen)، قرمز (punainen)، قهوه‌ای (ruskea)، سبز (vihreä)، بنفش (violetti / liila)، زرد (keltainen)، سیاه (musta)، آبی روشن (vaaleansininen)، خاکستری (harmaa)، آبی تیره (tummansininen)، نارنجی (oranssi)</p>
-
-        <h3>لباس‌ها (Vaatteet)</h3>
-        <p>پیراهن (paita)، پیراهن یقه‌دار (kauluspaita)، شلوار (housut)، شلوار جین (farkut)، لباس زنانه (mekko)، تی‌شرت (t-paita)، شلوارک (shortsit)، ژاکت (takki)، هودی (huppari)، دامن (hame)، جوراب (sukka / sukat)</p>
-
-        <h3>اتاق‌ها (Huoneet)</h3>
-        <p>هال (eteinen)، اتاق نشیمن (olohuone)، آشپزخانه (keittiö)، توالت (vessa)، حمام (kylpyhuone)، اتاق خواب (makuuhuone)</p>
-
-        <h3>مبلمان و لوازم خانگی (Huonekalut)</h3>
-        <p>میز (pöytä)، صندلی (tuoli)، صندلی راک (keinutuoli)، مبل (sohva)، کاناپه (nojatuoli)، کمد (kaappi)، دراور (lipasto)، پنجره (ikkuna)، در (ovi)، تخت (sänky)، لامپ (lamppu)، قفسه کتاب (kirjahylly)، توالت فرنگی (vessanpönttö)، دستمال توالت (vessapaperi)، سینک/روشویی (lavuaari)، حوله (pyyhe)، آینه (peili)، مایکروویو (mikro / mikroaaltouuni)، یخچال (jääkaappi)، فریزر (pakastin)، قهوه‌ساز (kahvinkeitin)، کتری (vedenkeitin)، لیوان (lasi)، ماگ (muki)، بشقاب (lautanen)، قاشق (lusikka)، چنگال (haarukka)، چاقو (veitsi)، نقاشی/تابلو (taulu)، فرش (matto)، بالش (tyyny)، دوش (suihku)</p>
+        <div class="example">
+            valkea / valkoinen (سفید)، sininen (آبی)، punainen (قرمز)، ruskea (قهوه‌ای)، vihreä (سبز)، keltainen (زرد)، musta (سیاه)، harmaa (خاکستری)، oranssi (نارنجی)
+        </div>
 
         <h3>وسایل نقلیه (Kulkuvälineet)</h3>
-        <p>ماشین (auto)، قطار (juna)، دوچرخه (pyörä / polkupyörä)، قایق (vene)، تاکسی (taksi)، کشتی (laiva)، مترو (metro)، موتور سیکلت / موتور گازی (moottoripyörä / mopo)، هواپیما (lentokone)، اتوبوس (bussi / linja-auto)، تراموا (ratikka / raitiovaunu)، پیاده راه رفتن (kävellä / mennä kävellen)</p>
-        <p>سؤال: Millä sinä matkustat? (با چه چیزی سفر می‌کنی؟) جواب: Matkustan lentokoneella Suomeen. (با هواپیما به فنلاند سفر می‌کنم.)</p>
-        <p>سؤال: Millä sinä menet kotiin? (با چه چیزی به خانه می‌روی؟) جواب: Menen autolla. (با ماشین می‌روم.)</p>
-        <p>توجه: برای وسایل نقلیه از حالت Adessive (-lla/-llä) استفاده می‌شود. برای پیاده از "kävellen" استفاده می‌شود.</p>
-
-        <h3>آب و هوا (Sää)</h3>
-        <p>سؤال: Millainen sää on? (هوا چطور است؟) <div class="example">Aurinkoinen (آفتابی), Sateinen (بارانی), Pilvinen (ابری), On kylmä. (هوا سرد است.), On lämmin. (هوا گرم است.), On sateista. (هوا بارانی است.), On aurinkoista. (هوا آفتابی است.), On pilvistä. (هوا ابری است.)</div></p>
+        <p>برای سفر با وسیله نقلیه از حالت **Adessiivi (-lla/-llä)** استفاده می‌شود.</p>
+        <div class="example">
+            auto (ماشین)، juna (قطار)، pyörä (دوچرخه)، bussi (اتوبوس)، metro (مترو)، laiva (کشتی)
+            Matkustan **lentokoneella** Suomeen. (با **هواپیما** به فنلاند سفر می‌کنم.)
+        </div>
     </div>
-
 </div>
 
 </body>
