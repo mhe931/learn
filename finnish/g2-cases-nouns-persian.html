@@ -7,32 +7,163 @@
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #080810; --card-bg: rgba(25, 25, 40, 0.95); --gold: #FFD700; --neon: #00D4FF; --purple: #BC13FE; --text: #F0F0F0; --subtext: #B0B0B0; --rule-bg: rgba(0, 212, 255, 0.08); --example-bg: rgba(255, 0, 212, 0.05); }
-        body { background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%); background-attachment: fixed; color: var(--text); font-family: 'Vazirmatn', sans-serif; font-size: 18px; line-height: 1.8; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
-        h1, h2 { font-family: 'Orbitron', sans-serif; text-align: center; }
-        h1 { font-size: 2.5em; color: var(--gold); margin-bottom: 20px; }
-        h2 { font-size: 2em; color: var(--neon); border-bottom: 2px solid rgba(0, 212, 255, 0.3); padding-bottom: 15px; margin: 40px 0 30px; }
-        .card { background: var(--card-bg); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
-        details { border-radius: 10px; margin-bottom: 15px; background: var(--rule-bg); border: 1px solid rgba(0, 212, 255, 0.2); transition: background 0.3s; }
-        details[open] { background: rgba(25, 25, 40, 0.9); }
-        summary { font-size: 1.2em; font-weight: 700; color: #fff; padding: 15px; cursor: pointer; user-select: none; }
-        summary::marker { color: var(--neon); }
-        .details-content { padding: 0 20px 20px; }
-        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; background: #151520; }
-        th, td { padding: 12px; border: 1px solid #333; text-align: center; }
-        th { background: #222; color: var(--gold); }
-        .ex-text { padding: 10px; margin-bottom: 10px; border-right: 3px solid var(--purple); background: var(--example-bg); border-radius: 5px; }
-        .ex-finnish { color: #fff; font-weight: bold; direction: ltr; text-align: left; display: block; }
-        .ex-persian { color: var(--subtext); font-size: 0.9em; margin-top: 5px; display: block; }
-        .nav-link { text-align: center; margin-top: 20px; padding-bottom: 20px; }
-        .nav-link a { color: var(--neon); text-decoration: none; font-size: 1.2em; font-weight: bold; }
+        /* THEME: DEEP SPACE & NEON (Copied from source files) */
+        :root {
+            --bg: #080810;
+            --card-bg: rgba(25, 25, 40, 0.95);
+            --gold: #FFD700;
+            --neon: #00D4FF;
+            --purple: #BC13FE;
+            --text: #F0F0F0;
+            --subtext: #B0B0B0;
+            --success: #00FF9D;
+            --error: #FF4B4B;
+            --example: #FF00D4;
+            --rule-bg: rgba(0, 212, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 2em;
+            color: var(--neon);
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 15px;
+            margin: 40px 0 30px;
+            font-weight: 800;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        details {
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: var(--rule-bg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: background 0.3s;
+        }
+
+        details[open] {
+            background: rgba(25, 25, 40, 0.9);
+        }
+
+        summary {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        summary::marker {
+            color: var(--neon);
+        }
+
+        .details-content {
+            padding: 0 20px 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+            background: #151520;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+
+        th {
+            background: #222;
+            color: var(--gold);
+        }
+
+        .ex-text {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-right: 3px solid var(--purple);
+            background: rgba(255, 0, 212, 0.05);
+            border-radius: 5px;
+        }
+
+        .ex-finnish {
+            color: #fff;
+            font-weight: bold;
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .ex-persian {
+            color: var(--subtext);
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .nav-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .nav-link a {
+            color: var(--neon);
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>بخش ۲: حالت‌ها و اسم‌ها</h1>
-        <div class="nav-link"><a href="index-persian.html"> بازگشت به فهرست </a></div>
+        <div class="nav-link"><a href="index.html"> بازگشت به فهرست </a></div>
 
         <h2 id="partitive">۸. حالت پارتیتیو (Partitiivi)</h2>
         <div class="card">
@@ -236,51 +367,76 @@
                 <div class="details-content">
                     <p>ریشه برخی از اسم‌ها هنگام گرفتن پسوند حالت، تغییر می‌کند. در اینجا صرف کامل ۶ کلمه نمونه آمده است.</p>
                     <details><summary>جدول صرف: perhe (خانواده - نوع e)</summary>
-                    <table><thead><tr><th>حالت</th><th>صرف</th></tr></thead><tbody>
-                        <tr><td>Nominatiivi</td><td dir="ltr">perhe</td></tr>
-                        <tr><td>Partitiivi</td><td dir="ltr">perhettä</td></tr>
-                        <tr><td>Genetiivi</td><td dir="ltr">perheen</td></tr>
-                        <tr><td>Inessiivi</td><td dir="ltr">perheessä</td></tr>
-                        <tr><td>Elatiivi</td><td dir="ltr">perheestä</td></tr>
-                        <tr><td>Illatiivi</td><td dir="ltr">perheeseen</td></tr>
-                        <tr><td>Adessiivi</td><td dir="ltr">perheellä</td></tr>
-                        <tr><td>Ablatiivi</td><td dir="ltr">perheeltä</td></tr>
-                        <tr><td>Allatiivi</td><td dir="ltr">perheelle</td></tr>
+                    <table><thead><tr><th>حالت</th><th>صرف</th><th>ترجمه فارسی</th><th class="kpt-info">KPT</th></tr></thead><tbody>
+                        <tr><td>Nominatiivi</td><td dir="ltr">perhe</td><td>خانواده</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Partitiivi</td><td dir="ltr">perhettä</td><td>خانواده را (بخشی)</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Genetiivi</td><td dir="ltr">perheen</td><td>خانواده (مالکیت)</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Inessiivi</td><td dir="ltr">perheessä</td><td>در خانواده</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Elatiivi</td><td dir="ltr">perheestä</td><td>از خانواده</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Illatiivi</td><td dir="ltr">perheeseen</td><td>به خانواده</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Adessiivi</td><td dir="ltr">perheellä</td><td>روی/با خانواده</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Ablatiivi</td><td dir="ltr">perheeltä</td><td>از روی/از خانواده</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Allatiivi</td><td dir="ltr">perheelle</td><td>به سوی/برای خانواده</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: lääke (دارو - نوع e با KPT معکوس)</summary>
-                    <table><thead><tr><th>حالت</th><th>صرف</th><th class="kpt-info">KPT</th></tr></thead><tbody>
-                        <tr><td>Nominatiivi</td><td dir="ltr">lääke</td><td class="kpt-info">k (ضعیف)</td></tr>
-                        <tr><td>Partitiivi</td><td dir="ltr">lääkettä</td><td class="kpt-info">k (ضعیف)</td></tr>
-                        <tr><td>Genetiivi</td><td dir="ltr">lääkkeen</td><td class="kpt-info">kk (قوی)</td></tr>
-                        <tr><td>Inessiivi</td><td dir="ltr">lääkkeessä</td><td class="kpt-info">kk (قوی)</td></tr>
+                    <table><thead><tr><th>حالت</th><th>صرف</th><th>ترجمه فارسی</th><th class="kpt-info">KPT</th></tr></thead><tbody>
+                        <tr><td>Nominatiivi</td><td dir="ltr">lääke</td><td>دارو</td><td class="kpt-info">k (ضعیف)</td></tr>
+                        <tr><td>Partitiivi</td><td dir="ltr">lääkettä</td><td>دارو را (بخشی)</td><td class="kpt-info">k (ضعیف)</td></tr>
+                        <tr><td>Genetiivi</td><td dir="ltr">lääkkeen</td><td>دارو (مالکیت)</td><td class="kpt-info">kk (قوی)</td></tr>
+                        <tr><td>Inessiivi</td><td dir="ltr">lääkkeessä</td><td>در دارو</td><td class="kpt-info">kk (قوی)</td></tr>
+                        <tr><td>Elatiivi</td><td dir="ltr">lääkkeestä</td><td>از دارو</td><td class="kpt-info">kk (قوی)</td></tr>
+                        <tr><td>Illatiivi</td><td dir="ltr">lääkkeeseen</td><td>به دارو</td><td class="kpt-info">kk (قوی)</td></tr>
+                        <tr><td>Adessiivi</td><td dir="ltr">lääkkeellä</td><td>با/روی دارو</td><td class="kpt-info">kk (قوی)</td></tr>
+                        <tr><td>Ablatiivi</td><td dir="ltr">lääkkeeltä</td><td>از با/از روی دارو</td><td class="kpt-info">kk (قوی)</td></tr>
+                        <tr><td>Allatiivi</td><td dir="ltr">lääkkeelle</td><td>به سوی/برای دارو</td><td class="kpt-info">kk (قوی)</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: nainen (زن - نوع nen)</summary>
-                    <table><thead><tr><th>حالت</th><th>صرف</th></tr></thead><tbody>
-                        <tr><td>Nominatiivi</td><td dir="ltr">nainen</td></tr>
-                        <tr><td>Partitiivi</td><td dir="ltr">naista</td></tr>
-                        <tr><td>Genetiivi</td><td dir="ltr">naisen</td></tr>
-                        <tr><td>Inessiivi</td><td dir="ltr">naisessa</td></tr>
+                    <table><thead><tr><th>حالت</th><th>صرف</th><th>ترجمه فارسی</th><th class="kpt-info">KPT</th></tr></thead><tbody>
+                        <tr><td>Nominatiivi</td><td dir="ltr">nainen</td><td>زن</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Partitiivi</td><td dir="ltr">naista</td><td>زن را (بخشی)</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Genetiivi</td><td dir="ltr">naisen</td><td>زن (مالکیت)</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Inessiivi</td><td dir="ltr">naisessa</td><td>در زن</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Elatiivi</td><td dir="ltr">naisesta</td><td>از زن</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Illatiivi</td><td dir="ltr">naiseen</td><td>به زن</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Adessiivi</td><td dir="ltr">naisella</td><td>روی/با زن</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Ablatiivi</td><td dir="ltr">naiselta</td><td>از روی/از زن</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Allatiivi</td><td dir="ltr">naiselle</td><td>به سوی/برای زن</td><td class="kpt-info">nd</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: puhelin (تلفن - نوع in)</summary>
-                    <table><thead><tr><th>حالت</th><th>صرف</th></tr></thead><tbody>
-                        <tr><td>Nominatiivi</td><td dir="ltr">puhelin</td></tr>
-                        <tr><td>Partitiivi</td><td dir="ltr">puhelinta</td></tr>
-                        <tr><td>Genetiivi</td><td dir="ltr">puhelimen</td></tr>
-                        <tr><td>Inessiivi</td><td dir="ltr">puhelimessa</td></tr>
+                    <table><thead><tr><th>حالت</th><th>صرف</th><th>ترجمه فارسی</th><th class="kpt-info">KPT</th></tr></thead><tbody>
+                        <tr><td>Nominatiivi</td><td dir="ltr">puhelin</td><td>تلفن</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Partitiivi</td><td dir="ltr">puhelinta</td><td>تلفن را (بخشی)</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Genetiivi</td><td dir="ltr">puhelimen</td><td>تلفن (مالکیت)</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Inessiivi</td><td dir="ltr">puhelimessa</td><td>در تلفن</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Elatiivi</td><td dir="ltr">puhelimesta</td><td>از تلفن</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Illatiivi</td><td dir="ltr">puhelimeen</td><td>به تلفن</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Adessiivi</td><td dir="ltr">puhelimella</td><td>با/روی تلفن</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Ablatiivi</td><td dir="ltr">puhelimelta</td><td>از با/از روی تلفن</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Allatiivi</td><td dir="ltr">puhelimelle</td><td>به سوی/برای تلفن</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: järvi (دریاچه - نوع i قدیمی)</summary>
-                    <table><thead><tr><th>حالت</th><th>صرف</th></tr></thead><tbody>
-                        <tr><td>Nominatiivi</td><td dir="ltr">järvi</td></tr>
-                        <tr><td>Partitiivi</td><td dir="ltr">järveä</td></tr>
-                        <tr><td>Genetiivi</td><td dir="ltr">järven</td></tr>
-                        <tr><td>Inessiivi</td><td dir="ltr">järvessä</td></tr>
+                    <table><thead><tr><th>حالت</th><th>صرف</th><th>ترجمه فارسی</th><th class="kpt-info">KPT</th></tr></thead><tbody>
+                        <tr><td>Nominatiivi</td><td dir="ltr">järvi</td><td>دریاچه</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Partitiivi</td><td dir="ltr">järveä</td><td>دریاچه را (بخشی)</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Genetiivi</td><td dir="ltr">järven</td><td>دریاچه (مالکیت)</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Inessiivi</td><td dir="ltr">järvessä</td><td>در دریاچه</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Elatiivi</td><td dir="ltr">järvestä</td><td>از دریاچه</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Illatiivi</td><td dir="ltr">järveen</td><td>به دریاچه</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Adessiivi</td><td dir="ltr">järvellä</td><td>روی/با دریاچه</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Ablatiivi</td><td dir="ltr">järveltä</td><td>از روی/از دریاچه</td><td class="kpt-info">v → v</td></tr>
+                        <tr><td>Allatiivi</td><td dir="ltr">järvelle</td><td>به سوی/برای دریاچه</td><td class="kpt-info">v → v</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: lapsi (بچه - نوع i خاص)</summary>
-                    <table><thead><tr><th>حالت</th><th>صرف</th><th class="kpt-info">KPT</th></tr></thead><tbody>
-                        <tr><td>Nominatiivi</td><td dir="ltr">lapsi</td><td class="kpt-info">psi (قوی)</td></tr>
-                        <tr><td>Partitiivi</td><td dir="ltr">lasta</td><td class="kpt-info">s (ضعیف)</td></tr>
-                        <tr><td>Genetiivi</td><td dir="ltr">lapsen</td><td class="kpt-info">ps (قوی)</td></tr>
-                        <tr><td>Inessiivi</td><td dir="ltr">lapsessa</td><td class="kpt-info">ps (قوی)</td></tr>
+                    <table><thead><tr><th>حالت</th><th>صرف</th><th>ترجمه فارسی</th><th class="kpt-info">KPT</th></tr></thead><tbody>
+                        <tr><td>Nominatiivi</td><td dir="ltr">lapsi</td><td>بچه</td><td class="kpt-info">psi (قوی)</td></tr>
+                        <tr><td>Partitiivi</td><td dir="ltr">lasta</td><td>بچه را (بخشی)</td><td class="kpt-info">s (ضعیف)</td></tr>
+                        <tr><td>Genetiivi</td><td dir="ltr">lapsen</td><td>بچه (مالکیت)</td><td class="kpt-info">ps (قوی)</td></tr>
+                        <tr><td>Inessiivi</td><td dir="ltr">lapsessa</td><td>در بچه</td><td class="kpt-info">ps (قوی)</td></tr>
+                        <tr><td>Elatiivi</td><td dir="ltr">lapsesta</td><td>از بچه</td><td class="kpt-info">ps (قوی)</td></tr>
+                        <tr><td>Illatiivi</td><td dir="ltr">lapseen</td><td>به بچه</td><td class="kpt-info">ps (قوی)</td></tr>
+                        <tr><td>Adessiivi</td><td dir="ltr">lapsella</td><td>روی/با بچه</td><td class="kpt-info">ps (قوی)</td></tr>
+                        <tr><td>Ablatiivi</td><td dir="ltr">lapselta</td><td>از روی/از بچه</td><td class="kpt-info">ps (قوی)</td></tr>
+                        <tr><td>Allatiivi</td><td dir="ltr">lapselle</td><td>به سوی/برای بچه</td><td class="kpt-info">ps (قوی)</td></tr>
                     </tbody></table></details>
                 </div>
             </details>

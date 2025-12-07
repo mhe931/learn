@@ -7,34 +7,177 @@
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #080810; --card-bg: rgba(25, 25, 40, 0.95); --gold: #FFD700; --neon: #00D4FF; --purple: #BC13FE; --text: #F0F0F0; --subtext: #B0B0B0; --rule-bg: rgba(0, 212, 255, 0.08); --example-bg: rgba(255, 0, 212, 0.05); }
-        body { background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%); background-attachment: fixed; color: var(--text); font-family: 'Vazirmatn', sans-serif; font-size: 18px; line-height: 1.8; padding: 20px; }
-        .container { max-width: 900px; margin: 0 auto; }
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; text-align: center; }
-        h1 { font-size: 2.5em; color: var(--gold); margin-bottom: 20px; }
-        h2 { font-size: 2em; color: var(--neon); border-bottom: 2px solid rgba(0, 212, 255, 0.3); padding-bottom: 15px; margin: 40px 0 30px; }
-        h3 { font-size: 1.2em; color: var(--gold); margin: 20px 0 10px 0; text-align: right; font-family: 'Vazirmatn', sans-serif; }
-        .card { background: var(--card-bg); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); padding: 25px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
-        details { border-radius: 10px; margin-bottom: 15px; background: var(--rule-bg); border: 1px solid rgba(0, 212, 255, 0.2); transition: background 0.3s; }
-        details[open] { background: rgba(25, 25, 40, 0.9); }
-        summary { font-size: 1.2em; font-weight: 700; color: #fff; padding: 15px; cursor: pointer; user-select: none; }
-        summary::marker { color: var(--neon); }
-        .details-content { padding: 0 20px 20px; }
-        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; background: #151520; }
-        th, td { padding: 12px; border: 1px solid #333; text-align: center; }
-        th { background: #222; color: var(--gold); }
-        .ex-text { padding: 10px; margin-bottom: 10px; border-right: 3px solid var(--purple); background: var(--example-bg); border-radius: 5px; }
-        .ex-finnish { color: #fff; font-weight: bold; direction: ltr; text-align: left; display: block; }
-        .ex-persian { color: var(--subtext); font-size: 0.9em; margin-top: 5px; display: block; }
-        .kpt-info { color: var(--purple); font-weight: bold; font-size: 0.8em; }
-        .nav-link { text-align: center; margin-top: 20px; padding-bottom: 20px; }
-        .nav-link a { color: var(--neon); text-decoration: none; font-size: 1.2em; font-weight: bold; }
+        /* THEME: DEEP SPACE & NEON (Copied from source files) */
+        :root {
+            --bg: #080810;
+            --card-bg: rgba(25, 25, 40, 0.95);
+            --gold: #FFD700;
+            --neon: #00D4FF;
+            --purple: #BC13FE;
+            --text: #F0F0F0;
+            --subtext: #B0B0B0;
+            --success: #00FF9D;
+            --error: #FF4B4B;
+            --example: #FF00D4;
+            --rule-bg: rgba(0, 212, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 2em;
+            color: var(--neon);
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 15px;
+            margin: 40px 0 30px;
+            font-weight: 800;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: var(--gold);
+            margin: 20px 0 10px 0;
+            text-align: right;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        details {
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: var(--rule-bg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: background 0.3s;
+        }
+
+        details[open] {
+            background: rgba(25, 25, 40, 0.9);
+        }
+
+        summary {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        summary::marker {
+            color: var(--neon);
+        }
+
+        .details-content {
+            padding: 0 20px 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+            background: #151520;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+
+        th {
+            background: #222;
+            color: var(--gold);
+        }
+
+        .ex-text {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-right: 3px solid var(--purple);
+            background: rgba(255, 0, 212, 0.05);
+            border-radius: 5px;
+        }
+
+        .ex-finnish {
+            color: #fff;
+            font-weight: bold;
+            direction: ltr;
+            text-align: left;
+            display: block;
+        }
+
+        .ex-persian {
+            color: var(--subtext);
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .kpt-info {
+            color: var(--purple);
+            font-weight: bold;
+            font-size: 0.8em;
+        }
+
+        .nav-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .nav-link a {
+            color: var(--neon);
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>بخش ۱: مبانی و افعال</h1>
-        <div class="nav-link"><a href="index-persian.html"> بازگشت به فهرست </a></div>
+        <div class="nav-link"><a href="index.html"> بازگشت به فهرست </a></div>
 
         <h2 id="basics">۱. مبانی: ضمایر شخصی و فعل OLLA</h2>
         <div class="card">
@@ -97,35 +240,54 @@
                     <p>فعل به دو مصوت ختم می‌شود (مثل -ua, -ea, -ia). برای صرف، آخرین مصوت را حذف و شناسه شخصی را اضافه کنید. در سوم شخص مفرد، آخرین مصوت تکرار می‌شود و شناسه ندارد.</p>
                     <h3>جدول صرف افعال</h3>
                     <details><summary>جدول صرف: Puhua, Asua</summary>
-                    <table><thead><tr><th>شخص</th><th>Puhua</th><th>Asua</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Puhua (Positiivinen)</th><th>Puhua (Negatiivinen)</th><th>Asua (Positiivinen)</th><th>Asua (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">puhun</td><td dir="ltr">asun</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Sinä</td><td dir="ltr">puhut</td><td dir="ltr">asut</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">puhuu</td><td dir="ltr">asuu</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">puhun</td><td dir="ltr">en puhu</td><td dir="ltr">asun</td><td dir="ltr">en asu</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">puhut</td><td dir="ltr">et puhu</td><td dir="ltr">asut</td><td dir="ltr">et asu</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">puhuu</td><td dir="ltr">ei puhu</td><td dir="ltr">asuu</td><td dir="ltr">ei asu</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">puhumme</td><td dir="ltr">emme puhu</td><td dir="ltr">asumme</td><td dir="ltr">emme asu</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">puhutte</td><td dir="ltr">ette puhu</td><td dir="ltr">asutte</td><td dir="ltr">ette asu</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">puhuvat</td><td dir="ltr">eivät puhu</td><td dir="ltr">asuvat</td><td dir="ltr">eivät asu</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Laulaa, Nauraa</summary>
-                    <table><thead><tr><th>شخص</th><th>Laulaa</th><th>Nauraa</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Laulaa (Positiivinen)</th><th>Laulaa (Negatiivinen)</th><th>Nauraa (Positiivinen)</th><th>Nauraa (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">laulan</td><td dir="ltr">nauran</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">laulaa</td><td dir="ltr">nauraa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">laulan</td><td dir="ltr">en laula</td><td dir="ltr">nauran</td><td dir="ltr">en naura</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">laulat</td><td dir="ltr">et laula</td><td dir="ltr">naurat</td><td dir="ltr">et naura</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">laulaa</td><td dir="ltr">ei laula</td><td dir="ltr">nauraa</td><td dir="ltr">ei naura</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">laulamme</td><td dir="ltr">emme laula</td><td dir="ltr">nauramme</td><td dir="ltr">emme naura</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">laulatte</td><td dir="ltr">ette laula</td><td dir="ltr">nauratte</td><td dir="ltr">ette naura</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">laulavat</td><td dir="ltr">eivät laula</td><td dir="ltr">nauravat</td><td dir="ltr">eivät naura</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Maksaa, Ostaa</summary>
-                    <table><thead><tr><th>شخص</th><th>Maksaa</th><th>Ostaa</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Maksaa (Positiivinen)</th><th>Maksaa (Negatiivinen)</th><th>Ostaa (Positiivinen)</th><th>Ostaa (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">maksan</td><td dir="ltr">ostan</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">maksaa</td><td dir="ltr">ostaa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">maksan</td><td dir="ltr">en maksa</td><td dir="ltr">ostan</td><td dir="ltr">en osta</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">maksat</td><td dir="ltr">et maksa</td><td dir="ltr">ostat</td><td dir="ltr">et osta</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">maksaa</td><td dir="ltr">ei maksa</td><td dir="ltr">ostaa</td><td dir="ltr">ei osta</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">maksamme</td><td dir="ltr">emme maksa</td><td dir="ltr">ostamme</td><td dir="ltr">emme osta</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">maksatte</td><td dir="ltr">ette maksa</td><td dir="ltr">ostatte</td><td dir="ltr">ette osta</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">maksavat</td><td dir="ltr">eivät maksa</td><td dir="ltr">ostavat</td><td dir="ltr">eivät osta</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Tietää, Antaa</summary>
-                    <table><thead><tr><th>شخص</th><th>Tietää</th><th>Antaa</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Tietää (Positiivinen)</th><th>Tietää (Negatiivinen)</th><th>Antaa (Positiivinen)</th><th>Antaa (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">tie<b>d</b>än</td><td dir="ltr">annan</td><td class="kpt-info">t → d</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">tietää</td><td dir="ltr">antaa</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">tie<b>d</b>än</td><td dir="ltr">en tiedä</td><td dir="ltr">annan</td><td dir="ltr">en anna</td><td class="kpt-info">t → d</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">tie<b>d</b>ät</td><td dir="ltr">et tiedä</td><td dir="ltr">annat</td><td dir="ltr">et anna</td><td class="kpt-info">t → d</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">tietää</td><td dir="ltr">ei tiedä</td><td dir="ltr">antaa</td><td dir="ltr">ei anna</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Me</td><td dir="ltr">tie<b>d</b>ämme</td><td dir="ltr">emme tiedä</td><td dir="ltr">annamme</td><td dir="ltr">emme anna</td><td class="kpt-info">t → d</td></tr>
+                        <tr><td>Te</td><td dir="ltr">tie<b>d</b>ätte</td><td dir="ltr">ette tiedä</td><td dir="ltr">annatte</td><td dir="ltr">ette anna</td><td class="kpt-info">t → d</td></tr>
+                        <tr><td>He</td><td dir="ltr">tietävät</td><td dir="ltr">eivät tiedä</td><td dir="ltr">antavat</td><td dir="ltr">eivät anna</td><td class="kpt-info">قوی</td></tr>
                     </tbody></table></details>
                      <details><summary>جدول صرف: Ottaa, Rakastaa</summary>
-                    <table><thead><tr><th>شخص</th><th>Ottaa</th><th>Rakastaa</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Ottaa (Positiivinen)</th><th>Ottaa (Negatiivinen)</th><th>Rakastaa (Positiivinen)</th><th>Rakastaa (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">otan</td><td dir="ltr">rakastan</td><td class="kpt-info">tt → t</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">ottaa</td><td dir="ltr">rakastaa</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">otan</td><td dir="ltr">en ota</td><td dir="ltr">rakastan</td><td dir="ltr">en rakasta</td><td class="kpt-info">tt → t</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">otat</td><td dir="ltr">et ota</td><td dir="ltr">rakastat</td><td dir="ltr">et rakasta</td><td class="kpt-info">tt → t</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">ottaa</td><td dir="ltr">ei ota</td><td dir="ltr">rakastaa</td><td dir="ltr">ei rakasta</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Me</td><td dir="ltr">otamme</td><td dir="ltr">emme ota</td><td dir="ltr">rakastamme</td><td dir="ltr">emme rakasta</td><td class="kpt-info">tt → t</td></tr>
+                        <tr><td>Te</td><td dir="ltr">otatte</td><td dir="ltr">ette ota</td><td dir="ltr">rakastatte</td><td dir="ltr">ette rakasta</td><td class="kpt-info">tt → t</td></tr>
+                        <tr><td>He</td><td dir="ltr">ottavat</td><td dir="ltr">eivät ota</td><td dir="ltr">rakastavat</td><td dir="ltr">eivät rakasta</td><td class="kpt-info">قوی</td></tr>
                     </tbody></table></details>
                 </div>
             </details>
@@ -154,34 +316,54 @@
                     <p>فعل به <b>-da/-dä</b> ختم می‌شود. برای صرف، <b>-da/-dä</b> را حذف و شناسه شخصی را اضافه کنید.<br><b>Syödä → Syö- + n → Syön</b></p>
                     <h3>جدول صرف افعال</h3>
                     <details><summary>جدول صرف: Syödä, Juoda</summary>
-                    <table><thead><tr><th>شخص</th><th>Syödä</th><th>Juoda</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Syödä (Positiivinen)</th><th>Syödä (Negatiivinen)</th><th>Juoda (Positiivinen)</th><th>Juoda (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">syön</td><td dir="ltr">juon</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">syö</td><td dir="ltr">juo</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">syön</td><td dir="ltr">en syö</td><td dir="ltr">juon</td><td dir="ltr">en juo</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">syöt</td><td dir="ltr">et syö</td><td dir="ltr">juot</td><td dir="ltr">et juo</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">syö</td><td dir="ltr">ei syö</td><td dir="ltr">juo</td><td dir="ltr">ei juo</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">syömme</td><td dir="ltr">emme syö</td><td dir="ltr">juomme</td><td dir="ltr">emme juo</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">syötte</td><td dir="ltr">ette syö</td><td dir="ltr">juotte</td><td dir="ltr">ette juo</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">syövät</td><td dir="ltr">eivät syö</td><td dir="ltr">juovat</td><td dir="ltr">eivät juo</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Voida, Käydä</summary>
-                    <table><thead><tr><th>شخص</th><th>Voida</th><th>Käydä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Voida (Positiivinen)</th><th>Voida (Negatiivinen)</th><th>Käydä (Positiivinen)</th><th>Käydä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">voin</td><td dir="ltr">käyn</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">voi</td><td dir="ltr">käy</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">voin</td><td dir="ltr">en voi</td><td dir="ltr">käyn</td><td dir="ltr">en käy</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">voit</td><td dir="ltr">et voi</td><td dir="ltr">käyt</td><td dir="ltr">et käy</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">voi</td><td dir="ltr">ei voi</td><td dir="ltr">käy</td><td dir="ltr">ei käy</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">voimme</td><td dir="ltr">emme voi</td><td dir="ltr">käymme</td><td dir="ltr">emme käy</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">voitte</td><td dir="ltr">ette voi</td><td dir="ltr">käytte</td><td dir="ltr">ette käy</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">voivat</td><td dir="ltr">eivät voi</td><td dir="ltr">käyvät</td><td dir="ltr">eivät käy</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Myydä, Uida</summary>
-                    <table><thead><tr><th>شخص</th><th>Myydä</th><th>Uida</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Myydä (Positiivinen)</th><th>Myydä (Negatiivinen)</th><th>Uida (Positiivinen)</th><th>Uida (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">myyn</td><td dir="ltr">uin</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">myy</td><td dir="ltr">ui</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">myyn</td><td dir="ltr">en myy</td><td dir="ltr">uin</td><td dir="ltr">en ui</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">myyt</td><td dir="ltr">et myy</td><td dir="ltr">uit</td><td dir="ltr">et ui</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">myy</td><td dir="ltr">ei myy</td><td dir="ltr">ui</td><td dir="ltr">ei ui</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">myymme</td><td dir="ltr">emme myy</td><td dir="ltr">uimme</td><td dir="ltr">emme ui</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">myytte</td><td dir="ltr">ette myy</td><td dir="ltr">uitte</td><td dir="ltr">ette ui</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">myyvät</td><td dir="ltr">eivät myy</td><td dir="ltr">uivat</td><td dir="ltr">eivät ui</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Saada, Jäädä</summary>
-                    <table><thead><tr><th>شخص</th><th>Saada</th><th>Jäädä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Saada (Positiivinen)</th><th>Saada (Negatiivinen)</th><th>Jäädä (Positiivinen)</th><th>Jäädä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">saan</td><td dir="ltr">jään</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">saa</td><td dir="ltr">jää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">saan</td><td dir="ltr">en saa</td><td dir="ltr">jään</td><td dir="ltr">en jää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">saat</td><td dir="ltr">et saa</td><td dir="ltr">jäät</td><td dir="ltr">et jää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">saa</td><td dir="ltr">ei saa</td><td dir="ltr">jää</td><td dir="ltr">ei jää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">saamme</td><td dir="ltr">emme saa</td><td dir="ltr">jäämme</td><td dir="ltr">emme jää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">saatte</td><td dir="ltr">ette saa</td><td dir="ltr">jäätte</td><td dir="ltr">ette jää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">saavat</td><td dir="ltr">eivät saa</td><td dir="ltr">jäävät</td><td dir="ltr">eivät jää</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Tupakoida, Imuroida</summary>
-                    <table><thead><tr><th>شخص</th><th>Tupakoida</th><th>Imuroida</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Tupakoida (Positiivinen)</th><th>Tupakoida (Negatiivinen)</th><th>Imuroida (Positiivinen)</th><th>Imuroida (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">tupakoin</td><td dir="ltr">imuroin</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">tupakoi</td><td dir="ltr">imuroi</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">tupakoin</td><td dir="ltr">en tupakoi</td><td dir="ltr">imuroin</td><td dir="ltr">en imuroi</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">tupakoit</td><td dir="ltr">et tupakoi</td><td dir="ltr">imuroit</td><td dir="ltr">et imuroi</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">tupakoi</td><td dir="ltr">ei tupakoi</td><td dir="ltr">imuroi</td><td dir="ltr">ei imuroi</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">tupakoimme</td><td dir="ltr">emme tupakoi</td><td dir="ltr">imuroimme</td><td dir="ltr">emme imuroi</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">tupakoitte</td><td dir="ltr">ette tupakoi</td><td dir="ltr">imuroitte</td><td dir="ltr">ette imuroi</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">tupakoivat</td><td dir="ltr">eivät tupakoi</td><td dir="ltr">imuroivat</td><td dir="ltr">eivät imuroi</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                 </div>
             </details>
@@ -210,34 +392,54 @@
                     <p>فعل به صامت + la/lä, na/nä, ra/rä, sta/stä ختم می‌شود. دو حرف آخر را حذف، یک 'e' اضافه، و سپس شناسه شخصی را اضافه کنید.<br><b>Tulla → Tul- → Tule- + n → Tulen</b></p>
                     <h3>جدول صرف افعال</h3>
                     <details><summary>جدول صرف: Tulla, Mennä</summary>
-                    <table><thead><tr><th>شخص</th><th>Tulla</th><th>Mennä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Tulla (Positiivinen)</th><th>Tulla (Negatiivinen)</th><th>Mennä (Positiivinen)</th><th>Mennä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">tulen</td><td dir="ltr">menen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">tulee</td><td dir="ltr">menee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">tulen</td><td dir="ltr">en tule</td><td dir="ltr">menen</td><td dir="ltr">en mene</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">tulet</td><td dir="ltr">et tule</td><td dir="ltr">menet</td><td dir="ltr">et mene</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">tulee</td><td dir="ltr">ei tule</td><td dir="ltr">menee</td><td dir="ltr">ei mene</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">tulemme</td><td dir="ltr">emme tule</td><td dir="ltr">menemme</td><td dir="ltr">emme mene</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">tulette</td><td dir="ltr">ette tule</td><td dir="ltr">menette</td><td dir="ltr">ette mene</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">tulevat</td><td dir="ltr">eivät tule</td><td dir="ltr">menevät</td><td dir="ltr">eivät mene</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Olla, Panna</summary>
-                    <table><thead><tr><th>شخص</th><th>Olla</th><th>Panna</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Olla (Positiivinen)</th><th>Olla (Negatiivinen)</th><th>Panna (Positiivinen)</th><th>Panna (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">olen</td><td dir="ltr">panen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">on</td><td dir="ltr">panee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">olen</td><td dir="ltr">en ole</td><td dir="ltr">panen</td><td dir="ltr">en pane</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">olet</td><td dir="ltr">et ole</td><td dir="ltr">panet</td><td dir="ltr">et pane</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">on</td><td dir="ltr">ei ole</td><td dir="ltr">panee</td><td dir="ltr">ei pane</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Me</td><td dir="ltr">olemme</td><td dir="ltr">emme ole</td><td dir="ltr">panemme</td><td dir="ltr">emme pane</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Te</td><td dir="ltr">olette</td><td dir="ltr">ette ole</td><td dir="ltr">panette</td><td dir="ltr">ette pane</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>He</td><td dir="ltr">ovat</td><td dir="ltr">eivät ole</td><td dir="ltr">panevat</td><td dir="ltr">eivät pane</td><td class="kpt-info">nd</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Opiskella, Kävellä</summary>
-                    <table><thead><tr><th>شخص</th><th>Opiskella</th><th>Kävellä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Opiskella (Positiivinen)</th><th>Opiskella (Negatiivinen)</th><th>Kävellä (Positiivinen)</th><th>Kävellä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">opiskelen</td><td dir="ltr">kävelen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">opiskelee</td><td dir="ltr">kävelee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">opiskelen</td><td dir="ltr">en opiskele</td><td dir="ltr">kävelen</td><td dir="ltr">en kävele</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">opiskelet</td><td dir="ltr">et opiskele</td><td dir="ltr">kävelet</td><td dir="ltr">et kävele</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">opiskelee</td><td dir="ltr">ei opiskele</td><td dir="ltr">kävelee</td><td dir="ltr">ei kävele</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">opiskelemme</td><td dir="ltr">emme opiskele</td><td dir="ltr">kävelemme</td><td dir="ltr">emme kävele</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">opiskelette</td><td dir="ltr">ette opiskele</td><td dir="ltr">kävelette</td><td dir="ltr">ette kävele</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">opiskelevat</td><td dir="ltr">eivät opiskele</td><td dir="ltr">kävelevät</td><td dir="ltr">eivät kävele</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Nousta, Pestä</summary>
-                    <table><thead><tr><th>شخص</th><th>Nousta</th><th>Pestä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Nousta (Positiivinen)</th><th>Nousta (Negatiivinen)</th><th>Pestä (Positiivinen)</th><th>Pestä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">nousen</td><td dir="ltr">pesen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">nousee</td><td dir="ltr">pesee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">nousen</td><td dir="ltr">en nouse</td><td dir="ltr">pesen</td><td dir="ltr">en pese</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">nouset</td><td dir="ltr">et nouse</td><td dir="ltr">peset</td><td dir="ltr">et pese</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">nousee</td><td dir="ltr">ei nouse</td><td dir="ltr">pesee</td><td dir="ltr">ei pese</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Me</td><td dir="ltr">nousemme</td><td dir="ltr">emme nouse</td><td dir="ltr">pesemme</td><td dir="ltr">emme pese</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>Te</td><td dir="ltr">nousette</td><td dir="ltr">ette nouse</td><td dir="ltr">pesette</td><td dir="ltr">ette pese</td><td class="kpt-info">nd</td></tr>
+                        <tr><td>He</td><td dir="ltr">nousevat</td><td dir="ltr">eivät nouse</td><td dir="ltr">pesevät</td><td dir="ltr">eivät pese</td><td class="kpt-info">nd</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Juosta, Purra</summary>
-                    <table><thead><tr><th>شخص</th><th>Juosta</th><th>Purra</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Juosta (Positiivinen)</th><th>Juosta (Negatiivinen)</th><th>Purra (Positiivinen)</th><th>Purra (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">juoksen</td><td dir="ltr">puren</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">juoksee</td><td dir="ltr">puree</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">juoksen</td><td dir="ltr">en juokse</td><td dir="ltr">puren</td><td dir="ltr">en pure</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">juokset</td><td dir="ltr">et juokse</td><td dir="ltr">puret</td><td dir="ltr">et pure</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">juoksee</td><td dir="ltr">ei juokse</td><td dir="ltr">puree</td><td dir="ltr">ei pure</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">juoksemme</td><td dir="ltr">emme juokse</td><td dir="ltr">puremme</td><td dir="ltr">emme pure</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">juoksette</td><td dir="ltr">ette juokse</td><td dir="ltr">purette</td><td dir="ltr">ette pure</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">juoksevat</td><td dir="ltr">eivät juokse</td><td dir="ltr">purevat</td><td dir="ltr">eivät pure</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                 </div>
             </details>
@@ -266,34 +468,54 @@
                     <p>فعل به -ata/-ätä, -ota/-ötä, -uta/-ytä ختم می‌شود. حرف 't' آخر را حذف، یک مصوت 'a'/'ä' اضافه و سپس شناسه شخصی را اضافه کنید.<br><b>Siivota → Siivoa- + n → Siivoan</b><br>این نوع فعل دارای KPT است.</p>
                     <h3>جدول صرف افعال</h3>
                     <details><summary>جدول صرف: Avata, Siivota</summary>
-                    <table><thead><tr><th>شخص</th><th>Avata</th><th>Siivota</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Avata (Positiivinen)</th><th>Avata (Negatiivinen)</th><th>Siivota (Positiivinen)</th><th>Siivota (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">avaan</td><td dir="ltr">siivoan</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">avaa</td><td dir="ltr">siivoaa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">avaan</td><td dir="ltr">en avaa</td><td dir="ltr">siivoan</td><td dir="ltr">en siivoa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">avaat</td><td dir="ltr">et avaa</td><td dir="ltr">siivoat</td><td dir="ltr">et siivoa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">avaa</td><td dir="ltr">ei avaa</td><td dir="ltr">siivoaa</td><td dir="ltr">ei siivoa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">avaamme</td><td dir="ltr">emme avaa</td><td dir="ltr">siivoamme</td><td dir="ltr">emme siivoa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">avaatte</td><td dir="ltr">ette avaa</td><td dir="ltr">siivoatte</td><td dir="ltr">ette siivoa</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">avaavat</td><td dir="ltr">eivät avaa</td><td dir="ltr">siivoavat</td><td dir="ltr">eivät siivoa</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Haluta, Herätä</summary>
-                    <table><thead><tr><th>شخص</th><th>Haluta</th><th>Herätä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Haluta (Positiivinen)</th><th>Haluta (Negatiivinen)</th><th>Herätä (Positiivinen)</th><th>Herätä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">haluan</td><td dir="ltr">herään</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">haluaa</td><td dir="ltr">herää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">haluan</td><td dir="ltr">en halua</td><td dir="ltr">herään</td><td dir="ltr">en herää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">haluat</td><td dir="ltr">et halua</td><td dir="ltr">heräät</td><td dir="ltr">et herää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">haluaa</td><td dir="ltr">ei halua</td><td dir="ltr">herää</td><td dir="ltr">ei herää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">haluamme</td><td dir="ltr">emme halua</td><td dir="ltr">heräämme</td><td dir="ltr">emme herää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">haluatte</td><td dir="ltr">ette halua</td><td dir="ltr">heräätte</td><td dir="ltr">ette herää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">haluavat</td><td dir="ltr">eivät halua</td><td dir="ltr">heräävät</td><td dir="ltr">eivät herää</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Tavata, Pelata</summary>
-                    <table><thead><tr><th>شخص</th><th>Tavata</th><th>Pelata</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Tavata (Positiivinen)</th><th>Tavata (Negatiivinen)</th><th>Pelata (Positiivinen)</th><th>Pelata (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">tapaan</td><td dir="ltr">pelaan</td><td class="kpt-info">t → p</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">tapaa</td><td dir="ltr">pelaa</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">tapaan</td><td dir="ltr">en tapaa</td><td dir="ltr">pelaan</td><td dir="ltr">en pelaa</td><td class="kpt-info">t → p</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">tapaat</td><td dir="ltr">et tapaa</td><td dir="ltr">pelaat</td><td dir="ltr">et pelaa</td><td class="kpt-info">t → p</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">tapaa</td><td dir="ltr">ei tapaa</td><td dir="ltr">pelaa</td><td dir="ltr">ei pelaa</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Me</td><td dir="ltr">tapaamme</td><td dir="ltr">emme tapaa</td><td dir="ltr">pelaamme</td><td dir="ltr">emme pelaa</td><td class="kpt-info">t → p</td></tr>
+                        <tr><td>Te</td><td dir="ltr">tapaatte</td><td dir="ltr">ette tapaa</td><td dir="ltr">pelaatte</td><td dir="ltr">ette pelaa</td><td class="kpt-info">t → p</td></tr>
+                        <tr><td>He</td><td dir="ltr">tapaavat</td><td dir="ltr">eivät tapaa</td><td dir="ltr">pelaavat</td><td dir="ltr">eivät pelaa</td><td class="kpt-info">قوی</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Vastata, Kerätä</summary>
-                    <table><thead><tr><th>شخص</th><th>Vastata</th><th>Kerätä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Vastata (Positiivinen)</th><th>Vastata (Negatiivinen)</th><th>Kerätä (Positiivinen)</th><th>Kerätä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">vastaan</td><td dir="ltr">kerään</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">vastaa</td><td dir="ltr">kerää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">vastaan</td><td dir="ltr">en vastaa</td><td dir="ltr">kerään</td><td dir="ltr">en kerää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">vastaat</td><td dir="ltr">et vastaa</td><td dir="ltr">keräät</td><td dir="ltr">et kerää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">vastaa</td><td dir="ltr">ei vastaa</td><td dir="ltr">kerää</td><td dir="ltr">ei kerää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">vastaamme</td><td dir="ltr">emme vastaa</td><td dir="ltr">keräämme</td><td dir="ltr">emme kerää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">vastaatte</td><td dir="ltr">ette vastaa</td><td dir="ltr">keräätte</td><td dir="ltr">ette kerää</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">vastaavat</td><td dir="ltr">eivät vastaa</td><td dir="ltr">keräävät</td><td dir="ltr">eivät kerää</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Maata, Verrata</summary>
-                    <table><thead><tr><th>شخص</th><th>Maata</th><th>Verrata</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Maata (Positiivinen)</th><th>Maata (Negatiivinen)</th><th>Verrata (Positiivinen)</th><th>Verrata (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">makaan</td><td dir="ltr">vertaan</td><td class="kpt-info">t → k / t → rt</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">makaa</td><td dir="ltr">vertaa</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">makaan</td><td dir="ltr">en makaa</td><td dir="ltr">vertaan</td><td dir="ltr">en vertaa</td><td class="kpt-info">t → k / t → rt</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">makaat</td><td dir="ltr">et makaa</td><td dir="ltr">vertaat</td><td dir="ltr">et vertaa</td><td class="kpt-info">t → k / t → rt</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">makaa</td><td dir="ltr">ei makaa</td><td dir="ltr">vertaa</td><td dir="ltr">ei vertaa</td><td class="kpt-info">قوی</td></tr>
+                        <tr><td>Me</td><td dir="ltr">makaamme</td><td dir="ltr">emme makaa</td><td dir="ltr">vertaamme</td><td dir="ltr">emme vertaa</td><td class="kpt-info">t → k / t → rt</td></tr>
+                        <tr><td>Te</td><td dir="ltr">makaatte</td><td dir="ltr">ette makaa</td><td dir="ltr">vertaatte</td><td dir="ltr">ette vertaa</td><td class="kpt-info">t → k / t → rt</td></tr>
+                        <tr><td>He</td><td dir="ltr">makaavat</td><td dir="ltr">eivät makaa</td><td dir="ltr">vertaavat</td><td dir="ltr">eivät vertaa</td><td class="kpt-info">قوی</td></tr>
                     </tbody></table></details>
                 </div>
             </details>
@@ -322,34 +544,54 @@
                     <p>فعل به <b>-ita/-itä</b> ختم می‌شود. <b>-ta/-tä</b> را حذف، <b>'tse'</b> را اضافه و سپس شناسه شخصی را اضافه کنید.<br><b>Tarvita → Tarvi- + tse + n → Tarvitsen</b></p>
                     <h3>جدول صرف افعال</h3>
                     <details><summary>جدول صرف: Tarvita, Valita</summary>
-                    <table><thead><tr><th>شخص</th><th>Tarvita</th><th>Valita</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Tarvita (Positiivinen)</th><th>Tarvita (Negatiivinen)</th><th>Valita (Positiivinen)</th><th>Valita (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">tarvitsen</td><td dir="ltr">valitsen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">tarvitsee</td><td dir="ltr">valitsee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">tarvitsen</td><td dir="ltr">en tarvitse</td><td dir="ltr">valitsen</td><td dir="ltr">en valitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">tarvitset</td><td dir="ltr">et tarvitse</td><td dir="ltr">valitset</td><td dir="ltr">et valitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">tarvitsee</td><td dir="ltr">ei tarvitse</td><td dir="ltr">valitsee</td><td dir="ltr">ei valitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">tarvitsemme</td><td dir="ltr">emme tarvitse</td><td dir="ltr">valitsemme</td><td dir="ltr">emme valitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">tarvitsette</td><td dir="ltr">ette tarvitse</td><td dir="ltr">valitsette</td><td dir="ltr">ette valitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">tarvitsevat</td><td dir="ltr">eivät tarvitse</td><td dir="ltr">valitsevat</td><td dir="ltr">eivät valitse</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Mainita, Häiritä</summary>
-                    <table><thead><tr><th>شخص</th><th>Mainita</th><th>Häiritä</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Mainita (Positiivinen)</th><th>Mainita (Negatiivinen)</th><th>Häiritä (Positiivinen)</th><th>Häiritä (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">mainitsen</td><td dir="ltr">häiritsen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">mainitsee</td><td dir="ltr">häiritsee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">mainitsen</td><td dir="ltr">en mainitse</td><td dir="ltr">häiritsen</td><td dir="ltr">en häiritse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">mainitset</td><td dir="ltr">et mainitse</td><td dir="ltr">häiritset</td><td dir="ltr">et häiritse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">mainitsee</td><td dir="ltr">ei mainitse</td><td dir="ltr">häiritsee</td><td dir="ltr">ei häiritse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">mainitsemme</td><td dir="ltr">emme mainitse</td><td dir="ltr">häiritsemme</td><td dir="ltr">emme häiritse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">mainitsette</td><td dir="ltr">ette mainitse</td><td dir="ltr">häiritsette</td><td dir="ltr">ette häiritse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">mainitsevat</td><td dir="ltr">eivät mainitse</td><td dir="ltr">häiritsevät</td><td dir="ltr">eivät häiritse</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Ansaita, Hallita</summary>
-                    <table><thead><tr><th>شخص</th><th>Ansaita</th><th>Hallita</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Ansaita (Positiivinen)</th><th>Ansaita (Negatiivinen)</th><th>Hallita (Positiivinen)</th><th>Hallita (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">ansaitsen</td><td dir="ltr">hallitsen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">ansaitsee</td><td dir="ltr">hallitsee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">ansaitsen</td><td dir="ltr">en ansaitse</td><td dir="ltr">hallitsen</td><td dir="ltr">en hallitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">ansaitset</td><td dir="ltr">et ansaitse</td><td dir="ltr">hallitset</td><td dir="ltr">et hallitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">ansaitsee</td><td dir="ltr">ei ansaitse</td><td dir="ltr">hallitsee</td><td dir="ltr">ei hallitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">ansaitsemme</td><td dir="ltr">emme ansaitse</td><td dir="ltr">hallitsemme</td><td dir="ltr">emme hallitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">ansaitsette</td><td dir="ltr">ette ansaitse</td><td dir="ltr">hallitsette</td><td dir="ltr">ette hallitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">ansaitsevat</td><td dir="ltr">eivät ansaitse</td><td dir="ltr">hallitsevat</td><td dir="ltr">eivät hallitse</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                     <details><summary>جدول صرف: Sijaita, Vangita</summary>
-                    <table><thead><tr><th>شخص</th><th>Sijaita</th><th>Vangita</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Sijaita (Positiivinen)</th><th>Sijaita (Negatiivinen)</th><th>Vangita (Positiivinen)</th><th>Vangita (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">sijaitsen</td><td dir="ltr">vangitsen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">sijaitsee</td><td dir="ltr">vangitsee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">sijaitsen</td><td dir="ltr">en sijaitse</td><td dir="ltr">vangitsen</td><td dir="ltr">en vangitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">sijaitset</td><td dir="ltr">et sijaitse</td><td dir="ltr">vangitset</td><td dir="ltr">et vangitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">sijaitsee</td><td dir="ltr">ei sijaitse</td><td dir="ltr">vangitsee</td><td dir="ltr">ei vangitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">sijaitsemme</td><td dir="ltr">emme sijaitse</td><td dir="ltr">vangitsemme</td><td dir="ltr">emme vangitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">sijaitsette</td><td dir="ltr">ette sijaitse</td><td dir="ltr">vangitsette</td><td dir="ltr">ette vangitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">sijaitsevat</td><td dir="ltr">eivät sijaitse</td><td dir="ltr">vangitsevat</td><td dir="ltr">eivät vangitse</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                      <details><summary>جدول صرف: Palkita, Tulita</summary>
-                    <table><thead><tr><th>شخص</th><th>Palkita</th><th>Tulita</th><th class="kpt-info">KPT</th></tr></thead>
+                    <table><thead><tr><th>شخص</th><th>Palkita (Positiivinen)</th><th>Palkita (Negatiivinen)</th><th>Tulita (Positiivinen)</th><th>Tulita (Negatiivinen)</th><th class="kpt-info">KPT</th></tr></thead>
                     <tbody>
-                        <tr><td>Minä</td><td dir="ltr">palkitsen</td><td dir="ltr">tulitsen</td><td class="kpt-info">ندارد</td></tr>
-                        <tr><td>Hän</td><td dir="ltr">palkitsee</td><td dir="ltr">tulitsee</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Minä</td><td dir="ltr">palkitsen</td><td dir="ltr">en palkitse</td><td dir="ltr">tulitsen</td><td dir="ltr">en tulitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Sinä</td><td dir="ltr">palkitset</td><td dir="ltr">et palkitse</td><td dir="ltr">tulitset</td><td dir="ltr">et tulitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Hän</td><td dir="ltr">palkitsee</td><td dir="ltr">ei palkitse</td><td dir="ltr">tulitsee</td><td dir="ltr">ei tulitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Me</td><td dir="ltr">palkitsemme</td><td dir="ltr">emme palkitse</td><td dir="ltr">tulitsemme</td><td dir="ltr">emme tulitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>Te</td><td dir="ltr">palkitsette</td><td dir="ltr">ette palkitse</td><td dir="ltr">tulitsette</td><td dir="ltr">ette tulitse</td><td class="kpt-info">ندارد</td></tr>
+                        <tr><td>He</td><td dir="ltr">palkitsevat</td><td dir="ltr">eivät palkitse</td><td dir="ltr">tulitsevat</td><td dir="ltr">eivät tulitse</td><td class="kpt-info">ندارد</td></tr>
                     </tbody></table></details>
                 </div>
             </details>
