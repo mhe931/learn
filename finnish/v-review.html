@@ -3,343 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کاربرد و مرور نهایی (V-Review)</title>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>بخش ۳: کاربرد و مرور نهایی - خودآموز زبان فنلاندی</title>
     <style>
         :root {
-            --bg: #080810;
-            --card-bg: rgba(25, 25, 40, 0.95);
-            --gold: #FFD700;
-            --neon: #00D4FF;
-            --purple: #BC13FE;
-            --text: #F0F0F0;
-            --subtext: #B0B0B0;
-            --rule-bg: rgba(0, 212, 255, 0.08);
-            --error: #FF4B4B;
+            --primary-color: #0d0d2b;
+            --secondary-color: #1a1a4a;
+            --accent-color: #00ffff;
+            --text-color: #ffffff;
+            --card-bg: rgba(26, 26, 74, 0.8);
+            --header-font: 'Vazirmatn', sans-serif;
+            --body-font: 'Vazirmatn', sans-serif;
         }
 
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap');
+
         body {
-            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
-            background-attachment: fixed;
-            color: var(--text);
-            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
-            font-size: 18px;
-            line-height: 1.8;
-            padding: 20px;
+            font-family: var(--body-font);
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.9;
+            padding: 15px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(100, 100, 255, 0.15) 0%, transparent 40%),
+                              radial-gradient(circle at 85% 80%, rgba(255, 0, 255, 0.15) 0%, transparent 40%);
         }
 
         .container {
             max-width: 1000px;
-            margin: 20px auto;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        h1, h2, h3 {
-            text-align: right;
-            color: var(--gold);
+        header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        header h1 {
+            font-family: var(--header-font);
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 0 0 8px var(--accent-color), 0 0 15px rgba(0, 255, 255, 0.5);
+            margin-bottom: 5px;
+        }
+
+        .breadcrumb {
+            font-size: 1.1em;
+            color: var(--accent-color);
+            opacity: 0.9;
         }
         
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 30px;
+        .breadcrumb a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: text-shadow 0.3s;
+        }
+
+        .breadcrumb a:hover {
+            text-shadow: 0 0 5px var(--accent-color);
+        }
+
+        .content-section {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(8px);
         }
 
         h2 {
-            font-size: 2em;
-            color: var(--neon);
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            font-family: var(--header-font);
+            font-size: 1.9em;
+            font-weight: 500;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
-            margin-top: 50px;
             margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: 1.5em;
-            margin-top: 30px;
-            margin-bottom: 15px;
         }
         
-        .card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
+        h3 {
+            font-family: var(--header-font);
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #a7d1d1;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        details {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        summary {
+            font-family: var(--header-font);
+            font-weight: 500;
+            font-size: 1.3em;
+            padding: 15px;
+            cursor: pointer;
+            outline: none;
+            color: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+
+        details[open] > summary {
+            background-color: rgba(0, 255, 255, 0.1);
+        }
+
+        .details-content {
+            padding: 0 20px 20px;
+        }
+
+        p, ul, li {
+            font-size: 1.1em;
+        }
+        
+        ul {
+            padding-right: 20px;
+        }
+
+        strong {
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        code {
+            background-color: var(--primary-color);
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1em;
+            color: #f8f8f2;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 0.95em;
+            margin-top: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         }
 
         th, td {
-            border: 1px solid #444;
-            padding: 12px;
-            text-align: center;
+            padding: 12px 15px;
+            text-align: right;
+            border: 1px solid rgba(0, 255, 255, 0.2);
         }
 
-        th {
-            background: #222;
-            color: var(--gold);
-            font-weight: bold;
+        thead {
+            background-color: rgba(0, 255, 255, 0.15);
         }
         
-        td.ltr {
-            direction: ltr;
-            text-align: left;
-        }
-        
-        .example-list li {
-            background: rgba(255,255,255,0.05);
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 8px;
+        thead th {
+            font-family: var(--header-font);
+            font-weight: 500;
             font-size: 1.1em;
         }
 
-        .example-list .fi {
-            color: #fff;
-            font-weight: bold;
-            direction: ltr;
-            display: block;
-            text-align: right;
+        tbody tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.2);
         }
         
-        .example-list .fa {
-            color: var(--subtext);
-            font-size: 0.9em;
+        .example-list li {
+            margin-bottom: 12px;
+            padding: 10px;
+            border-right: 3px solid rgba(0, 255, 255, 0.4);
+            background: rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        
+        .persian-translation {
+            color: #ccc;
+            font-size: 0.95em;
         }
 
-        .nav-home {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: var(--card-bg);
-            padding: 10px 15px;
-            border-radius: 50px;
-            border: 1px solid var(--neon);
-            z-index: 1000;
+        .exercise {
+            background: rgba(0, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
         }
-        .nav-home a {
-            color: var(--neon);
-            text-decoration: none;
-            font-size: 1.2em;
+        .exercise p { margin-bottom: 10px; }
+        .exercise .answer {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .exercise .answer code { color: var(--accent-color); }
+
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1em;
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
-    <div class="nav-home">
-        <a href="index-persian.html" title="بازگشت به فهرست"><i class="fa-solid fa-list"></i></a>
-    </div>
-
     <div class="container">
-        <h1><i class="fa-solid fa-rocket"></i> کاربرد و مرور نهایی</h1>
+        <header>
+            <h1>بخش ۳: کاربرد و مرور نهایی</h1>
+            <p class="breadcrumb"><a href="index.html">فهرست اصلی</a> &gt; کاربرد و مرور نهایی</p>
+        </header>
 
-        <section id="imperatiivi_mood">
-            <h2>۱۳. وجه امری (IMPERATIIVI)</h2>
-            <div class="card">
-                <h3>قوانین ساخت وجه امری</h3>
-                <table style="font-size: 0.9em;">
-                    <thead>
-                        <tr>
-                            <th>حالت</th>
-                            <th>ساختار</th>
-                            <th>مثال (Puhua)</th>
-                            <th>مثال (Mennä)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>مفرد مثبت (Sinä)</td>
-                            <td>ریشه فعل بدون شناسه</td>
-                            <td class="ltr">Puhu!</td>
-                            <td class="ltr">Mene!</td>
-                        </tr>
-                        <tr>
-                            <td>مفرد منفی (Sinä)</td>
-                            <td>Älä + ریشه فعل</td>
-                            <td class="ltr">Älä puhu!</td>
-                            <td class="ltr">Älä mene!</td>
-                        </tr>
-                        <tr>
-                            <td>جمع مثبت (Te)</td>
-                            <td>ریشه فعل + -kaa/-kää</td>
-                            <td class="ltr">Puhukaa!</td>
-                            <td class="ltr">Menkää!</td>
-                        </tr>
-                        <tr>
-                            <td>جمع منفی (Te)</td>
-                            <td>Älkää + ریشه فعل + -ko/-kö</td>
-                            <td class="ltr">Älkää puhuko!</td>
-                            <td class="ltr">Älkää menkö!</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h3>مثال‌های کاربردی</h3>
-                <ul class="example-list">
-                    <li><span class="fi">Ole hiljaa!</span> <span class="fa">ساکت باش!</span></li>
-                    <li><span class="fi">Älä unohda avaimia!</span> <span class="fa">کلیدها را فراموش نکن!</span></li>
-                    <li><span class="fi">Syökää kaikki ruoka!</span> <span class="fa">(شما) همه غذا را بخورید!</span></li>
-                    <li><span class="fi">Tule tänne!</span> <span class="fa">بیا اینجا!</span></li>
-                    <li><span class="fi">Älkää myöhästykö!</span> <span class="fa">(شما) تأخیر نکنید!</span></li>
-                    <li><span class="fi">Avaa ikkuna, ole hyvä.</span> <span class="fa">لطفاً پنجره را باز کن.</span></li>
-                    <li><span class="fi">Odota hetki!</span> <span class="fa">یک لحظه صبر کن!</span></li>
-                    <li><span class="fi">Lue tämä kirja.</span> <span class="fa">این کتاب را بخوان.</span></li>
-                    <li><span class="fi">Älä koske siihen!</span> <span class="fa">به آن دست نزن!</span></li>
-                    <li><span class="fi">Auttakaa minua!</span> <span class="fa">(شما) به من کمک کنید!</span></li>
-                </ul>
-            </div>
-        </section>
+        <main>
+            <section id="section15" class="content-section">
+                <h2>۱۵. وجه امری (IMPERATIIVI)</h2>
+                <details open>
+                    <summary>قوانین ساخت وجه امری</summary>
+                    <div class="details-content">
+                        <h3>حالت مفرد (sinä):</h3>
+                        <ul>
+                            <li><strong>مثبت:</strong> از صرف اول شخص مفرد (minä)، شناسه <code>-n</code> را حذف کنید. مثال: <code>minä sanon</code> (می‌گویم) -> <code>Sano!</code> (بگو!)</li>
+                            <li><strong>منفی:</strong> از کلمه <code>Älä</code> به همراه ریشه فعل (حالت امری مثبت) استفاده کنید. مثال: <code>Älä sano!</code> (نگو!)</li>
+                        </ul>
+                        <h3>حالت جمع (te):</h3>
+                        <ul>
+                            <li><strong>مثبت:</strong> به ریشه فعل، پسوند <code>-kaa / -kää</code> اضافه کنید. مثال: <code>sanokaa!</code> (بگویید!)</li>
+                            <li><strong>منفی:</strong> از کلمه <code>Älkää</code> به همراه ریشه فعل (حالت امری مثبت) استفاده کنید. مثال: <code>Älkää sanoko!</code> (نگویید!)</li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>مثال‌های کاربردی</summary>
+                    <div class="details-content">
+                        <ul class="example-list">
+                            <li><strong>Ole</strong> hiljaa! <span class="persian-translation">(ساکت باش!)</span></li>
+                            <li><strong>Älä unohda</strong> avaimia. <span class="persian-translation">(کلیدها را فراموش نکن.)</span></li>
+                            <li><strong>Tulkaa</strong> sisään, olkaa hyvä. <span class="persian-translation">(بفرمایید داخل، لطفا.)</span></li>
+                            <li><strong>Älkää juosko</strong> käytävällä. <span class="persian-translation">(در راهرو ندوید.)</span></li>
+                            <li><strong>Avaa</strong> ikkuna, täällä on kuuma. <span class="persian-translation">(پنجره را باز کن، اینجا گرم است.)</span></li>
+                            <li><strong>Auta</strong> minua tämän laukun kanssa. <span class="persian-translation">(در مورد این کیف به من کمک کن.)</span></li>
+                            <li><strong>Lue</strong> tämä kirja. <span class="persian-translation">(این کتاب را بخوان.)</span></li>
+                            <li><strong>Odottakaa</strong> hetki. <span class="persian-translation">(یک لحظه صبر کنید.)</span></li>
+                            <li><strong>Älä pelkää!</strong> <span class="persian-translation">(نترس!)</span></li>
+                            <li><strong>Mene</strong> suoraan ja käänny oikealle. <span class="persian-translation">(مستقیم برو و به راست بپیچ.)</span></li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
 
-        <section id="adjectives_colors">
-            <h2>۱۴. صفت‌ها، رنگ‌ها و توصیف</h2>
-            <div class="card">
-                <h3>جدول صفت‌های متضاد و رنگ‌ها</h3>
-                <table style="font-size: 0.9em;">
-                    <thead><tr><th>صفت</th><th>متضاد</th><th>رنگ</th><th>ترجمه</th></tr></thead>
-                    <tbody>
-                        <tr><td>iso (بزرگ)</td><td>pieni (کوچک)</td><td>punainen</td><td>قرمز</td></tr>
-                        <tr><td>kaunis (زیبا)</td><td>ruma (زشت)</td><td>sininen</td><td>آبی</td></tr>
-                        <tr><td>hyvä (خوب)</td><td>huono (بد)</td><td>keltainen</td><td>زرد</td></tr>
-                        <tr><td>pitkä (بلند)</td><td>lyhyt (کوتاه)</td><td>vihreä</td><td>سبز</td></tr>
-                        <tr><td>vanha (پیر)</td><td>nuori (جوان)</td><td>musta</td><td>سیاه</td></tr>
-                        <tr><td>uusi (جدید)</td><td>vanha (قدیمی)</td><td>valkoinen</td><td>سفید</td></tr>
-                    </tbody>
-                </table>
-                <h3>تطابق صفت با اسم</h3>
-                <p>صفت‌ها همیشه باید از نظر حالت و تعداد با اسمی که توصیف می‌کنند، مطابقت داشته باشند.</p>
-                <ul class="example-list">
-                    <li><span class="fi">Minulla on <span style="color:#FF4B4B;">punainen</span> auto. (Nominatiivi)</span> <span class="fa">من یک ماشین قرمز دارم.</span></li>
-                    <li><span class="fi">Ajan <span style="color:#FF4B4B;">punaisella</span> autolla. (Adessiivi)</span> <span class="fa">من با ماشین قرمز رانندگی می‌کنم.</span></li>
-                    <li><span class="fi">Näen <span style="color:#FF4B4B;">punaisen</span> auton. (Genetiivi)</span> <span class="fa">من ماشین قرمز را می‌بینم.</span></li>
-                     <li><span class="fi">Hän asuu <span style="color:#FF4B4B;">isossa</span> talossa.</span> <span class="fa">او در یک خانه بزرگ زندگی می‌کند.</span></li>
-                    <li><span class="fi">Ostin <span style="color:#FF4B4B;">uudet</span> kengät.</span> <span class="fa">من کفش‌های جدید خریدم.</span></li>
-                </ul>
-                 <h3>هم‌آوایان فارسی/فنلاندی (Homonyms/Coincidence)</h3>
-                <table style="font-size: 0.85em;">
-                    <thead>
-                        <tr><th>کلمه</th><th>معنی در فنلاندی</th><th>معنی در فارسی</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td class="ltr">Anna</td><td>بده! (فعل امر)</td><td>آنا (اسم)</td></tr>
-                        <tr><td class="ltr">Bussi</td><td>اتوبوس</td><td>بوسی (بوسه)</td></tr>
-                        <tr><td class="ltr">Juuri</td><td>ریشه / همین الان</td><td>جوری</td></tr>
-                        <tr><td class="ltr">Kuka</td><td>چه کسی؟</td><td>کوکا (نوشابه)</td></tr>
-                        <tr><td rowspan="6" class="ltr">Pala</td><td rowspan="6">تکه</td><td>پالا (اسم)</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+            <section id="section16" class="content-section">
+                <h2>۱۶. صفت‌ها، رنگ‌ها و کلمات هم‌آوا</h2>
+                <details>
+                    <summary>صفت‌های متضاد و رنگ‌ها</summary>
+                    <div class="details-content">
+                        <p>صفت‌ها (adjektiivit) در زبان فنلاندی باید با اسمی که توصیف می‌کنند از نظر حالت و تعداد مطابقت داشته باشند.</p>
+                        <p>مثال تطابق: <code>punainen auto</code> (ماشین قرمز) -> <code>punaisessa autossa</code> (در ماشین قرمز)</p>
+                        <table>
+                            <thead><tr><th>صفت</th><th>متضاد</th><th>رنگ</th><th>ترجمه</th></tr></thead>
+                            <tbody>
+                                <tr><td>hyvä</td><td>huono</td><td>punainen</td><td>قرمز</td></tr>
+                                <tr><td>iso, suuri</td><td>pieni</td><td>sininen</td><td>آبی</td></tr>
+                                <tr><td>kaunis</td><td>ruma</td><td>keltainen</td><td>زرد</td></tr>
+                                <tr><td>vanha</td><td>nuori</td><td>vihreä</td><td>سبز</td></tr>
+                                <tr><td>pitkä</td><td>lyhyt</td><td>musta</td><td>سیاه</td></tr>
+                                <tr><td>kallis</td><td>halpa</td><td>valkoinen</td><td>سفید</td></tr>
+                                <tr><td>vaikea</td><td>helppo</td><td>ruskea</td><td>قهوه‌ای</td></tr>
+                                <tr><td>lämmin</td><td>kylmä</td><td>harmaa</td><td>خاکستری</td></tr>
+                                <tr><td>rikas</td><td>köyhä</td><td>oranssi</td><td>نارنجی</td></tr>
+                                <tr><td>iloinen</td><td>surullinen</td><td>liila, violetti</td><td>بنفش</td></tr>
+                            </tbody>
+                        </table>
+                         <ul class="example-list">
+                             <h3>مثال‌های تطابق صفت با اسم</h3>
+                            <li>Minulla on <strong>iso</strong> talo. <span class="persian-translation">(من یک خانه بزرگ دارم.)</span></li>
+                            <li>Asun <strong>isossa</strong> talossa. <span class="persian-translation">(من در یک خانه بزرگ زندگی می‌کنم.)</span></li>
+                            <li>Hän ajaa <strong>nopeaa punaista</strong> autoa. <span class="persian-translation">(او یک ماشین قرمز سریع می‌راند.)</span></li>
+                            <li>Pidän <strong>sinisistä</strong> silmistäsi. <span class="persian-translation">(از چشم‌های آبی تو خوشم می‌آید.)</span></li>
+                            <li>Tämä on <strong>vaikea</strong> kysymys. <span class="persian-translation">(این یک سوال سخت است.)</span></li>
+                            <li>En ymmärrä tätä <strong>vaikeaa</strong> kysymystä. <span class="persian-translation">(من این سوال سخت را نمی‌فهمم.)</span></li>
+                            <li><strong>Nuori</strong> poika leikkii <strong>pienellä</strong> pallolla. <span class="persian-translation">(پسر جوان با یک توپ کوچک بازی می‌کند.)</span></li>
+                            <li>Ostin <strong>halvan</strong> puhelimen. <span class="persian-translation">(من یک تلفن ارزان خریدم.)</span></li>
+                            <li>Hänellä on <strong>kauniit</strong> vaatteet. <span class="persian-translation">(او لباس‌های زیبایی دارد.)</span></li>
+                            <li>Kävelen <strong>pitkää</strong> katua pitkin. <span class="persian-translation">(من در امتداد خیابان طولانی قدم می‌زنم.)</span></li>
+                        </ul>
+                    </div>
+                </details>
+                <details open>
+                    <summary>کلمات هم‌آوای فارسی-فنلاندی (Homonyms)</summary>
+                    <div class="details-content">
+                        <table>
+                            <thead><tr><th>کلمه</th><th>معنی در فنلاندی</th><th>معنی در فارسی</th></tr></thead>
+                            <tbody>
+                                <tr><td>kuusi</td><td>عدد ۶ / درخت صنوبر</td><td>کوسی (شعر)</td></tr>
+                                <tr><td>pala</td><td>تکه، قطعه</td><td>پالا (واحد پول بوتسوانا)</td></tr>
+                                <tr><td>paha</td><td>بد، شیطانی</td><td>پهه (اصطلاح عامیانه)</td></tr>
+                                <tr><td>ovi</td><td>در</td><td>آوی (در لهجه‌ها)</td></tr>
+                                <tr><td>raha</td><td>پول</td><td>رها</td></tr>
+                                <tr><td>aasi</td><td>خر، الاغ</td><td>عاصی</td></tr>
+                                <tr><td>anna</td><td>بده (فعل امر)</td><td>آنا (نام)</td></tr>
+                                <tr><td>mato</td><td>کرم</td><td>ماتو (در برخی گویش‌ها)</td></tr>
+                                <tr><td>napa</td><td>ناف</td><td>ناپا (ناپالم)</td></tr>
+                                <tr><td>koti</td><td>خانه</td><td>کتی (کت)</td></tr>
+                                <tr><td>tapa</td><td>راه، روش، عادت</td><td>تپه</td></tr>
+                                <tr><td>mutta</td><td>اما</td><td>موته (نام منطقه)</td></tr>
+                                <tr><td>sata</td><td>عدد ۱۰۰</td><td>ساتا (رابط کامپیوتری)</td></tr>
+                                <tr><td>noro</td><td>جویبار</td><td>نرو</td></tr>
+                                <tr><td>pappi</td><td>کشیش</td><td>پاپی (نوعی سگ)</td></tr>
+                                <tr><td>sooda</td><td>جوش شیرین</td><td>سودا</td></tr>
+                                <tr><td>tuoli</td><td>صندلی</td><td>تولی (تولیت)</td></tr>
+                                <tr><td>vaaka</td><td>ترازو</td><td>واکا (در برخی لهجه‌ها)</td></tr>
+                                <tr><td>palaveri</td><td>جلسه، میتینگ</td><td>پال آوری</td></tr>
+                                <tr><td>muru</td><td>خرده، تکه کوچک</td><td>مورو (نام)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </section>
 
-        <section id="transport_weather">
-            <h2>۱۵. واژگان ضروری و آب و هوا (SÄÄ)</h2>
-            <div class="card">
-                <h3>واژگان خانه (Huoneet) و غذا (Ruokasanat)</h3>
-                <p>خانه: koti, talo. اتاق: huone. آشپزخانه: keittiö. حمام: kylpyhuone. اتاق خواب: makuuhuone.</p>
-                <p>غذا: ruoka. آب: vesi. قهوه: kahvi. شیر: maito. نان: leipä. مرغ: kana. ماهی: kala.</p>
-                
-                <h3>حمل و نقل (Kulkuvälineet)</h3>
-                <p>برای بیان "سفر کردن با وسیله نقلیه" از حالت Adessive (-lla/-llä) استفاده می‌شود.</p>
-                <ul class="example-list">
-                    <li><span class="fi">Menen töihin bussi<span style="color:#FF4B4B;">lla</span>.</span> <span class="fa">من با اتوبوس به سر کار می‌روم.</span></li>
-                    <li><span class="fi">Matkustan Suomeen lentokonee<span style="color:#FF4B4B;">lla</span>.</span> <span class="fa">من با هواپیما به فنلاند سفر می‌کنم.</span></li>
-                    <li><span class="fi">Hän ajaa auto<span style="color:#FF4B4B;">lla</span>.</span> <span class="fa">او با ماشین رانندگی می‌کند.</span></li>
-                    <li><span class="fi">Lapset menevät kouluun pyörä<span style="color:#FF4B4B;">llä</span>.</span> <span class="fa">بچه‌ها با دوچرخه به مدرسه می‌روند.</span></li>
-                    <li><span class="fi">Tulin tänne taksi<span style="color:#FF4B4B;">lla</span>.</span> <span class="fa">من با تاکسی به اینجا آمدم.</span></li>
-                </ul>
+            <section id="section17" class="content-section">
+                <h2>۱۷. واژگان ضروری و ضمایر اشاره</h2>
+                <details>
+                    <summary>واژگان خانه، غذا، حمل و نقل و آب و هوا</summary>
+                    <div class="details-content">
+                        <h3>خانه (Talo/Koti)</h3>
+                        <p><code>huone</code> (اتاق), <code>keittiö</code> (آشپزخانه), <code>makuuhuone</code> (اتاق خواب), <code>olohuone</code> (اتاق نشیمن), <code>kylpyhuone</code> (حمام), <code>sänky</code> (تخت), <code>pöytä</code> (میز), <code>tuoli</code> (صندلی).</p>
+                        <h3>غذا (Ruoka)</h3>
+                        <p><code>leipä</code> (نان), <code>juusto</code> (پنیر), <code>maito</code> (شیر), <code>vesi</code> (آب), <code>kahvi</code> (قهوه), <code>liha</code> (گوشت), <code>kala</code> (ماهی), <code>kana</code> (مرغ), <code>omena</code> (سیب).</p>
+                        <h3>حمل و نقل (Adessive: -lla/-llä)</h3>
+                        <ul class="example-list">
+                            <li>Menen töihin <strong>bussilla</strong>. <span class="persian-translation">(با اتوبوس سر کار می‌روم.)</span></li>
+                            <li>Hän matkustaa <strong>junalla</strong>. <span class="persian-translation">(او با قطار سفر می‌کند.)</span></li>
+                            <li>Ajan <strong>autolla</strong> kauppaan. <span class="persian-translation">(با ماشین به فروشگاه می‌رانم.)</span></li>
+                            <li>Lennämme Suomeen <strong>lentokoneella</strong>. <span class="persian-translation">(ما با هواپیما به فنلاند پرواز می‌کنیم.)</span></li>
+                            <li>Kaverini kulkee <strong>polkupyörällä</strong>. <span class="persian-translation">(دوستم با دوچرخه تردد می‌کند.)</span></li>
+                            <li>Menen keskustaan <strong>raitiovaunulla</strong>. <span class="persian-translation">(با تراموا به مرکز شهر می‌روم.)</span></li>
+                            <li>Lapset menevät kouluun <strong>kävellen</strong>. <span class="persian-translation">(بچه‌ها پیاده به مدرسه می‌روند.)</span></li>
+                            <li>Ylitämme joen <strong>veneellä</strong>. <span class="persian-translation">(ما با قایق از رودخانه عبور می‌کنیم.)</span></li>
+                            <li>Hän saapui <strong>taksilla</strong>. <span class="persian-translation">(او با تاکسی رسید.)</span></li>
+                            <li>Matka taittuu nopeasti <strong>moottoripyörällä</strong>. <span class="persian-translation">(سفر با موتورسیکلت به سرعت طی می‌شود.)</span></li>
+                        </ul>
+                         <h3>آب و هوا (SÄÄ)</h3>
+                        <ul class="example-list">
+                            <li>Tänään on <strong>aurinkoista</strong>. <span class="persian-translation">(امروز هوا آفتابی است.)</span></li>
+                            <li>Huomenna on <strong>pilvistä</strong>. <span class="persian-translation">(فردا هوا ابری است.)</span></li>
+                            <li>Ulkona on <strong>lämmintä</strong>. <span class="persian-translation">(بیرون گرم است.)</span></li>
+                             <li>On <strong>kylmää</strong> ja <strong>tuulista</strong>. <span class="persian-translation">(هوا سرد و بادی است.)</span></li>
+                            <li>Talvella <strong>sataa lunta</strong>. <span class="persian-translation">(در زمستان برف می‌بارد.)</span></li>
+                            <li>Syksyllä <strong>sataa</strong> paljon <strong>vettä</strong>. <span class="persian-translation">(در پاییز باران زیادی می‌بارد.)</span></li>
+                            <li>On <strong>sumuista</strong> aamulla. <span class="persian-translation">(صبح هوا مه‌آلود است.)</span></li>
+                             <li>Viikonloppuna on <strong>poutaa</strong>. <span class="persian-translation">(آخر هفته هوا صاف (بدون بارش) است.)</span></li>
+                             <li>Ukkostaa ja salamoi. <span class="persian-translation">(رعد و برق می‌زند.)</span></li>
+                            <li>On <strong>pakkasta</strong>. <span class="persian-translation">(هوا یخبندان است.)</span></li>
+                        </ul>
+                    </div>
+                </details>
+                <details open>
+                    <summary>ضمایر اشاره (Tämä, Tuo, Se)</summary>
+                    <div class="details-content">
+                        <p><code>tämä</code> (این - نزدیک گوینده)، <code>tuo</code> (آن - نزدیک شنونده)، <code>se</code> (آن - دور از هر دو).</p>
+                        <table>
+                            <thead><tr><th>حالت</th><th>Tämä (این)</th><th>Tuo (آن)</th><th>Se (آن)</th><th>KPT</th></tr></thead>
+                            <tbody>
+                                <tr><td>Nominatiivi</td><td>tämä</td><td>tuo</td><td>se</td><td class="no-change">--</td></tr>
+                                <tr><td>Genetiivi</td><td>tämän</td><td>tuon</td><td>sen</td><td class="no-change">--</td></tr>
+                                <tr><td>Partitiivi</td><td>tätä</td><td>tuota</td><td>sitä</td><td class="no-change">--</td></tr>
+                                <tr><td>Inessiivi</td><td>tässä</td><td>tuossa</td><td>siinä</td><td class="no-change">--</td></tr>
+                                <tr><td>Elatiivi</td><td>tästä</td><td>tuosta</td><td>siitä</td><td class="no-change">--</td></tr>
+                                <tr><td>Illatiivi</td><td>tähän</td><td>tuohon</td><td>siihen</td><td class="no-change">--</td></tr>
+                                <tr><td>Adessiivi</td><td>tällä</td><td>tuolla</td><td>sillä</td><td_class="no-change">--</td></tr>
+                                <tr><td>Ablatiivi</td><td>tältä</td><td>tuolta</td><td>siltä</td><td class="no-change">--</td></tr>
+                                <tr><td>Allatiivi</td><td>tälle</td><td>tuolle</td><td>sille</td><td class="no-change">--</td></tr>
+                            </tbody>
+                        </table>
+                         <ul class="example-list">
+                            <li>Mikä <strong>tämä</strong> on? <span class="persian-translation">(این چیست؟)</span></li>
+                            <li>Otan <strong>tuon</strong> kirjan. <span class="persian-translation">(آن کتاب را برمی‌دارم.)</span></li>
+                            <li>Näetkö <strong>sen</strong> talon? <span class="persian-translation">(آن خانه را می‌بینی؟)</span></li>
+                            <li>Asun <strong>tässä</strong> kaupungissa. <span class="persian-translation">(من در این شهر زندگی می‌کنم.)</span></li>
+                            <li>Mitä mieltä olet <strong>tuosta</strong> elokuvasta? <span class="persian-translation">(نظرت در مورد آن فیلم چیست؟)</span></li>
+                            <li>En pidä <strong>siitä</strong>. <span class="persian-translation">(از آن خوشم نمی‌آید.)</span></li>
+                            <li>Anna <strong>tämä</strong> lahja <strong>hänelle</strong>. <span class="persian-translation">(این هدیه را به او بده.)</span></li>
+                            <li>Menen <strong>siihen</strong> kauppaan. <span class="persian-translation">(من به آن فروشگاه می‌روم.)</span></li>
+                            <li>Tulen <strong>siitä</strong> kokouksesta. <span class="persian-translation">(من از آن جلسه می‌آیم.)</span></li>
+                            <li><strong>Tällä</strong> pöydällä on tietokone. <span class="persian-translation">(روی این میز یک کامپیوتر هست.)</span></li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+            
+            <section id="section18" class="content-section">
+                <h2>تمرینات نهایی</h2>
+                <details open>
+                    <summary>تمام تمرینات</summary>
+                    <div class="details-content">
+                        <div class="exercise">
+                            <p><strong>۱. صرف فعل (نوع ۳):</strong> فعل <code>mennä</code> (رفتن) را در تمام اشخاص صرف کنید.</p>
+                            <div class="answer">
+                                <p>Minä <strong>menen</strong>, Sinä <strong>menet</strong>, Hän <strong>menee</strong>, Me <strong>menemme</strong>, Te <strong>menette</strong>, He <strong>menevät</strong></p>
+                            </div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۲. صرف فعل (نوع ۵):</strong> فعل <code>valita</code> (انتخاب کردن) را در تمام اشخاص صرف کنید.</p>
+                            <div class="answer">
+                                <p>Minä <strong>valitsen</strong>, Sinä <strong>valitset</strong>, Hän <strong>valitsee</strong>, Me <strong>valitsemme</strong>, Te <strong>valitsette</strong>, He <strong>valitsevat</strong></p>
+                            </div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۳. KPT:</strong> جمله را کامل کنید: Minä ___ (leikata) hiukset.</p>
+                            <div class="answer"><p>Minä <strong>leikkaan</strong> hiukset.</p></div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۴. KPT:</strong> جمله را کامل کنید: Hän ___ (ajatella) sinua.</p>
+                            <div class="answer"><p>Hän <strong>ajattelee</strong> sinua.</p></div>
+                        </div>
+                         <div class="exercise">
+                            <p><strong>۵. حالت مکانی:</strong> جمله را کامل کنید: Hän matkustaa huomenna ___ (Lontoo).</p>
+                            <div class="answer"><p>Hän matkustaa huomenna <strong>Lontooseen</strong>.</p></div>
+                        </div>
+                         <div class="exercise">
+                            <p><strong>۶. حالت مکانی:</strong> جمله را کامل کنید: Tulen ___ (koti).</p>
+                            <div class="answer"><p>Tulen <strong>kodista</strong>.</p></div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۷. پارتیتیو:</strong> جمله را کامل کنید: Asunnossa on neljä ___ (huone).</p>
+                            <div class="answer"><p>Asunnossa on neljä <strong>huonetta</strong>.</p></div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۸. پارتیتیو (منفی):</strong> جمله را کامل کنید: Minulla ei ole ___ (uusi pyörä).</p>
+                            <div class="answer"><p>Minulla ei ole <strong>uutta pyörää</strong>.</p></div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۹. متضادها:</strong> متضاد <code>vaikea</code> چیست؟</p>
+                            <div class="answer"><p><strong>helppo</strong></p></div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۱۰. حمل و نقل:</strong> جمله را کامل کنید: Millä sinä menet yliopistolle? ___ (pyörä).</p>
+                            <div class="answer"><p>Menet <strong>pyörällä</strong>.</p></div>
+                        </div>
+                         <div class="exercise">
+                            <p><strong>۱۱. آب و هوا:</strong> جمله را کامل کنید: Millainen sää on? On ___ (pilvinen).</p>
+                            <div class="answer"><p>On <strong>pilvistä</strong>.</p></div>
+                        </div>
+                         <div class="exercise">
+                            <p><strong>۱۲. وجه امری:</strong> حالت امری مفرد مثبت و منفی فعل <code>lopettaa</code> چیست؟</p>
+                            <div class="answer"><p><strong>Lopeta! / Älä lopeta!</strong></p></div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۱۳. اسم نوع e:</strong> جمله را کامل کنید: Minä menen valkoiseen ___ (vene).</p>
+                            <div class="answer"><p>Minä menen valkoiseen <strong>veneeseen</strong>.</p></div>
+                        </div>
+                        <div class="exercise">
+                            <p><strong>۱۴. اسم نوع i:</strong> جمله را کامل کنید: Pidän paljon ___ (talvi).</p>
+                            <div class="answer"><p>Pidän paljon <strong>talvesta</strong>. (فعل pitää به حالت elative نیاز دارد)</p></div>
+                        </div>
+                         <div class="exercise">
+                            <p><strong>۱۵. اسم نوع nen:</strong> جمله را کامل کنید: Tuolla kivalla ___ (nainen) on ruskeat hiukset.</p>
+                            <div class="answer"><p>Tuolla kivalla <strong>naisella</strong> on ruskeat hiukset.</p></div>
+                        </div>
+                    </div>
+                </details>
+            </section>
+        </main>
 
-                <h3>آب و هوا (Sää) و فصول</h3>
-                <p>برای توصیف هوا از ساختار "On + صفت در حالت Partitive" و برای فصول از Adessive استفاده می‌شود.</p>
-                <ul class="example-list">
-                    <li><span class="fi">Millainen sää tänään on?</span> <span class="fa">امروز هوا چطور است؟</span></li>
-                    <li><span class="fi">On aurinkois<span style="color:#FF4B4B;">ta</span> ja lämmin<span style="color:#FF4B4B;">tä</span>.</span> <span class="fa">هوا آفتابی و گرم است.</span></li>
-                    <li><span class="fi">Talve<span style="color:#FF4B4B;">lla</span> on kylmää ja pimeää.</span> <span class="fa">در زمستان هوا سرد و تاریک است.</span></li>
-                    <li><span class="fi">Sataa lunta.</span> <span class="fa">برف می‌بارد.</span></li>
-                    <li><span class="fi">Kesä<span style="color:#FF4B4B;">llä</span> uimme järvessä.</span> <span class="fa">در تابستان در دریاچه شنا می‌کنیم.</span></li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="demonstrative_pronouns">
-            <h2>۱۶. ضمایر اشاره (Tämä, Tuo, Se)</h2>
-            <div class="card">
-                <h3>جدول صرف ضمایر اشاره</h3>
-                 <div style="overflow-x:auto;">
-                    <table>
-                        <thead>
-                            <tr><th>حالت</th><th>Tämä (این - نزدیک)</th><th>Tuo (آن - دور)</th><th>Se (آن - خیلی دور/آن)</th><th>KPT</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Nominatiivi</td><td class="ltr">tämä</td><td class="ltr">tuo</td><td class="ltr">se</td><td class="ltr">-</td></tr>
-                            <tr><td>Genetiivi</td><td class="ltr">tämän</td><td class="ltr">tuon</td><td class="ltr">sen</td><td class="ltr">m→n</td></tr>
-                            <tr><td>Partitiivi</td><td class="ltr">tätä</td><td class="ltr">tuota</td><td class="ltr">sitä</td><td class="ltr">m→t, o→uo, e→itä</td></tr>
-                            <tr><td>Inessiivi</td><td class="ltr">tässä</td><td class="ltr">tuossa</td><td class="ltr">siinä</td><td class="ltr">m→ss, o→uo, e→ii</td></tr>
-                            <tr><td>Elatiivi</td><td class="ltr">tästä</td><td class="ltr">tuosta</td><td class="ltr">siitä</td><td class="ltr">m→st, o→uo, e→ii</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                 <h3>مثال‌های کاربردی</h3>
-                 <ul class="example-list">
-                    <li><span class="fi">Mikä <span style="color:#FF4B4B;">tämä</span> on?</span> <span class="fa">این چیست؟</span></li>
-                    <li><span class="fi">Otan <span style="color:#FF4B4B;">tuon</span> kirjan.</span> <span class="fa">من آن کتاب را برمی‌دارم.</span></li>
-                    <li><span class="fi">Älä sano <span style="color:#FF4B4B;">sitä</span>!</span> <span class="fa">آن را نگو!</span></li>
-                    <li><span class="fi">Asun <span style="color:#FF4B4B;">tässä</span> talossa.</span> <span class="fa">من در این خانه زندگی می‌کنم.</span></li>
-                    <li><span class="fi">Mitä mieltä olet <span style="color:#FF4B4B;">tuosta</span>?</span> <span class="fa">نظرت در مورد آن چیست؟</span></li>
-                 </ul>
-            </div>
-        </section>
-
-        <section id="final_exercises">
-            <h2>۱۷. تمرینات جامع و مرور نهایی</h2>
-            <div class="card">
-                <h3>تمرین ۱: فعل نوع ۳ (Mennä)</h3>
-                <p>فعل <b>mennä</b> (رفتن) را در تمام اشخاص صرف کنید.</p>
-                <div class="answer-box">
-                    <p><b>پاسخ:</b></p>
-                    <ul class="example-list">
-                        <li><span class="fi">Minä menen</span></li>
-                        <li><span class="fi">Sinä menet</span></li>
-                        <li><span class="fi">Hän menee</span></li>
-                        <li><span class="fi">Me menemme</span></li>
-                        <li><span class="fi">Te menette</span></li>
-                        <li><span class="fi">He menevät</span></li>
-                    </ul>
-                </div>
-
-                <h3 style="margin-top: 30px;">تمرین ۲: حالت‌های مکانی</h3>
-                <p>جاهای خالی را با حالت مکانی مناسب (ssa/ssä, sta/stä, lla/llä, lta/ltä, lle) پر کنید.</p>
-                <ul class="example-list">
-                    <li><span class="fi">Kirja on pöydä___.</span> <span class="fa">پاسخ: pöydällä</span></li>
-                    <li><span class="fi">Olen Suome___.</span> <span class="fa">پاسخ: Suomessa</span></li>
-                    <li><span class="fi">Tulen kaupa___.</span> <span class="fa">پاسخ: kaupasta</span></li>
-                    <li><span class="fi">Menen asema___.</span> <span class="fa">پاسخ: asemalle</span></li>
-                </ul>
-                
-                <h3 style="margin-top: 30px;">تمرین ۳: پارتیتیو</h3>
-                <p>کلمات داخل پرانتز را در حالت پارتیتیو قرار دهید.</p>
-                <ul class="example-list">
-                    <li><span class="fi">Minulla ei ole (auto).</span> <span class="fa">پاسخ: autoa</span></li>
-                    <li><span class="fi">Juon (kahvi).</span> <span class="fa">پاسخ: kahvia</span></li>
-                    <li><span class="fi">Hän rakastaa (sinä).</span> <span class="fa">پاسخ: sinua</span></li>
-                    <li><span class="fi">Tarvitsen kaksi (kirja).</span> <span class="fa">پاسخ: kirjaa</span></li>
-                </ul>
-
-                <h3 style="margin-top: 30px;">تمرین ۴: درک مطلب</h3>
-                <p>متن زیر را بخوانید و به سوال پاسخ دهید:</p>
-                <div class="rule-block" style="background: rgba(255, 215, 0, 0.1); text-align: right; direction: ltr;">
-                    <p>Hei, minun nimeni on Anna. Olen kotoisin Suomesta, mutta asun nyt Ruotsissa. Opiskelen Tukholman yliopistossa. Puhun suomea, ruotsia ja englantia. Viikonloppuisin tykkään pelata jalkapalloa ystävieni kanssa.</p>
-                </div>
-                <p><b>سوال:</b> Mitä Anna tekee viikonloppuisin?</p>
-                <div class="answer-box">
-                    <p><b>پاسخ:</b> Hän tykkää pelata jalkapalloa ystäviensä kanssa. (او دوست دارد با دوستانش فوتبال بازی کند.)</p>
-                </div>
-            </div>
-        </section>
+        <footer>
+            <p>پایان خودآموز | <a href="index.html">بازگشت به فهرست</a></p>
+        </footer>
     </div>
 </body>
 </html>

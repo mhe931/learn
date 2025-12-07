@@ -1,178 +1,153 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
+<html lang="fa" align="right" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>راهنمای خودآموز فنلاندی (Persian)</title>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فهرست مطالب خودآموز زبان فنلاندی</title>
     <style>
         :root {
-            --bg: #080810;
-            --card-bg: rgba(25, 25, 40, 0.95);
-            --gold: #FFD700;
-            --neon: #00D4FF;
-            --purple: #BC13FE;
-            --text: #F0F0F0;
-            --subtext: #B0B0B0;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            --primary-color: #0d0d2b;
+            --secondary-color: #1a1a4a;
+            --accent-color: #00ffff;
+            --text-color: #ffffff;
+            --card-bg: rgba(26, 26, 74, 0.8);
         }
 
         body {
-            background: var(--bg);
-            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
-            background-attachment: fixed;
-            color: var(--text);
-            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
-            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-color);
             line-height: 1.8;
             padding: 20px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(100, 100, 255, 0.2) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 90%, rgba(255, 0, 255, 0.2) 0%, transparent 50%);
         }
 
         .container {
             max-width: 900px;
-            margin: 40px auto;
+            margin: 0 auto;
             padding: 20px;
-        }
-        
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.8em;
-            color: var(--gold);
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        
-        h2 {
-            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
-            font-size: 2em;
-            color: var(--neon);
-            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
-            padding-bottom: 15px;
-            margin: 40px 0 20px;
-            width: 100%;
-            text-align: right;
-            font-weight: 800;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
         }
 
-        ul {
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .toc {
             list-style: none;
             padding: 0;
         }
-        
-        li {
+
+        .toc-section {
+            margin-bottom: 30px;
+        }
+
+        .toc-section h2 {
+            font-size: 1.8em;
+            color: var(--accent-color);
             margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
         }
 
-        a {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text);
-            padding: 15px 20px;
+        .toc-item {
+            margin-bottom: 12px;
+        }
+
+        .toc-item a {
+            display: block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
             text-decoration: none;
-            border-radius: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
             font-size: 1.1em;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-right: 4px solid var(--neon);
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid var(--accent-color);
         }
 
-        a:hover {
-            border-right-color: var(--gold);
-            color: var(--gold);
-            transform: translateY(-3px) scale(1.02);
-            background: rgba(45, 45, 60, 0.95);
+        .toc-item a:hover {
+            background-color: #2a2a6a;
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
         }
-
-        a .topic-number {
-            color: var(--neon);
-            font-weight: bold;
-            font-family: 'Roboto Mono', monospace;
-            margin-left: 15px;
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 255, 255, 0.3);
+            font-size: 1em;
+            opacity: 0.8;
         }
-
-        .external-link-icon {
-            font-size: 0.8em;
-            margin-right: 10px;
-            opacity: 0.7;
-        }
-
-summary::-webkit-details-marker {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-            h1 {
-                font-size: 2.2em;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            .container {
-                margin: 20px auto;
-                padding: 10px;
-            }
-        }
-
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h1>🇫🇮 راهنمای خودآموز فنلاندی (Persian)</h1>
+        <header>
+            <h1>🇫🇮 خودآموز زبان فنلاندی (Persian)</h1>
+            <p>فهرست جامع مطالب آموزشی</p>
+        </header>
 
-        <details open>
-            <summary><h2><i class="fa-solid fa-book-open"></i> بخش ۱: مبانی و افعال (Grammar 1: Verbs)</h2></summary>
-            <ul>
-                <li><a href="g1-verbs.html#pronouns_olla"><span class="topic-number">1.</span> ضمایر شخصی و فعل بودن (OLLA) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g1-verbs.html#numbers_time"><span class="topic-number">2.</span> اعداد و اصول زمان (Puoli, Yli, Vaille) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g1-verbs.html#verb_type1"><span class="topic-number">3.</span> فعل نوع ۱ (-Va): پرکاربردترین‌ها <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g1-verbs.html#verb_type2"><span class="topic-number">4.</span> فعل نوع ۲ (-da/dä): کوتاه‌ترین ریشه‌ها <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g1-verbs.html#verb_type3"><span class="topic-number">5.</span> فعل نوع ۳ (-la/na/ra/sta): قاعده پل 'E' <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g1-verbs.html#verb_type4"><span class="topic-number">6.</span> فعل نوع ۴ (-ata/ota/uta): قاعده حذف 't' <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g1-verbs.html#verb_type5"><span class="topic-number">7.</span> فعل نوع ۵ (-ita/itä): ریشه -tse- <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
+        <nav>
+            <ul class="toc">
+                <li class="toc-section">
+                    <h2>بخش ۱: مبانی و افعال</h2>
+                    <ul class="toc">
+                        <li class="toc-item"><a href="g1-verbs.html#section1">۱. ضمایر شخصی و فعل "بودن" (OLLA)</a></li>
+                        <li class="toc-item"><a href="g1-verbs.html#section2">۲. اعداد (NUMEROT)</a></li>
+                        <li class="toc-item"><a href="g1-verbs.html#section3">۳. پرسیدن و گفتن زمان</a></li>
+                        <li class="toc-item"><a href="g1-verbs.html#section4">۴. صرف فعل - نوع ۱ (Verbityyppi 1)</a></li>
+                        <li class="toc-item"><a href="g1-verbs.html#section5">۵. صرف فعل - نوع ۲ (Verbityyppi 2)</a></li>
+                        <li class="toc-item"><a href="g1-verbs.html#section6">۶. صرف فعل - نوع ۳ (Verbityyppi 3)</a></li>
+                        <li class="toc-item"><a href="g1-verbs.html#section7">۷. صرف فعل - نوع ۴ (Verbityyppi 4)</a></li>
+                        <li class="toc-item"><a href="g1-verbs.html#section8">۸. صرف فعل - نوع ۵ (Verbityyppi 5)</a></li>
+                    </ul>
+                </li>
+                <li class="toc-section">
+                    <h2>بخش ۲: حالت‌ها و اسم‌ها</h2>
+                    <ul class="toc">
+                        <li class="toc-item"><a href="g2-cases-nouns.html#section9">۹. حالت پارتیتیو (PARTITIIVI)</a></li>
+                        <li class="toc-item"><a href="g2-cases-nouns.html#section10">۱۰. درجه‌بندی صامت‌ها (KPT)</a></li>
+                        <li class="toc-item"><a href="g2-cases-nouns.html#section11">۱۱. حالت‌های مکانی (PAIKALLISSIJAT)</a></li>
+                        <li class="toc-item"><a href="g2-cases-nouns.html#section12">۱۲. انواع اسم‌ها (Substantiivityypit)</a></li>
+                        <li class="toc-item"><a href="g2-cases-nouns.html#section13">۱۳. جمله مالکیت (Omistuslause)</a></li>
+                        <li class="toc-item"><a href="g2-cases-nouns.html#section14">۱۴. جمله وجودی (Eksistentiaalilause)</a></li>
+                    </ul>
+                </li>
+                <li class="toc-section">
+                    <h2>بخش ۳: کاربرد و مرور نهایی</h2>
+                    <ul class="toc">
+                        <li class="toc-item"><a href="v-review.html#section15">۱۵. وجه امری (IMPERATIIVI)</a></li>
+                        <li class="toc-item"><a href="v-review.html#section16">۱۶. صفت‌ها، رنگ‌ها و کلمات هم‌آوا</a></li>
+                        <li class="toc-item"><a href="v-review.html#section17">۱۷. واژگان ضروری و ضمایر اشاره</a></li>
+                    </ul>
+                </li>
             </ul>
-        </details>
-
-        <details>
-            <summary><h2><i class="fa-solid fa-sitemap"></i> بخش ۲: حالت‌ها و ساختارها (Grammar 2: Cases & Structures)</h2></summary>
-            <ul>
-                <li><a href="g2-cases-nouns.html#partitiivi_rules"><span class="topic-number">8.</span> حالت پارتیتیو (PARTITIIVI) و قوانین جامع <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g2-cases-nouns.html#kpt_gradation"><span class="topic-number">9.</span> درجه‌بندی صامت‌ها (KPT) - جدول جامع و قوانین معکوس <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g2-cases-nouns.html#local_cases"><span class="topic-number">10.</span> حالت‌های مکانی (PAIKALLISSIJAT) - داخلی و خارجی <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g2-cases-nouns.html#noun_types"><span class="topic-number">11.</span> انواع اسم‌ها (-e، -nen، -in، i-) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="g2-cases-nouns.html#clause_types"><span class="topic-number">12.</span> انواع جملات (مالکیت و وجودی) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-            </ul>
-        </details>
-
-        <details>
-            <summary><h2><i class="fa-solid fa-rocket"></i> بخش ۳: کاربرد و مرور نهایی (Application & Final Review)</h2></summary>
-            <ul>
-                <li><a href="v-review.html#imperatiivi_mood"><span class="topic-number">13.</span> وجه امری (IMPERATIIVI) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="v-review.html#adjectives_colors"><span class="topic-number">14.</span> صفت‌ها، رنگ‌ها و توصیف ظاهر (Homonyms) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="v-review.html#transport_weather"><span class="topic-number">15.</span> واژگان ضروری، حمل و نقل، غذا، آب و هوا (SÄÄ) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                <li><a href="v-review.html#demonstrative_pronouns"><span class="topic-number">16.</span> ضمایر اشاره (Tämä, Tuo, Se) <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-                 <li><a href="v-review.html#final_exercises"><span class="topic-number">17.</span> تمرینات جامع و مرور نهایی <i class="fa-solid fa-arrow-left external-link-icon"></i></a></li>
-            </ul>
-        </details>
-        <ul>
-            <li><a href="../index.html"><i class="fa-solid fa-globe"></i> بازگشت به صفحه اصلی Learn</a></li>
-            <li><a href="kpt_sample.html"><i class="fa-solid fa-language"></i> نمونه KPT</a></li>
-        </ul>
+        </nav>
+        
+        <footer>
+            <p>موفق باشید! - Onnea opiskeluun!</p>
+        </footer>
     </div>
 </body>
 </html>
