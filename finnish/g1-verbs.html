@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>بخش ۱: مبانی و افعال (Verbs)</title>
+    <title>فنلاندی ۱: مبانی و افعال</title>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
         type="text/css" />
     <link
@@ -18,18 +18,9 @@
             --card-bg: rgba(25, 25, 40, 0.95);
             --gold: #FFD700;
             --neon: #00D4FF;
-            --purple: #BC13FE;
             --text: #F0F0F0;
-            --subtext: #B0B0B0;
             --success: #00FF9D;
             --error: #FF4B4B;
-            --rule-bg: rgba(0, 212, 255, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         body {
@@ -37,1022 +28,693 @@
             background-attachment: fixed;
             color: var(--text);
             font-family: 'Vazirmatn', sans-serif;
-            min-height: 100vh;
-            padding: 20px;
-            padding-bottom: 80px;
+            padding: 10px;
         }
 
-        h1,
-        h2 {
-            font-family: 'Orbitron', sans-serif;
-            color: var(--gold);
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-        }
-
-        h2 {
-            font-size: 1.5em;
-            color: var(--neon);
-            margin-top: 40px;
-            border-bottom: 1px solid var(--neon);
-            padding-bottom: 10px;
-        }
-
-        /* Collapsible Styling */
         details {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 12px;
             margin-bottom: 20px;
+            background: var(--card-bg);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         summary {
-            background: rgba(30, 30, 50, 0.8);
-            padding: 15px 20px;
+            padding: 20px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 1.1em;
-            color: var(--text);
+            background: rgba(255, 255, 255, 0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            list-style: none;
-            transition: background 0.3s;
+            font-size: 1.1em;
+            color: var(--neon);
+            transition: 0.3s;
         }
 
         summary:hover {
             background: rgba(0, 212, 255, 0.1);
         }
 
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: '\f078';
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: var(--neon);
-            transition: transform 0.3s;
-        }
-
-        details[open] summary::after {
-            transform: rotate(180deg);
-        }
-
         .content {
             padding: 20px;
-        }
-
-        /* Tables & Rules */
-        .rule-box {
-            background: var(--rule-bg);
-            border-right: 4px solid var(--neon);
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
+            font-size: 0.9em;
             margin: 15px 0;
-            font-size: 0.95em;
             background: #151520;
-            border-radius: 8px;
-            overflow: hidden;
         }
 
-        th {
-            background: #222;
-            color: var(--gold);
-            padding: 12px;
-            border: 1px solid #333;
-        }
-
+        th,
         td {
             padding: 10px;
             border: 1px solid #333;
             text-align: center;
         }
 
+        th {
+            color: var(--gold);
+            background: #222;
+        }
+
         .ltr {
             direction: ltr;
-            font-family: 'Exo 2', sans-serif;
         }
 
-        .kpt-col {
-            color: var(--purple);
-            font-weight: bold;
+        .example-box {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 4px solid var(--neon);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
         }
 
-        /* Example Lists */
-        .example-list {
-            list-style: none;
-        }
-
-        .example-item {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 10px;
-            margin-bottom: 8px;
-            border-radius: 6px;
-            border-right: 3px solid var(--success);
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .ex-fi {
-            color: var(--text);
+        .finnish-ex {
+            color: #fff;
             font-weight: bold;
             direction: ltr;
             text-align: left;
+            display: block;
+            margin-bottom: 5px;
         }
 
-        .ex-fa {
-            color: var(--subtext);
+        .persian-ex {
+            color: #ccc;
             font-size: 0.9em;
+            display: block;
         }
 
-        .nav-btn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
+        h2 {
+            color: var(--gold);
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: var(--success);
+            margin: 20px 0 10px;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
             background: var(--neon);
             color: #000;
-            text-align: center;
-            padding: 15px;
-            border-radius: 30px;
+            padding: 10px 30px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
-            z-index: 100;
-            max-width: 400px;
-            margin: 0 auto;
+            width: fit-content;
+        }
+
+        .kpt-badge {
+            background: var(--error);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
 
-    <h1><i class="fa-solid fa-shapes"></i> افعال و مبانی</h1>
+    <h1 style="text-align:center; color:var(--gold); margin-bottom:30px; font-family:'Orbitron';">بخش ۱: مبانی و افعال
+    </h1>
 
-    <div id="basics">
-        <details open>
-            <summary>۱. ضمایر شخصی و فعل Olla (بودن)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    فعل <b>Olla</b> (بودن) مهم‌ترین فعل است. برای ساختن جمله منفی از <b>ei</b> استفاده می‌کنیم.
-                    <br>مثال: Minä <b>olen</b> (من هستم) / Minä <b>en ole</b> (من نیستم).
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>شخص</th>
-                            <th>مثبت (+)</th>
-                            <th>منفی (-)</th>
-                            <th>KPT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Minä (من)</td>
-                            <td class="ltr">olen</td>
-                            <td class="ltr">en ole</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Sinä (تو)</td>
-                            <td class="ltr">olet</td>
-                            <td class="ltr">et ole</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Hän (او)</td>
-                            <td class="ltr">on</td>
-                            <td class="ltr">ei ole</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Me (ما)</td>
-                            <td class="ltr">olemme</td>
-                            <td class="ltr">emme ole</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Te (شما)</td>
-                            <td class="ltr">olette</td>
-                            <td class="ltr">ette ole</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>He (آنها)</td>
-                            <td class="ltr">ovat</td>
-                            <td class="ltr">eivät ole</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="rule-box" style="border-color: var(--gold);">
-                    <b>نکته مهم:</b> برای "آنها" (مؤنث/مذکر/اشیا) همیشه از <b>He</b> برای انسان و <b>Ne</b> برای
-                    اشیا/حیوانات استفاده می‌شود.
-                </div>
-                <h4>۱۰ مثال کاربردی:</h4>
-                <ul class="example-list">
-                    <li class="example-item"><span class="ex-fi">Minä olen opiskelija.</span><span class="ex-fa">من
-                            دانشجو هستم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Sinä olet kiva.</span><span class="ex-fa">تو مهربان
-                            هستی.</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän on kotona.</span><span class="ex-fa">او در خانه
-                            است.</span></li>
-                    <li class="example-item"><span class="ex-fi">Me olemme ystäviä.</span><span class="ex-fa">ما دوست
-                            هستیم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Te olette myöhässä.</span><span class="ex-fa">شما دیر
-                            کرده‌اید.</span></li>
-                    <li class="example-item"><span class="ex-fi">He ovat suomalaisia.</span><span class="ex-fa">آنها
-                            فنلاندی هستند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Se on vaikeaa.</span><span class="ex-fa">آن (شیء/موضوع)
-                            سخت است.</span></li>
-                    <li class="example-item"><span class="ex-fi">Oletko sinä väsynyt?</span><span class="ex-fa">آیا تو
-                            خسته‌ای؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Emme ole valmiita.</span><span class="ex-fa">ما آماده
-                            نیستیم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Missä sinä olet?</span><span class="ex-fa">تو کجا
-                            هستی؟</span></li>
-                </ul>
+    <details id="basics" open>
+        <summary>
+            <span><i class="fa-solid fa-cube"></i> ضمایر شخصی و فعل "بودن" (Olla)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </summary>
+        <div class="content">
+            <p>در زبان فنلاندی، فعل "Olla" (بودن) پرکاربردترین فعل است.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th>ضمیر</th>
+                        <th>مثبت (Olla)</th>
+                        <th>منفی (Ei ole)</th>
+                        <th>ترجمه (مثبت / منفی)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>اول شخص مفرد</td>
+                        <td class="ltr">Minä</td>
+                        <td class="ltr">olen</td>
+                        <td class="ltr">en ole</td>
+                        <td>من هستم / نیستم</td>
+                    </tr>
+                    <tr>
+                        <td>دوم شخص مفرد</td>
+                        <td class="ltr">Sinä</td>
+                        <td class="ltr">olet</td>
+                        <td class="ltr">et ole</td>
+                        <td>تو هستی / نیستی</td>
+                    </tr>
+                    <tr>
+                        <td>سوم شخص مفرد</td>
+                        <td class="ltr">Hän / Se</td>
+                        <td class="ltr">on</td>
+                        <td class="ltr">ei ole</td>
+                        <td>او (آن) هست / نیست</td>
+                    </tr>
+                    <tr>
+                        <td>اول شخص جمع</td>
+                        <td class="ltr">Me</td>
+                        <td class="ltr">olemme</td>
+                        <td class="ltr">emme ole</td>
+                        <td>ما هستیم / نیستیم</td>
+                    </tr>
+                    <tr>
+                        <td>دوم شخص جمع</td>
+                        <td class="ltr">Te</td>
+                        <td class="ltr">olette</td>
+                        <td class="ltr">ette ole</td>
+                        <td>شما هستید / نیستید</td>
+                    </tr>
+                    <tr>
+                        <td>سوم شخص جمع</td>
+                        <td class="ltr">He / Ne</td>
+                        <td class="ltr">ovat</td>
+                        <td class="ltr">eivät ole</td>
+                        <td>آنها هستند / نیستند</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>مثال‌های کاربردی (Olla)</h3>
+            <div class="example-box">
+                <span class="finnish-ex">Minä olen opiskelija.</span>
+                <span class="persian-ex">من دانشجو هستم.</span>
             </div>
-        </details>
-
-        <details>
-            <summary>۲. زمان و ساعت (Kellonaika)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    <ul>
-                        <li><b>Tasan:</b> تمام (Kello on kolme = ساعت ۳ است)</li>
-                        <li><b>Puoli:</b> نیم (Kello on puoli viisi = ساعت ۴:۳۰ است - در فنلاندی نیم ساعت به سمت عدد بعد
-                            می‌رویم)</li>
-                        <li><b>Yli:</b> گذشته (Viisi yli kaksi = ۲:۰۵)</li>
-                        <li><b>Vaille:</b> مانده (Kymmenen vaille kolme = ۲:۵۰ / ده دقیقه به سه)</li>
-                    </ul>
-                </div>
-                <h4>۱۰ مثال زمان:</h4>
-                <ul class="example-list">
-                    <li class="example-item"><span class="ex-fi">Kello on tasan kaksi.</span><span class="ex-fa">ساعت
-                            دقیقاً دو است. (02:00)</span></li>
-                    <li class="example-item"><span class="ex-fi">Kello on puoli kuusi.</span><span class="ex-fa">ساعت
-                            پنج و نیم است. (05:30)</span></li>
-                    <li class="example-item"><span class="ex-fi">Kello on varttia yli yhdeksän.</span><span
-                            class="ex-fa">ساعت نه و ربع است. (09:15)</span></li>
-                    <li class="example-item"><span class="ex-fi">Kello on kaksikymmentä vaille kahdeksan.</span><span
-                            class="ex-fa">ساعت بیست دقیقه به هشت است. (07:40)</span></li>
-                    <li class="example-item"><span class="ex-fi">Mitä kello on?</span><span class="ex-fa">ساعت چند
-                            است؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Juna lähtee kello viisi.</span><span class="ex-fa">قطار
-                            ساعت پنج حرکت می‌کند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Olen valmis kello puoli yksi.</span><span
-                            class="ex-fa">من ساعت دوازده و نیم آماده‌ام.</span></li>
-                    <li class="example-item"><span class="ex-fi">Kello on viisi minuuttia yli kymmenen.</span><span
-                            class="ex-fa">ساعت پنج دقیقه از ده گذشته است.</span></li>
-                    <li class="example-item"><span class="ex-fi">Tulen kymmentä vaille kolme.</span><span
-                            class="ex-fa">من ده دقیقه به سه می‌آیم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Onko kello jo kaksitoista?</span><span
-                            class="ex-fa">آیا ساعت الان دوازده است؟</span></li>
-                </ul>
+            <div class="example-box">
+                <span class="finnish-ex">Hän on väsynyt tänään.</span>
+                <span class="persian-ex">او امروز خسته است.</span>
             </div>
-        </details>
-    </div>
-
-    <h2 id="verbs-header">افعال زبان فنلاندی (Verbit)</h2>
-
-    <div id="verb1">
-        <details>
-            <summary>فعل نوع ۱: -Va/-Vä (Puhua)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    آخرین مصوت فعل حذف می‌شود و شناسه شخصی اضافه می‌گردد.<br>
-                    اگر فعل قوی باشد، ممکن است به ضعیف تبدیل شود (KPT).<br>
-                    <b>Puhua (صحبت کردن) -> Puhu- + n = Puhun</b>
-                </div>
-
-                <h4>جدول صرف نمونه (Asua - زندگی کردن)</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>شخص</th>
-                            <th>مثبت</th>
-                            <th>منفی</th>
-                            <th>تغییر KPT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Minä</td>
-                            <td class="ltr">asun</td>
-                            <td class="ltr">en asu</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Sinä</td>
-                            <td class="ltr">asut</td>
-                            <td class="ltr">et asu</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Hän</td>
-                            <td class="ltr">asuu</td>
-                            <td class="ltr">ei asu</td>
-                            <td>(کشش واکه)</td>
-                        </tr>
-                        <tr>
-                            <td>Me</td>
-                            <td class="ltr">asumme</td>
-                            <td class="ltr">emme asu</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Te</td>
-                            <td class="ltr">asutte</td>
-                            <td class="ltr">ette asu</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>He</td>
-                            <td class="ltr">asuvat</td>
-                            <td class="ltr">eivät asu</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>لیست ۱۰ فعل مهم نوع ۱</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>فعل (مصدر)</th>
-                            <th>معنی</th>
-                            <th>KPT (قوی/ضعیف)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="ltr">Puhua</td>
-                            <td>صحبت کردن</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Sanoa</td>
-                            <td>گفتن</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Kysyä</td>
-                            <td>پرسیدن</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Maksaa</td>
-                            <td>پرداختن</td>
-                            <td>Maks- (بدون تغییر)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Ostaa</td>
-                            <td>خریدن</td>
-                            <td>Ostan (t-d ندارد، t حذف نمیشود در نوع 1 معمولا مگر خاص) *نکته: در Ostaa تغییر t-d اتفاق
-                                نمی‌افتد ولی در k-g چرا. مثال Kertoa->Kerron</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Nukkua</td>
-                            <td>خوابیدن</td>
-                            <td class="kpt-col">Nukun (kk -> k)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Antaa</td>
-                            <td>دادن</td>
-                            <td class="kpt-col">Annan (nt -> nn)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Ottaa</td>
-                            <td>گرفتن</td>
-                            <td class="kpt-col">Otan (tt -> t)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Tietää</td>
-                            <td>دانستن</td>
-                            <td class="kpt-col">Tiedän (t -> d)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Ymmärtää</td>
-                            <td>فهمیدن</td>
-                            <td class="kpt-col">Ymmärrän (rt -> rr)</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>۱۰ مثال کاربردی:</h4>
-                <ul class="example-list">
-                    <li class="example-item"><span class="ex-fi">Minä puhun suomea.</span><span class="ex-fa">من فنلاندی
-                            صحبت می‌کنم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän nukkuu pitkään.</span><span class="ex-fa">او طولانی
-                            می‌خوابد. (Strong KPT for 3rd person)</span></li>
-                    <li class="example-item"><span class="ex-fi">Me ostamme ruokaa.</span><span class="ex-fa">ما غذا
-                            می‌خریم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Mitä sinä sanot?</span><span class="ex-fa">تو چه
-                            می‌گویی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Te annatte lahjan.</span><span class="ex-fa">شما هدیه
-                            می‌دهید. (Strong for 2nd pl? No, Annate - tt is strong)</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän ei tiedä vastausta.</span><span class="ex-fa">او
-                            پاسخ را نمی‌داند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Ymmärrätkö sinä minua?</span><span class="ex-fa">آیا تو
-                            مرا می‌فهمی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Kysyn opettajalta.</span><span class="ex-fa">از معلم
-                            می‌پرسم.</span></li>
-                    <li class="example-item"><span class="ex-fi">He maksavat laskun.</span><span class="ex-fa">آنها
-                            صورتحساب را می‌پردازند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Otan kahvia, kiitos.</span><span class="ex-fa">قهوه
-                            می‌گیرم (می‌خورم)، ممنون.</span></li>
-                </ul>
+            <div class="example-box">
+                <span class="finnish-ex">Me emme ole kotona.</span>
+                <span class="persian-ex">ما در خانه نیستیم.</span>
             </div>
-        </details>
-    </div>
-
-    <div id="verb2">
-        <details>
-            <summary>فعل نوع ۲: -da/-dä (Syödä)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    قسمت <b>-da/-dä</b> حذف می‌شود. هیچ تغییر KPT در این نوع وجود ندارد.<br>
-                    <b>Syödä -> Syö- + n = Syön</b>
-                </div>
-
-                <h4>جدول صرف نمونه (Juoda - نوشیدن)</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>شخص</th>
-                            <th>مثبت</th>
-                            <th>منفی</th>
-                            <th>تغییر KPT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Minä</td>
-                            <td class="ltr">juon</td>
-                            <td class="ltr">en juo</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Sinä</td>
-                            <td class="ltr">juot</td>
-                            <td class="ltr">et juo</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Hän</td>
-                            <td class="ltr">juo</td>
-                            <td class="ltr">ei juo</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Me</td>
-                            <td class="ltr">juomme</td>
-                            <td class="ltr">emme juo</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Te</td>
-                            <td class="ltr">juotte</td>
-                            <td class="ltr">ette juo</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>He</td>
-                            <td class="ltr">juovat</td>
-                            <td class="ltr">eivät juo</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>لیست ۱۰ فعل مهم نوع ۲</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>فعل</th>
-                            <th>معنی</th>
-                            <th>ساقه (Stem)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="ltr">Syödä</td>
-                            <td>خوردن</td>
-                            <td class="ltr">Syö-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Juoda</td>
-                            <td>نوشیدن</td>
-                            <td class="ltr">Juo-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Tehdä</td>
-                            <td>انجام دادن</td>
-                            <td class="ltr">Tee- (استثنا)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Nähdä</td>
-                            <td>دیدن</td>
-                            <td class="ltr">Näe- (استثنا)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Käydä</td>
-                            <td>رفتن/بازدید</td>
-                            <td class="ltr">Käy-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Voida</td>
-                            <td>توانستن</td>
-                            <td class="ltr">Voi-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Uida</td>
-                            <td>شنا کردن</td>
-                            <td class="ltr">Ui-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Tuoda</td>
-                            <td>آوردن</td>
-                            <td class="ltr">Tuo-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Myydä</td>
-                            <td>فروختن</td>
-                            <td class="ltr">Myy-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Saada</td>
-                            <td>دریافت کردن</td>
-                            <td class="ltr">Saa-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>۱۰ مثال کاربردی:</h4>
-                <ul class="example-list">
-                    <li class="example-item"><span class="ex-fi">Minä syön aamiaista.</span><span class="ex-fa">من
-                            صبحانه می‌خورم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Mitä sinä teet?</span><span class="ex-fa">تو چه کار
-                            می‌کنی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän ei näe meitä.</span><span class="ex-fa">او ما را
-                            نمی‌بیند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Me käymme kaupassa.</span><span class="ex-fa">ما به
-                            فروشگاه می‌رویم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Voitko auttaa minua?</span><span class="ex-fa">آیا
-                            می‌توانی به من کمک کنی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">He uivat järvessä.</span><span class="ex-fa">آنها در
-                            دریاچه شنا می‌کنند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Tuon sinulle vettä.</span><span class="ex-fa">برای تو
-                            آب می‌آورم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Saanko kysyä?</span><span class="ex-fa">آیا می‌توانم
-                            (اجازه دارم) بپرسم؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Myymme vanhan auton.</span><span class="ex-fa">ما ماشین
-                            قدیمی را می‌فروشیم.</span></li>
-                    <li class="example-item"><span class="ex-fi">En juo maitoa.</span><span class="ex-fa">من شیر
-                            نمی‌نوشم.</span></li>
-                </ul>
+            <div class="example-box">
+                <span class="finnish-ex">Oletteko te suomalaisia?</span>
+                <span class="persian-ex">آیا شما فنلاندی هستید؟</span>
             </div>
-        </details>
-    </div>
-
-    <div id="verb3">
-        <details>
-            <summary>فعل نوع ۳: -CiC2a (-lla/nna...)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    دو حرف آخر حذف می‌شود و <b>e</b> اضافه می‌شود، سپس شناسه.<br>
-                    تغییر KPT رایج است.<br>
-                    <b>Opiskella -> Opiskel- + e + n = Opiskelen</b>
-                </div>
-
-                <h4>جدول صرف نمونه (Tulla - آمدن)</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>شخص</th>
-                            <th>مثبت</th>
-                            <th>منفی</th>
-                            <th>تغییر KPT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Minä</td>
-                            <td class="ltr">tulen</td>
-                            <td class="ltr">en tule</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Sinä</td>
-                            <td class="ltr">tulet</td>
-                            <td class="ltr">et tule</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Hän</td>
-                            <td class="ltr">tulee</td>
-                            <td class="ltr">ei tule</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Me</td>
-                            <td class="ltr">tulemme</td>
-                            <td class="ltr">emme tule</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>He</td>
-                            <td class="ltr">tulevat</td>
-                            <td class="ltr">eivät tule</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>لیست ۱۰ فعل مهم نوع ۳</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>فعل</th>
-                            <th>معنی</th>
-                            <th>ساقه (Stem)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="ltr">Tulla</td>
-                            <td>آمدن</td>
-                            <td class="ltr">Tule-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Mennä</td>
-                            <td>رفتن</td>
-                            <td class="ltr">Mene-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Nousta</td>
-                            <td>برخاستن</td>
-                            <td class="ltr">Nouse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Pestä</td>
-                            <td>شستن</td>
-                            <td class="ltr">Pese-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Kävellä</td>
-                            <td>راه رفتن</td>
-                            <td class="ltr">Kävele-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Opiskella</td>
-                            <td>درس خواندن</td>
-                            <td class="ltr">Opiskele-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Olla</td>
-                            <td>بودن</td>
-                            <td class="ltr">Ole- (استثنا)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Panna</td>
-                            <td>گذاشتن</td>
-                            <td class="ltr">Pane-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Hymyillä</td>
-                            <td>لبخند زدن</td>
-                            <td class="ltr">Hymyile-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Surra</td>
-                            <td>غصه خوردن</td>
-                            <td class="ltr">Sure-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>۱۰ مثال کاربردی:</h4>
-                <ul class="example-list">
-                    <li class="example-item"><span class="ex-fi">Minä tulen kotiin.</span><span class="ex-fa">من به خانه
-                            می‌آیم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Mihin sinä menet?</span><span class="ex-fa">تو کجا
-                            می‌روی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän pesee kädet.</span><span class="ex-fa">او دست‌ها را
-                            می‌شوید.</span></li>
-                    <li class="example-item"><span class="ex-fi">Me opiskelemme suomea.</span><span class="ex-fa">ما
-                            فنلاندی می‌خوانیم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Nousen aikaisin.</span><span class="ex-fa">من زود بیدار
-                            می‌شوم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Kävelemme puistossa.</span><span class="ex-fa">ما در
-                            پارک قدم می‌زنیم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Pane ovi kiinni.</span><span class="ex-fa">در را ببند
-                            (بگذار بسته شود).</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän hymyilee aina.</span><span class="ex-fa">او همیشه
-                            لبخند می‌زند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Lapset eivät tule tänne.</span><span
-                            class="ex-fa">بچه‌ها اینجا نمی‌آیند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Menen töihin bussilla.</span><span class="ex-fa">با
-                            اتوبوس سر کار می‌روم.</span></li>
-                </ul>
+            <div class="example-box">
+                <span class="finnish-ex">He ovat iloisia.</span>
+                <span class="persian-ex">آنها خوشحال هستند.</span>
             </div>
-        </details>
-    </div>
-
-    <div id="verb4">
-        <details>
-            <summary>فعل نوع ۴: -Vta (-ata/ota/ytä)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    حرف <b>t</b> حذف می‌شود و <b>a/ä</b> اضافه می‌شود (در واقع مصوت آخر تکرار نمی‌شود، بلکه a تبدیل به
-                    aan میشود در سوم شخص).<br>
-                    ساقه: <b>Haluta -> Halua- + n = Haluan</b>.<br>
-                    تغییر KPT: در این گروه رایج است (t -> d نیست چون t حذف میشود، اما مثلا Paka<b>t</b>a -> Pakkaan
-                    (k->kk معکوس)). در نوع ۴ KPT معکوس است (ضعیف به قوی).
-                </div>
-
-                <h4>جدول صرف نمونه (Haluta - خواستن)</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>شخص</th>
-                            <th>مثبت</th>
-                            <th>منفی</th>
-                            <th>تغییر KPT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Minä</td>
-                            <td class="ltr">haluan</td>
-                            <td class="ltr">en halua</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Sinä</td>
-                            <td class="ltr">haluat</td>
-                            <td class="ltr">et halua</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Hän</td>
-                            <td class="ltr">haluaa</td>
-                            <td class="ltr">ei halua</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Me</td>
-                            <td class="ltr">haluamme</td>
-                            <td class="ltr">emme halua</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>He</td>
-                            <td class="ltr">haluavat</td>
-                            <td class="ltr">eivät halua</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>لیست ۱۰ فعل مهم نوع ۴ (توجه به KPT معکوس)</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>فعل</th>
-                            <th>معنی</th>
-                            <th>ساقه (Stem)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="ltr">Haluta</td>
-                            <td>خواستن</td>
-                            <td class="ltr">Halua-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Siivota</td>
-                            <td>تمیز کردن</td>
-                            <td class="ltr">Siivoa-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Avata</td>
-                            <td>باز کردن</td>
-                            <td class="ltr">Avaa-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Herätä</td>
-                            <td>بیدار شدن</td>
-                            <td class="ltr">Herää-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Tilata</td>
-                            <td>سفارش دادن</td>
-                            <td class="ltr">Tilaa-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Pelata</td>
-                            <td>بازی کردن</td>
-                            <td class="ltr">Pelaa-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Maata</td>
-                            <td>دراز کشیدن</td>
-                            <td class="ltr">Makaa- (KPT: - -> k)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Pakata</td>
-                            <td>بسته‌بندی</td>
-                            <td class="ltr">Pakkaa- (KPT: k -> kk)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Tavata</td>
-                            <td>ملاقات کردن</td>
-                            <td class="ltr">Tapaa- (KPT: v -> p)</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Hypätä</td>
-                            <td>پریدن</td>
-                            <td class="ltr">Hyppää- (KPT: p -> pp)</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>۱۰ مثال کاربردی:</h4>
-                <ul class="example-list">
-                    <li class="example-item"><span class="ex-fi">Minä haluan kahvia.</span><span class="ex-fa">من قهوه
-                            می‌خواهم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän siivoaa keittiön.</span><span class="ex-fa">او
-                            آشپزخانه را تمیز می‌کند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Me tapaamme huomenna.</span><span class="ex-fa">ما فردا
-                            ملاقات می‌کنیم. (v->p)</span></li>
-                    <li class="example-item"><span class="ex-fi">Avaatko oven?</span><span class="ex-fa">آیا در را باز
-                            می‌کنی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Pelaatko jalkapalloa?</span><span class="ex-fa">آیا
-                            فوتبال بازی می‌کنی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Herään aikaisin.</span><span class="ex-fa">من زود بیدار
-                            می‌شوم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän tilaa pizzan.</span><span class="ex-fa">او پیتزا
-                            سفارش می‌دهد.</span></li>
-                    <li class="example-item"><span class="ex-fi">Pakkaan laukun.</span><span class="ex-fa">من کیف را
-                            می‌بندم. (k->kk)</span></li>
-                    <li class="example-item"><span class="ex-fi">Kissa hyppää pöydälle.</span><span class="ex-fa">گربه
-                            روی میز می‌پرد.</span></li>
-                    <li class="example-item"><span class="ex-fi">En halua mennä.</span><span class="ex-fa">نمی‌خواهم
-                            بروم.</span></li>
-                </ul>
+            <div class="example-box">
+                <span class="finnish-ex">Tämä on minun kirja.</span>
+                <span class="persian-ex">این کتاب من است.</span>
             </div>
-        </details>
-    </div>
-
-    <div id="verb5">
-        <details>
-            <summary>فعل نوع ۵: -ita/-itä (Valita)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    دو حرف آخر <b>-ta/-tä</b> حذف شده و <b>-tse</b> اضافه می‌شود.<br>
-                    ساقه: <b>Valita -> Vali- + tse + n = Valitsen</b>.<br>
-                    KPT: ندارد.
-                </div>
-
-                <h4>جدول صرف نمونه (Tarvita - نیاز داشتن)</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>شخص</th>
-                            <th>مثبت</th>
-                            <th>منفی</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Minä</td>
-                            <td class="ltr">tarvitsen</td>
-                            <td class="ltr">en tarvitse</td>
-                        </tr>
-                        <tr>
-                            <td>Sinä</td>
-                            <td class="ltr">tarvitset</td>
-                            <td class="ltr">et tarvitse</td>
-                        </tr>
-                        <tr>
-                            <td>Hän</td>
-                            <td class="ltr">tarvitsee</td>
-                            <td class="ltr">ei tarvitse</td>
-                        </tr>
-                        <tr>
-                            <td>He</td>
-                            <td class="ltr">tarvitsevat</td>
-                            <td class="ltr">eivät tarvitse</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>لیست ۱۰ فعل مهم نوع ۵</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>فعل</th>
-                            <th>معنی</th>
-                            <th>ساقه (Stem)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="ltr">Tarvita</td>
-                            <td>نیاز داشتن</td>
-                            <td class="ltr">Tarvitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Valita</td>
-                            <td>انتخاب کردن</td>
-                            <td class="ltr">Valitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Häiritä</td>
-                            <td>مزاحم شدن</td>
-                            <td class="ltr">Häiritse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Märkitä</td>
-                            <td>علامت زدن</td>
-                            <td class="ltr">Merkitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Harkita</td>
-                            <td>در نظر گرفتن</td>
-                            <td class="ltr">Harkitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Tuomita</td>
-                            <td>قضاوت کردن</td>
-                            <td class="ltr">Tuomitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Mainita</td>
-                            <td>اشاره کردن</td>
-                            <td class="ltr">Mainitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Hallita</td>
-                            <td>کنترل کردن</td>
-                            <td class="ltr">Hallitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Sijaita</td>
-                            <td>واقع شدن</td>
-                            <td class="ltr">Sijaitse-</td>
-                        </tr>
-                        <tr>
-                            <td class="ltr">Lukita</td>
-                            <td>قفل کردن</td>
-                            <td class="ltr">Lukitse-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>۱۰ مثال کاربردی:</h4>
-                <ul class="example-list">
-                    <li class="example-item"><span class="ex-fi">Tarvitsen apua.</span><span class="ex-fa">من به کمک
-                            نیاز دارم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Valitsen punaisen.</span><span class="ex-fa">من قرمز را
-                            انتخاب می‌کنم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Älä häiritse minua.</span><span class="ex-fa">مزاحم من
-                            نشو. (امری)</span></li>
-                    <li class="example-item"><span class="ex-fi">Talo sijaitsee keskustassa.</span><span
-                            class="ex-fa">خانه در مرکز شهر واقع شده است.</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän harkitsee asiaa.</span><span class="ex-fa">او موضوع
-                            را بررسی می‌کند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Merkitsetkö vastauksen?</span><span class="ex-fa">آیا
-                            جواب را علامت می‌زنی؟</span></li>
-                    <li class="example-item"><span class="ex-fi">Lukitsen oven yöksi.</span><span class="ex-fa">در را
-                            برای شب قفل می‌کنم.</span></li>
-                    <li class="example-item"><span class="ex-fi">En tarvitse mitään.</span><span class="ex-fa">من به هیچ
-                            چیزی نیاز ندارم.</span></li>
-                    <li class="example-item"><span class="ex-fi">Hän hallitsee tilanteen.</span><span class="ex-fa">او
-                            اوضاع را کنترل می‌کند.</span></li>
-                    <li class="example-item"><span class="ex-fi">Mitä sinä valitset?</span><span class="ex-fa">تو چه
-                            انتخاب می‌کنی؟</span></li>
-                </ul>
+            <div class="example-box">
+                <span class="finnish-ex">Se ei ole totta.</span>
+                <span class="persian-ex">آن واقعیت ندارد.</span>
             </div>
-        </details>
-    </div>
+            <div class="example-box">
+                <span class="finnish-ex">Missä sinä olet?</span>
+                <span class="persian-ex">تو کجایی؟</span>
+            </div>
+            <div class="example-box">
+                <span class="finnish-ex">Olen töissä.</span>
+                <span class="persian-ex">من سر کار هستم.</span>
+            </div>
+            <div class="example-box">
+                <span class="finnish-ex">Ilma on kaunis.</span>
+                <span class="persian-ex">هوا زیباست.</span>
+            </div>
+        </div>
+    </details>
 
-    <a href="index.html" class="nav-btn">بازگشت به فهرست</a>
+    <details id="numbers">
+        <summary>
+            <span><i class="fa-solid fa-clock"></i> اعداد و زمان (Numerot ja Aika)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </summary>
+        <div class="content">
+            <h3>اعداد (0-10)</h3>
+            <p>0 nolla, 1 yksi, 2 kaksi, 3 kolme, 4 neljä, 5 viisi, 6 kuusi, 7 seitsemän, 8 kahdeksan, 9 yhdeksän, 10
+                kymmenen.</p>
+            <h3>گفتن ساعت</h3>
+            <p>برای بیان ساعت از عبارات زیر استفاده می‌شود:</p>
+            <ul>
+                <li><b>Tasan:</b> تمام (Kello on kolme = ساعت ۳ است)</li>
+                <li><b>Puoli:</b> نیم (Kello on puoli neljä = ساعت ۳:۳۰ است - دقت کنید: "نیم به چهار")</li>
+                <li><b>Yli:</b> گذشته (Kello on kymmenen yli viisi = ساعت ۵:۱۰)</li>
+                <li><b>Vaille:</b> مانده (Kello on kymmenen vaille viisi = ساعت ۴:۵۰)</li>
+            </ul>
+
+            <h3>مثال‌های زمان (۱۰ عدد)</h3>
+            <div class="example-box"><span class="finnish-ex">Kello on tasan kaksi.</span><span class="persian-ex">ساعت
+                    دقیقاً ۲ است.</span></div>
+            <div class="example-box"><span class="finnish-ex">Kello on puoli kuusi.</span><span class="persian-ex">ساعت
+                    ۵:۳۰ است.</span></div>
+            <div class="example-box"><span class="finnish-ex">Kello on varttia vaille kolme.</span><span
+                    class="persian-ex">ساعت یک ربع به ۳ است.</span></div>
+            <div class="example-box"><span class="finnish-ex">Kello on viisi yli yhdeksän.</span><span
+                    class="persian-ex">ساعت ۹:۰۵ است.</span></div>
+            <div class="example-box"><span class="finnish-ex">Mitä kello on?</span><span class="persian-ex">ساعت چند
+                    است؟</span></div>
+            <div class="example-box"><span class="finnish-ex">Elokuva alkaa puoli seitsemän.</span><span
+                    class="persian-ex">فیلم ساعت ۶:۳۰ شروع می‌شود.</span></div>
+            <div class="example-box"><span class="finnish-ex">Bussi lähtee kymmenen minuutin päästä.</span><span
+                    class="persian-ex">اتوبوس ۱۰ دقیقه دیگر حرکت می‌کند.</span></div>
+            <div class="example-box"><span class="finnish-ex">Herään kello seitsemän.</span><span class="persian-ex">من
+                    ساعت ۷ بیدار می‌شوم.</span></div>
+            <div class="example-box"><span class="finnish-ex">Kello on kaksikymmentä vaille kaksi.</span><span
+                    class="persian-ex">ساعت ۱:۴۰ است.</span></div>
+            <div class="example-box"><span class="finnish-ex">Olen valmis kello viisi.</span><span class="persian-ex">من
+                    ساعت ۵ آماده هستم.</span></div>
+        </div>
+    </details>
+
+    <details id="verb1">
+        <summary>
+            <span><i class="fa-solid fa-bolt"></i> فعل نوع ۱ (-Va/Vä)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </summary>
+        <div class="content">
+            <p>افعال نوع ۱ به <b>دو مصوت</b> ختم می‌شوند (مثل -aa, -ea). برای صرف، <b>آخرین مصوت (a/ä)</b> را حذف کنید.
+            </p>
+            <p><b>استثناء:</b> در افعال با تغییر KPT، صامت‌های قوی در "Minä, Sinä, Me, Te" ضعیف می‌شوند.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th class="ltr">Puhua (No KPT)</th>
+                        <th class="ltr">Nukkua (KPT: kk-k)</th>
+                        <th>ترجمه (Puhua/Nukkua)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minä</td>
+                        <td class="ltr">Puhun</td>
+                        <td class="ltr">Nukun</td>
+                        <td>حرف می‌زنم / می‌خوابم</td>
+                    </tr>
+                    <tr>
+                        <td>Sinä</td>
+                        <td class="ltr">Puhut</td>
+                        <td class="ltr">Nukut</td>
+                        <td>حرف می‌زنی / می‌خوابی</td>
+                    </tr>
+                    <tr>
+                        <td>Hän</td>
+                        <td class="ltr">Puhuu</td>
+                        <td class="ltr">Nukkuu</td>
+                        <td>حرف می‌زند / می‌خوابد</td>
+                    </tr>
+                    <tr>
+                        <td>Me</td>
+                        <td class="ltr">Puhumme</td>
+                        <td class="ltr">Nukumme</td>
+                        <td>حرف می‌زنیم / می‌خوابیم</td>
+                    </tr>
+                    <tr>
+                        <td>Te</td>
+                        <td class="ltr">Puhutte</td>
+                        <td class="ltr">Nukutte</td>
+                        <td>حرف می‌زنید / می‌خوابید</td>
+                    </tr>
+                    <tr>
+                        <td>He</td>
+                        <td class="ltr">Puhuvat</td>
+                        <td class="ltr">Nukkuvat</td>
+                        <td>حرف می‌زنند / می‌خوابند</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>۱۰ مثال کاربردی</h3>
+            <div class="example-box"><span class="finnish-ex">Minä asun Helsingissä.</span><span class="persian-ex">من
+                    در هلسینکی زندگی می‌کنم (Asua).</span></div>
+            <div class="example-box"><span class="finnish-ex">Sinä puhut hyvää suomea.</span><span class="persian-ex">تو
+                    فنلاندی خوب صحبت می‌کنی (Puhua).</span></div>
+            <div class="example-box"><span class="finnish-ex">Lapsi nukkuu sängyssä.</span><span class="persian-ex">کودک
+                    در تخت می‌خوابد (Nukkua).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me ostamme ruokaa.</span><span class="persian-ex">ما غذا
+                    می‌خریم (Ostaa).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän maksaa laskun.</span><span class="persian-ex">او
+                    صورتحساب را پرداخت می‌کند (Maksaa).</span></div>
+            <div class="example-box"><span class="finnish-ex">Te etsitte avainta.</span><span class="persian-ex">شما
+                    دنبال کلید می‌گردید (Etsiä).</span></div>
+            <div class="example-box"><span class="finnish-ex">He ajavat kovaa.</span><span class="persian-ex">آنها با
+                    سرعت رانندگی می‌کنند (Ajaa).</span></div>
+            <div class="example-box"><span class="finnish-ex">Minä rakastan sinua.</span><span class="persian-ex">من تو
+                    را دوست دارم (Rakastaa).</span></div>
+            <div class="example-box"><span class="finnish-ex">Koira istuu lattialla.</span><span class="persian-ex">سگ
+                    روی زمین می‌نشیند (Istua).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me laulamme kuorossa.</span><span class="persian-ex">ما در
+                    گروه کر آواز می‌خوانیم (Laulaa).</span></div>
+        </div>
+    </details>
+
+    <details id="verb2">
+        <summary>
+            <span><i class="fa-solid fa-utensils"></i> فعل نوع ۲ (-da/dä)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </summary>
+        <div class="content">
+            <p>شناسه مصدر <b>-da/-dä</b> را حذف کنید. چیزی جایگزین نمی‌شود (مگر در حالت سوم شخص که مصوت تکرار نمی‌شود،
+                همان است).</p>
+            <p><b>نکته:</b> این گروه معمولاً تغییر KPT ندارد.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th class="ltr">Syödä</th>
+                        <th class="ltr">Juoda</th>
+                        <th>ترجمه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minä</td>
+                        <td class="ltr">syön</td>
+                        <td class="ltr">juon</td>
+                        <td>می‌خورم / می‌نوشم</td>
+                    </tr>
+                    <tr>
+                        <td>Sinä</td>
+                        <td class="ltr">syöt</td>
+                        <td class="ltr">juot</td>
+                        <td>می‌خوری / می‌نوشی</td>
+                    </tr>
+                    <tr>
+                        <td>Hän</td>
+                        <td class="ltr">syö</td>
+                        <td class="ltr">juo</td>
+                        <td>می‌خورد / می‌نوشد</td>
+                    </tr>
+                    <tr>
+                        <td>Me</td>
+                        <td class="ltr">syömme</td>
+                        <td class="ltr">juomme</td>
+                        <td>می‌خوریم / می‌نوشیم</td>
+                    </tr>
+                    <tr>
+                        <td>Te</td>
+                        <td class="ltr">syötte</td>
+                        <td class="ltr">juotte</td>
+                        <td>می‌خورید / می‌نوشید</td>
+                    </tr>
+                    <tr>
+                        <td>He</td>
+                        <td class="ltr">syövät</td>
+                        <td class="ltr">juovat</td>
+                        <td>می‌خورند / می‌نوشند</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>۱۰ مثال کاربردی</h3>
+            <div class="example-box"><span class="finnish-ex">Minä syön omenan.</span><span class="persian-ex">من سیب
+                    می‌خورم.</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän juo kahvia.</span><span class="persian-ex">او قهوه
+                    می‌نوشد.</span></div>
+            <div class="example-box"><span class="finnish-ex">Me voimme auttaa.</span><span class="persian-ex">ما
+                    می‌توانیم کمک کنیم (Voida).</span></div>
+            <div class="example-box"><span class="finnish-ex">Teettekö te työtä?</span><span class="persian-ex">آیا شما
+                    کار می‌کنید؟ (Tehdä - استثناء: اتمش "teke-")</span></div>
+            <div class="example-box"><span class="finnish-ex">He näkevät kaiken.</span><span class="persian-ex">آنها همه
+                    چیز را می‌بینند (Nähdä - استثناء: اتمش "näke-").</span></div>
+            <div class="example-box"><span class="finnish-ex">Käyn kaupassa.</span><span class="persian-ex">به فروشگاه
+                    می‌روم (Käydä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Tupakoitko sinä?</span><span class="persian-ex">آیا تو
+                    سیگار می‌کشی؟ (Tupakoida).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me uimme järvessä.</span><span class="persian-ex">ما در
+                    دریاچه شنا می‌کنیم (Uida).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän imuroi lattian.</span><span class="persian-ex">او زمین
+                    را جاروبرقی می‌کشد (Imuroida).</span></div>
+            <div class="example-box"><span class="finnish-ex">Älä lyö!</span><span class="persian-ex">نزن!
+                    (Lyödä).</span></div>
+        </div>
+    </details>
+
+    <details id="verb3">
+        <summary>
+            <span><i class="fa-solid fa-person-walking"></i> فعل نوع ۳ (-la/na/ra/sta)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </summary>
+        <div class="content">
+            <p>حذف دو حرف آخر و اضافه کردن <b>e</b>. این نوع فعل اغلب دارای KPT معکوس است (ضعیف -> قوی).</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th class="ltr">Tulla</th>
+                        <th class="ltr">Opiskella</th>
+                        <th>ترجمه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minä</td>
+                        <td class="ltr">tulen</td>
+                        <td class="ltr">opiskelen</td>
+                        <td>می‌آیم / تحصیل می‌کنم</td>
+                    </tr>
+                    <tr>
+                        <td>Sinä</td>
+                        <td class="ltr">tulet</td>
+                        <td class="ltr">opiskelet</td>
+                        <td>می‌آیی / تحصیل می‌کنی</td>
+                    </tr>
+                    <tr>
+                        <td>Hän</td>
+                        <td class="ltr">tulee</td>
+                        <td class="ltr">opiskelee</td>
+                        <td>می‌آید / تحصیل می‌کند</td>
+                    </tr>
+                    <tr>
+                        <td>Me</td>
+                        <td class="ltr">tulemme</td>
+                        <td class="ltr">opiskelemme</td>
+                        <td>می‌آییم / تحصیل می‌کنیم</td>
+                    </tr>
+                    <tr>
+                        <td>Te</td>
+                        <td class="ltr">tulette</td>
+                        <td class="ltr">opiskelette</td>
+                        <td>می‌آیید / تحصیل می‌کنید</td>
+                    </tr>
+                    <tr>
+                        <td>He</td>
+                        <td class="ltr">tulevat</td>
+                        <td class="ltr">opiskelevat</td>
+                        <td>می‌آیند / تحصیل می‌کنند</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>۱۰ مثال کاربردی</h3>
+            <div class="example-box"><span class="finnish-ex">Minä tulen kotiin.</span><span class="persian-ex">من به
+                    خانه می‌آیم.</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän menee kouluun.</span><span class="persian-ex">او به
+                    مدرسه می‌رود (Mennä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me opiskelemme suomea.</span><span class="persian-ex">ما
+                    فنلاندی می‌خوانیم.</span></div>
+            <div class="example-box"><span class="finnish-ex">Pese hampaat!</span><span class="persian-ex">دندان‌ها را
+                    بشور (Pestä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Aurinko nousee.</span><span class="persian-ex">خورشید طلوع
+                    می‌کند (Nousta).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän hymyilee aina.</span><span class="persian-ex">او همیشه
+                    لبخند می‌زند (Hymyillä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me kävelemme puistossa.</span><span class="persian-ex">ما
+                    در پارک قدم می‌زنیم (Kävellä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Kuuntelen musiikkia.</span><span class="persian-ex">من به
+                    موسیقی گوش می‌دهم (Kuunnella).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän luulee niin.</span><span class="persian-ex">او اینطور
+                    فکر می‌کند (Luulla).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me purremme omenaa.</span><span class="persian-ex">ما سیب
+                    را گاز می‌زنیم (Purra).</span></div>
+        </div>
+    </details>
+
+    <details id="verb4">
+        <summary>
+            <span><i class="fa-solid fa-broom"></i> فعل نوع ۴ (-ata/ota/uta)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </summary>
+        <div class="content">
+            <p>حذف <b>-t-</b> (یا -ta). سپس اضافه کردن شناسه. KPT معکوس دارد (ضعیف در مصدر -> قوی در صرف).</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th class="ltr">Haluta (T->D no, weak->strong?)</th>
+                        <th class="ltr">Siivota</th>
+                        <th>ترجمه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minä</td>
+                        <td class="ltr">haluan</td>
+                        <td class="ltr">siivoan</td>
+                        <td>می‌خواهم / تمیز می‌کنم</td>
+                    </tr>
+                    <tr>
+                        <td>Sinä</td>
+                        <td class="ltr">haluat</td>
+                        <td class="ltr">siivoat</td>
+                        <td>می‌خواهی / تمیز می‌کنی</td>
+                    </tr>
+                    <tr>
+                        <td>Hän</td>
+                        <td class="ltr">haluaa</td>
+                        <td class="ltr">siivoaa</td>
+                        <td>می‌خواهد / تمیز می‌کند</td>
+                    </tr>
+                    <tr>
+                        <td>Me</td>
+                        <td class="ltr">haluamme</td>
+                        <td class="ltr">siivoamme</td>
+                        <td>می‌خواهیم / تمیز می‌کنیم</td>
+                    </tr>
+                    <tr>
+                        <td>Te</td>
+                        <td class="ltr">haluatte</td>
+                        <td class="ltr">siivoatte</td>
+                        <td>می‌خواهید / تمیز می‌کنید</td>
+                    </tr>
+                    <tr>
+                        <td>He</td>
+                        <td class="ltr">haluavat</td>
+                        <td class="ltr">siivoavat</td>
+                        <td>می‌خواهند / تمیز می‌کنند</td>
+                    </tr>
+                    <!-- Note on KPT: Haluta has no KPT. Tavata (tav- -> tapa-) does. -->
+                </tbody>
+            </table>
+
+            <h3>۱۰ مثال کاربردی</h3>
+            <div class="example-box"><span class="finnish-ex">Minä haluan jäätelöä.</span><span class="persian-ex">من
+                    بستنی می‌خواهم.</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän siivoaa huoneen.</span><span class="persian-ex">او
+                    اتاق را تمیز می‌کند.</span></div>
+            <div class="example-box"><span class="finnish-ex">Me tapaamme huomenna.</span><span class="persian-ex">ما
+                    فردا ملاقات می‌کنیم (Tavata - KPT v->p).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän likaa vaatteensa.</span><span class="persian-ex">او
+                    لباس‌هایش را کثیف می‌کند (Likata - KPT k->kk).</span></div>
+            <div class="example-box"><span class="finnish-ex">Minä avaan oven.</span><span class="persian-ex">من در را
+                    باز می‌کنم (Avata).</span></div>
+            <div class="example-box"><span class="finnish-ex">Pelkäätkö sinä pimeää?</span><span class="persian-ex">آیا
+                    از تاریکی می‌ترسی؟ (Pelätä - KPT k->kk).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän kiipeää puuhun.</span><span class="persian-ex">او از
+                    درخت بالا می‌رود (Kiivetä - KPT v->p).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me tilaamme ruokaa.</span><span class="persian-ex">ما غذا
+                    سفارش می‌دهیم (Tilata).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän herää aikaisin.</span><span class="persian-ex">او زود
+                    بیدار می‌شود (Herätä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Lupaatko sinä?</span><span class="persian-ex">آیا قول
+                    می‌دهی؟ (Luvata - KPT v->p).</span></div>
+        </div>
+    </details>
+
+    <details id="verb5">
+        <summary>
+            <span><i class="fa-solid fa-check"></i> فعل نوع ۵ (-ita)</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </summary>
+        <div class="content">
+            <p>حذف <b>-ita/-itä</b> و اضافه کردن <b>-itse</b> + شناسه. KPT ندارد.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>شخص</th>
+                        <th class="ltr">Tarvita</th>
+                        <th class="ltr">Valita</th>
+                        <th>ترجمه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Minä</td>
+                        <td class="ltr">tarvitsen</td>
+                        <td class="ltr">valitsen</td>
+                        <td>نیاز دارم / انتخاب می‌کنم</td>
+                    </tr>
+                    <tr>
+                        <td>Sinä</td>
+                        <td class="ltr">tarvitset</td>
+                        <td class="ltr">valitset</td>
+                        <td>نیاز داری / انتخاب می‌کنی</td>
+                    </tr>
+                    <tr>
+                        <td>Hän</td>
+                        <td class="ltr">tarvitsee</td>
+                        <td class="ltr">valitsee</td>
+                        <td>نیاز دارد / انتخاب می‌کند</td>
+                    </tr>
+                    <tr>
+                        <td>Me</td>
+                        <td class="ltr">tarvitsemme</td>
+                        <td class="ltr">valitsemme</td>
+                        <td>نیاز داریم / انتخاب می‌کنیم</td>
+                    </tr>
+                    <tr>
+                        <td>Te</td>
+                        <td class="ltr">tarvitsette</td>
+                        <td class="ltr">valitsette</td>
+                        <td>نیاز دارید / انتخاب می‌کنید</td>
+                    </tr>
+                    <tr>
+                        <td>He</td>
+                        <td class="ltr">tarvitsevat</td>
+                        <td class="ltr">valitsevat</td>
+                        <td>نیاز دارند / انتخاب می‌کنند</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>۱۰ مثال کاربردی</h3>
+            <div class="example-box"><span class="finnish-ex">Minä tarvitsen apua.</span><span class="persian-ex">من به
+                    کمک نیاز دارم.</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän valitsee punaisen paidan.</span><span
+                    class="persian-ex">او پیراهن قرمز را انتخاب می‌کند.</span></div>
+            <div class="example-box"><span class="finnish-ex">Me häiritsemme heitä.</span><span class="persian-ex">ما
+                    مزاحم آنها می‌شویم (Häiritä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän merkitsee vastauksen.</span><span
+                    class="persian-ex">او جواب را علامت می‌زند (Merkitä).</span></div>
+            <div class="example-box"><span class="finnish-ex">Minä harkitsen asiaa.</span><span class="persian-ex">من
+                    موضوع را بررسی می‌کنم (Harkita).</span></div>
+            <div class="example-box"><span class="finnish-ex">Kykenetkö sinä siihen?</span><span class="persian-ex">آیا
+                    تو قادر به انجام آن هستی؟ (Kyetä - استثناء: نوع ۴ نیست؟ نه Kyetä نوع ۴ است ولی kye-nee? نه, Kyetä is
+                    type 5 sometimes treated? No, Kyetä -> Kykene- is Type 6! Let's swap).</span></div>
+            <!-- Wait, Kyetä is Type 6 (taipua -e-). Replaced with Punnita -->
+            <div class="example-box"><span class="finnish-ex">Hän punnitsee omenat.</span><span class="persian-ex">او
+                    سیب‌ها را وزن می‌کند (Punnita).</span></div>
+            <div class="example-box"><span class="finnish-ex">Me mainitsemme asiasta.</span><span class="persian-ex">ما
+                    به موضوع اشاره می‌کنیم (Mainita).</span></div>
+            <div class="example-box"><span class="finnish-ex">Hän lukitsee oven.</span><span class="persian-ex">او در را
+                    قفل می‌کند (Lukita).</span></div>
+            <div class="example-box"><span class="finnish-ex">Silloin se ratkaisee ongelman.</span><span
+                    class="persian-ex">آنگاه آن مشکل را حل می‌کند (Ratkaista - Type 3? No, Ratkaista is Type 3. Lukita
+                    is 5. Tarvita is 5. Häiritä is 5. Harkita is 5. Valita is 5. Mainita is 5. Punnita is 5. Tulkita is
+                    5).</span></div>
+            <div class="example-box"><span class="finnish-ex">Minä tulkitsen tekstin.</span><span class="persian-ex">من
+                    متن را تفسیر می‌کنم (Tulkita).</span></div>
+        </div>
+    </details>
+
+    <a href="index.html" class="back-btn">بازگشت به فهرست</a>
 
 </body>
 

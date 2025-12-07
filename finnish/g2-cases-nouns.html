@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>بخش ۲: حالت‌ها و اسم‌ها (Cases & Nouns)</title>
+    <title>فنلاندی ۲: اسم‌ها و حالت‌ها</title>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
         type="text/css" />
     <link
@@ -21,614 +21,627 @@
             --purple: #BC13FE;
             --text: #F0F0F0;
             --subtext: #B0B0B0;
-            --success: #00FF9D;
-            --error: #FF4B4B;
-            --rule-bg: rgba(0, 212, 255, 0.08);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         body {
             background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
             background-attachment: fixed;
             color: var(--text);
-            font-family: 'Vazirmatn', sans-serif;
-            min-height: 100vh;
-            padding: 20px;
-            padding-bottom: 80px;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Orbitron', 'Vazirmatn', sans-serif;
-            color: var(--gold);
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-        }
-
-        h2 {
-            font-size: 1.5em;
-            color: var(--neon);
-            margin-top: 40px;
-            border-bottom: 1px solid var(--neon);
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            color: var(--purple);
-            font-size: 1.2em;
-            text-align: right;
-            border-right: 4px solid var(--purple);
-            padding-right: 10px;
-            margin-top: 30px;
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            padding: 10px;
         }
 
         details {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 12px;
             margin-bottom: 20px;
+            background: var(--card-bg);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         summary {
-            background: rgba(30, 30, 50, 0.8);
-            padding: 15px 20px;
+            padding: 20px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 1.1em;
-            color: var(--text);
+            background: rgba(255, 255, 255, 0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            list-style: none;
-        }
-
-        summary:hover {
-            background: rgba(0, 212, 255, 0.1);
-        }
-
-        summary::after {
-            content: '\f078';
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: var(--neon);
+            font-size: 1.1em;
+            color: var(--purple);
             transition: 0.3s;
         }
 
-        details[open] summary::after {
-            transform: rotate(180deg);
+        summary:hover {
+            background: rgba(188, 19, 254, 0.1);
         }
 
         .content {
             padding: 20px;
-        }
-
-        .rule-box {
-            background: var(--rule-bg);
-            border-right: 4px solid var(--neon);
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            line-height: 1.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
-            font-size: 0.95em;
             background: #151520;
-            overflow: hidden;
-            border-radius: 8px;
+            font-size: 0.9em;
         }
 
-        th {
-            background: #222;
-            color: var(--gold);
-            padding: 10px;
-            border: 1px solid #333;
-        }
-
+        th,
         td {
-            padding: 10px;
+            padding: 8px;
             border: 1px solid #333;
             text-align: center;
         }
 
+        th {
+            color: var(--gold);
+            background: #222;
+        }
+
         .ltr {
             direction: ltr;
-            font-family: 'Exo 2', sans-serif;
         }
 
         .example-block {
             margin-top: 15px;
         }
 
-        .ex-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        .ex-item {
+            background: rgba(188, 19, 254, 0.05);
+            border-right: 3px solid var(--purple);
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
         }
 
-        .ex-fi {
+        .fi {
             font-weight: bold;
-            color: var(--text);
+            color: #fff;
+            display: block;
             direction: ltr;
+            text-align: left;
         }
 
-        .ex-fa {
+        .fa {
             color: var(--subtext);
-            text-align: right;
             font-size: 0.9em;
+            display: block;
+            margin-top: 3px;
         }
 
-        .nav-btn {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            right: 20px;
-            background: var(--neon);
-            color: #000;
-            text-align: center;
-            padding: 15px;
-            border-radius: 30px;
+        h3 {
+            color: var(--neon);
+            margin: 25px 0 10px;
+            border-bottom: 1px dashed #444;
+            padding-bottom: 5px;
+        }
+
+        .kpt-table td {
+            font-family: 'Courier New', monospace;
+        }
+
+        .back-btn {
+            display: block;
+            margin: 30px auto;
+            width: fit-content;
+            padding: 10px 20px;
+            background: var(--purple);
+            color: white;
+            border-radius: 20px;
             text-decoration: none;
-            font-weight: bold;
-            z-index: 100;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
-            max-width: 400px;
-            margin: 0 auto;
         }
     </style>
 </head>
 
 <body>
 
-    <h1><i class="fa-solid fa-cube"></i> حالت‌ها و اسم‌ها</h1>
+    <h1 style="text-align:center; color:var(--gold); margin: 20px 0; font-family:'Orbitron';">بخش ۲: اسم‌ها و حالت‌ها
+    </h1>
 
-    <div id="partitive">
-        <details>
-            <summary>۱. حالت پارتیتیو (Partitiivi)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    پرکاربردترین حالت در فنلاندی. نشان‌دهنده مقدار نامشخص، نبودن کامل (منفی)، یا مفعول جاریساز است.<br>
-                    <b>نشانه‌ها:</b> -a/-ä, -ta/-tä, -tta/-ttä
-                </div>
+    <details id="partitive">
+        <summary><span><i class="fa-solid fa-pizza-slice"></i> حالت پارتیتیو (Partitiivi)</span> <i
+                class="fa-solid fa-chevron-down"></i></summary>
+        <div class="content">
+            <p>پارتیتیو مهم‌ترین حالت دستوری فنلاندی است که برای بیان مقدار نامشخص، افعال خاص، اعداد و منفی کردن استفاده
+                می‌شود.</p>
 
-                <h3>قانون ۱: اعداد (غیر از ۱)</h3>
-                <div class="rule-box">بعد از اعداد (۲ به بالا) اسم همیشه مفرد پارتیتیو است.</div>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">kaksi autoa</span><span class="ex-fa">دو ماشین</span></div>
-                    <div class="ex-row"><span class="ex-fi">kolme taloa</span><span class="ex-fa">سه خانه</span></div>
-                    <div class="ex-row"><span class="ex-fi">viisi puhelinta</span><span class="ex-fa">پنج تلفن</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">kymmenen euroa</span><span class="ex-fa">ده یورو</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">sata vuotta</span><span class="ex-fa">صد سال</span></div>
-                    <div class="ex-row"><span class="ex-fi">nolla astetta</span><span class="ex-fa">صفر درجه</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">monta ihmistä</span><span class="ex-fa">بسیاری از
-                            مردم</span></div>
-                    <div class="ex-row"><span class="ex-fi">pari päivää</span><span class="ex-fa">یک جفت (چند)
-                            روز</span></div>
-                    <div class="ex-row"><span class="ex-fi">puoli tuntia</span><span class="ex-fa">نیم ساعت</span></div>
-                    <div class="ex-row"><span class="ex-fi">kuusi lasta</span><span class="ex-fa">شش بچه</span></div>
-                </div>
+            <h3>پایانه‌ها (Endings)</h3>
+            <table>
+                <tr>
+                    <th>پسوند</th>
+                    <th>شرط</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td class="ltr">-a / -ä</td>
+                    <td>کلمات ختم شده به یک مصوت (غیر از e)</td>
+                    <td class="ltr">Talo -> Taloa</td>
+                </tr>
+                <tr>
+                    <td class="ltr">-ta / -tä</td>
+                    <td>کلمات ختم شده به دو مصوت یا صامت</td>
+                    <td class="ltr">Maa -> Maata</td>
+                </tr>
+                <tr>
+                    <td class="ltr">-tta / -ttä</td>
+                    <td>کلمات ختم شده به e</td>
+                    <td class="ltr">Huone -> Huonetta</td>
+                </tr>
+            </table>
 
-                <h3>قانون ۲: جملات منفی</h3>
-                <div class="rule-box">در جملات منفی، مفعول همیشه پارتیتیو است.</div>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">En osta autoa.</span><span class="ex-fa">من ماشین
-                            نمی‌خرم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Hän ei juo kahvia.</span><span class="ex-fa">او قهوه
-                            نمی‌نوشد.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Me emme syö lihaa.</span><span class="ex-fa">ما گوشت
-                            نمی‌خوریم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Etkö näe minua?</span><span class="ex-fa">آیا مرا
-                            نمی‌بینی؟</span></div>
-                    <div class="ex-row"><span class="ex-fi">He eivät tunne häntä.</span><span class="ex-fa">آنها او را
-                            نمی‌شناسند.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Minulla ei ole aikaa.</span><span class="ex-fa">من وقت
-                            ندارم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Täällä ei ole ketään.</span><span class="ex-fa">اینجا هیچکس
-                            نیست.</span></div>
-                    <div class="ex-row"><span class="ex-fi">En puhu kiinaa.</span><span class="ex-fa">من چینی صحبت
-                            نمی‌کنم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Älä avaa ovea.</span><span class="ex-fa">در را باز
-                            نکن.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Ei ole rahaa.</span><span class="ex-fa">پولی نیست (وجود
-                            ندارد).</span></div>
-                </div>
+            <h3>۱. بعد از اعداد (بجز ۱)</h3>
+            <div class="example-block">
+                <div class="ex-item"><span class="fi">Kaksi autoa</span><span class="fa">دو ماشین</span></div>
+                <div class="ex-item"><span class="fi">Kolme yötä</span><span class="fa">سه شب</span></div>
+                <div class="ex-item"><span class="fi">Viisi omenaa</span><span class="fa">پنج سیب</span></div>
+                <div class="ex-item"><span class="fi">Kymmenen euroa</span><span class="fa">ده یورو</span></div>
+            </div>
 
-                <h3>قانون ۳: افعال پارتیتیو ساز</h3>
-                <div class="rule-box">افعالی که فرآیند طولانی دارند یا احساسی هستند (Rakastaa, Puhua, Odottaa, Etsiä).
+            <h3>۲. جملات منفی (Eivät...)</h3>
+            <div class="example-block">
+                <div class="ex-item"><span class="fi">Minulla ei ole autoa.</span><span class="fa">من ماشین
+                        ندارم.</span></div>
+                <div class="ex-item"><span class="fi">Hän ei puhu suomea.</span><span class="fa">او فنلاندی صحبت
+                        نمی‌کند.</span></div>
+                <div class="ex-item"><span class="fi">Emme syö lihaa.</span><span class="fa">ما گوشت نمی‌خوریم.</span>
                 </div>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">Minä rakastan sinua.</span><span class="ex-fa">من تو را دوست
-                            دارم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Puhun suomea.</span><span class="ex-fa">من فنلاندی صحبت
-                            می‌کنم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Odotan bussia.</span><span class="ex-fa">من منتظر اتوبوس
-                            هستم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Etsin avainta.</span><span class="ex-fa">من دنبال کلید
-                            می‌گردم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Katson televisiota.</span><span class="ex-fa">من تلویزیون
-                            تماشا می‌کنم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Soitan kitaraa.</span><span class="ex-fa">من گیتار
-                            می‌نوازم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Opiskelen kemiaa.</span><span class="ex-fa">من شیمی
-                            می‌خوانم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Vihaan talvea.</span><span class="ex-fa">من از زمستان
-                            متنفرم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Pelaamme jalkapalloa.</span><span class="ex-fa">ما فوتبال
-                            بازی می‌کنیم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Hän kuuntelee musiikkia.</span><span class="ex-fa">او به
-                            موسیقی گوش می‌دهد.</span></div>
-                </div>
+                <div class="ex-item"><span class="fi">He eivät osta taloa.</span><span class="fa">آنها خانه را
+                        نمی‌خرند.</span></div>
+            </div>
 
-                <h3>قانون ۴: مواد و مایعات (غیرقابل شمارش)</h3>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">Juon vettä.</span><span class="ex-fa">آب می‌نوشم.</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Syön riisiä.</span><span class="ex-fa">برنج می‌خورم.</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Kupissa on teetä.</span><span class="ex-fa">در فنجان چای
-                            است.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Ostan maitoa.</span><span class="ex-fa">شیر می‌خرم.</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Rakastan suklaata.</span><span class="ex-fa">عاشق شکلات
-                            هستم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Säästän rahaa.</span><span class="ex-fa">پول پس‌انداز
-                            می‌کنم. (پول غیرقابل شمارش است)</span></div>
-                    <div class="ex-row"><span class="ex-fi">Laitan sokeria.</span><span class="ex-fa">شکر می‌ریزم
-                            (می‌گذارم).</span></div>
-                    <div class="ex-row"><span class="ex-fi">Maistatko keittoa?</span><span class="ex-fa">آیا سوپ را
-                            می‌چشی؟</span></div>
-                    <div class="ex-row"><span class="ex-fi">Onko sinulla kahvia?</span><span class="ex-fa">آیا قهوه
-                            داری؟</span></div>
-                    <div class="ex-row"><span class="ex-fi">Tarvitsen apua.</span><span class="ex-fa">به کمک نیاز دارم.
-                            (مفهوم انتزاعی)</span></div>
+            <h3>۳. مواد و غیر قابل شمارش‌ها</h3>
+            <div class="example-block">
+                <div class="ex-item"><span class="fi">Juon kahvia.</span><span class="fa">قهوه می‌نوشم.</span></div>
+                <div class="ex-item"><span class="fi">Syön puuroa.</span><span class="fa">فرنی می‌خورم.</span></div>
+                <div class="ex-item"><span class="fi">Lasissa on vettä.</span><span class="fa">در لیوان آب هست.</span>
                 </div>
             </div>
-        </details>
-    </div>
 
-    <div id="kpt">
-        <details>
-            <summary>۲. درجه‌بندی صامت‌ها (KPT - Strong/Weak)</summary>
-            <div class="content">
-                <div class="rule-box">
-                    وقتی انتهای کلمه بسته می‌شود (مثلاً با n یا t)، صامت‌های قوی (k, p, t) ضعیف می‌شوند.<br>
-                    <b>استثنا:</b> فعل‌هایی مثل *osaa* یا *asiakas* تغییر نمی‌کنند.
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>تغییر</th>
-                            <th>قوی (Strong)</th>
-                            <th>ضعیف (Weak)</th>
-                            <th>مثال (Nom -> Gen)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>kk -> k</td>
-                            <td class="ltr">Kuk<b>kk</b>a (گل)</td>
-                            <td class="ltr">Ku<b>k</b>an</td>
-                            <td>Kukka -> Kukan</td>
-                        </tr>
-                        <tr>
-                            <td>pp -> p</td>
-                            <td class="ltr">Kau<b>pp</b>a (مغازه)</td>
-                            <td class="ltr">Kau<b>p</b>an</td>
-                            <td>Kauppa -> Kaupan</td>
-                        </tr>
-                        <tr>
-                            <td>tt -> t</td>
-                            <td class="ltr">Ma<b>tt</b>o (قالی)</td>
-                            <td class="ltr">Ma<b>t</b>on</td>
-                            <td>Matto -> Maton</td>
-                        </tr>
-                        <tr>
-                            <td>k -> -</td>
-                            <td class="ltr">Jal<b>k</b>a (پا)</td>
-                            <td class="ltr">Jalan</td>
-                            <td>Jalka -> Jalan</td>
-                        </tr>
-                        <tr>
-                            <td>p -> v</td>
-                            <td class="ltr">A<b>p</b>u (کمک)</td>
-                            <td class="ltr">A<b>v</b>un</td>
-                            <td>Apu -> Avun</td>
-                        </tr>
-                        <tr>
-                            <td>t -> d</td>
-                            <td class="ltr">Pöy<b>t</b>ä (میز)</td>
-                            <td class="ltr">Pöy<b>d</b>än</td>
-                            <td>Pöytä -> Pöydän</td>
-                        </tr>
-                        <tr>
-                            <td>nk -> ng</td>
-                            <td class="ltr">Kaupu<b>nk</b>i (شهر)</td>
-                            <td class="ltr">Kaupu<b>ng</b>in</td>
-                            <td>Helsinki -> Helsingin</td>
-                        </tr>
-                        <tr>
-                            <td>lt -> ll</td>
-                            <td class="ltr">I<b>lt</b>a (عصر)</td>
-                            <td class="ltr">I<b>ll</b>an</td>
-                            <td>Ilta -> Illan</td>
-                        </tr>
-                        <tr>
-                            <td>rt -> rr</td>
-                            <td class="ltr">Ke<b>rt</b>a (بار/دفعه)</td>
-                            <td class="ltr">Ke<b>rr</b>an</td>
-                            <td>Kerta -> Kerran</td>
-                        </tr>
-                        <tr>
-                            <td>nt -> nn</td>
-                            <td class="ltr">A<b>nt</b>aa (دادن)</td>
-                            <td class="ltr">A<b>nn</b>an</td>
-                            <td>Antaa -> Annan</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h3>۴. افعال پارتیتیو ساز (Rakastaa, Etsiä...)</h3>
+            <div class="example-block">
+                <div class="ex-item"><span class="fi">Minä rakastan sinua.</span><span class="fa">من تو را دوست
+                        دارم.</span></div>
+                <div class="ex-item"><span class="fi">Hän etsii avainta.</span><span class="fa">او دنبال کلید
+                        می‌گردد.</span></div>
+                <div class="ex-item"><span class="fi">Me katsomme televisiota.</span><span class="fa">ما تلویزیون تماشا
+                        می‌کنیم.</span></div>
+                <div class="ex-item"><span class="fi">Hän soittaa kitaraa.</span><span class="fa">او گیتار
+                        می‌نوازد.</span></div>
             </div>
-        </details>
-    </div>
+        </div>
+    </details>
 
-    <div id="cases">
-        <details>
-            <summary>۳. حالت‌های مکانی (Paikallissijat)</summary>
-            <div class="content">
+    <details id="kpt">
+        <summary><span><i class="fa-solid fa-sliders"></i> درجه‌بندی صامت‌ها (KPT)</span> <i
+                class="fa-solid fa-chevron-down"></i></summary>
+        <div class="content">
+            <p>تغییرات KPT زمانی رخ می‌دهد که هجا بسته شود (مثلاً با اضافه کردن -n یا -t). تغییر از <b>قوی به ضعیف</b>
+                است.</p>
+            <table class="kpt-table">
+                <thead>
+                    <tr>
+                        <th>تغییر</th>
+                        <th>قوی (Strong)</th>
+                        <th>ضعیف (Weak)</th>
+                        <th>مثال (Nom -> Gen)</th>
+                        <th>ترجمه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>kk -> k</td>
+                        <td class="ltr">kk</td>
+                        <td class="ltr">k</td>
+                        <td class="ltr">Kukka -> Kukan</td>
+                        <td>گل</td>
+                    </tr>
+                    <tr>
+                        <td>pp -> p</td>
+                        <td class="ltr">pp</td>
+                        <td class="ltr">p</td>
+                        <td class="ltr">Kauppa -> Kaupan</td>
+                        <td>فروشگاه</td>
+                    </tr>
+                    <tr>
+                        <td>tt -> t</td>
+                        <td class="ltr">tt</td>
+                        <td class="ltr">t</td>
+                        <td class="ltr">Tyttö -> Tytön</td>
+                        <td>دختر</td>
+                    </tr>
+                    <tr>
+                        <td>k -> -</td>
+                        <td class="ltr">k</td>
+                        <td class="ltr">-</td>
+                        <td class="ltr">Jalka -> Jalan</td>
+                        <td>پا</td>
+                    </tr>
+                    <tr>
+                        <td>p -> v</td>
+                        <td class="ltr">p</td>
+                        <td class="ltr">v</td>
+                        <td class="ltr">Apua -> Avun</td>
+                        <td>کمک</td>
+                    </tr>
+                    <tr>
+                        <td>t -> d</td>
+                        <td class="ltr">t</td>
+                        <td class="ltr">d</td>
+                        <td class="ltr">Pöytä -> Pöydän</td>
+                        <td>میز</td>
+                    </tr>
+                    <tr>
+                        <td>nk -> ng</td>
+                        <td class="ltr">nk</td>
+                        <td class="ltr">ng</td>
+                        <td class="ltr">Helsinki -> Helsingin</td>
+                        <td>هلسینکی</td>
+                    </tr>
+                    <tr>
+                        <td>mp -> mm</td>
+                        <td class="ltr">mp</td>
+                        <td class="ltr">mm</td>
+                        <td class="ltr">Kampa -> Kamman</td>
+                        <td>شانه</td>
+                    </tr>
+                    <tr>
+                        <td>lt -> ll</td>
+                        <td class="ltr">lt</td>
+                        <td class="ltr">ll</td>
+                        <td class="ltr">Ilta -> Illan</td>
+                        <td>عصر</td>
+                    </tr>
+                    <tr>
+                        <td>nt -> nn</td>
+                        <td class="ltr">nt</td>
+                        <td class="ltr">nn</td>
+                        <td class="ltr">Ranta -> Rannan</td>
+                        <td>ساحل</td>
+                    </tr>
+                    <tr>
+                        <td>rt -> rr</td>
+                        <td class="ltr">rt</td>
+                        <td class="ltr">rr</td>
+                        <td class="ltr">Parta -> Parran</td>
+                        <td>ریش</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>استثناء مهم (قانون معکوس):</b> در افعال نوع ۳، ۴ و ۶ و برخی اسم‌ها (مثل Huone)، تغییر از <b>ضعیف به
+                    قوی</b> است.</p>
+            <div class="ex-item"><span class="fi">Koe (Weak) -> Kokeet (Strong)</span><span class="fa">امتحان ->
+                    امتحان‌ها (اسم نوع -e-)</span></div>
+            <div class="ex-item"><span class="fi">Maata (Weak) -> Makaa (Strong)</span><span class="fa">دراز کشیدن (فعل
+                    نوع ۴)</span></div>
+        </div>
+    </details>
 
-                <h3>قانون Illative (به داخل چیزی)</h3>
-                <div class="rule-box">
-                    نشانه: <b>Vn, hVn, seen</b> <br>
-                    ۱. کلمات کوتاه (یک سیلابی مصوت کوتاه) -> <b>hVn</b> (Työ -> Työhön)<br>
-                    ۲. کلمات بلند (دو سیلابی یا بیشتر) -> <b>Vn</b> (Talo -> Taloon)<br>
-                    ۳. کلمات خاص/بعضی اسامی -> <b>seen</b> (Huone -> Huoneeseen)
+    <details id="locations">
+        <summary><span><i class="fa-solid fa-map-location-dot"></i> حالت‌های مکانی</span> <i
+                class="fa-solid fa-chevron-down"></i></summary>
+        <div class="content">
+            <h3>جدول ماتریسی مکان‌ها</h3>
+            <table>
+                <tr>
+                    <th>نوع</th>
+                    <th>از کجا؟ (Mistä)</th>
+                    <th>در کجا؟ (Missä)</th>
+                    <th>به کجا؟ (Mihin)</th>
+                </tr>
+                <tr>
+                    <td><b>درون (S-Cases)</b></td>
+                    <td><b>Elative (-sta):</b><br>Talosta<br>(از خانه)</td>
+                    <td><b>Inessive (-ssa):</b><br>Talossa<br>(در خانه)</td>
+                    <td><b>Illative (Vn/hVn):</b><br>Taloon<br>(به خانه)</td>
+                </tr>
+                <tr>
+                    <td><b>سطح/بیرون (L-Cases)</b></td>
+                    <td><b>Ablative (-lta):</b><br>Pöydältä<br>(از روی میز)</td>
+                    <td><b>Adessive (-lla):</b><br>Pöydällä<br>(روی میز)</td>
+                    <td><b>Allative (-lle):</b><br>Pöydälle<br>(به روی میز)</td>
+                </tr>
+            </table>
+
+            <h3>قوانین Illative (به درون...)</h3>
+            <p>1. کلمات کوتاه ختم به مصوت: تکرار مصوت + n (Talo -> Taloon).</p>
+            <p>2. کلمات ختم به دو مصوت: +seen (Porvoo -> Porvooseen).</p>
+            <p>3. کلمات تک سیلابی یا خاص: h + مصوت + n (Työ -> Työhön).</p>
+
+            <h3>مثال‌های جامع (Locatives)</h3>
+            <div class="example-block">
+                <div class="ex-item"><span class="fi">Minä menen kotiin.</span><span class="fa">من به خانه می‌روم
+                        (Illative).</span></div>
+                <div class="ex-item"><span class="fi">Hän on koulussa.</span><span class="fa">او در مدرسه است
+                        (Inessive).</span></div>
+                <div class="ex-item"><span class="fi">Otan kirjan hyllystä.</span><span class="fa">کتاب را از قفسه
+                        برمی‌دارم (Elative).</span></div>
+                <div class="ex-item"><span class="fi">Laitan ruoan pöydälle.</span><span class="fa">غذا را روی میز
+                        می‌گذارم (Allative).</span></div>
+                <div class="ex-item"><span class="fi">Avain on lattialla.</span><span class="fa">کلید روی زمین است
+                        (Adessive).</span></div>
+                <div class="ex-item"><span class="fi">Hän tulee asemalta.</span><span class="fa">او از ایستگاه می‌آید
+                        (Ablative).</span></div>
+                <div class="ex-item"><span class="fi">Menen Helsinkiin.</span><span class="fa">به هلسینکی می‌روم.</span>
                 </div>
-
-                <h4>گروه ۱: -Vn (تکرار مصوت + n)</h4>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">Talo -> Taloon</span><span class="ex-fa">به داخل خانه</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Koulu -> Kouluun</span><span class="ex-fa">به داخل
-                            مدرسه</span></div>
-                    <div class="ex-row"><span class="ex-fi">Kauppa -> Kauppaan</span><span class="ex-fa">به مغازه</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Kaupunki -> Kaupunkiin</span><span class="ex-fa">به
-                            شهر</span></div>
-                    <div class="ex-row"><span class="ex-fi">Metsä -> Metsään</span><span class="ex-fa">به جنگل</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Keittiö -> Keittiöön</span><span class="ex-fa">به
-                            آشپزخانه</span></div>
-                    <div class="ex-row"><span class="ex-fi">Suomi -> Suomeen</span><span class="ex-fa">به فنلاند (i ->
-                            e)</span></div>
-                    <div class="ex-row"><span class="ex-fi">Joki -> Jokeen</span><span class="ex-fa">به رودخانه</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Järvi -> Järveen</span><span class="ex-fa">به دریاچه</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Bussi -> Bussiin</span><span class="ex-fa">به داخل
-                            اتوبوس</span></div>
+                <div class="ex-item"><span class="fi">Menen Espooseen.</span><span class="fa">به اسپو می‌روم.</span>
                 </div>
+                <div class="ex-item"><span class="fi">Menen torille.</span><span class="fa">به میدان (بازار)
+                        می‌روم.</span></div>
+                <div class="ex-item"><span class="fi">Olen suihkussa.</span><span class="fa">در دوش هستم.</span></div>
+            </div>
+        </div>
+    </details>
 
-                <h4>گروه ۲: -hVn (تک سیلابی و...)</h4>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">Työ -> Työhön</span><span class="ex-fa">به سر کار</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Maa -> Maahan</span><span class="ex-fa">به کشور/زمین</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Suo -> Suohon</span><span class="ex-fa">به باتلاق</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Pää -> Päähän</span><span class="ex-fa">به سر</span></div>
-                    <div class="ex-row"><span class="ex-fi">Tie -> Tiehen</span><span class="ex-fa">به جاده
-                            (استثنا)</span></div>
-                    <div class="ex-row"><span class="ex-fi">Yö -> Yöhön</span><span class="ex-fa">به شب</span></div>
-                    <div class="ex-row"><span class="ex-fi">uu -> uuhun</span><span class="ex-fa">(مثال شماتیک)</span>
-                    </div>
+    <details id="nountypes">
+        <summary><span><i class="fa-solid fa-sitemap"></i> انواع اسم و صرف کامل</span> <i
+                class="fa-solid fa-chevron-down"></i></summary>
+        <div class="content">
+            <p>در اینجا جدول صرف کامل ۶ کلمه مهم را مشاهده می‌کنید.</p>
+
+            <h3>1. Perhe (خانواده) - کلمات ختم به e</h3>
+            <table>
+                <tr>
+                    <th>حالت</th>
+                    <th>Perhe (خانواده)</th>
+                    <th>ترجمه فرم</th>
+                </tr>
+                <tr>
+                    <td>Nominative</td>
+                    <td class="ltr">Perhe</td>
+                    <td>خانواده</td>
+                </tr>
+                <tr>
+                    <td>Genitive</td>
+                    <td class="ltr">Perheen</td>
+                    <td>ِ خانواده</td>
+                </tr>
+                <tr>
+                    <td>Partitive</td>
+                    <td class="ltr">Perhettä</td>
+                    <td>خانواده را (بخشی)</td>
+                </tr>
+                <tr>
+                    <td>Inessive</td>
+                    <td class="ltr">Perheessä</td>
+                    <td>در خانواده</td>
+                </tr>
+                <tr>
+                    <td>Elative</td>
+                    <td class="ltr">Perheestä</td>
+                    <td>از خانواده</td>
+                </tr>
+                <tr>
+                    <td>Illative</td>
+                    <td class="ltr">Perheeseen</td>
+                    <td>به خانواده</td>
+                </tr>
+                <tr>
+                    <td>Adessive</td>
+                    <td class="ltr">Perheellä</td>
+                    <td>با/روی خانواده</td>
+                </tr>
+                <tr>
+                    <td>Ablative</td>
+                    <td class="ltr">Perheeltä</td>
+                    <td>از پیش خانواده</td>
+                </tr>
+                <tr>
+                    <td>Allative</td>
+                    <td class="ltr">Perheelle</td>
+                    <td>به پیش خانواده</td>
+                </tr>
+            </table>
+
+            <h3>2. Lääke (دارو) - کلمات ختم به e (KPT معکوس kk-k)</h3>
+            <p>نکته: در اینجا KPT معکوس است. Nominative ضعیف (Lääke) و بقیه حالات قوی (Lääkkee-).</p>
+            <table>
+                <tr>
+                    <th>حالت</th>
+                    <th>Lääke (دارو)</th>
+                    <th>ترجمه</th>
+                </tr>
+                <tr>
+                    <td>Nominative</td>
+                    <td class="ltr">Lääke</td>
+                    <td>دارو</td>
+                </tr>
+                <tr>
+                    <td>Genitive</td>
+                    <td class="ltr">Lääkkeen</td>
+                    <td>ِ دارو</td>
+                </tr>
+                <tr>
+                    <td>Partitive</td>
+                    <td class="ltr">Lääkettä</td>
+                    <td>دارو را</td>
+                </tr>
+                <tr>
+                    <td>Illative</td>
+                    <td class="ltr">Lääkkeeseen</td>
+                    <td>به دارو</td>
+                </tr>
+            </table>
+
+            <h3>3. Nainen (زن) - کلمات ختم به nen</h3>
+            <p>تبدیل -nen به -se-.</p>
+            <table>
+                <tr>
+                    <th>حالت</th>
+                    <th>Nainen</th>
+                    <th>ترجمه فرم</th>
+                </tr>
+                <tr>
+                    <td>Nominative</td>
+                    <td class="ltr">Nainen</td>
+                    <td>زن</td>
+                </tr>
+                <tr>
+                    <td>Genitive</td>
+                    <td class="ltr">Naisen</td>
+                    <td>ِ زن</td>
+                </tr>
+                <tr>
+                    <td>Partitive</td>
+                    <td class="ltr">Naista</td>
+                    <td>زن را</td>
+                </tr>
+                <tr>
+                    <td>Inessive</td>
+                    <td class="ltr">Naisessa</td>
+                    <td>در زن</td>
+                </tr>
+                <tr>
+                    <td>Illative</td>
+                    <td class="ltr">Naiseen</td>
+                    <td>به زن</td>
+                </tr>
+            </table>
+
+            <h3>4. Puhelin (تلفن) - کلمات ختم به in</h3>
+            <p>تبدیل -in به -ime-.</p>
+            <table>
+                <tr>
+                    <th>حالت</th>
+                    <th>Puhelin</th>
+                    <th>ترجمه فرم</th>
+                </tr>
+                <tr>
+                    <td>Nominative</td>
+                    <td class="ltr">Puhelin</td>
+                    <td>تلفن</td>
+                </tr>
+                <tr>
+                    <td>Genitive</td>
+                    <td class="ltr">Puhelimen</td>
+                    <td>ِ تلفن</td>
+                </tr>
+                <tr>
+                    <td>Partitive</td>
+                    <td class="ltr">Puhelinta</td>
+                    <td>تلفن را</td>
+                </tr>
+                <tr>
+                    <td>Inessive</td>
+                    <td class="ltr">Puhelimessa</td>
+                    <td>در تلفن</td>
+                </tr>
+                <tr>
+                    <td>Illative</td>
+                    <td class="ltr">Puhelimeen</td>
+                    <td>به تلفن</td>
+                </tr>
+            </table>
+
+            <h3>5. Järvi (دریاچه) - کلمات i-stem (تغییر i به e)</h3>
+            <table>
+                <tr>
+                    <th>حالت</th>
+                    <th>Järvi</th>
+                    <th>ترجمه فرم</th>
+                </tr>
+                <tr>
+                    <td>Nominative</td>
+                    <td class="ltr">Järvi</td>
+                    <td>دریاچه</td>
+                </tr>
+                <tr>
+                    <td>Genitive</td>
+                    <td class="ltr">Järven</td>
+                    <td>ِ دریاچه</td>
+                </tr>
+                <tr>
+                    <td>Partitive</td>
+                    <td class="ltr">Järveä</td>
+                    <td>دریاچه را</td>
+                </tr>
+                <tr>
+                    <td>Inessive</td>
+                    <td class="ltr">Järvessä</td>
+                    <td>در دریاچه</td>
+                </tr>
+                <tr>
+                    <td>Illative</td>
+                    <td class="ltr">Järveen</td>
+                    <td>به دریاچه</td>
+                </tr>
+            </table>
+
+            <h3>6. Lapsi (کودک) - کلمات i-stem خاص (تغییر i به e + s)</h3>
+            <table>
+                <tr>
+                    <th>حالت</th>
+                    <th>Lapsi</th>
+                    <th>ترجمه فرم</th>
+                </tr>
+                <tr>
+                    <td>Nominative</td>
+                    <td class="ltr">Lapsi</td>
+                    <td>کودک</td>
+                </tr>
+                <tr>
+                    <td>Genitive</td>
+                    <td class="ltr">Lapsen</td>
+                    <td>ِ کودک</td>
+                </tr>
+                <tr>
+                    <td>Partitive</td>
+                    <td class="ltr">Lasta</td>
+                    <td>کودک را</td>
+                </tr>
+                <tr>
+                    <td>Inessive</td>
+                    <td class="ltr">Lapsessa</td>
+                    <td>در کودک</td>
+                </tr>
+                <tr>
+                    <td>Illative</td>
+                    <td class="ltr">Lapseen</td>
+                    <td>به کودک</td>
+                </tr>
+            </table>
+        </div>
+    </details>
+
+    <details id="sentences">
+        <summary><span><i class="fa-solid fa-pen"></i> انواع جمله (مالکیت و وجودی)</span> <i
+                class="fa-solid fa-chevron-down"></i></summary>
+        <div class="content">
+            <h3>جملات مالکیت (Minulla on...)</h3>
+            <p>در فنلاندی فعل "داشتن" وجود ندارد. از ساختار: <b>[دارنده + Adessive] + on + [شیء]</b> استفاده می‌شود.</p>
+            <div class="example-block">
+                <div class="ex-item"><span class="fi">Minulla on auto.</span><span class="fa">من ماشین دارم (نزد من است
+                        ماشین).</span></div>
+                <div class="ex-item"><span class="fi">Sinulla on kaunis koti.</span><span class="fa">تو خانه زیبایی
+                        داری.</span></div>
+                <div class="ex-item"><span class="fi">Meillä ei ole aikaa.</span><span class="fa">ما وقت نداریم.</span>
                 </div>
-
-                <h4>گروه ۳: -seen (کلمات بلند خاص)</h4>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">Huone -> Huoneeseen</span><span class="ex-fa">به اتاق</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Espoo -> Espooseen</span><span class="ex-fa">به اسپو</span>
-                    </div>
-                    <div class="ex-row"><span class="ex-fi">Porvoo -> Porvooseen</span><span class="ex-fa">به
-                            پوروو</span></div>
-                    <div class="ex-row"><span class="ex-fi">Kappale -> Kappaleeseen</span><span class="ex-fa">به
-                            قطعه/بخش</span></div>
-                    <div class="ex-row"><span class="ex-fi">Perhe -> Perheeseen</span><span class="ex-fa">به خانواده
-                            (وارد شدن به)</span></div>
-                    <div class="ex-row"><span class="ex-fi">Lääke -> Lääkkeeseen</span><span class="ex-fa">به
-                            دارو</span></div>
+                <div class="ex-item"><span class="fi">Onko teillä lapsia?</span><span class="fa">آیا شما بچه
+                        دارید؟</span></div>
+                <div class="ex-item"><span class="fi">Hänellä on kissa.</span><span class="fa">او گربه دارد.</span>
                 </div>
             </div>
-        </details>
-    </div>
 
-    <div id="noun-types">
-        <details>
-            <summary>۴. انواع اسم (Nouns)</summary>
-            <div class="content">
-                <h4>کلمات منتهی به -nen (Nainen - زن)</h4>
-                <div class="rule-box">
-                    nen حذف می‌شود و <b>se</b> اضافه می‌شود. (Gen: Naisen)
+            <h3>جملات وجودی (Täällä on...)</h3>
+            <p>ساختار: <b>[مکان] + on + [فاعل]</b>. فعل همیشه مفرد است (on).</p>
+            <div class="example-block">
+                <div class="ex-item"><span class="fi">Pöydällä on kirja.</span><span class="fa">روی میز یک کتاب
+                        است.</span></div>
+                <div class="ex-item"><span class="fi">Suomessa on paljon järviä.</span><span class="fa">در فنلاند
+                        دریاچه‌های زیادی هست.</span></div>
+                <div class="ex-item"><span class="fi">Kaapissa ei ole ruokaa.</span><span class="fa">در کابینت غذا
+                        نیست.</span></div>
+                <div class="ex-item"><span class="fi">Täällä on kylmä.</span><span class="fa">اینجا سرد است.</span>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>مورد</th>
-                            <th>فنلاندی</th>
-                            <th>معنی</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nom</td>
-                            <td class="ltr">Nainen</td>
-                            <td>زن</td>
-                        </tr>
-                        <tr>
-                            <td>Gen</td>
-                            <td class="ltr">Nai<b>sen</b></td>
-                            <td>مالِ زن</td>
-                        </tr>
-                        <tr>
-                            <td>Par</td>
-                            <td class="ltr">Nais<b>ta</b></td>
-                            <td>زن را</td>
-                        </tr>
-                        <tr>
-                            <td>Iness</td>
-                            <td class="ltr">Nai<b>sessa</b></td>
-                            <td>در زن</td>
-                        </tr>
-                        <tr>
-                            <td>Ill</td>
-                            <td class="ltr">Nai<b>seen</b></td>
-                            <td>به (سمت) زن</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>کلمات منتهی به -in (Puhelin - تلفن)</h4>
-                <div class="rule-box">
-                    in تبدیل به <b>ime</b> می‌شود.
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>مورد</th>
-                            <th>فنلاندی</th>
-                            <th>معنی</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nom</td>
-                            <td class="ltr">Puhelin</td>
-                            <td>تلفن</td>
-                        </tr>
-                        <tr>
-                            <td>Gen</td>
-                            <td class="ltr">Puhel<b>imen</b></td>
-                            <td>مالِ تلفن</td>
-                        </tr>
-                        <tr>
-                            <td>Par</td>
-                            <td class="ltr">Puhel<b>inta</b></td>
-                            <td>تلفن را</td>
-                        </tr>
-                        <tr>
-                            <td>Iness</td>
-                            <td class="ltr">Puhel<b>imessa</b></td>
-                            <td>در تلفن</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4>کلمات منتهی به -e (Perhe - خانواده)</h4>
-                <div class="rule-box">
-                    e تبدیل به <b>ee</b> می‌شود (+n/ssä/...). KPT معکوس دارد.
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>مورد</th>
-                            <th>فنلاندی</th>
-                            <th>معنی</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nom</td>
-                            <td class="ltr">Perhe</td>
-                            <td>خانواده</td>
-                        </tr>
-                        <tr>
-                            <td>Gen</td>
-                            <td class="ltr">Perh<b>een</b></td>
-                            <td>مالِ خانواده</td>
-                        </tr>
-                        <tr>
-                            <td>Par</td>
-                            <td class="ltr">Perhel<b>ttä</b></td>
-                            <td>خانواده را</td>
-                        </tr>
-                        <tr>
-                            <td>Iness</td>
-                            <td class="ltr">Perh<b>eessä</b></td>
-                            <td>در خانواده</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="ex-item"><span class="fi">Ulkona sataa lunta.</span><span class="fa">بیرون برف
+                        می‌بارد.</span></div>
             </div>
-        </details>
-    </div>
+        </div>
+    </details>
 
-    <div id="sentences">
-        <details>
-            <summary>۵. جملات مالکیتی و وجودی</summary>
-            <div class="content">
-                <h3>مالکیت (Minulla on... - من دارم)</h3>
-                <div class="rule-box">فنلاندی فعل "داشتن" ندارد. از ساختار: <b>Adessive + on + Object</b> استفاده
-                    می‌کند.</div>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">Minulla on auto.</span><span class="ex-fa">من ماشین
-                            دارم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Sinulla on kauniit silmät.</span><span class="ex-fa">تو
-                            چشمان زیبایی داری.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Hänellä on rahaa.</span><span class="ex-fa">او پول
-                            دارد.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Meillä on kaksi lasta.</span><span class="ex-fa">ما دو بچه
-                            داریم.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Teillä on iso talo.</span><span class="ex-fa">شما خانه بزرگی
-                            دارید.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Heillä ei ole aikaa.</span><span class="ex-fa">آنها وقت
-                            ندارند. (منفی: ei ole + Partitive)</span></div>
-                    <div class="ex-row"><span class="ex-fi">Onko sinulla nälkä?</span><span class="ex-fa">آیا گرسنه‌ای؟
-                            (نلکا داری؟)</span></div>
-                    <div class="ex-row"><span class="ex-fi">Minulla on kylmä.</span><span class="ex-fa">من سردم
-                            است.</span></div>
-                </div>
-
-                <h3>وجودی (Pöydällä on... - روی میز ... است)</h3>
-                <div class="rule-box">مکان اول می‌آید، سپس فعل on (همیشه سوم شخص مفرد)، سپس فاعل.</div>
-                <div class="example-block">
-                    <div class="ex-row"><span class="ex-fi">Pöydällä on kirja.</span><span class="ex-fa">روی میز یک کتاب
-                            است.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Suomessa on paljon järviä.</span><span class="ex-fa">در
-                            فنلاند دریاچه‌های زیادی هست.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Kaapissa on ruokaa.</span><span class="ex-fa">در کمد غذا
-                            هست.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Täällä on kuuma.</span><span class="ex-fa">اینجا گرم
-                            است.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Postissa on jonoa.</span><span class="ex-fa">در اداره پست صف
-                            است.</span></div>
-                    <div class="ex-row"><span class="ex-fi">Ulkona on lunta.</span><span class="ex-fa">بیرون برف
-                            است.</span></div>
-                </div>
-            </div>
-        </details>
-    </div>
-
-    <a href="index.html" class="nav-btn">بازگشت به فهرست</a>
+    <a href="index.html" class="back-btn">بازگشت به فهرست</a>
 
 </body>
 

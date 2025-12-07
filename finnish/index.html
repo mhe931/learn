@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>خودآموز جامع فنلاندی (فارسی)</title>
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>فهرست خودآموز فنلاندی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700;800&family=Orbitron:wght@900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
+        /* Shared CSS from review.html */
         :root {
             --bg: #080810;
             --card-bg: rgba(25, 25, 40, 0.95);
@@ -17,166 +23,168 @@
             --text: #F0F0F0;
             --subtext: #B0B0B0;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
             background-attachment: fixed;
             color: var(--text);
-            font-family: 'Vazirmatn', sans-serif;
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
             min-height: 100vh;
             padding: 20px;
         }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
         h1 {
             font-family: 'Orbitron', sans-serif;
             color: var(--gold);
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 2em;
+            margin: 30px 0;
+            font-size: 2.2em;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
-        .toc-container {
-            max-width: 800px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-        .toc-item {
+
+        .card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-right: 5px solid var(--neon);
-            padding: 20px;
             border-radius: 12px;
-            color: var(--text);
-            text-decoration: none;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .section-title {
+            color: var(--neon);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 12px;
+        }
+
+        .toc-link {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            transition: transform 0.2s, box-shadow 0.2s;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: 1px solid transparent;
         }
-        .toc-item:hover {
+
+        .toc-link:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: var(--neon);
             transform: translateX(-5px);
-            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.2);
-            border-right-color: var(--purple);
         }
+
         .toc-number {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5em;
-            color: var(--subtext);
-            margin-left: 15px;
-            width: 40px;
-            text-align: center;
-        }
-        .toc-title {
-            font-size: 1.1em;
+            color: var(--gold);
             font-weight: bold;
-            flex-grow: 1;
+            font-size: 1.2em;
+            margin-left: 15px;
+            min-width: 30px;
         }
-        .toc-icon {
-            color: var(--neon);
+
+        .toc-text {
+            font-size: 1.1em;
         }
+
         .back-link {
             display: block;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
             color: var(--subtext);
             text-decoration: none;
+            font-size: 0.9em;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>🇫🇮 فهرست مطالب خودآموز</h1>
+    <div class="container">
+        <h1>🇫🇮 خودآموز جامع فنلاندی</h1>
 
-    <div class="toc-container">
-        <!-- G1: Verbs & Basics -->
-        <a href="g1-verbs.html#basics" class="toc-item">
-            <span class="toc-number">1</span>
-            <span class="toc-title">مبانی: ضمایر، فعل Olla، اعداد و زمان</span>
-            <i class="fa-solid fa-clock toc-icon"></i>
-        </a>
-        <a href="g1-verbs.html#verb1" class="toc-item">
-            <span class="toc-number">2</span>
-            <span class="toc-title">فعل نوع ۱ (-Va)</span>
-            <i class="fa-solid fa-comment toc-icon"></i>
-        </a>
-        <a href="g1-verbs.html#verb2" class="toc-item">
-            <span class="toc-number">3</span>
-            <span class="toc-title">فعل نوع ۲ (-da)</span>
-            <i class="fa-solid fa-utensils toc-icon"></i>
-        </a>
-        <a href="g1-verbs.html#verb3" class="toc-item">
-            <span class="toc-number">4</span>
-            <span class="toc-title">فعل نوع ۳ (-la/na/ra/sta)</span>
-            <i class="fa-solid fa-person-walking toc-icon"></i>
-        </a>
-        <a href="g1-verbs.html#verb4" class="toc-item">
-            <span class="toc-number">5</span>
-            <span class="toc-title">فعل نوع ۴ (-ata)</span>
-            <i class="fa-solid fa-broom toc-icon"></i>
-        </a>
-        <a href="g1-verbs.html#verb5" class="toc-item">
-            <span class="toc-number">6</span>
-            <span class="toc-title">فعل نوع ۵ (-ita)</span>
-            <i class="fa-solid fa-check toc-icon"></i>
-        </a>
+        <div class="card">
+            <h2 class="section-title"><i class="fa-solid fa-shapes"></i> بخش ۱: مبانی و افعال (G1)</h2>
+            <ul class="toc-list">
+                <li><a href="g1-verbs.html#basics" class="toc-link"><span class="toc-number">01</span><span
+                            class="toc-text">ضمایر شخصی و فعل بودن (Olla)</span></a></li>
+                <li><a href="g1-verbs.html#numbers" class="toc-link"><span class="toc-number">02</span><span
+                            class="toc-text">اعداد و زمان (Numbers & Time)</span></a></li>
+                <li><a href="g1-verbs.html#verb1" class="toc-link"><span class="toc-number">03</span><span
+                            class="toc-text">فعل نوع ۱ (-Va)</span></a></li>
+                <li><a href="g1-verbs.html#verb2" class="toc-link"><span class="toc-number">04</span><span
+                            class="toc-text">فعل نوع ۲ (-da)</span></a></li>
+                <li><a href="g1-verbs.html#verb3" class="toc-link"><span class="toc-number">05</span><span
+                            class="toc-text">فعل نوع ۳ (-la/na/ra/sta)</span></a></li>
+                <li><a href="g1-verbs.html#verb4" class="toc-link"><span class="toc-number">06</span><span
+                            class="toc-text">فعل نوع ۴ (-ata)</span></a></li>
+                <li><a href="g1-verbs.html#verb5" class="toc-link"><span class="toc-number">07</span><span
+                            class="toc-text">فعل نوع ۵ (-ita)</span></a></li>
+            </ul>
+        </div>
 
-        <!-- G2: Cases & Nouns -->
-        <a href="g2-cases-nouns.html#partitive" class="toc-item">
-            <span class="toc-number">7</span>
-            <span class="toc-title">حالت پارتیتیو (Partitiivi)</span>
-            <i class="fa-solid fa-glass-water toc-icon"></i>
-        </a>
-        <a href="g2-cases-nouns.html#kpt" class="toc-item">
-            <span class="toc-number">8</span>
-            <span class="toc-title">درجه‌بندی صامت‌ها (KPT)</span>
-            <i class="fa-solid fa-right-left toc-icon"></i>
-        </a>
-        <a href="g2-cases-nouns.html#cases" class="toc-item">
-            <span class="toc-number">9</span>
-            <span class="toc-title">حالت‌های مکانی (Paikallissijat)</span>
-            <i class="fa-solid fa-location-dot toc-icon"></i>
-        </a>
-        <a href="g2-cases-nouns.html#noun-types" class="toc-item">
-            <span class="toc-number">10</span>
-            <span class="toc-title">انواع اسم (-e, -nen, -in, -i)</span>
-            <i class="fa-solid fa-cube toc-icon"></i>
-        </a>
-        <a href="g2-cases-nouns.html#sentences" class="toc-item">
-            <span class="toc-number">11</span>
-            <span class="toc-title">جملات مالکیتی و وجودی</span>
-            <i class="fa-solid fa-house toc-icon"></i>
-        </a>
+        <div class="card" style="border-right-color: var(--purple);">
+            <h2 class="section-title" style="color: var(--purple);"><i class="fa-solid fa-box-open"></i> بخش ۲: اسم‌ها و
+                حالت‌ها (G2)</h2>
+            <ul class="toc-list">
+                <li><a href="g2-cases-nouns.html#partitive" class="toc-link"><span class="toc-number">08</span><span
+                            class="toc-text">حالت پارتیتیو (Partitiivi)</span></a></li>
+                <li><a href="g2-cases-nouns.html#kpt" class="toc-link"><span class="toc-number">09</span><span
+                            class="toc-text">درجه‌بندی صامت‌ها (KPT)</span></a></li>
+                <li><a href="g2-cases-nouns.html#locations" class="toc-link"><span class="toc-number">10</span><span
+                            class="toc-text">حالت‌های مکانی (Paikallissijat)</span></a></li>
+                <li><a href="g2-cases-nouns.html#nountypes" class="toc-link"><span class="toc-number">11</span><span
+                            class="toc-text">انواع اسم (-e, -nen, -in, -i)</span></a></li>
+                <li><a href="g2-cases-nouns.html#sentences" class="toc-link"><span class="toc-number">12</span><span
+                            class="toc-text">انواع جمله (مالکیت و وجودی)</span></a></li>
+            </ul>
+        </div>
 
-        <!-- V-Review -->
-        <a href="v-review.html#imperative" class="toc-item">
-            <span class="toc-number">12</span>
-            <span class="toc-title">وجه امری (Imperatiivi)</span>
-            <i class="fa-solid fa-exclamation toc-icon"></i>
-        </a>
-        <a href="v-review.html#adjectives" class="toc-item">
-            <span class="toc-number">13</span>
-            <span class="toc-title">صفت‌ها، رنگ‌ها و هم‌آوایان</span>
-            <i class="fa-solid fa-palette toc-icon"></i>
-        </a>
-        <a href="v-review.html#vocab" class="toc-item">
-            <span class="toc-number">14</span>
-            <span class="toc-title">واژگان ضروری (خانه، غذا، سفر)</span>
-            <i class="fa-solid fa-book-open toc-icon"></i>
-        </a>
-        <a href="v-review.html#demonstratives" class="toc-item">
-            <span class="toc-number">15</span>
-            <span class="toc-title">ضمایر اشاره (Tämä, Tuo, Se)</span>
-            <i class="fa-solid fa-fingerprint toc-icon"></i>
-        </a>
-        <a href="v-review.html#exercises" class="toc-item">
-            <span class="toc-number">16</span>
-            <span class="toc-title">تمرینات نهایی</span>
-            <i class="fa-solid fa-pen-to-square toc-icon"></i>
-        </a>
+        <div class="card" style="border-right-color: var(--gold);">
+            <h2 class="section-title" style="color: var(--gold);"><i class="fa-solid fa-star"></i> بخش ۳: مرور و کاربرد
+                (V-Review)</h2>
+            <ul class="toc-list">
+                <li><a href="v-review.html#imperative" class="toc-link"><span class="toc-number">13</span><span
+                            class="toc-text">وجه امری (Imperatiivi)</span></a></li>
+                <li><a href="v-review.html#adjectives" class="toc-link"><span class="toc-number">14</span><span
+                            class="toc-text">صفت‌ها، رنگ‌ها و هم‌آواها</span></a></li>
+                <li><a href="v-review.html#vocab" class="toc-link"><span class="toc-number">15</span><span
+                            class="toc-text">واژگان ضروری و موضوعی</span></a></li>
+                <li><a href="v-review.html#demonstratives" class="toc-link"><span class="toc-number">16</span><span
+                            class="toc-text">ضمایر اشاره (Tämä, Tuo, Se)</span></a></li>
+                <li><a href="v-review.html#exercises" class="toc-link"><span class="toc-number">17</span><span
+                            class="toc-text">تمرینات نهایی (Test Yourself)</span></a></li>
+            </ul>
+        </div>
+
+        <a href="../index.html" class="back-link">بازگشت به صفحه اصلی</a>
     </div>
 
-    <a href="../index.html" class="back-link">بازگشت به صفحه اصلی</a>
-
 </body>
+
 </html>
