@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finnish Self-Study (Persian)</title>
+    <title>Finnish Self-Study (Persian) - فهرست مطالب</title>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
         type="text/css" />
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #000 80%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #000 100%);
             color: #f0f0f0;
             display: flex;
             justify-content: center;
@@ -18,23 +18,22 @@
             min-height: 100vh;
             margin: 0;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
         }
 
         .container {
             max-width: 900px;
             width: 100%;
-            padding: 1em;
         }
 
         h1 {
             font-size: 2.5em;
             color: #FFD700;
             text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-            margin-bottom: 0.5em;
+            margin-bottom: 0.2em;
         }
 
-        p {
+        .subtitle {
             font-size: 1.1em;
             color: #B0B0B0;
             margin-bottom: 2em;
@@ -42,7 +41,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5em;
         }
 
@@ -54,151 +53,160 @@
             text-decoration: none;
             color: #f0f0f0;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
             display: flex;
             flex-direction: column;
             text-align: right;
+            position: relative;
+            overflow: hidden;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         }
 
         .card h2 {
             margin-top: 0;
-            font-size: 1.6em;
+            font-size: 1.5em;
             margin-bottom: 0.5em;
-            text-align: center;
+            padding-bottom: 0.5em;
+            border-bottom: 2px solid;
         }
 
         .card ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            font-size: 0.95em;
-            color: #ccc;
         }
 
         .card ul li {
-            margin-bottom: 8px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            padding-bottom: 4px;
+            margin-bottom: 0px;
         }
 
-        .card ul li:last-child {
-            border-bottom: none;
+        .card ul li a {
+            display: block;
+            padding: 8px 10px;
+            color: #ccc;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s;
+            font-size: 0.95em;
+        }
+
+        .card ul li a:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            padding-right: 15px;
         }
 
         /* Section 1 Styling */
         .card.section-1 {
-            border-right: 4px solid #FFD700;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0.01) 100%);
-        }
-
-        .card.section-1:hover {
-            border-color: #ffe033;
+            border-top: 4px solid #FFD700;
+            background: linear-gradient(180deg, rgba(25, 25, 40, 0.95) 0%, rgba(255, 215, 0, 0.02) 100%);
         }
 
         .card.section-1 h2 {
             color: #FFD700;
+            border-color: rgba(255, 215, 0, 0.3);
         }
 
         /* Section 2 Styling */
         .card.section-2 {
-            border-right: 4px solid #00D4FF;
-            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 212, 255, 0.01) 100%);
-        }
-
-        .card.section-2:hover {
-            border-color: #33ddff;
+            border-top: 4px solid #00D4FF;
+            background: linear-gradient(180deg, rgba(25, 25, 40, 0.95) 0%, rgba(0, 212, 255, 0.02) 100%);
         }
 
         .card.section-2 h2 {
             color: #00D4FF;
+            border-color: rgba(0, 212, 255, 0.3);
         }
 
         /* Section 3 Styling */
         .card.section-3 {
-            border-right: 4px solid #BC13FE;
-            background: linear-gradient(135deg, rgba(188, 19, 254, 0.05) 0%, rgba(188, 19, 254, 0.01) 100%);
-        }
-
-        .card.section-3:hover {
-            border-color: #d15aff;
+            border-top: 4px solid #BC13FE;
+            background: linear-gradient(180deg, rgba(25, 25, 40, 0.95) 0%, rgba(188, 19, 254, 0.02) 100%);
         }
 
         .card.section-3 h2 {
             color: #BC13FE;
+            border-color: rgba(188, 19, 254, 0.3);
         }
 
         .back-link {
             display: inline-block;
-            margin-top: 2em;
+            margin-top: 3em;
             color: #888;
             text-decoration: none;
             transition: color 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
         }
 
         .back-link:hover {
             color: #fff;
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
+        .english-title {
+            font-size: 0.6em;
+            display: block;
+            opacity: 0.7;
+            margin-top: 4px;
+            font-weight: normal;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>🇫🇮 راهنمای خودآموز فنلاندی</h1>
-        <p>مسیر یادگیری زبان فنلاندی به زبان فارسی - جامع و کاربردی</p>
+        <h1>🇫🇮 خودآموز جامع فنلاندی</h1>
+        <p class="subtitle">یادگیری گام‌به‌گام دستور زبان و مکالمه</p>
 
         <div class="grid">
             <!-- Section 1 -->
-            <a href="g1-foundations.html" class="card section-1">
-                <h2>بخش ۱: پایه‌ها</h2>
+            <div class="card section-1">
+                <a href="g1-verbs.html" style="text-decoration:none;">
+                    <h2>بخش ۱: مبانی و افعال <span class="english-title">Grammar 1: Verbs</span></h2>
+                </a>
                 <ul>
-                    <li>۱. ضمایر و فعل بودن (OLLA)</li>
-                    <li>۲. اعداد و زمان</li>
-                    <li>۳. فعل نوع ۱ (-Va)</li>
-                    <li>۴. فعل نوع ۲ (-da/dä)</li>
-                    <li>۵. فعل نوع ۳ (-la/na/ra/sta)</li>
+                    <li><a href="g1-verbs.html#pronouns">۱. ضمایر شخصی و فعل بودن (OLLA)</a></li>
+                    <li><a href="g1-verbs.html#numbers">۲. اعداد و زمان</a></li>
+                    <li><a href="g1-verbs.html#verb1">۳. فعل نوع ۱ (-Va: Puhua)</a></li>
+                    <li><a href="g1-verbs.html#verb2">۴. فعل نوع ۲ (-da: Syödä)</a></li>
+                    <li><a href="g1-verbs.html#verb3">۵. فعل نوع ۳ (-la: Tulla)</a></li>
+                    <li><a href="g1-verbs.html#verb4">۶. فعل نوع ۴ (-ata: Osata)</a></li>
+                    <li><a href="g1-verbs.html#verb5">۷. فعل نوع ۵ (-ita: Tarvita)</a></li>
                 </ul>
-            </a>
+            </div>
 
             <!-- Section 2 -->
-            <a href="g2-cases-verbs.html" class="card section-2">
-                <h2>بخش ۲: گرامر اصلی</h2>
+            <div class="card section-2">
+                <a href="g2-cases-nouns.html" style="text-decoration:none;">
+                    <h2>بخش ۲: حالت‌ها و ساختارها <span class="english-title">Grammar 2: Cases & Structures</span></h2>
+                </a>
                 <ul>
-                    <li>۶. حالت پارتیتیو (Partitiivi)</li>
-                    <li>۷. درجه‌بندی صامت‌ها (KPT)</li>
-                    <li>۸. حالت‌های مکانی (Paikallissijat)</li>
-                    <li>۹. انواع جملات (مالکیت/وجودی)</li>
-                    <li>۱۰. انواع اسم‌ها (-e, -nen, -in, i-)</li>
-                    <li>۱۱. فعل نوع ۴ (-ata)</li>
-                    <li>۱۲. فعل نوع ۵ (-ita)</li>
+                    <li><a href="g2-cases-nouns.html#partitive">۸. حالت پارتیتیو (Partitiivi)</a></li>
+                    <li><a href="g2-cases-nouns.html#kpt">۹. درجه‌بندی صامت‌ها (KPT)</a></li>
+                    <li><a href="g2-cases-nouns.html#local-cases">۱۰. حالت‌های مکانی (Paikallissijat)</a></li>
+                    <li><a href="g2-cases-nouns.html#noun-types">۱۱. انواع اسم‌ها (-e, -nen, -in, -i)</a></li>
+                    <li><a href="v-review.html#sentences">۱۲. انواع جملات (مالکیت/وجودی)</a></li>
                 </ul>
-            </a>
+            </div>
 
             <!-- Section 3 -->
-            <a href="v-review.html" class="card section-3">
-                <h2>بخش ۳: مرور جامع</h2>
+            <div class="card section-3">
+                <a href="v-review.html" style="text-decoration:none;">
+                    <h2>بخش ۳: کاربرد و مرور <span class="english-title">Application & Final Review</span></h2>
+                </a>
                 <ul>
-                    <li>۱۳. وجه امری (Imperatiivi)</li>
-                    <li>۱۴. صفت‌ها و رنگ‌ها</li>
-                    <li>۱۵. واژگان (لباس، خانه، آب و هوا)</li>
-                    <li>۱۶. ضمایر اشاره (Tämä, Tuo, Se)</li>
-                    <li>۱۷. تمرینات جامع و متن‌خوانی</li>
+                    <li><a href="v-review.html#sentences">۱۲. مرور انواع جملات</a></li>
+                    <li><a href="v-review.html#imperative">۱۳. وجه امری (Imperatiivi)</a></li>
+                    <li><a href="v-review.html#adjectives">۱۴. صفت‌ها، رنگ‌ها و توصیف</a></li>
+                    <li><a href="v-review.html#vocabulary">۱۵. واژگان ضروری (خانه، حمل‌ونقل)</a></li>
+                    <li><a href="v-review.html#demonstrative">۱۶. ضمایر اشاره (Tämä, Tuo, Se)</a></li>
                 </ul>
-            </a>
+            </div>
         </div>
 
         <a href="../../index.html" class="back-link">← بازگشت به صفحه اصلی</a>

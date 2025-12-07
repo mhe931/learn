@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بخش ۱: مبانی و افعال - فنلاندی</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet"
+        type="text/css" />
+    <style>
+        :root {
+            --primary: #FFD700;
+            --bg-dark: #1a1a2e;
+            --bg-card: rgba(25, 25, 40, 0.95);
+            --text-main: #f0f0f0;
+            --text-muted: #dcdcdc;
+            --highlight: #00D4FF;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #000 100%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 10px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            color: var(--primary);
+        }
+
+        h3 {
+            color: #8BE9FD;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            border-right: 3px solid #8BE9FD;
+            padding-right: 10px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            min-width: 600px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+        }
+
+        th {
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .highlight {
+            color: var(--highlight);
+            font-weight: bold;
+        }
+
+        .rule-box {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px dashed var(--primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .verb-col {
+            min-width: 120px;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            th,
+            td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="index-persian.html" class="back-btn">← بازگشت به فهرست</a>
+
+        <h1>بخش ۱: مبانی و افعال (Perusteet ja Verbit)</h1>
+
+        <!-- 1. Pronouns & Olla -->
+        <section id="pronouns">
+            <h2>۱. ضمایر شخصی و فعل بودن (OLLA)</h2>
+            <div class="rule-box">
+                <p>فعل <strong>Olla</strong> (بودن) پرکاربردترین فعل فنلاندی است. توجه کنید که در زبان گفتاری معمولاً
+                    ضمایر 'Minä' و 'Sinä' و 'Me' و 'Te' حذف می‌شوند چون شناسه فعل شخص را نشان می‌دهد.</p>
+            </div>
+            <div class="card">
+                <h3>جدول صرف فعل Olla</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>شخص</th>
+                            <th>ضمیر</th>
+                            <th>مثبت (+)</th>
+                            <th>منفی (-)</th>
+                            <th>معنی</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 SG</td>
+                            <td>Minä</td>
+                            <td class="highlight">olen</td>
+                            <td>en ole</td>
+                            <td>هستم / نیستم</td>
+                        </tr>
+                        <tr>
+                            <td>2 SG</td>
+                            <td>Sinä</td>
+                            <td class="highlight">olet</td>
+                            <td>et ole</td>
+                            <td>هستی / نیستی</td>
+                        </tr>
+                        <tr>
+                            <td>3 SG</td>
+                            <td>Hän/Se</td>
+                            <td class="highlight">on</td>
+                            <td>ei ole</td>
+                            <td>هست / نیست</td>
+                        </tr>
+                        <tr>
+                            <td>1 PL</td>
+                            <td>Me</td>
+                            <td class="highlight">olemme</td>
+                            <td>emme ole</td>
+                            <td>هستیم / نیستیم</td>
+                        </tr>
+                        <tr>
+                            <td>2 PL</td>
+                            <td>Te</td>
+                            <td class="highlight">olette</td>
+                            <td>ette ole</td>
+                            <td>هستید / نیستید</td>
+                        </tr>
+                        <tr>
+                            <td>3 PL</td>
+                            <td>He/Ne</td>
+                            <td class="highlight">ovat</td>
+                            <td>eivät ole</td>
+                            <td>هستند / نیستند</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3>۱۰ مثال کاربردی</h3>
+                <ol>
+                    <li>Minä olen Daniel. (من دانیل هستم)</li>
+                    <li>Sinä olet ystäväni. (تو دوست من هستی)</li>
+                    <li>Hän on opettaja. (او معلم است)</li>
+                    <li>Me olemme suomalaisia. (ما فنلاندی هستیم)</li>
+                    <li>Te olette myöhässä. (شما دیر کردید)</li>
+                    <li>He ovat kotona. (آنها در خانه هستند)</li>
+                    <li>Se on totta. (آن حقیقت دارد)</li>
+                    <li>Minulla on nälkä. (من گرسنه هستم [نزد من گرسنگی است])</li>
+                    <li>Minulla ei ole autoa. (من ماشین ندارم)</li>
+                    <li>Missä sinä olet? (تو کجایی؟)</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 2. Numbers & Time -->
+        <section id="numbers">
+            <h2>۲. اعداد و زمان (Numerot ja aika)</h2>
+            <div class="card">
+                <h3>جدول اعداد</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <ul>
+                        <li>0 = nolla</li>
+                        <li>1 = yksi</li>
+                        <li>2 = kaksi</li>
+                        <li>3 = kolme</li>
+                        <li>4 = neljä</li>
+                        <li>5 = viisi</li>
+                        <li>6 = kuusi</li>
+                        <li>7 = seitsemän</li>
+                        <li>8 = kahdeksan</li>
+                        <li>9 = yhdeksän</li>
+                        <li>10 = kymmenen</li>
+                    </ul>
+                    <ul>
+                        <li>11 = yksitoista</li>
+                        <li>12 = kaksitoista</li>
+                        <li>20 = kaksikymmentä</li>
+                        <li>21 = kaksikymmentäyksi</li>
+                        <li>30 = kolmekymmentä</li>
+                        <li>100 = sata</li>
+                        <li>200 = kaksisataa</li>
+                        <li>1000 = tuhat</li>
+                        <li>1990 = tuhat yhdeksänsataayhdeksänkymmentä</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h3>قوانین بیان ساعت (Kellonajat)</h3>
+                <p><strong>Yli</strong> = گذشته | <strong>Vaille</strong> = مانده | <strong>Puoli</strong> = نیم (به
+                    سمتِ)</p>
+                <ul>
+                    <li>02:00 → Kello on kaksi.</li>
+                    <li>02:05 → Kello on viisi <strong>yli</strong> kaksi.</li>
+                    <li>01:50 → Kello on kymmenen <strong>vaille</strong> kaksi.</li>
+                    <li>02:30 → Kello on <strong>puoli</strong> kolme. (نیم به سه)</li>
+                    <li>02:15 → Kello on varttia yli kaksi.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>۱۰ مثال زمان</h3>
+                <ol>
+                    <li>Kello on tasan 12. (ساعت دقیقا دوازده است)</li>
+                    <li>Mitä kello on? (ساعت چند است؟)</li>
+                    <li>Kello on puoli kuusi (5:30).</li>
+                    <li>Elokuva alkaa kello kahdeksan. (فیلم ساعت ۸ شروع می‌شود)</li>
+                    <li>Nähdään kello kymmenen. (ساعت ۱۰ میبینمت)</li>
+                    <li>Herään kello seitsemän. (ساعت ۷ بیدار می‌شوم)</li>
+                    <li>Bussi lähtee viisi yli kolme (3:05).</li>
+                    <li>Nyt on myöhä. (الان دیر است)</li>
+                    <li>Onko sinulla aikaa? (وقت داری؟)</li>
+                    <li>Yksi hetki, ole hyvä. (یک لحظه لطفا)</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 3. Verb Type 1 -->
+        <section id="verb1">
+            <h2>۳. فعل نوع ۱ (-Va / -Vä)</h2>
+            <div class="rule-box">
+                <p><strong>قانون:</strong> آخرین واکه (a/ä) حذف می‌شود. سپس شناسه شخصی اضافه می‌شود.<br><em>Puhua →
+                        Puhun</em></p>
+                <p><strong>شناسه‌ها:</strong> -n, -t, -V(تکرار واکه), -mme, -tte, -vat</p>
+            </div>
+
+            <div class="card">
+                <h3>جدول صرف ۱۰ فعل نوع ۱ (مثبت و منفی)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فعل</th>
+                            <th>معنی</th>
+                            <th>Minä (من)</th>
+                            <th>Sinä (تو)</th>
+                            <th>Hän (او)</th>
+                            <th>Me (ما)</th>
+                            <th>Te (شما)</th>
+                            <th>He (آنها)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Puhua</strong></td>
+                            <td>حرف زدن</td>
+                            <td>Puhun / En puhu</td>
+                            <td>Puhut</td>
+                            <td>Puhuu</td>
+                            <td>Puhumme</td>
+                            <td>Puhutte</td>
+                            <td>Puhuvat / Eivät puhu</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Asua</strong></td>
+                            <td>زندگی کردن</td>
+                            <td>Asun / En asu</td>
+                            <td>Asut</td>
+                            <td>Asuu</td>
+                            <td>Asumme</td>
+                            <td>Asutte</td>
+                            <td>Asuvat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Maksaa</strong></td>
+                            <td>پرداختن</td>
+                            <td>Maksan / En maksa</td>
+                            <td>Maksat</td>
+                            <td>Maksaa</td>
+                            <td>Maksamme</td>
+                            <td>Maksatte</td>
+                            <td>Maksavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tietää</strong>*</td>
+                            <td>دانستن (t-d)</td>
+                            <td>Tiedän / En tiedä</td>
+                            <td>Tiedät</td>
+                            <td>Tietää</td>
+                            <td>Tiedämme</td>
+                            <td>Tiedätte</td>
+                            <td>Tietävät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ostaa</strong></td>
+                            <td>خریدن</td>
+                            <td>Ostan / En osta</td>
+                            <td>Ostat</td>
+                            <td>Ostaa</td>
+                            <td>Ostamme</td>
+                            <td>Ostatte</td>
+                            <td>Ostavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Matkustaa</strong></td>
+                            <td>سفر کردن</td>
+                            <td>Matkustan</td>
+                            <td>Matkustat</td>
+                            <td>Matkustaa</td>
+                            <td>Matkustamme</td>
+                            <td>Matkustatte</td>
+                            <td>Matkustavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Haluta</strong></td>
+                            <td>خواستن</td>
+                            <td>Haluan</td>
+                            <td>Haluat</td>
+                            <td>Haluaa</td>
+                            <td>Haluamme</td>
+                            <td>Haluatte</td>
+                            <td>Haluavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kulkea</strong>*</td>
+                            <td>رفتن (k-j)</td>
+                            <td>Kuljen</td>
+                            <td>Kuljet</td>
+                            <td>Kulkee</td>
+                            <td>Kuljemme</td>
+                            <td>Kuljette</td>
+                            <td>Kulkevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Soittaa</strong>*</td>
+                            <td>زنگ زدن (tt-t)</td>
+                            <td>Soitan</td>
+                            <td>Soitat</td>
+                            <td>Soittaa</td>
+                            <td>Soitamme</td>
+                            <td>Soitatte</td>
+                            <td>Soittavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Opettaa</strong>*</td>
+                            <td>یاد دادن</td>
+                            <td>Opetan</td>
+                            <td>Opetat</td>
+                            <td>Opettaa</td>
+                            <td>Opetamme</td>
+                            <td>Opetatte</td>
+                            <td>Opettavat</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size:0.8em; color:#bbb;">* KPT: در این افعال تغییر صامت رخ می‌دهد (Tietää -> Tiedän).</p>
+            </div>
+            <div class="card">
+                <h3>مثال‌ها (نوع ۱)</h3>
+                <ul>
+                    <li>Minä puhun englantia. (من انگلیسی صحبت می‌کنم)</li>
+                    <li>Hän ei asu Turussa. (او در تورکو زندگی نمی‌کند)</li>
+                    <li>Paljonko se maksaa? (قیمتش چقدر است؟)</li>
+                    <li>En tiedä. (نمی‌دانم)</li>
+                    <li>Mitä sinä ostat? (تو چه می‌خری؟)</li>
+                    <li>Me matkustamme junalla. (ما با قطار سفر می‌کنیم)</li>
+                    <li>Haluan kahvia. (قهوه می‌خواهم)</li>
+                    <li>Bussi kulkee nopeasti. (اتوبوس سریع می‌رود)</li>
+                    <li>Minä soitan sinulle huomenna. (فردا به تو زنگ می‌زنم)</li>
+                    <li>Hän opettaa suomea. (او فنلاندی درس می‌دهد)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 4. Verb Type 2 -->
+        <section id="verb2">
+            <h2>۴. فعل نوع ۲ (-da / -dä)</h2>
+            <div class="rule-box">
+                <p><strong>قانون:</strong> -da/-dä حذف می‌شود. ریشه تغییری نمی‌کند (معمولاً).<br><em>Syödä → Syön</em>
+                </p>
+                <p><strong>شناسه سوم شخص:</strong> در این گروه، برخلاف گروه ۱، واکه تکرار <strong>نمی‌شود</strong> (Syö,
+                    Juo). استثنا: Tehdä -> Tekee, Nähdä -> Näkee.</p>
+            </div>
+
+            <div class="card">
+                <h3>جدول صرف ۱۰ فعل نوع ۲</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فعل</th>
+                            <th>معنی</th>
+                            <th>Minä</th>
+                            <th>Sinä</th>
+                            <th>Hän (دقت کنید!)</th>
+                            <th>Me</th>
+                            <th>Te</th>
+                            <th>He</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Syödä</strong></td>
+                            <td>خوردن</td>
+                            <td>Syön / En syö</td>
+                            <td>Syöt</td>
+                            <td>Syö</td>
+                            <td>Syömme</td>
+                            <td>Syötte</td>
+                            <td>Syövät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Juoda</strong></td>
+                            <td>نوشیدن</td>
+                            <td>Juon / En juo</td>
+                            <td>Juot</td>
+                            <td>Juo</td>
+                            <td>Juomme</td>
+                            <td>Juotte</td>
+                            <td>Juovat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Käydä</strong></td>
+                            <td>ملاقات/رفتن</td>
+                            <td>Käyn</td>
+                            <td>Käyt</td>
+                            <td>Käy</td>
+                            <td>Käymme</td>
+                            <td>Käytte</td>
+                            <td>Käyvät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Voida</strong></td>
+                            <td>توانستن</td>
+                            <td>Voin</td>
+                            <td>Voit</td>
+                            <td>Voi</td>
+                            <td>Voimme</td>
+                            <td>Voitte</td>
+                            <td>Voivat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tehdä</strong>*</td>
+                            <td>انجام دادن</td>
+                            <td>Teen</td>
+                            <td>Teet</td>
+                            <td><span class="highlight">Tekee</span></td>
+                            <td>Teemme</td>
+                            <td>Teette</td>
+                            <td>Tekevät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nähdä</strong>*</td>
+                            <td>دیدن</td>
+                            <td>Näen</td>
+                            <td>Näet</td>
+                            <td><span class="highlight">Näkee</span></td>
+                            <td>Näemme</td>
+                            <td>Näette</td>
+                            <td>Näkevät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Myydä</strong></td>
+                            <td>فروختن</td>
+                            <td>Myyn</td>
+                            <td>Myyt</td>
+                            <td>Myy</td>
+                            <td>Myymme</td>
+                            <td>Myytte</td>
+                            <td>Myyvät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tuoda</strong></td>
+                            <td>آوردن</td>
+                            <td>Tuon</td>
+                            <td>Tuot</td>
+                            <td>Tuo</td>
+                            <td>Tuomme</td>
+                            <td>Tuotte</td>
+                            <td>Tuovat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Viipyä</strong></td>
+                            <td>ماندن/طول کشیدن</td>
+                            <td>Viivyn</td>
+                            <td>Viivyt</td>
+                            <td>Viipyy</td>
+                            <td>Viivymme</td>
+                            <td>Viivytte</td>
+                            <td>Viipyvät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lyödä</strong></td>
+                            <td>زدن</td>
+                            <td>Lyön</td>
+                            <td>Lyöt</td>
+                            <td>Lyö</td>
+                            <td>Lyömme</td>
+                            <td>Lyötte</td>
+                            <td>Lyövät</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3>مثال‌ها (نوع ۲)</h3>
+                <ul>
+                    <li>Minä syön aamupalaa. (من صبحانه می‌خورم)</li>
+                    <li>Mitä sinä juot? (چه می‌نوشی؟)</li>
+                    <li>Me käymme kaupassa. (ما به فروشگاه می‌رویم)</li>
+                    <li>Voitko auttaa? (می‌توانی کمک کنی؟)</li>
+                    <li>Hän tekee ruokaa. (او غذا درست می‌کند)</li>
+                    <li>En näe mitään. (هیچ چیز نمی‌بینم)</li>
+                    <li>He myyvät autoja. (آنها ماشین می‌فروشند)</li>
+                    <li>Tuo minulle vettä. (برایم آب بیاور [دستوری])</li>
+                    <li>Kuinka kauan viivyt täällä? (چقدر اینجا می‌مانی؟)</li>
+                    <li>Älä lyö! (نزن!)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. Verb Type 3 -->
+        <section id="verb3">
+            <h2>۵. فعل نوع ۳ (-la / -na / -ra / -sta)</h2>
+            <div class="rule-box">
+                <p><strong>قانون:</strong> دو حرف آخر حذف شده و <strong>e</strong> اضافه می‌شود.<br><em>Tulla → Tul- + e
+                        → Tule-n</em></p>
+                <p><strong>نکته KPT:</strong> در این گروه برعکس است! ریشه مصدر ضعیف است ولی در صرف <strong>قوی</strong>
+                    می‌شود (Ajatella -> Ajattelen).</p>
+            </div>
+
+            <div class="card">
+                <h3>جدول صرف ۱۰ فعل نوع ۳</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فعل</th>
+                            <th>معنی</th>
+                            <th>Minä</th>
+                            <th>Sinä</th>
+                            <th>Hän (+e)</th>
+                            <th>Me</th>
+                            <th>Te</th>
+                            <th>He</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tulla</strong></td>
+                            <td>آمدن</td>
+                            <td>Tulen</td>
+                            <td>Tulet</td>
+                            <td>Tulee</td>
+                            <td>Tulemme</td>
+                            <td>Tulette</td>
+                            <td>Tulevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mennä</strong></td>
+                            <td>رفتن</td>
+                            <td>Menen</td>
+                            <td>Menet</td>
+                            <td>Menee</td>
+                            <td>Menemme</td>
+                            <td>Menette</td>
+                            <td>Menevät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Opiskella</strong></td>
+                            <td>درس خواندن</td>
+                            <td>Opiskelen</td>
+                            <td>Opiskelet</td>
+                            <td>Opiskelee</td>
+                            <td>Opiskelemme</td>
+                            <td>Opiskelette</td>
+                            <td>Opiskelevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kävellä</strong></td>
+                            <td>راه رفتن</td>
+                            <td>Kävelen</td>
+                            <td>Kävelet</td>
+                            <td>Kävelee</td>
+                            <td>Kävelemme</td>
+                            <td>Kävelette</td>
+                            <td>Kävelevät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hymyillä</strong></td>
+                            <td>لبخند زدن</td>
+                            <td>Hymyilen</td>
+                            <td>Hymyilet</td>
+                            <td>Hymyilee</td>
+                            <td>Hymyilemme</td>
+                            <td>Hymyilette</td>
+                            <td>Hymyilevät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Katsella</strong></td>
+                            <td>نگاه کردن</td>
+                            <td>Katselen</td>
+                            <td>Katselet</td>
+                            <td>Katselee</td>
+                            <td>Katselemme</td>
+                            <td>Katselette</td>
+                            <td>Katselevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nousta</strong></td>
+                            <td>برخاستن</td>
+                            <td>Nousen</td>
+                            <td>Nouset</td>
+                            <td>Nousee</td>
+                            <td>Nousemme</td>
+                            <td>Nousette</td>
+                            <td>Nousevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ajatella</strong>*</td>
+                            <td>فکر کردن</td>
+                            <td>Ajattelen</td>
+                            <td>Ajattelet</td>
+                            <td>Ajattelee</td>
+                            <td>Ajattelemme</td>
+                            <td>Ajattelette</td>
+                            <td>Ajattelevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kuunnella</strong>*</td>
+                            <td>گوش کردن</td>
+                            <td>Kuuntelen</td>
+                            <td>Kuuntelet</td>
+                            <td>Kuuntelee</td>
+                            <td>Kuuntelemme</td>
+                            <td>Kuuntelette</td>
+                            <td>Kuuntelevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tuntea</strong>*</td>
+                            <td>حس کردن/شناختن</td>
+                            <td>Tunnen</td>
+                            <td>Tunnet</td>
+                            <td>Tuntee</td>
+                            <td>Tunnemme</td>
+                            <td>Tunnette</td>
+                            <td>Tuntevat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3>مثال‌ها (نوع ۳)</h3>
+                <ul>
+                    <li>Minä tulen Iranista. (من از ایران می‌آیم)</li>
+                    <li>Mihin sinä menet? (کجا می‌روی؟)</li>
+                    <li>Opiskelen suomea yliopistossa. (در دانشگاه فنلاندی می‌خوانم)</li>
+                    <li>Me kävelemme rannalla. (ما در ساحل قدم می‌زنیم)</li>
+                    <li>Hän hymyilee iloisesti. (او با خوشحالی لبخند می‌زند)</li>
+                    <li>Mitä katsot? (چه نگاه می‌کنی؟)</li>
+                    <li>Aurinko nousee. (خورشید طلوع می‌کند)</li>
+                    <li>Mitä te ajattelette? (به چه فکر می‌کنید؟)</li>
+                    <li>Kuuntelen musiikkia. (موسیقی گوش می‌دهم)</li>
+                    <li>En tunne häntä. (او را نمی‌شناسم)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 6. Verb Type 4 -->
+        <section id="verb4">
+            <h2>۶. فعل نوع ۴ (-ata / -ota / -uta)</h2>
+            <div class="rule-box">
+                <p><strong>قانون:</strong> حرف 't' حذف می‌شود. معمولاً ریشه به `aa` یا `ea` ختم می‌شود.<br><em>Osata →
+                        Osaa-n</em></p>
+                <p><strong>نکته KPT:</strong> اینجا هم مثل نوع ۳، ریشه ضعیف است و در صرف <strong>قوی</strong> می‌شود
+                    (Inverted KPT). مثل: Tavata -> Tapaan.</p>
+            </div>
+
+            <div class="card">
+                <h3>جدول صرف ۱۰ فعل نوع ۴</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فعل</th>
+                            <th>معنی</th>
+                            <th>Minä</th>
+                            <th>Sinä</th>
+                            <th>Hän</th>
+                            <th>Me</th>
+                            <th>Te</th>
+                            <th>He (vat)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Osata</strong></td>
+                            <td>بلد بودن</td>
+                            <td>Osaan</td>
+                            <td>Osaat</td>
+                            <td>Osaa</td>
+                            <td>Osaamme</td>
+                            <td>Osaatte</td>
+                            <td>Osaavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avata</strong></td>
+                            <td>باز کردن</td>
+                            <td>Avaan</td>
+                            <td>Avaat</td>
+                            <td>Avaa</td>
+                            <td>Avaamme</td>
+                            <td>Avaatte</td>
+                            <td>Avaavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Siivota</strong></td>
+                            <td>تمیز کردن</td>
+                            <td>Siivoan</td>
+                            <td>Siivoat</td>
+                            <td>Siivoaa</td>
+                            <td>Siivoamme</td>
+                            <td>Siivoatte</td>
+                            <td>Siivoavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tavata</strong>*</td>
+                            <td>دیدار کردن (p)</td>
+                            <td>Tapaan</td>
+                            <td>Tapaat</td>
+                            <td>Tapaa</td>
+                            <td>Tapaamme</td>
+                            <td>Tapaatte</td>
+                            <td>Tapaavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pelata</strong></td>
+                            <td>بازی کردن</td>
+                            <td>Pelaan</td>
+                            <td>Pelaat</td>
+                            <td>Pelaa</td>
+                            <td>Pelaamme</td>
+                            <td>Pelaatte</td>
+                            <td>Pelaavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Herätä</strong></td>
+                            <td>بیدار شدن</td>
+                            <td>Herään</td>
+                            <td>Heräät</td>
+                            <td>Herää</td>
+                            <td>Heräämme</td>
+                            <td>Heräätte</td>
+                            <td>Heräävät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Korjata</strong></td>
+                            <td>تعمیر کردن</td>
+                            <td>Korjaan</td>
+                            <td>Korjaat</td>
+                            <td>Korjaa</td>
+                            <td>Korjaamme</td>
+                            <td>Korjaatte</td>
+                            <td>Korjaavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Maalata</strong></td>
+                            <td>رنگ کردن</td>
+                            <td>Maalaan</td>
+                            <td>Maalaat</td>
+                            <td>Maalaa</td>
+                            <td>Maalaamme</td>
+                            <td>Maalaatte</td>
+                            <td>Maalaavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Harjata</strong></td>
+                            <td>مسواک/برس زدن</td>
+                            <td>Harjaan</td>
+                            <td>Harjaat</td>
+                            <td>Harjaa</td>
+                            <td>Harjaamme</td>
+                            <td>Harjaatte</td>
+                            <td>Harjaavat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mitata</strong>*</td>
+                            <td>اندازه گرفتن (tt)</td>
+                            <td>Mittaan</td>
+                            <td>Mittaat</td>
+                            <td>Mittaa</td>
+                            <td>Mittaamme</td>
+                            <td>Mittaatte</td>
+                            <td>Mittaavat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h3>مثال‌ها (نوع ۴)</h3>
+                <ul>
+                    <li>Osaatko puhua suomea? (آیا بلدی فنلاندی حرف بزنی؟)</li>
+                    <li>Minä avaan oven. (در را باز می‌کنم)</li>
+                    <li>Siivoan keittiön tänään. (امروز آشپزخانه را تمیز می‌کنم)</li>
+                    <li>Tapaamme huomenna. (فردا ملاقات می‌کنیم)</li>
+                    <li>Lapset pelaavat jalkapalloa. (بچه‌ها فوتبال بازی می‌کنند)</li>
+                    <li>Herään aikaisin aamulla. (صبح زود بیدار می‌شوم)</li>
+                    <li>Hän korjaa autoa. (او ماشین را تعمیر می‌کند)</li>
+                    <li>Me maalaamme talon. (ما خانه را رنگ می‌کنیم)</li>
+                    <li>Harjaan hampaat. (دندان‌ها را مسواک می‌زنم)</li>
+                    <li>Hän mittaa kuumeen. (او تب را اندازه می‌گیرد)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 7. Verb Type 5 -->
+        <section id="verb5">
+            <h2>۷. فعل نوع ۵ (-ita / -itä)</h2>
+            <div class="rule-box">
+                <p><strong>قانون:</strong> پسوند -ita/-itä حذف می‌شود و <strong>-tse</strong> اضافه
+                    می‌گردد.<br><em>Tarvita → Tarvitse-n</em></p>
+            </div>
+
+            <div class="card">
+                <h3>جدول صرف ۱۰ فعل نوع ۵</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فعل</th>
+                            <th>معنی</th>
+                            <th>Minä</th>
+                            <th>Sinä</th>
+                            <th>Hän (+e)</th>
+                            <th>Me</th>
+                            <th>Te</th>
+                            <th>He</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tarvita</strong></td>
+                            <td>نیاز داشتن</td>
+                            <td>Tarvitsen</td>
+                            <td>Tarvitset</td>
+                            <td>Tarvitsee</td>
+                            <td>Tarvitsemme</td>
+                            <td>Tarvitsette</td>
+                            <td>Tarvitsevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Valita</strong></td>
+                            <td>انتخاب کردن</td>
+                            <td>Valitsen</td>
+                            <td>Valitset</td>
+                            <td>Valitsee</td>
+                            <td>Valitsemme</td>
+                            <td>Valitsette</td>
+                            <td>Valitsevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Häiritä</strong></td>
+                            <td>مزاحم شدن</td>
+                            <td>Häiritsen</td>
+                            <td>Häiritset</td>
+                            <td>Häiritsee</td>
+                            <td>Häiritsemme</td>
+                            <td>Häiritsette</td>
+                            <td>Häiritsevät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hallita</strong></td>
+                            <td>تسلط داشتن</td>
+                            <td>Hallitsen</td>
+                            <td>Hallitset</td>
+                            <td>Hallitsee</td>
+                            <td>Hallitsemme</td>
+                            <td>Hallitsette</td>
+                            <td>Hallitsevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mainita</strong></td>
+                            <td>ذکر کردن</td>
+                            <td>Mainitsen</td>
+                            <td>Mainitset</td>
+                            <td>Mainitsee</td>
+                            <td>Mainitsemme</td>
+                            <td>Mainitsette</td>
+                            <td>Mainitsevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Punnita</strong></td>
+                            <td>وزن کردن</td>
+                            <td>Punnitsen</td>
+                            <td>Punnitset</td>
+                            <td>Punnitsee</td>
+                            <td>Punnitsemme</td>
+                            <td>Punnitsette</td>
+                            <td>Punnitsevat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Merkitä</strong></td>
+                            <td>علامت زدن/معنی دادن</td>
+                            <td>Merkitsen</td>
+                            <td>Merkitset</td>
+                            <td>Merkitsee</td>
+                            <td>Merkitsemme</td>
+                            <td>Merkitsette</td>
+                            <td>Merkitsevät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kieltäytyä</strong>*</td>
+                            <td>رد کردن (استثنا)</td>
+                            <td>Kieltäydyn</td>
+                            <td>Kieltäydyt</td>
+                            <td>Kieltäytyy</td>
+                            <td>Kieltäydymme</td>
+                            <td>Kieltäydytte</td>
+                            <td>Kieltäytyvät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Selvitä</strong>*</td>
+                            <td>جان سالم بردن</td>
+                            <td>Selviän</td>
+                            <td>Selviät</td>
+                            <td>Selviää</td>
+                            <td>Selviämme</td>
+                            <td>Selviätte</td>
+                            <td>Selviävät</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Värjätä</strong>*</td>
+                            <td>رنگ کردن (مو)</td>
+                            <td>Värjään</td>
+                            <td>Värjäät</td>
+                            <td>Värjää</td>
+                            <td>Värjäämme</td>
+                            <td>Värjäätte</td>
+                            <td>Värjäävät</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="font-size:0.8em; color:#bbb;">* توجه: برخی افعال مانند Slelvita/Värjätä ممکن است بسته به تحلیل
+                    نوع ۴ نیز محسوب شوند، اما Tarvita/Valita نمونه‌های کلاسیک نوع ۵ هستند.</p>
+            </div>
+            <div class="card">
+                <h3>مثال‌ها (نوع ۵)</h3>
+                <ul>
+                    <li>Minä tarvitsen apua. (من کمک لازم دارم)</li>
+                    <li>Minkä värin sinä valitset? (کدام رنگ را انتخاب می‌کنی؟)</li>
+                    <li>Anteeksi, häiritsenko? (ببخشید، مزاحمم؟)</li>
+                    <li>Hän hallitsee tilanteen. (او اوضاع را تحت کنترل دارد)</li>
+                    <li>Hän mainitsi sinut. (او به تو اشاره کرد/اسم برد)</li>
+                    <li>Myyjä punnitsee omenat. (فروشنده سیب‌ها را وزن می‌کند)</li>
+                    <li>Mitä se merkitsee? (آن چه معنی‌ای دارد؟)</li>
+                    <li>Hän kieltäytyi tarjouksesta. (او پیشنهاد را رد کرد)</li>
+                    <li>Kyllä me selviämme. (آره ما از پسش برمیایم)</li>
+                    <li>Hän värjää hiukset. (او موها را رنگ می‌کند)</li>
+                </ul>
+            </div>
+        </section>
+
+        <p style="text-align:center; margin-top: 50px;">
+            <a href="g2-cases-nouns.html"
+                style="background: var(--primary); color: #000; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold;">ادامه
+                به بخش ۲: حالت‌ها و ساختارها →</a>
+        </p>
+
+    </div>
+</body>
+
+</html>
