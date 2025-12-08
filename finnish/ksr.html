@@ -7,76 +7,218 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap');
 
+  /* ** Mobile-Friendly Styles / Stylesheet Resets ** */
   body {
     font-family: "Vazirmatn", sans-serif;
+    /* Use a fixed background for a better mobile experience */
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #eee;
-    padding: 40px 15px;
+    padding: 20px 10px; /* Reduced padding for mobile screens */
     min-height: 100vh;
     margin: 0;
+    line-height: 1.6; /* Improved readability */
   }
+
   h1 {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.2rem; /* Reduced font size for mobile */
     background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(255,154,158,0.5);
-    margin-bottom: 50px;
+    text-shadow: 0 0 20px rgba(255,154,158,0.5); /* Reduced shadow */
+    margin-bottom: 30px; /* Reduced margin */
+    padding: 10px;
   }
+
+  /* ** Table Optimization for Mobile ** */
   table {
     width: 100%;
-    max-width: 1350px;
-    margin: 0 auto 60px;
-    border-collapse: separate;
+    max-width: 100%; /* Ensure table takes full width */
+    margin: 0 auto 30px; /* Reduced margin */
+    border-collapse: collapse; /* Use collapse for better mobile rendering */
     border-spacing: 0;
-    border-radius: 20px;
+    border-radius: 10px; /* Reduced border radius */
     overflow: hidden;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5); /* Reduced shadow */
   }
-  th {
-    background: linear-gradient(45deg, #667eea, #764ba2);
-    padding: 22px;
-    font-size: 1.5rem;
-    color: white;
+
+  thead {
+    display: none; /* Hide header on small screens */
   }
-  td {
-    padding: 20px;
-    font-size: 1.35rem;
-    transition: 0.4s;
+
+  tr {
+    display: block; /* Make rows stack like blocks */
+    margin-bottom: 10px; /* Space between stacked rows */
+    border-bottom: 5px solid #3a3f5b; /* Separator between cards */
+    border-radius: 10px;
+    overflow: hidden;
+    background: #1e1e2e; /* Set a default background for rows */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
+
   tr:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-    background: #1e1e2e !important;
+    transform: translateY(-3px); /* Less dramatic hover effect for touch */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    background: #2b2b40 !important; /* Slightly darker on hover */
   }
-  .fin { font-weight: 900; color: #74b9ff; font-size: 1.6rem; }
+
+  td {
+    display: block; /* Make cells stack vertically */
+    padding: 15px; /* Adjusted padding */
+    font-size: 1rem; /* Smaller base font size */
+    transition: 0.3s;
+    text-align: right; /* Maintain right-to-left alignment */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Light cell separator */
+  }
+
+  /* Add pseudo-elements to act as visible labels for each cell */
+  td::before {
+    content: attr(data-label) ": ";
+    font-weight: bold;
+    color: #a4a4b2; /* A subtle color for labels */
+    display: inline-block;
+    min-width: 90px; /* Aligns the data content */
+    margin-left: 10px;
+  }
+  
+  /* Styling for the first cell (Finnish word) */
+  .fin {
+      font-weight: 900;
+      color: #74b9ff;
+      font-size: 1.3rem;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background: rgba(116, 185, 255, 0.1);
+      border-bottom: 2px solid #74b9ff;
+  }
+  .fin::before { content: "فنلاندی"; color: #fff; font-size: 1rem; }
+
+  /* Specific styles for data cells */
   .kersi { color: #fdcb6e; font-style: italic; }
+  .kersi::before { content: "تلفظ کرسی"; }
+
   .farsi { color: #00b894; font-weight: bold; }
+  .farsi::before { content: "معنی واقعی"; }
+
   .reason {
-    background: rgba(255,193,7,0.15);
-    border-right: 6px solid #ffc107;
-    color: #fff;
-    font-size: 1.2rem;
+    background: rgba(255,193,7,0.1); /* Lighter background */
+    border-right: 4px solid #ffc107; /* Thinner border */
+    font-size: 1rem;
+    padding-right: 15px; /* Adjust padding due to border */
   }
-  .new { background: linear-gradient(45deg, #ff6b6b, #ee5a24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; }
-  .example { background: rgba(0,184,148,0.15); border-left: 6px solid #00b894; color: #fff; font-style: italic; }
+  .reason::before { content: "چرا مردم دارن از خنده می‌میرن؟"; color: #ffc107; }
+
+  .new { font-size: 1.3rem; }
+
+  .example {
+    background: rgba(0,184,148,0.1); /* Lighter background */
+    border-left: 4px solid #00b894;
+    font-size: 1rem;
+    padding-left: 15px;
+    border-bottom: none; /* Remove bottom border for the last cell */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .example::before { content: "مثال ساده"; color: #00b894; }
+
+  /* Rules section */
   .rules {
+    display: block; /* Ensure it behaves well as a block */
     background: #1e1e2e;
     color: #fdcb6e;
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 40px;
-    border-radius: 15px;
-    margin: 50px auto;
-    max-width: 85%;
+    font-size: 1.1rem; /* Reduced font size */
+    text-align: justify; /* Justify text for better flow */
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px; /* Reduced border radius */
+    margin: 30px auto; /* Reduced margin */
+    max-width: 100%; /* Full width */
+    line-height: 1.8; /* Improved readability */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    border: 1px solid #302b63;
   }
+  .rules strong {
+    color: #ff6b6b; /* Highlight important parts of the rule */
+  }
+
+  /* ** Re-implementing TH styles for larger screens only ** */
+  @media screen and (min-width: 768px) {
+    thead {
+      display: table-header-group; /* Show header on large screens */
+    }
+    tr {
+      display: table-row; /* Return to table-row behavior */
+      margin-bottom: 0;
+      border-bottom: none;
+      background: none;
+      box-shadow: none;
+    }
+    tr:nth-child(even) { background: #1e1e2e; } /* Zebra stripes */
+    tr:nth-child(odd) { background: #24243e; }
+
+    td {
+      display: table-cell; /* Return to table-cell behavior */
+      text-align: center;
+      padding: 20px;
+      font-size: 1.1rem;
+      border-bottom: none;
+    }
+    td::before {
+      content: none; /* Hide pseudo-labels on large screens */
+    }
+    th {
+      display: table-cell;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      padding: 18px; /* Adjusted padding */
+      font-size: 1.2rem;
+      color: white;
+    }
+    /* Corner rounding for table */
+    table {
+        border-radius: 15px;
+    }
+    th:first-child { border-top-right-radius: 15px; }
+    th:last-child { border-top-left-radius: 15px; }
+    tr:last-child td:first-child { border-bottom-right-radius: 15px; }
+    tr:last-child td:last-child { border-bottom-left-radius: 15px; }
+
+    /* Reset row hover for desktop table view */
+    tr:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      background: #302b63 !important;
+    }
+
+    /* Desktop-specific cell resets */
+    .fin, .kersi, .farsi, .reason, .example {
+        background: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        border-radius: 0;
+        font-size: 1.35rem; /* Revert to original size */
+    }
+    .fin { font-size: 1.6rem; font-weight: 900; color: #74b9ff; }
+    .kersi { color: #fdcb6e; }
+    .farsi { color: #00b894; }
+    .reason { background: rgba(255,193,7,0.15); border-right: 6px solid #ffc107; color: #fff; font-size: 1.2rem; }
+    .example { background: rgba(0,184,148,0.15); border-left: 6px solid #00b894; color: #fff; font-style: italic; }
+
+    /* Rules section reset */
+    .rules {
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 40px;
+        margin: 50px auto;
+        max-width: 85%;
+    }
+  }
+
 </style>
 </head>
 <body>
 
 <h1>
-
+  فنلاندی ❄️
 </h1>
 
 <table>
@@ -90,50 +232,152 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td class="fin">puhu</td><td class="kersi">پوهو</td><td class="farsi">بگو</td><td class="reason">«پوهو!» یعنی بگو! انگار عمو با لهجه غلیظ داره دعوا می‌کنه 🗣️</td><td class="example">Puhu nyt! → حالا بگو!</td></tr>
+    <tr>
+      <td class="fin" data-label="فنلاندی">puhu</td>
+      <td class="kersi" data-label="تلفظ کرسی">پوهو</td>
+      <td class="farsi" data-label="معنی واقعی">بگو</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«پوهو!» یعنی بگو! انگار عمو با لهجه غلیظ داره دعوا می‌کنه 🗣️</td>
+      <td class="example" data-label="مثال ساده">Puhu nyt! → حالا بگو!</td>
+    </tr>
 
-    <tr><td class="fin">syödä</td><td class="kersi">سُوده</td><td class="farsi">خوردن</td><td class="reason">«سوده کن دیگه، سرد می‌شه!» صدای مامان‌بزرگ 🍲</td><td class="example">Syödä ruokaa. → غذا بخور.</td></tr>
+    <tr>
+      <td class="fin" data-label="فنلاندی">syödä</td>
+      <td class="kersi" data-label="تلفظ کرسی">سُوده</td>
+      <td class="farsi" data-label="معنی واقعی">خوردن</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«سوده کن دیگه، سرد می‌شه!» صدای مامان‌بزرگ 🍲</td>
+      <td class="example" data-label="مثال ساده">Syödä ruokaa. → غذا بخور.</td>
+    </tr>
 
-    <tr><td class="fin">käy</td><td class="kersi">کَی / کَو</td><td class="farsi">می‌رود</td><td class="reason">گاو کاهو می‌رود… نه بابا، یعنی می‌ره! 🐄</td><td class="example">Se käy kauppaan. → اون می‌ره فروشگاه.</td></tr>
+    <tr>
+      <td class="fin" data-label="فنلاندی">käy</td>
+      <td class="kersi" data-label="تلفظ کرسی">کَی / کَو</td>
+      <td class="farsi" data-label="معنی واقعی">می‌رود</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">گاو کاهو می‌رود… نه بابا، یعنی می‌ره! 🐄</td>
+      <td class="example" data-label="مثال ساده">Se käy kauppaan. → اون می‌ره فروشگاه.</td>
+    </tr>
 
-    <tr><td class="fin">myy</td><td class="kersi">مُی</td><td class="farsi">بفروش</td><td class="reason">«مو می‌شه فروخت؟» آره دیگه، مو هم جنسه 💇‍♂️</td><td class="example">Myy tämä. → این رو بفروش.</td></tr>
+    <tr>
+      <td class="fin" data-label="فنلاندی">myy</td>
+      <td class="kersi" data-label="تلفظ کرسی">مُی</td>
+      <td class="farsi" data-label="معنی واقعی">بفروش</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«مو می‌شه فروخت؟» آره دیگه، مو هم جنسه 💇‍♂️</td>
+      <td class="example" data-label="مثال ساده">Myy tämä. → این رو بفروش.</td>
+    </tr>
 
-    <tr><td class="fin new">lääke</td><td class="kersi">لَکّه</td><td class="farsi">دارو</td><td class="reason">قرص بخور لکت بره 😂💊</td><td class="example">Ota lääke. → دارو بگیر.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">lääke</td>
+      <td class="kersi" data-label="تلفظ کرسی">لَکّه</td>
+      <td class="farsi" data-label="معنی واقعی">دارو</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">قرص بخور لکت بره 😂💊</td>
+      <td class="example" data-label="مثال ساده">Ota lääke. → دارو بگیر.</td>
+    </tr>
 
-    <tr><td class="fin new">lääkkeen</td><td class="kersi">لَکِّن</td><td class="farsi">داروی (مفعولی)</td><td class="reason">«رنگِ دارو» رو می‌خوام! 😭</td><td class="example">Lääkkeen väri. → رنگِ دارو.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">lääkkeen</td>
+      <td class="kersi" data-label="تلفظ کرسی">لَکِّن</td>
+      <td class="farsi" data-label="معنی واقعی">داروی (مفعولی)</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«رنگِ دارو» رو می‌خوام! 😭</td>
+      <td class="example" data-label="مثال ساده">Lääkkeen väri. → رنگِ دارو.</td>
+    </tr>
 
-    <tr><td class="fin new">avaa</td><td class="kersi">آوا</td><td class="farsi">باز می‌کنه</td><td class="reason">«آوا بازه!» یعنی در بازه، درِ خونه رو وا کن 😂🚪</td><td class="example">Avaa ovi! → در رو باز کن!</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">avaa</td>
+      <td class="kersi" data-label="تلفظ کرسی">آوا</td>
+      <td class="farsi" data-label="معنی واقعی">باز می‌کنه</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«آوا بازه!» یعنی در بازه، درِ خونه رو وا کن 😂🚪</td>
+      <td class="example" data-label="مثال ساده">Avaa ovi! → در رو باز کن!</td>
+    </tr>
 
-    <tr><td class="fin new">siivoon</td><td class="kersi">سیوون</td><td class="farsi">تمیز می‌کنم</td><td class="reason">«سیوون تمیز می‌کنم!» انگار داره سیب‌زمینی تمیز می‌کنه 🥔🧹</td><td class="example">Minä siivoon. → من تمیز می‌کنم.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">siivoon</td>
+      <td class="kersi" data-label="تلفظ کرسی">سیوون</td>
+      <td class="farsi" data-label="معنی واقعی">تمیز می‌کنم</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«سیوون تمیز می‌کنم!» انگار داره سیب‌زمینی تمیز می‌کنه 🥔🧹</td>
+      <td class="example" data-label="مثال ساده">Minä siivoon. → من تمیز می‌کنم.</td>
+    </tr>
 
-    <tr><td class="fin new">mittaa</td><td class="kersi">میتا</td><td class="farsi">اندازه می‌گیره</td><td class="reason">«میتا اندازه می‌گیره!» یعنی متر رو بردار ببین چند سانت شده 😂📏</td><td class="example">Hän mittaa pituutta. → اون قد رو اندازه می‌گیره.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">mittaa</td>
+      <td class="kersi" data-label="تلفظ کرسی">میتا</td>
+      <td class="farsi" data-label="معنی واقعی">اندازه می‌گیره</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«میتا اندازه می‌گیره!» یعنی متر رو بردار ببین چند سانت شده 😂📏</td>
+      <td class="example" data-label="مثال ساده">Hän mittaa pituutta. → اون قد رو اندازه می‌گیره.</td>
+    </tr>
 
-    <tr><td class="fin new">tapaan</td><td class="kersi">تاپان</td><td class="farsi">ملاقات می‌کنم</td><td class="reason">«تاپان ملاقات می‌کنم!» یعنی تاپان میاد پیشم، آماده باش 😏</td><td class="example">Tapaan ystävän. → دوستامو ملاقات می‌کنم.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">tapaan</td>
+      <td class="kersi" data-label="تلفظ کرسی">تاپان</td>
+      <td class="farsi" data-label="معنی واقعی">ملاقات می‌کنم</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«تاپان ملاقات می‌کنم!» یعنی تاپان میاد پیشم، آماده باش 😏</td>
+      <td class="example" data-label="مثال ساده">Tapaan ystävän. → دوستامو ملاقات می‌کنم.</td>
+    </tr>
 
-    <tr><td class="fin new">taloon</td><td class="kersi">تالون</td><td class="farsi">به خانه (حالت داخل‌ رفتن)</td><td class="reason">«از دالون می‌ره تو خونه!» دقیقاً همون چیزی که مامان داد می‌زنه 🚪🏠</td><td class="example">Menen taloon. → می‌رم تو خونه.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">taloon</td>
+      <td class="kersi" data-label="تلفظ کرسی">تالون</td>
+      <td class="farsi" data-label="معنی واقعی">به خانه (حالت داخل‌ رفتن)</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«از دالون می‌ره تو خونه!» دقیقاً همون چیزی که مامان داد می‌زنه 🚪🏠</td>
+      <td class="example" data-label="مثال ساده">Menen taloon. → می‌رم تو خونه.</td>
+    </tr>
 
-    <tr><td class="fin new">autossa</td><td class="kersi">اوتوسا</td><td class="farsi">در ماشین (حالت داخل بودن)</td><td class="reason">«اتوسا تو ماشینه!» اتوسا جون سوار شو دیگه 🚗</td><td class="example">Istun autossa. → تو ماشین نشستم.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">autossa</td>
+      <td class="kersi" data-label="تلفظ کرسی">اوتوسا</td>
+      <td class="farsi" data-label="معنی واقعی">در ماشین (حالت داخل بودن)</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«اتوسا تو ماشینه!» اتوسا جون سوار شو دیگه 🚗</td>
+      <td class="example" data-label="مثال ساده">Istun autossa. → تو ماشین نشستم.</td>
+    </tr>
 
-    <!-- موارد جدید درخواست‌شده -->
-    <tr><td class="fin new">tule</td><td class="kersi">توله</td><td class="farsi">بیا</td><td class="reason">«توله اومد!» انگار سگ کوچولو داره دم تکون می‌ده 🐶</td><td class="example">Tule tänne! → بیا اینجا!</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">tule</td>
+      <td class="kersi" data-label="تلفظ کرسی">توله</td>
+      <td class="farsi" data-label="معنی واقعی">بیا</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«توله اومد!» انگار سگ کوچولو داره دم تکون می‌ده 🐶</td>
+      <td class="example" data-label="مثال ساده">Tule tänne! → بیا اینجا!</td>
+    </tr>
 
-    <tr><td class="fin new">mene</td><td class="kersi">منه</td><td class="farsi">برو</td><td class="reason">«منه رفت، ممه رفت!» دقیقاً همون چیزی که بچه‌ها تو کوچه داد می‌زنن 😭</td><td class="example">Mene pois! → برو اون‌ور!</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">mene</td>
+      <td class="kersi" data-label="تلفظ کرسی">منه</td>
+      <td class="farsi" data-label="معنی واقعی">برو</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«منه رفت، ممه رفت!» دقیقاً همون چیزی که بچه‌ها تو کوچه داد می‌زنن 😭</td>
+      <td class="example" data-label="مثال ساده">Mene pois! → برو اون‌ور!</td>
+    </tr>
 
-    <tr><td class="fin new">pestä</td><td class="kersi">پِستا</td><td class="farsi">شستن</td><td class="reason">«پیستا شستن!» مامان داره دستور می‌ده پسته‌ها رو بشوریم 🥜🧼</td><td class="example">Minä pestä astiat. → ظرف‌ها رو می‌شورم.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">pestä</td>
+      <td class="kersi" data-label="تلفظ کرسی">پِستا</td>
+      <td class="farsi" data-label="معنی واقعی">شستن</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«پیستا شستن!» مامان داره دستور می‌ده پسته‌ها رو بشوریم 🥜🧼</td>
+      <td class="example" data-label="مثال ساده">Minä pestä astiat. → ظرف‌ها رو می‌شورم.</td>
+    </tr>
 
-    <tr><td class="fin new">nukkua</td><td class="kersi">نوکّوا</td><td class="farsi">خوابیدن</td><td class="reason">«نوکون بخوابم!» یعنی می‌خوام برم نوکون بخوابم 😂😴</td><td class="example">Minä menen nukkumaan. → می‌رم بخوابم.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">nukkua</td>
+      <td class="kersi" data-label="تلفظ کرسی">نوکّوا</td>
+      <td class="farsi" data-label="معنی واقعی">خوابیدن</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«نوکون بخوابم!» یعنی می‌خوام برم نوکون بخوابم 😂😴</td>
+      <td class="example" data-label="مثال ساده">Minä menen nukkumaan. → می‌رم بخوابم.</td>
+    </tr>
 
-    <tr><td class="fin new">osaamme</td><td class="kersi">اوسامه</td><td class="farsi">ما بلدیم / می‌توانیم</td><td class="reason">«اوسامه بلدیم!» انگار داریم می‌گیم اسامه بن‌لادن بلده 😂🗿</td><td class="example">Me osaamme suomea. → ما فنلاندی بلدیم.</td></tr>
+    <tr>
+      <td class="fin new" data-label="فنلاندی">osaamme</td>
+      <td class="kersi" data-label="تلفظ کرسی">اوسامه</td>
+      <td class="farsi" data-label="معنی واقعی">ما بلدیم / می‌توانیم</td>
+      <td class="reason" data-label="چرا مردم دارن از خنده می‌میرن؟">«اوسامه بلدیم!» انگار داریم می‌گیم اسامه بن‌لادن بلده 😂🗿</td>
+      <td class="example" data-label="مثال ساده">Me osaamme suomea. → ما فنلاندی بلدیم.</td>
+    </tr>
 
-    <!-- قوانین گرامری -->
     <tr>
        <td colspan="5" class="rules">
-     برای صدا با a دار، a را فقط تو بردار</b>
- اگه ختم به da بود، دا رو ببر، ادا بود</b>
- اگر که la, na, ra, sta, آخر فعل ما بود، e بذا جاش < صفا کون </b>
-نوع ۴  تا داره، قبلش صدا دار داره
-ota, uta  یا ata همه بغیر ita، تا رو سریع تو آ کن بعدش به من دعا کن. Kpt معکوس داره kpt رو دوس داره. </b>
-تو نوع ۵ ریشه، آخر کار ita بود، چنجش بکن به itse مثالشم valitsen
+         **قوانین گرامر (Verb Types)**
+         <br>
+         برای صدا با **a** دار، **a** را فقط تو بردار</b>
+         اگه ختم به **da** بود، **دا** رو ببر، **ادا** بود</b>
+         اگر که **la**, **na**, **ra**, **sta**، آخر فعل ما بود، **e** بذا جاش < صفا کون </b>
+         نوع ۴  تا داره، قبلش صدا دار داره
+         **ota**, **uta** یا **ata** همه بغیر **ita**، تا رو سریع تو **آ** کن بعدش به من دعا کن. **Kpt** معکوس داره **kpt** رو دوس داره. </b>
+         تو نوع ۵ ریشه، آخر کار **ita** بود، چنجش بکن به **itse** مثالشم **valitsen**
       </td>
     </tr>
   </tbody>
