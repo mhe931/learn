@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مش و فابریک - ADA</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&family=Vazirmatn:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> خانه</a></li>
+            <li><a href="modeling.html"><i class="fa-solid fa-code-branch"></i> مدل‌سازی داده</a></li>
+            <li><a href="mesh-fabric.html" class="active"><i class="fa-solid fa-network-wired"></i> مش و فابریک</a></li>
+            <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> معماری هوش مصنوعی</a></li>
+            <li><a href="governance.html"><i class="fa-solid fa-scale-balanced"></i> حاکمیت</a></li>
+            <li style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 10px;">
+                <a href="../mesh-fabric.html" style="color: var(--gold);"><i class="fa-solid fa-language"></i> English
+                    (انگلیسی)</a>
+            </li>
+            <li><a href="../../index.html"><i class="fa-solid fa-arrow-right"></i> بازگشت به اصلی</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="breadcrumbs">
+            <a href="../../index.html">آموزش</a> <span>/</span> ADA <span>/</span> مش و فابریک
+        </div>
+
+        <h1>دیتا مش و دیتا فابریک</h1>
+
+        <!-- 1. Data Mesh -->
+        <div class="content-card">
+            <h2>چهار رکن دیتا مش</h2>
+            <div class="bilingual-split">
+                <div class="lang-fa">
+                    <p>تغییر پارادایم ژامک دهقانی شامل ۴ اصل متمایز است:</p>
+                    <ol style="margin-right: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>مالکیت مبتنی بر حوزه (Domain Ownership):</strong>
+                            تمرکززدایی مالکیت. فروش
+                            مالک داده‌های فروش است.</li>
+                        <li style="margin-bottom: 10px;"><strong class="highlight-gold">داده به عنوان محصول (Data as a
+                                Product):</strong> با
+                            داده مثل یک آیفون رفتار کنید. باید قابل استفاده و قابل اعتماد باشد.</li>
+                        <li style="margin-bottom: 10px;"><strong>زیرساخت داده سلف‌سرویس:</strong> تیم مرکزی "فرودگاه" را
+                            می‌سازد، حوزه‌ها "هواپیماهای" خود را پرواز می‌دهند.</li>
+                        <li style="margin-bottom: 10px;"><strong>حاکمیت محاسباتی فدرال:</strong> استانداردهای جهانی،
+                            اجرای محلی.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Federated Governance Deep Dive -->
+        <div class="content-card">
+            <h2>حاکمیت محاسباتی فدرال (Federated Governance)</h2>
+            <div class="bilingual-split">
+                <div class="lang-fa">
+                    <p><strong>تمثیل:</strong> به <strong>اتحادیه اروپا (EU)</strong> فکر کنید.</p>
+                    <p>
+                        اتحادیه اروپا می‌گوید: "همه پریزها باید USB-C باشند" (استاندارد جهانی).<br>
+                        فرانسه می‌گوید: "ما از USB-C برای شارژ باگت‌هایمان استفاده می‌کنیم" (اجرای محلی).
+                    </p>
+                    <p>
+                        در دیتا مش، تیم حاکمیت مرکزی قوانین جهانی را تعیین می‌کند (امنیت، فرمت‌های شناسه)، اما به
+                        حوزه‌ها اجازه می‌دهد تا هر چه می‌خواهند <em>در چهارچوب</em> آن قوانین بسازند.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Active Metadata -->
+        <div class="content-card">
+            <h2>فراداده فعال (Active Metadata - Data Fabric)</h2>
+            <div class="bilingual-split">
+                <div class="lang-fa">
+                    <p><strong>فراداده غیرفعال در برابر فعال:</strong></p>
+                    <ul>
+                        <li><strong>فراداده غیرفعال</strong> مثل یک <strong>نقشه کاغذی</strong> است. می‌گوید جاده کجاست،
+                            اما ترافیک را نادیده می‌گیرد.</li>
+                        <li><strong>فراداده فعال</strong> مثل <strong>GPS ویز یا گوگل مپ</strong> است. ترافیک (استفاده
+                            از داده) را می‌بیند و <em>به طور خودکار</em> مسیر شما را تغییر می‌دهد (بهینه‌سازی خطوط
+                            لوله).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exam-point">
+                <strong>سوال آزمون:</strong> ویژگی اصلی فراداده فعال چیست؟
+                <br>
+                <strong>پاسخ صحیح:</strong> تحلیل مداوم فراداده زمان اجرا برای ایجاد هشدارها یا توصیه‌های خودکار (مثلاً
+                متوقف کردن خط لوله در صورت کاهش کیفیت داده).
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-nav">
+            <a href="modeling.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
+                قبلی: مدل‌سازی</a>
+            <a href="ai-architecture.html" class="nav-btn">بعدی: معماری هوش مصنوعی <i class="fa-solid fa-arrow-right"
+                    style="margin-left: 10px;"></i></a>
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

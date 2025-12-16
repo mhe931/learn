@@ -26,6 +26,10 @@
             <li><a href="mesh-fabric.html"><i class="fa-solid fa-network-wired"></i> Mesh vs Fabric</a></li>
             <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> AI Architecture</a></li>
             <li><a href="governance.html"><i class="fa-solid fa-scale-balanced"></i> Governance</a></li>
+            <li style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 10px;">
+                <a href="persian/modeling.html" style="color: var(--gold);"><i class="fa-solid fa-language"></i> Persian
+                    (فارسی)</a>
+            </li>
             <li><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Main</a></li>
         </ul>
     </nav>
@@ -35,89 +39,56 @@
             <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> Modeling
         </div>
 
-        <h1>Advanced Data Modeling <span style="font-size: 0.5em; color: var(--subtext); margin-left:15px;">مدل‌سازی
-                پیشرفته داده</span></h1>
+        <h1>Advanced Data Modeling</h1>
 
         <!-- 1. Why This Matters -->
         <div class="content-card">
-            <div class="bilingual-split">
-                <div class="lang-en">
-                    <h2><i class="fa-solid fa-lightbulb" style="color: var(--gold); margin-right: 10px;"></i> Why This
-                        Matters</h2>
-                    <p>
-                        Imagine trying to build a skyscraper without a blueprint. You might stack bricks, but the moment
-                        you need to add a 50th floor, it collapses.
-                    </p>
-                    <p>
-                        <strong>Data Modeling</strong> is that blueprint. It solves the <em>Translation Problem</em>:
-                        Business people speak in "Profits", computers speak in "Bits". A good model ensures they agree.
-                    </p>
-                </div>
-                <div class="lang-fa">
-                    <h2>چرا این موضوع مهم است؟ <i class="fa-solid fa-lightbulb"
-                            style="color: var(--gold); margin-right: 10px;"></i></h2>
-                    <p>
-                        تصور کنید بخواهید یک آسمان‌خراش را بدون نقشه بسازید. شاید بتوانید آجرها را روی هم بچینید، اما
-                        لحظه‌ای که بخواهید طبقه پنجاهم را اضافه کنید، همه چیز فرو می‌ریزد.
-                    </p>
-                    <p>
-                        <strong>مدل‌سازی داده</strong> همان نقشه است. این کار <em>مشکل ترجمه</em> را حل می‌کند: افراد
-                        تجاری با زبان "سود" صحبت می‌کنند و رایانه‌ها با زبان "بیت". یک مدل خوب تضمین می‌کند که این دو با
-                        هم توافق دارند.
-                    </p>
-                </div>
-            </div>
+            <h2><i class="fa-solid fa-lightbulb" style="color: var(--gold); margin-right: 10px;"></i> Why This
+                Matters</h2>
+            <p>
+                Imagine trying to build a skyscraper without a blueprint. You might stack bricks, but the moment
+                you need to add a 50th floor, it collapses.
+            </p>
+            <p>
+                <strong>Data Modeling</strong> is that blueprint. It solves the <em>Translation Problem</em>:
+                Business people speak in "Profits", computers speak in "Bits". A good model ensures they agree.
+            </p>
         </div>
 
         <!-- 2. The Great Paradigm Wars -->
         <div class="content-card">
-            <div class="bilingual-split">
-                <div class="lang-en">
-                    <h2>The Great Paradigm Wars</h2>
-                    <p>There are 4 main champions in data architecture. You must know these for the exam.</p>
-                </div>
-                <div class="lang-fa">
-                    <h2>جنگ‌های بزرگ پارادایم</h2>
-                    <p>چهار قهرمان اصلی در معماری داده وجود دارند. برای آزمون باید این‌ها را بشناسید.</p>
-                </div>
-            </div>
+            <h2>The Great Paradigm Wars</h2>
+            <p>There are 4 main champions in data architecture. You must know these for the exam.</p>
 
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Paradigm / پارادایم</th>
-                            <th>Philosophy / فلسفه</th>
-                            <th>Key Concept / مفهوم کلیدی</th>
+                            <th>Paradigm</th>
+                            <th>Philosophy</th>
+                            <th>Key Concept</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Inmon (CIF)</strong></td>
-                            <td>Top-Down, 3NF, Enterprise View<br><span style="color:var(--subtext)">بالا به پایین، فرم
-                                    نرمال سوم</span></td>
-                            <td>Single Source of Truth<br><span style="color:var(--subtext)">منبع واحد حقیقت</span></td>
+                            <td>Top-Down, 3NF, Enterprise View</td>
+                            <td>Single Source of Truth</td>
                         </tr>
                         <tr>
                             <td><strong>Kimball</strong></td>
-                            <td>Bottom-Up, Dimensional<br><span style="color:var(--subtext)">پایین به بالا،
-                                    ابعادی</span></td>
-                            <td>Star Schema (Facts & Dimensions)<br><span style="color:var(--subtext)">طرح ستاره‌ای
-                                    (حقایق و ابعاد)</span></td>
+                            <td>Bottom-Up, Dimensional</td>
+                            <td>Star Schema (Facts & Dimensions)</td>
                         </tr>
                         <tr>
                             <td><strong>Data Vault</strong></td>
-                            <td>Hybrid, Auditable, Agile<br><span style="color:var(--subtext)">هیبریدی، قابل حسابرسی،
-                                    چابک</span></td>
-                            <td>Hubs, Links, Satellites<br><span style="color:var(--subtext)">هاب‌ها، لینک‌ها،
-                                    ماهواره‌ها</span></td>
+                            <td>Hybrid, Auditable, Agile</td>
+                            <td>Hubs, Links, Satellites</td>
                         </tr>
                         <tr>
                             <td><strong>Anchor (6NF)</strong></td>
-                            <td>Highly Evolving, Temporal<br><span style="color:var(--subtext)">بسیار تکامل‌پذیر،
-                                    زمانی</span></td>
-                            <td>6th Normal Form (Key-Value)<br><span style="color:var(--subtext)">فرم نرمال ششم</span>
-                            </td>
+                            <td>Highly Evolving, Temporal</td>
+                            <td>6th Normal Form (Key-Value)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -127,66 +98,47 @@
         <!-- 3. SCD Types 0-6 -->
         <div class="content-card">
             <h2>Slowly Changing Dimensions (SCD Types)</h2>
-            <div class="bilingual-split">
-                <div class="lang-en">
-                    <p>How do we handle change? (e.g., Someone moves from "London" to "Paris").</p>
-                </div>
-                <div class="lang-fa">
-                    <p>چگونه تغییرات را مدیریت کنیم؟ (مثلاً کسی از "لندن" به "پاریس" نقل مکان می‌کند).</p>
-                </div>
-            </div>
+            <p>How do we handle change? (e.g., Someone moves from "London" to "Paris").</p>
 
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th style="width: 10%;">Type</th>
-                            <th>Description (English)</th>
-                            <th style="font-family:'Vazirmatn'; text-align:right;">توضیحات (فارسی)</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Type 0</strong></td>
                             <td><strong>Fixed/Static.</strong> Never changes (e.g., Birth Date).</td>
-                            <td class="lang-fa"><strong>ثابت.</strong> هرگز تغییر نمی‌کند (مثل تاریخ تولد).</td>
                         </tr>
                         <tr>
                             <td><strong>Type 1</strong></td>
                             <td><strong>Overwrite.</strong> No history. Updates the old value. (Typo correction).</td>
-                            <td class="lang-fa"><strong>بازنویسی.</strong> بدون تاریخچه. مقدار قدیمی پاک می‌شود.</td>
                         </tr>
                         <tr style="background: rgba(255, 215, 0, 0.05); border-left: 3px solid var(--gold);">
                             <td><strong class="highlight-gold">Type 2</strong></td>
                             <td><strong>Add Row.</strong> The Industry Standard. Keep old row, insert new row with
                                 Effective Date.</td>
-                            <td class="lang-fa"><strong class="highlight-gold">افزودن سطر.</strong> استاندارد صنعت. نگه
-                                داشتن سطر قدیمی، درج سطر جدید با تاریخ اجرا.</td>
                         </tr>
                         <tr>
                             <td><strong>Type 3</strong></td>
                             <td><strong>New Column.</strong> Add "Previous_City" column. Good for minimal history.</td>
-                            <td class="lang-fa"><strong>ستون جدید.</strong> افزودن ستون "شهر_قبلی". خوب برای تاریخچه
-                                محدود.</td>
                         </tr>
                         <tr>
                             <td><strong>Type 4</strong></td>
                             <td><strong>History Table.</strong> Separate "Customer" (Current) and "Customer_History"
                                 tables.</td>
-                            <td class="lang-fa"><strong>جدول تاریخچه.</strong> جدا کردن جدول "مشتری" (فعلی) و
-                                "تاریخچه_مشتری".</td>
                         </tr>
                         <tr>
                             <td><strong>Type 5</strong></td>
                             <td><strong>Type 4 + 1.</strong> Hybrid approach.</td>
-                            <td class="lang-fa">ترکیبی از نوع ۴ و ۱.</td>
                         </tr>
                         <tr>
                             <td><strong>Type 6</strong></td>
                             <td><strong>Hybrid (1+2+3).</strong> Complex. Start with Type 2, overwrite a column (Type
                                 1), keep history (Type 3).</td>
-                            <td class="lang-fa"><strong>هیبریدی.</strong> پیچیده. ترکیبی از انواع ۱، ۲ و ۳ برای حداکثر
-                                انعطاف.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -202,31 +154,15 @@
 
         <!-- 4. Kimball Bus Matrix -->
         <div class="content-card">
-            <div class="bilingual-split">
-                <div class="lang-en">
-                    <h2>Kimball Bus Matrix</h2>
-                    <p>
-                        The tool to identify <strong>Conformed Dimensions</strong>. It maps "Business Processes" (Rows)
-                        to "Dimensions" (Columns).
-                    </p>
-                    <p>
-                        *If a Dimension (like Date) applies to multiple processes (Sales, Inventory), it is
-                        <strong>Conformed</strong>.*
-                    </p>
-                </div>
-                <div class="lang-fa">
-                    <h2>ماتریس باس کیمبال</h2>
-                    <p>
-                        ابزاری برای شناسایی <strong>ابعاد منطبق (Conformed)</strong>. این ابزار "فرآیندهای تجاری"
-                        (سطرها)
-                        را به "ابعاد" (ستون‌ها) نگاشت می‌کند.
-                    </p>
-                    <p>
-                        *اگر یک بعد (مثل تاریخ) در چندین فرآیند (فروش، موجودی) صدق کند، به آن <strong>منطبق</strong>
-                        می‌گویند.*
-                    </p>
-                </div>
-            </div>
+            <h2>Kimball Bus Matrix</h2>
+            <p>
+                The tool to identify <strong>Conformed Dimensions</strong>. It maps "Business Processes" (Rows)
+                to "Dimensions" (Columns).
+            </p>
+            <p>
+                *If a Dimension (like Date) applies to multiple processes (Sales, Inventory), it is
+                <strong>Conformed</strong>.*
+            </p>
 
             <div class="table-container">
                 <table style="text-align: center;">
@@ -269,82 +205,44 @@
         <!-- 5. Data Vault Components -->
         <div class="content-card">
             <h2>Data Vault Components</h2>
-            <div class="bilingual-split">
-                <div class="lang-en">
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 20px;">
-                            <strong style="color: #00D4FF;">HUB (The Key):</strong> Contains only the unique Business
-                            Keys (e.g., Customer Hash Key, ID, Load Date). *Does not change.*
-                        </li>
-                        <li style="margin-bottom: 20px;">
-                            <strong style="color: #FF4500;">LINK (The Relationship):</strong> Connects Hubs together.
-                            (e.g., Customer bought Product).
-                        </li>
-                        <li>
-                            <strong style="color: #FFD700;">SATELLITE (The Context):</strong> Where the actual data
-                            lives (Name, Address, Price). Can have multiple Satellites per Hub.
-                        </li>
-                    </ul>
-                </div>
-                <div class="lang-fa">
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 20px;">
-                            <strong style="color: #00D4FF;">هاب (کلید):</strong> فقط حاوی کلیدهای تجاری منحصر به فرد
-                            است (مثل شناسه مشتری). *تغییر نمی‌کند.*
-                        </li>
-                        <li style="margin-bottom: 20px;">
-                            <strong style="color: #FF4500;">لینک (رابطه):</strong> هاب‌ها را به هم متصل می‌کند (مثلاً
-                            مشتری محصولی را خرید).
-                        </li>
-                        <li>
-                            <strong style="color: #FFD700;">ماهواره (زمینه):</strong> جایی که داده‌های واقعی زندگی
-                            می‌کنند (نام، آدرس، قیمت).
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <ul style="list-style: none;">
+                <li style="margin-bottom: 20px;">
+                    <strong style="color: #00D4FF;">HUB (The Key):</strong> Contains only the unique Business
+                    Keys (e.g., Customer Hash Key, ID, Load Date). *Does not change.*
+                </li>
+                <li style="margin-bottom: 20px;">
+                    <strong style="color: #FF4500;">LINK (The Relationship):</strong> Connects Hubs together.
+                    (e.g., Customer bought Product).
+                </li>
+                <li>
+                    <strong style="color: #FFD700;">SATELLITE (The Context):</strong> Where the actual data
+                    lives (Name, Address, Price). Can have multiple Satellites per Hub.
+                </li>
+            </ul>
         </div>
 
         <!-- 6. Anchor Modeling (6NF) -->
         <div class="content-card">
             <h2>Anchor Modeling (6NF)</h2>
-            <div class="bilingual-split">
-                <div class="lang-en">
-                    <p>
-                        An extreme form of normalization (6th Normal Form).
-                    </p>
-                    <p>
-                        Instead of a table like `User(ID, Name, Email)`, you split it into 3 tables: `User_ID`,
-                        `User_Name(ID, Name)`, `User_Email(ID, Email)`.
-                    </p>
-                    <p>
-                        <strong>Benefit:</strong> You can add a new attribute (e.g., `User_Twitter`) without touching
-                        the existing tables. Perfect for highly evolving schemas.
-                    </p>
-                </div>
-                <div class="lang-fa">
-                    <p>
-                        یک شکل افراطی از نرمال‌سازی (فرم نرمال ششم).
-                    </p>
-                    <p>
-                        به جای یک جدول مثل `کاربر(شناسه، نام، ایمیل)`، آن را به ۳ جدول تقسیم می‌کنید: `شناسه`،
-                        `نام(شناسه،
-                        نام)`، `ایمیل(شناسه، ایمیل)`.
-                    </p>
-                    <p>
-                        <strong>مزیت:</strong> می‌توانید ویژگی جدیدی (مثل `توییتر`) اضافه کنید بدون اینکه به جداول موجود
-                        دست بزنید. عالی برای طرح‌های در حال تکامل.
-                    </p>
-                </div>
-            </div>
+            <p>
+                An extreme form of normalization (6th Normal Form).
+            </p>
+            <p>
+                Instead of a table like `User(ID, Name, Email)`, you split it into 3 tables: `User_ID`,
+                `User_Name(ID, Name)`, `User_Email(ID, Email)`.
+            </p>
+            <p>
+                <strong>Benefit:</strong> You can add a new attribute (e.g., `User_Twitter`) without touching
+                the existing tables. Perfect for highly evolving schemas.
+            </p>
         </div>
 
         <!-- Footer -->
         <div class="footer-nav">
             <a href="index.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
-                Prev: ADA Home / خانه</a>
-            <a href="mesh-fabric.html" class="nav-btn">Next: Mesh vs Fabric / مش و فابریک <i
-                    class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a>
+                Prev: ADA Home</a>
+            <a href="mesh-fabric.html" class="nav-btn">Next: Mesh vs Fabric <i class="fa-solid fa-arrow-right"
+                    style="margin-left: 10px;"></i></a>
         </div>
     </main>
 

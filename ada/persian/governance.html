@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاکمیت هوش مصنوعی - ADA</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&family=Vazirmatn:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> خانه</a></li>
+            <li><a href="modeling.html"><i class="fa-solid fa-code-branch"></i> مدل‌سازی داده</a></li>
+            <li><a href="mesh-fabric.html"><i class="fa-solid fa-network-wired"></i> مش و فابریک</a></li>
+            <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> معماری هوش مصنوعی</a></li>
+            <li><a href="governance.html" class="active"><i class="fa-solid fa-scale-balanced"></i> حاکمیت</a></li>
+            <li style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 10px;">
+                <a href="../governance.html" style="color: var(--gold);"><i class="fa-solid fa-language"></i> English
+                    (انگلیسی)</a>
+            </li>
+            <li><a href="../../index.html"><i class="fa-solid fa-arrow-right"></i> بازگشت به اصلی</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="breadcrumbs">
+            <a href="../../index.html">آموزش</a> <span>/</span> ADA <span>/</span> حاکمیت
+        </div>
+
+        <h1>حاکمیت و اخلاق هوش مصنوعی</h1>
+
+        <!-- 1. EU AI Act -->
+        <div class="content-card">
+            <h2>قانون هوش مصنوعی اتحادیه اروپا (EU AI Act)</h2>
+            <div class="bilingual-split">
+                <div class="lang-fa">
+                    <p>اولین قانون جامع هوش مصنوعی جهان، سیستم‌ها را بر اساس ریسک طبقه‌بندی می‌کند:</p>
+                    <ul>
+                        <li><strong style="color: #ff4444;">ریسک غیرقابل قبول:</strong> ممنوع. (امتیازدهی اجتماعی،
+                            بیومتریک زمان واقعی).</li>
+                        <li><strong class="highlight-gold">ریسک بالا:</strong> زیرساخت‌های حیاتی، استخدام، امتیازدهی
+                            اعتباری. نیاز به ارزیابی‌های دقیق انطباق دارد.</li>
+                        <li><strong>ریسک محدود:</strong> چت‌بات‌ها. نیاز به شفافیت دارد ("من یک هوش مصنوعی هستم").</li>
+                        <li><strong>ریسک حداقل:</strong> فیلترهای اسپم، بازی‌ها. بدون تعهد.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. NIST RMF -->
+        <div class="content-card">
+            <h2>فریم‌ورک مدیریت ریسک NIST (RMF)</h2>
+            <div class="bilingual-split">
+                <div class="lang-fa">
+                    <p>یک چارچوب داوطلبانه ایالات متحده بر اساس ۴ عملکرد:</p>
+                    <ol>
+                        <li><strong>GOVERN (حاکمیت):</strong> ترویج فرهنگ ریسک.</li>
+                        <li><strong>MAP (نگاشت):</strong> شناسایی زمینه و ریسک‌ها.</li>
+                        <li><strong>MEASURE (اندازه‌گیری):</strong> تحلیل کمی ریسک‌ها.</li>
+                        <li><strong>MANAGE (مدیریت):</strong> اولویت‌بندی و درمان ریسک‌ها.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. ISO 42001 vs Traficom -->
+        <div class="content-card">
+            <h2>بحث گواهینامه: ISO در مقابل Traficom</h2>
+            <div class="bilingual-split">
+                <div class="lang-fa">
+                    <p>نبرد برای برچسب‌های اعتماد:</p>
+                    <ul>
+                        <li><strong>ISO 42001:</strong> <strong>استاندارد جهانی</strong> برای سیستم‌های مدیریت هوش
+                            مصنوعی. سازمانی، سخت‌گیرانه، گران.</li>
+                        <li><strong>برچسب Traficom:</strong> <strong>رویکرد فنلاندی</strong>. یک برچسب چراغ راهنمایی
+                            داوطلبانه که شفافیت و امنیت اولیه را تضمین می‌کند.</li>
+                    </ul>
+                    <div class="exam-point">
+                        <strong>بحث آزمون:</strong> آیا شرکت‌ها باید به دنبال گواهینامه جهانی ISO باشند (سخت) یا
+                        برچسب‌های محلی (آسان)؟
+                        <br>
+                        <strong>پاسخ:</strong> شرکت‌های جهانی برای انطباق به ISO 42001 نیاز دارند. استارتاپ‌های محلی
+                        ممکن است Traficom را برای چابکی ترجیح دهند.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-nav">
+            <a href="ai-architecture.html" class="nav-btn"><i class="fa-solid fa-arrow-left"
+                    style="margin-right: 10px;"></i> قبلی: معماری هوش مصنوعی</a>
+            <a href="index.html" class="nav-btn">خانه <i class="fa-solid fa-home" style="margin-left: 10px;"></i></a>
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدل‌سازی و مبانی - ADA</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&family=Vazirmatn:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> خانه</a></li>
+            <li><a href="modeling.html" class="active"><i class="fa-solid fa-code-branch"></i> مدل‌سازی داده</a></li>
+            <li><a href="mesh-fabric.html"><i class="fa-solid fa-network-wired"></i> مش و فابریک</a></li>
+            <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> معماری هوش مصنوعی</a></li>
+            <li><a href="governance.html"><i class="fa-solid fa-scale-balanced"></i> حاکمیت</a></li>
+            <li style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 10px;">
+                <a href="../modeling.html" style="color: var(--gold);"><i class="fa-solid fa-language"></i> English
+                    (انگلیسی)</a>
+            </li>
+            <li><a href="../../index.html"><i class="fa-solid fa-arrow-right"></i> بازگشت به اصلی</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="breadcrumbs">
+            <a href="../../index.html">آموزش</a> <span>/</span> ADA <span>/</span> مدل‌سازی
+        </div>
+
+        <h1>مدل‌سازی پیشرفته داده</h1>
+
+        <!-- 1. Why This Matters -->
+        <div class="content-card">
+            <h2>چرا این موضوع مهم است؟ <i class="fa-solid fa-lightbulb"
+                    style="color: var(--gold); margin-right: 10px;"></i></h2>
+            <p>
+                تصور کنید بخواهید یک آسمان‌خراش را بدون نقشه بسازید. شاید بتوانید آجرها را روی هم بچینید، اما
+                لحظه‌ای که بخواهید طبقه پنجاهم را اضافه کنید، همه چیز فرو می‌ریزد.
+            </p>
+            <p>
+                <strong>مدل‌سازی داده</strong> همان نقشه است. این کار <em>مشکل ترجمه</em> را حل می‌کند: افراد
+                تجاری با زبان "سود" صحبت می‌کنند و رایانه‌ها با زبان "بیت". یک مدل خوب تضمین می‌کند که این دو با
+                هم توافق دارند.
+            </p>
+        </div>
+
+        <!-- 2. The Great Paradigm Wars -->
+        <div class="content-card">
+            <h2>جنگ‌های بزرگ پارادایم</h2>
+            <p>چهار قهرمان اصلی در معماری داده وجود دارند. برای آزمون باید این‌ها را بشناسید.</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>پارادایم</th>
+                            <th>فلسفه</th>
+                            <th>مفهوم کلیدی</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Inmon (CIF)</strong></td>
+                            <td>بالا به پایین، فرم نرمال سوم (3NF)</td>
+                            <td>منبع واحد حقیقت</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kimball</strong></td>
+                            <td>پایین به بالا، ابعادی</td>
+                            <td>طرح ستاره‌ای (حقایق و ابعاد)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Vault</strong></td>
+                            <td>هیبریدی، قابل حسابرسی، چابک</td>
+                            <td>هاب‌ها، لینک‌ها، ماهواره‌ها</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anchor (6NF)</strong></td>
+                            <td>بسیار تکامل‌پذیر، زمان‌محور</td>
+                            <td>فرم نرمال ششم (کلید-مقدار)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3. SCD Types 0-6 -->
+        <div class="content-card">
+            <h2>Slowly Changing Dimensions (انواع SCD)</h2>
+            <p>چگونه تغییرات را مدیریت کنیم؟ (مثلاً کسی از "لندن" به "پاریس" نقل مکان می‌کند).</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">نوع (Type)</th>
+                            <th>توضیحات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Type 0</strong></td>
+                            <td><strong>ثابت.</strong> هرگز تغییر نمی‌کند (مثل تاریخ تولد).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 1</strong></td>
+                            <td><strong>بازنویسی.</strong> بدون تاریخچه. مقدار قدیمی پاک می‌شود (اصلاح غلط املایی).</td>
+                        </tr>
+                        <tr style="background: rgba(255, 215, 0, 0.05); border-left: 3px solid var(--gold);">
+                            <td><strong class="highlight-gold">Type 2</strong></td>
+                            <td><strong class="highlight-gold">افزودن سطر.</strong> استاندارد صنعت. نگه
+                                داشتن سطر قدیمی، درج سطر جدید با تاریخ اجرا.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 3</strong></td>
+                            <td><strong>ستون جدید.</strong> افزودن ستون "شهر_قبلی". خوب برای تاریخچه محدود.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 4</strong></td>
+                            <td><strong>جدول تاریخچه.</strong> جدا کردن جدول "مشتری" (فعلی) و
+                                "تاریخچه_مشتری".</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 5</strong></td>
+                            <td>ترکیبی از نوع ۴ و ۱ (Type 4 + 1).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 6</strong></td>
+                            <td><strong>هیبریدی.</strong> پیچیده. ترکیبی از انواع ۱، ۲ و ۳ برای حداکثر انعطاف.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="exam-point">
+                <strong>سوال آزمون:</strong> SCD Type 2 چیست؟
+                <br>
+                <strong>پاسخ صحیح:</strong> افزودن یک سطر جدید با مهر زمانی برای ردیابی تغییرات تاریخی بدون حذف داده‌های
+                قدیمی.
+            </div>
+        </div>
+
+        <!-- 4. Kimball Bus Matrix -->
+        <div class="content-card">
+            <h2>ماتریس باس کیمبال (Kimball Bus Matrix)</h2>
+            <p>
+                ابزاری برای شناسایی <strong>ابعاد منطبق (Conformed Dimensions)</strong>. این ابزار "فرآیندهای تجاری"
+                (سطرها)
+                را به "ابعاد" (ستون‌ها) نگاشت می‌کند.
+            </p>
+            <p>
+                *اگر یک بعد (مثل تاریخ) در چندین فرآیند (فروش، موجودی) صدق کند، به آن <strong>منطبق (Conformed)</strong>
+                می‌گویند.*
+            </p>
+
+            <div class="table-container">
+                <table style="text-align: center;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: right;">فرآیند / ابعاد</th>
+                            <th>تاریخ 📅</th>
+                            <th>مشتری 👤</th>
+                            <th>محصول 📦</th>
+                            <th>فروشگاه 🏪</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: right;"><strong>فروش خرده‌فروشی</strong></td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;"><strong>موجودی (انبار)</strong></td>
+                            <td>✅</td>
+                            <td style="opacity: 0.3;">-</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;"><strong>حمل و نقل</strong></td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td style="opacity: 0.3;">-</td>
+                            <td style="opacity: 0.3;">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 5. Data Vault Components -->
+        <div class="content-card">
+            <h2>اجزای دیتا والت (Data Vault)</h2>
+            <ul style="list-style: none;">
+                <li style="margin-bottom: 20px;">
+                    <strong style="color: #00D4FF;">HUB (هاب - کلید):</strong> فقط حاوی کلیدهای تجاری منحصر به فرد
+                    است (مثل شناسه مشتری، هش). *تغییر نمی‌کند.*
+                </li>
+                <li style="margin-bottom: 20px;">
+                    <strong style="color: #FF4500;">LINK (لینک - رابطه):</strong> هاب‌ها را به هم متصل می‌کند (مثلاً
+                    مشتری محصولی را خرید).
+                </li>
+                <li>
+                    <strong style="color: #FFD700;">SATELLITE (ماهواره - زمینه):</strong> جایی که داده‌های واقعی زندگی
+                    می‌کنند (نام، آدرس، قیمت). می‌تواند چندین ماهواره برای هر هاب داشته باشد.
+                </li>
+            </ul>
+        </div>
+
+        <!-- 6. Anchor Modeling (6NF) -->
+        <div class="content-card">
+            <h2>مدل‌سازی لنگر (Anchor Modeling - 6NF)</h2>
+            <p>
+                یک شکل افراطی از نرمال‌سازی (فرم نرمال ششم).
+            </p>
+            <p>
+                به جای یک جدول مثل `کاربر(شناسه، نام، ایمیل)`، آن را به ۳ جدول تقسیم می‌کنید: `شناسه`، `نام(شناسه،
+                نام)`، `ایمیل(شناسه، ایمیل)`.
+            </p>
+            <p>
+                <strong>مزیت:</strong> می‌توانید ویژگی جدیدی (مثل `توییتر`) اضافه کنید بدون اینکه به جداول موجود
+                دست بزنید. عالی برای طرح‌های در حال تکامل سریع.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-nav">
+            <a href="index.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
+                قبلی: خانه</a>
+            <a href="mesh-fabric.html" class="nav-btn">بعدی: مش و فابریک <i class="fa-solid fa-arrow-right"
+                    style="margin-left: 10px;"></i></a>
+        </div>
+    </main>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
