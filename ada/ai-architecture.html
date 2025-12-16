@@ -34,45 +34,116 @@
             <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> AI & Agents
         </div>
 
-        <h1>AI & Agentic Systems</h1>
+        <h1>AI & Agentic Systems <span style="font-size: 0.5em; color: var(--subtext); margin-left:15px;">هوش مصنوعی و
+                سیستم‌های عامل‌گرا</span></h1>
 
+        <!-- 1. Evolution -->
         <div class="content-card">
             <h2>The Evolution of GenAI</h2>
-            <p>From static models to dynamic agents, the landscape is shifting rapidly:</p>
-            <ul>
-                <li><strong>LLM (Large Language Model):</strong> The foundation. Static knowledge up to training cutoff.
-                </li>
-                <li><strong>RAG (Retrieval-Augmented Generation):</strong> Injecting context. Connecting LLMs to vector
-                    databases for private data access.</li>
-                <li><strong>Graph RAG:</strong> Structured context. Using Knowledge Graphs to provide semantic
-                    relationships to the LLM, reducing hallucinations.</li>
-                <li><strong style="color: var(--gold); border-bottom: 2px solid var(--gold);">Agentic AI:</strong>
-                    Systems that can reason, plan, and execute actions. Agents don't just answer; they DO.</li>
-            </ul>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p>The journey from simple Chatbots to autonomous Agents:</p>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px;">
+                            <strong>1. LLM (Large Language Model):</strong> Static. "I read the internet until 2023."
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <strong>2. RAG (Retrieval-Augmented Generation):</strong> Dynamic. "I can look up your PDF
+                            files."
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <strong>3. Graph RAG:</strong> Structured. "I understand how 'Apple' (the company) relates
+                            to 'iPhone' (the product) using a Knowledge Graph."
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <strong class="highlight-gold">4. Agentic AI:</strong> Action-Oriented. "I don't just talk.
+                            I can book a flight, write code, and deploy servers."
+                        </li>
+                    </ul>
+                </div>
+                <div class="lang-fa">
+                    <p>سفر از چت‌بات‌های ساده به عامل‌های خودمختار:</p>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 15px;">
+                            <strong>۱. LLM (مدل زبانی بزرگ):</strong> ایستا. "من اینترنت را تا سال ۲۰۲۳ خوانده‌ام."
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <strong>۲. RAG (تولید افزوده به بازیابی):</strong> پویا. "من می‌توانم فایل‌های PDF شما را
+                            جستجو کنم."
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <strong>۳. Graph RAG:</strong> ساختاریافته. "من می‌فهمم چگونه 'اپل' (شرکت) به 'آیفون'
+                            (محصول) مرتبط است با استفاده از گراف دانش."
+                        </li>
+                        <li style="margin-bottom: 15px;">
+                            <strong class="highlight-gold">۴. هوش مصنوعی عامل‌گرا:</strong> عمل‌گرا. "من فقط حرف
+                            نمی‌زنم. من می‌توانم پرواز رزرو کنم، کد بنویسم و سرورها را مستقر کنم."
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exam-point">
+                <strong>EXAM QUESTION:</strong> What distinguishes Agentic AI from standard RAG?
+                <br>
+                <strong>CORRECT ANSWER:</strong> <strong>Agency</strong> (The ability to plan, reason, and execute
+                actions autonomously), whereas RAG only retrieves information.
+            </div>
         </div>
 
+        <!-- 2. MCP -->
         <div class="content-card">
             <h2>Model Context Protocol (MCP)</h2>
-            <p>A standardized way to provide context to models. Instead of messy prompts, MCP defines a schema for how
-                models perceive their environment, tools, and memory. It enables interoperability between different AI
-                agents and tools.</p>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p><strong>The "USB-C" of AI.</strong></p>
+                    <p>
+                        Before MCP, connecting an AI to a tool (like Google Drive or Slack) required custom code for
+                        every single integration.
+                    </p>
+                    <p>
+                        <strong>MCP</strong> creates a standard "socket". If a tool speaks MCP, ANY Agent can use it
+                        instantly. It is the backbone of the <strong>A2A (Agent-to-Agent)</strong> economy.
+                    </p>
+                </div>
+                <div class="lang-fa">
+                    <p><strong>یو‌اس‌بی-سی (USB-C) دنیای هوش مصنوعی.</strong></p>
+                    <p>
+                        قبل از MCP، اتصال هوش مصنوعی به یک ابزار (مثل گوگل درایو یا اسلک) نیاز به کدنویسی سفارشی برای هر
+                        ادغام داشت.
+                    </p>
+                    <p>
+                        <strong>MCP</strong> یک "سوکت" استاندارد ایجاد می‌کند. اگر ابزاری با زبان MCP صحبت کند، هر عاملی
+                        می‌تواند فوراً از آن استفاده کند. این ستون فقرات اقتصاد <strong>A2A (عامل به عامل)</strong> است.
+                    </p>
+                </div>
+            </div>
         </div>
 
+        <!-- 3. Multi-Agent Patterns -->
         <div class="content-card">
-            <h2>Multi-Agent Systems (MAS)</h2>
-            <p>Orchestrating specialized agents to solve complex problems. Patterns include:</p>
-            <ul>
-                <li><strong>Hierarchical:</strong> A "Manager" agent delegates tasks to worker agents.</li>
-                <li><strong>Sequential:</strong> Output of one agent becomes input for the next (Chain of Thought).</li>
-                <li><strong>Joint Collaboration:</strong> Agents debate and refine answers (e.g., a "Coder" and a
-                    "Reviewer").</li>
-            </ul>
+            <h2>Multi-Agent Patterns</h2>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p>How agents work together:</p>
+                    <ul>
+                        <li><strong>Sequential:</strong> Assembly line (Writer -> Editor -> Publisher).</li>
+                        <li><strong>Hierarchical:</strong> Boss -> Worker. The "Boss" breaks down the task.</li>
+                    </ul>
+                </div>
+                <div class="lang-fa">
+                    <p>چگونه عامل‌ها با هم کار می‌کنند:</p>
+                    <ul>
+                        <li><strong>توالی:</strong> خط مونتاژ (نویسنده -> ویراستار -> ناشر).</li>
+                        <li><strong>سلسله‌مراتبی:</strong> رئیس -> کارگر. "رئیس" وظیفه را خرد می‌کند.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <div class="footer-nav">
             <a href="mesh-fabric.html" class="nav-btn"><i class="fa-solid fa-arrow-left"
-                    style="margin-right: 10px;"></i> Prev: Mesh vs Fabric</a>
-            <a href="governance.html" class="nav-btn">Next: Governance <i class="fa-solid fa-arrow-right"
+                    style="margin-right: 10px;"></i> Prev: Mesh vs Fabric / مش و فابریک</a>
+            <a href="governance.html" class="nav-btn">Next: Governance / حاکمیت <i class="fa-solid fa-arrow-right"
                     style="margin-left: 10px;"></i></a>
         </div>
     </main>

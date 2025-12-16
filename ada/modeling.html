@@ -35,176 +35,316 @@
             <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> Modeling
         </div>
 
-        <h1>Advanced Data Modeling</h1>
+        <h1>Advanced Data Modeling <span style="font-size: 0.5em; color: var(--subtext); margin-left:15px;">مدل‌سازی
+                پیشرفته داده</span></h1>
 
         <!-- 1. Why This Matters -->
         <div class="content-card">
-            <h2><i class="fa-solid fa-lightbulb" style="color: var(--gold); margin-right: 10px;"></i> Why This Matters
-            </h2>
-            <p>
-                Imagine trying to build a skyscraper without a blueprint. You might stack bricks, but the moment you
-                need to add a 50th floor or change the plumbing, the whole thing collapses.
-            </p>
-            <p>
-                <strong>Data Modeling</strong> is that blueprint for information. In the business world, it solves a
-                massive problem:
-                <em>Translation</em>. Business people speak in "profits" and "customers," while computers speak in
-                "bits" and "tables."
-                A good model ensures that when the CEO asks for "Total Sales," the database gives the correct number,
-                not a random guess.
-            </p>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <h2><i class="fa-solid fa-lightbulb" style="color: var(--gold); margin-right: 10px;"></i> Why This
+                        Matters</h2>
+                    <p>
+                        Imagine trying to build a skyscraper without a blueprint. You might stack bricks, but the moment
+                        you need to add a 50th floor, it collapses.
+                    </p>
+                    <p>
+                        <strong>Data Modeling</strong> is that blueprint. It solves the <em>Translation Problem</em>:
+                        Business people speak in "Profits", computers speak in "Bits". A good model ensures they agree.
+                    </p>
+                </div>
+                <div class="lang-fa">
+                    <h2>چرا این موضوع مهم است؟ <i class="fa-solid fa-lightbulb"
+                            style="color: var(--gold); margin-right: 10px;"></i></h2>
+                    <p>
+                        تصور کنید بخواهید یک آسمان‌خراش را بدون نقشه بسازید. شاید بتوانید آجرها را روی هم بچینید، اما
+                        لحظه‌ای که بخواهید طبقه پنجاهم را اضافه کنید، همه چیز فرو می‌ریزد.
+                    </p>
+                    <p>
+                        <strong>مدل‌سازی داده</strong> همان نقشه است. این کار <em>مشکل ترجمه</em> را حل می‌کند: افراد
+                        تجاری با زبان "سود" صحبت می‌کنند و رایانه‌ها با زبان "بیت". یک مدل خوب تضمین می‌کند که این دو با
+                        هم توافق دارند.
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <!-- 2. Foundations: History & Jargon -->
+        <!-- 2. The Great Paradigm Wars -->
         <div class="content-card">
-            <h2>Foundations & Historical Context</h2>
-
-            <div class="definition-box">
-                <h4><i class="fa-solid fa-book-open"></i> Core Concept: The Schema</h4>
-                <p>
-                    <strong>Jargon:</strong> "Schema"<br>
-                    <strong>Plain English:</strong> The designated "shape" of your data. Think of it like an empty Excel
-                    template with column headers (Name, Age, ID) before you type any data in.
-                </p>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <h2>The Great Paradigm Wars</h2>
+                    <p>There are 4 main champions in data architecture. You must know these for the exam.</p>
+                </div>
+                <div class="lang-fa">
+                    <h2>جنگ‌های بزرگ پارادایم</h2>
+                    <p>چهار قهرمان اصلی در معماری داده وجود دارند. برای آزمون باید این‌ها را بشناسید.</p>
+                </div>
             </div>
 
-            <h3>Sibley’s Three-Level Architecture (1977)</h3>
-            <p>
-                Before we had modern clouds, <strong class="text-gold">Edgar Sibley</strong> defined the rules that
-                still run the world. He split data systems into three layers to stop them from breaking:
-            </p>
-            <ul>
-                <li><strong>1. External Schema (The User View):</strong> What you see on your screen (e.g., an App
-                    interface).</li>
-                <li><strong>2. Conceptual Schema (The Logic):</strong> The maps and rules (e.g., "A User has one
-                    Password"). Independent of technology.</li>
-                <li><strong>3. Internal Schema (The Machine):</strong> How the hard drive strictly stores the 1s and 0s.
-                </li>
-            </ul>
-
-            <h3 style="margin-top: 30px;">Frameworks: TOGAF vs. Zachman</h3>
-            <p>You will hear these acronyms constantly. Here is the difference:</p>
-            <ul>
-                <li>
-                    <strong>TOGAF (The Process):</strong> A step-by-step guide on <em>how</em> to build architecture.
-                    <br><em>Analogy:</em> The <strong>Recipe</strong> for baking a cake (Step 1, Step 2...).
-                </li>
-                <li>
-                    <strong>Zachman (The Taxonomy):</strong> A categorization of <em>what</em> needs to be built.
-                    <br><em>Analogy:</em> The <strong>Ingredients List</strong> categorized by aisle (Dairy, Flour,
-                    Spices).
-                </li>
-            </ul>
-        </div>
-
-        <!-- 3. The Modeling Cheat Sheet -->
-        <div class="content-card">
-            <h2>The Great Paradigm Wars: A Cheat Sheet</h2>
-            <p>Data Architects have fought for decades over the "best" way to organize data. Here are the four champions
-                you typically choose from:</p>
-
-            <div style="overflow-x: auto;">
+            <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Paradigm</th>
-                            <th>Author / Origin</th>
-                            <th>Philosophy (The "Vibe")</th>
-                            <th>Best Use Case</th>
+                            <th>Paradigm / پارادایم</th>
+                            <th>Philosophy / فلسفه</th>
+                            <th>Key Concept / مفهوم کلیدی</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Inmon (CIF)</strong></td>
-                            <td>Bill Inmon (Father of DW)</td>
-                            <td><strong>Top-Down / 3NF</strong><br>Single Source of Truth. Normalized. Strict.</td>
-                            <td>Enterprise-wide consistency, compliance, banks.</td>
+                            <td>Top-Down, 3NF, Enterprise View<br><span style="color:var(--subtext)">بالا به پایین، فرم
+                                    نرمال سوم</span></td>
+                            <td>Single Source of Truth<br><span style="color:var(--subtext)">منبع واحد حقیقت</span></td>
                         </tr>
                         <tr>
                             <td><strong>Kimball</strong></td>
-                            <td>Ralph Kimball</td>
-                            <td><strong>Bottom-Up / Star Schema</strong><br>Fast for queries. Facts & Dimensions.
-                                User-friendly.</td>
-                            <td>BI Dashboards, Tableau/PowerBI, fast reporting.</td>
+                            <td>Bottom-Up, Dimensional<br><span style="color:var(--subtext)">پایین به بالا،
+                                    ابعادی</span></td>
+                            <td>Star Schema (Facts & Dimensions)<br><span style="color:var(--subtext)">طرح ستاره‌ای
+                                    (حقایق و ابعاد)</span></td>
                         </tr>
                         <tr>
                             <td><strong>Data Vault</strong></td>
-                            <td>Dan Linstedt</td>
-                            <td><strong>Hybrid / Hub-Sat-Link</strong><br>Auditable. Agnostic. Absorbs change like a
-                                sponge.</td>
-                            <td>Big Data, frequent source system changes, audit trails.</td>
+                            <td>Hybrid, Auditable, Agile<br><span style="color:var(--subtext)">هیبریدی، قابل حسابرسی،
+                                    چابک</span></td>
+                            <td>Hubs, Links, Satellites<br><span style="color:var(--subtext)">هاب‌ها، لینک‌ها،
+                                    ماهواره‌ها</span></td>
                         </tr>
                         <tr>
-                            <td><strong>Anchor</strong></td>
-                            <td>Lars Rönnbäck</td>
-                            <td><strong>6NF / Highly Agile</strong><br>Everything is separate. Only add, never delete.
+                            <td><strong>Anchor (6NF)</strong></td>
+                            <td>Highly Evolving, Temporal<br><span style="color:var(--subtext)">بسیار تکامل‌پذیر،
+                                    زمانی</span></td>
+                            <td>6th Normal Form (Key-Value)<br><span style="color:var(--subtext)">فرم نرمال ششم</span>
                             </td>
-                            <td>Extreme agility, scientific data, evolving schemas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3. SCD Types 0-6 -->
+        <div class="content-card">
+            <h2>Slowly Changing Dimensions (SCD Types)</h2>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p>How do we handle change? (e.g., Someone moves from "London" to "Paris").</p>
+                </div>
+                <div class="lang-fa">
+                    <p>چگونه تغییرات را مدیریت کنیم؟ (مثلاً کسی از "لندن" به "پاریس" نقل مکان می‌کند).</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">Type</th>
+                            <th>Description (English)</th>
+                            <th style="font-family:'Vazirmatn'; text-align:right;">توضیحات (فارسی)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Type 0</strong></td>
+                            <td><strong>Fixed/Static.</strong> Never changes (e.g., Birth Date).</td>
+                            <td class="lang-fa"><strong>ثابت.</strong> هرگز تغییر نمی‌کند (مثل تاریخ تولد).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 1</strong></td>
+                            <td><strong>Overwrite.</strong> No history. Updates the old value. (Typo correction).</td>
+                            <td class="lang-fa"><strong>بازنویسی.</strong> بدون تاریخچه. مقدار قدیمی پاک می‌شود.</td>
+                        </tr>
+                        <tr style="background: rgba(255, 215, 0, 0.05); border-left: 3px solid var(--gold);">
+                            <td><strong class="highlight-gold">Type 2</strong></td>
+                            <td><strong>Add Row.</strong> The Industry Standard. Keep old row, insert new row with
+                                Effective Date.</td>
+                            <td class="lang-fa"><strong class="highlight-gold">افزودن سطر.</strong> استاندارد صنعت. نگه
+                                داشتن سطر قدیمی، درج سطر جدید با تاریخ اجرا.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 3</strong></td>
+                            <td><strong>New Column.</strong> Add "Previous_City" column. Good for minimal history.</td>
+                            <td class="lang-fa"><strong>ستون جدید.</strong> افزودن ستون "شهر_قبلی". خوب برای تاریخچه
+                                محدود.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 4</strong></td>
+                            <td><strong>History Table.</strong> Separate "Customer" (Current) and "Customer_History"
+                                tables.</td>
+                            <td class="lang-fa"><strong>جدول تاریخچه.</strong> جدا کردن جدول "مشتری" (فعلی) و
+                                "تاریخچه_مشتری".</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 5</strong></td>
+                            <td><strong>Type 4 + 1.</strong> Hybrid approach.</td>
+                            <td class="lang-fa">ترکیبی از نوع ۴ و ۱.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 6</strong></td>
+                            <td><strong>Hybrid (1+2+3).</strong> Complex. Start with Type 2, overwrite a column (Type
+                                1), keep history (Type 3).</td>
+                            <td class="lang-fa"><strong>هیبریدی.</strong> پیچیده. ترکیبی از انواع ۱، ۲ و ۳ برای حداکثر
+                                انعطاف.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <div class="exam-point">
-                <strong>EXAM QUESTION:</strong> Which modeling technique primarily uses 6th Normal Form (6NF)?
+                <strong>EXAM QUESTION:</strong> What is SCD Type 2?
                 <br>
-                <strong>CORRECT ANSWER:</strong> <strong>Anchor Modeling</strong>. It decomposes attributes into
-                separate tables to handle high agility and temporal history.
+                <strong>CORRECT ANSWER:</strong> Adding a new row with timestamps to track historical changes without
+                deleting old data.
             </div>
         </div>
 
-        <!-- 4. Deep Dive: SCDs -->
+        <!-- 4. Kimball Bus Matrix -->
         <div class="content-card">
-            <h2>Slowly Changing Dimensions (SCD)</h2>
-            <p>
-                Data changes over time. People move, products get renamed. "SCDs" are how we track this history.
-            </p>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <h2>Kimball Bus Matrix</h2>
+                    <p>
+                        The tool to identify <strong>Conformed Dimensions</strong>. It maps "Business Processes" (Rows)
+                        to "Dimensions" (Columns).
+                    </p>
+                    <p>
+                        *If a Dimension (like Date) applies to multiple processes (Sales, Inventory), it is
+                        <strong>Conformed</strong>.*
+                    </p>
+                </div>
+                <div class="lang-fa">
+                    <h2>ماتریس باس کیمبال</h2>
+                    <p>
+                        ابزاری برای شناسایی <strong>ابعاد منطبق (Conformed)</strong>. این ابزار "فرآیندهای تجاری"
+                        (سطرها)
+                        را به "ابعاد" (ستون‌ها) نگاشت می‌کند.
+                    </p>
+                    <p>
+                        *اگر یک بعد (مثل تاریخ) در چندین فرآیند (فروش، موجودی) صدق کند، به آن <strong>منطبق</strong>
+                        می‌گویند.*
+                    </p>
+                </div>
+            </div>
 
-            <h3>The Top 3 Types (Midterm Essential)</h3>
-            <ul>
-                <li><strong>Type 0 (Static):</strong> Never changes. (Example: Date of Birth).</li>
-                <li><strong>Type 1 (Overwrite):</strong> The "Oops" fix. Replaces old data with new. No history kept.
-                    (Example: Correcting a typo in a name).</li>
-                <li>
-                    <strong style="color: var(--gold); font-size: 1.2em;">Type 2 (Add Row):</strong>
-                    The Gold Standard. When data changes, we keep the old row and add a new one with a new version
-                    number.
-                    <br><em>Result:</em> You have full history of exactly where a customer lived at any point in time.
-                </li>
-            </ul>
-
-            <div class="exam-point">
-                <strong>EXAM QUESTION:</strong> What is the most common technique for preserving historical attribute
-                values in a data warehouse?
-                <br>
-                <strong>CORRECT ANSWER:</strong> <strong>SCD Type 2</strong> (Adding a new row with effective dates).
+            <div class="table-container">
+                <table style="text-align: center;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Process / Dimensions</th>
+                            <th>Date 📅</th>
+                            <th>Customer 👤</th>
+                            <th>Product 📦</th>
+                            <th>Store 🏪</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: left;"><strong>Retail Sales</strong></td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"><strong>Inventory</strong></td>
+                            <td>✅</td>
+                            <td style="opacity: 0.3;">-</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;"><strong>Shipping</strong></td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td style="opacity: 0.3;">-</td>
+                            <td style="opacity: 0.3;">-</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <!-- 5. 3NF & Normalization -->
+        <!-- 5. Data Vault Components -->
         <div class="content-card">
-            <h2>Deep Dive: 3rd Normal Form (3NF)</h2>
-            <p>
-                <strong>Inmon's</strong> preferred style. The goal is to <strong class="text-gold">eliminate
-                    redundancy</strong>.
-            </p>
-            <p>
-                <em>The Mantra:</em> "Every attribute must depend on the Key, the Whole Key, and Nothing but the Key."
-            </p>
-            <ul>
-                <li><strong>1NF:</strong> Atomic values (No lists in a single cell).</li>
-                <li><strong>2NF:</strong> No partial dependencies (Everything relates to the ID).</li>
-                <li><strong>3NF:</strong> No transitive dependencies (Columns shouldn't depend on other non-key
-                    columns).</li>
-            </ul>
+            <h2>Data Vault Components</h2>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 20px;">
+                            <strong style="color: #00D4FF;">HUB (The Key):</strong> Contains only the unique Business
+                            Keys (e.g., Customer Hash Key, ID, Load Date). *Does not change.*
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <strong style="color: #FF4500;">LINK (The Relationship):</strong> Connects Hubs together.
+                            (e.g., Customer bought Product).
+                        </li>
+                        <li>
+                            <strong style="color: #FFD700;">SATELLITE (The Context):</strong> Where the actual data
+                            lives (Name, Address, Price). Can have multiple Satellites per Hub.
+                        </li>
+                    </ul>
+                </div>
+                <div class="lang-fa">
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 20px;">
+                            <strong style="color: #00D4FF;">هاب (کلید):</strong> فقط حاوی کلیدهای تجاری منحصر به فرد
+                            است (مثل شناسه مشتری). *تغییر نمی‌کند.*
+                        </li>
+                        <li style="margin-bottom: 20px;">
+                            <strong style="color: #FF4500;">لینک (رابطه):</strong> هاب‌ها را به هم متصل می‌کند (مثلاً
+                            مشتری محصولی را خرید).
+                        </li>
+                        <li>
+                            <strong style="color: #FFD700;">ماهواره (زمینه):</strong> جایی که داده‌های واقعی زندگی
+                            می‌کنند (نام، آدرس، قیمت).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Anchor Modeling (6NF) -->
+        <div class="content-card">
+            <h2>Anchor Modeling (6NF)</h2>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p>
+                        An extreme form of normalization (6th Normal Form).
+                    </p>
+                    <p>
+                        Instead of a table like `User(ID, Name, Email)`, you split it into 3 tables: `User_ID`,
+                        `User_Name(ID, Name)`, `User_Email(ID, Email)`.
+                    </p>
+                    <p>
+                        <strong>Benefit:</strong> You can add a new attribute (e.g., `User_Twitter`) without touching
+                        the existing tables. Perfect for highly evolving schemas.
+                    </p>
+                </div>
+                <div class="lang-fa">
+                    <p>
+                        یک شکل افراطی از نرمال‌سازی (فرم نرمال ششم).
+                    </p>
+                    <p>
+                        به جای یک جدول مثل `کاربر(شناسه، نام، ایمیل)`، آن را به ۳ جدول تقسیم می‌کنید: `شناسه`،
+                        `نام(شناسه،
+                        نام)`، `ایمیل(شناسه، ایمیل)`.
+                    </p>
+                    <p>
+                        <strong>مزیت:</strong> می‌توانید ویژگی جدیدی (مثل `توییتر`) اضافه کنید بدون اینکه به جداول موجود
+                        دست بزنید. عالی برای طرح‌های در حال تکامل.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
         <div class="footer-nav">
             <a href="index.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
-                Prev: ADA Home</a>
-            <a href="mesh-fabric.html" class="nav-btn">Next: Mesh vs Fabric <i class="fa-solid fa-arrow-right"
-                    style="margin-left: 10px;"></i></a>
+                Prev: ADA Home / خانه</a>
+            <a href="mesh-fabric.html" class="nav-btn">Next: Mesh vs Fabric / مش و فابریک <i
+                    class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a>
         </div>
     </main>
 

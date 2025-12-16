@@ -35,41 +35,109 @@
             <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> Mesh vs Fabric
         </div>
 
-        <h1>Data Mesh & Data Fabric</h1>
+        <h1>Data Mesh & Data Fabric <span style="font-size: 0.5em; color: var(--subtext); margin-left:15px;">دیتا مش و
+                دیتا فابریک</span></h1>
 
+        <!-- 1. Data Mesh -->
         <div class="content-card">
             <h2>The 4 Pillars of Data Mesh</h2>
-            <p>Zhamak Dehghani's paradigm shift from centralized monoliths to decentralized socio-technical
-                architecture.</p>
-            <ol>
-                <li><strong>Domain-Oriented Ownership:</strong> Decentralize data ownership to the people who know it
-                    best.</li>
-                <li><strong style="color: var(--gold); border-bottom: 2px solid var(--gold);">Data as a
-                        Product:</strong> Apply product thinking to data. It must be discoverable, addressable,
-                    trustworthy, self-describing, interoperable, and secure.</li>
-                <li><strong>Self-Serve Data Infrastructure:</strong> A platform that abstracts complexity, allowing
-                    domains to build valid data products easily.</li>
-                <li><strong>Federated Computational Governance:</strong> Global standards applied locally to ensure
-                    interoperability.</li>
-            </ol>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p>Zhamak Dehghani's paradigm shift involves 4 distinct principles:</p>
+                    <ol style="margin-left: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>Domain-Oriented Ownership:</strong> Decentralize
+                            ownership. Sales owns Sales Data. Marketing owns Marketing Data.</li>
+                        <li style="margin-bottom: 10px;"><strong class="highlight-gold">Data as a Product:</strong>
+                            Treat data like an iPhone. It must be usable, documented, and reliable.</li>
+                        <li style="margin-bottom: 10px;"><strong>Self-Serve Data Infrastructure:</strong> A central team
+                            builds the "Airport", domains fly their own "Planes".</li>
+                        <li style="margin-bottom: 10px;"><strong>Federated Computational Governance:</strong> Global
+                            standards, local execution.</li>
+                    </ol>
+                </div>
+                <div class="lang-fa">
+                    <p>تغییر پارادایم ژامک دهقانی شامل ۴ اصل متمایز است:</p>
+                    <ol style="margin-right: 20px;">
+                        <li style="margin-bottom: 10px;"><strong>مالکیت مبتنی بر حوزه:</strong> تمرکززدایی مالکیت. فروش
+                            مالک داده‌های فروش است.</li>
+                        <li style="margin-bottom: 10px;"><strong class="highlight-gold">داده به عنوان محصول:</strong> با
+                            داده مثل یک آیفون رفتار کنید. باید قابل استفاده و قابل اعتماد باشد.</li>
+                        <li style="margin-bottom: 10px;"><strong>زیرساخت داده سلف‌سرویس:</strong> تیم مرکزی "فرودگاه" را
+                            می‌سازد، حوزه‌ها "هواپیماهای" خود را پرواز می‌دهند.</li>
+                        <li style="margin-bottom: 10px;"><strong>حاکمیت محاسباتی فدرال:</strong> استانداردهای جهانی،
+                            اجرای محلی.</li>
+                    </ol>
+                </div>
+            </div>
         </div>
 
+        <!-- 2. Federated Governance Deep Dive -->
         <div class="content-card">
-            <h2>Data Fabric: The Metadata Engine</h2>
-            <p>While Data Mesh is organizational, <strong>Data Fabric</strong> is technological. It uses active
-                metadata, knowledge graphs, and AI to weave together disparate data sources.</p>
-            <ul>
-                <li><strong>Auto-Discovery:</strong> Automatically inferring schemas and lineage.</li>
-                <li><strong>Augmented Data Management:</strong> AI-driven recommendations for integration.</li>
-                <li><strong>Virtualization:</strong> Accessing data where it lives without moving it.</li>
-            </ul>
+            <h2>Federated Computational Governance</h2>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p><strong>The Analogy:</strong> Think of the <strong>European Union (EU)</strong>.</p>
+                    <p>
+                        The EU says: "All plugs must be USB-C" (Global Standard).<br>
+                        France says: "We will use USB-C to charge our baguettes" (Local Execution).
+                    </p>
+                    <p>
+                        In Data Mesh, the central governance team sets global rules (Security, ID formats), but allows
+                        domains to build whatever they want <em>within</em> those rules.
+                    </p>
+                </div>
+                <div class="lang-fa">
+                    <p><strong>تمثیل:</strong> به <strong>اتحادیه اروپا (EU)</strong> فکر کنید.</p>
+                    <p>
+                        اتحادیه اروپا می‌گوید: "همه پریزها باید USB-C باشند" (استاندارد جهانی).<br>
+                        فرانسه می‌گوید: "ما از USB-C برای شارژ باگت‌هایمان استفاده می‌کنیم" (اجرای محلی).
+                    </p>
+                    <p>
+                        در دیتا مش، تیم حاکمیت مرکزی قوانین جهانی را تعیین می‌کند (امنیت، فرمت‌های شناسه)، اما به
+                        حوزه‌ها اجازه می‌دهد تا هر چه می‌خواهند <em>در چهارچوب</em> آن قوانین بسازند.
+                    </p>
+                </div>
+            </div>
         </div>
 
+        <!-- 3. Active Metadata -->
+        <div class="content-card">
+            <h2>Active Metadata (Data Fabric)</h2>
+            <div class="bilingual-split">
+                <div class="lang-en">
+                    <p><strong>Passive vs. Active:</strong></p>
+                    <ul>
+                        <li><strong>Passive Metadata</strong> is like a paper <strong>Map</strong>. It tells you where
+                            the road is, but ignores traffic.</li>
+                        <li><strong>Active Metadata</strong> is like <strong>Waze/Google Maps GPS</strong>. It sees
+                            traffic (data usage) and <em>automatically</em> re-routes you (optimizes pipelines).</li>
+                    </ul>
+                </div>
+                <div class="lang-fa">
+                    <p><strong>فراداده غیرفعال در برابر فعال:</strong></p>
+                    <ul>
+                        <li><strong>فراداده غیرفعال</strong> مثل یک <strong>نقشه کاغذی</strong> است. می‌گوید جاده کجاست،
+                            اما ترافیک را نادیده می‌گیرد.</li>
+                        <li><strong>فراداده فعال</strong> مثل <strong>GPS ویز یا گوگل مپ</strong> است. ترافیک (استفاده
+                            از داده) را می‌بیند و <em>به طور خودکار</em> مسیر شما را تغییر می‌دهد (بهینه‌سازی خطوط
+                            لوله).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="exam-point">
+                <strong>EXAM QUESTION:</strong> What is the core characteristic of Active Metadata?
+                <br>
+                <strong>CORRECT ANSWER:</strong> Continuous analysis of runtime metadata to trigger automatic alerts or
+                recommendations (e.g., stopping a pipeline if data quality drops).
+            </div>
+        </div>
+
+        <!-- Footer -->
         <div class="footer-nav">
             <a href="modeling.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
-                Prev: Modeling</a>
-            <a href="ai-architecture.html" class="nav-btn">Next: AI Architecture <i class="fa-solid fa-arrow-right"
-                    style="margin-left: 10px;"></i></a>
+                Prev: Modeling / مدل‌سازی</a>
+            <a href="ai-architecture.html" class="nav-btn">Next: AI Architecture / معماری هوش مصنوعی <i
+                    class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i></a>
         </div>
     </main>
 
