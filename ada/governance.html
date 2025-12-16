@@ -1,60 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Governance - ADA Self-Study</title>
+    <title>AI Governance - ADA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>5. AI Governance</h1>
-            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        </header>
 
-        <div class="sidebar" id="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="foundations.html">1. Foundational Principles</a></li>
-                    <li><a href="modeling.html">2. Data Modeling & Warehousing</a></li>
-                    <li><a href="mesh-fabric.html">3. Advanced Paradigms</a></li>
-                    <li><a href="ai-architecture.html">4. AI & Agentic AI</a></li>
-                    <li><a href="governance.html" class="active">5. AI Governance</a></li>
-                </ul>
-            </nav>
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> Home</a></li>
+            <li><a href="modeling.html"><i class="fa-solid fa-code-branch"></i> Data Modeling</a></li>
+            <li><a href="mesh-fabric.html"><i class="fa-solid fa-network-wired"></i> Mesh vs Fabric</a></li>
+            <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> AI Architecture</a></li>
+            <li><a href="governance.html" class="active"><i class="fa-solid fa-scale-balanced"></i> Governance</a></li>
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Main</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="breadcrumbs">
+            <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> Governance
         </div>
 
-        <main class="main-content">
-            <h2>Content Coming Soon</h2>
-            <p>This section will address AI risks like hallucination and bias, ethical considerations, the role of human-in-the-loop, and key regulatory frameworks including the EU AI Act, the NIST AI RMF, and the emerging ISO 42001 certification for AI.</p>
+        <h1>AI Governance & Ethics</h1>
 
-            <div class="page-navigation">
-                <a href="ai-architecture.html">&laquo; Previous: AI & Agentic AI</a>
-                <a href="index.html">Back to Dashboard</a>
-                <a href="index.html">Next: Finish &raquo;</a>
+        <div class="content-card">
+            <h2>EU AI Act</h2>
+            <p>The world's first comprehensive AI law. It classifies AI systems by risk:</p>
+            <ul>
+                <li><strong style="color: #ff4444;">Unacceptable Risk:</strong> Banned (e.g., social scoring, real-time
+                    biometric ID).</li>
+                <li><strong style="color: var(--gold); border-bottom: 2px solid var(--gold);">High Risk:</strong>
+                    Critical infrastructure, employment, credit scoring. Requires strict conformity assessments.</li>
+                <li><strong>Limited Risk:</strong> Chatbots, emotion recognition. Requires transparency (labeling).</li>
+                <li><strong>Minimal Risk:</strong> Spam filters, video games. No obligations.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>NIST AI Risk Management Framework (RMF)</h2>
+            <p>A voluntary framework to better manage risks to individuals, organizations, and society.</p>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                    <h3 style="margin:0; color: var(--neon);">GOVERN</h3>
+                    <p style="font-size: 0.9em; margin-top: 5px;">Culture of risk management.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                    <h3 style="margin:0; color: var(--neon);">MAP</h3>
+                    <p style="font-size: 0.9em; margin-top: 5px;">Context and risks identified.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                    <h3 style="margin:0; color: var(--neon);">MEASURE</h3>
+                    <p style="font-size: 0.9em; margin-top: 5px;">Analyze and track risks.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                    <h3 style="margin:0; color: var(--neon);">MANAGE</h3>
+                    <p style="font-size: 0.9em; margin-top: 5px;">Prioritize and treat risks.</p>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+
+        <div class="content-card">
+            <h2>IBM AI Risk Atlas</h2>
+            <p>A taxonomy of risks associated with AI, including:</p>
+            <ul>
+                <li><strong>Input/Output Risks:</strong> Hallucinations, Poisoning.</li>
+                <li><strong>Model Risks:</strong> Bias, Drift, Overfitting.</li>
+                <li><strong>System Risks:</strong> Security, Privacy, Compute usage.</li>
+            </ul>
+        </div>
+
+        <div class="footer-nav">
+            <a href="ai-architecture.html" class="nav-btn"><i class="fa-solid fa-arrow-left"
+                    style="margin-right: 10px;"></i> Prev: AI Architecture</a>
+            <a href="index.html" class="nav-btn">Back to Home <i class="fa-solid fa-home"
+                    style="margin-left: 10px;"></i></a>
+        </div>
+    </main>
 
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        document.addEventListener('click', function(event) {
-            const isClickInsideSidebar = sidebar.contains(event.target);
-            const isClickOnMenuToggle = menuToggle.contains(event.target);
-
-            if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
     </script>
 </body>
+
 </html>

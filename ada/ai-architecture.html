@@ -1,60 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Agentic AI - ADA Self-Study</title>
+    <title>AI & Agentic Systems - ADA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>4. AI & Agentic AI</h1>
-            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        </header>
 
-        <div class="sidebar" id="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="foundations.html">1. Foundational Principles</a></li>
-                    <li><a href="modeling.html">2. Data Modeling & Warehousing</a></li>
-                    <li><a href="mesh-fabric.html">3. Advanced Paradigms</a></li>
-                    <li><a href="ai-architecture.html" class="active">4. AI & Agentic AI</a></li>
-                    <li><a href="governance.html">5. AI Governance</a></li>
-                </ul>
-            </nav>
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> Home</a></li>
+            <li><a href="modeling.html"><i class="fa-solid fa-code-branch"></i> Data Modeling</a></li>
+            <li><a href="mesh-fabric.html"><i class="fa-solid fa-network-wired"></i> Mesh vs Fabric</a></li>
+            <li><a href="ai-architecture.html" class="active"><i class="fa-solid fa-brain"></i> AI Architecture</a></li>
+            <li><a href="governance.html"><i class="fa-solid fa-scale-balanced"></i> Governance</a></li>
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Main</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="breadcrumbs">
+            <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> AI & Agents
         </div>
 
-        <main class="main-content">
-            <h2>Content Coming Soon</h2>
-            <p>This section will cover the evolution from traditional AI to Agentic AI. It will discuss Retrieval-Augmented Generation (RAG), the use of tools, the concept of multi-agent systems, and the Mission Compute Platform (MCP).</p>
+        <h1>AI & Agentic Systems</h1>
 
-            <div class="page-navigation">
-                <a href="mesh-fabric.html">&laquo; Previous: Advanced Paradigms</a>
-                <a href="index.html">Back to Dashboard</a>
-                <a href="governance.html">Next: AI Governance &raquo;</a>
-            </div>
-        </main>
-    </div>
+        <div class="content-card">
+            <h2>The Evolution of GenAI</h2>
+            <p>From static models to dynamic agents, the landscape is shifting rapidly:</p>
+            <ul>
+                <li><strong>LLM (Large Language Model):</strong> The foundation. Static knowledge up to training cutoff.
+                </li>
+                <li><strong>RAG (Retrieval-Augmented Generation):</strong> Injecting context. Connecting LLMs to vector
+                    databases for private data access.</li>
+                <li><strong>Graph RAG:</strong> Structured context. Using Knowledge Graphs to provide semantic
+                    relationships to the LLM, reducing hallucinations.</li>
+                <li><strong style="color: var(--gold); border-bottom: 2px solid var(--gold);">Agentic AI:</strong>
+                    Systems that can reason, plan, and execute actions. Agents don't just answer; they DO.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>Model Context Protocol (MCP)</h2>
+            <p>A standardized way to provide context to models. Instead of messy prompts, MCP defines a schema for how
+                models perceive their environment, tools, and memory. It enables interoperability between different AI
+                agents and tools.</p>
+        </div>
+
+        <div class="content-card">
+            <h2>Multi-Agent Systems (MAS)</h2>
+            <p>Orchestrating specialized agents to solve complex problems. Patterns include:</p>
+            <ul>
+                <li><strong>Hierarchical:</strong> A "Manager" agent delegates tasks to worker agents.</li>
+                <li><strong>Sequential:</strong> Output of one agent becomes input for the next (Chain of Thought).</li>
+                <li><strong>Joint Collaboration:</strong> Agents debate and refine answers (e.g., a "Coder" and a
+                    "Reviewer").</li>
+            </ul>
+        </div>
+
+        <div class="footer-nav">
+            <a href="mesh-fabric.html" class="nav-btn"><i class="fa-solid fa-arrow-left"
+                    style="margin-right: 10px;"></i> Prev: Mesh vs Fabric</a>
+            <a href="governance.html" class="nav-btn">Next: Governance <i class="fa-solid fa-arrow-right"
+                    style="margin-left: 10px;"></i></a>
+        </div>
+    </main>
 
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        document.addEventListener('click', function(event) {
-            const isClickInsideSidebar = sidebar.contains(event.target);
-            const isClickOnMenuToggle = menuToggle.contains(event.target);
-
-            if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
     </script>
 </body>
+
 </html>

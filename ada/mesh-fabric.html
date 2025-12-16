@@ -1,60 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Paradigms - ADA Self-Study</title>
+    <title>Data Mesh vs Fabric - ADA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>3. Advanced Paradigms</h1>
-            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        </header>
 
-        <div class="sidebar" id="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="foundations.html">1. Foundational Principles</a></li>
-                    <li><a href="modeling.html">2. Data Modeling & Warehousing</a></li>
-                    <li><a href="mesh-fabric.html" class="active">3. Advanced Paradigms</a></li>
-                    <li><a href="ai-architecture.html">4. AI & Agentic AI</a></li>
-                    <li><a href="governance.html">5. AI Governance</a></li>
-                </ul>
-            </nav>
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> Home</a></li>
+            <li><a href="modeling.html"><i class="fa-solid fa-code-branch"></i> Data Modeling</a></li>
+            <li><a href="mesh-fabric.html" class="active"><i class="fa-solid fa-network-wired"></i> Mesh vs Fabric</a>
+            </li>
+            <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> AI Architecture</a></li>
+            <li><a href="governance.html"><i class="fa-solid fa-scale-balanced"></i> Governance</a></li>
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Main</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="breadcrumbs">
+            <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> Mesh vs Fabric
         </div>
 
-        <main class="main-content">
-            <h2>Content Coming Soon</h2>
-            <p>This section will provide a deep dive into Data Mesh and Data Fabric. It will cover the four principles of Data Mesh (decentralized ownership, data as a product, self-serve platform, and federated governance) and contrast it with the AI-driven, integration-focused approach of Data Fabric.</p>
+        <h1>Data Mesh & Data Fabric</h1>
 
-            <div class="page-navigation">
-                <a href="modeling.html">&laquo; Previous: Data Modeling</a>
-                <a href="index.html">Back to Dashboard</a>
-                <a href="ai-architecture.html">Next: AI & Agentic AI &raquo;</a>
-            </div>
-        </main>
-    </div>
+        <div class="content-card">
+            <h2>The 4 Pillars of Data Mesh</h2>
+            <p>Zhamak Dehghani's paradigm shift from centralized monoliths to decentralized socio-technical
+                architecture.</p>
+            <ol>
+                <li><strong>Domain-Oriented Ownership:</strong> Decentralize data ownership to the people who know it
+                    best.</li>
+                <li><strong style="color: var(--gold); border-bottom: 2px solid var(--gold);">Data as a
+                        Product:</strong> Apply product thinking to data. It must be discoverable, addressable,
+                    trustworthy, self-describing, interoperable, and secure.</li>
+                <li><strong>Self-Serve Data Infrastructure:</strong> A platform that abstracts complexity, allowing
+                    domains to build valid data products easily.</li>
+                <li><strong>Federated Computational Governance:</strong> Global standards applied locally to ensure
+                    interoperability.</li>
+            </ol>
+        </div>
+
+        <div class="content-card">
+            <h2>Data Fabric: The Metadata Engine</h2>
+            <p>While Data Mesh is organizational, <strong>Data Fabric</strong> is technological. It uses active
+                metadata, knowledge graphs, and AI to weave together disparate data sources.</p>
+            <ul>
+                <li><strong>Auto-Discovery:</strong> Automatically inferring schemas and lineage.</li>
+                <li><strong>Augmented Data Management:</strong> AI-driven recommendations for integration.</li>
+                <li><strong>Virtualization:</strong> Accessing data where it lives without moving it.</li>
+            </ul>
+        </div>
+
+        <div class="footer-nav">
+            <a href="modeling.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
+                Prev: Modeling</a>
+            <a href="ai-architecture.html" class="nav-btn">Next: AI Architecture <i class="fa-solid fa-arrow-right"
+                    style="margin-left: 10px;"></i></a>
+        </div>
+    </main>
 
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        document.addEventListener('click', function(event) {
-            const isClickInsideSidebar = sidebar.contains(event.target);
-            const isClickOnMenuToggle = menuToggle.contains(event.target);
-
-            if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
     </script>
 </body>
+
 </html>

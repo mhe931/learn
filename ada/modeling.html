@@ -1,162 +1,111 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Modeling & Warehousing - ADA Self-Study</title>
+    <title>Advanced Data Modeling - ADA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>2. Data Modeling & Warehousing</h1>
-            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
-        </header>
 
-        <div class="sidebar" id="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Dashboard</a></li>
-                    <li><a href="foundations.html">1. Foundational Principles</a></li>
-                    <li><a href="modeling.html" class="active">2. Data Modeling & Warehousing</a></li>
-                    <li><a href="mesh-fabric.html">3. Advanced Paradigms</a></li>
-                    <li><a href="ai-architecture.html">4. AI & Agentic AI</a></li>
-                    <li><a href="governance.html">5. AI Governance</a></li>
-                </ul>
-            </nav>
+<body>
+
+    <button class="menu-toggle" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
+        <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-home"></i> Home</a></li>
+            <li><a href="modeling.html" class="active"><i class="fa-solid fa-code-branch"></i> Data Modeling</a></li>
+            <li><a href="mesh-fabric.html"><i class="fa-solid fa-network-wired"></i> Mesh vs Fabric</a></li>
+            <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> AI Architecture</a></li>
+            <li><a href="governance.html"><i class="fa-solid fa-scale-balanced"></i> Governance</a></li>
+            <li><a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Main</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="breadcrumbs">
+            <a href="../index.html">Learn</a> <span>/</span> ADA <span>/</span> Modeling
         </div>
 
-        <main class="main-content">
-            <h2>Core Warehousing Philosophies: Inmon vs. Kimball</h2>
-            <p>The debate between the Inmon and Kimball approaches represents two fundamental schools of thought in data warehousing.</p>
+        <h1>Advanced Data Modeling</h1>
 
+        <div class="content-card">
+            <h2>Slowly Changing Dimensions (SCD)</h2>
+            <p>Handling history in data warehousing is critical. Here are the standard types:</p>
+            <ul>
+                <li><strong>Type 0:</strong> Retain Original. No changes allowed.</li>
+                <li><strong>Type 1:</strong> Overwrite. No history kept. Good for error correction.</li>
+                <li><strong style="color: var(--gold); border-bottom: 2px solid var(--gold);">Type 2:</strong> Add New
+                    Row. The gold standard for tracking history. Uses `EffectiveDate`, `EndDate`, and `IsCurrent` flags.
+                </li>
+                <li><strong>Type 3:</strong> Add New Column. partial history (e.g., `PreviousCity`).</li>
+                <li><strong>Type 4:</strong> History Table. Separate current state from history.</li>
+                <li><strong>Type 6:</strong> Hybrid (1+2+3). Powerful but complex.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>Kimball vs. Inmon</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Feature</th>
-                        <th>Bill Inmon (CIF)</th>
-                        <th>Ralph Kimball (Dimensional)</th>
+                        <th>Kimball (Dimensional)</th>
+                        <th>Inmon (CIF)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Core Analogy</strong></td>
-                        <td>Hub-and-spoke model.</td>
-                        <td>"Bus" architecture.</td>
+                        <td>Philosophy</td>
+                        <td>Bottom-up</td>
+                        <td>Top-down</td>
                     </tr>
                     <tr>
-                        <td><strong>Design Approach</strong></td>
-                        <td>Top-down: Build the central EDW first, then create data marts.</td>
-                        <td>Bottom-up: Build business-process-oriented data marts first.</td>
+                        <td>Core Structure</td>
+                        <td>Star Schemas (Facts/Dims)</td>
+                        <td>Normalized (3NF)</td>
                     </tr>
                     <tr>
-                        <td><strong>Data Model</strong></td>
-                        <td>Normalized (3NF) for the Enterprise Data Warehouse (EDW).</td>
-                        <td>Denormalized dimensional models (Star Schema) for data marts.</td>
+                        <td>Integration</td>
+                        <td>Bus Matrix (Conformed Dims)</td>
+                        <td>Enterprise Warehouse</td>
                     </tr>
                     <tr>
-                        <td><strong>Single Source of Truth</strong></td>
-                        <td>The EDW is the single source of truth. High data integrity.</td>
-                        <td>Achieved via "conformed dimensions" shared across marts.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Agility</strong></td>
-                        <td>Less agile; requires significant upfront design.</td>
-                        <td>More agile; delivers business value faster.</td>
+                        <td>User Focus</td>
+                        <td>Business Users / BI</td>
+                        <td>IT / Data Consistency</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
 
-            <hr>
-            
-            <h2><span class="midterm-highlight">Slowly Changing Dimensions (SCDs)</span></h2>
-            <p>SCDs are techniques used to manage and track changes in dimensional data over time. This is critical for accurate historical reporting.</p>
-            
-            <h4>SCD Type 0: Retain Original</h4>
-            <p>The original attribute value is kept. No changes are tracked. Used for attributes that are truly static or where changes are considered errors.</p>
-            
-            <h4>SCD Type 1: Overwrite</h4>
-            <p>The old value is overwritten with the new value. No history is kept. Useful when correcting errors or when historical context is not important.</p>
+        <div class="content-card">
+            <h2>Anchor Modeling (6NF)</h2>
+            <p>Anchor Modeling builds on <strong>6th Normal Form (6NF)</strong> to create highly agile schemas. It
+                separates every attribute into its own table, linked to a central "Anchor" (Identity). This allows for
+                strictly additive schema evolution—you never modify existing tables, only add new attribute tables.</p>
+        </div>
 
-            <h4><span class="midterm-highlight">SCD Type 2: Add New Row</span></h4>
-            <p>This is the most common and powerful type for historical analysis. When an attribute changes, a new row is added to the dimension table with the new value. The old row is marked as expired.</p>
-            <pre><code>
--- Example: Customer Dimension Table with SCD Type 2
-| CustomerKey | CustomerID | Name      | City          | StartDate  | EndDate    | IsCurrent |
-|-------------|------------|-----------|---------------|------------|------------|-----------|
-| 101         | CUST-A1    | John Doe  | New York      | 2022-01-15 | 2023-05-20 | No        |
-| 212         | CUST-A1    | John Doe  | San Francisco | 2023-05-21 | NULL       | Yes       |
-            </code></pre>
-            
-            <h4>SCD Type 3: Add New Attribute</h4>
-            <p>A new column is added to the table to store the previous value of the attribute. This provides limited historical tracking (only the current and previous values).</p>
-
-            <hr>
-
-            <h2><span class="midterm-highlight">The Kimball Bus Matrix</span></h2>
-            <p>The Kimball Matrix is a crucial design tool that maps core business processes to their associated dimensions. It serves as an architectural blueprint for the data warehouse, ensuring that data marts can be built independently but still fit together into an integrated whole.</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Business Process / Fact Table</th>
-                        <th>Dim Date</th>
-                        <th>Dim Customer</th>
-                        <th>Dim Product</th>
-                        <th>Dim Store</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Retail Sales</strong></td>
-                        <td>X</td>
-                        <td>X</td>
-                        <td>X</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Inventory Management</strong></td>
-                        <td>X</td>
-                        <td></td>
-                        <td>X</td>
-                        <td>X</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Marketing Campaigns</strong></td>
-                        <td>X</td>
-                        <td>X</td>
-                        <td>X</td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>The 'X' marks indicate which dimensions are related to which fact tables. This matrix promotes the use of <span class="midterm-highlight">conformed dimensions</span>—master dimensions that are shared across different fact tables, ensuring consistency.</p>
-
-            <div class="page-navigation">
-                <a href="foundations.html">&laquo; Previous: Foundations</a>
-                <a href="index.html">Back to Dashboard</a>
-                <a href="mesh-fabric.html">Next: Advanced Paradigms &raquo;</a>
-            </div>
-        </main>
-    </div>
+        <div class="footer-nav">
+            <a href="index.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
+                Prev: Home</a>
+            <a href="mesh-fabric.html" class="nav-btn">Next: Mesh vs Fabric <i class="fa-solid fa-arrow-right"
+                    style="margin-left: 10px;"></i></a>
+        </div>
+    </main>
 
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const sidebar = document.getElementById('sidebar');
-
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-
-        document.addEventListener('click', function(event) {
-            const isClickInsideSidebar = sidebar.contains(event.target);
-            const isClickOnMenuToggle = menuToggle.contains(event.target);
-
-            if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('active');
+        }
     </script>
 </body>
+
 </html>
