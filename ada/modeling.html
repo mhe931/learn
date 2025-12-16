@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Data Modeling - ADA</title>
+    <title>Modeling & Foundations - ADA Zero-to-Hero</title>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&family=Orbitron:wght@900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -21,7 +21,8 @@
         <h2>ADA <span style="font-size: 0.6em; color: var(--neon);">v2.0</span></h2>
         <ul class="nav-links">
             <li><a href="index.html"><i class="fa-solid fa-home"></i> Home</a></li>
-            <li><a href="modeling.html" class="active"><i class="fa-solid fa-code-branch"></i> Data Modeling</a></li>
+            <li><a href="modeling.html" class="active"><i class="fa-solid fa-code-branch"></i> Modeling &
+                    Foundations</a></li>
             <li><a href="mesh-fabric.html"><i class="fa-solid fa-network-wired"></i> Mesh vs Fabric</a></li>
             <li><a href="ai-architecture.html"><i class="fa-solid fa-brain"></i> AI Architecture</a></li>
             <li><a href="governance.html"><i class="fa-solid fa-scale-balanced"></i> Governance</a></li>
@@ -36,66 +37,172 @@
 
         <h1>Advanced Data Modeling</h1>
 
+        <!-- 1. Why This Matters -->
         <div class="content-card">
-            <h2>Slowly Changing Dimensions (SCD)</h2>
-            <p>Handling history in data warehousing is critical. Here are the standard types:</p>
+            <h2><i class="fa-solid fa-lightbulb" style="color: var(--gold); margin-right: 10px;"></i> Why This Matters
+            </h2>
+            <p>
+                Imagine trying to build a skyscraper without a blueprint. You might stack bricks, but the moment you
+                need to add a 50th floor or change the plumbing, the whole thing collapses.
+            </p>
+            <p>
+                <strong>Data Modeling</strong> is that blueprint for information. In the business world, it solves a
+                massive problem:
+                <em>Translation</em>. Business people speak in "profits" and "customers," while computers speak in
+                "bits" and "tables."
+                A good model ensures that when the CEO asks for "Total Sales," the database gives the correct number,
+                not a random guess.
+            </p>
+        </div>
+
+        <!-- 2. Foundations: History & Jargon -->
+        <div class="content-card">
+            <h2>Foundations & Historical Context</h2>
+
+            <div class="definition-box">
+                <h4><i class="fa-solid fa-book-open"></i> Core Concept: The Schema</h4>
+                <p>
+                    <strong>Jargon:</strong> "Schema"<br>
+                    <strong>Plain English:</strong> The designated "shape" of your data. Think of it like an empty Excel
+                    template with column headers (Name, Age, ID) before you type any data in.
+                </p>
+            </div>
+
+            <h3>Sibley’s Three-Level Architecture (1977)</h3>
+            <p>
+                Before we had modern clouds, <strong class="text-gold">Edgar Sibley</strong> defined the rules that
+                still run the world. He split data systems into three layers to stop them from breaking:
+            </p>
             <ul>
-                <li><strong>Type 0:</strong> Retain Original. No changes allowed.</li>
-                <li><strong>Type 1:</strong> Overwrite. No history kept. Good for error correction.</li>
-                <li><strong style="color: var(--gold); border-bottom: 2px solid var(--gold);">Type 2:</strong> Add New
-                    Row. The gold standard for tracking history. Uses `EffectiveDate`, `EndDate`, and `IsCurrent` flags.
+                <li><strong>1. External Schema (The User View):</strong> What you see on your screen (e.g., an App
+                    interface).</li>
+                <li><strong>2. Conceptual Schema (The Logic):</strong> The maps and rules (e.g., "A User has one
+                    Password"). Independent of technology.</li>
+                <li><strong>3. Internal Schema (The Machine):</strong> How the hard drive strictly stores the 1s and 0s.
                 </li>
-                <li><strong>Type 3:</strong> Add New Column. partial history (e.g., `PreviousCity`).</li>
-                <li><strong>Type 4:</strong> History Table. Separate current state from history.</li>
-                <li><strong>Type 6:</strong> Hybrid (1+2+3). Powerful but complex.</li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Frameworks: TOGAF vs. Zachman</h3>
+            <p>You will hear these acronyms constantly. Here is the difference:</p>
+            <ul>
+                <li>
+                    <strong>TOGAF (The Process):</strong> A step-by-step guide on <em>how</em> to build architecture.
+                    <br><em>Analogy:</em> The <strong>Recipe</strong> for baking a cake (Step 1, Step 2...).
+                </li>
+                <li>
+                    <strong>Zachman (The Taxonomy):</strong> A categorization of <em>what</em> needs to be built.
+                    <br><em>Analogy:</em> The <strong>Ingredients List</strong> categorized by aisle (Dairy, Flour,
+                    Spices).
+                </li>
             </ul>
         </div>
 
+        <!-- 3. The Modeling Cheat Sheet -->
         <div class="content-card">
-            <h2>Kimball vs. Inmon</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Kimball (Dimensional)</th>
-                        <th>Inmon (CIF)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Philosophy</td>
-                        <td>Bottom-up</td>
-                        <td>Top-down</td>
-                    </tr>
-                    <tr>
-                        <td>Core Structure</td>
-                        <td>Star Schemas (Facts/Dims)</td>
-                        <td>Normalized (3NF)</td>
-                    </tr>
-                    <tr>
-                        <td>Integration</td>
-                        <td>Bus Matrix (Conformed Dims)</td>
-                        <td>Enterprise Warehouse</td>
-                    </tr>
-                    <tr>
-                        <td>User Focus</td>
-                        <td>Business Users / BI</td>
-                        <td>IT / Data Consistency</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>The Great Paradigm Wars: A Cheat Sheet</h2>
+            <p>Data Architects have fought for decades over the "best" way to organize data. Here are the four champions
+                you typically choose from:</p>
+
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Paradigm</th>
+                            <th>Author / Origin</th>
+                            <th>Philosophy (The "Vibe")</th>
+                            <th>Best Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Inmon (CIF)</strong></td>
+                            <td>Bill Inmon (Father of DW)</td>
+                            <td><strong>Top-Down / 3NF</strong><br>Single Source of Truth. Normalized. Strict.</td>
+                            <td>Enterprise-wide consistency, compliance, banks.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kimball</strong></td>
+                            <td>Ralph Kimball</td>
+                            <td><strong>Bottom-Up / Star Schema</strong><br>Fast for queries. Facts & Dimensions.
+                                User-friendly.</td>
+                            <td>BI Dashboards, Tableau/PowerBI, fast reporting.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Vault</strong></td>
+                            <td>Dan Linstedt</td>
+                            <td><strong>Hybrid / Hub-Sat-Link</strong><br>Auditable. Agnostic. Absorbs change like a
+                                sponge.</td>
+                            <td>Big Data, frequent source system changes, audit trails.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anchor</strong></td>
+                            <td>Lars Rönnbäck</td>
+                            <td><strong>6NF / Highly Agile</strong><br>Everything is separate. Only add, never delete.
+                            </td>
+                            <td>Extreme agility, scientific data, evolving schemas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="exam-point">
+                <strong>EXAM QUESTION:</strong> Which modeling technique primarily uses 6th Normal Form (6NF)?
+                <br>
+                <strong>CORRECT ANSWER:</strong> <strong>Anchor Modeling</strong>. It decomposes attributes into
+                separate tables to handle high agility and temporal history.
+            </div>
         </div>
 
+        <!-- 4. Deep Dive: SCDs -->
         <div class="content-card">
-            <h2>Anchor Modeling (6NF)</h2>
-            <p>Anchor Modeling builds on <strong>6th Normal Form (6NF)</strong> to create highly agile schemas. It
-                separates every attribute into its own table, linked to a central "Anchor" (Identity). This allows for
-                strictly additive schema evolution—you never modify existing tables, only add new attribute tables.</p>
+            <h2>Slowly Changing Dimensions (SCD)</h2>
+            <p>
+                Data changes over time. People move, products get renamed. "SCDs" are how we track this history.
+            </p>
+
+            <h3>The Top 3 Types (Midterm Essential)</h3>
+            <ul>
+                <li><strong>Type 0 (Static):</strong> Never changes. (Example: Date of Birth).</li>
+                <li><strong>Type 1 (Overwrite):</strong> The "Oops" fix. Replaces old data with new. No history kept.
+                    (Example: Correcting a typo in a name).</li>
+                <li>
+                    <strong style="color: var(--gold); font-size: 1.2em;">Type 2 (Add Row):</strong>
+                    The Gold Standard. When data changes, we keep the old row and add a new one with a new version
+                    number.
+                    <br><em>Result:</em> You have full history of exactly where a customer lived at any point in time.
+                </li>
+            </ul>
+
+            <div class="exam-point">
+                <strong>EXAM QUESTION:</strong> What is the most common technique for preserving historical attribute
+                values in a data warehouse?
+                <br>
+                <strong>CORRECT ANSWER:</strong> <strong>SCD Type 2</strong> (Adding a new row with effective dates).
+            </div>
         </div>
 
+        <!-- 5. 3NF & Normalization -->
+        <div class="content-card">
+            <h2>Deep Dive: 3rd Normal Form (3NF)</h2>
+            <p>
+                <strong>Inmon's</strong> preferred style. The goal is to <strong class="text-gold">eliminate
+                    redundancy</strong>.
+            </p>
+            <p>
+                <em>The Mantra:</em> "Every attribute must depend on the Key, the Whole Key, and Nothing but the Key."
+            </p>
+            <ul>
+                <li><strong>1NF:</strong> Atomic values (No lists in a single cell).</li>
+                <li><strong>2NF:</strong> No partial dependencies (Everything relates to the ID).</li>
+                <li><strong>3NF:</strong> No transitive dependencies (Columns shouldn't depend on other non-key
+                    columns).</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
         <div class="footer-nav">
             <a href="index.html" class="nav-btn"><i class="fa-solid fa-arrow-left" style="margin-right: 10px;"></i>
-                Prev: Home</a>
+                Prev: ADA Home</a>
             <a href="mesh-fabric.html" class="nav-btn">Next: Mesh vs Fabric <i class="fa-solid fa-arrow-right"
                     style="margin-left: 10px;"></i></a>
         </div>
