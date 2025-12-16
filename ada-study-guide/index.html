@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADA Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ADA Study Guide</h1>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        </header>
+
+        <div class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="foundations.html">Foundational Principles</a></li>
+                    <li><a href="modeling.html">Data Modeling & Warehousing</a></li>
+                    <li><a href="mesh-fabric.html">Data Mesh vs. Fabric</a></li>
+                    <li><a href="ai-architecture.html">AI in Data Architecture</a></li>
+                    <li><a href="governance.html">AI Governance</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="main-content">
+            <h2>Course Dashboard</h2>
+            <p>Welcome to your Advanced Data Architecture study guide. Select a chapter to begin.</p>
+            
+            <!-- In a real application, progress would be dynamic -->
+            <div class="progress-dashboard">
+                <h3>Chapter Progress</h3>
+                <ul>
+                    <li>Foundational Principles <span class="progress-indicator"> (0%)</span></li>
+                    <li>Data Modeling & Warehousing <span class="progress-indicator">(0%)</span></li>
+                    <li>Data Mesh vs. Fabric <span class="progress-indicator">(0%)</span></li>
+                    <li>AI in Data Architecture <span class="progress-indicator">(0%)</span></li>
+                    <li>AI Governance <span class="progress-indicator">(0%)</span></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Close sidebar if user clicks outside of it on mobile
+        document.addEventListener('click', function(event) {
+            const isClickInsideSidebar = sidebar.contains(event.target);
+            const isClickOnMenuToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

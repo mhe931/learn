@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Modeling & Warehousing - ADA Study Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Data Modeling & Warehousing</h1>
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+        </header>
+
+        <div class="sidebar" id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="foundations.html">Foundational Principles</a></li>
+                    <li><a href="modeling.html" class="active">Data Modeling & Warehousing</a></li>
+                    <li><a href="mesh-fabric.html">Data Mesh vs. Fabric</a></li>
+                    <li><a href="ai-architecture.html">AI in Data Architecture</a></li>
+                    <li><a href="governance.html">AI Governance</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <main class="main-content">
+            <h2>Data Warehousing Methodologies</h2>
+            <p>The foundation of a traditional data warehouse lies in its design methodology. The two most prominent approaches are from Bill Inmon and Ralph Kimball.</p>
+
+            <h3><span class="midterm-topic">Inmon vs. Kimball</span></h3>
+            
+            <h4>Bill Inmon: Corporate Information Factory (CIF)</h4>
+            <ul>
+                <li><strong>Approach:</strong> Top-down, centralized.</li>
+                <li><strong>Core Idea:</strong> A normalized (3NF) enterprise data warehouse (EDW) acts as the single source of truth. Data marts are then built from the EDW for specific departmental analysis.</li>
+                <li><strong>Analogy:</strong> A central hub-and-spoke model. The EDW is the hub.</li>
+                <li><strong>Pros:</strong> High data integrity, low redundancy, single version of the truth.</li>
+                <li><strong>Cons:</strong> Higher initial complexity and cost, slower to implement.</li>
+            </ul>
+
+            <h4>Ralph Kimball: Dimensional Modeling</h4>
+            <ul>
+                <li><strong>Approach:</strong> Bottom-up, decentralized.</li>
+                <li><strong>Core Idea:</strong> Data marts are built first, focused on specific business processes. These are designed using dimensional models (star schemas). The EDW is the union of these data marts.</li>
+                <li><strong>Analogy:</strong> A collection of interconnected business-focused marts.</li>
+                <li><strong>Pros:</strong> Faster time-to-value, more intuitive for business users, flexible.</li>
+                <li><strong>Cons:</strong> Can lead to data redundancy and "silos" if not managed carefully (the "conformed dimensions" are key).</li>
+            </ul>
+            
+            <hr>
+
+            <h2>Advanced Modeling Techniques</h2>
+            
+            <h3><span class="midterm-topic">Data Vault 2.0</span></h3>
+            <p>Data Vault is a hybrid methodology that takes the best of both Inmon (3NF) and Kimball (star schema). It's designed for agility, flexibility, and auditability.</p>
+            <ul>
+                <li><strong>Core Components:</strong>
+                    <ul>
+                        <li><strong>Hubs:</strong> Represent core business keys (e.g., CustomerID, ProductID).</li>
+                        <li><strong>Links:</strong> Represent the relationships between Hubs.</li>
+                        <li><strong>Satellites:</strong> Store descriptive attributes about Hubs or Links, tracking changes over time (similar to SCD Type 2).</li>
+                    </ul>
+                </li>
+                 <li><strong>Pros:</strong> Easily scalable, supports parallel loading, full audit trail of data.</li>
+                 <li><strong>Cons:</strong> Can result in a large number of tables, requires more joins for end-user queries (often an information mart is built on top).</li>
+            </ul>
+            
+            <h3>Anchor Modeling & 6NF</h3>
+            <p>Anchor Modeling is an extremely normalized approach, adhering to the 6th Normal Form (6NF). Every attribute for an entity is stored in its own table.</p>
+            <ul>
+                <li><strong>Core Idea:</strong> Maximizes flexibility to add new attributes without changing existing structures. It is ideal for highly volatile data models.</li>
+                <li><strong>Structure:</strong> Consists of Anchors (like Hubs), Attributes, Ties (like Links), and Knots (for pre-defined value sets).</li>
+                <li><strong>Pros:</strong> Unmatched flexibility, non-destructive model changes, full temporal history.</li>
+                <li><strong>Cons:</strong> Massive number of joins required for queries, making it impractical for direct analysis without an abstraction layer.</li>
+            </ul>
+
+            <hr>
+
+            <h2>Comparison of Warehousing Models</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th><span class="midterm-topic">Inmon (CIF)</span></th>
+                        <th><span class="midterm-topic">Kimball (Dimensional)</span></th>
+                        <th><span class="midterm-topic">Data Vault 2.0</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Core Structure</strong></td>
+                        <td>Normalized (3NF) EDW</td>
+                        <td>Denormalized Star Schemas</td>
+                        <td>Hub, Link, Satellite Ensemble</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Design Approach</strong></td>
+                        <td>Top-Down (Enterprise-wide)</td>
+                        <td>Bottom-Up (Business Process)</td>
+                        <td>Middle-Out (Agile, Key-based)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agility/Flexibility</strong></td>
+                        <td>Low</td>
+                        <td>High</td>
+                        <td>Very High</td>
+                    </tr>
+                     <tr>
+                        <td><strong>Data Redundancy</strong></td>
+                        <td>Low</td>
+                        <td>High</td>
+                        <td>Medium (in raw vault)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Historical Tracking</strong></td>
+                        <td>Handled in EDW/Marts</td>
+                        <td><span class="midterm-topic">SCD Types (1-6)</span></td>
+                        <td>Built-in via Satellites</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ideal Use Case</strong></td>
+                        <td>Stable, enterprise-wide reporting</td>
+                        <td>Departmental BI, fast analytics</td>
+                        <td>Agile environments with changing sources</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="review-section">
+                <h3>Review & Exam Prep</h3>
+                <ul>
+                    <li><strong>Inmon vs. Kimball</strong> is a classic debate. Know the core difference: Inmon is top-down (central EDW first), Kimball is bottom-up (data marts first).</li>
+                    <li><span class="midterm-topic">Data Vault</span> is the agile, auditable middle-ground. Remember its three core components: Hubs, Links, and Satellites.</li>
+                    <li><strong>Anchor Modeling (6NF)</strong> is about extreme normalization for maximum flexibility, but at the cost of query complexity.</li>
+                    <li>Be ready to explain why you would choose one model over another based on a business scenario (e.g., a large bank needs Inmon's integrity, a startup needs Kimball's speed).</li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            const isClickInsideSidebar = sidebar.contains(event.target);
+            const isClickOnMenuToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideSidebar && !isClickOnMenuToggle && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
