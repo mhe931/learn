@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +13,14 @@
             font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #2c3e50;
         }
+
         #nakyma {
             width: 100vw;
             height: 100vh;
             position: relative;
             perspective: 1200px;
         }
+
         #kangas {
             position: absolute;
             top: 50%;
@@ -25,6 +28,7 @@
             transform-style: preserve-3d;
             transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
         }
+
         .dia {
             position: absolute;
             left: 0;
@@ -37,7 +41,7 @@
             background-size: cover;
             background-position: center;
             border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -49,18 +53,22 @@
             pointer-events: none;
             overflow: hidden;
         }
+
         .dia.aktiivinen {
             opacity: 1;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
             pointer-events: auto;
         }
+
         .sisalto {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1);
             padding: 40px;
             border-radius: 12px;
             max-width: 80%;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            opacity: 0.05;
         }
+
         .dia h1 {
             color: #1a252f;
             font-size: 2.5em;
@@ -68,12 +76,14 @@
             font-weight: 700;
             line-height: 1.2;
         }
+
         .dia p.alaotsikko {
             color: #2c3e50;
             font-size: 1.8em;
             margin: 0;
             font-weight: 500;
         }
+
         .ohjaimet {
             position: fixed;
             bottom: 40px;
@@ -85,9 +95,10 @@
             background: rgba(255, 255, 255, 0.95);
             padding: 12px 25px;
             border-radius: 40px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(8px);
         }
+
         .ohjaimet button {
             padding: 12px 28px;
             font-size: 16px;
@@ -98,18 +109,21 @@
             border-radius: 25px;
             cursor: pointer;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
         }
+
         .ohjaimet button:hover:not(:disabled) {
             background-color: #0056b3;
             transform: translateY(-2px);
         }
+
         .ohjaimet button:disabled {
             background-color: #cccccc;
             box-shadow: none;
             cursor: not-allowed;
             transform: none;
         }
+
         .muistiinpanot-kontti {
             position: absolute;
             bottom: 0;
@@ -120,6 +134,7 @@
             box-sizing: border-box;
             text-align: left;
         }
+
         .muistiinpanot {
             font-size: 2px;
             color: #FEFEFE;
@@ -129,172 +144,186 @@
         }
     </style>
 </head>
+
 <body>
 
-<div id="nakyma">
-    <div id="kangas">
-        <!-- Dia 1 -->
-        <div class="dia aktiivinen" data-x="0" data-y="0" data-scale="1" data-rotate="0" style="background-image: url('https://images.unsplash.com/photo-1549468057-55c3c0efdc4d?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Hei kaikille! Minun nimeni on Däniel.</h1>
-                <p class="alaotsikko">Kerron teille tänään Vapusta.</p>
+    <div id="nakyma">
+        <div id="kangas">
+            <!-- Dia 1 -->
+            <div class="dia aktiivinen" data-x="0" data-y="0" data-scale="1" data-rotate="0"
+                style="background-image: url('https://www.paivyri.fi/info/wp-content/uploads/2020/08/vappu-turussa-2013.jpg')">
+                <div class="sisalto">
+                    <p class="alaotsikko">Hei kaikille! Minun nimeni on Däniel.</p>
+                    <p class="alaotsikko">Kerron teille tänään Vapusta.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Hei kaikille! Minun nimeni on Däniel. Kerron teille tänään Vapusta.</p>
+                </div>
             </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Hei kaikille! Minun nimeni on Däniel. Kerron teille tänään Vapusta.</p>
-            </div>
-        </div>
 
-        <!-- Dia 2 -->
-        <div class="dia" data-x="1600" data-y="0" data-scale="1.2" data-rotate="0" style="background-image: url('https://images.unsplash.com/photo-1496692052106-d37cb66ab80c?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Vappu on kevään ja työn juhla.</h1>
-                <p class="alaotsikko">Sitä vietetään toukokuun alussa.</p>
+            <!-- Dia 2 -->
+            <div class="dia" data-x="1600" data-y="0" data-scale="1.2" data-rotate="0"
+                style="background-image: url('https://images.unsplash.com/photo-1496692052106-d37cb66ab80c?auto=format&fit=crop&w=1000&q=80')">
+                <div class="sisalto">
+                    <p class="alaotsikko">Vappu on kevään ja työn juhla.</p>
+                    <p class="alaotsikko">Sitä vietetään toukokuun alussa.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Vappu on kevään ja työn juhla. Sitä vietetään toukokuun alussa.</p>
+                </div>
             </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Vappu on kevään ja työn juhla. Sitä vietetään toukokuun alussa.</p>
-            </div>
-        </div>
 
-        <!-- Dia 3 -->
-        <div class="dia" data-x="1600" data-y="1300" data-scale="0.8" data-rotate="-90" style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Vappu alkaa jo huhtikuun viimeisenä päivänä.</h1>
-                <p class="alaotsikko">Silloin kaupungilla on paljon ihmisiä.</p>
+            <!-- Dia 3 -->
+            <div class="dia" data-x="1600" data-y="1300" data-scale="0.8" data-rotate="-90"
+                style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80')">
+                <div class="sisalto">
+                    <h1>Vappu alkaa jo huhtikuun viimeisenä päivänä.</h1>
+                    <p class="alaotsikko">Silloin kaupungilla on paljon ihmisiä.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Vappu alkaa jo huhtikuun viimeisenä päivänä. Silloin kaupungilla on paljon
+                        ihmisiä.</p>
+                </div>
             </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Vappu alkaa jo huhtikuun viimeisenä päivänä. Silloin kaupungilla on paljon ihmisiä.</p>
-            </div>
-        </div>
 
-        <!-- Dia 4 -->
-        <div class="dia" data-x="0" data-y="1300" data-scale="0.8" data-rotate="-180" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Opiskelijat ovat Vappuna tärkeitä.</h1>
-                <p class="alaotsikko">He käyttävät valkoisia ylioppilaslakkeja.</p>
+            <!-- Dia 4 -->
+            <div class="dia" data-x="0" data-y="1300" data-scale="0.8" data-rotate="-180"
+                style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80')">
+                <div class="sisalto">
+                    <h1>Opiskelijat ovat Vappuna tärkeitä.</h1>
+                    <p class="alaotsikko">He käyttävät valkoisia ylioppilaslakkeja.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Opiskelijat ovat Vappuna tärkeitä. He käyttävät valkoisia
+                        ylioppilaslakkeja.</p>
+                </div>
             </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Opiskelijat ovat Vappuna tärkeitä. He käyttävät valkoisia ylioppilaslakkeja.</p>
-            </div>
-        </div>
 
-        <!-- Dia 5 -->
-        <div class="dia" data-x="-1600" data-y="1300" data-scale="1" data-rotate="-270" style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Vappuna syödään ja juodaan hyvin.</h1>
-                <p class="alaotsikko">Silloin juodaan simaa ja syödään munkkeja.</p>
+            <!-- Dia 5 -->
+            <div class="dia" data-x="-1600" data-y="1300" data-scale="1" data-rotate="-270"
+                style="background-image: url('https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?auto=format&fit=crop&w=1000&q=80')">
+                <div class="sisalto">
+                    <h1>Vappuna syödään ja juodaan hyvin.</h1>
+                    <p class="alaotsikko">Silloin juodaan simaa ja syödään munkkeja.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Vappuna syödään ja juodaan hyvin. Silloin juodaan simaa ja syödään
+                        munkkeja.</p>
+                </div>
             </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Vappuna syödään ja juodaan hyvin. Silloin juodaan simaa ja syödään munkkeja.</p>
-            </div>
-        </div>
 
-        <!-- Dia 6 -->
-        <div class="dia" data-x="-1600" data-y="0" data-scale="1.2" data-rotate="-360" style="background-image: url('https://images.unsplash.com/photo-1587522513511-bba09bb9910d?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Tippaleipä on myös suosittu herkku.</h1>
-                <p class="alaotsikko">Ensimmäisenä päivänä mennään piknikille.</p>
+            <!-- Dia 6 -->
+            <div class="dia" data-x="-1600" data-y="0" data-scale="1.2" data-rotate="-360"
+                style="background-image: url('https://images.unsplash.com/photo-1587522513511-bba09bb9910d?auto=format&fit=crop&w=1000&q=80')">
+                <div class="sisalto">
+                    <h1>Tippaleipä on myös suosittu herkku.</h1>
+                    <p class="alaotsikko">Ensimmäisenä päivänä mennään piknikille.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Tippaleipä on myös suosittu herkku. Ensimmäisenä päivänä mennään
+                        piknikille.</p>
+                </div>
             </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Tippaleipä on myös suosittu herkku. Ensimmäisenä päivänä mennään piknikille.</p>
-            </div>
-        </div>
 
-        <!-- Dia 7 -->
-        <div class="dia" data-x="-1600" data-y="-1300" data-scale="1" data-rotate="-360" style="background-image: url('https://images.unsplash.com/photo-1533605330366-2679dc62a26c?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Puistoissa pidetään hauskaa yhdessä.</h1>
-                <p class="alaotsikko">Ilmassa on paljon ilmapalloja.</p>
+            <!-- Dia 7 -->
+            <div class="dia" data-x="-1600" data-y="-1300" data-scale="1" data-rotate="-360"
+                style="background-image: url('https://images.unsplash.com/photo-1533605330366-2679dc62a26c?auto=format&fit=crop&w=1000&q=80')">
+                <div class="sisalto">
+                    <h1>Puistoissa pidetään hauskaa yhdessä.</h1>
+                    <p class="alaotsikko">Ilmassa on paljon ilmapalloja.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Puistoissa pidetään hauskaa yhdessä. Ilmassa on paljon ilmapalloja.</p>
+                </div>
             </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Puistoissa pidetään hauskaa yhdessä. Ilmassa on paljon ilmapalloja.</p>
-            </div>
-        </div>
 
-        <!-- Dia 8 -->
-        <div class="dia" data-x="0" data-y="-1300" data-scale="1.5" data-rotate="-360" style="background-image: url('https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=1000&q=80')">
-            <div class="sisalto">
-                <h1>Minusta Vappu on iloinen juhla.</h1>
-                <p class="alaotsikko">Se on merkki siitä, että kesä tulee.</p>
-            </div>
-            <div class="muistiinpanot-kontti">
-                <p class="muistiinpanot">Minusta Vappu on iloinen juhla. Se on merkki siitä, että kesä tulee.</p>
+            <!-- Dia 8 -->
+            <div class="dia" data-x="0" data-y="-1300" data-scale="1.5" data-rotate="-360"
+                style="background-image: url('https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=1000&q=80')">
+                <div class="sisalto">
+                    <h1>Minusta Vappu on iloinen juhla.</h1>
+                    <p class="alaotsikko">Se on merkki siitä, että kesä tulee.</p>
+                </div>
+                <div class="muistiinpanot-kontti">
+                    <p class="muistiinpanot">Minusta Vappu on iloinen juhla. Se on merkki siitä, että kesä tulee.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="ohjaimet">
-    <button id="painikeEdellinen" onclick="edellinenDia()" disabled>Edellinen</button>
-    <button id="painikeSeuraava" onclick="seuraavaDia()">Seuraava</button>
-</div>
+    <div class="ohjaimet">
+        <button id="painikeEdellinen" onclick="edellinenDia()" disabled>Edellinen</button>
+        <button id="painikeSeuraava" onclick="seuraavaDia()">Seuraava</button>
+    </div>
 
-<script>
-    const diat = document.querySelectorAll('.dia');
-    const kangas = document.getElementById('kangas');
-    const painikeEdellinen = document.getElementById('painikeEdellinen');
-    const painikeSeuraava = document.getElementById('painikeSeuraava');
-    let nykyinenDia = 0;
+    <script>
+        const diat = document.querySelectorAll('.dia');
+        const kangas = document.getElementById('kangas');
+        const painikeEdellinen = document.getElementById('painikeEdellinen');
+        const painikeSeuraava = document.getElementById('painikeSeuraava');
+        let nykyinenDia = 0;
 
-    function kaytaMuunnosta() {
-        if (diat.length === 0) return;
-        const dia = diat[nykyinenDia];
-        const x = parseFloat(dia.getAttribute('data-x'));
-        const y = parseFloat(dia.getAttribute('data-y'));
-        const scale = parseFloat(dia.getAttribute('data-scale'));
-        const rotate = parseFloat(dia.getAttribute('data-rotate') || 0);
-
-        kangas.style.transform = `scale(${1 / scale}) rotate(${-rotate}deg) translate(${-x}px, ${-y}px)`;
-        
-        diat.forEach((d, indeksi) => {
-            if(indeksi === nykyinenDia) {
-                d.classList.add('aktiivinen');
-            } else {
-                d.classList.remove('aktiivinen');
-            }
-        });
-
-        painikeEdellinen.disabled = nykyinenDia === 0;
-        painikeSeuraava.disabled = nykyinenDia === diat.length - 1;
-    }
-
-    function alusta() {
-        diat.forEach(dia => {
+        function kaytaMuunnosta() {
+            if (diat.length === 0) return;
+            const dia = diat[nykyinenDia];
             const x = parseFloat(dia.getAttribute('data-x'));
             const y = parseFloat(dia.getAttribute('data-y'));
             const scale = parseFloat(dia.getAttribute('data-scale'));
             const rotate = parseFloat(dia.getAttribute('data-rotate') || 0);
-            dia.style.transform = `translate(${x}px, ${y}px) rotate(${rotate}deg) scale(${scale})`;
+
+            kangas.style.transform = `scale(${1 / scale}) rotate(${-rotate}deg) translate(${-x}px, ${-y}px)`;
+
+            diat.forEach((d, indeksi) => {
+                if (indeksi === nykyinenDia) {
+                    d.classList.add('aktiivinen');
+                } else {
+                    d.classList.remove('aktiivinen');
+                }
+            });
+
+            painikeEdellinen.disabled = nykyinenDia === 0;
+            painikeSeuraava.disabled = nykyinenDia === diat.length - 1;
+        }
+
+        function alusta() {
+            diat.forEach(dia => {
+                const x = parseFloat(dia.getAttribute('data-x'));
+                const y = parseFloat(dia.getAttribute('data-y'));
+                const scale = parseFloat(dia.getAttribute('data-scale'));
+                const rotate = parseFloat(dia.getAttribute('data-rotate') || 0);
+                dia.style.transform = `translate(${x}px, ${y}px) rotate(${rotate}deg) scale(${scale})`;
+            });
+            kaytaMuunnosta();
+        }
+
+        function seuraavaDia() {
+            if (nykyinenDia < diat.length - 1) {
+                nykyinenDia++;
+                kaytaMuunnosta();
+            }
+        }
+
+        function edellinenDia() {
+            if (nykyinenDia > 0) {
+                nykyinenDia--;
+                kaytaMuunnosta();
+            }
+        }
+
+        document.addEventListener('keydown', (tapahtuma) => {
+            if (tapahtuma.key === 'ArrowRight' || tapahtuma.key === 'ArrowDown' || tapahtuma.key === 'PageDown' || tapahtuma.key === ' ') {
+                seuraavaDia();
+                tapahtuma.preventDefault();
+            }
+            if (tapahtuma.key === 'ArrowLeft' || tapahtuma.key === 'ArrowUp' || tapahtuma.key === 'PageUp') {
+                edellinenDia();
+                tapahtuma.preventDefault();
+            }
         });
-        kaytaMuunnosta();
-    }
 
-    function seuraavaDia() {
-        if(nykyinenDia < diat.length - 1) {
-            nykyinenDia++;
-            kaytaMuunnosta();
-        }
-    }
-
-    function edellinenDia() {
-        if(nykyinenDia > 0) {
-            nykyinenDia--;
-            kaytaMuunnosta();
-        }
-    }
-
-    document.addEventListener('keydown', (tapahtuma) => {
-        if(tapahtuma.key === 'ArrowRight' || tapahtuma.key === 'ArrowDown' || tapahtuma.key === 'PageDown' || tapahtuma.key === ' ') {
-            seuraavaDia();
-            tapahtuma.preventDefault();
-        }
-        if(tapahtuma.key === 'ArrowLeft' || tapahtuma.key === 'ArrowUp' || tapahtuma.key === 'PageUp') {
-            edellinenDia();
-            tapahtuma.preventDefault();
-        }
-    });
-
-    alusta();
-</script>
+        alusta();
+    </script>
 
 </body>
+
 </html>
