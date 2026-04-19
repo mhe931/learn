@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suomalainen Vappu - Esitys</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+        }
+        #viewport {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            perspective: 1200px;
+        }
+        #canvas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
+            transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .step {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 800px;
+            height: 550px;
+            margin-left: -400px;
+            margin-top: -275px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px 40px 80px 40px;
+            box-sizing: border-box;
+            text-align: center;
+            opacity: 0.2;
+            transition: opacity 1s, box-shadow 0.8s;
+            pointer-events: none;
+        }
+        .step.active {
+            opacity: 1;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            pointer-events: auto;
+        }
+        .step img {
+            max-width: 90%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background-color: #f0f0f0;
+        }
+        .step h1 {
+            color: #1a252f;
+            font-size: 2.8em;
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+        .step p.subtitle {
+            color: #34495e;
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .controls {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            border-radius: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+        }
+        .controls button {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,123,255,0.2);
+        }
+        .controls button:hover:not(:disabled) {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        .controls button:disabled {
+            background-color: #cccccc;
+            box-shadow: none;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .notes {
+            font-size: 3px;
+            color: #fcfcfc;
+            position: absolute;
+            bottom: 5px;
+            left: 20px;
+            right: 20px;
+            text-align: left;
+            user-select: none;
+        }
+        .visible-sentence {
+            position: absolute;
+            bottom: 35px;
+            left: 40px;
+            right: 40px;
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div id="viewport">
+    <div id="canvas">
+        <!-- Slide 1 -->
+        <div class="step active" data-x="0" data-y="0" data-scale="1" data-rotate="0">
+            <h1>Suomalainen Vappu</h1>
+            <p class="subtitle">Kevään juhlava esitys</p>
+            <img src="https://image.pollinations.ai/prompt/Helsinki%20spring%20celebration?width=800&height=500&nologo=true" alt="Helsingin Vappu">
+            <div class="visible-sentence">Johdanto: Suomalainen Vappu.</div>
+            <div class="notes">Johdanto: Suomalainen Vappu.</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="step" data-x="1400" data-y="0" data-scale="1" data-rotate="0">
+            <h1>Kevään ja työn juhla</h1>
+            <img src="https://image.pollinations.ai/prompt/Spring%20flowers%20in%20Finland%20May?width=800&height=500&nologo=true" alt="Kevään kukkia">
+            <div class="visible-sentence">Vappu on kevään ja työn juhla. Sitä vietetään toukokuun alussa.</div>
+            <div class="notes">Vappu on kevään ja työn juhla. Sitä vietetään toukokuun alussa.</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="step" data-x="1400" data-y="1000" data-scale="0.8" data-rotate="-90">
+            <h1>Juhlan alku</h1>
+            <img src="https://image.pollinations.ai/prompt/City%20street%20crowd%20spring%20festival%20Finland?width=800&height=500&nologo=true" alt="Ihmisiä kaupungilla">
+            <div class="visible-sentence">Vappu alkaa jo huhtikuun viimeisenä päivänä. Silloin kaupungilla on paljon ihmisiä.</div>
+            <div class="notes">Vappu alkaa jo huhtikuun viimeisenä päivänä. Silloin kaupungilla on paljon ihmisiä.</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="step" data-x="0" data-y="1000" data-scale="0.8" data-rotate="-180">
+            <h1>Opiskelijoiden juhla</h1>
+            <img src="https://image.pollinations.ai/prompt/Finnish%20student%20white%20graduation%20cap%20vappu?width=800&height=500&nologo=true" alt="Valkoinen ylioppilaslakki">
+            <div class="visible-sentence">Opiskelijat ovat Vappuna tärkeitä. He käyttävät valkoisia ylioppilaslakkeja.</div>
+            <div class="notes">Opiskelijat ovat Vappuna tärkeitä. He käyttävät valkoisia ylioppilaslakkeja.</div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="step" data-x="-1400" data-y="1000" data-scale="1" data-rotate="-270">
+            <h1>Perinteiset herkut</h1>
+            <img src="https://image.pollinations.ai/prompt/Finnish%20sima%20mead%20and%20sugared%20donuts%20munkki?width=800&height=500&nologo=true" alt="Simaa ja munkkeja">
+            <div class="visible-sentence">Vappuna syödään ja juodaan hyvin. Silloin juodaan simaa ja syödään munkkeja.</div>
+            <div class="notes">Vappuna syödään ja juodaan hyvin. Silloin juodaan simaa ja syödään munkkeja.</div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="step" data-x="-1400" data-y="0" data-scale="1.2" data-rotate="-360">
+            <h1>Tippaleipä ja piknik</h1>
+            <img src="https://image.pollinations.ai/prompt/Finnish%20funnel%20cake%20tippaleipa%20picnic%20with%20sparkling%20wine?width=800&height=500&nologo=true" alt="Tippaleipä ja piknik">
+            <div class="visible-sentence">Tippaleipä on myös suosittu herkku. Ensimmäisenä päivänä mennään piknikille.</div>
+            <div class="notes">Tippaleipä on myös suosittu herkku. Ensimmäisenä päivänä mennään piknikille.</div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="step" data-x="-1400" data-y="-1200" data-scale="1" data-rotate="-360">
+            <h1>Yhdessäoloa puistoissa</h1>
+            <img src="https://image.pollinations.ai/prompt/Park%20picnic%20with%20many%20colorful%20balloons%20spring?width=800&height=500&nologo=true" alt="Ilmapalloja puistossa">
+            <div class="visible-sentence">Puistoissa pidetään hauskaa yhdessä. Ilmassa on paljon ilmapalloja.</div>
+            <div class="notes">Puistoissa pidetään hauskaa yhdessä. Ilmassa on paljon ilmapalloja.</div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="step" data-x="0" data-y="-1200" data-scale="1.5" data-rotate="-360">
+            <h1>Iloinen juhla</h1>
+            <img src="https://image.pollinations.ai/prompt/Happy%20Finnish%20summer%20coming%20lake%20spring?width=800&height=500&nologo=true" alt="Kesäinen maisema">
+            <div class="visible-sentence">Lopetus: Minusta Vappu on iloinen juhla. Se on merkki siitä, että kesä tulee.</div>
+            <div class="notes">Lopetus: Minusta Vappu on iloinen juhla. Se on merkki siitä, että kesä tulee.</div>
+        </div>
+    </div>
+</div>
+
+<div class="controls">
+    <button id="btnPrev" onclick="prevStep()" disabled>Edellinen</button>
+    <button id="btnNext" onclick="nextStep()">Seuraava</button>
+</div>
+
+<script>
+    const steps = document.querySelectorAll('.step');
+    const canvas = document.getElementById('canvas');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    let currentStep = 0;
+
+    function applyTransform() {
+        const step = steps[currentStep];
+        const x = parseFloat(step.getAttribute('data-x'));
+        const y = parseFloat(step.getAttribute('data-y'));
+        const scale = parseFloat(step.getAttribute('data-scale'));
+        const rotate = parseFloat(step.getAttribute('data-rotate') || 0);
+
+        canvas.style.transform = `scale(${1 / scale}) rotate(${-rotate}deg) translate(${-x}px, ${-y}px)`;
+        
+        steps.forEach((s, index) => {
+            if(index === currentStep) {
+                s.classList.add('active');
+            } else {
+                s.classList.remove('active');
+            }
+        });
+
+        // Update button disabled states
+        btnPrev.disabled = currentStep === 0;
+        btnNext.disabled = currentStep === steps.length - 1;
+    }
+
+    function init() {
+        steps.forEach(step => {
+            const x = parseFloat(step.getAttribute('data-x'));
+            const y = parseFloat(step.getAttribute('data-y'));
+            const scale = parseFloat(step.getAttribute('data-scale'));
+            const rotate = parseFloat(step.getAttribute('data-rotate') || 0);
+            step.style.transform = `translate(${x}px, ${y}px) rotate(${rotate}deg) scale(${scale})`;
+        });
+        applyTransform();
+    }
+
+    function nextStep() {
+        if(currentStep < steps.length - 1) {
+            currentStep++;
+            applyTransform();
+        }
+    }
+
+    function prevStep() {
+        if(currentStep > 0) {
+            currentStep--;
+            applyTransform();
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if(e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+            nextStep();
+            e.preventDefault();
+        }
+        if(e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
+            prevStep();
+            e.preventDefault();
+        }
+    });
+
+    // Initialize presentation
+    init();
+</script>
+
+</body>
+</html>
