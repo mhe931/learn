@@ -181,6 +181,61 @@
         .nav-link a:hover {
             color: var(--gold);
         }
+        
+        /* Add hover effects for the nature vocabulary tables */
+        .nature-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: rgba(25, 25, 40, 0.95);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .nature-table th, .nature-table td {
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .nature-table th {
+            background: rgba(0, 212, 255, 0.15);
+            color: #00D4FF;
+            font-weight: 800;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nature-table tr {
+            transition: all 0.3s ease;
+        }
+        .nature-table tr:last-child td {
+            border-bottom: none;
+        }
+        .nature-table tbody tr:hover {
+            background: rgba(188, 19, 254, 0.15);
+            transform: scale(1.01);
+            cursor: default;
+        }
+        .nature-table td.finnish-word {
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 1.1em;
+            direction: ltr;
+            text-align: left;
+        }
+        .sentence-block {
+            background: rgba(255, 255, 255, 0.03);
+            border-right: 4px solid #00FF9D;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        .sentence-block:hover {
+            transform: translateX(-5px);
+            background: rgba(255, 255, 255, 0.06);
+        }
 </style></head>
 <body><div class="container">
 <h1>فصل ۱: گذشته ساده مثبت و عبارات زمانی (Positive Imperfect &amp; Time Expressions)</h1><div class="nav-link"><a href="../index.html">بازگشت به فهرست اصلی</a></div>
@@ -868,96 +923,91 @@
 </ol>
 </div>
 <h1>فصل ۶: مقایسه صفات (Comparison of Adjectives)</h1>
-<p>در زبان فنلاندی، صفات دارای سه درجه مقایسه هستند: صفت مطلق (Positive)، صفت تفضیلی (Comparative) و صفت عالی (Superlative). برای ساخت درجات مقایسه، از تنه‌های صفت استفاده می‌شود.</p>
-<h2>۱. صفت مطلق (Positiivi)</h2>
-<p>این حالت بیان می‌کند که یک شخص یا چیز چگونه است. برای ایجاد تأکید یا تغییر شدت آن، می‌توان از قیدهای زیر قبل از صفت استفاده کرد:</p>
+<p>در زبان فنلاندی، صفات دارای سه درجه مقایسه هستند: صفت مطلق (Positiivi)، صفت تفضیلی (Komparatiivi) و صفت عالی (Superlatiivi). در این فصل، قوانین دقیق ساخت و استثنائات آن‌ها را بررسی می‌کنیم.</p>
+
+<h2>۱. ساختار تفضیلی و عالی (-mpi ja -in)</h2>
+
+<h3>صفت تفضیلی (-mpi)</h3>
+<p>صفت تفضیلی برای مقایسه دو چیز استفاده می‌شود. نشانه آن پسوند <strong>-mpi</strong> است که مستقیماً به تنه صفت متصل می‌شود. برای نشان دادن برتری در جمله، کلمه <span class="finnish">kuin</span> (از / نسبت به) استفاده می‌گردد.</p>
 <ul>
-<li><strong>hyvin</strong> (خیلی): <span class="finnish">Kaupunki on hyvin iso.</span></li>
-<li><strong>oikein</strong> (واقعاً): <span class="finnish">Hän on oikein mukava.</span></li>
-<li><strong>melko / aika</strong> (نسبتاً): <span class="finnish">Tehtävä on melko helppo.</span></li>
-<li><strong>yhtä ... kuin</strong> (به همان اندازه ... که): <span class="finnish">Juuso on yhtä vanha kuin Ville.</span></li>
+    <li><span class="finnish">Tämä auto on uusi, mutta tuo on uude<span class="ending">mpi</span>.</span> (این ماشین جدید است، اما آن یکی جدیدتر است.)</li>
 </ul>
-<h2>۲. صفت تفضیلی (Komparatiivi)</h2>
-<p>صفت تفضیلی برای مقایسه دو چیز با یکدیگر استفاده می‌شود. نشانه آن پسوند <span class="ending">-mpi</span> است که به تنه صفت متصل می‌شود. بعد از صفت تفضیلی معمولاً از کلمه <span class="finnish">kuin</span> (از / نسبت به) استفاده می‌شود.</p>
+
+<h3>صفت عالی (-in)</h3>
+<p>صفت عالی برای برتری دادن یک پدیده بر کل گروه استفاده می‌شود. نشانه آن پسوند <strong>-in</strong> است که به تنه کلمه متصل می‌شود و در بیشتر موارد باعث تغییر و حذف حروف صدادار انتهایی می‌شود.</p>
+<ul>
+    <li><span class="finnish">Tämä auto on uus<span class="ending">in</span>.</span> (این ماشین جدیدترین است.)</li>
+</ul>
+
+<h2>۲. تغییرات حروف صدادار (Vokaalimuutokset)</h2>
+<p>هنگام اضافه شدن پسوندهای مقایسه، تغییرات زیر در تنه کلمات رخ می‌دهد:</p>
 <div class="note">
-<strong>قانون تغییر a/ä:</strong> اگر تنه کلمه دو سیلابی به <span class="finnish">a</span> یا <span class="finnish">ä</span> ختم شود، این حروف قبل از <span class="ending">-mpi</span> به <span class="stem-change">e</span> تبدیل می‌شوند. <br/>مثال: <span class="finnish">vanha → vanh<span class="stem-change">e</span><span class="ending">mpi</span></span>
+    <ul>
+        <li><strong>تغییر a/ä به e:</strong> اگر کلمه دو سیلابی به a یا ä ختم شود، پیش از گرفتن پسوند تفضیلی -mpi، آن حرف به e تبدیل می‌شود.<br>
+            مثال: <span class="finnish">halpa</span> (ارزان) &rarr; <span class="finnish">halv<span class="stem-change">e</span><span class="ending">mpi</span></span> (ارزان‌تر) | <span class="finnish">kylmä</span> (سرد) &rarr; <span class="finnish">kylm<span class="stem-change">e</span><span class="ending">mpi</span></span> (سردتر)
+        </li>
+        <li><strong>تغییر i به e:</strong> صفاتی که به i ختم می‌شوند، در تنه تفضیلی حرف i آن‌ها به e تغییر می‌کند.<br>
+            مثال: <span class="finnish">pieni</span> (کوچک) &rarr; <span class="finnish">pien<span class="stem-change">e</span><span class="ending">mpi</span></span> (کوچک‌تر)
+        </li>
+        <li><strong>قانون تغییرات بنیادی (KPT):</strong> در تفضیلی (-mpi) به دلیل بسته شدن هجا، صامت‌ها <strong>ضعیف</strong> می‌شوند (halpa &rarr; halvempi). اما در عالی (-in)، هجا باز است و صامت‌ها <strong>قوی</strong> می‌مانند (halpa &rarr; halvin).</li>
+    </ul>
 </div>
-<h3>قیدهای همراه تفضیلی</h3>
-<ul>
-<li><strong>paljon</strong> (خیلی بیشتر): <span class="finnish">Hän on paljon vanhempi kuin minä.</span></li>
-<li><strong>vähän</strong> (کمی بیشتر): <span class="finnish">Hän on vähän vanhempi.</span></li>
-<li><strong>ei yhtään</strong> (اصلاً بیشتر نیست): <span class="finnish">Hän ei ole yhtään vanhempi.</span></li>
-</ul>
-<h2>۳. صفت عالی (Superlatiivi)</h2>
-<p>برای مقایسه سه چیز یا بیشتر استفاده می‌شود و نشانه آن <span class="ending">-in</span> است.</p>
-<div class="note">
-<ul>
-<li>حروف صدادار <strong>o, ö, u, y</strong> قبل از <span class="ending">-in</span> تغییری نمی‌کنند. (مثال: <span class="finnish">iso → iso<span class="ending">in</span></span>)</li>
-<li>حروف صدادار <strong>e, a, ä</strong> و یکی از حروف صدادار در دیفتونگ‌ها یا دو حرف صدادار یکسان حذف می‌شوند. (مثال: <span class="finnish">pieni → piene- → pien<span class="ending">in</span></span>، <span class="finnish">vapaa → vapa<span class="ending">in</span></span>)</li>
-</ul>
-</div>
-<h3>قیدهای همراه عالی</h3>
-<ul>
-<li><strong>kaikkein</strong> (از همه ... تر): <span class="finnish">Hän on kaikkein mukavin.</span></li>
-<li><strong>maailman</strong> (در جهان): <span class="finnish">Hän on maailman rikkain.</span></li>
-<li><strong>Suomen</strong> (در فنلاند): <span class="finnish">Hän on Suomen vanhin ihminen.</span></li>
-</ul>
-<h2>۴. صفات بی‌قاعده (Irregular Adjectives)</h2>
-<p>برخی از صفات پرکاربرد شکل‌های بی‌قاعده دارند که باید حفظ شوند:</p>
-<table>
-<tr>
-<th>Positiivi</th>
-<th>Komparatiivi</th>
-<th>Superlatiivi</th>
-</tr>
-<tr>
-<td><span class="finnish">hyvä</span> (خوب)</td>
-<td><span class="finnish">parempi</span></td>
-<td><span class="finnish">paras</span></td>
-</tr>
-<tr>
-<td><span class="finnish">pitkä</span> (بلند)</td>
-<td><span class="finnish">pidempi / pitempi</span></td>
-<td><span class="finnish">pisin</span></td>
-</tr>
-<tr>
-<td><span class="finnish">lyhyt</span> (کوتاه)</td>
-<td><span class="finnish">lyhyempi / lyhempi</span></td>
-<td><span class="finnish">lyhin</span></td>
-</tr>
-<tr>
-<td><span class="finnish">uusi</span> (جدید)</td>
-<td><span class="finnish">uudempi</span></td>
-<td><span class="finnish">uusin</span></td>
-</tr>
+
+<h2>۳. صفات بی‌قاعده (Epäsäännölliset Adjektiivit)</h2>
+<p>برخی از مهم‌ترین صفات در فنلاندی کاملاً بی‌قاعده هستند و باید جدول زیر را برای آزمون حفظ کنید:</p>
+<table class="nature-table">
+    <thead>
+        <tr>
+            <th>Positiivi (مطلق)</th>
+            <th>Komparatiivi (تفضیلی)</th>
+            <th>Superlatiivi (عالی)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="finnish">Hyvä</span> (خوب)</td>
+            <td class="finnish-word" style="color: var(--gold);">Parempi</td>
+            <td class="finnish-word" style="color: var(--success);">Paras</td>
+        </tr>
+        <tr>
+            <td><span class="finnish">Pitkä</span> (بلند / طولانی)</td>
+            <td class="finnish-word" style="color: var(--gold);">Pitempi / Pidempi</td>
+            <td class="finnish-word" style="color: var(--success);">Pisin</td>
+        </tr>
+        <tr>
+            <td><span class="finnish">Lyhyt</span> (کوتاه)</td>
+            <td class="finnish-word" style="color: var(--gold);">Lyhyempi / Lyhempi</td>
+            <td class="finnish-word" style="color: var(--success);">Lyhin</td>
+        </tr>
+    </tbody>
 </table>
-<h2>۵. تمرین‌های یکپارچه (Integrated Practice)</h2>
+
+<h2>۴. تمرین‌های امتحانی (Harjoitus)</h2>
 <div class="exercise">
-<h3>HARJOITUS 1: Kirjoita oikea adjektiivi oikeassa muodossa</h3>
-<table>
-<tr>
-<th>Positiivi</th>
-<th>Komparatiivi</th>
-<th>Superlatiivi</th>
-</tr>
-<tr><td>iso</td><td><span class="answer">isompi</span></td><td><span class="answer">isoin</span></td></tr>
-<tr><td>pieni</td><td><span class="answer">pienempi</span></td><td><span class="answer">pienin</span></td></tr>
-<tr><td>vanha</td><td><span class="answer">vanhempi</span></td><td><span class="answer">vanhin</span></td></tr>
-<tr><td>uusi</td><td><span class="answer">uudempi</span></td><td><span class="answer">uusin</span></td></tr>
-<tr><td>mukava</td><td><span class="answer">mukavampi</span></td><td><span class="answer">mukavin</span></td></tr>
-<tr><td>kuuma</td><td><span class="answer">kuumempi</span></td><td><span class="answer">kuumin</span></td></tr>
-<tr><td>halpa</td><td><span class="answer">halvempi</span></td><td><span class="answer">halvin</span></td></tr>
-<tr><td>kallis</td><td><span class="answer">kalliimpi</span></td><td><span class="answer">kallein</span></td></tr>
-<tr><td>kylmä</td><td><span class="answer">kylmempi</span></td><td><span class="answer">kylmin</span></td></tr>
-<tr><td>nopea</td><td><span class="answer">nopeampi</span></td><td><span class="answer">nopein</span></td></tr>
-<tr><td>hidas</td><td><span class="answer">hitaampi</span></td><td><span class="answer">hitain</span></td></tr>
-<tr><td>hyvä</td><td><span class="answer">parempi</span></td><td><span class="answer">paras</span></td></tr>
-<tr><td>hieno</td><td><span class="answer">hienompi</span></td><td><span class="answer">hienoin</span></td></tr>
-<tr><td>tavallinen</td><td><span class="answer">tavallisempi</span></td><td><span class="answer">tavallisin</span></td></tr>
-<tr><td>suuri</td><td><span class="answer">suurempi</span></td><td><span class="answer">suurin</span></td></tr>
-<tr><td>pitkä</td><td><span class="answer">pitempi</span></td><td><span class="answer">pisin</span></td></tr>
-<tr><td>helppo</td><td><span class="answer">helpompi</span></td><td><span class="answer">helpoin</span></td></tr>
-</table>
+    <h3>Harjoitus 1: Adjektiivien Vertailu</h3>
+    <p>شکل صحیح تفضیلی و عالی این ۵ صفت پرکاربرد را از منابع آزمون بنویسید:</p>
+    <ol>
+        <li><span class="finnish">Kylmä</span> (سرد)<br>
+            &rarr; تفضیلی: <span class="answer">Kylmempi</span> | عالی: <span class="answer">Kylmin</span><br>
+            <span class="ex-persian">نکته: حرف ä در تفضیلی به e تبدیل می‌شود.</span>
+        </li>
+        <li><span class="finnish">Nopea</span> (سریع)<br>
+            &rarr; تفضیلی: <span class="answer">Nopeampi</span> | عالی: <span class="answer">Nopein</span><br>
+            <span class="ex-persian">نکته: حرف a در تفضیلی باقی می‌ماند اما در عالی به دلیل وجود پسوند -in حذف می‌گردد.</span>
+        </li>
+        <li><span class="finnish">Kallis</span> (گران)<br>
+            &rarr; تفضیلی: <span class="answer">Kalliimpi</span> | عالی: <span class="answer">Kallein</span><br>
+            <span class="ex-persian">نکته: تنه کلمه kallii است که در عالی به دلیل برخورد حروف صدادار به e تغییر شکل می‌دهد.</span>
+        </li>
+        <li><span class="finnish">Uusi</span> (جدید)<br>
+            &rarr; تفضیلی: <span class="answer">Uudempi</span> | عالی: <span class="answer">Uusin</span><br>
+            <span class="ex-persian">نکته: تغییر KPT رخ می‌دهد و s به d در حالت تفضیلی (به دلیل قوانین تنه اسمی) مبدل می‌گردد.</span>
+        </li>
+        <li><span class="finnish">Mukava</span> (راحت / دلپذیر)<br>
+            &rarr; تفضیلی: <span class="answer">Mukavampi</span> | عالی: <span class="answer">Mukavin</span><br>
+            <span class="ex-persian">نکته: هیچ تغییر KPT رخ نمی‌دهد و کلمه کاملاً باقاعده است.</span>
+        </li>
+    </ol>
 </div>
 <h1>فصل ۷: انواع کلمات خاص (Sanatyypit: nut, ut, Vus)</h1>
 <p>در زبان فنلاندی گروه‌های خاصی از کلمات وجود دارند که قوانین صرف آن‌ها با کلمات معمولی متفاوت است. در این فصل نحوه تغییر کلماتی که به <span class="ending">-nut</span>، <span class="ending">-ut</span> و <span class="ending">-us</span> ختم می‌شوند را بررسی می‌کنیم.</p>
@@ -985,57 +1035,171 @@
 <li><strong>حالت پارتيتیو:</strong> <span class="finnish">s</span> به <span class="stem-change">t</span> تبدیل می‌شود. (مثال: <span class="finnish">totuu<span class="stem-change">t</span>ta</span>)</li>
 <li><strong>سایر حالت‌ها:</strong> <span class="finnish">s</span> به <span class="stem-change">de</span> (یا در حالت Illatiivi به <span class="stem-change">te</span>) تبدیل می‌شود. <br/>مثال: <span class="finnish">totuus → totuu<span class="stem-change">de</span>-n</span> (Genetiivi) | <span class="finnish">totuu<span class="stem-change">te</span>-en</span> (Illatiivi)</li>
 </ul>
-<h2>۴. تمرین‌های یکپارچه (Integrated Practice)</h2>
+<h2>۴. تحلیل گرامری و حل تمرین‌های کلیدی (Sanatyypit)</h2>
+
+<style>
+    .alert-info {
+        background: rgba(0, 212, 255, 0.1);
+        border-left: 5px solid #00D4FF;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 0 8px 8px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .alert-info h4 {
+        color: #00D4FF;
+        margin-top: 0;
+        font-family: 'Orbitron', sans-serif;
+    }
+    .alert-info p {
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="alert-info">
+    <h4>جعبه نکات طلایی: تبدیل‌های خاص</h4>
+    <p>بسیاری از زبان‌آموزان در تشخیص تفاوت کلماتی که به <strong>us/ys</strong> و <strong>ut/yt</strong> ختم می‌شوند دچار اشتباه می‌شوند. به این قوانین دقت کنید:</p>
+    <ul>
+        <li><strong>تفاوت us/ys با Vus/Vys:</strong> اگر قبل از <code>us</code> حرف بی‌صدا باشد (مانند <code>kysymys</code>)، تنه به <code>kse</code> تبدیل می‌شود (<code>kysymykse-</code>). اما اگر قبل از آن حرف صدادار باشد، یعنی دو حرف صدادار پیاپی (مانند <code>totuus</code>)، تنه به <code>de</code> و در حالت پارتیتیو به <code>tta</code> تبدیل می‌شود (<code>totuuden / totuutta</code>).</li>
+        <li><strong>تفاوت nut/lut با ut/yt:</strong> کلماتی که به <code>nut/lut/sut/rut</code> ختم می‌شوند (معمولاً صفت مفعولی) به <code>nee/lee/see/ree</code> تبدیل می‌شوند (مثل <code>saastunut &rarr; saastunee-</code>). اما کلمات معدودی که فقط به <code>ut/yt</code> ختم می‌شوند، حرف آخرشان به <code>e</code> تغییر می‌کند و تبدیل به <code>ue/ye</code> می‌شوند (مثل <code>olut &rarr; olue-</code>).</li>
+    </ul>
+</div>
+
 <div class="exercise">
-<h3>HARJOITUS: Kirjoita sanat oikeassa muodossa (نوشتن کلمات در فرم صحیح)</h3>
-<ol>
-<li>Ihmiset uivat (saastunut) vedessä. → <span class="answer">saastuneessa</span></li>
-<li>Heidän täytyy juoda (saastunut) vettä. → <span class="answer">saastunutta</span></li>
-<li>Onko (loukkaantunut) lapsella kaikki hyvin? → <span class="answer">loukkaantuneella</span></li>
-<li>(loukkaantunut) lapsen jalka murtui. → <span class="answer">loukkaantuneen</span></li>
-<li>Oletko nähnyt (kuollut) eläintä? → <span class="answer">kuollutta</span></li>
-<li>(kulunut) takissa on tahra. → <span class="answer">kuluneessa</span></li>
-<li>Ostin kaksi (kulunut) t-paitaa kirpputorilta. → <span class="answer">kulunutta</span></li>
-<li>Äiti laittoi (kuivunut) vaatteet kaappiin. → <span class="answer">kuivuneet</span></li>
-<li>Sinun täytyy auttaa (väsynyt) äitiä. → <span class="answer">väsynyttä</span></li>
-<li>Voinko soittaa (väsynyt) ystävälle? → <span class="answer">väsyneelle</span></li>
-<li>Isä osti kaksi (olut). → <span class="answer">olutta</span></li>
-<li>Minä en pidä (olut). → <span class="answer">oluesta</span></li>
-<li>Isä juo yhden (olut) saunan jälkeen. → <span class="answer">oluen</span></li>
-<li>Maija osti (lyhyt) mekon. → <span class="answer">lyhyen</span></li>
-<li>Minä voin kävellä (lyhyt) matkan. → <span class="answer">lyhyen</span></li>
-<li>En käytä bussia (lyhyt) matkalla. → <span class="answer">lyhyellä</span></li>
-<li>Lasta (purrut) koiralla on jokin sairaus. → <span class="answer">purreella</span></li>
-<li>Minä kerron sinulle (salaisuus). → <span class="answer">salaisuuden</span></li>
-<li>Hän kertoi minulle (totuus). → <span class="answer">totuuden</span></li>
-<li>Arvostatko meidän (ystävyys)? → <span class="answer">ystävyyttä</span></li>
-<li>Mitä sinä muistat (lapsuus)? → <span class="answer">lapsuudesta</span></li>
-<li>Oletko sinä kiinnostunut (talous)? → <span class="answer">taloudesta</span></li>
-</ol>
+    <h3>حل تشریحی تمرین‌های منتخب (Ratkaistut Harjoitukset)</h3>
+    <p>در اینجا ۳ جمله مهم از تمرین‌های کلاسی را با تحلیل دقیق گرامری بررسی می‌کنیم:</p>
+
+    <div class="sentence-block" style="border-right-color: var(--neon);">
+        <div class="finnish">1. Hän kertoi minulle <span class="answer">totuuden</span>.</div>
+        <div class="ex-persian">ترجمه: او <strong>حقیقت را</strong> به من گفت.</div>
+        <div class="ex-persian" style="margin-top: 10px; font-size: 0.9em; color: #bbb;">
+            <strong>تحلیل:</strong> کلمه <span class="finnish">totuus</span> (حقیقت) از نوع Vus است. چون در اینجا نقش مفعول کامل (آکوزاتیو/ژنتیو) را دارد، تنه آن به <code>totuude-</code> تبدیل شده و پسوند <code>-n</code> می‌گیرد.
+        </div>
+    </div>
+
+    <div class="sentence-block" style="border-right-color: var(--neon);">
+        <div class="finnish">2. Ihmiset uivat <span class="answer">saastuneessa</span> vedessä.</div>
+        <div class="ex-persian">ترجمه: مردم در آبِ <strong>آلوده</strong> شنا می‌کنند.</div>
+        <div class="ex-persian" style="margin-top: 10px; font-size: 0.9em; color: #bbb;">
+            <strong>تحلیل:</strong> کلمه <span class="finnish">saastunut</span> (آلوده) از نوع nut است. تنه آن به <code>saastunee-</code> تبدیل شده و چون "در آب" (vedessä) حالت Inessiivi دارد، صفت نیز باید با آن تطابق پیدا کرده و پسوند <code>-ssa</code> بگیرد.
+        </div>
+    </div>
+
+    <div class="sentence-block" style="border-right-color: var(--neon);">
+        <div class="finnish">3. Minä en pidä <span class="answer">oluesta</span>.</div>
+        <div class="ex-persian">ترجمه: من از <strong>آبجو</strong> خوشم نمی‌آید.</div>
+        <div class="ex-persian" style="margin-top: 10px; font-size: 0.9em; color: #bbb;">
+            <strong>تحلیل:</strong> کلمه <span class="finnish">olut</span> (آبجو) از نوع ut است. تنه آن به <code>olue-</code> تغییر می‌کند. چون فعل <span class="finnish">pitää</span> (خوش آمدن) همیشه با حالت Elatiivi (-sta/-stä) می‌آید، پاسخ <code>olue-sta</code> می‌شود.
+        </div>
+    </div>
 </div>
 <h1>فصل ۸: طبیعت فنلاند، واژگان فصلی و جشن‌ها (Suomen luonto ja juhlat)</h1>
 <p>زبان فنلاندی پیوند عمیقی با طبیعت دارد. در این فصل با واژگان مرتبط با طبیعت، حیوانات، گیاهان فنلاندی و همچنین عباراتی برای بحث درباره جشن‌ها و سنت‌ها آشنا می‌شوید. این مباحث بخش مهمی از تمرین‌های کلاسی و مکالمه‌ها را تشکیل می‌دهند.</p>
-<h2>۱. طبیعت و محیط زیست فنلاند (Suomalainen luonto ja ympäristö)</h2>
-<p>محیط زیست در فرهنگ فنلاندی جایگاه ویژه‌ای دارد. برای صحبت در مورد طبیعت فنلاند، به دایره لغات گسترده‌ای از اسامی حیوانات و درختان نیاز دارید.</p>
-<h3>۱.۱. حیوانات فنلاندی (Suomalaiset eläimet)</h3>
-<p>شما باید بتوانید حیوانات رایج در حیات وحش فنلاند را نام ببرید:</p>
-<ul>
-<li><span class="finnish">Karhu</span> (خرس) - جانور ملی فنلاند</li>
-<li><span class="finnish">Hirvi</span> (گوزن شمالی بزرگ / Moose)</li>
-<li><span class="finnish">Poro</span> (گوزن قطبی / Reindeer)</li>
-<li><span class="finnish">Susi</span> (گرگ)</li>
-<li><span class="finnish">Kettu</span> (روباه)</li>
-<li><span class="finnish">Jänis</span> (خرگوش وحشی)</li>
-<li><span class="finnish">Orava</span> (سنجاب)</li>
-<li><span class="finnish">Joutsen</span> (قو) - پرنده ملی فنلاند</li>
-</ul>
-<h3>۱.۲. درختان و گیاهان فنلاندی (Suomalaiset kasvit ja puut)</h3>
-<p>جنگل‌های فنلاند (<span class="finnish">Metsä</span>) بیشتر از سه نوع درخت اصلی تشکیل شده‌اند:</p>
-<ul>
-<li><span class="finnish">Mänty</span> (درخت کاج / Pine)</li>
-<li><span class="finnish">Kuusi</span> (درخت صنوبر / Spruce)</li>
-<li><span class="finnish">Koivu</span> (درخت توس / Birch) - این درخت با تنه سفید رنگش بسیار معروف است.</li>
-</ul>
+<h2>۱. گسترش دایره واژگان: طبیعت فنلاند (Suomen Luonto)</h2>
+<p>سلام! به عنوان مدرس زبان فنلاندی شما، می‌خواهم تأکید کنم که درک طبیعت برای برقراری ارتباط عمیق با فرهنگ فنلاند حیاتی است. این واژگان برای موفقیت در آزمون شفاهی (تصویرخوانی) و مکالمات روزمره با بومیان بسیار کلیدی هستند.</p>
+
+<img src="finnish_nature.png" alt="A majestic photorealistic Finnish landscape featuring a pristine blue lake surrounded by dense green pine and white birch forests." style="width:100%; border-radius: 12px; margin-bottom: 20px; border: 2px solid var(--neon); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+
+<h3>۱.۱. حیوانات فنلاندی (Suomalaiset Eläimet)</h3>
+<p>جنگل‌های فنلاند زیستگاه حیوانات شگفت‌انگیزی است. در جدول زیر با مهم‌ترین جانوران آشنا می‌شویم:</p>
+<table class="nature-table">
+    <thead>
+        <tr>
+            <th>معنی فارسی (Persiaksi)</th>
+            <th>معادل انگلیسی (Englanniksi)</th>
+            <th style="text-align: left;">کلمه فنلاندی (Suomeksi)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>خرس (نماد ملی فنلاند)</td>
+            <td>Bear</td>
+            <td class="finnish-word">Karhu</td>
+        </tr>
+        <tr>
+            <td>گوزن شمالی بزرگ (الک)</td>
+            <td>Moose / Elk</td>
+            <td class="finnish-word">Hirvi</td>
+        </tr>
+        <tr>
+            <td>گرگ</td>
+            <td>Wolf</td>
+            <td class="finnish-word">Susi</td>
+        </tr>
+        <tr>
+            <td>روباه</td>
+            <td>Fox</td>
+            <td class="finnish-word">Kettu</td>
+        </tr>
+        <tr>
+            <td>خرگوش صحرایی</td>
+            <td>Hare</td>
+            <td class="finnish-word">Jänis</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>۱.۲. درختان و مناظر طبیعی (Puut ja Maisema)</h3>
+<p>آب‌وهوا و اقلیم فنلاند پوشش گیاهی خاصی را شکل داده است. برای توصیف محیط پیرامون خود به این کلمات نیاز دارید:</p>
+<table class="nature-table">
+    <thead>
+        <tr>
+            <th>معنی فارسی (Persiaksi)</th>
+            <th>معادل انگلیسی (Englanniksi)</th>
+            <th style="text-align: left;">کلمه فنلاندی (Suomeksi)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>درخت توس (غان) - با تنه سفید رنگ</td>
+            <td>Birch</td>
+            <td class="finnish-word">Koivu</td>
+        </tr>
+        <tr>
+            <td>درخت کاج</td>
+            <td>Pine</td>
+            <td class="finnish-word">Mänty</td>
+        </tr>
+        <tr>
+            <td>جنگل</td>
+            <td>Forest</td>
+            <td class="finnish-word">Metsä</td>
+        </tr>
+        <tr>
+            <td>دریاچه - فنلاند سرزمین هزار دریاچه است</td>
+            <td>Lake</td>
+            <td class="finnish-word">Järvi</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>۱.۳. جملات کاربردی توصیفی (Kuvailevia Lauseita)</h3>
+<p>در آزمون شفاهی معمولاً از شما خواسته می‌شود تصاویری از طبیعت را توصیف کنید. در اینجا ۵ جمله طلایی و سطح بالا با استفاده از واژگان فوق برای شما آماده کرده‌ام:</p>
+
+<div class="sentence-block">
+    <div class="finnish">1. Suuri karhu kävelee hitaasti pimeässä metsässä.</div>
+    <div class="ex-persian">یک خرس بزرگ به آرامی در جنگل تاریک قدم می‌زند.</div>
+</div>
+
+<div class="sentence-block">
+    <div class="finnish">2. Kaunis valkoinen koivu kasvaa sinisen järven rannalla.</div>
+    <div class="ex-persian">یک درخت توس سفید و زیبا در ساحل دریاچه‌ی آبی رشد می‌کند.</div>
+</div>
+
+<div class="sentence-block">
+    <div class="finnish">3. Näin eilen nopean jäniksen ja ovelan ketun luonnossa.</div>
+    <div class="ex-persian">من دیروز یک خرگوش سریع و یک روباه مکار را در طبیعت دیدم.</div>
+</div>
+
+<div class="sentence-block">
+    <div class="finnish">4. Hirvi ja susi ovat tyypillisiä suomalaisia eläimiä.</div>
+    <div class="ex-persian">گوزن شمالی و گرگ، جانوران تیپیکال (معمول) فنلاندی هستند.</div>
+</div>
+
+<div class="sentence-block">
+    <div class="finnish">5. Suomen luonto on täynnä vihreitä mäntyjä ja puhtaita järviä.</div>
+    <div class="ex-persian">طبیعت فنلاند مملو از کاج‌های سبز و دریاچه‌های پاکیزه است.</div>
+</div>
 <h2>۲. جشن‌ها و رسوم (Juhlat ja tavat)</h2>
 <p>جشن‌های فنلاندی معمولاً با تغییر فصول مرتبط هستند. مهم‌ترین آن‌ها عبارتند از:</p>
 <ul>
@@ -1116,7 +1280,115 @@
     → <span class="answer">Haluaisin tehdä töitä IT-alalla esimerkiksi asiantuntijana.</span></li>
 </ol>
 </div>
-<h1>فصل ۱۰: مرور نهایی و آمادگی آزمون (Kertaus ja Kokeeseen Valmistautuminen)</h1>
+<h1>فصل ۱۰: سلامت و بدن (Sairaus ja Terveys)</h1>
+<p>در این فصل چگونگی بیان علائم بیماری و بخش‌های مهم بدن را یاد می‌گیریم. همچنین با اصطلاحات ضروری برای تماس با دانشگاه یا محل کار جهت گرفتن مرخصی استعلاجی آشنا خواهید شد.</p>
+
+<img src="health_and_body_symptoms.png" alt="A highly detailed, photorealistic 3D medical illustration representing health and sickness with glowing red symptoms." style="width:100%; border-radius: 12px; margin-bottom: 20px; border: 2px solid var(--neon); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+
+<h2>۱. واژگان علائم بیماری (Oireet)</h2>
+<p>هنگام مراجعه به پزشک یا تماس با دانشگاه، باید بتوانید مشکل خود را به درستی بیان کنید:</p>
+<table class="nature-table">
+    <thead>
+        <tr>
+            <th>معنی فارسی (Persiaksi)</th>
+            <th>معادل انگلیسی (Englanniksi)</th>
+            <th style="text-align: left;">کلمه فنلاندی (Suomeksi)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>تب</td>
+            <td>Fever</td>
+            <td class="finnish-word" style="color: var(--error);">Kuume</td>
+        </tr>
+        <tr>
+            <td>سرفه</td>
+            <td>Cough</td>
+            <td class="finnish-word" style="color: var(--error);">Yskä</td>
+        </tr>
+        <tr>
+            <td>آبریزش بینی / آنفلوآنزا</td>
+            <td>Flu / Runny nose</td>
+            <td class="finnish-word" style="color: var(--error);">Nuha</td>
+        </tr>
+        <tr>
+            <td>گلودرد</td>
+            <td>Sore throat</td>
+            <td class="finnish-word" style="color: var(--error);">Kurkkukipu</td>
+        </tr>
+        <tr>
+            <td>سردرد</td>
+            <td>Headache</td>
+            <td class="finnish-word" style="color: var(--error);">Päänsärky</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>۲. عبارات کاربردی (Hyödyllisiä Fraaseja)</h2>
+<p>برای بیان اینکه بیمار هستید، معمولاً از دو ساختار اصلی استفاده می‌شود:</p>
+<ul>
+    <li>استفاده از فعل Olla + صفت: <span class="finnish">Olen sairas.</span> (من بیمار هستم / I am sick).</li>
+    <li>استفاده از ساختار Minulla on + اسم در حالت پارتیتیو: <span class="finnish">Minulla on kuumetta.</span> (من تب دارم / I have a fever).</li>
+</ul>
+
+<h2>۳. اعضای بدن (Ruumiinosat)</h2>
+<p>مهم‌ترین بخش‌های بدن که معمولاً دچار درد می‌شوند:</p>
+<table class="nature-table">
+    <thead>
+        <tr>
+            <th>معنی فارسی (Persiaksi)</th>
+            <th>معادل انگلیسی (Englanniksi)</th>
+            <th style="text-align: left;">کلمه فنلاندی (Suomeksi)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>سر</td>
+            <td>Head</td>
+            <td class="finnish-word">Pää</td>
+        </tr>
+        <tr>
+            <td>گلو</td>
+            <td>Throat</td>
+            <td class="finnish-word">Kurkku</td>
+        </tr>
+        <tr>
+            <td>معده / شکم</td>
+            <td>Stomach</td>
+            <td class="finnish-word">Vatsa / Maha</td>
+        </tr>
+        <tr>
+            <td>کمر / پشت</td>
+            <td>Back</td>
+            <td class="finnish-word">Selkä</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>۴. مکالمات کاربردی (Käytännön Dialogeja)</h2>
+<div class="exercise">
+<h3>HARJOITUS: Soitto Vaasan Yliopistolle (تماس با دانشگاه واسا)</h3>
+<p>تصور کنید بیمار هستید و باید به استاد خود یا دفتر دانشگاه واسا اطلاع دهید:</p>
+
+<div class="sentence-block">
+    <div class="finnish">Dialogi 1: Kuume ja Yskä (تب و سرفه)</div>
+    <div class="finnish" style="color: #fff; font-weight: normal; margin-top: 10px;">- Hei, täällä on [Sinun nimesi]. En pääse tänään luennolle, koska olen sairas. Minulla on <span style="color: var(--error);">kuumetta</span> ja kova <span style="color: var(--error);">yskä</span>.</div>
+    <div class="ex-persian">سلام، [نام شما] هستم. من امروز نمی‌توانم به کلاس بیایم زیرا بیمارم. من تب و سرفه‌ی شدیدی دارم.</div>
+</div>
+
+<div class="sentence-block">
+    <div class="finnish">Dialogi 2: Päänsärky (سردرد)</div>
+    <div class="finnish" style="color: #fff; font-weight: normal; margin-top: 10px;">- Huomenta. Olen valitettavasti sairas. Minulla on paha <span style="color: var(--error);">päänsärky</span>. Tarvitsen sairauslomaa tämän päivän.</div>
+    <div class="ex-persian">صبح بخیر. من متأسفانه بیمار هستم. من سردرد بدی دارم. برای امروز به مرخصی استعلاجی نیاز دارم.</div>
+</div>
+
+<div class="sentence-block">
+    <div class="finnish">Dialogi 3: Nuha ja Kurkkukipu (آنفلوآنزا و گلودرد)</div>
+    <div class="finnish" style="color: #fff; font-weight: normal; margin-top: 10px;">- Hei, minulla on <span style="color: var(--error);">nuha</span> ja <span style="color: var(--error);">kurkkukipu</span>. Voinko tehdä tentin myöhemmin?</div>
+    <div class="ex-persian">سلام، من آنفلوآنزا و گلودرد دارم. آیا می‌توانم امتحان را بعداً بدهم؟</div>
+</div>
+</div>
+<h1>فصل ۱۱: مرور نهایی و آمادگی آزمون (Kertaus ja Kokeeseen Valmistautuminen)</h1>
 <p>این فصل شامل مجموعه‌ای از سوالات جامع (Kertausharjoitus) است که مفاهیم کلیدی کل دوره فنلاندی ۴ را پوشش می‌دهد. این سوالات معمولاً در آزمون‌های نهایی یا مصاحبه‌های شفاهی پرسیده می‌شوند و پاسخگویی به آن‌ها نیازمند ترکیب گرامرهای یادگرفته شده است.</p>
 <h2>۱. سوالات مروری جامع (Kertausharjoitus)</h2>
 <div class="exercise">
