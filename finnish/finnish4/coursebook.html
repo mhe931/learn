@@ -1,1104 +1,1291 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>Finnish 4 Coursebook - Master Level</title>
-<style>
-  body { font-family: 'Vazirmatn', Tahoma, Arial, sans-serif; line-height: 1.8; margin: 40px; background-color: #f9f9f9; color: #333; }
-  h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
-  h2 { color: #2980b9; margin-top: 30px; }
-  h3 { color: #8e44ad; }
-  .ending { color: blue; font-weight: bold; }
-  .stem-change { color: red; font-weight: bold; }
-  .answer { color: green; font-weight: bold; }
-  table { border-collapse: collapse; width: 100%; margin-bottom: 20px; background-color: #fff; direction: ltr; text-align: left; }
-  th, td { border: 1px solid #ccc; padding: 10px; }
-  th { background-color: #ecf0f1; }
-  .finnish { font-weight: bold; font-family: 'Courier New', Courier, monospace; }
-  .exercise { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
-  .note { background-color: #e8f8f5; padding: 15px; border-right: 4px solid #1abc9c; margin: 15px 0; }
-</style>
-</head>
-<body>
 
-<h1>فصل ۱: گذشته ساده مثبت و عبارات زمانی (Positive Imperfect & Time Expressions)</h1>
+<html dir="rtl" lang="fa">
+<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>کتاب آموزشی جامع فنلاندی ۴</title><link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&amp;family=Orbitron:wght@900&amp;display=swap" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/><style>
+        :root {
+            --bg: #080810;
+            --card-bg: rgba(25, 25, 40, 0.95);
+            --gold: #FFD700;
+            --neon: #00D4FF;
+            --purple: #BC13FE;
+            --text: #F0F0F0;
+            --subtext: #B0B0B0;
+            --success: #00FF9D;
+            --error: #FF4B4B;
+            --example: #FF00D4;
+            --rule-bg: rgba(0, 212, 255, 0.08);
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            background: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #000 80%);
+            background-attachment: fixed;
+            color: var(--text);
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 18px;
+            line-height: 1.8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
+            color: var(--gold);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-family: 'Vazirmatn', 'Exo 2', sans-serif;
+            font-size: 1.8em;
+            color: var(--neon);
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 15px;
+            margin: 40px 0 30px;
+            font-weight: 800;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: var(--gold);
+            margin: 20px 0 10px 0;
+            text-align: right;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        details {
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: var(--rule-bg);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            transition: background 0.3s;
+        }
+
+        details[open] {
+            background: rgba(25, 25, 40, 0.9);
+        }
+
+        summary {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+            direction: rtl;
+        }
+
+        summary::marker {
+            color: var(--neon);
+        }
+
+        .details-content {
+            padding: 0 20px 20px;
+        }
+
+        .finnish {
+            color: #fff;
+            font-weight: bold;
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .answer {
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        .stem-change {
+            color: var(--error);
+            font-weight: bold;
+        }
+        
+        .ending {
+            color: var(--neon);
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            text-align: right;
+            color: #fff;
+        }
+
+        th {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--neon);
+        }
+        
+        .exercise {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--purple);
+            margin-bottom: 20px;
+        }
+        
+        .note {
+            background: rgba(255, 215, 0, 0.05);
+            border-right: 3px solid var(--gold);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .nav-link {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .nav-link a {
+            color: var(--neon);
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .nav-link a:hover {
+            color: var(--gold);
+        }
+</style></head>
+<body><div class="container">
+<h1>فصل ۱: گذشته ساده مثبت و عبارات زمانی (Positive Imperfect &amp; Time Expressions)</h1><div class="nav-link"><a href="../index.html">بازگشت به فهرست اصلی</a></div>
 <p>در این فصل، زمان گذشته ساده یا <span class="finnish">Imperfekti</span> را در حالت مثبت بررسی می‌کنیم. زمان گذشته در زبان فنلاندی نشان‌دهنده عملی است که در گذشته انجام شده و به پایان رسیده است. همچنین، عبارات زمانی <span class="finnish">Ajanilmaukset</span> را برای بیان دقیق زمان وقوع رویدادها یاد می‌گیریم.</p>
-
 <h2>۱. زمان گذشته ساده (Imperfekti)</h2>
 <p>نشانه اصلی زمان گذشته در فنلاندی حرف <span class="ending">-i</span> است که بین تنه فعل (<span class="finnish">vartalo</span>) و شناسه شخصی قرار می‌گیرد. با این حال، در برخی افعال نشانه گذشته به صورت <span class="ending">-si</span> ظاهر می‌شود.</p>
-
 <h3>۱.۱. افعال با نشانه گذشته -i (نوع ۱، ۲، ۳، ۵ و ۶)</h3>
 <p>اضافه شدن <span class="ending">-i</span> می‌تواند باعث تغییر یا حذف آخرین حرف صدادار تنه فعل شود. قوانین تغییر حروف صدادار به شرح زیر است:</p>
-
 <div class="note">
 <ul>
-  <li>حروف صدادار <strong>o, ö, u, y</strong> تغییر نمی‌کنند: <span class="finnish">sanoa &rarr; sano<span class="ending">i</span>n</span> (گفتم).</li>
-  <li>حروف صدادار <strong>ä, e, i</strong> حذف می‌شوند: <span class="finnish">vetää &rarr; ved<span class="stem-change">-</span><span class="ending">i</span>n</span> (کشیدم).</li>
-  <li>اگر دو حرف صدادار یکسان در انتهای تنه باشند (VV)، یکی از آن‌ها حذف می‌شود: <span class="finnish">saada &rarr; sa<span class="stem-change">-</span><span class="ending">i</span>n</span> (گرفتم).</li>
-  <li>در دیفتونگ‌ها (Diphthongs) مانند uo, yö, ie، اولین حرف صدادار حذف می‌شود: <span class="finnish">juoda &rarr; j<span class="stem-change">o</span><span class="ending">i</span>n</span> (نوشیدم)، <span class="finnish">syödä &rarr; s<span class="stem-change">ö</span><span class="ending">i</span>n</span> (خوردم).</li>
-  <li>در افعال دو سیلابی که به a ختم می‌شوند، اگر اولین حرف صدادار a باشد، a به o تبدیل می‌شود: <span class="finnish">maksaa &rarr; maks<span class="stem-change">o</span><span class="ending">i</span>n</span> (پرداخت کردم). در غیر این صورت، a حذف می‌شود: <span class="finnish">ostaa &rarr; ost<span class="stem-change">-</span><span class="ending">i</span>n</span> (خریدم).</li>
+<li>حروف صدادار <strong>o, ö, u, y</strong> تغییر نمی‌کنند: <span class="finnish">sanoa → sano<span class="ending">i</span>n</span> (گفتم).</li>
+<li>حروف صدادار <strong>ä, e, i</strong> حذف می‌شوند: <span class="finnish">vetää → ved<span class="stem-change">-</span><span class="ending">i</span>n</span> (کشیدم).</li>
+<li>اگر دو حرف صدادار یکسان در انتهای تنه باشند (VV)، یکی از آن‌ها حذف می‌شود: <span class="finnish">saada → sa<span class="stem-change">-</span><span class="ending">i</span>n</span> (گرفتم).</li>
+<li>در دیفتونگ‌ها (Diphthongs) مانند uo, yö, ie، اولین حرف صدادار حذف می‌شود: <span class="finnish">juoda → j<span class="stem-change">o</span><span class="ending">i</span>n</span> (نوشیدم)، <span class="finnish">syödä → s<span class="stem-change">ö</span><span class="ending">i</span>n</span> (خوردم).</li>
+<li>در افعال دو سیلابی که به a ختم می‌شوند، اگر اولین حرف صدادار a باشد، a به o تبدیل می‌شود: <span class="finnish">maksaa → maks<span class="stem-change">o</span><span class="ending">i</span>n</span> (پرداخت کردم). در غیر این صورت، a حذف می‌شود: <span class="finnish">ostaa → ost<span class="stem-change">-</span><span class="ending">i</span>n</span> (خریدم).</li>
 </ul>
 </div>
-
 <table>
-  <tr>
-    <th>زبان فنلاندی (Infinitive)</th>
-    <th>زمان حال (Present)</th>
-    <th>زمان گذشته (Past)</th>
-    <th>معنی (Meaning)</th>
-  </tr>
-  <tr>
-    <td><span class="finnish">sanoa</span> (Type 1)</td>
-    <td><span class="finnish">sano-n</span></td>
-    <td><span class="finnish">sano-<span class="ending">i</span>-n</span></td>
-    <td>من گفتم</td>
-  </tr>
-  <tr>
-    <td><span class="finnish">vetää</span> (Type 1)</td>
-    <td><span class="finnish">vedä-n</span></td>
-    <td><span class="finnish">ved<span class="stem-change">-</span><span class="ending">i</span>-n</span></td>
-    <td>من کشیدم</td>
-  </tr>
-  <tr>
-    <td><span class="finnish">juoda</span> (Type 2)</td>
-    <td><span class="finnish">juo-n</span></td>
-    <td><span class="finnish">j<span class="stem-change">o</span>-<span class="ending">i</span>-n</span></td>
-    <td>من نوشیدم</td>
-  </tr>
-  <tr>
-    <td><span class="finnish">opiskella</span> (Type 3)</td>
-    <td><span class="finnish">opiskele-n</span></td>
-    <td><span class="finnish">opiskel<span class="stem-change">-</span><span class="ending">i</span>-n</span></td>
-    <td>من مطالعه کردم</td>
-  </tr>
-  <tr>
-    <td><span class="finnish">tarvita</span> (Type 5)</td>
-    <td><span class="finnish">tarvitse-n</span></td>
-    <td><span class="finnish">tarvits<span class="stem-change">-</span><span class="ending">i</span>-n</span></td>
-    <td>من نیاز داشتم</td>
-  </tr>
+<tr>
+<th>زبان فنلاندی (Infinitive)</th>
+<th>زمان حال (Present)</th>
+<th>زمان گذشته (Past)</th>
+<th>معنی (Meaning)</th>
+</tr>
+<tr>
+<td><span class="finnish">sanoa</span> (Type 1)</td>
+<td><span class="finnish">sano-n</span></td>
+<td><span class="finnish">sano-<span class="ending">i</span>-n</span></td>
+<td>من گفتم</td>
+</tr>
+<tr>
+<td><span class="finnish">vetää</span> (Type 1)</td>
+<td><span class="finnish">vedä-n</span></td>
+<td><span class="finnish">ved<span class="stem-change">-</span><span class="ending">i</span>-n</span></td>
+<td>من کشیدم</td>
+</tr>
+<tr>
+<td><span class="finnish">juoda</span> (Type 2)</td>
+<td><span class="finnish">juo-n</span></td>
+<td><span class="finnish">j<span class="stem-change">o</span>-<span class="ending">i</span>-n</span></td>
+<td>من نوشیدم</td>
+</tr>
+<tr>
+<td><span class="finnish">opiskella</span> (Type 3)</td>
+<td><span class="finnish">opiskele-n</span></td>
+<td><span class="finnish">opiskel<span class="stem-change">-</span><span class="ending">i</span>-n</span></td>
+<td>من مطالعه کردم</td>
+</tr>
+<tr>
+<td><span class="finnish">tarvita</span> (Type 5)</td>
+<td><span class="finnish">tarvitse-n</span></td>
+<td><span class="finnish">tarvits<span class="stem-change">-</span><span class="ending">i</span>-n</span></td>
+<td>من نیاز داشتم</td>
+</tr>
 </table>
-
 <h3>۱.۲. افعال با نشانه گذشته -si (نوع ۴ و برخی از نوع ۱)</h3>
-<p>تمامی افعال نوع ۴ و گروه خاصی از افعال نوع ۱ در گذشته شناسه <span class="ending">-si</span> می‌گیرند. در افعال نوع ۴، تنه فعل به <span class="ending">-si</span> ختم می‌شود (مثلاً <span class="finnish">tavata &rarr; tapa<span class="ending">si</span>n</span>).</p>
-
+<p>تمامی افعال نوع ۴ و گروه خاصی از افعال نوع ۱ در گذشته شناسه <span class="ending">-si</span> می‌گیرند. در افعال نوع ۴، تنه فعل به <span class="ending">-si</span> ختم می‌شود (مثلاً <span class="finnish">tavata → tapa<span class="ending">si</span>n</span>).</p>
 <p>افعال مهم نوع ۱ که <span class="ending">-si</span> می‌گیرند عبارتند از: <span class="finnish">tietää</span> (دانستن)، <span class="finnish">pyytää</span> (درخواست کردن)، <span class="finnish">löytää</span> (پیدا کردن)، <span class="finnish">tuntea</span> (احساس کردن/شناختن)، <span class="finnish">ymmärtää</span> (فهمیدن) و غیره.</p>
-
 <table>
-  <tr>
-    <th>زبان فنلاندی (Infinitive)</th>
-    <th>زمان حال (Present)</th>
-    <th>زمان گذشته (Past)</th>
-    <th>معنی (Meaning)</th>
-  </tr>
-  <tr>
-    <td><span class="finnish">tietää</span> (Type 1)</td>
-    <td><span class="finnish">tiedä-n</span></td>
-    <td><span class="finnish">tie-<span class="ending">si</span>-n</span></td>
-    <td>من دانستم</td>
-  </tr>
-  <tr>
-    <td><span class="finnish">tavata</span> (Type 4)</td>
-    <td><span class="finnish">tapaa-n</span></td>
-    <td><span class="finnish">tapa-<span class="ending">si</span>-n</span></td>
-    <td>من ملاقات کردم</td>
-  </tr>
-  <tr>
-    <td><span class="finnish">ymmärtää</span> (Type 1)</td>
-    <td><span class="finnish">ymmärrä-n</span></td>
-    <td><span class="finnish">ymmär-<span class="ending">si</span>-n</span></td>
-    <td>من فهمیدم</td>
-  </tr>
+<tr>
+<th>زبان فنلاندی (Infinitive)</th>
+<th>زمان حال (Present)</th>
+<th>زمان گذشته (Past)</th>
+<th>معنی (Meaning)</th>
+</tr>
+<tr>
+<td><span class="finnish">tietää</span> (Type 1)</td>
+<td><span class="finnish">tiedä-n</span></td>
+<td><span class="finnish">tie-<span class="ending">si</span>-n</span></td>
+<td>من دانستم</td>
+</tr>
+<tr>
+<td><span class="finnish">tavata</span> (Type 4)</td>
+<td><span class="finnish">tapaa-n</span></td>
+<td><span class="finnish">tapa-<span class="ending">si</span>-n</span></td>
+<td>من ملاقات کردم</td>
+</tr>
+<tr>
+<td><span class="finnish">ymmärtää</span> (Type 1)</td>
+<td><span class="finnish">ymmärrä-n</span></td>
+<td><span class="finnish">ymmär-<span class="ending">si</span>-n</span></td>
+<td>من فهمیدم</td>
+</tr>
 </table>
-
 <h2>۲. عبارات زمانی (Ajanilmaukset)</h2>
 <p>عبارات زمانی برای پاسخ به سوالاتی مانند چه زمانی (<span class="finnish">Milloin?</span>)، هر چند وقت یک‌بار (<span class="finnish">Kuinka usein?</span>) و در چه مدتی (<span class="finnish">Missä ajassa?</span>) به کار می‌روند.</p>
-
 <div class="note">
 <ul>
-  <li><strong>چه روزی؟ (Minä päivänä?):</strong> از پسوند <span class="ending">-na</span> (حالت Essiivi) استفاده می‌شود. مثال: <span class="finnish">maanantai<span class="ending">na</span></span> (در روز دوشنبه).</li>
-  <li><strong>چه زمانی از روز؟ (Vuorokausi):</strong> از پسوند <span class="ending">-lla</span> (حالت Adessiivi) استفاده می‌شود. مثال: <span class="finnish">aamu<span class="ending">lla</span></span> (در صبح)، <span class="finnish">yö<span class="ending">llä</span></span> (در شب). اگر صفت همراه آن باشد از <span class="ending">-na</span> استفاده می‌کنیم (مثلاً <span class="finnish">viime yö<span class="ending">nä</span></span>).</li>
-  <li><strong>فصل‌ها و سال‌ها:</strong> معمولاً از <span class="ending">-lla</span> یا <span class="ending">-na</span> استفاده می‌شود. مثال: <span class="finnish">kesä<span class="ending">llä</span></span> (در تابستان)، <span class="finnish">vuon<span class="ending">na</span> 2010</span> (در سال ۲۰۱۰).</li>
-  <li><strong>طول مدت یک رویداد:</strong> برای بیان اینکه عملی در چه مدتی تکمیل شده از Inessiivi (<span class="ending">-ssa</span>) استفاده می‌شود. مثال: <span class="finnish">kahde<span class="ending">ssa</span> tunni<span class="ending">ssa</span></span> (در طول دو ساعت).</li>
-  <li><strong>برنامه‌ریزی برای آینده (برای چه زمانی):</strong> از Translatiivi (<span class="ending">-ksi</span>) استفاده می‌شود. مثال: <span class="finnish">huomise<span class="ending">ksi</span></span> (برای فردا).</li>
+<li><strong>چه روزی؟ (Minä päivänä?):</strong> از پسوند <span class="ending">-na</span> (حالت Essiivi) استفاده می‌شود. مثال: <span class="finnish">maanantai<span class="ending">na</span></span> (در روز دوشنبه).</li>
+<li><strong>چه زمانی از روز؟ (Vuorokausi):</strong> از پسوند <span class="ending">-lla</span> (حالت Adessiivi) استفاده می‌شود. مثال: <span class="finnish">aamu<span class="ending">lla</span></span> (در صبح)، <span class="finnish">yö<span class="ending">llä</span></span> (در شب). اگر صفت همراه آن باشد از <span class="ending">-na</span> استفاده می‌کنیم (مثلاً <span class="finnish">viime yö<span class="ending">nä</span></span>).</li>
+<li><strong>فصل‌ها و سال‌ها:</strong> معمولاً از <span class="ending">-lla</span> یا <span class="ending">-na</span> استفاده می‌شود. مثال: <span class="finnish">kesä<span class="ending">llä</span></span> (در تابستان)، <span class="finnish">vuon<span class="ending">na</span> 2010</span> (در سال ۲۰۱۰).</li>
+<li><strong>طول مدت یک رویداد:</strong> برای بیان اینکه عملی در چه مدتی تکمیل شده از Inessiivi (<span class="ending">-ssa</span>) استفاده می‌شود. مثال: <span class="finnish">kahde<span class="ending">ssa</span> tunni<span class="ending">ssa</span></span> (در طول دو ساعت).</li>
+<li><strong>برنامه‌ریزی برای آینده (برای چه زمانی):</strong> از Translatiivi (<span class="ending">-ksi</span>) استفاده می‌شود. مثال: <span class="finnish">huomise<span class="ending">ksi</span></span> (برای فردا).</li>
 </ul>
 </div>
-
 <h2>۳. تمرین‌های یکپارچه (Integrated Practice)</h2>
-
 <div class="exercise">
-  <h3>HARJOITUS 1: Taivuta verbit imperfektissä (صرف افعال در گذشته)</h3>
-  <p>افعال زیر را در زمان گذشته برای تمامی اشخاص صرف کنید.</p>
-  <table>
-    <tr>
-      <th>Infinitive</th>
-      <th>minä</th>
-      <th>sinä</th>
-      <th>hän/se</th>
-      <th>me</th>
-      <th>te</th>
-      <th>he/ne</th>
-    </tr>
-    <tr>
-      <td>asua</td>
-      <td><span class="answer">asuin</span></td>
-      <td><span class="answer">asuit</span></td>
-      <td><span class="answer">asui</span></td>
-      <td><span class="answer">asuimme</span></td> <!-- Note: The key says asuin asuit asui. I'll add me te he forms logically if missing, but let's stick to key! The key actually only provided 3, wait, the key says: asua -> asuin, asuit, asui. Wait, I will just put the first three if that's what's in the text. Let's check. Ah, the answer key text had "asua asuin asuit asui". I'll format properly. -->
-      <td><span class="answer">asuitte</span></td>
-      <td><span class="answer">asuivat</span></td>
-    </tr>
-    <tr>
-      <td>antaa</td>
-      <td><span class="answer">annoin</span></td>
-      <td><span class="answer">annoit</span></td>
-      <td><span class="answer">antoi</span></td>
-      <td><span class="answer">annoimme</span></td>
-      <td><span class="answer">annoitte</span></td>
-      <td><span class="answer">antoivat</span></td>
-    </tr>
-    <tr>
-      <td>tanssia</td>
-      <td><span class="answer">tanssin</span></td>
-      <td><span class="answer">tanssit</span></td>
-      <td><span class="answer">tanssi</span></td>
-      <td><span class="answer">tanssimme</span></td>
-      <td><span class="answer">tanssitte</span></td>
-      <td><span class="answer">tanssivat</span></td>
-    </tr>
-    <tr>
-      <td>kysyä</td>
-      <td><span class="answer">kysyin</span></td>
-      <td><span class="answer">kysyit</span></td>
-      <td><span class="answer">kysyi</span></td>
-      <td><span class="answer">kysyimme</span></td>
-      <td><span class="answer">kysyitte</span></td>
-      <td><span class="answer">kysyivät</span></td>
-    </tr>
-    <tr>
-      <td>haluta</td>
-      <td><span class="answer">halusin</span></td>
-      <td><span class="answer">halusit</span></td>
-      <td><span class="answer">halusi</span></td>
-      <td><span class="answer">halusimme</span></td>
-      <td><span class="answer">halusitte</span></td>
-      <td><span class="answer">halusivat</span></td>
-    </tr>
-    <tr>
-      <td>ottaa</td>
-      <td><span class="answer">otin</span></td>
-      <td><span class="answer">otit</span></td>
-      <td><span class="answer">otti</span></td>
-      <td><span class="answer">otimme</span></td>
-      <td><span class="answer">otitte</span></td>
-      <td><span class="answer">ottivat</span></td>
-    </tr>
-    <tr>
-      <td>tulla</td>
-      <td><span class="answer">tulin</span></td>
-      <td><span class="answer">tulit</span></td>
-      <td><span class="answer">tuli</span></td>
-      <td><span class="answer">tulimme</span></td>
-      <td><span class="answer">tulitte</span></td>
-      <td><span class="answer">tulivat</span></td>
-    </tr>
-    <tr>
-      <td>tarvita</td>
-      <td><span class="answer">tarvitsin</span></td>
-      <td><span class="answer">tarvitsit</span></td>
-      <td><span class="answer">tarvitsi</span></td>
-      <td><span class="answer">tarvitsimme</span></td>
-      <td><span class="answer">tarvitsitte</span></td>
-      <td><span class="answer">tarvitsivat</span></td>
-    </tr>
-    <tr>
-      <td>olla</td>
-      <td><span class="answer">olin</span></td>
-      <td><span class="answer">olit</span></td>
-      <td><span class="answer">oli</span></td>
-      <td><span class="answer">olimme</span></td>
-      <td><span class="answer">olitte</span></td>
-      <td><span class="answer">olivat</span></td>
-    </tr>
-    <tr>
-      <td>jäädä</td>
-      <td><span class="answer">jäin</span></td>
-      <td><span class="answer">jäit</span></td>
-      <td><span class="answer">jäi</span></td>
-      <td><span class="answer">jäimme</span></td>
-      <td><span class="answer">jäitte</span></td>
-      <td><span class="answer">jäivät</span></td>
-    </tr>
-    <tr>
-      <td>lentää</td>
-      <td><span class="answer">lensin</span></td>
-      <td><span class="answer">lensit</span></td>
-      <td><span class="answer">lensi</span></td>
-      <td><span class="answer">lensimme</span></td>
-      <td><span class="answer">lensitte</span></td>
-      <td><span class="answer">lensivät</span></td>
-    </tr>
-    <tr>
-      <td>tietää</td>
-      <td><span class="answer">tiesin</span></td>
-      <td><span class="answer">tiesit</span></td>
-      <td><span class="answer">tiesi</span></td>
-      <td><span class="answer">tiesimme</span></td>
-      <td><span class="answer">tiesitte</span></td>
-      <td><span class="answer">tiesivät</span></td>
-    </tr>
-    <tr>
-      <td>syödä</td>
-      <td><span class="answer">söin</span></td>
-      <td><span class="answer">söit</span></td>
-      <td><span class="answer">söi</span></td>
-      <td><span class="answer">söimme</span></td>
-      <td><span class="answer">söitte</span></td>
-      <td><span class="answer">söivät</span></td>
-    </tr>
-    <tr>
-      <td>herätä</td>
-      <td><span class="answer">heräsin</span></td>
-      <td><span class="answer">heräsit</span></td>
-      <td><span class="answer">heräsi</span></td>
-      <td><span class="answer">heräsimme</span></td>
-      <td><span class="answer">heräsitte</span></td>
-      <td><span class="answer">heräsivät</span></td>
-    </tr>
-    <tr>
-      <td>ostaa</td>
-      <td><span class="answer">ostin</span></td>
-      <td><span class="answer">ostit</span></td>
-      <td><span class="answer">osti</span></td>
-      <td><span class="answer">ostimme</span></td>
-      <td><span class="answer">ostitte</span></td>
-      <td><span class="answer">ostivat</span></td>
-    </tr>
-  </table>
+<h3>HARJOITUS 1: Taivuta verbit imperfektissä (صرف افعال در گذشته)</h3>
+<p>افعال زیر را در زمان گذشته برای تمامی اشخاص صرف کنید.</p>
+<table>
+<tr>
+<th>Infinitive</th>
+<th>minä</th>
+<th>sinä</th>
+<th>hän/se</th>
+<th>me</th>
+<th>te</th>
+<th>he/ne</th>
+</tr>
+<tr>
+<td>asua</td>
+<td><span class="answer">asuin</span></td>
+<td><span class="answer">asuit</span></td>
+<td><span class="answer">asui</span></td>
+<td><span class="answer">asuimme</span></td> <!-- Note: The key says asuin asuit asui. I'll add me te he forms logically if missing, but let's stick to key! The key actually only provided 3, wait, the key says: asua -> asuin, asuit, asui. Wait, I will just put the first three if that's what's in the text. Let's check. Ah, the answer key text had "asua asuin asuit asui". I'll format properly. -->
+<td><span class="answer">asuitte</span></td>
+<td><span class="answer">asuivat</span></td>
+</tr>
+<tr>
+<td>antaa</td>
+<td><span class="answer">annoin</span></td>
+<td><span class="answer">annoit</span></td>
+<td><span class="answer">antoi</span></td>
+<td><span class="answer">annoimme</span></td>
+<td><span class="answer">annoitte</span></td>
+<td><span class="answer">antoivat</span></td>
+</tr>
+<tr>
+<td>tanssia</td>
+<td><span class="answer">tanssin</span></td>
+<td><span class="answer">tanssit</span></td>
+<td><span class="answer">tanssi</span></td>
+<td><span class="answer">tanssimme</span></td>
+<td><span class="answer">tanssitte</span></td>
+<td><span class="answer">tanssivat</span></td>
+</tr>
+<tr>
+<td>kysyä</td>
+<td><span class="answer">kysyin</span></td>
+<td><span class="answer">kysyit</span></td>
+<td><span class="answer">kysyi</span></td>
+<td><span class="answer">kysyimme</span></td>
+<td><span class="answer">kysyitte</span></td>
+<td><span class="answer">kysyivät</span></td>
+</tr>
+<tr>
+<td>haluta</td>
+<td><span class="answer">halusin</span></td>
+<td><span class="answer">halusit</span></td>
+<td><span class="answer">halusi</span></td>
+<td><span class="answer">halusimme</span></td>
+<td><span class="answer">halusitte</span></td>
+<td><span class="answer">halusivat</span></td>
+</tr>
+<tr>
+<td>ottaa</td>
+<td><span class="answer">otin</span></td>
+<td><span class="answer">otit</span></td>
+<td><span class="answer">otti</span></td>
+<td><span class="answer">otimme</span></td>
+<td><span class="answer">otitte</span></td>
+<td><span class="answer">ottivat</span></td>
+</tr>
+<tr>
+<td>tulla</td>
+<td><span class="answer">tulin</span></td>
+<td><span class="answer">tulit</span></td>
+<td><span class="answer">tuli</span></td>
+<td><span class="answer">tulimme</span></td>
+<td><span class="answer">tulitte</span></td>
+<td><span class="answer">tulivat</span></td>
+</tr>
+<tr>
+<td>tarvita</td>
+<td><span class="answer">tarvitsin</span></td>
+<td><span class="answer">tarvitsit</span></td>
+<td><span class="answer">tarvitsi</span></td>
+<td><span class="answer">tarvitsimme</span></td>
+<td><span class="answer">tarvitsitte</span></td>
+<td><span class="answer">tarvitsivat</span></td>
+</tr>
+<tr>
+<td>olla</td>
+<td><span class="answer">olin</span></td>
+<td><span class="answer">olit</span></td>
+<td><span class="answer">oli</span></td>
+<td><span class="answer">olimme</span></td>
+<td><span class="answer">olitte</span></td>
+<td><span class="answer">olivat</span></td>
+</tr>
+<tr>
+<td>jäädä</td>
+<td><span class="answer">jäin</span></td>
+<td><span class="answer">jäit</span></td>
+<td><span class="answer">jäi</span></td>
+<td><span class="answer">jäimme</span></td>
+<td><span class="answer">jäitte</span></td>
+<td><span class="answer">jäivät</span></td>
+</tr>
+<tr>
+<td>lentää</td>
+<td><span class="answer">lensin</span></td>
+<td><span class="answer">lensit</span></td>
+<td><span class="answer">lensi</span></td>
+<td><span class="answer">lensimme</span></td>
+<td><span class="answer">lensitte</span></td>
+<td><span class="answer">lensivät</span></td>
+</tr>
+<tr>
+<td>tietää</td>
+<td><span class="answer">tiesin</span></td>
+<td><span class="answer">tiesit</span></td>
+<td><span class="answer">tiesi</span></td>
+<td><span class="answer">tiesimme</span></td>
+<td><span class="answer">tiesitte</span></td>
+<td><span class="answer">tiesivät</span></td>
+</tr>
+<tr>
+<td>syödä</td>
+<td><span class="answer">söin</span></td>
+<td><span class="answer">söit</span></td>
+<td><span class="answer">söi</span></td>
+<td><span class="answer">söimme</span></td>
+<td><span class="answer">söitte</span></td>
+<td><span class="answer">söivät</span></td>
+</tr>
+<tr>
+<td>herätä</td>
+<td><span class="answer">heräsin</span></td>
+<td><span class="answer">heräsit</span></td>
+<td><span class="answer">heräsi</span></td>
+<td><span class="answer">heräsimme</span></td>
+<td><span class="answer">heräsitte</span></td>
+<td><span class="answer">heräsivät</span></td>
+</tr>
+<tr>
+<td>ostaa</td>
+<td><span class="answer">ostin</span></td>
+<td><span class="answer">ostit</span></td>
+<td><span class="answer">osti</span></td>
+<td><span class="answer">ostimme</span></td>
+<td><span class="answer">ostitte</span></td>
+<td><span class="answer">ostivat</span></td>
+</tr>
+</table>
 </div>
-
 <div class="exercise">
-  <h3>HARJOITUS 2: Muuta lauseet imperfektiin (تغییر جملات به زمان گذشته)</h3>
-  <ol>
-    <li>Minä juon lasin maitoa. &rarr; <span class="answer">Minä join lasin maitoa.</span></li>
-    <li>He auttavat minua. &rarr; <span class="answer">He auttoivat minua.</span></li>
-    <li>Nukutko sinä hyvin? &rarr; <span class="answer">Nukuitko sinä hyvin?</span></li>
-    <li>Saatko sinä osoitteen äidiltäsi? &rarr; <span class="answer">Saitko sinä osoitteen äidiltäsi?</span></li>
-    <li>Hän istuu usein ravintolassa. &rarr; <span class="answer">Hän istui usein ravintolassa.</span></li>
-    <li>Tapaatteko te usein? &rarr; <span class="answer">Tapasitteko te usein?</span></li>
-    <li>Minä jaksan lähteä ulos. &rarr; <span class="answer">Minä jaksoin lähteä ulos eilen.</span></li>
-    <li>Onko hänen isänsä kotona? &rarr; <span class="answer">Oliko hänen isänsä kotona?</span></li>
-    <li>Minä teen tehtävän yksin. &rarr; <span class="answer">Minä tein tehtävän yksin.</span></li>
-    <li>Annan puhelinnumeroni hänelle. &rarr; <span class="answer">Annoin puhelinnumeroni hänelle.</span></li>
-    <li>Ostatteko te kaupasta leipää? &rarr; <span class="answer">Ostitteko te kaupasta leipää?</span></li>
-    <li>Peli päättyy 2–0. &rarr; <span class="answer">Peli päättyi 2–0.</span></li>
-    <li>Näetkö oravan puussa? &rarr; <span class="answer">Näitkö oravan puussa?</span></li>
-    <li>Hän matkustaa Italiaan. &rarr; <span class="answer">Hän matkusti Italiaan.</span></li>
-    <li>Juotko sinä aamulla kahvia? &rarr; <span class="answer">Joitko sinä aamulla kahvia?</span></li>
-  </ol>
+<h3>HARJOITUS 2: Muuta lauseet imperfektiin (تغییر جملات به زمان گذشته)</h3>
+<ol>
+<li>Minä juon lasin maitoa. → <span class="answer">Minä join lasin maitoa.</span></li>
+<li>He auttavat minua. → <span class="answer">He auttoivat minua.</span></li>
+<li>Nukutko sinä hyvin? → <span class="answer">Nukuitko sinä hyvin?</span></li>
+<li>Saatko sinä osoitteen äidiltäsi? → <span class="answer">Saitko sinä osoitteen äidiltäsi?</span></li>
+<li>Hän istuu usein ravintolassa. → <span class="answer">Hän istui usein ravintolassa.</span></li>
+<li>Tapaatteko te usein? → <span class="answer">Tapasitteko te usein?</span></li>
+<li>Minä jaksan lähteä ulos. → <span class="answer">Minä jaksoin lähteä ulos eilen.</span></li>
+<li>Onko hänen isänsä kotona? → <span class="answer">Oliko hänen isänsä kotona?</span></li>
+<li>Minä teen tehtävän yksin. → <span class="answer">Minä tein tehtävän yksin.</span></li>
+<li>Annan puhelinnumeroni hänelle. → <span class="answer">Annoin puhelinnumeroni hänelle.</span></li>
+<li>Ostatteko te kaupasta leipää? → <span class="answer">Ostitteko te kaupasta leipää?</span></li>
+<li>Peli päättyy 2–0. → <span class="answer">Peli päättyi 2–0.</span></li>
+<li>Näetkö oravan puussa? → <span class="answer">Näitkö oravan puussa?</span></li>
+<li>Hän matkustaa Italiaan. → <span class="answer">Hän matkusti Italiaan.</span></li>
+<li>Juotko sinä aamulla kahvia? → <span class="answer">Joitko sinä aamulla kahvia?</span></li>
+</ol>
 </div>
-
 <div class="exercise">
-  <h3>HARJOITUS 3: Kirjoita verbit imperfektissä (نوشتن افعال در گذشته)</h3>
-  <p>1. Minä <span class="answer">heräsin</span> (herätä) herätyskellon soittoon kuudelta aamulla.<br>
-  2. Minä <span class="answer">menin</span> (mennä) suihkuun, mutta suihkusta <span class="answer">tuli</span> (tulla) vain kylmää vettä.<br>
-  3. Sitten <span class="answer">halusin</span> (haluta) keittää kahvia, mutta kahvi <span class="answer">oli</span> (olla) loppu.<br>
-  4. <span class="answer">Juoksin</span> (juosta) bussipysäkille, mutta <span class="answer">myöhästyin</span> (myöhästyä) bussista.<br>
-  5. Sitten <span class="answer">pyöräilin</span> (pyöräillä) töihin.<br>
-  6. Työmatkalla pyörästä <span class="answer">puhkesi</span> (puhjeta) kumi.<br>
-  7. <span class="answer">Kävelin</span> (kävellä) loppumatkan ja <span class="answer">talutin</span> (taluttaa) pyörän.<br>
-  8. Työpaikalla <span class="answer">huomasin</span> (huomata), että <span class="answer">unohdin</span> (unohtaa) käsilaukun kotiin.<br>
-  9. Puhelin, avaimet ja rahapussi <span class="answer">olivat</span> (olla) käsilaukussa.<br>
-  10. <span class="answer">Ihmettelin</span> (ihmetellä) tilannetta.<br>
+<h3>HARJOITUS 3: Kirjoita verbit imperfektissä (نوشتن افعال در گذشته)</h3>
+<p>1. Minä <span class="answer">heräsin</span> (herätä) herätyskellon soittoon kuudelta aamulla.<br/>
+  2. Minä <span class="answer">menin</span> (mennä) suihkuun, mutta suihkusta <span class="answer">tuli</span> (tulla) vain kylmää vettä.<br/>
+  3. Sitten <span class="answer">halusin</span> (haluta) keittää kahvia, mutta kahvi <span class="answer">oli</span> (olla) loppu.<br/>
+  4. <span class="answer">Juoksin</span> (juosta) bussipysäkille, mutta <span class="answer">myöhästyin</span> (myöhästyä) bussista.<br/>
+  5. Sitten <span class="answer">pyöräilin</span> (pyöräillä) töihin.<br/>
+  6. Työmatkalla pyörästä <span class="answer">puhkesi</span> (puhjeta) kumi.<br/>
+  7. <span class="answer">Kävelin</span> (kävellä) loppumatkan ja <span class="answer">talutin</span> (taluttaa) pyörän.<br/>
+  8. Työpaikalla <span class="answer">huomasin</span> (huomata), että <span class="answer">unohdin</span> (unohtaa) käsilaukun kotiin.<br/>
+  9. Puhelin, avaimet ja rahapussi <span class="answer">olivat</span> (olla) käsilaukussa.<br/>
+  10. <span class="answer">Ihmettelin</span> (ihmetellä) tilannetta.<br/>
   11. Sitten <span class="answer">heräsin</span> (herätä) ja <span class="answer">huokaisin</span> (huokaista). Onneksi kaikki oli vain unta!</p>
 </div>
-
 <div class="exercise">
-  <h3>HARJOITUS: Kirjoita ajanilmaus oikeassa muodossa (نوشتن عبارات زمانی در فرم صحیح)</h3>
-  <ol>
-    <li>Posti tuli <span class="answer">viime viikolla</span> (viime viikko) vain tiistaina ja torstaina.</li>
-    <li>Suomi itsenäistyi <span class="answer">vuonna 1917</span> (vuosi 1917).</li>
-    <li><span class="answer">Yöllä</span> (yö) satoi vettä, mutta nyt päivällä on poutaa.</li>
-    <li>Aloitan opinnot yliopistossa <span class="answer">ensi syksynä</span> (ensi syksy).</li>
-    <li>Tänään on torstai ja <span class="answer">eilen</span> oli keskiviikko.</li>
-    <li>Tänään on perjantai ja <span class="answer">ylihuomenna</span> on sunnuntai.</li>
-    <li>Menen lääkäriin <span class="answer">maanantaina kahdeksalta</span> (maanantai, kello 8).</li>
-    <li>Suomalaiset hiihtävät <span class="answer">talvella / talvisin</span> (talvi).</li>
-    <li>Suomalaiset marjastavat <span class="answer">syksyisin / syksyllä</span> (syksy).</li>
-    <li>Aloitan työt <span class="answer">kuudelta</span> (klo 6) aamulla.</li>
-    <li>Katsomme elokuvan <span class="answer">viikonloppuna / viikonloppuisin</span> (viikonloppu).</li>
-    <li>Lähden Ranskaan <span class="answer">kolmeksi viikoksi / kolmen viikon päästä</span> (kolme viikkoa).</li>
-    <li>Matkustamme Italiaan <span class="answer">kesällä / ensi kesänä</span> (kesä).</li>
-    <li>Näin sinusta unta <span class="answer">viime yönä</span> (viime yö).</li>
-    <li><span class="answer">Tammikuussa</span> (tammikuu) sataa lunta ja on pakkasta.</li>
-    <li>Olen lomalla <span class="answer">ensi viikolla</span> (ensi viikko).</li>
-    <li>Käyn kuntosalilla <span class="answer">kolme kertaa viikossa</span> (kolme, kertaa, viikko).</li>
-    <li>Äiti tulee kotiin <span class="answer">kuudeksi / kuudelta / kello kuusi</span> (kuusi).</li>
-  </ol>
+<h3>HARJOITUS: Kirjoita ajanilmaus oikeassa muodossa (نوشتن عبارات زمانی در فرم صحیح)</h3>
+<ol>
+<li>Posti tuli <span class="answer">viime viikolla</span> (viime viikko) vain tiistaina ja torstaina.</li>
+<li>Suomi itsenäistyi <span class="answer">vuonna 1917</span> (vuosi 1917).</li>
+<li><span class="answer">Yöllä</span> (yö) satoi vettä, mutta nyt päivällä on poutaa.</li>
+<li>Aloitan opinnot yliopistossa <span class="answer">ensi syksynä</span> (ensi syksy).</li>
+<li>Tänään on torstai ja <span class="answer">eilen</span> oli keskiviikko.</li>
+<li>Tänään on perjantai ja <span class="answer">ylihuomenna</span> on sunnuntai.</li>
+<li>Menen lääkäriin <span class="answer">maanantaina kahdeksalta</span> (maanantai, kello 8).</li>
+<li>Suomalaiset hiihtävät <span class="answer">talvella / talvisin</span> (talvi).</li>
+<li>Suomalaiset marjastavat <span class="answer">syksyisin / syksyllä</span> (syksy).</li>
+<li>Aloitan työt <span class="answer">kuudelta</span> (klo 6) aamulla.</li>
+<li>Katsomme elokuvan <span class="answer">viikonloppuna / viikonloppuisin</span> (viikonloppu).</li>
+<li>Lähden Ranskaan <span class="answer">kolmeksi viikoksi / kolmen viikon päästä</span> (kolme viikkoa).</li>
+<li>Matkustamme Italiaan <span class="answer">kesällä / ensi kesänä</span> (kesä).</li>
+<li>Näin sinusta unta <span class="answer">viime yönä</span> (viime yö).</li>
+<li><span class="answer">Tammikuussa</span> (tammikuu) sataa lunta ja on pakkasta.</li>
+<li>Olen lomalla <span class="answer">ensi viikolla</span> (ensi viikko).</li>
+<li>Käyn kuntosalilla <span class="answer">kolme kertaa viikossa</span> (kolme, kertaa, viikko).</li>
+<li>Äiti tulee kotiin <span class="answer">kuudeksi / kuudelta / kello kuusi</span> (kuusi).</li>
+</ol>
 </div>
-
-
-<h1>فصل ۲: گذشته ساده منفی و قاعده تغییرات بنیادی (Negative Imperfect & Strong Stem Rule)</h1>
-
+<h1>فصل ۲: گذشته ساده منفی و قاعده تغییرات بنیادی (Negative Imperfect &amp; Strong Stem Rule)</h1>
 <p>در این فصل، ساختار گذشته ساده منفی را بررسی می‌کنیم. همچنین قوانین پیچیده و پرکاربرد تغییرات بنیادی KPT (Astevaihtelu) در اسامی را تحلیل خواهیم کرد.</p>
-
 <h2>۱. گذشته ساده منفی (Negatiivinen Imperfekti)</h2>
 <p>برای ساخت زمان گذشته منفی در زبان فنلاندی، برعکس زمان حال، نیازی به شناسه <span class="ending">-i</span> نداریم. ساختار اصلی به این شکل است:</p>
 <p class="finnish" style="text-align:center;">فعل منفی (en, et, ei, emme, ette, eivät) + صفت مفعولی گذشته (Past Participle)</p>
 <p>صفت مفعولی گذشته در حالت مفرد معمولاً به <span class="ending">-nut / -nyt</span> یا فرم‌های مشابه ختم می‌شود و در حالت جمع (برای اشخاص me, te, he) به <span class="ending">-neet</span> ختم می‌شود.</p>
-
 <h3>۱.۱. پسوندهای صفت مفعولی بر اساس نوع فعل (Verb Types)</h3>
 <table>
-  <tr>
-    <th>نوع فعل</th>
-    <th>پسوند مفرد</th>
-    <th>پسوند جمع</th>
-    <th>مثال (Infinitive &rarr; Singular / Plural)</th>
-  </tr>
-  <tr>
-    <td>نوع ۱ (Type 1)</td>
-    <td><span class="ending">-nut / -nyt</span></td>
-    <td><span class="ending">-neet</span></td>
-    <td><span class="finnish">kysy-ä</span> &rarr; <span class="finnish">kysy<span class="ending">-nyt</span></span> / <span class="finnish">kysy<span class="ending">-neet</span></span></td>
-  </tr>
-  <tr>
-    <td>نوع ۲ (Type 2)</td>
-    <td><span class="ending">-nut / -nyt</span></td>
-    <td><span class="ending">-neet</span></td>
-    <td><span class="finnish">juo-da</span> &rarr; <span class="finnish">juo<span class="ending">-nut</span></span> / <span class="finnish">juo<span class="ending">-neet</span></span></td>
-  </tr>
-  <tr>
-    <td>نوع ۳ (Type 3)</td>
-    <td><span class="ending">-nut, -lut, -sut, -rut</span></td>
-    <td><span class="ending">-neet, -leet, -seet, -reet</span></td>
-    <td><span class="finnish">ol-la</span> &rarr; <span class="finnish">ol<span class="ending">-lut</span></span> / <span class="finnish">ol<span class="ending">-leet</span></span></td>
-  </tr>
-  <tr>
-    <td>نوع ۴، ۵، ۶</td>
-    <td><span class="ending">-nnut / -nnyt</span></td>
-    <td><span class="ending">-nneet</span></td>
-    <td><span class="finnish">vasta-ta</span> &rarr; <span class="finnish">vasta<span class="ending">-nnut</span></span> / <span class="finnish">vasta<span class="ending">-nneet</span></span></td>
-  </tr>
+<tr>
+<th>نوع فعل</th>
+<th>پسوند مفرد</th>
+<th>پسوند جمع</th>
+<th>مثال (Infinitive → Singular / Plural)</th>
+</tr>
+<tr>
+<td>نوع ۱ (Type 1)</td>
+<td><span class="ending">-nut / -nyt</span></td>
+<td><span class="ending">-neet</span></td>
+<td><span class="finnish">kysy-ä</span> → <span class="finnish">kysy<span class="ending">-nyt</span></span> / <span class="finnish">kysy<span class="ending">-neet</span></span></td>
+</tr>
+<tr>
+<td>نوع ۲ (Type 2)</td>
+<td><span class="ending">-nut / -nyt</span></td>
+<td><span class="ending">-neet</span></td>
+<td><span class="finnish">juo-da</span> → <span class="finnish">juo<span class="ending">-nut</span></span> / <span class="finnish">juo<span class="ending">-neet</span></span></td>
+</tr>
+<tr>
+<td>نوع ۳ (Type 3)</td>
+<td><span class="ending">-nut, -lut, -sut, -rut</span></td>
+<td><span class="ending">-neet, -leet, -seet, -reet</span></td>
+<td><span class="finnish">ol-la</span> → <span class="finnish">ol<span class="ending">-lut</span></span> / <span class="finnish">ol<span class="ending">-leet</span></span></td>
+</tr>
+<tr>
+<td>نوع ۴، ۵، ۶</td>
+<td><span class="ending">-nnut / -nnyt</span></td>
+<td><span class="ending">-nneet</span></td>
+<td><span class="finnish">vasta-ta</span> → <span class="finnish">vasta<span class="ending">-nnut</span></span> / <span class="finnish">vasta<span class="ending">-nneet</span></span></td>
+</tr>
 </table>
 <div class="note">
-  <strong>نکته:</strong> فعل <span class="finnish">tietää</span> (دانستن) دو فرم صحیح دارد: <span class="finnish">tietänyt / tietäneet</span> و همچنین <span class="finnish">tiennyt / tienneet</span>.
+<strong>نکته:</strong> فعل <span class="finnish">tietää</span> (دانستن) دو فرم صحیح دارد: <span class="finnish">tietänyt / tietäneet</span> و همچنین <span class="finnish">tiennyt / tienneet</span>.
 </div>
-
 <h2>۲. قانون تغییرات بنیادی (Astevaihtelu / KPT Changes)</h2>
 <p>تغییرات KPT (تضعیف یا تقویت حروف صامت k, p, t) در کلمات اسمی (<span class="finnish">nominit</span>) نقش اساسی دارد. وقتی پسوندی به کلمه اضافه می‌شود که باعث بسته شدن هجای آخر می‌شود (مثل <span class="ending">-n</span> در ژنیتیو)، تنه کلمه ضعیف می‌شود.</p>
-
 <h3>۲.۱. حالت‌های قوی و ضعیف (Strong vs. Weak)</h3>
 <ul>
-  <li><strong>حالت‌های قوی (Strong):</strong> Nominatiivi (basic form), Partitiivi, Illatiivi, Essiivi.</li>
-  <li><strong>حالت‌های ضعیف (Weak):</strong> Genetiivi, Inessiivi, Elatiivi, Allatiivi, Adessiivi, Ablatiivi, Translatiivi.</li>
+<li><strong>حالت‌های قوی (Strong):</strong> Nominatiivi (basic form), Partitiivi, Illatiivi, Essiivi.</li>
+<li><strong>حالت‌های ضعیف (Weak):</strong> Genetiivi, Inessiivi, Elatiivi, Allatiivi, Adessiivi, Ablatiivi, Translatiivi.</li>
 </ul>
-
 <h3>۲.۲. نقشه تغییرات صامت‌ها (KPT Change Map)</h3>
 <table>
-  <tr>
-    <th>حالت قوی (Strong)</th>
-    <th>حالت ضعیف (Weak)</th>
-    <th>مثال (Nominative &rarr; Genitive)</th>
-  </tr>
-  <tr>
-    <td>kk</td>
-    <td>k</td>
-    <td><span class="finnish">kir<span class="stem-change">kk</span>o</span> &rarr; <span class="finnish">kir<span class="stem-change">k</span>on</span></td>
-  </tr>
-  <tr>
-    <td>pp</td>
-    <td>p</td>
-    <td><span class="finnish">kau<span class="stem-change">pp</span>a</span> &rarr; <span class="finnish">kau<span class="stem-change">p</span>an</span></td>
-  </tr>
-  <tr>
-    <td>tt</td>
-    <td>t</td>
-    <td><span class="finnish">tel<span class="stem-change">tt</span>a</span> &rarr; <span class="finnish">tel<span class="stem-change">t</span>an</span></td>
-  </tr>
-  <tr>
-    <td>k</td>
-    <td>- (حذف می‌شود)</td>
-    <td><span class="finnish">Tur<span class="stem-change">k</span>u</span> &rarr; <span class="finnish">Tur<span class="stem-change">-</span>un</span></td>
-  </tr>
-  <tr>
-    <td>p</td>
-    <td>v</td>
-    <td><span class="finnish">hal<span class="stem-change">p</span>a</span> &rarr; <span class="finnish">hal<span class="stem-change">v</span>an</span></td>
-  </tr>
-  <tr>
-    <td>t</td>
-    <td>d</td>
-    <td><span class="finnish">ka<span class="stem-change">t</span>u</span> &rarr; <span class="finnish">ka<span class="stem-change">d</span>un</span></td>
-  </tr>
-  <tr>
-    <td>nk</td>
-    <td>ng</td>
-    <td><span class="finnish">la<span class="stem-change">nk</span>a</span> &rarr; <span class="finnish">la<span class="stem-change">ng</span>an</span></td>
-  </tr>
-  <tr>
-    <td>mp</td>
-    <td>mm</td>
-    <td><span class="finnish">ka<span class="stem-change">mp</span>a</span> &rarr; <span class="finnish">ka<span class="stem-change">mm</span>an</span></td>
-  </tr>
-  <tr>
-    <td>nt</td>
-    <td>nn</td>
-    <td><span class="finnish">Engla<span class="stem-change">nt</span>i</span> &rarr; <span class="finnish">Engla<span class="stem-change">nn</span>in</span></td>
-  </tr>
-  <tr>
-    <td>lt</td>
-    <td>ll</td>
-    <td><span class="finnish">i<span class="stem-change">lt</span>a</span> &rarr; <span class="finnish">i<span class="stem-change">ll</span>an</span></td>
-  </tr>
-  <tr>
-    <td>rt</td>
-    <td>rr</td>
-    <td><span class="finnish">ke<span class="stem-change">rt</span>a</span> &rarr; <span class="finnish">ke<span class="stem-change">rr</span>an</span></td>
-  </tr>
+<tr>
+<th>حالت قوی (Strong)</th>
+<th>حالت ضعیف (Weak)</th>
+<th>مثال (Nominative → Genitive)</th>
+</tr>
+<tr>
+<td>kk</td>
+<td>k</td>
+<td><span class="finnish">kir<span class="stem-change">kk</span>o</span> → <span class="finnish">kir<span class="stem-change">k</span>on</span></td>
+</tr>
+<tr>
+<td>pp</td>
+<td>p</td>
+<td><span class="finnish">kau<span class="stem-change">pp</span>a</span> → <span class="finnish">kau<span class="stem-change">p</span>an</span></td>
+</tr>
+<tr>
+<td>tt</td>
+<td>t</td>
+<td><span class="finnish">tel<span class="stem-change">tt</span>a</span> → <span class="finnish">tel<span class="stem-change">t</span>an</span></td>
+</tr>
+<tr>
+<td>k</td>
+<td>- (حذف می‌شود)</td>
+<td><span class="finnish">Tur<span class="stem-change">k</span>u</span> → <span class="finnish">Tur<span class="stem-change">-</span>un</span></td>
+</tr>
+<tr>
+<td>p</td>
+<td>v</td>
+<td><span class="finnish">hal<span class="stem-change">p</span>a</span> → <span class="finnish">hal<span class="stem-change">v</span>an</span></td>
+</tr>
+<tr>
+<td>t</td>
+<td>d</td>
+<td><span class="finnish">ka<span class="stem-change">t</span>u</span> → <span class="finnish">ka<span class="stem-change">d</span>un</span></td>
+</tr>
+<tr>
+<td>nk</td>
+<td>ng</td>
+<td><span class="finnish">la<span class="stem-change">nk</span>a</span> → <span class="finnish">la<span class="stem-change">ng</span>an</span></td>
+</tr>
+<tr>
+<td>mp</td>
+<td>mm</td>
+<td><span class="finnish">ka<span class="stem-change">mp</span>a</span> → <span class="finnish">ka<span class="stem-change">mm</span>an</span></td>
+</tr>
+<tr>
+<td>nt</td>
+<td>nn</td>
+<td><span class="finnish">Engla<span class="stem-change">nt</span>i</span> → <span class="finnish">Engla<span class="stem-change">nn</span>in</span></td>
+</tr>
+<tr>
+<td>lt</td>
+<td>ll</td>
+<td><span class="finnish">i<span class="stem-change">lt</span>a</span> → <span class="finnish">i<span class="stem-change">ll</span>an</span></td>
+</tr>
+<tr>
+<td>rt</td>
+<td>rr</td>
+<td><span class="finnish">ke<span class="stem-change">rt</span>a</span> → <span class="finnish">ke<span class="stem-change">rr</span>an</span></td>
+</tr>
 </table>
-
 <h2>۳. تمرین‌های یکپارچه (Integrated Practice)</h2>
 <div class="exercise">
-  <h3>HARJOITUS: Negatiivinen Imperfekti (تغییر جملات مثبت به منفی در گذشته)</h3>
-  <ol>
-    <li>Minä join lasin maitoa. &rarr; <span class="answer">Minä en juonut maitoa.</span></li>
-    <li>He auttoivat minua. &rarr; <span class="answer">He eivät auttaneet minua.</span></li>
-    <li>Nukuitko sinä hyvin? &rarr; <span class="answer">Etkö sinä nukkunut hyvin?</span></li>
-    <li>Minä sain osoitteen äidiltäni. &rarr; <span class="answer">Minä en saanut osoitetta äidiltäni.</span></li>
-    <li>Hän istui usein ravintolassa. &rarr; <span class="answer">Hän ei istunut usein ravintolassa.</span></li>
-    <li>He tapasivat usein kirjastossa. &rarr; <span class="answer">He eivät tavanneet usein kirjastossa.</span></li>
-    <li>Minä jaksoin lähteä ulos eilen. &rarr; <span class="answer">Minä en jaksanut lähteä ulos eilen.</span></li>
-    <li>Oliko hänen isänsä kotona? &rarr; <span class="answer">Eikö hänen isänsä ollut kotona?</span></li>
-    <li>Minä tein tehtävän yksin. &rarr; <span class="answer">Minä en tehnyt tehtävää yksin.</span></li>
-    <li>Annoin puhelinnumeroni hänelle. &rarr; <span class="answer">Minä en antanut puhelinnumeroani hänelle.</span></li>
-    <li>Ostitteko te kaupasta leipää? &rarr; <span class="answer">Ettekö te ostaneet leipää kaupasta?</span></li>
-    <li>Peli päättyi 2–0. &rarr; <span class="answer">Peli ei päättynyt 2-0.</span></li>
-    <li>Orava istui puussa. &rarr; <span class="answer">Orava ei istunut puussa.</span></li>
-    <li>Hän matkusti Italiaan. &rarr; <span class="answer">Hän ei matkustanut Italiaan.</span></li>
-    <li>Elina juo kahvia aamuisin. &rarr; <span class="answer">Elina ei juonut kahvia aamuisin.</span></li>
-    <li>Minä ostin suklaata. &rarr; <span class="answer">Minä en ostanut suklaata.</span></li>
-    <li>Me lähdimme aamulla seitsemältä. &rarr; <span class="answer">Me emme lähteneet aamulla seitsemältä.</span></li>
-    <li>Hän pelasi jalkapalloa kesällä. &rarr; <span class="answer">Hän ei pelannut jalkapalloa kesällä.</span></li>
-  </ol>
+<h3>HARJOITUS: Negatiivinen Imperfekti (تغییر جملات مثبت به منفی در گذشته)</h3>
+<ol>
+<li>Minä join lasin maitoa. → <span class="answer">Minä en juonut maitoa.</span></li>
+<li>He auttoivat minua. → <span class="answer">He eivät auttaneet minua.</span></li>
+<li>Nukuitko sinä hyvin? → <span class="answer">Etkö sinä nukkunut hyvin?</span></li>
+<li>Minä sain osoitteen äidiltäni. → <span class="answer">Minä en saanut osoitetta äidiltäni.</span></li>
+<li>Hän istui usein ravintolassa. → <span class="answer">Hän ei istunut usein ravintolassa.</span></li>
+<li>He tapasivat usein kirjastossa. → <span class="answer">He eivät tavanneet usein kirjastossa.</span></li>
+<li>Minä jaksoin lähteä ulos eilen. → <span class="answer">Minä en jaksanut lähteä ulos eilen.</span></li>
+<li>Oliko hänen isänsä kotona? → <span class="answer">Eikö hänen isänsä ollut kotona?</span></li>
+<li>Minä tein tehtävän yksin. → <span class="answer">Minä en tehnyt tehtävää yksin.</span></li>
+<li>Annoin puhelinnumeroni hänelle. → <span class="answer">Minä en antanut puhelinnumeroani hänelle.</span></li>
+<li>Ostitteko te kaupasta leipää? → <span class="answer">Ettekö te ostaneet leipää kaupasta?</span></li>
+<li>Peli päättyi 2–0. → <span class="answer">Peli ei päättynyt 2-0.</span></li>
+<li>Orava istui puussa. → <span class="answer">Orava ei istunut puussa.</span></li>
+<li>Hän matkusti Italiaan. → <span class="answer">Hän ei matkustanut Italiaan.</span></li>
+<li>Elina juo kahvia aamuisin. → <span class="answer">Elina ei juonut kahvia aamuisin.</span></li>
+<li>Minä ostin suklaata. → <span class="answer">Minä en ostanut suklaata.</span></li>
+<li>Me lähdimme aamulla seitsemältä. → <span class="answer">Me emme lähteneet aamulla seitsemältä.</span></li>
+<li>Hän pelasi jalkapalloa kesällä. → <span class="answer">Hän ei pelannut jalkapalloa kesällä.</span></li>
+</ol>
 </div>
-
-
 <h1>فصل ۳: صیغه مجهول در زمان حال و گذشته (The Passive Voice)</h1>
 <p>در زبان فنلاندی، صیغه مجهول (<span class="finnish">Passiivi</span>) بسیار پرکاربرد است. از این ساختار زمانی استفاده می‌شود که فاعل جمله نامشخص، نامربوط یا ناگفته باشد. همچنین در زبان محاوره، مجهول به جای اول شخص جمع (Me) و برای بیان پیشنهاد (Let's) استفاده می‌شود.</p>
-
 <h2>۱. صیغه مجهول در زمان حال (Passiivi)</h2>
-
 <h3>۱.۱. مجهول مثبت (زمان حال)</h3>
 <p>ساختار مجهول در زمان حال به گروه فعلی بستگی دارد:</p>
 <ul>
-  <li><strong>نوع ۱:</strong> از تنه اول شخص مفرد (<span class="finnish">minä</span>) استفاده می‌شود و پسوند <span class="ending">-taan / -tään</span> اضافه می‌گردد. اگر حرف صدادار آخر a یا ä باشد، به e تبدیل می‌شود.
-    <br>مثال: <span class="finnish">nukkua &rarr; nuku-n &rarr; nuku<span class="ending">taan</span></span> | <span class="finnish">antaa &rarr; anna-n &rarr; ann<span class="stem-change">e</span><span class="ending">taan</span></span>
-  </li>
-  <li><strong>نوع ۲ تا ۶:</strong> به فرم مصدری (Infinitive) پسوند <span class="ending">-an / -än</span> اضافه می‌شود.
-    <br>مثال: <span class="finnish">juoda &rarr; juoda<span class="ending">an</span></span> | <span class="finnish">tavata &rarr; tavata<span class="ending">an</span></span>
-  </li>
+<li><strong>نوع ۱:</strong> از تنه اول شخص مفرد (<span class="finnish">minä</span>) استفاده می‌شود و پسوند <span class="ending">-taan / -tään</span> اضافه می‌گردد. اگر حرف صدادار آخر a یا ä باشد، به e تبدیل می‌شود.
+    <br/>مثال: <span class="finnish">nukkua → nuku-n → nuku<span class="ending">taan</span></span> | <span class="finnish">antaa → anna-n → ann<span class="stem-change">e</span><span class="ending">taan</span></span>
+</li>
+<li><strong>نوع ۲ تا ۶:</strong> به فرم مصدری (Infinitive) پسوند <span class="ending">-an / -än</span> اضافه می‌شود.
+    <br/>مثال: <span class="finnish">juoda → juoda<span class="ending">an</span></span> | <span class="finnish">tavata → tavata<span class="ending">an</span></span>
+</li>
 </ul>
-
 <h3>۱.۲. مجهول منفی (زمان حال)</h3>
 <p>برای منفی کردن مجهول در زمان حال، فعل منفی <span class="finnish">ei</span> می‌آید و پسوند <span class="ending">-an / -än</span> از فعل مجهول حذف می‌شود.</p>
 <p>مثال: <span class="finnish">ei nukuta</span>، <span class="finnish">ei juoda</span>، <span class="finnish">ei tavata</span>.</p>
-
 <h2>۲. صیغه مجهول در زمان گذشته (Passiivin Imperfekti)</h2>
-
 <h3>۲.۱. مجهول گذشته مثبت</h3>
 <ul>
-  <li><strong>نوع ۱:</strong> تنه اول شخص مفرد + <span class="ending">-ttiin</span> (تغییر a, ä به e). <br>مثال: <span class="finnish">nukkua &rarr; nuku<span class="ending">ttiin</span></span> | <span class="finnish">tietää &rarr; tied<span class="stem-change">e</span><span class="ending">ttiin</span></span></li>
-  <li><strong>نوع ۲ و ۳:</strong> تنه مصدری + <span class="ending">-tiin</span>. <br>مثال: <span class="finnish">juoda &rarr; juo<span class="ending">tiin</span></span> | <span class="finnish">mennä &rarr; men<span class="ending">tiin</span></span></li>
-  <li><strong>نوع ۴، ۵ و ۶:</strong> تنه مصدری + <span class="ending">-ttiin</span>. <br>مثال: <span class="finnish">tavata &rarr; tava<span class="ending">ttiin</span></span> | <span class="finnish">tarvita &rarr; tarvi<span class="ending">ttiin</span></span></li>
+<li><strong>نوع ۱:</strong> تنه اول شخص مفرد + <span class="ending">-ttiin</span> (تغییر a, ä به e). <br/>مثال: <span class="finnish">nukkua → nuku<span class="ending">ttiin</span></span> | <span class="finnish">tietää → tied<span class="stem-change">e</span><span class="ending">ttiin</span></span></li>
+<li><strong>نوع ۲ و ۳:</strong> تنه مصدری + <span class="ending">-tiin</span>. <br/>مثال: <span class="finnish">juoda → juo<span class="ending">tiin</span></span> | <span class="finnish">mennä → men<span class="ending">tiin</span></span></li>
+<li><strong>نوع ۴، ۵ و ۶:</strong> تنه مصدری + <span class="ending">-ttiin</span>. <br/>مثال: <span class="finnish">tavata → tava<span class="ending">ttiin</span></span> | <span class="finnish">tarvita → tarvi<span class="ending">ttiin</span></span></li>
 </ul>
-
 <h3>۲.۲. مجهول گذشته منفی</h3>
 <p>از کلمه منفی <span class="finnish">ei</span> استفاده می‌شود و پسوندهای زیر اضافه می‌گردد:</p>
 <ul>
-  <li><strong>نوع ۱:</strong> تنه اول شخص مفرد + <span class="ending">-ttu / -tty</span> (مثال: <span class="finnish">ei nuku<span class="ending">ttu</span></span>)</li>
-  <li><strong>نوع ۲ و ۳:</strong> تنه مصدری + <span class="ending">-tu / -ty</span> (مثال: <span class="finnish">ei juo<span class="ending">tu</span></span>)</li>
-  <li><strong>نوع ۴، ۵ و ۶:</strong> تنه مصدری + <span class="ending">-ttu / -tty</span> (مثال: <span class="finnish">ei tava<span class="ending">ttu</span></span>)</li>
+<li><strong>نوع ۱:</strong> تنه اول شخص مفرد + <span class="ending">-ttu / -tty</span> (مثال: <span class="finnish">ei nuku<span class="ending">ttu</span></span>)</li>
+<li><strong>نوع ۲ و ۳:</strong> تنه مصدری + <span class="ending">-tu / -ty</span> (مثال: <span class="finnish">ei juo<span class="ending">tu</span></span>)</li>
+<li><strong>نوع ۴، ۵ و ۶:</strong> تنه مصدری + <span class="ending">-ttu / -tty</span> (مثال: <span class="finnish">ei tava<span class="ending">ttu</span></span>)</li>
 </ul>
-
 <h2>۳. تمرین‌های یکپارچه (Integrated Practice)</h2>
 <div class="exercise">
-  <h3>HARJOITUS 1: Passiivi (زمان حال مجهول)</h3>
-  <ol>
-    <li>Suomessa <span class="answer">saunotaan</span> (saunoa).</li>
-    <li>Suomessa <span class="answer">juodaan</span> (juoda) paljon kahvia.</li>
-    <li>Talvella <span class="answer">luistellaan</span> (luistella).</li>
-    <li>Talvella <span class="answer">hiihdetään</span> (hiihtää).</li>
-    <li>Kesällä <span class="answer">pyöräillään</span> (pyöräillä).</li>
-    <li>Syksyllä <span class="answer">matkustetaan</span> (matkustaa) etelään.</li>
-    <li>Koulussa <span class="answer">opetellaan</span> (opetella) laskemaan.</li>
-    <li>Talvella <span class="answer">käytetään</span> (käyttää) talvirenkaita.</li>
-    <li>Kirjastossa <span class="answer">luetaan</span> (lukea) kirjoja ja sieltä <span class="answer">lainataan</span> (lainata) kirjoja.</li>
-    <li>Kesällä <span class="answer">grillataan</span> (grillata) makkaraa.</li>
-    <li>Juhannusta <span class="answer">vietetään</span> (viettää) kesäkuussa.</li>
-    <li>Kesällä <span class="answer">uidaan</span> (uida) järvessä.</li>
-    <li>Lomalla <span class="answer">matkustetaan</span> (matkustaa) mummolaan.</li>
-  </ol>
+<h3>HARJOITUS 1: Passiivi (زمان حال مجهول)</h3>
+<ol>
+<li>Suomessa <span class="answer">saunotaan</span> (saunoa).</li>
+<li>Suomessa <span class="answer">juodaan</span> (juoda) paljon kahvia.</li>
+<li>Talvella <span class="answer">luistellaan</span> (luistella).</li>
+<li>Talvella <span class="answer">hiihdetään</span> (hiihtää).</li>
+<li>Kesällä <span class="answer">pyöräillään</span> (pyöräillä).</li>
+<li>Syksyllä <span class="answer">matkustetaan</span> (matkustaa) etelään.</li>
+<li>Koulussa <span class="answer">opetellaan</span> (opetella) laskemaan.</li>
+<li>Talvella <span class="answer">käytetään</span> (käyttää) talvirenkaita.</li>
+<li>Kirjastossa <span class="answer">luetaan</span> (lukea) kirjoja ja sieltä <span class="answer">lainataan</span> (lainata) kirjoja.</li>
+<li>Kesällä <span class="answer">grillataan</span> (grillata) makkaraa.</li>
+<li>Juhannusta <span class="answer">vietetään</span> (viettää) kesäkuussa.</li>
+<li>Kesällä <span class="answer">uidaan</span> (uida) järvessä.</li>
+<li>Lomalla <span class="answer">matkustetaan</span> (matkustaa) mummolaan.</li>
+</ol>
 </div>
-
 <div class="exercise">
-  <h3>HARJOITUS 2: Passiivin imperfekti (زمان گذشته مجهول - مثبت و منفی)</h3>
-  <p>افعال را در مجهول گذشته مثبت و منفی بنویسید. (مثال: kävellä &rarr; käveltiin / ei kävelty)</p>
-  <ul>
-    <li>saunoa &rarr; <span class="answer">saunottiin / ei saunottu</span></li>
-    <li>juoda &rarr; <span class="answer">juotiin / ei juotu</span></li>
-    <li>luistella &rarr; <span class="answer">luisteltiin / ei luisteltu</span></li>
-    <li>hiihtää &rarr; <span class="answer">hiihdettiin / ei hiihdetty</span></li>
-    <li>pyöräillä &rarr; <span class="answer">pyöräiltiin / ei pyöräilty</span></li>
-    <li>matkustaa &rarr; <span class="answer">matkustettiin / ei matkustettu</span></li>
-    <li>opetella &rarr; <span class="answer">opeteltiin / ei opeteltu</span></li>
-    <li>käyttää &rarr; <span class="answer">käytettiin / ei käytetty</span></li>
-    <li>lukea &rarr; <span class="answer">luettiin / ei luettu</span></li>
-    <li>lainata &rarr; <span class="answer">lainattiin / ei lainattu</span></li>
-    <li>grillata &rarr; <span class="answer">grillattiin / ei grillattu</span></li>
-    <li>viettää &rarr; <span class="answer">vietettiin / ei vietetty</span></li>
-    <li>uida &rarr; <span class="answer">uitiin / ei uitu</span></li>
-  </ul>
+<h3>HARJOITUS 2: Passiivin imperfekti (زمان گذشته مجهول - مثبت و منفی)</h3>
+<p>افعال را در مجهول گذشته مثبت و منفی بنویسید. (مثال: kävellä → käveltiin / ei kävelty)</p>
+<ul>
+<li>saunoa → <span class="answer">saunottiin / ei saunottu</span></li>
+<li>juoda → <span class="answer">juotiin / ei juotu</span></li>
+<li>luistella → <span class="answer">luisteltiin / ei luisteltu</span></li>
+<li>hiihtää → <span class="answer">hiihdettiin / ei hiihdetty</span></li>
+<li>pyöräillä → <span class="answer">pyöräiltiin / ei pyöräilty</span></li>
+<li>matkustaa → <span class="answer">matkustettiin / ei matkustettu</span></li>
+<li>opetella → <span class="answer">opeteltiin / ei opeteltu</span></li>
+<li>käyttää → <span class="answer">käytettiin / ei käytetty</span></li>
+<li>lukea → <span class="answer">luettiin / ei luettu</span></li>
+<li>lainata → <span class="answer">lainattiin / ei lainattu</span></li>
+<li>grillata → <span class="answer">grillattiin / ei grillattu</span></li>
+<li>viettää → <span class="answer">vietettiin / ei vietetty</span></li>
+<li>uida → <span class="answer">uitiin / ei uitu</span></li>
+</ul>
 </div>
-
 <div class="exercise">
-  <h3>HARJOITUS 3: Passiivin imperfekti kymmenen lausetta (جملات گذشته مجهول)</h3>
-  <p>در این تمرین باید جملاتی درباره کارهایی که در گذشته (ennen) انجام می‌شد یا نمی‌شد نوشته شود.</p>
-  <p>مثال‌ها:</p>
-  <ul>
-    <li><span class="answer">Ennen hiihdettiin kouluun.</span> (در گذشته با اسکی به مدرسه می‌رفتند.)</li>
-    <li><span class="answer">Ennen ei lähetetty sähköpostia.</span> (در گذشته ایمیل ارسال نمی‌شد.)</li>
-  </ul>
+<h3>HARJOITUS 3: Passiivin imperfekti kymmenen lausetta (جملات گذشته مجهول)</h3>
+<p>در این تمرین باید جملاتی درباره کارهایی که در گذشته (ennen) انجام می‌شد یا نمی‌شد نوشته شود.</p>
+<p>مثال‌ها:</p>
+<ul>
+<li><span class="answer">Ennen hiihdettiin kouluun.</span> (در گذشته با اسکی به مدرسه می‌رفتند.)</li>
+<li><span class="answer">Ennen ei lähetetty sähköpostia.</span> (در گذشته ایمیل ارسال نمی‌شد.)</li>
+</ul>
 </div>
-
-
 <h1>فصل ۴: سیستم‌های اسمی (اسامی minen- و مصدر سوم)</h1>
 <p>در این فصل دو ساختار بسیار مهم برای تبدیل افعال به اسم و استفاده از آن‌ها در نقش‌های مختلف جمله را بررسی می‌کنیم: اسامی ختم شده به <span class="ending">-minen</span> و مصدر سوم (<span class="finnish">Kolmas infinitiivi</span>).</p>
-
 <h2>۱. اسامی ختم شده به minen- (Deverbal Nouns)</h2>
 <p>با اضافه کردن پسوند <span class="ending">-minen</span> به تنه سوم شخص جمع افعال، می‌توانیم آن‌ها را به اسم (معادل Gerund در انگلیسی مانند sleeping, playing) تبدیل کنیم.</p>
-
 <h3>۱.۱. نحوه ساخت</h3>
 <p>پسوند <span class="ending">-minen</span> به تنه سوم شخص جمع (حالت <span class="finnish">he</span>) متصل می‌شود:</p>
 <ul>
-  <li><span class="finnish">nukkua &rarr; he nukku-vat &rarr; nukku<span class="ending">minen</span></span> (خوابیدن)</li>
-  <li><span class="finnish">uida &rarr; he ui-vat &rarr; ui<span class="ending">minen</span></span> (شنا کردن)</li>
-  <li><span class="finnish">pelata &rarr; he pelaa-vat &rarr; pelaa<span class="ending">minen</span></span> (بازی کردن)</li>
+<li><span class="finnish">nukkua → he nukku-vat → nukku<span class="ending">minen</span></span> (خوابیدن)</li>
+<li><span class="finnish">uida → he ui-vat → ui<span class="ending">minen</span></span> (شنا کردن)</li>
+<li><span class="finnish">pelata → he pelaa-vat → pelaa<span class="ending">minen</span></span> (بازی کردن)</li>
 </ul>
-
 <h3>۱.۲. کاربرد در جمله</h3>
 <div class="note">
 <ul>
-  <li><strong>به عنوان فاعل:</strong> وقتی اسم <span class="finnish">-minen</span> فاعل یک جمله اسنادی باشد، صفت جمله در حالت Partitiivi می‌آید. <br>مثال: <span class="finnish">Lukeminen on hauska<span class="ending">a</span>.</span> (خواندن سرگرم‌کننده است.)</li>
-  <li><strong>گرفتن مفعول:</strong> اگر فعل اصلی دارای مفعول باشد، مفعول قبل از کلمه <span class="finnish">-minen</span> و در حالت Genetiivi (با پسوند -n) قرار می‌گیرد. <br>مثال: <span class="finnish">pelata tennistä &rarr; tennikse<span class="ending">n</span> pelaaminen</span> (تنیس بازی کردن)</li>
-  <li><strong>گرفتن قید:</strong> قید (Adverbial) مستقیماً قبل از فرم <span class="finnish">-minen</span> قرار می‌گیرد. <br>مثال: <span class="finnish">kävellä metsässä &rarr; metsässä käveleminen</span> (قدم زدن در جنگل)</li>
+<li><strong>به عنوان فاعل:</strong> وقتی اسم <span class="finnish">-minen</span> فاعل یک جمله اسنادی باشد، صفت جمله در حالت Partitiivi می‌آید. <br/>مثال: <span class="finnish">Lukeminen on hauska<span class="ending">a</span>.</span> (خواندن سرگرم‌کننده است.)</li>
+<li><strong>گرفتن مفعول:</strong> اگر فعل اصلی دارای مفعول باشد، مفعول قبل از کلمه <span class="finnish">-minen</span> و در حالت Genetiivi (با پسوند -n) قرار می‌گیرد. <br/>مثال: <span class="finnish">pelata tennistä → tennikse<span class="ending">n</span> pelaaminen</span> (تنیس بازی کردن)</li>
+<li><strong>گرفتن قید:</strong> قید (Adverbial) مستقیماً قبل از فرم <span class="finnish">-minen</span> قرار می‌گیرد. <br/>مثال: <span class="finnish">kävellä metsässä → metsässä käveleminen</span> (قدم زدن در جنگل)</li>
 </ul>
 </div>
-
 <h2>۲. مصدر سوم (Kolmas infinitiivi)</h2>
 <p>مصدر سوم یکی از مهم‌ترین فرم‌های فعلی در فنلاندی است که با پسوند <span class="ending">-ma / -mä</span> ساخته می‌شود. این مصدر شناسه شخصی نمی‌گیرد، اما در پنج حالت مختلف (Cases) صرف می‌شود که سه مورد آن بسیار پرکاربردتر است:</p>
-
 <h3>۲.۱. نحوه ساخت</h3>
 <p class="finnish" style="text-align:center;">تنه سوم شخص جمع + <span class="ending">ma / mä</span> + پسوند حالت (Case Ending)</p>
-<p>مثال: <span class="finnish">he luke-vat &rarr; luke<span class="ending">-ma-ssa</span></span></p>
-
+<p>مثال: <span class="finnish">he luke-vat → luke<span class="ending">-ma-ssa</span></span></p>
 <h3>۲.۲. کاربردهای اصلی و کدگذاری رنگی</h3>
 <table>
-  <tr>
-    <th>حالت (Case)</th>
-    <th>پسوند</th>
-    <th>توضیح و افعال همراه</th>
-    <th>مثال (Example)</th>
-  </tr>
-  <tr>
-    <td>Inessiivi</td>
-    <td><span class="ending" style="color: blue;">-massa / -mässä</span></td>
-    <td>برای بیان اینکه در حال انجام چه کاری هستید (Where?). با افعالی مثل <span class="finnish">olla, istua, seisoa, käydä</span> استفاده می‌شود.</td>
-    <td><span class="finnish">Olen keittiössä teke<span class="ending" style="color: blue;">mässä</span> ruokaa.</span> (من در آشپزخانه در حال درست کردن غذا هستم.)</td>
-  </tr>
-  <tr>
-    <td>Elatiivi</td>
-    <td><span class="ending" style="color: darkorange;">-masta / -mästä</span></td>
-    <td>برای بیان اینکه از انجام چه کاری برمی‌گردید (Where from?). نشان‌دهنده یک عمل تکمیل شده است و با افعالی مثل <span class="finnish">tulla, lähteä, palata</span> استفاده می‌شود.</td>
-    <td><span class="finnish">Tulen kirjastosta luke<span class="ending" style="color: darkorange;">masta</span>.</span> (من از کتابخانه از خواندن [کتاب] می‌آیم.)</td>
-  </tr>
-  <tr>
-    <td>Illatiivi</td>
-    <td><span class="ending" style="color: purple;">-maan / -mään</span></td>
-    <td>برای بیان اینکه برای انجام چه کاری می‌روید (Where to?). با افعالی مثل <span class="finnish">mennä, lähteä, tulla, oppia, olla hyvä</span> استفاده می‌شود.</td>
-    <td><span class="finnish">Menen kirjastoon luke<span class="ending" style="color: purple;">maan</span>.</span> (من به کتابخانه برای خواندن می‌روم.)</td>
-  </tr>
+<tr>
+<th>حالت (Case)</th>
+<th>پسوند</th>
+<th>توضیح و افعال همراه</th>
+<th>مثال (Example)</th>
+</tr>
+<tr>
+<td>Inessiivi</td>
+<td><span class="ending" style="color: blue;">-massa / -mässä</span></td>
+<td>برای بیان اینکه در حال انجام چه کاری هستید (Where?). با افعالی مثل <span class="finnish">olla, istua, seisoa, käydä</span> استفاده می‌شود.</td>
+<td><span class="finnish">Olen keittiössä teke<span class="ending" style="color: blue;">mässä</span> ruokaa.</span> (من در آشپزخانه در حال درست کردن غذا هستم.)</td>
+</tr>
+<tr>
+<td>Elatiivi</td>
+<td><span class="ending" style="color: darkorange;">-masta / -mästä</span></td>
+<td>برای بیان اینکه از انجام چه کاری برمی‌گردید (Where from?). نشان‌دهنده یک عمل تکمیل شده است و با افعالی مثل <span class="finnish">tulla, lähteä, palata</span> استفاده می‌شود.</td>
+<td><span class="finnish">Tulen kirjastosta luke<span class="ending" style="color: darkorange;">masta</span>.</span> (من از کتابخانه از خواندن [کتاب] می‌آیم.)</td>
+</tr>
+<tr>
+<td>Illatiivi</td>
+<td><span class="ending" style="color: purple;">-maan / -mään</span></td>
+<td>برای بیان اینکه برای انجام چه کاری می‌روید (Where to?). با افعالی مثل <span class="finnish">mennä, lähteä, tulla, oppia, olla hyvä</span> استفاده می‌شود.</td>
+<td><span class="finnish">Menen kirjastoon luke<span class="ending" style="color: purple;">maan</span>.</span> (من به کتابخانه برای خواندن می‌روم.)</td>
+</tr>
 </table>
-
 <h2>۳. تمرین‌های یکپارچه (Integrated Practice)</h2>
 <div class="exercise">
-  <h3>HARJOITUS: Kertausharjoitus (-minen & 3. infinitiivi)</h3>
-  <p>به سؤالات زیر پاسخ دهید:</p>
-  <ol>
-    <li>Mitä sinä olet hyvä tekemään? (استفاده از مصدر سوم)<br>
-    &rarr; <span class="answer">Olen hyvä lukemaan ja oppimaan. / Olen hyvä suunnittelemaan.</span></li>
-    <li>Mistä sinä pidät? (استفاده از اسامی minen-)<br>
-    &rarr; <span class="answer">Minä pidän ruoan laittamisesta ja neulomisesta. / Minä pidän uimisesta uimahallissa.</span></li>
-    <li>Mistä sinä et pidä? (استفاده از اسامی minen-)<br>
-    &rarr; <span class="answer">Minä en pidä kodin siivoamisesta.</span></li>
-  </ol>
+<h3>HARJOITUS: Kertausharjoitus (-minen &amp; 3. infinitiivi)</h3>
+<p>به سؤالات زیر پاسخ دهید:</p>
+<ol>
+<li>Mitä sinä olet hyvä tekemään? (استفاده از مصدر سوم)<br/>
+    → <span class="answer">Olen hyvä lukemaan ja oppimaan. / Olen hyvä suunnittelemaan.</span></li>
+<li>Mistä sinä pidät? (استفاده از اسامی minen-)<br/>
+    → <span class="answer">Minä pidän ruoan laittamisesta ja neulomisesta. / Minä pidän uimisesta uimahallissa.</span></li>
+<li>Mistä sinä et pidä? (استفاده از اسامی minen-)<br/>
+    → <span class="answer">Minä en pidä kodin siivoamisesta.</span></li>
+</ol>
 </div>
-
-
 <h1>فصل ۵: کلاس تخصصی پارتيتیو جمع (Partitive Plural Masterclass)</h1>
 <p>پارتيتیو جمع (<span class="finnish">Monikon partitiivi</span>) یکی از مهم‌ترین و چالش‌برانگیزترین فرم‌ها در زبان فنلاندی است. برای ساخت آن ابتدا باید تنه جمع (با افزودن <span class="ending">i</span> یا <span class="ending">j</span>) را بسازیم و سپس پسوند پارتيتیو را اضافه کنیم.</p>
-
 <h2>۱. ساختار پسوندهای پارتيتیو جمع</h2>
 <p>پسوندهای پارتيتیو جمع به دو دسته اصلی تقسیم می‌شوند: <span class="ending">-a / -ä</span> و <span class="ending">-ta / -tä</span>.</p>
-
 <div class="note">
 <strong>قانون تغییرات بنیادی (KPT):</strong> در پارتيتیو جمع همیشه از <strong>تنه قوی (Strong Stem)</strong> استفاده می‌شود.
 </div>
-
 <h3>۱.۱. استفاده از پسوند -a / -ä</h3>
 <p>این پسوندها زمانی استفاده می‌شوند که:</p>
 <ul>
-  <li>تنه مفرد به یک حرف صدادار ختم شود.</li>
-  <li>تنه جمع به <span class="ending">oi</span> یا <span class="ending">öi</span> ختم شود.</li>
+<li>تنه مفرد به یک حرف صدادار ختم شود.</li>
+<li>تنه جمع به <span class="ending">oi</span> یا <span class="ending">öi</span> ختم شود.</li>
 </ul>
 <p><strong>نکته مهم:</strong> اگر <span class="ending">i</span> بین دو حرف صدادار قرار بگیرد، به <span class="ending">j</span> تبدیل می‌شود.</p>
-
 <table>
-  <tr>
-    <th>Nominatiivi</th>
-    <th>تنه مفرد (Singular Stem)</th>
-    <th>تنه جمع (Plural Stem)</th>
-    <th>پارتيتیو جمع (Partitive Plural)</th>
-  </tr>
-  <tr>
-    <td><span class="finnish">juna</span></td>
-    <td><span class="finnish">juna-</span></td>
-    <td><span class="finnish">juni-</span></td>
-    <td><span class="finnish">juni<span class="ending">a</span></span></td>
-  </tr>
-  <tr>
-    <td><span class="finnish">nainen</span></td>
-    <td><span class="finnish">naise-</span></td>
-    <td><span class="finnish">naisi-</span></td>
-    <td><span class="finnish">naisi<span class="ending">a</span></span></td>
-  </tr>
-  <tr>
-    <td><span class="finnish">katto</span></td>
-    <td><span class="finnish">kato-</span> (Weak)</td>
-    <td><span class="finnish">katoi-</span></td>
-    <td><span class="finnish">ka<span class="stem-change">tt</span>o<span class="ending">ja</span></span> (Strong + j)</td>
-  </tr>
-  <tr>
-    <td><span class="finnish">bussi</span></td>
-    <td><span class="finnish">bussi-</span></td>
-    <td><span class="finnish">bussei-</span></td>
-    <td><span class="finnish">busse<span class="ending">ja</span></span></td>
-  </tr>
+<tr>
+<th>Nominatiivi</th>
+<th>تنه مفرد (Singular Stem)</th>
+<th>تنه جمع (Plural Stem)</th>
+<th>پارتيتیو جمع (Partitive Plural)</th>
+</tr>
+<tr>
+<td><span class="finnish">juna</span></td>
+<td><span class="finnish">juna-</span></td>
+<td><span class="finnish">juni-</span></td>
+<td><span class="finnish">juni<span class="ending">a</span></span></td>
+</tr>
+<tr>
+<td><span class="finnish">nainen</span></td>
+<td><span class="finnish">naise-</span></td>
+<td><span class="finnish">naisi-</span></td>
+<td><span class="finnish">naisi<span class="ending">a</span></span></td>
+</tr>
+<tr>
+<td><span class="finnish">katto</span></td>
+<td><span class="finnish">kato-</span> (Weak)</td>
+<td><span class="finnish">katoi-</span></td>
+<td><span class="finnish">ka<span class="stem-change">tt</span>o<span class="ending">ja</span></span> (Strong + j)</td>
+</tr>
+<tr>
+<td><span class="finnish">bussi</span></td>
+<td><span class="finnish">bussi-</span></td>
+<td><span class="finnish">bussei-</span></td>
+<td><span class="finnish">busse<span class="ending">ja</span></span></td>
+</tr>
 </table>
-
 <h3>۱.۲. استفاده از پسوند -ta / -tä</h3>
 <p>این پسوندها زمانی استفاده می‌شوند که:</p>
 <ul>
-  <li>تنه مفرد به دو حرف صدادار ختم شود.</li>
-  <li>در برخی کلمات طولانی که تنه جمع به <span class="ending">oi</span> یا <span class="ending">öi</span> ختم می‌شود.</li>
+<li>تنه مفرد به دو حرف صدادار ختم شود.</li>
+<li>در برخی کلمات طولانی که تنه جمع به <span class="ending">oi</span> یا <span class="ending">öi</span> ختم می‌شود.</li>
 </ul>
-
 <table>
-  <tr>
-    <th>Nominatiivi</th>
-    <th>تنه مفرد (Singular Stem)</th>
-    <th>تنه جمع (Plural Stem)</th>
-    <th>پارتيتیو جمع (Partitive Plural)</th>
-  </tr>
-  <tr>
-    <td><span class="finnish">maa</span></td>
-    <td><span class="finnish">maa-</span></td>
-    <td><span class="finnish">mai-</span></td>
-    <td><span class="finnish">mai<span class="ending">ta</span></span></td>
-  </tr>
-  <tr>
-    <td><span class="finnish">asiakas</span></td>
-    <td><span class="finnish">asiakkaa-</span></td>
-    <td><span class="finnish">asiakkai-</span></td>
-    <td><span class="finnish">asiakkai<span class="ending">ta</span></span></td>
-  </tr>
-  <tr>
-    <td><span class="finnish">opiskelija</span></td>
-    <td><span class="finnish">opiskelija-</span></td>
-    <td><span class="finnish">opiskelijoi-</span></td>
-    <td><span class="finnish">opiskelijoi<span class="ending">ta</span></span></td>
-  </tr>
+<tr>
+<th>Nominatiivi</th>
+<th>تنه مفرد (Singular Stem)</th>
+<th>تنه جمع (Plural Stem)</th>
+<th>پارتيتیو جمع (Partitive Plural)</th>
+</tr>
+<tr>
+<td><span class="finnish">maa</span></td>
+<td><span class="finnish">maa-</span></td>
+<td><span class="finnish">mai-</span></td>
+<td><span class="finnish">mai<span class="ending">ta</span></span></td>
+</tr>
+<tr>
+<td><span class="finnish">asiakas</span></td>
+<td><span class="finnish">asiakkaa-</span></td>
+<td><span class="finnish">asiakkai-</span></td>
+<td><span class="finnish">asiakkai<span class="ending">ta</span></span></td>
+</tr>
+<tr>
+<td><span class="finnish">opiskelija</span></td>
+<td><span class="finnish">opiskelija-</span></td>
+<td><span class="finnish">opiskelijoi-</span></td>
+<td><span class="finnish">opiskelijoi<span class="ending">ta</span></span></td>
+</tr>
 </table>
-
 <h2>۲. چه زمانی از پارتيتیو جمع استفاده می‌کنیم؟</h2>
 <ul>
-  <li><strong>به عنوان مفعول (Object):</strong> <br><span class="finnish">Ostan perunoita.</span> (سیب‌زمینی می‌خرم.)</li>
-  <li><strong>جملات اسنادی (Predicative clause):</strong> <br><span class="finnish">Kukat ovat punaisia.</span> (گل‌ها قرمز هستند.)</li>
-  <li><strong>جملات مالکیتی (Possessive clause):</strong> <br><span class="finnish">Minulla on lapsia.</span> (من بچه‌هایی دارم.)</li>
-  <li><strong>جملات وجودی (Existential clause):</strong> <br><span class="finnish">Pöydällä on lautasia.</span> (روی میز بشقاب‌هایی وجود دارد.)</li>
+<li><strong>به عنوان مفعول (Object):</strong> <br/><span class="finnish">Ostan perunoita.</span> (سیب‌زمینی می‌خرم.)</li>
+<li><strong>جملات اسنادی (Predicative clause):</strong> <br/><span class="finnish">Kukat ovat punaisia.</span> (گل‌ها قرمز هستند.)</li>
+<li><strong>جملات مالکیتی (Possessive clause):</strong> <br/><span class="finnish">Minulla on lapsia.</span> (من بچه‌هایی دارم.)</li>
+<li><strong>جملات وجودی (Existential clause):</strong> <br/><span class="finnish">Pöydällä on lautasia.</span> (روی میز بشقاب‌هایی وجود دارد.)</li>
 </ul>
-
 <h2>۳. تمرین‌های یکپارچه (Integrated Practice)</h2>
 <div class="exercise">
-  <h3>HARJOITUS: Kirjoita sana monikon partitiivissa (نوشتن کلمات در پارتيتیو جمع)</h3>
-  <ol>
-    <li>Ostin eilen paljon (tomaatti). &rarr; <span class="answer">tomaatteja</span></li>
-    <li>Tapaan (ystävä) joka viikonloppu. &rarr; <span class="answer">ystäviä</span></li>
-    <li>Pihalla leikkii paljon (lapsi). &rarr; <span class="answer">lapsia</span></li>
-    <li>Pöydällä on erilaisia (lasi). &rarr; <span class="answer">laseja</span></li>
-    <li>Huoneessa on paljon (opettaja) ja (opiskelija). &rarr; <span class="answer">opettajia</span> ja <span class="answer">opiskelijoita</span></li>
-    <li>Äiti ostaa joka päivä (omena). &rarr; <span class="answer">omenoita</span></li>
-    <li>Isä katsoo televisiosta (urheiluohjelma). &rarr; <span class="answer">urheiluohjelmia</span></li>
-    <li>Olen lukenut monia (ansioluettelo). &rarr; <span class="answer">ansioluetteloita</span></li>
-    <li>Olen kirjoittanut monia (työhakemus). &rarr; <span class="answer">työhakemuksia</span></li>
-    <li>Syön joka aamu (mustikka) ja (mansikka). &rarr; <span class="answer">mustikoita</span> ja <span class="answer">mansikoita</span></li>
-    <li>Äiti tekee (herkullinen voileipä). &rarr; <span class="answer">herkullisia voileipiä</span></li>
-    <li>Kaupassa on aamuisin vähän (asiakas). &rarr; <span class="answer">asiakkaita</span></li>
-    <li>Minä en osaa tehdä (päätös). &rarr; <span class="answer">päätöksiä</span></li>
-    <li>Taivaalla lentää paljon (lintu). &rarr; <span class="answer">lintuja</span></li>
-    <li>Tiellä kävelee (muurahainen). &rarr; <span class="answer">muurahaisia</span></li>
-  </ol>
+<h3>HARJOITUS: Kirjoita sana monikon partitiivissa (نوشتن کلمات در پارتيتیو جمع)</h3>
+<ol>
+<li>Ostin eilen paljon (tomaatti). → <span class="answer">tomaatteja</span></li>
+<li>Tapaan (ystävä) joka viikonloppu. → <span class="answer">ystäviä</span></li>
+<li>Pihalla leikkii paljon (lapsi). → <span class="answer">lapsia</span></li>
+<li>Pöydällä on erilaisia (lasi). → <span class="answer">laseja</span></li>
+<li>Huoneessa on paljon (opettaja) ja (opiskelija). → <span class="answer">opettajia</span> ja <span class="answer">opiskelijoita</span></li>
+<li>Äiti ostaa joka päivä (omena). → <span class="answer">omenoita</span></li>
+<li>Isä katsoo televisiosta (urheiluohjelma). → <span class="answer">urheiluohjelmia</span></li>
+<li>Olen lukenut monia (ansioluettelo). → <span class="answer">ansioluetteloita</span></li>
+<li>Olen kirjoittanut monia (työhakemus). → <span class="answer">työhakemuksia</span></li>
+<li>Syön joka aamu (mustikka) ja (mansikka). → <span class="answer">mustikoita</span> ja <span class="answer">mansikoita</span></li>
+<li>Äiti tekee (herkullinen voileipä). → <span class="answer">herkullisia voileipiä</span></li>
+<li>Kaupassa on aamuisin vähän (asiakas). → <span class="answer">asiakkaita</span></li>
+<li>Minä en osaa tehdä (päätös). → <span class="answer">päätöksiä</span></li>
+<li>Taivaalla lentää paljon (lintu). → <span class="answer">lintuja</span></li>
+<li>Tiellä kävelee (muurahainen). → <span class="answer">muurahaisia</span></li>
+</ol>
 </div>
-
-
 <h1>فصل ۶: مقایسه صفات (Comparison of Adjectives)</h1>
 <p>در زبان فنلاندی، صفات دارای سه درجه مقایسه هستند: صفت مطلق (Positive)، صفت تفضیلی (Comparative) و صفت عالی (Superlative). برای ساخت درجات مقایسه، از تنه‌های صفت استفاده می‌شود.</p>
-
 <h2>۱. صفت مطلق (Positiivi)</h2>
 <p>این حالت بیان می‌کند که یک شخص یا چیز چگونه است. برای ایجاد تأکید یا تغییر شدت آن، می‌توان از قیدهای زیر قبل از صفت استفاده کرد:</p>
 <ul>
-  <li><strong>hyvin</strong> (خیلی): <span class="finnish">Kaupunki on hyvin iso.</span></li>
-  <li><strong>oikein</strong> (واقعاً): <span class="finnish">Hän on oikein mukava.</span></li>
-  <li><strong>melko / aika</strong> (نسبتاً): <span class="finnish">Tehtävä on melko helppo.</span></li>
-  <li><strong>yhtä ... kuin</strong> (به همان اندازه ... که): <span class="finnish">Juuso on yhtä vanha kuin Ville.</span></li>
+<li><strong>hyvin</strong> (خیلی): <span class="finnish">Kaupunki on hyvin iso.</span></li>
+<li><strong>oikein</strong> (واقعاً): <span class="finnish">Hän on oikein mukava.</span></li>
+<li><strong>melko / aika</strong> (نسبتاً): <span class="finnish">Tehtävä on melko helppo.</span></li>
+<li><strong>yhtä ... kuin</strong> (به همان اندازه ... که): <span class="finnish">Juuso on yhtä vanha kuin Ville.</span></li>
 </ul>
-
 <h2>۲. صفت تفضیلی (Komparatiivi)</h2>
 <p>صفت تفضیلی برای مقایسه دو چیز با یکدیگر استفاده می‌شود. نشانه آن پسوند <span class="ending">-mpi</span> است که به تنه صفت متصل می‌شود. بعد از صفت تفضیلی معمولاً از کلمه <span class="finnish">kuin</span> (از / نسبت به) استفاده می‌شود.</p>
 <div class="note">
-<strong>قانون تغییر a/ä:</strong> اگر تنه کلمه دو سیلابی به <span class="finnish">a</span> یا <span class="finnish">ä</span> ختم شود، این حروف قبل از <span class="ending">-mpi</span> به <span class="stem-change">e</span> تبدیل می‌شوند. <br>مثال: <span class="finnish">vanha &rarr; vanh<span class="stem-change">e</span><span class="ending">mpi</span></span>
+<strong>قانون تغییر a/ä:</strong> اگر تنه کلمه دو سیلابی به <span class="finnish">a</span> یا <span class="finnish">ä</span> ختم شود، این حروف قبل از <span class="ending">-mpi</span> به <span class="stem-change">e</span> تبدیل می‌شوند. <br/>مثال: <span class="finnish">vanha → vanh<span class="stem-change">e</span><span class="ending">mpi</span></span>
 </div>
-
 <h3>قیدهای همراه تفضیلی</h3>
 <ul>
-  <li><strong>paljon</strong> (خیلی بیشتر): <span class="finnish">Hän on paljon vanhempi kuin minä.</span></li>
-  <li><strong>vähän</strong> (کمی بیشتر): <span class="finnish">Hän on vähän vanhempi.</span></li>
-  <li><strong>ei yhtään</strong> (اصلاً بیشتر نیست): <span class="finnish">Hän ei ole yhtään vanhempi.</span></li>
+<li><strong>paljon</strong> (خیلی بیشتر): <span class="finnish">Hän on paljon vanhempi kuin minä.</span></li>
+<li><strong>vähän</strong> (کمی بیشتر): <span class="finnish">Hän on vähän vanhempi.</span></li>
+<li><strong>ei yhtään</strong> (اصلاً بیشتر نیست): <span class="finnish">Hän ei ole yhtään vanhempi.</span></li>
 </ul>
-
 <h2>۳. صفت عالی (Superlatiivi)</h2>
 <p>برای مقایسه سه چیز یا بیشتر استفاده می‌شود و نشانه آن <span class="ending">-in</span> است.</p>
 <div class="note">
 <ul>
-  <li>حروف صدادار <strong>o, ö, u, y</strong> قبل از <span class="ending">-in</span> تغییری نمی‌کنند. (مثال: <span class="finnish">iso &rarr; iso<span class="ending">in</span></span>)</li>
-  <li>حروف صدادار <strong>e, a, ä</strong> و یکی از حروف صدادار در دیفتونگ‌ها یا دو حرف صدادار یکسان حذف می‌شوند. (مثال: <span class="finnish">pieni &rarr; piene- &rarr; pien<span class="ending">in</span></span>، <span class="finnish">vapaa &rarr; vapa<span class="ending">in</span></span>)</li>
+<li>حروف صدادار <strong>o, ö, u, y</strong> قبل از <span class="ending">-in</span> تغییری نمی‌کنند. (مثال: <span class="finnish">iso → iso<span class="ending">in</span></span>)</li>
+<li>حروف صدادار <strong>e, a, ä</strong> و یکی از حروف صدادار در دیفتونگ‌ها یا دو حرف صدادار یکسان حذف می‌شوند. (مثال: <span class="finnish">pieni → piene- → pien<span class="ending">in</span></span>، <span class="finnish">vapaa → vapa<span class="ending">in</span></span>)</li>
 </ul>
 </div>
-
 <h3>قیدهای همراه عالی</h3>
 <ul>
-  <li><strong>kaikkein</strong> (از همه ... تر): <span class="finnish">Hän on kaikkein mukavin.</span></li>
-  <li><strong>maailman</strong> (در جهان): <span class="finnish">Hän on maailman rikkain.</span></li>
-  <li><strong>Suomen</strong> (در فنلاند): <span class="finnish">Hän on Suomen vanhin ihminen.</span></li>
+<li><strong>kaikkein</strong> (از همه ... تر): <span class="finnish">Hän on kaikkein mukavin.</span></li>
+<li><strong>maailman</strong> (در جهان): <span class="finnish">Hän on maailman rikkain.</span></li>
+<li><strong>Suomen</strong> (در فنلاند): <span class="finnish">Hän on Suomen vanhin ihminen.</span></li>
 </ul>
-
 <h2>۴. صفات بی‌قاعده (Irregular Adjectives)</h2>
 <p>برخی از صفات پرکاربرد شکل‌های بی‌قاعده دارند که باید حفظ شوند:</p>
 <table>
-  <tr>
-    <th>Positiivi</th>
-    <th>Komparatiivi</th>
-    <th>Superlatiivi</th>
-  </tr>
-  <tr>
-    <td><span class="finnish">hyvä</span> (خوب)</td>
-    <td><span class="finnish">parempi</span></td>
-    <td><span class="finnish">paras</span></td>
-  </tr>
-  <tr>
-    <td><span class="finnish">pitkä</span> (بلند)</td>
-    <td><span class="finnish">pidempi / pitempi</span></td>
-    <td><span class="finnish">pisin</span></td>
-  </tr>
-  <tr>
-    <td><span class="finnish">lyhyt</span> (کوتاه)</td>
-    <td><span class="finnish">lyhyempi / lyhempi</span></td>
-    <td><span class="finnish">lyhin</span></td>
-  </tr>
-  <tr>
-    <td><span class="finnish">uusi</span> (جدید)</td>
-    <td><span class="finnish">uudempi</span></td>
-    <td><span class="finnish">uusin</span></td>
-  </tr>
+<tr>
+<th>Positiivi</th>
+<th>Komparatiivi</th>
+<th>Superlatiivi</th>
+</tr>
+<tr>
+<td><span class="finnish">hyvä</span> (خوب)</td>
+<td><span class="finnish">parempi</span></td>
+<td><span class="finnish">paras</span></td>
+</tr>
+<tr>
+<td><span class="finnish">pitkä</span> (بلند)</td>
+<td><span class="finnish">pidempi / pitempi</span></td>
+<td><span class="finnish">pisin</span></td>
+</tr>
+<tr>
+<td><span class="finnish">lyhyt</span> (کوتاه)</td>
+<td><span class="finnish">lyhyempi / lyhempi</span></td>
+<td><span class="finnish">lyhin</span></td>
+</tr>
+<tr>
+<td><span class="finnish">uusi</span> (جدید)</td>
+<td><span class="finnish">uudempi</span></td>
+<td><span class="finnish">uusin</span></td>
+</tr>
 </table>
-
 <h2>۵. تمرین‌های یکپارچه (Integrated Practice)</h2>
 <div class="exercise">
-  <h3>HARJOITUS 1: Kirjoita oikea adjektiivi oikeassa muodossa</h3>
-  <table>
-    <tr>
-      <th>Positiivi</th>
-      <th>Komparatiivi</th>
-      <th>Superlatiivi</th>
-    </tr>
-    <tr><td>iso</td><td><span class="answer">isompi</span></td><td><span class="answer">isoin</span></td></tr>
-    <tr><td>pieni</td><td><span class="answer">pienempi</span></td><td><span class="answer">pienin</span></td></tr>
-    <tr><td>vanha</td><td><span class="answer">vanhempi</span></td><td><span class="answer">vanhin</span></td></tr>
-    <tr><td>uusi</td><td><span class="answer">uudempi</span></td><td><span class="answer">uusin</span></td></tr>
-    <tr><td>mukava</td><td><span class="answer">mukavampi</span></td><td><span class="answer">mukavin</span></td></tr>
-    <tr><td>kuuma</td><td><span class="answer">kuumempi</span></td><td><span class="answer">kuumin</span></td></tr>
-    <tr><td>halpa</td><td><span class="answer">halvempi</span></td><td><span class="answer">halvin</span></td></tr>
-    <tr><td>kallis</td><td><span class="answer">kalliimpi</span></td><td><span class="answer">kallein</span></td></tr>
-    <tr><td>kylmä</td><td><span class="answer">kylmempi</span></td><td><span class="answer">kylmin</span></td></tr>
-    <tr><td>nopea</td><td><span class="answer">nopeampi</span></td><td><span class="answer">nopein</span></td></tr>
-    <tr><td>hidas</td><td><span class="answer">hitaampi</span></td><td><span class="answer">hitain</span></td></tr>
-    <tr><td>hyvä</td><td><span class="answer">parempi</span></td><td><span class="answer">paras</span></td></tr>
-    <tr><td>hieno</td><td><span class="answer">hienompi</span></td><td><span class="answer">hienoin</span></td></tr>
-    <tr><td>tavallinen</td><td><span class="answer">tavallisempi</span></td><td><span class="answer">tavallisin</span></td></tr>
-    <tr><td>suuri</td><td><span class="answer">suurempi</span></td><td><span class="answer">suurin</span></td></tr>
-    <tr><td>pitkä</td><td><span class="answer">pitempi</span></td><td><span class="answer">pisin</span></td></tr>
-    <tr><td>helppo</td><td><span class="answer">helpompi</span></td><td><span class="answer">helpoin</span></td></tr>
-  </table>
+<h3>HARJOITUS 1: Kirjoita oikea adjektiivi oikeassa muodossa</h3>
+<table>
+<tr>
+<th>Positiivi</th>
+<th>Komparatiivi</th>
+<th>Superlatiivi</th>
+</tr>
+<tr><td>iso</td><td><span class="answer">isompi</span></td><td><span class="answer">isoin</span></td></tr>
+<tr><td>pieni</td><td><span class="answer">pienempi</span></td><td><span class="answer">pienin</span></td></tr>
+<tr><td>vanha</td><td><span class="answer">vanhempi</span></td><td><span class="answer">vanhin</span></td></tr>
+<tr><td>uusi</td><td><span class="answer">uudempi</span></td><td><span class="answer">uusin</span></td></tr>
+<tr><td>mukava</td><td><span class="answer">mukavampi</span></td><td><span class="answer">mukavin</span></td></tr>
+<tr><td>kuuma</td><td><span class="answer">kuumempi</span></td><td><span class="answer">kuumin</span></td></tr>
+<tr><td>halpa</td><td><span class="answer">halvempi</span></td><td><span class="answer">halvin</span></td></tr>
+<tr><td>kallis</td><td><span class="answer">kalliimpi</span></td><td><span class="answer">kallein</span></td></tr>
+<tr><td>kylmä</td><td><span class="answer">kylmempi</span></td><td><span class="answer">kylmin</span></td></tr>
+<tr><td>nopea</td><td><span class="answer">nopeampi</span></td><td><span class="answer">nopein</span></td></tr>
+<tr><td>hidas</td><td><span class="answer">hitaampi</span></td><td><span class="answer">hitain</span></td></tr>
+<tr><td>hyvä</td><td><span class="answer">parempi</span></td><td><span class="answer">paras</span></td></tr>
+<tr><td>hieno</td><td><span class="answer">hienompi</span></td><td><span class="answer">hienoin</span></td></tr>
+<tr><td>tavallinen</td><td><span class="answer">tavallisempi</span></td><td><span class="answer">tavallisin</span></td></tr>
+<tr><td>suuri</td><td><span class="answer">suurempi</span></td><td><span class="answer">suurin</span></td></tr>
+<tr><td>pitkä</td><td><span class="answer">pitempi</span></td><td><span class="answer">pisin</span></td></tr>
+<tr><td>helppo</td><td><span class="answer">helpompi</span></td><td><span class="answer">helpoin</span></td></tr>
+</table>
 </div>
-
-
 <h1>فصل ۷: انواع کلمات خاص (Sanatyypit: nut, ut, Vus)</h1>
 <p>در زبان فنلاندی گروه‌های خاصی از کلمات وجود دارند که قوانین صرف آن‌ها با کلمات معمولی متفاوت است. در این فصل نحوه تغییر کلماتی که به <span class="ending">-nut</span>، <span class="ending">-ut</span> و <span class="ending">-us</span> ختم می‌شوند را بررسی می‌کنیم.</p>
-
 <div class="note">
 <strong>نکته بسیار مهم:</strong> در هیچ یک از این گروه‌های کلماتی، <strong>تغییرات بنیادی (KPT) رخ نمی‌دهد</strong>! کلمات چه در حالت قوی و چه در حالت ضعیف، ثابت می‌مانند.
 </div>
-
 <h2>۱. کلمات ختم شده به nut, lut, sut, rut</h2>
 <p>این گروه عمدتاً شامل صفت‌های مفعولی (Past Participles) می‌شود. تغییرات تنه آن‌ها در حالت‌های مختلف بسیار منظم است:</p>
 <ul>
-  <li><span class="finnish">nut / nyt &rarr; <span class="stem-change">nee</span></span> (مثال: <span class="finnish">saastunut &rarr; saastu<span class="stem-change">nee</span>-ssa</span>)</li>
-  <li><span class="finnish">lut / lyt &rarr; <span class="stem-change">lee</span></span> (مثال: <span class="finnish">kuollut &rarr; kuol<span class="stem-change">lee</span>-ssa</span>)</li>
-  <li><span class="finnish">sut / syt &rarr; <span class="stem-change">see</span></span> (مثال: <span class="finnish">noussut &rarr; nous<span class="stem-change">see</span>-ssa</span>)</li>
-  <li><span class="finnish">rut &rarr; <span class="stem-change">ree</span></span> (مثال: <span class="finnish">purrut &rarr; pur<span class="stem-change">ree</span>-lla</span>)</li>
+<li><span class="finnish">nut / nyt → <span class="stem-change">nee</span></span> (مثال: <span class="finnish">saastunut → saastu<span class="stem-change">nee</span>-ssa</span>)</li>
+<li><span class="finnish">lut / lyt → <span class="stem-change">lee</span></span> (مثال: <span class="finnish">kuollut → kuol<span class="stem-change">lee</span>-ssa</span>)</li>
+<li><span class="finnish">sut / syt → <span class="stem-change">see</span></span> (مثال: <span class="finnish">noussut → nous<span class="stem-change">see</span>-ssa</span>)</li>
+<li><span class="finnish">rut → <span class="stem-change">ree</span></span> (مثال: <span class="finnish">purrut → pur<span class="stem-change">ree</span>-lla</span>)</li>
 </ul>
 <p><strong>حالت پارتيتیو (Partitiivi):</strong> در پارتيتیو پسوند <span class="ending">-ta / -tä</span> مستقیماً به شکل پایه می‌چسبد (مثلاً <span class="finnish">kuollutta</span>).</p>
-
 <h2>۲. کلمات ختم شده به ut, yt</h2>
 <p>این دسته کلمات معدودی را شامل می‌شود (مثل <span class="finnish">olut</span> آبجو، <span class="finnish">ohut</span> نازک، <span class="finnish">kevyt</span> سبک). تغییرات آن‌ها به این شکل است:</p>
 <ul>
-  <li><span class="finnish">ut &rarr; <span class="stem-change">ue</span></span> (مثال: <span class="finnish">olut &rarr; ol<span class="stem-change">ue</span>-ssa</span>)</li>
-  <li><span class="finnish">yt &rarr; <span class="stem-change">ye</span></span> (مثال: <span class="finnish">kevyt &rarr; kev<span class="stem-change">ye</span>-ssä</span>)</li>
+<li><span class="finnish">ut → <span class="stem-change">ue</span></span> (مثال: <span class="finnish">olut → ol<span class="stem-change">ue</span>-ssa</span>)</li>
+<li><span class="finnish">yt → <span class="stem-change">ye</span></span> (مثال: <span class="finnish">kevyt → kev<span class="stem-change">ye</span>-ssä</span>)</li>
 </ul>
-
 <h2>۳. کلمات ختم شده به Vus / Vys (حرف صدادار + us/ys)</h2>
 <p>کلمات انتزاعی زیادی در فنلاندی به <span class="ending">-us</span> یا <span class="ending">-ys</span> ختم می‌شوند (مانند <span class="finnish">rakkaus</span> عشق، <span class="finnish">totuus</span> حقیقت).</p>
 <ul>
-  <li><strong>حالت پارتيتیو:</strong> <span class="finnish">s</span> به <span class="stem-change">t</span> تبدیل می‌شود. (مثال: <span class="finnish">totuu<span class="stem-change">t</span>ta</span>)</li>
-  <li><strong>سایر حالت‌ها:</strong> <span class="finnish">s</span> به <span class="stem-change">de</span> (یا در حالت Illatiivi به <span class="stem-change">te</span>) تبدیل می‌شود. <br>مثال: <span class="finnish">totuus &rarr; totuu<span class="stem-change">de</span>-n</span> (Genetiivi) | <span class="finnish">totuu<span class="stem-change">te</span>-en</span> (Illatiivi)</li>
+<li><strong>حالت پارتيتیو:</strong> <span class="finnish">s</span> به <span class="stem-change">t</span> تبدیل می‌شود. (مثال: <span class="finnish">totuu<span class="stem-change">t</span>ta</span>)</li>
+<li><strong>سایر حالت‌ها:</strong> <span class="finnish">s</span> به <span class="stem-change">de</span> (یا در حالت Illatiivi به <span class="stem-change">te</span>) تبدیل می‌شود. <br/>مثال: <span class="finnish">totuus → totuu<span class="stem-change">de</span>-n</span> (Genetiivi) | <span class="finnish">totuu<span class="stem-change">te</span>-en</span> (Illatiivi)</li>
 </ul>
-
 <h2>۴. تمرین‌های یکپارچه (Integrated Practice)</h2>
 <div class="exercise">
-  <h3>HARJOITUS: Kirjoita sanat oikeassa muodossa (نوشتن کلمات در فرم صحیح)</h3>
-  <ol>
-    <li>Ihmiset uivat (saastunut) vedessä. &rarr; <span class="answer">saastuneessa</span></li>
-    <li>Heidän täytyy juoda (saastunut) vettä. &rarr; <span class="answer">saastunutta</span></li>
-    <li>Onko (loukkaantunut) lapsella kaikki hyvin? &rarr; <span class="answer">loukkaantuneella</span></li>
-    <li>(loukkaantunut) lapsen jalka murtui. &rarr; <span class="answer">loukkaantuneen</span></li>
-    <li>Oletko nähnyt (kuollut) eläintä? &rarr; <span class="answer">kuollutta</span></li>
-    <li>(kulunut) takissa on tahra. &rarr; <span class="answer">kuluneessa</span></li>
-    <li>Ostin kaksi (kulunut) t-paitaa kirpputorilta. &rarr; <span class="answer">kulunutta</span></li>
-    <li>Äiti laittoi (kuivunut) vaatteet kaappiin. &rarr; <span class="answer">kuivuneet</span></li>
-    <li>Sinun täytyy auttaa (väsynyt) äitiä. &rarr; <span class="answer">väsynyttä</span></li>
-    <li>Voinko soittaa (väsynyt) ystävälle? &rarr; <span class="answer">väsyneelle</span></li>
-    <li>Isä osti kaksi (olut). &rarr; <span class="answer">olutta</span></li>
-    <li>Minä en pidä (olut). &rarr; <span class="answer">oluesta</span></li>
-    <li>Isä juo yhden (olut) saunan jälkeen. &rarr; <span class="answer">oluen</span></li>
-    <li>Maija osti (lyhyt) mekon. &rarr; <span class="answer">lyhyen</span></li>
-    <li>Minä voin kävellä (lyhyt) matkan. &rarr; <span class="answer">lyhyen</span></li>
-    <li>En käytä bussia (lyhyt) matkalla. &rarr; <span class="answer">lyhyellä</span></li>
-    <li>Lasta (purrut) koiralla on jokin sairaus. &rarr; <span class="answer">purreella</span></li>
-    <li>Minä kerron sinulle (salaisuus). &rarr; <span class="answer">salaisuuden</span></li>
-    <li>Hän kertoi minulle (totuus). &rarr; <span class="answer">totuuden</span></li>
-    <li>Arvostatko meidän (ystävyys)? &rarr; <span class="answer">ystävyyttä</span></li>
-    <li>Mitä sinä muistat (lapsuus)? &rarr; <span class="answer">lapsuudesta</span></li>
-    <li>Oletko sinä kiinnostunut (talous)? &rarr; <span class="answer">taloudesta</span></li>
-  </ol>
+<h3>HARJOITUS: Kirjoita sanat oikeassa muodossa (نوشتن کلمات در فرم صحیح)</h3>
+<ol>
+<li>Ihmiset uivat (saastunut) vedessä. → <span class="answer">saastuneessa</span></li>
+<li>Heidän täytyy juoda (saastunut) vettä. → <span class="answer">saastunutta</span></li>
+<li>Onko (loukkaantunut) lapsella kaikki hyvin? → <span class="answer">loukkaantuneella</span></li>
+<li>(loukkaantunut) lapsen jalka murtui. → <span class="answer">loukkaantuneen</span></li>
+<li>Oletko nähnyt (kuollut) eläintä? → <span class="answer">kuollutta</span></li>
+<li>(kulunut) takissa on tahra. → <span class="answer">kuluneessa</span></li>
+<li>Ostin kaksi (kulunut) t-paitaa kirpputorilta. → <span class="answer">kulunutta</span></li>
+<li>Äiti laittoi (kuivunut) vaatteet kaappiin. → <span class="answer">kuivuneet</span></li>
+<li>Sinun täytyy auttaa (väsynyt) äitiä. → <span class="answer">väsynyttä</span></li>
+<li>Voinko soittaa (väsynyt) ystävälle? → <span class="answer">väsyneelle</span></li>
+<li>Isä osti kaksi (olut). → <span class="answer">olutta</span></li>
+<li>Minä en pidä (olut). → <span class="answer">oluesta</span></li>
+<li>Isä juo yhden (olut) saunan jälkeen. → <span class="answer">oluen</span></li>
+<li>Maija osti (lyhyt) mekon. → <span class="answer">lyhyen</span></li>
+<li>Minä voin kävellä (lyhyt) matkan. → <span class="answer">lyhyen</span></li>
+<li>En käytä bussia (lyhyt) matkalla. → <span class="answer">lyhyellä</span></li>
+<li>Lasta (purrut) koiralla on jokin sairaus. → <span class="answer">purreella</span></li>
+<li>Minä kerron sinulle (salaisuus). → <span class="answer">salaisuuden</span></li>
+<li>Hän kertoi minulle (totuus). → <span class="answer">totuuden</span></li>
+<li>Arvostatko meidän (ystävyys)? → <span class="answer">ystävyyttä</span></li>
+<li>Mitä sinä muistat (lapsuus)? → <span class="answer">lapsuudesta</span></li>
+<li>Oletko sinä kiinnostunut (talous)? → <span class="answer">taloudesta</span></li>
+</ol>
 </div>
-
-
 <h1>فصل ۸: طبیعت فنلاند، واژگان فصلی و جشن‌ها (Suomen luonto ja juhlat)</h1>
 <p>زبان فنلاندی پیوند عمیقی با طبیعت دارد. در این فصل با واژگان مرتبط با طبیعت، حیوانات، گیاهان فنلاندی و همچنین عباراتی برای بحث درباره جشن‌ها و سنت‌ها آشنا می‌شوید. این مباحث بخش مهمی از تمرین‌های کلاسی و مکالمه‌ها را تشکیل می‌دهند.</p>
-
 <h2>۱. طبیعت و محیط زیست فنلاند (Suomalainen luonto ja ympäristö)</h2>
 <p>محیط زیست در فرهنگ فنلاندی جایگاه ویژه‌ای دارد. برای صحبت در مورد طبیعت فنلاند، به دایره لغات گسترده‌ای از اسامی حیوانات و درختان نیاز دارید.</p>
-
 <h3>۱.۱. حیوانات فنلاندی (Suomalaiset eläimet)</h3>
 <p>شما باید بتوانید حیوانات رایج در حیات وحش فنلاند را نام ببرید:</p>
 <ul>
-  <li><span class="finnish">Karhu</span> (خرس) - جانور ملی فنلاند</li>
-  <li><span class="finnish">Hirvi</span> (گوزن شمالی بزرگ / Moose)</li>
-  <li><span class="finnish">Poro</span> (گوزن قطبی / Reindeer)</li>
-  <li><span class="finnish">Susi</span> (گرگ)</li>
-  <li><span class="finnish">Kettu</span> (روباه)</li>
-  <li><span class="finnish">Jänis</span> (خرگوش وحشی)</li>
-  <li><span class="finnish">Orava</span> (سنجاب)</li>
-  <li><span class="finnish">Joutsen</span> (قو) - پرنده ملی فنلاند</li>
+<li><span class="finnish">Karhu</span> (خرس) - جانور ملی فنلاند</li>
+<li><span class="finnish">Hirvi</span> (گوزن شمالی بزرگ / Moose)</li>
+<li><span class="finnish">Poro</span> (گوزن قطبی / Reindeer)</li>
+<li><span class="finnish">Susi</span> (گرگ)</li>
+<li><span class="finnish">Kettu</span> (روباه)</li>
+<li><span class="finnish">Jänis</span> (خرگوش وحشی)</li>
+<li><span class="finnish">Orava</span> (سنجاب)</li>
+<li><span class="finnish">Joutsen</span> (قو) - پرنده ملی فنلاند</li>
 </ul>
-
 <h3>۱.۲. درختان و گیاهان فنلاندی (Suomalaiset kasvit ja puut)</h3>
 <p>جنگل‌های فنلاند (<span class="finnish">Metsä</span>) بیشتر از سه نوع درخت اصلی تشکیل شده‌اند:</p>
 <ul>
-  <li><span class="finnish">Mänty</span> (درخت کاج / Pine)</li>
-  <li><span class="finnish">Kuusi</span> (درخت صنوبر / Spruce)</li>
-  <li><span class="finnish">Koivu</span> (درخت توس / Birch) - این درخت با تنه سفید رنگش بسیار معروف است.</li>
+<li><span class="finnish">Mänty</span> (درخت کاج / Pine)</li>
+<li><span class="finnish">Kuusi</span> (درخت صنوبر / Spruce)</li>
+<li><span class="finnish">Koivu</span> (درخت توس / Birch) - این درخت با تنه سفید رنگش بسیار معروف است.</li>
 </ul>
-
 <h2>۲. جشن‌ها و رسوم (Juhlat ja tavat)</h2>
 <p>جشن‌های فنلاندی معمولاً با تغییر فصول مرتبط هستند. مهم‌ترین آن‌ها عبارتند از:</p>
 <ul>
-  <li><span class="finnish">Juhannus</span> (جشن نیمه تابستان) - معمولاً در اواخر ژوئن جشن گرفته می‌شود و فنلاندی‌ها در این زمان به کلبه‌های تابستانی (<span class="finnish">Mökki</span>) می‌روند.</li>
-  <li><span class="finnish">Vappu</span> (جشن روز کارگر و دانشجویان) - در اول ماه می برگزار می‌شود.</li>
-  <li><span class="finnish">Joulu</span> (کریسمس)</li>
+<li><span class="finnish">Juhannus</span> (جشن نیمه تابستان) - معمولاً در اواخر ژوئن جشن گرفته می‌شود و فنلاندی‌ها در این زمان به کلبه‌های تابستانی (<span class="finnish">Mökki</span>) می‌روند.</li>
+<li><span class="finnish">Vappu</span> (جشن روز کارگر و دانشجویان) - در اول ماه می برگزار می‌شود.</li>
+<li><span class="finnish">Joulu</span> (کریسمس)</li>
 </ul>
-
 <h2>۳. تمرین‌های یکپارچه (Integrated Practice)</h2>
-
 <div class="exercise">
-  <h3>HARJOITUS 1: Keskusteluharjoitus - Suomen luonto (تمرین مکالمه: طبیعت فنلاند)</h3>
-  <p>سعی کنید به این سوالات (که در آزمون نهایی و بحث‌های گروهی مطرح می‌شوند) پاسخ دهید:</p>
-  <ol>
-    <li><span class="finnish">Mitä Suomessa eläviä eläimiä tiedät?</span> (چه حیواناتی را می‌شناسید که در فنلاند زندگی می‌کنند؟)<br>
-    &rarr; <span class="answer">Tiedän esimerkiksi karhun, hirven, suden ja ketun.</span></li>
-    <li><span class="finnish">Mitä eläimiä olet nähnyt luonnossa?</span> (چه حیواناتی را در طبیعت دیده‌اید؟)<br>
-    &rarr; <span class="answer">Olen nähnyt oravan ja jäniksen.</span></li>
-    <li><span class="finnish">Mikä on kaunein Suomessa elävä eläin?</span> (زیباترین حیوان فنلاند کدام است؟)<br>
-    &rarr; <span class="answer">Minun mielestäni joutsen on kaunein eläin.</span></li>
-    <li><span class="finnish">Mitä suomalaisia puita tiedät?</span> (چه درختان فنلاندی را می‌شناسید؟)<br>
-    &rarr; <span class="answer">Tiedän koivun, männyn ja kuusen.</span></li>
-    <li><span class="finnish">Mikä on kaunein suomalainen puu?</span> (زیباترین درخت فنلاندی کدام است؟)<br>
-    &rarr; <span class="answer">Koivu on kaunein suomalainen puu.</span></li>
-    <li><span class="finnish">Liikutko luonnossa?</span> (آیا در طبیعت پیاده‌روی/ورزش می‌کنید؟)<br>
-    &rarr; <span class="answer">Kyllä, kävelen metsässä viikonloppuisin.</span></li>
-    <li><span class="finnish">Miten kuvailisit suomalaista metsää tai suomalaista luontoa?</span> (جنگل یا طبیعت فنلاند را چگونه توصیف می‌کنید؟)<br>
-    &rarr; <span class="answer">Suomen luonto on puhdas, hiljainen ja hyvin kaunis.</span></li>
-    <li><span class="finnish">Onko Suomen luonto mielestäsi kaunis? Miksi?</span> (به نظر شما طبیعت فنلاند زیباست؟ چرا؟)<br>
-    &rarr; <span class="answer">Kyllä on, koska siellä on niin paljon järviä ja vihreitä metsiä.</span></li>
-  </ol>
+<h3>HARJOITUS 1: Keskusteluharjoitus - Suomen luonto (تمرین مکالمه: طبیعت فنلاند)</h3>
+<p>سعی کنید به این سوالات (که در آزمون نهایی و بحث‌های گروهی مطرح می‌شوند) پاسخ دهید:</p>
+<ol>
+<li><span class="finnish">Mitä Suomessa eläviä eläimiä tiedät?</span> (چه حیواناتی را می‌شناسید که در فنلاند زندگی می‌کنند؟)<br/>
+    → <span class="answer">Tiedän esimerkiksi karhun, hirven, suden ja ketun.</span></li>
+<li><span class="finnish">Mitä eläimiä olet nähnyt luonnossa?</span> (چه حیواناتی را در طبیعت دیده‌اید؟)<br/>
+    → <span class="answer">Olen nähnyt oravan ja jäniksen.</span></li>
+<li><span class="finnish">Mikä on kaunein Suomessa elävä eläin?</span> (زیباترین حیوان فنلاند کدام است؟)<br/>
+    → <span class="answer">Minun mielestäni joutsen on kaunein eläin.</span></li>
+<li><span class="finnish">Mitä suomalaisia puita tiedät?</span> (چه درختان فنلاندی را می‌شناسید؟)<br/>
+    → <span class="answer">Tiedän koivun, männyn ja kuusen.</span></li>
+<li><span class="finnish">Mikä on kaunein suomalainen puu?</span> (زیباترین درخت فنلاندی کدام است؟)<br/>
+    → <span class="answer">Koivu on kaunein suomalainen puu.</span></li>
+<li><span class="finnish">Liikutko luonnossa?</span> (آیا در طبیعت پیاده‌روی/ورزش می‌کنید؟)<br/>
+    → <span class="answer">Kyllä, kävelen metsässä viikonloppuisin.</span></li>
+<li><span class="finnish">Miten kuvailisit suomalaista metsää tai suomalaista luontoa?</span> (جنگل یا طبیعت فنلاند را چگونه توصیف می‌کنید؟)<br/>
+    → <span class="answer">Suomen luonto on puhdas, hiljainen ja hyvin kaunis.</span></li>
+<li><span class="finnish">Onko Suomen luonto mielestäsi kaunis? Miksi?</span> (به نظر شما طبیعت فنلاند زیباست؟ چرا؟)<br/>
+    → <span class="answer">Kyllä on, koska siellä on niin paljon järviä ja vihreitä metsiä.</span></li>
+</ol>
 </div>
-
 <div class="exercise">
-  <h3>HARJOITUS 2: Keskusteluharjoitus - Juhlat (تمرین مکالمه: جشن‌ها)</h3>
-  <ol>
-    <li><span class="finnish">Mitä suomalaisia juhlia tiedät?</span> (چه جشن‌های فنلاندی را می‌شناسید؟)<br>
-    &rarr; <span class="answer">Tiedän juhannuksen, vapun ja joulun.</span></li>
-    <li><span class="finnish">Miten sinun kotimaassasi juhlitaan syntymäpäivää?</span> (در کشور شما تولد را چگونه جشن می‌گیرند؟)<br>
-    &rarr; <span class="answer">Meillä syödään kakkua ja annetaan lahjoja ystäville.</span></li>
-    <li><span class="finnish">Miten sinun kotimaassasi juhlitaan häitä?</span> (در کشور شما عروسی را چگونه جشن می‌گیرند؟)<br>
-    &rarr; <span class="answer">Häissä on paljon ruokaa, musiikkia ja tanssia.</span></li>
-    <li><span class="finnish">Mitä juhlia sinun kotimaassasi on? Miten sinun kotimaassasi juhlitaan?</span> (چه جشن‌هایی در کشور شما وجود دارد و چگونه برگزار می‌شود؟)<br>
-    &rarr; <span class="answer">Meillä on esimerkiksi Nowruz. Silloin perheet kokoontuvat yhteen.</span></li>
-    <li><span class="finnish">Mikä on sinun mielestäsi paras juhla? Miksi?</span> (بهترین جشن از نظر شما چیست؟ چرا؟)<br>
-    &rarr; <span class="answer">Minun mielestäni juhannus on paras, koska silloin on kesä ja lämmin.</span></li>
-  </ol>
+<h3>HARJOITUS 2: Keskusteluharjoitus - Juhlat (تمرین مکالمه: جشن‌ها)</h3>
+<ol>
+<li><span class="finnish">Mitä suomalaisia juhlia tiedät?</span> (چه جشن‌های فنلاندی را می‌شناسید؟)<br/>
+    → <span class="answer">Tiedän juhannuksen, vapun ja joulun.</span></li>
+<li><span class="finnish">Miten sinun kotimaassasi juhlitaan syntymäpäivää?</span> (در کشور شما تولد را چگونه جشن می‌گیرند؟)<br/>
+    → <span class="answer">Meillä syödään kakkua ja annetaan lahjoja ystäville.</span></li>
+<li><span class="finnish">Miten sinun kotimaassasi juhlitaan häitä?</span> (در کشور شما عروسی را چگونه جشن می‌گیرند؟)<br/>
+    → <span class="answer">Häissä on paljon ruokaa, musiikkia ja tanssia.</span></li>
+<li><span class="finnish">Mitä juhlia sinun kotimaassasi on? Miten sinun kotimaassasi juhlitaan?</span> (چه جشن‌هایی در کشور شما وجود دارد و چگونه برگزار می‌شود؟)<br/>
+    → <span class="answer">Meillä on esimerkiksi Nowruz. Silloin perheet kokoontuvat yhteen.</span></li>
+<li><span class="finnish">Mikä on sinun mielestäsi paras juhla? Miksi?</span> (بهترین جشن از نظر شما چیست؟ چرا؟)<br/>
+    → <span class="answer">Minun mielestäni juhannus on paras, koska silloin on kesä ja lämmin.</span></li>
+</ol>
 </div>
-
-
 <h1>فصل ۹: فنلاندی حرفه‌ای (محیط کار و تحصیل)</h1>
 <p>یکی از اهداف اصلی دوره فنلاندی ۴، آماده‌سازی شما برای ورود به بازار کار و محیط‌های آکادمیک فنلاند است. در این فصل با پرسش‌های کلیدی که معمولاً در مصاحبه‌های کاری و دانشگاهی مطرح می‌شوند آشنا می‌شویم. توانایی پاسخگویی روان به این سوالات نشان‌دهنده تسلط شما بر زبان فنلاندی حرفه‌ای است.</p>
-
 <h2>۱. واژگان کلیدی کار و تحصیل (Työ ja Koulutus)</h2>
 <p>قبل از ورود به بحث‌ها، مرور برخی از واژگان بسیار ضروری است:</p>
 <ul>
-  <li><span class="finnish">Ammatti</span> (شغل / حرفه)</li>
-  <li><span class="finnish">Työntekijä</span> (کارمند / کارگر)</li>
-  <li><span class="finnish">Pomo / Esihenkilö</span> (رئیس / مدیر)</li>
-  <li><span class="finnish">Koulutushistoria</span> (سوابق تحصیلی)</li>
-  <li><span class="finnish">Työhakemus</span> (درخواست کار)</li>
-  <li><span class="finnish">Ansioluettelo / CV</span> (رزومه)</li>
+<li><span class="finnish">Ammatti</span> (شغل / حرفه)</li>
+<li><span class="finnish">Työntekijä</span> (کارمند / کارگر)</li>
+<li><span class="finnish">Pomo / Esihenkilö</span> (رئیس / مدیر)</li>
+<li><span class="finnish">Koulutushistoria</span> (سوابق تحصیلی)</li>
+<li><span class="finnish">Työhakemus</span> (درخواست کار)</li>
+<li><span class="finnish">Ansioluettelo / CV</span> (رزومه)</li>
 </ul>
-
 <h2>۲. تمرین‌های یکپارچه (Integrated Practice)</h2>
 <div class="exercise">
-  <h3>HARJOITUS: Keskusteluharjoitus - Työ ja Koulutus (تمرین مکالمه: کار و تحصیل)</h3>
-  <p>به این سوالات کلیدی پاسخ دهید (این سوالات دقیقاً از منابع آزمون شفاهی استخراج شده‌اند):</p>
-  <ol>
-    <li><span class="finnish">Minkälainen on sinun koulutushistoria? (Mitä olet opiskellut? Missä olet opiskellut?)</span> (سوابق تحصیلی شما چگونه است؟ چه خوانده‌اید و کجا؟)<br>
-    &rarr; <span class="answer">Olen opiskellut tietotekniikkaa yliopistossa kotimaassani ja nyt opiskelen Vaasan yliopistossa.</span></li>
-    
-    <li><span class="finnish">Mikä on sinun unelmien ammatti? Miksi?</span> (شغل رویایی شما چیست؟ چرا؟)<br>
-    &rarr; <span class="answer">Unelmien ammattini on ohjelmistoinsinööri, koska pidän koodaamisesta ja ongelmien ratkaisemisesta.</span></li>
-    
-    <li><span class="finnish">Minkälainen on hyvä työntekijä?</span> (یک کارمند خوب چگونه است؟)<br>
-    &rarr; <span class="answer">Hyvä työntekijä on ahkera, luotettava ja oppii nopeasti uusia asioita.</span></li>
-    
-    <li><span class="finnish">Minkälainen on hyvä pomo?</span> (یک مدیر خوب چگونه است؟)<br>
-    &rarr; <span class="answer">Hyvä pomo on reilu, ymmärtäväinen ja osaa kuunnella työntekijöitä.</span></li>
-    
-    <li><span class="finnish">Miksi opiskelet suomea?</span> (چرا فنلاندی می‌خوانید؟)<br>
-    &rarr; <span class="answer">Opiskelen suomea, koska haluan integroitua suomalaiseen yhteiskuntaan ja löytää työpaikan täältä.</span></li>
-    
-    <li><span class="finnish">Haluaisitko jäädä Suomeen asumaan? Miksi?</span> (آیا دوست دارید برای زندگی در فنلاند بمانید؟ چرا؟)<br>
-    &rarr; <span class="answer">Kyllä haluaisin, koska Suomi on turvallinen maa ja täällä on hyvä luonto.</span></li>
-    
-    <li><span class="finnish">Haluaisitko tehdä töitä Suomessa? Miksi?</span> (آیا دوست دارید در فنلاند کار کنید؟ چرا؟)<br>
-    &rarr; <span class="answer">Kyllä, koska suomalainen työkulttuuri on erittäin hyvä ja joustava.</span></li>
-    
-    <li><span class="finnish">Minkälaista työtä haluaisit tehdä Suomessa?</span> (دوست دارید در فنلاند چه نوع کاری انجام دهید؟)<br>
-    &rarr; <span class="answer">Haluaisin tehdä töitä IT-alalla esimerkiksi asiantuntijana.</span></li>
-  </ol>
+<h3>HARJOITUS: Keskusteluharjoitus - Työ ja Koulutus (تمرین مکالمه: کار و تحصیل)</h3>
+<p>به این سوالات کلیدی پاسخ دهید (این سوالات دقیقاً از منابع آزمون شفاهی استخراج شده‌اند):</p>
+<ol>
+<li><span class="finnish">Minkälainen on sinun koulutushistoria? (Mitä olet opiskellut? Missä olet opiskellut?)</span> (سوابق تحصیلی شما چگونه است؟ چه خوانده‌اید و کجا؟)<br/>
+    → <span class="answer">Olen opiskellut tietotekniikkaa yliopistossa kotimaassani ja nyt opiskelen Vaasan yliopistossa.</span></li>
+<li><span class="finnish">Mikä on sinun unelmien ammatti? Miksi?</span> (شغل رویایی شما چیست؟ چرا؟)<br/>
+    → <span class="answer">Unelmien ammattini on ohjelmistoinsinööri, koska pidän koodaamisesta ja ongelmien ratkaisemisesta.</span></li>
+<li><span class="finnish">Minkälainen on hyvä työntekijä?</span> (یک کارمند خوب چگونه است؟)<br/>
+    → <span class="answer">Hyvä työntekijä on ahkera, luotettava ja oppii nopeasti uusia asioita.</span></li>
+<li><span class="finnish">Minkälainen on hyvä pomo?</span> (یک مدیر خوب چگونه است؟)<br/>
+    → <span class="answer">Hyvä pomo on reilu, ymmärtäväinen ja osaa kuunnella työntekijöitä.</span></li>
+<li><span class="finnish">Miksi opiskelet suomea?</span> (چرا فنلاندی می‌خوانید؟)<br/>
+    → <span class="answer">Opiskelen suomea, koska haluan integroitua suomalaiseen yhteiskuntaan ja löytää työpaikan täältä.</span></li>
+<li><span class="finnish">Haluaisitko jäädä Suomeen asumaan? Miksi?</span> (آیا دوست دارید برای زندگی در فنلاند بمانید؟ چرا؟)<br/>
+    → <span class="answer">Kyllä haluaisin, koska Suomi on turvallinen maa ja täällä on hyvä luonto.</span></li>
+<li><span class="finnish">Haluaisitko tehdä töitä Suomessa? Miksi?</span> (آیا دوست دارید در فنلاند کار کنید؟ چرا؟)<br/>
+    → <span class="answer">Kyllä, koska suomalainen työkulttuuri on erittäin hyvä ja joustava.</span></li>
+<li><span class="finnish">Minkälaista työtä haluaisit tehdä Suomessa?</span> (دوست دارید در فنلاند چه نوع کاری انجام دهید؟)<br/>
+    → <span class="answer">Haluaisin tehdä töitä IT-alalla esimerkiksi asiantuntijana.</span></li>
+</ol>
 </div>
-
-
 <h1>فصل ۱۰: مرور نهایی و آمادگی آزمون (Kertaus ja Kokeeseen Valmistautuminen)</h1>
 <p>این فصل شامل مجموعه‌ای از سوالات جامع (Kertausharjoitus) است که مفاهیم کلیدی کل دوره فنلاندی ۴ را پوشش می‌دهد. این سوالات معمولاً در آزمون‌های نهایی یا مصاحبه‌های شفاهی پرسیده می‌شوند و پاسخگویی به آن‌ها نیازمند ترکیب گرامرهای یادگرفته شده است.</p>
-
 <h2>۱. سوالات مروری جامع (Kertausharjoitus)</h2>
 <div class="exercise">
-  <ol>
-    <li><strong>Mitä sinä olet hyvä tekemään? (3. infinitiivi)</strong> (شما در انجام چه کاری خوب هستید؟)<br>
-    &rarr; <span class="answer">Olen hyvä lukemaan ja oppimaan. Olen hyvä koodaamaan.</span></li>
-    
-    <li><strong>Mitä haluaisit oppia tekemään paremmin?</strong> (دوست دارید چه کاری را بهتر یاد بگیرید؟)<br>
-    &rarr; <span class="answer">Haluaisin oppia puhumaan suomea paremmin.</span></li>
-    
-    <li><strong>Mitä asioita teet mielelläsi joka päivä?</strong> (چه کارهایی را هر روز با میل و رغبت انجام می‌دهید؟)<br>
-    &rarr; <span class="answer">Minä juon mielelläni kahvia ja kuuntelen musiikkia.</span></li>
-    
-    <li><strong>Mitä asioita sinun täytyy tehdä joka päivä? (Nesessiivirakenne)</strong> (هر روز چه کارهایی را باید انجام دهید؟)<br>
-    &rarr; <span class="answer">Minun täytyy tehdä töitä ja opiskella suomea.</span></li>
-    
-    <li><strong>Mitä asioita teit mieluiten lapsena?</strong> (در کودکی ترجیح می‌دادید چه کارهایی انجام دهید؟)<br>
-    &rarr; <span class="answer">Mieluiten pelasin jalkapalloa ystävien kanssa.</span></li>
-    
-    <li><strong>Kuinka usein peset pyykkiä? / laitat ruokaa?</strong> (هر چند وقت یکبار لباس می‌شویید؟ / غذا درست می‌کنید؟)<br>
-    &rarr; <span class="answer">Pesen pyykkiä kerran viikossa. Laitan ruokaa joka päivä.</span></li>
-    
-    <li><strong>Millainen kaupunki Vaasa on? Käytä adjektiiveja.</strong> (شهر واسا چگونه شهری است؟ از صفات استفاده کنید.)<br>
-    &rarr; <span class="answer">Vaasa on kaunis, rauhallinen ja kansainvälinen kaupunki meren rannalla.</span></li>
-    
-    <li><strong>Mistä sinä pidät? Vastaa -minen -substantiivilla.</strong> (از چه چیزی خوشتان می‌آید؟ با اسم minen- پاسخ دهید.)<br>
-    &rarr; <span class="answer">Minä pidän ruoan laittamisesta ja uimisesta.</span></li>
-    
-    <li><strong>Mistä sinä et pidä? Vastaa -minen-substantiivilla.</strong> (از چه چیزی خوشتان نمی‌آید؟)<br>
-    &rarr; <span class="answer">Minä en pidä kodin siivoamisesta enkä melusta.</span></li>
-    
-    <li><strong>Millaisesta ilmasta sinä pidät?</strong> (چه نوع آب و هوایی را دوست دارید؟)<br>
-    &rarr; <span class="answer">Pidän aurinkoisesta ja lämpimästä ilmasta.</span></li>
-    
-    <li><strong>Kuinka kauan olet asunut Suomessa? Kuinka kauan olet opiskellut suomea?</strong> (چه مدت در فنلاند زندگی کرده‌اید؟ چه مدت فنلاندی خوانده‌اید؟)<br>
-    &rarr; <span class="answer">Olen asunut Suomessa kaksi vuotta ja olen opiskellut suomea vuoden ajan.</span></li>
-  </ol>
+<ol>
+<li><strong>Mitä sinä olet hyvä tekemään? (3. infinitiivi)</strong> (شما در انجام چه کاری خوب هستید؟)<br/>
+    → <span class="answer">Olen hyvä lukemaan ja oppimaan. Olen hyvä koodaamaan.</span></li>
+<li><strong>Mitä haluaisit oppia tekemään paremmin?</strong> (دوست دارید چه کاری را بهتر یاد بگیرید؟)<br/>
+    → <span class="answer">Haluaisin oppia puhumaan suomea paremmin.</span></li>
+<li><strong>Mitä asioita teet mielelläsi joka päivä?</strong> (چه کارهایی را هر روز با میل و رغبت انجام می‌دهید؟)<br/>
+    → <span class="answer">Minä juon mielelläni kahvia ja kuuntelen musiikkia.</span></li>
+<li><strong>Mitä asioita sinun täytyy tehdä joka päivä? (Nesessiivirakenne)</strong> (هر روز چه کارهایی را باید انجام دهید؟)<br/>
+    → <span class="answer">Minun täytyy tehdä töitä ja opiskella suomea.</span></li>
+<li><strong>Mitä asioita teit mieluiten lapsena?</strong> (در کودکی ترجیح می‌دادید چه کارهایی انجام دهید؟)<br/>
+    → <span class="answer">Mieluiten pelasin jalkapalloa ystävien kanssa.</span></li>
+<li><strong>Kuinka usein peset pyykkiä? / laitat ruokaa?</strong> (هر چند وقت یکبار لباس می‌شویید؟ / غذا درست می‌کنید؟)<br/>
+    → <span class="answer">Pesen pyykkiä kerran viikossa. Laitan ruokaa joka päivä.</span></li>
+<li><strong>Millainen kaupunki Vaasa on? Käytä adjektiiveja.</strong> (شهر واسا چگونه شهری است؟ از صفات استفاده کنید.)<br/>
+    → <span class="answer">Vaasa on kaunis, rauhallinen ja kansainvälinen kaupunki meren rannalla.</span></li>
+<li><strong>Mistä sinä pidät? Vastaa -minen -substantiivilla.</strong> (از چه چیزی خوشتان می‌آید؟ با اسم minen- پاسخ دهید.)<br/>
+    → <span class="answer">Minä pidän ruoan laittamisesta ja uimisesta.</span></li>
+<li><strong>Mistä sinä et pidä? Vastaa -minen-substantiivilla.</strong> (از چه چیزی خوشتان نمی‌آید؟)<br/>
+    → <span class="answer">Minä en pidä kodin siivoamisesta enkä melusta.</span></li>
+<li><strong>Millaisesta ilmasta sinä pidät?</strong> (چه نوع آب و هوایی را دوست دارید؟)<br/>
+    → <span class="answer">Pidän aurinkoisesta ja lämpimästä ilmasta.</span></li>
+<li><strong>Kuinka kauan olet asunut Suomessa? Kuinka kauan olet opiskellut suomea?</strong> (چه مدت در فنلاند زندگی کرده‌اید؟ چه مدت فنلاندی خوانده‌اید؟)<br/>
+    → <span class="answer">Olen asunut Suomessa kaksi vuotta ja olen opiskellut suomea vuoden ajan.</span></li>
+</ol>
 </div>
-
 <h2>۲. نکات طلایی برای موفقیت در آزمون نهایی (Tärppejä Kokeeseen)</h2>
 <ul>
-  <li><strong>قانون تغییرات بنیادی (Astevaihtelu / KPT):</strong> همیشه به یاد داشته باشید که در زمان گذشته منفی و پارتيتیو جمع، قوانین KPT را دقیق اعمال کنید.</li>
-  <li><strong>تطابق زمان‌ها:</strong> تفاوت کاربرد <span class="finnish">Imperfekti</span> (گذشته ساده) و <span class="finnish">Passiivin Imperfekti</span> (مجهول گذشته) را مرور کنید.</li>
-  <li><strong>کدگذاری رنگی:</strong> در طول مرور این کتاب، روی بخش‌های قرمز (تغییرات تنه) و آبی (پسوندها) تمرکز کنید.</li>
-  <li><strong>تمرینات مکالمه:</strong> سوالات فصل‌های ۸ و ۹ را با صدای بلند تمرین کنید تا برای بخش شفاهی کاملاً مسلط باشید.</li>
+<li><strong>قانون تغییرات بنیادی (Astevaihtelu / KPT):</strong> همیشه به یاد داشته باشید که در زمان گذشته منفی و پارتيتیو جمع، قوانین KPT را دقیق اعمال کنید.</li>
+<li><strong>تطابق زمان‌ها:</strong> تفاوت کاربرد <span class="finnish">Imperfekti</span> (گذشته ساده) و <span class="finnish">Passiivin Imperfekti</span> (مجهول گذشته) را مرور کنید.</li>
+<li><strong>کدگذاری رنگی:</strong> در طول مرور این کتاب، روی بخش‌های قرمز (تغییرات تنه) و آبی (پسوندها) تمرکز کنید.</li>
+<li><strong>تمرینات مکالمه:</strong> سوالات فصل‌های ۸ و ۹ را با صدای بلند تمرین کنید تا برای بخش شفاهی کاملاً مسلط باشید.</li>
 </ul>
-
 <div class="note" style="text-align: center; margin-top: 40px; background-color: #0b1f38; border-color: #00d2ff;">
-  <h2 style="color: #FFD700;">Onnea kokeeseen! (موفق باشید در آزمون!)</h2>
-  <p>شما اکنون تمامی مباحث فنلاندی ۴ را با موفقیت مرور کرده‌اید.</p>
+<h2 style="color: #FFD700;">Onnea kokeeseen! (موفق باشید در آزمون!)</h2>
+<p>شما اکنون تمامی مباحث فنلاندی ۴ را با موفقیت مرور کرده‌اید.</p>
 </div>
+</div><script>
+document.addEventListener("DOMContentLoaded", () => {
+    // We will do a simple pass: convert exercises into details
+    const exercises = document.querySelectorAll(".exercise");
+    exercises.forEach(ex => {
+        const details = document.createElement("details");
+        details.open = true;
+        const summary = document.createElement("summary");
+        const h3 = ex.querySelector("h3");
+        if(h3) {
+            summary.innerHTML = h3.innerHTML;
+            h3.remove();
+        } else {
+            summary.textContent = "تمرین (Harjoitus)";
+        }
+        details.appendChild(summary);
+        
+        const content = document.createElement("div");
+        content.className = "details-content";
+        while(ex.firstChild) {
+            content.appendChild(ex.firstChild);
+        }
+        details.appendChild(content);
+        
+        ex.appendChild(details);
+    });
 
-</body>
+    // Let's also wrap tables
+    const tables = document.querySelectorAll("table");
+    tables.forEach(table => {
+        if (table.closest('details')) return;
+        
+        const details = document.createElement("details");
+        details.open = true;
+        const summary = document.createElement("summary");
+        summary.textContent = "نمایش جدول (Näytä taulukko)";
+        details.appendChild(summary);
+        
+        const content = document.createElement("div");
+        content.className = "details-content";
+        
+        table.parentNode.insertBefore(details, table);
+        content.appendChild(table);
+        details.appendChild(content);
+    });
+    
+    // Let's also wrap notes
+    const notes = document.querySelectorAll(".note");
+    notes.forEach(note => {
+        if (note.closest('details')) return;
+        
+        const details = document.createElement("details");
+        details.open = true;
+        const summary = document.createElement("summary");
+        summary.textContent = "نکته مهم (Huomio)";
+        details.appendChild(summary);
+        
+        const content = document.createElement("div");
+        content.className = "details-content";
+        
+        note.parentNode.insertBefore(details, note);
+        content.appendChild(note);
+        details.appendChild(content);
+    });
+    
+    // Convert <h2> sections into cards
+    const h2s = Array.from(document.querySelectorAll("h2"));
+    h2s.forEach((h2, index) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        h2.parentNode.insertBefore(card, h2.nextSibling);
+        
+        let nextEl = card.nextSibling;
+        while(nextEl && nextEl.tagName !== "H2" && nextEl.tagName !== "H1" && nextEl.tagName !== "SCRIPT") {
+            let toMove = nextEl;
+            nextEl = nextEl.nextSibling;
+            card.appendChild(toMove);
+        }
+    });
+    
+    // Turn h3s outside of exercises into details as well
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        const h3s = Array.from(card.querySelectorAll("h3"));
+        h3s.forEach(h3 => {
+            if (h3.closest('details')) return;
+            
+            const details = document.createElement("details");
+            details.open = true;
+            const summary = document.createElement("summary");
+            summary.innerHTML = h3.innerHTML;
+            h3.parentNode.insertBefore(details, h3);
+            h3.remove();
+            
+            const content = document.createElement("div");
+            content.className = "details-content";
+            
+            let nextEl = details.nextSibling;
+            while(nextEl && nextEl.tagName !== "H3" && nextEl.tagName !== "DETAILS") {
+                let toMove = nextEl;
+                nextEl = nextEl.nextSibling;
+                content.appendChild(toMove);
+            }
+            details.appendChild(content);
+        });
+        
+        // Wrap everything else inside card that is not in details, in a "توضیحات" detail
+        const children = Array.from(card.childNodes);
+        const orphanNodes = [];
+        children.forEach(child => {
+            if (child.nodeType === 1 && child.tagName === 'DETAILS') return;
+            if (child.nodeType === 3 && child.textContent.trim() === '') return;
+            orphanNodes.push(child);
+        });
+        
+        if (orphanNodes.length > 0) {
+            const details = document.createElement("details");
+            details.open = true;
+            const summary = document.createElement("summary");
+            summary.textContent = "توضیحات (Kuvaus)";
+            details.appendChild(summary);
+            
+            const content = document.createElement("div");
+            content.className = "details-content";
+            
+            orphanNodes.forEach(node => content.appendChild(node));
+            details.appendChild(content);
+            card.insertBefore(details, card.firstChild);
+        }
+    });
+});
+</script></body>
 </html>
