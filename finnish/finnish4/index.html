@@ -19,7 +19,7 @@
             --gold: #FFD700;
             --neon: #00D4FF;
             --purple: #BC13FE;
-            --text: #F0F0F0;
+            --text: #e0cbcbc2;
             --subtext: #B0B0B0;
             --success: #00FF9D;
             --error: #FF4B4B;
@@ -106,7 +106,7 @@
         summary {
             font-size: 1.2em;
             font-weight: 700;
-            color: #fff;
+            color: var(--text);
             padding: 15px;
             cursor: pointer;
             user-select: none;
@@ -122,7 +122,7 @@
         }
 
         .finnish {
-            color: #fff;
+            color: var(--text);
             font-weight: bold;
             direction: ltr;
             text-align: left;
@@ -158,7 +158,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 12px;
             text-align: right;
-            color: #fff;
+            color: var(--text);
         }
 
         th {
@@ -987,7 +987,7 @@
             <strong>قانون تغییرات بنیادی (KPT):</strong> در پارتيتیو جمع همیشه از <strong>تنه قوی (Strong Stem)</strong>
             استفاده می‌شود.
         </div>
-        
+
         <h3>۱.۱. نقشه تغییرات حروف صدادار (Vokaalimuutokset)</h3>
         <p>هنگام اضافه شدن نشانه‌ی جمع <code>i</code> به انتهای کلمه، حروف صدادار آخر دستخوش تغییرات خاصی می‌شوند:</p>
         <table class="nature-table">
@@ -1002,51 +1002,76 @@
                 <tr>
                     <td><span class="stem-change">a &rarr; o</span></td>
                     <td>اگر کلمه به a ختم شود و دو سیلابی باشد، a به o تبدیل شده و سپس i اضافه می‌گردد (تولید oi).</td>
-                    <td class="finnish-word">talo &rarr; taloi- &rarr; talo-j-a <span style="font-weight:normal; color:#bbb;">(taloja)</span></td>
+                    <td class="finnish-word">talo &rarr; taloi- &rarr; talo-j-a <span
+                            style="font-weight:normal; color:#bbb;">(taloja)</span></td>
                 </tr>
                 <tr>
                     <td><span class="stem-change">i &rarr; e</span></td>
-                    <td>کلماتی که به i ختم می‌شوند، i پایانی آن‌ها به e تبدیل شده و سپس i جمع اضافه می‌شود (تولید ei).</td>
-                    <td class="finnish-word">tomaatti &rarr; tomaattei- &rarr; tomaatte-j-a <span style="font-weight:normal; color:#bbb;">(tomaatteja)</span></td>
+                    <td>کلماتی که به i ختم می‌شوند، i پایانی آن‌ها به e تبدیل شده و سپس i جمع اضافه می‌شود (تولید ei).
+                    </td>
+                    <td class="finnish-word">tomaatti &rarr; tomaattei- &rarr; tomaatte-j-a <span
+                            style="font-weight:normal; color:#bbb;">(tomaatteja)</span></td>
                 </tr>
                 <tr>
                     <td><span class="stem-change">VV &rarr; V</span></td>
                     <td>اگر کلمه به دو حرف صدادار یکسان (VV) ختم شود، یکی از آن‌ها حذف شده و i جمع اضافه می‌گردد.</td>
-                    <td class="finnish-word">maa &rarr; mai- &rarr; ma-i-ta <span style="font-weight:normal; color:#bbb;">(maita)</span></td>
+                    <td class="finnish-word">maa &rarr; mai- &rarr; ma-i-ta <span
+                            style="font-weight:normal; color:#bbb;">(maita)</span></td>
                 </tr>
             </tbody>
         </table>
 
         <h3>۱.۲. سه پسوند اصلی پارتيتیو جمع</h3>
-        
+
         <h4>پسوند -ja / -jä</h4>
-        <p>زمانی استفاده می‌شود که کلمه به حرف صدادار ختم شود و با اضافه شدن نشانه جمع <code>i</code>، ترکیب <code>oi</code>، <code>ei</code>، <code>äi</code> یا <code>öi</code> ایجاد شود (در این حالت i به j تبدیل می‌شود):</p>
+        <p>زمانی استفاده می‌شود که کلمه به حرف صدادار ختم شود و با اضافه شدن نشانه جمع <code>i</code>، ترکیب
+            <code>oi</code>، <code>ei</code>، <code>äi</code> یا <code>öi</code> ایجاد شود (در این حالت i به j تبدیل
+            می‌شود):
+        </p>
         <ul>
-            <li><span class="finnish">talo</span> (خانه) &rarr; <span class="finnish">taloi-</span> &rarr; <span class="finnish">talo<span class="ending">ja</span></span></li>
-            <li><span class="finnish">tomaatti</span> (گوجه‌فرنگی) &rarr; <span class="finnish">tomaattei-</span> &rarr; <span class="finnish">tomaatte<span class="ending">ja</span></span></li>
-            <li><span class="finnish">bussi</span> (اتوبوس) &rarr; <span class="finnish">bussei-</span> &rarr; <span class="finnish">busse<span class="ending">ja</span></span></li>
-            <li><span class="finnish">kissa</span> (گربه) &rarr; <span class="finnish">kissoi-</span> &rarr; <span class="finnish">kisso<span class="ending">ja</span></span></li>
-            <li><span class="finnish">lehti</span> (روزنامه) &rarr; <span class="finnish">lehti- &rarr; lehtei-</span> &rarr; <span class="finnish">lehte<span class="ending">jä</span></span></li>
+            <li><span class="finnish">talo</span> (خانه) &rarr; <span class="finnish">taloi-</span> &rarr; <span
+                    class="finnish">talo<span class="ending">ja</span></span></li>
+            <li><span class="finnish">tomaatti</span> (گوجه‌فرنگی) &rarr; <span class="finnish">tomaattei-</span> &rarr;
+                <span class="finnish">tomaatte<span class="ending">ja</span></span>
+            </li>
+            <li><span class="finnish">bussi</span> (اتوبوس) &rarr; <span class="finnish">bussei-</span> &rarr; <span
+                    class="finnish">busse<span class="ending">ja</span></span></li>
+            <li><span class="finnish">kissa</span> (گربه) &rarr; <span class="finnish">kissoi-</span> &rarr; <span
+                    class="finnish">kisso<span class="ending">ja</span></span></li>
+            <li><span class="finnish">lehti</span> (روزنامه) &rarr; <span class="finnish">lehti- &rarr; lehtei-</span>
+                &rarr; <span class="finnish">lehte<span class="ending">jä</span></span></li>
         </ul>
 
         <h4>پسوند -a / -ä</h4>
-        <p>زمانی استفاده می‌شود که تنه جمع به <code>i</code> ختم شود و آن <code>i</code> صدای خودش را حفظ کند (معمولاً بعد از یک صامت):</p>
+        <p>زمانی استفاده می‌شود که تنه جمع به <code>i</code> ختم شود و آن <code>i</code> صدای خودش را حفظ کند (معمولاً
+            بعد از یک صامت):</p>
         <ul>
-            <li><span class="finnish">nainen</span> (زن) &rarr; tila: <span class="finnish">naisi-</span> &rarr; <span class="finnish">naisi<span class="ending">a</span></span></li>
-            <li><span class="finnish">juna</span> (قطار) &rarr; tila: <span class="finnish">juni-</span> &rarr; <span class="finnish">juni<span class="ending">a</span></span></li>
-            <li><span class="finnish">päivä</span> (روز) &rarr; tila: <span class="finnish">päivi-</span> &rarr; <span class="finnish">päivi<span class="ending">ä</span></span></li>
-            <li><span class="finnish">koira</span> (سگ) &rarr; tila: <span class="finnish">koiri-</span> &rarr; <span class="finnish">koiri<span class="ending">a</span></span></li>
-            <li><span class="finnish">kuva</span> (عکس) &rarr; tila: <span class="finnish">kuvi-</span> &rarr; <span class="finnish">kuvi<span class="ending">a</span></span></li>
+            <li><span class="finnish">nainen</span> (زن) &rarr; tila: <span class="finnish">naisi-</span> &rarr; <span
+                    class="finnish">naisi<span class="ending">a</span></span></li>
+            <li><span class="finnish">juna</span> (قطار) &rarr; tila: <span class="finnish">juni-</span> &rarr; <span
+                    class="finnish">juni<span class="ending">a</span></span></li>
+            <li><span class="finnish">päivä</span> (روز) &rarr; tila: <span class="finnish">päivi-</span> &rarr; <span
+                    class="finnish">päivi<span class="ending">ä</span></span></li>
+            <li><span class="finnish">koira</span> (سگ) &rarr; tila: <span class="finnish">koiri-</span> &rarr; <span
+                    class="finnish">koiri<span class="ending">a</span></span></li>
+            <li><span class="finnish">kuva</span> (عکس) &rarr; tila: <span class="finnish">kuvi-</span> &rarr; <span
+                    class="finnish">kuvi<span class="ending">a</span></span></li>
         </ul>
 
         <h4>پسوند -ta / -tä</h4>
         <p>زمانی استفاده می‌شود که تنه به دو حرف صدادار (VV) ختم شده باشد (که یکی حذف می‌شود) یا کلمات طولانی خاص:</p>
         <ul>
-            <li><span class="finnish">maa</span> (کشور) &rarr; tila: <span class="finnish">mai-</span> &rarr; <span class="finnish">mai<span class="ending">ta</span></span></li>
-            <li><span class="finnish">puu</span> (درخت) &rarr; tila: <span class="finnish">pui-</span> &rarr; <span class="finnish">pui<span class="ending">ta</span></span></li>
-            <li><span class="finnish">yö</span> (شب) &rarr; tila: <span class="finnish">öi-</span> &rarr; <span class="finnish">öi<span class="ending">tä</span></span></li>
-            <li><span class="finnish">asiakas</span> (مشتری) &rarr; tila: <span class="finnish">asiakkai-</span> &rarr; <span class="finnish">asiakkai<span class="ending">ta</span></span></li>
-            <li><span class="finnish">opiskelija</span> (دانشجو) &rarr; tila: <span class="finnish">opiskelijoi-</span> &rarr; <span class="finnish">opiskelijoi<span class="ending">ta</span></span></li>
+            <li><span class="finnish">maa</span> (کشور) &rarr; tila: <span class="finnish">mai-</span> &rarr; <span
+                    class="finnish">mai<span class="ending">ta</span></span></li>
+            <li><span class="finnish">puu</span> (درخت) &rarr; tila: <span class="finnish">pui-</span> &rarr; <span
+                    class="finnish">pui<span class="ending">ta</span></span></li>
+            <li><span class="finnish">yö</span> (شب) &rarr; tila: <span class="finnish">öi-</span> &rarr; <span
+                    class="finnish">öi<span class="ending">tä</span></span></li>
+            <li><span class="finnish">asiakas</span> (مشتری) &rarr; tila: <span class="finnish">asiakkai-</span> &rarr;
+                <span class="finnish">asiakkai<span class="ending">ta</span></span>
+            </li>
+            <li><span class="finnish">opiskelija</span> (دانشجو) &rarr; tila: <span class="finnish">opiskelijoi-</span>
+                &rarr; <span class="finnish">opiskelijoi<span class="ending">ta</span></span></li>
         </ul>
 
         <h2>۲. تبدیل انواع کلمات خاص (Sanatyypit) در پارتيتیو جمع</h2>
@@ -1670,7 +1695,8 @@
 
             <div class="sentence-block">
                 <div class="finnish">Dialogi 1: Kuume ja Yskä (تب و سرفه)</div>
-                <div class="finnish" style="color: #fff; font-weight: normal; margin-top: 10px;">- Hei, täällä on [Sinun
+                <div class="finnish" style="color: var(--text); font-weight: normal; margin-top: 10px;">- Hei, täällä on
+                    [Sinun
                     nimesi]. En pääse tänään luennolle, koska olen sairas. Minulla on <span
                         style="color: var(--error);">kuumetta</span> ja kova <span
                         style="color: var(--error);">yskä</span>.</div>
@@ -1680,7 +1706,7 @@
 
             <div class="sentence-block">
                 <div class="finnish">Dialogi 2: Päänsärky (سردرد)</div>
-                <div class="finnish" style="color: #fff; font-weight: normal; margin-top: 10px;">- Huomenta. Olen
+                <div class="finnish" style="color: var(--text); font-weight: normal; margin-top: 10px;">- Huomenta. Olen
                     valitettavasti sairas. Minulla on paha <span style="color: var(--error);">päänsärky</span>.
                     Tarvitsen sairauslomaa tämän päivän.</div>
                 <div class="ex-persian">صبح بخیر. من متأسفانه بیمار هستم. من سردرد بدی دارم. برای امروز به مرخصی
@@ -1689,8 +1715,8 @@
 
             <div class="sentence-block">
                 <div class="finnish">Dialogi 3: Nuha ja Kurkkukipu (آنفلوآنزا و گلودرد)</div>
-                <div class="finnish" style="color: #fff; font-weight: normal; margin-top: 10px;">- Hei, minulla on <span
-                        style="color: var(--error);">nuha</span> ja <span
+                <div class="finnish" style="color: var(--text); font-weight: normal; margin-top: 10px;">- Hei, minulla
+                    on <span style="color: var(--error);">nuha</span> ja <span
                         style="color: var(--error);">kurkkukipu</span>. Voinko tehdä tentin myöhemmin?</div>
                 <div class="ex-persian">سلام، من آنفلوآنزا و گلودرد دارم. آیا می‌توانم امتحان را بعداً بدهم؟</div>
             </div>
@@ -1741,10 +1767,12 @@
         <h2>۳. تمرین‌های شبیه‌ساز آزمون (Exam-Style Solved Exercises)</h2>
         <div class="exercise">
             <h3>HARJOITUS: Yhdistetty kielioppi (گرامر ترکیبی)</h3>
-            <p>این ۱۰ سؤال نمونه‌ای از مهم‌ترین بخش‌های آزمون نهایی هستند. پاسخ‌ها با رنگ <span class="answer" style="background-color: transparent;">سبز</span> و نکات گرامری مشخص شده‌اند.</p>
+            <p>این ۱۰ سؤال نمونه‌ای از مهم‌ترین بخش‌های آزمون نهایی هستند. پاسخ‌ها با رنگ <span class="answer"
+                    style="background-color: transparent;">سبز</span> و نکات گرامری مشخص شده‌اند.</p>
             <ol>
                 <li><strong>Monikon partitiivi:</strong> Torilla on paljon (ihminen).<br />
-                    → <span class="answer">ihmisiä</span> (کلمات ختم شده به -nen در پارتیتیو جمع به -sia تبدیل می‌شوند)</li>
+                    → <span class="answer">ihmisiä</span> (کلمات ختم شده به -nen در پارتیتیو جمع به -sia تبدیل می‌شوند)
+                </li>
                 <li><strong>Adjektiivien vertailu:</strong> Tämä kirja on (hyvä) kuin tuo.<br />
                     → <span class="answer">parempi</span> (فرم تفضیلی بی‌قاعده صفت hyvä)</li>
                 <li><strong>Passiivi:</strong> Kesällä Suomessa (syödä) paljon jäätelöä.<br />
@@ -1756,7 +1784,8 @@
                 <li><strong>3. infinitiivi:</strong> Olen keittiössä (tehdä) ruokaa.<br />
                     → <span class="answer">tekemässä</span> (مصدر سوم در حالت Inessiivi، در حال انجام کار)</li>
                 <li><strong>Objekti:</strong> Minun täytyy ostaa uusi (auto).<br />
-                    → <span class="answer">auto</span> (چون جمله Nesessiivi است، مفعول در حالت Nominatiivi قرار می‌گیرد)</li>
+                    → <span class="answer">auto</span> (چون جمله Nesessiivi است، مفعول در حالت Nominatiivi قرار می‌گیرد)
+                </li>
                 <li><strong>Ajanilmaukset:</strong> Kurssi kestää (yksi vuosi).<br />
                     → <span class="answer">yhden vuoden</span> (بیان مدت زمان با Genetiivi)</li>
                 <li><strong>Monikon partitiivi:</strong> Rakastan (vanha puu).<br />
