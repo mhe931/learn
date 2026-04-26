@@ -1286,6 +1286,44 @@ document.addEventListener("DOMContentLoaded", () => {
             card.insertBefore(details, card.firstChild);
         }
     });
+
+    // Convert <h1> sections into details
+    const h1s = Array.from(document.querySelectorAll("h1"));
+    h1s.forEach((h1, index) => {
+        const details = document.createElement("details");
+        details.open = (index === 0); // open first chapter by default
+        details.style.marginBottom = "30px";
+        details.style.background = "rgba(0, 0, 0, 0.4)";
+        details.style.border = "1px solid rgba(255, 215, 0, 0.3)";
+        details.style.borderRadius = "16px";
+        
+        const summary = document.createElement("summary");
+        summary.innerHTML = h1.innerHTML;
+        summary.style.fontFamily = "'Orbitron', sans-serif";
+        summary.style.fontSize = "2.2em";
+        summary.style.color = "var(--gold)";
+        summary.style.textAlign = "center";
+        summary.style.padding = "20px";
+        summary.style.textShadow = "0 0 20px rgba(255, 215, 0, 0.3)";
+        
+        details.appendChild(summary);
+        
+        const content = document.createElement("div");
+        content.className = "details-content";
+        content.style.padding = "20px";
+        
+        h1.parentNode.insertBefore(details, h1);
+        
+        let nextEl = h1.nextSibling;
+        h1.remove(); // we copied the html
+        
+        while(nextEl && nextEl.tagName !== "H1" && nextEl.tagName !== "SCRIPT") {
+            let toMove = nextEl;
+            nextEl = nextEl.nextSibling;
+            content.appendChild(toMove);
+        }
+        details.appendChild(content);
+    });
 });
 </script></body>
 </html>
